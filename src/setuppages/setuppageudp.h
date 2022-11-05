@@ -47,11 +47,11 @@ public:
     void setTimeout(const QString &_t);
     void setNetworkInterface(const QString &_t);
 
-    QString getLogFromWSJTx();
-    QString getAutoLogFromWSJTx();
-    QString getReaDataFromWSJTx();
+    bool getLogFromWSJTx();
+    bool getAutoLogFromWSJTx();
+    bool getReaDataFromWSJTx();
     QString getUDPServerPort();
-    QString getUDPServer();
+    bool getUDPServer();
     QString getTimeout();
     QString getNetworkInterface();
 

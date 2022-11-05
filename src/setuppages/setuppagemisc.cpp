@@ -230,14 +230,14 @@ void SetupPageMisc::setDeleteAlwaysAdiFile(const bool &_t){
     //qDebug() << "SetupPageMisc::setDeleteAlwaysAdiFile - DELETEALWAYSADIFILE = " << _t << QT_ENDL;
 }
 
-QString SetupPageMisc::getDeleteAlwaysAdiFile(){
+bool SetupPageMisc::getDeleteAlwaysAdiFile(){
 
-    return util->boolToQString(deleteAlwaysAdiFileCheckBox->isChecked());
+    return deleteAlwaysAdiFileCheckBox->isChecked();
 }
 
-QString SetupPageMisc::getSendEQSLByDefault(){
+bool SetupPageMisc::getSendEQSLByDefault(){
 
-    return util->boolToQString(sendEQSLByDefaultSearchCheckBox->isChecked());
+    return sendEQSLByDefaultSearchCheckBox->isChecked();
 }
 
 void SetupPageMisc::setSetEQSLByDefault(const QString &_t){
@@ -245,9 +245,9 @@ void SetupPageMisc::setSetEQSLByDefault(const QString &_t){
     sendEQSLByDefaultSearchCheckBox->setChecked(util->trueOrFalse(_t));
 }
 
-QString SetupPageMisc::getRealTime(){
+bool SetupPageMisc::getRealTime(){
 
-    return util->boolToQString(realTimeCheckbox->isChecked());
+    return realTimeCheckbox->isChecked();
 }
 
 void SetupPageMisc::setRealTime(const QString &_t)
@@ -265,9 +265,9 @@ void SetupPageMisc::setShowSeconds(const bool &_t)
     showSecondsCheckBox->setChecked (_t);
 }
 
-QString SetupPageMisc::getUTCTime(){
-
-    return util->boolToQString(UTCCheckbox->isChecked());
+bool SetupPageMisc::getUTCTime()
+{
+    return UTCCheckbox->isChecked();
 }
 
 
@@ -276,11 +276,11 @@ void SetupPageMisc::setUTCTime(const QString &_t)
     UTCCheckbox->setChecked(util->trueOrFalse(_t));
 }
 
-
-QString SetupPageMisc::getAlwaysADIF()
+bool SetupPageMisc::getAlwaysADIF()
 {
-    return util->boolToQString(alwaysADIFCheckBox->isChecked());
+    return alwaysADIFCheckBox->isChecked();
 }
+
 void SetupPageMisc::setAlwaysADIF(const QString &_t)
 { // Defaul value is false
     alwaysADIFCheckBox->setChecked(util->trueOrFalse(_t));
@@ -310,9 +310,9 @@ void SetupPageMisc::slotOpenFileButtonClicked()
  }
 
 
-QString SetupPageMisc::getUseDefaultName()
+bool SetupPageMisc::getUseDefaultName()
 {
-    return util->boolToQString(useDefaultName->isChecked());
+    return useDefaultName->isChecked();
 }
 
 void SetupPageMisc::setUseDefaultName(const QString &_t)
@@ -320,9 +320,9 @@ void SetupPageMisc::setUseDefaultName(const QString &_t)
     useDefaultName->setChecked(util->trueOrFalse(_t));
 }
 
-QString SetupPageMisc::getImperial()
+bool SetupPageMisc::getImperial()
 {
-    return util->boolToQString(imperialCheckBox->isChecked());
+    return imperialCheckBox->isChecked();
 }
 
 void SetupPageMisc::setImperial(const QString &_t)
@@ -334,12 +334,10 @@ void SetupPageMisc::setImperial(const QString &_t)
 void SetupPageMisc::slotUseDefaultButtonStateChanged(int state)
 {
        //qDebug() << "SetupPageMisc::slotUseDefaultButtonStateChanged" << QT_ENDL;
-
     if (state)
     {
         defaultFileNameLineEdit->setEnabled(true);
         moveDBPushButton->setEnabled(true);
-
     }
     else
     {
@@ -348,9 +346,9 @@ void SetupPageMisc::slotUseDefaultButtonStateChanged(int state)
     }
 }
 
-QString SetupPageMisc::getSendQSLWhenRec()
+bool SetupPageMisc::getSendQSLWhenRec()
 {
-    return util->boolToQString(sendQSLWhenRecCheckBox->isChecked());
+    return sendQSLWhenRecCheckBox->isChecked();
 }
 
 
@@ -359,9 +357,9 @@ void SetupPageMisc::setSendQSLWhenRec(const QString &_t)
     sendQSLWhenRecCheckBox->setChecked(util->trueOrFalse(_t));
 }
 
-QString SetupPageMisc::getShowStationCallSignInSearch()
+bool SetupPageMisc::getShowStationCallSignInSearch()
 {
-    return util->boolToQString(showStationCallWhenSearchCheckBox->isChecked());
+    showStationCallWhenSearchCheckBox->isChecked();
 }
 
 void SetupPageMisc::setShowStationCallSignInSearch(const QString &_t)
@@ -381,9 +379,9 @@ void SetupPageMisc::setKeepMyData(const QString &_t)
 }
 */
 
-QString SetupPageMisc::getCompleteWithPrevious()
+bool SetupPageMisc::getCompleteWithPrevious()
 {
-    return util->boolToQString(completeWithPreviousCheckBox->isChecked());
+    return completeWithPreviousCheckBox->isChecked();
 }
 
 void SetupPageMisc::setCompleteWithPrevious(const QString &_t)
@@ -406,9 +404,9 @@ void SetupPageMisc::slotcheckNewVersionCheckBoxClicked()
     }
 }
 
-QString SetupPageMisc::getCheckNewVersions()
+bool SetupPageMisc::getCheckNewVersions()
 {
-    return util->boolToQString(checkNewVersionCheckBox->isChecked());
+    return checkNewVersionCheckBox->isChecked();
 }
 
 void SetupPageMisc::setCheckNewVersions(const QString &_t)
@@ -436,12 +434,11 @@ void SetupPageMisc::setUseDefaultDBPath(const QString &_t)
 {
     dbDirCurrent = _t;
     dbPathLineEdit->setText(dbDirCurrent);
-
 }
 
 
-QString SetupPageMisc::getDXMarathon(){
-    return util->boolToQString(useDxMarathonCheckBox->isChecked());
+bool SetupPageMisc::getDXMarathon(){
+    return useDxMarathonCheckBox->isChecked();
 }
 
 void SetupPageMisc::setDXMarathon(const QString &_t){

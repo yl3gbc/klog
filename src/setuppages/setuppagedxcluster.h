@@ -41,16 +41,16 @@ public:
     QString getSelectedDxClusterServer();
     void setSelectedDxClusterServer(const QString t);
 
-    QString getShowHFQCheckbox();
-    QString getShowVHFQCheckbox();
-    QString getShowWARCQCheckbox();
-    QString getShowWorkedQCheckbox();
-    QString getShowConfirmedQCheckbox();
-    QString getShowANNQCheckbox();
-    QString getShowWWVQCheckbox();
-    QString getShowWCYQCheckbox();
-    QString getSaveActivityQCheckbox();
-    QString getSendSpotsToMap();
+    bool getShowHFQCheckbox();
+    bool getShowVHFQCheckbox();
+    bool getShowWARCQCheckbox();
+    bool getShowWorkedQCheckbox();
+    bool getShowConfirmedQCheckbox();
+    bool getShowANNQCheckbox();
+    bool getShowWWVQCheckbox();
+    bool getShowWCYQCheckbox();
+    bool getSaveActivityQCheckbox();
+    bool getSendSpotsToMap();
 
     void setSendSpotstoMap(const QString t);
     void setShowHFQCheckbox(const QString t);

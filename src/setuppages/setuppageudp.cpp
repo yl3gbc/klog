@@ -219,9 +219,9 @@ void SetupPageUDP::slotLogFromWSJTCheckBoxClicked()
 }
 
 
-QString SetupPageUDP::getUDPServer()
+bool SetupPageUDP::getUDPServer()
 {
-    return util->boolToQString(UDPServerCheckBox->isChecked());
+    return UDPServerCheckBox->isChecked();
 }
 
 void SetupPageUDP::setUDPServer(const QString &_t)
@@ -284,19 +284,19 @@ QString SetupPageUDP::getTimeout()
     }
 }
 
-QString SetupPageUDP::getLogFromWSJTx()
+bool SetupPageUDP::getLogFromWSJTx()
 {
-    return util->boolToQString(logFromWSJTXCheckbox->isChecked());
+    return logFromWSJTXCheckbox->isChecked();
 }
 
-QString SetupPageUDP::getAutoLogFromWSJTx()
+bool SetupPageUDP::getAutoLogFromWSJTx()
 {
-    return  util->boolToQString(logAutomaticallyWSJTXCheckbox->isChecked());
+    return  logAutomaticallyWSJTXCheckbox->isChecked();
 }
 
-QString SetupPageUDP::getReaDataFromWSJTx()
+bool SetupPageUDP::getReaDataFromWSJTx()
 {
-    return util->boolToQString(realDataFromWSJTXCheckbox->isChecked());
+    return realDataFromWSJTXCheckbox->isChecked();
 }
 
 void SetupPageUDP::setLogFromWSJTx(const QString &_t)

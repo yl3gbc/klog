@@ -170,7 +170,8 @@ QString HamLibSerialConfigWidget::getFlowControl()
 {
     int ret = flowControlComboBox->currentIndex();
     QString output;
-    output = "HamLibSerialFlowControl=";
+    output.clear ();
+    //output = "HamLibSerialFlowControl=";
     switch (ret)
     {
         case 0:
@@ -212,7 +213,8 @@ QString HamLibSerialConfigWidget::getParity()
 {
     int ret = parityComboBox->currentIndex();
     QString output;
-    output = "HamLibSerialParity=";
+    output.clear ();
+    //output = "HamLibSerialParity=";
     switch (ret)
     {
         case 0:

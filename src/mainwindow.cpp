@@ -4962,19 +4962,17 @@ void MainWindow::readConfigData()
 
    //qDebug()<< QTime::currentTime().toString("hh:mm:ss - ") << Q_FUNC_INFO << ": Before processConfigLine " << QT_ENDL;
 
-    QTextStream in(&file);
-    while (!in.atEnd())
-    {
-        QString line;
-        line.clear ();
-        line = in.readLine();
-        processConfigLine(line);
-    }
-    file.close ();
+    //QTextStream in(&file);
+    //while (!in.atEnd())
+    //{
+    //    QString line;
+    //    line.clear ();
+    //    line = in.readLine();
+    //    processConfigLine(line);
+    //}
+    //file.close ();
 
 
-    //qDebug() << Q_FUNC_INFO << ": After processConfigLines "  << QTime::currentTime().toString("hh:mm:ss") << QT_ENDL;
-    //defineStationCallsign(mainQRZ);
 
      //qDebug() << Q_FUNC_INFO << ":  " << defaultADIFLogFile << QTime::currentTime().toString("hh:mm:ss") << QT_ENDL;
 
@@ -5060,552 +5058,211 @@ bool MainWindow::processConfigLine(const QString &_line){
     //qDebug() << Q_FUNC_INFO << ": " << _line << QT_ENDL;
 
     logEvent(Q_FUNC_INFO, QString("Start: %1").arg(_line), Debug);
-    int _logWithMoreQSOs = 0; // At the end, if the this variable is >0 the Selectedlog will have to be changed in the file.
-    QString line = _line.simplified();
-    //qDebug() << Q_FUNC_INFO << " - 2"  << QT_ENDL;
-    if (!( (line.contains('=')) && (line.contains(';')))){
-        //qDebug() << "MainWindow::processConfigLine: Wrong Line!" << QT_ENDL;
-        logEvent(Q_FUNC_INFO, "END-2", Debug);
-        return false;
-    }
-    //qDebug() << Q_FUNC_INFO << " - 5"  << QT_ENDL;
-    if (line.startsWith('#'))
-    {
-        //qDebug() << "MainWindow::processConfigLine: notes Line!" << QT_ENDL;
-        logEvent(Q_FUNC_INFO, "END-1", Debug);
-        return true;
-    }
 
-    //qDebug() << Q_FUNC_INFO << " - 10 "  << QT_ENDL;
-    QStringList values;
-    values.clear();
+    QSettings settings(configFileName, QSettings::IniFormat);
+    mainQRZ = settings.value("callsign").toString();
 
-    //values << line.split("=", QT_SKIP);
-    values << line.split("=", QT_SKIP);
-    //qDebug() << Q_FUNC_INFO << ": value length: " << QString::number(values.length ()) << QT_ENDL;
-    if (values.length ()!=2)
-    {
-        //qDebug() << Q_FUNC_INFO << ": Returning false, wrong lenght!" << QT_ENDL;
-        return false;
-    }
+    readActiveModes((settings.value("modes").toString()).split(", ", QT_SKIP));
+    readActiveBands((settings.value("bands").toString()).split(", ", QT_SKIP));
 
-    //qDebug() << Q_FUNC_INFO << ": value.at(0): " << values.at(0) << QT_ENDL;
-    //qDebug() << Q_FUNC_INFO << ": value.at(1): " << values.at(1) << QT_ENDL;
-    //qDebug() << Q_FUNC_INFO << " - 11 "  << QT_ENDL;
+    mainQSOEntryWidget->setRealTime(settings.value("realtime").toBool());
+    mainQSOEntryWidget->setShowSeconds(settings.value("showseconds").toBool());
+    logWindow->setColumns((settings.value("logviewfields").toString()).split(",", QT_SKIP));
 
-    //qDebug() << Q_FUNC_INFO << " - 20 "  << QT_ENDL;
-
-    //qDebug() << Q_FUNC_INFO << " - 25"  << QT_ENDL;
-    QString field = (values.at(0)).toUpper();
-    //qDebug() << Q_FUNC_INFO << " - 26"  << QT_ENDL;
-    QString value = values.at(1);
-    //qDebug() << Q_FUNC_INFO << " - 28"  << QT_ENDL;
-    int endValue = value.indexOf(';');
-    if (endValue>-1){
-        value = value.left(value.length() - (value.length() - endValue));
-    }
-    //qDebug() << Q_FUNC_INFO << " - 30 "  << QT_ENDL;
     QString aux;
-    if (field == "CALLSIGN"){
-        //qDebug() << Q_FUNC_INFO << " - 30.1 - Callsign: " << value << QT_ENDL;
-        if (util->isValidCall(value))
+    aux = settings.value("dxclusterservertuse").toString();
+    if (aux.contains(':'))
+    {
+        dxclusterServerToConnect = (aux.split(':', QT_SKIP)).at(0);
+        dxclusterServerPort = ((aux.split(':', QT_SKIP)).at(1)).toInt();
+    }
+    if ((dxclusterServerToConnect.length()< 3) || (dxclusterServerPort <= 0))
+    {
+        dxclusterServerToConnect = "dxfun.com";
+        dxclusterServerPort = 8000;
+    }
+    dxClusterWidget->setDXClusterServer(dxclusterServerToConnect, dxclusterServerPort);
+    if (settings.value("power").toFloat()>0.0f)
+    {
+        myPower = settings.value("power").toDouble();
+        myDataTabWidget->setSetupMyPower(myPower);
+    }
+    useDefaultLogFileName = settings.value("usedefaultname").toBool();
+    imperialSystem = settings.value("imperialsystem").toBool();
+    sendQSLWhenRec = settings.value("sendqslwhenrec").toBool();
+    manageDxMarathon = settings.value("managedxmarathon").toBool();
+    awardsWidget->setManageDXMarathon(manageDxMarathon);
+    searchWidget->setShowCallInSearch(settings.value("showcallsigninsearch").toBool());
+    checkNewVersions = settings.value("checknewversions").toBool();
+    reportInfo = settings.value("provideinfo").toBool();
+    alwaysADIF = settings.value("alwaysadif").toBool();
+
+    setLogLevel(util->stringToDebugLevel (settings.value("debuglog").toString()));
+    mainQSOEntryWidget->setUTC(settings.value("utctime").toBool());
+
+    sendQSLByDefault=settings.value("sendeqslbnydefault").toBool();
+    eQSLTabWidget->setQueueSentByDefault(sendQSLByDefault);
+
+    dupeSlotInSeconds = settings.value("duplicatedqsoslot").toInt();
+    filemanager->setDuplicatedQSOSlot(dupeSlotInSeconds);
+    mainQSOEntryWidget->setDuplicatedQSOSlot(dupeSlotInSeconds);
+
+    completeWithPrevious  = settings.value("completewithprevious").toBool();
+    dxClusterWidget->setSaveSpots(settings.value("dxclustersave").toBool());
+    dxClusterShowHF  = settings.value("dxclustershowhf").toBool();
+    dxClusterShowVHF = settings.value("dxclustershowvhf").toBool();
+    dxClusterShowWARC = settings.value("dxclustershowwarc").toBool();
+    dxClusterShowWorked = settings.value("dxclustershowworked").toBool();
+    dxClusterShowConfirmed = settings.value("dxclustershowconfirmed").toBool();
+    dxClusterShowAnn = settings.value("dxclustershowann").toBool();
+    dxClusterShowWWV = settings.value("dxclustershowwwv").toBool();
+    dxClusterShowWCY = settings.value("dxclustershowwcy").toBool();
+    dxclusterSendSpotsToMap = settings.value("dxclustersendtomap").toBool();
+    defaultADIFLogFile = settings.value("defaultadiffile").toString();
+    myDataTabWidget->setMyLocator(settings.value("stationlocator").toString());
+
+    newOneColor.setNamedColor(settings.value("newonecolor").toString());
+    neededColor.setNamedColor(settings.value("neededcolor").toString());
+    workedColor.setNamedColor(settings.value("workedcolor").toString());
+    confirmedColor.setNamedColor(settings.value("confirmedcolor").toString());
+    defaultColor.setNamedColor(settings.value("defaultcolor").toString());
+
+    UDPServerStart = settings.value("udpserver").toBool();
+    UDPLogServer->setNetworkInterface(settings.value("udpnetworkinterface").toString());
+    UDPLogServer->setPort (settings.value("udpserverport").toInt());
+    UDPLogServer->setRealTimeUpdate(settings.value("realtimefromwsjtx").toBool());
+    //TODO: CHeck if infoTimeout code can be simply removed
+    infoTimeout = settings.value ("infotimeout").toInt();
+
+    UDPLogServer->setLogging(settings.value("logfromwsjtx").toBool());
+    wsjtxAutoLog = settings.value("logautofromwsjtx").toBool();
+
+
+    hamlib->setModelId(settings.value("hamlibrigtype").toInt());
+    hamlib->setPort(settings.value("hamlibserialport").toString());
+    hamlib->setSpeed(settings.value("hamlibserialbauds").toInt());
+    hamlib->setDataBits(settings.value("hamlibserialdatabits").toInt());
+    hamlib->setStop(settings.value("hamlibserialstopbits").toString ());
+    hamlib->setFlow(settings.value("hamlibserialflowcontrol").toString());
+    hamlib->setParity(settings.value("hamlibserialparity").toString());
+    hamlib->setPoll(settings.value("hamlibpollrate").toInt());
+    hamlibActive = settings.value("hamlib").toBool();
+    hamlib->setReadOnly(settings.value("hamlibreadonly").toBool());
+    hamlib->setNetworkAddress (settings.value("hamlibnetaddress").toString());
+    hamlib->setNetworkPort (settings.value("hamlibnetport").toInt());
+
+    currentLog = settings.value("selectedlog").toInt();
+
+    //qDebug() << "MainWindow::processConfigLine: currentLog - SelectedLog: " << QString::number(currentLog) << QT_ENDL;
+
+
+    if ( ((dataProxy->doesThisLogExist(currentLog)) ) )
+    {
+    //qDebug() << "MainWindow::processConfigLine: currentLog - Log with QSO - SelectedLog: " << QString::number(currentLog) << QT_ENDL;
+    }
+    else
+    {
+        int _howManyQSOMax = -1;     // NUmber of QSO of the log with more QSO
+        int _howManyQSOMaxT = 0;    // Number of QSO in ine specific log
+        QStringList logs = QStringList();
+
+        logs << dataProxy->getListOfManagedLogs();
+        //qDebug() << "MainWindow::processConfigLine: logs: " << QString::number(logs.size()) << QT_ENDL;
+        int _logWithMoreQSOs = 0;
+        for (int i = 0;i<logs.length();i++)
         {
-            mainQRZ = value;
+        _howManyQSOMaxT = dataProxy->getHowManyQSOInLog(i);
+            if (_howManyQSOMax < _howManyQSOMaxT)
+            {
+                //qDebug() << "MainWindow::processConfigLine: Found log with more QSO: " << logs.at(i) << QT_ENDL;
+                _howManyQSOMax = _howManyQSOMaxT;
+                _logWithMoreQSOs = (logs.at(i)).toInt();
+            }
         }
-    }else if (field=="CQZ"){
-        //my_CQz = value.toInt();
-    }else if (field=="ITUZ"){
-        //my_ITUz = value.toInt();
-    }else if (field=="CONTEST"){
-                    //qDebug() << "MainWindow::processConfigLine: CONTEST: " << QT_ENDL;
-        contestMode = value;
-    }else if (field=="MODES"){
-        readActiveModes(value.split(", ", QT_SKIP));
-    }else if (field=="BANDS"){
-        //qDebug() << "MainWindow::processConfigLine: BANDS: " << value << QT_ENDL;
-        readActiveBands(value.split(", ", QT_SKIP));
-    }else if (field=="REALTIME"){
-        //qDebug << "MainWindow::processConfigLine: REALTIME: " << value.toUpper() << QT_ENDL;
-        mainQSOEntryWidget->setRealTime(util->trueOrFalse(value));
-    }else if (field=="SHOWSECONDS"){
-        mainQSOEntryWidget->setShowSeconds (util->trueOrFalse (value));
-    }else if (field=="LOGVIEWFIELDS"){
-        //qDebug() << "MainWindow::processConfigLine: LOGVIEWFIELDS: " << value.toUpper() << QT_ENDL;
-        logWindow->setColumns(value.split(",", QT_SKIP));
-    }else if (field =="DXCLUSTERSERVERTOUSE"){
-        aux = value;  //dxfun.com:8000
-        if (aux.contains(':'))
+        if (_logWithMoreQSOs>0)
         {
-            dxclusterServerToConnect = (aux.split(':', QT_SKIP)).at(0);
-            dxclusterServerPort = ((aux.split(':', QT_SKIP)).at(1)).toInt();
-        }
-
-        if ((dxclusterServerToConnect.length()< 3) || (dxclusterServerPort <= 0))
-        {
-            dxclusterServerToConnect = "dxfun.com";
-            dxclusterServerPort = 8000;
-        }
-        dxClusterWidget->setDXClusterServer(dxclusterServerToConnect, dxclusterServerPort);
-    }
-    else if(field=="POWER")
-    {
-        if (value.toFloat()>0.0f)
-        {
-            myPower = value.toDouble();
-            myDataTabWidget->setSetupMyPower(myPower);
-        }
-    }
-    else if (field=="USEDEFAULTNAME")
-    {
-         useDefaultLogFileName = util->trueOrFalse(value);
-    }
-
-    else if (field=="IMPERIALSYSTEM")
-    {
-        imperialSystem = util->trueOrFalse(value);
-    }
-    else if (field=="SENDQSLWHENREC")
-    {
-        sendQSLWhenRec = util->trueOrFalse(value);
-    }
-    else if (field=="MANAGEDXMARATHON")
-    {
-                //qDebug() << "MainWindow::processConfigLine: Marathon-1 - Value: " << value << QT_ENDL;
-        manageDxMarathon = util->trueOrFalse(value);
-                //qDebug() << "MainWindow::processConfigLine: Marathon-2" << QT_ENDL;
-        awardsWidget->setManageDXMarathon(manageDxMarathon);
-    }
-
-    else if (field=="SHOWCALLSIGNINSEARCH")
-    {
-        searchWidget->setShowCallInSearch(util->trueOrFalse(value));
-        //stationCallSignShownInSearch = util->trueOrFalse(value);
-    }
-
-    else if (field=="CHECKNEWVERSIONS"){
-        checkNewVersions = util->trueOrFalse(value);
-    }
-
-    else if (field=="PROVIDEINFO"){
-        reportInfo = util->trueOrFalse(value);
-    }
-
-    else if (field=="ALWAYSADIF")
-    {
-        alwaysADIF = util->trueOrFalse(value);
-    }
-    else if (field=="DEBUGLOG")
-    {
-        setLogLevel(util->stringToDebugLevel(value));
-    }
-    else if (field=="UTCTIME")
-    {
-        //qDebug() << "MainWindow::processConfigLine: UTCTIME: " << value.toUpper();
-        //UTCTime = util->trueOrFalse(value);
-        mainQSOEntryWidget->setUTC(util->trueOrFalse(value));
-    }
-
-    else if (field=="SENDEQSLBYDEFAULT")
-    {
-        sendQSLByDefault=util->trueOrFalse(value);
-        eQSLTabWidget->setQueueSentByDefault(sendQSLByDefault);
-    }
-    else if (field=="DUPLICATEDQSOSLOT"){
-        if (value.toInt()>=0)
-        {
-            dupeSlotInSeconds = value.toInt();
-            filemanager->setDuplicatedQSOSlot(dupeSlotInSeconds);
-            mainQSOEntryWidget->setDuplicatedQSOSlot(dupeSlotInSeconds);
-        }
-    }
-
-    else if (field=="COMPLETEWITHPREVIOUS")
-    {
-        completeWithPrevious  = util->trueOrFalse(value);
-    }
-    else if (field=="DXCLUSTERSAVE")
-    {
-        dxClusterWidget->setSaveSpots(util->trueOrFalse(value));
-    }
-    else if (field=="DXCLUSTERSHOWHF")
-    {
-        dxClusterShowHF  = util->trueOrFalse(value);
-    }
-
-    else if (field=="DXCLUSTERSHOWVHF")
-    {
-        dxClusterShowVHF = util->trueOrFalse(value);
-    }
-
-    else if (field=="DXCLUSTERSHOWWARC")
-    {
-        dxClusterShowWARC  = util->trueOrFalse(value);
-    }
-
-    else if (field=="DXCLUSTERSHOWWORKED")
-    {
-        dxClusterShowWorked = util->trueOrFalse(value);
-    }
-
-    else if (field=="DXCLUSTERSHOWCONFIRMED")
-    {
-        dxClusterShowConfirmed = util->trueOrFalse(value);
-    }
-
-    else if (field=="DXCLUSTERSHOWANN")
-    {
-        dxClusterShowAnn = util->trueOrFalse(value);
-    }
-
-    else if (field=="DXCLUSTERSHOWWWV")
-    {
-        dxClusterShowWWV = util->trueOrFalse(value);
-    }
-
-    else if (field=="DXCLUSTERSHOWWCY")
-    {
-        dxClusterShowWCY = util->trueOrFalse(value);
-    }
-    else if (field  =="DXCLUSTERSENDTOMAP")
-    {
-       dxclusterSendSpotsToMap = util->trueOrFalse(value);
-    }
-    else if (field=="DEFAULTADIFFILE")
-    {
-        defaultADIFLogFile = value.toLower();
-                    //qDebug() << "MainWindow::processConfigLine: " << defaultADIFLogFile << QT_ENDL;
-    }
-    else if (field=="STATIONLOCATOR")
-    {
-        if ( locator->isValidLocator(value) )
-        {
-            //myLocator = ;
-            myDataTabWidget->setMyLocator(value.toUpper());
-        }
-    }
-    else if(field=="NEWONECOLOR")
-    {
-        newOneColor.setNamedColor(value);
-    }
-    else if(field=="NEEDEDCOLOR")
-    {
-        neededColor.setNamedColor(value);
-    }
-    else if(field=="WORKEDCOLOR")
-    {
-        workedColor.setNamedColor(value);
-    }
-    else if(field=="CONFIRMEDCOLOR")
-    {
-        confirmedColor.setNamedColor(value);
-    }
-    else if(field=="DEFAULTCOLOR")
-    {
-        defaultColor.setNamedColor(value);
-    }
-    //else if (field=="PSTROTATORACTIVE")
-    //{
-        //usePSTRotator = true;
-    //}
-    //else if (field=="PSTROTATORPORT")
-    //{
-    //    pstRotator->setPort(value.toInt());
-    //}
-    //else if (field=="PSTROTATORSERVER")
-    //{
-    //    pstRotator->setServer(value);
-    //}
-    else if (field=="UDPSERVER")
-    {
-                 //qDebug() << "MainWindow::processConfigLine: UDPSERVER: " << value.toUpper()  << QT_ENDL;
-        UDPServerStart = util->trueOrFalse(value);
-    }
-    else if (field=="UDPNETWORKINTERFACE")
-    {
-        UDPLogServer->setNetworkInterface(value);
-    }
-    else if (field=="UDPSERVERPORT")
-    {
-        UDPLogServer->setPort(value.toInt());
-    }
-    else if (field=="INFOTIMEOUT")
-    {
-        int a = value.toInt();
-        if ((a>0) && (a<=65535))
-        {
-            infoTimeout = a;
-        }
-    }
-    else if (field=="LOGFROMWSJTX")
-    {
-        UDPLogServer->setLogging(util->trueOrFalse(value));
-    }
-    else if (field=="LOGAUTOFROMWSJTX")
-    {
-        wsjtxAutoLog = util->trueOrFalse(value);
-    }
-    else if (field == "HAMLIBRIGTYPE" )
-    {
-        //qDebug() << "MainWindow::processConfigLine: HAMLIBRIGTYPE: " << value << QT_ENDL;
-        hamlib->setModelId(value.toInt());
-
-    }
-    else if(field == "HAMLIBSERIALPORT")
-    {
-        //qDebug() << "MainWindow::processConfigLine: HAMLIBSERIALPORT: " << value << QT_ENDL;
-        hamlib->setPort(value);
-        //qDebug() << "MainWindow::processConfigLine: HAMLIBSERIALPORT: " << value << QT_ENDL;
-    }
-    else if (field == "HAMLIBSERIALBAUDS")
-    {
-        //qDebug() << "MainWindow::processConfigLine: HAMLIBSERIALBAUDS: " << value << QT_ENDL;
-        hamlib->setSpeed(value.toInt());
-        //qDebug() << "MainWindow::processConfigLine: HAMLIBSERIALBAUDS: " << value << QT_ENDL;
-    }else if(field =="HAMLIBSERIALDATABITS"){
-        //qDebug() << "SetupDialog::processConfigLine: HAMLIBSERIALDATABITS: " << value << QT_ENDL;
-        hamlib->setDataBits(value.toInt());
-        //qDebug() << "SetupDialog::processConfigLine: HAMLIBSERIALDATABITS: " << value << QT_ENDL;
-    }else if(field =="HAMLIBSERIALSTOPBITS"){
-             //qDebug() << "SetupDialog::processConfigLine: HAMLIBSERIALSTOPBITS: " << value << QT_ENDL;
-        hamlib->setStop(value);
-             //qDebug() << "SetupDialog::processConfigLine: HAMLIBSERIALSTOPBITS: " << value << QT_ENDL;
-    }else if(field =="HAMLIBSERIALFLOWCONTROL"){
-             //qDebug() << "SetupDialog::processConfigLine: HAMLIBSERIALFLOWCONTROL: " << value << QT_ENDL;
-        hamlib->setFlow(value);
-             //qDebug() << "SetupDialog::processConfigLine: HAMLIBSERIALFLOWCONTROL: " << value << QT_ENDL;
-    }else if(field =="HAMLIBSERIALPARITY"){
-             //qDebug() << "SetupDialog::processConfigLine: HAMLIBSERIALPARITY: " << value << QT_ENDL;
-        hamlib->setParity(value);
-             //qDebug() << "SetupDialog::processConfigLine: HAMLIBSERIALPARITY: " << value << QT_ENDL;
-    }else if(field =="HAMLIBSERIALRTS"){
-             //qDebug() << "SetupDialog::processConfigLine: HAMLIBSERIALRTS: " << value << QT_ENDL;
-        //hamlib->setRTS(value);
-             //qDebug() << "SetupDialog::processConfigLine: HAMLIBSERIALRTS: " << value << QT_ENDL;
-    }else if(field =="HAMLIBSERIALDTR"){
-             //qDebug() << "SetupDialog::processConfigLine: HAMLIBSERIALDTR: " << value << QT_ENDL;
-        //hamlib->setDTR(value);
-             //qDebug() << "SetupDialog::processConfigLine: HAMLIBSERIALDTR: " << value << QT_ENDL;
-    }else if (field == "HAMLIBRIGPOLLRATE"){
-        hamlib->setPoll(value.toInt());
-    }else if (field == "HAMLIB")
-    {
-        //qDebug() << "MainWindow::processConfigLine: HAMLIB: " << value << QT_ENDL;
-        hamlibActive = util->trueOrFalse(value);
-        //qDebug() << "MainWindow::processConfigLine: HAMLIB: " << value << QT_ENDL;
-    }
-    else if (field == "HAMLIBREADONLY")
-    {
-                //qDebug() << "MainWindow::processConfigLine: HAMLIBREADONLY: " << value << QT_ENDL;
-        hamlib->setReadOnly(util->trueOrFalse(value));
-    }
-    else if (field == "HAMLIBNETADDRESS"){
-        //hamlibPage->setRadioNetworkAddress (value);
-        hamlib->setNetworkAddress (value);
-    }
-    else if (field == "HAMLIBNETPORT"){
-        hamlib->setNetworkPort (value.toInt ());
-        //hamlibPage->setRadioNetworkPort (value.toInt ());
-    }
-    else if (field=="REALTIMEFROMWSJTX")
-    {
-                 //qDebug() << "MainWindow::processConfigLine: REALTIMEFROMWSJTX: " << value << QT_ENDL;
-        UDPLogServer->setRealTimeUpdate(util->trueOrFalse(value));
-    }
-    else if(field=="SELECTEDLOG")
-    {
-        currentLog = value.toInt();
-                  //qDebug() << "MainWindow::processConfigLine: currentLog - SelectedLog: " << QString::number(currentLog) << QT_ENDL;
-
-        //if ( ((dataProxy->doesThisLogExist(currentLog))  && (dataProxy->getHowManyQSOInLog(currentLog) > 0)) )
-        if ( ((dataProxy->doesThisLogExist(currentLog)) ) )
-        {
-            //qDebug() << "MainWindow::processConfigLine: currentLog - Log with QSO - SelectedLog: " << QString::number(currentLog) << QT_ENDL;
+            currentLog = _logWithMoreQSOs;
+            filemanager->modifySetupFile(configFileName, "SelectedLog", QString::number(currentLog));
         }
         else
         {
-            int _howManyQSOMax = -1;     // NUmber of QSO of the log with more QSO
-            int _howManyQSOMaxT = 0;    // Number of QSO in ine specific log
-            QStringList logs = QStringList();
-
-            logs << dataProxy->getListOfManagedLogs();
-            //qDebug() << "MainWindow::processConfigLine: logs: " << QString::number(logs.size()) << QT_ENDL;
-            for (int i = 0;i<logs.length();i++)
+            QMessageBox msgBox;
+            msgBox.setIcon(QMessageBox::Critical);
+            QString aux = tr("It seems that there are no QSOs in the database.") + "\n\n" + tr("If you are sure that the database contains QSOs and KLog is   not able to find them, please contact the developers (see About KLog) for help.");
+            msgBox.setText(aux);
+            msgBox.setStandardButtons(QMessageBox::Ok);
+            msgBox.setDefaultButton(QMessageBox::Ok);
+            int ret = msgBox.exec();
+            switch (ret)
             {
-                _howManyQSOMaxT = dataProxy->getHowManyQSOInLog(i);
-                //qDebug() << "MainWindow::processConfigLine: SelectedLog-x: " << QString::number(i) << " - QSOs: " << QString::number(_howManyQSOMaxT) << QT_ENDL;
-                if (_howManyQSOMax < _howManyQSOMaxT)
-                {
-                 //qDebug() << "MainWindow::processConfigLine: Found log with more QSO: " << logs.at(i) << QT_ENDL;
-                    _howManyQSOMax = _howManyQSOMaxT;
-                   _logWithMoreQSOs = (logs.at(i)).toInt();
-                }
-            }
-            if (_logWithMoreQSOs>0)
-            {
-                currentLog = _logWithMoreQSOs;
-                filemanager->modifySetupFile(configFileName, "SelectedLog", QString::number(currentLog));
-            }
-            else
-            {
-                QMessageBox msgBox;
-
-                msgBox.setIcon(QMessageBox::Critical);
-                QString aux = tr("It seems that there are no QSOs in the database.") + "\n\n" + tr("If you are sure that the database contains QSOs and KLog is not able to find them, please contact the developers (see About KLog) for help.");
-                msgBox.setText(aux);
-                msgBox.setStandardButtons(QMessageBox::Ok);
-                msgBox.setDefaultButton(QMessageBox::Ok);
-                int ret = msgBox.exec();
-                switch (ret)
-                {
-                    case QMessageBox::Ok:
-                    break;
-                    default:
-                    // should never be reached
-                    break;
-                }
+                case QMessageBox::Ok:
+                break;
+                default:
+                // should never be reached
+                break;
             }
         }
-        stationCallsign = dataProxy->getStationCallSignFromLog (currentLog);
-        defineStationCallsign (stationCallsign);
-        dxClusterWidget->setCurrentLog(currentLog);
-        dxccStatusWidget->setCurrentLog(currentLog);
-                 //qDebug() << "MainWindow::processConfigLine: currentLog: " << value << QT_ENDL;
     }
-    else if(field=="CLUBLOGACTIVE")
-    {
-                  //qDebug() << "MainWindow::processConfigLine: clublogActive: " << value << QT_ENDL;
-        clublogActive = util->trueOrFalse(value);
-        setupDialog->setClubLogActive(clublogActive);
-    }
-    else if(field=="CLUBLOGREALTIME")
-    {
-        //qDebug() << "MainWindow::processConfigLine: clublogRealTime: " << value << QT_ENDL;
-        clublogRealTime = util->trueOrFalse(value);
-    }
-    else if(field=="CLUBLOGPASS")
-    {
-         //qDebug() << "MainWindow::processConfigLine: clublogPass: " << value << QT_ENDL;
-        clublogPass = value;
-    }
-    else if(field=="CLUBLOGEMAIL")
-    {
-         //qDebug() << "MainWindow::processConfigLine: clublogEmail: " << value << QT_ENDL;
-        clublogEmail = value;
-    }
-    else if(field=="QRZCOMACTIVE")
-    {
-        qrzcomActive = util->trueOrFalse(value);
-        setupDialog->setQRZCOMAutoCheckActive(QRZCOMAutoCheckAct->isChecked());
-        //slotElogQRZCOMAutoCheck();
-    }
-    else if(field=="QRZCOMSUBSCRIBER")
-    {
-        qrzcomSubscriber = util->trueOrFalse(value);
-        elogQRZcom->setSubcription (util->trueOrFalse(value));
-    }
-    else if(field =="QRZCOMAUTO")
-    {
-         //qDebug() << "MainWindow::processConfigLine: QRZCOMAuto: " << value << QT_ENDL;
-         //qDebug() << "MainWindow::processConfigLine: QRZCOMAuto was: " << util->boolToQString(QRZCOMAutoCheckAct->isChecked()) << QT_ENDL;
-        //qDebug() << Q_FUNC_INFO << " - Setting QRZCOMAutoCheckAct = " << value;
+    stationCallsign = dataProxy->getStationCallSignFromLog (currentLog);
+    defineStationCallsign (stationCallsign);
+    dxClusterWidget->setCurrentLog(currentLog);
+    dxccStatusWidget->setCurrentLog(currentLog);
 
-        QRZCOMAutoCheckAct->setChecked(util->trueOrFalse(value));
+    currentLog = settings.value("clublogactive").toBool();
+    setupDialog->setClubLogActive(clublogActive);
 
-         //qDebug() << Q_FUNC_INFO << " - Reading QRZCOMAutoCheckAct = " << util->boolToQString (QRZCOMAutoCheckAct->isChecked ());
-        setupDialog->setQRZCOMAutoCheckActive(util->trueOrFalse(value));
-         //qDebug() << "MainWindow::processConfigLine: QRZCOMAuto is: " << util->boolToQString(QRZCOMAutoCheckAct->isChecked()) << QT_ENDL;
-    }
-    else if(field=="QRZCOMPASS")
-    {
-        qrzcomPass = value;
-    }
-    else if(field=="QRZCOMUSER")
-    {
-        qrzcomUser = value;
-    }
-    else if (field =="QRZCOMLOGBOOKKEY"){
-        elogQRZcom->setLogBookKey(value);
-    }
-    else if(field =="EQSLACTIVE"){
-        eQSLActive = util->trueOrFalse(value);
-        setupDialog->setEQSLActive(eQSLActive);
-         //qDebug() << "MainWindow::processConfigLine - EQSLACTIVE" << QT_ENDL;
-    }
-    else if(field =="EQSLREALTIME"){
-        eQSLRealTime = util->trueOrFalse(value);
+    clublogRealTime = settings.value("clublogrealtime").toBool();
+    clublogPass = settings.value("clublogpass").toString();
+    clublogEmail = settings.value("clublogemail").toString ();
 
-         //qDebug() << "MainWindow::processConfigLine - EQSLREALTIME" << QT_ENDL;
-    }
-    else if(field =="EQSLCALL"){
-         //qDebug() << "MainWindow::processConfigLine - EQSLPASS" << QT_ENDL;
-        eqslUtilities->setUser(value);
-    }
-    else if(field =="EQSLPASS"){
-         //qDebug() << "MainWindow::processConfigLine - EQSLPASS" << QT_ENDL;
-        eqslUtilities->setPass(value);
-    }
-    else if(field =="EQSLUSESTATIONCALLSIGN"){
-         //qDebug() << "MainWindow::processConfigLine - EQSLUSESTATIONCALLSIGN" << QT_ENDL;
-        eQSLUseQSOStationCallSign = util->trueOrFalse(value);
-    }
-    else if(field =="LOTWACTIVE"){
-         //qDebug() << "MainWindow::processConfigLine - LOTWACTIVE" << QT_ENDL;
-        lotwActive = util->trueOrFalse(value);
-         //qDebug() << "MainWindow::processConfigLine - LOTWACTIVE-END" << QT_ENDL;
-    }
-    else if(field =="LOTWPATH"){
-          //qDebug() << "MainWindow::processConfigLine - LOTWPATH" << QT_ENDL;
-        lotwTQSLpath = value;
-    }
-    else if(field =="LOTWUSER"){
-          //qDebug() << "MainWindow::processConfigLine - LOTWUSER: -" << value <<"-" << QT_ENDL;
-        lotwUtilities->setUser(value);
-          //qDebug() << "MainWindow::processConfigLine - AFTER LOTWUSER" << QT_ENDL;
-    }
-    else if(field =="LOTWPASS"){
-        lotwUtilities->setPass(value);
-    }
-    else if(field=="VERSION")
+    qrzcomActive = settings.value("qrzcomactive").toBool();
+    setupDialog->setQRZCOMAutoCheckActive(QRZCOMAutoCheckAct->isChecked());
+    qrzcomSubscriber = settings.value("qrzcomsubscriber").toBool();
+    elogQRZcom->setSubcription (qrzcomSubscriber);
+    QRZCOMAutoCheckAct->setChecked(settings.value("qrzcomauto").toBool());
+    setupDialog->setQRZCOMAutoCheckActive(settings.value("qrzcomauto").toBool());
+
+    qrzcomPass = settings.value("qrzcompass").toString();
+    qrzcomUser = settings.value("qrzcomuser").toString();
+    elogQRZcom->setLogBookKey(settings.value("qrzcomlogbookkey").toString());
+
+    eQSLActive = settings.value("eqslactive").toBool();
+    setupDialog->setEQSLActive(eQSLActive);
+    eQSLRealTime = settings.value("eqslrealtime").toBool();
+
+    eqslUtilities->setUser(settings.value("eqslcall").toString());
+    eqslUtilities->setPass(settings.value("eqslpass").toString());
+
+    eQSLUseQSOStationCallSign = settings.value("eqslusestationcallsign").toBool();
+
+    lotwActive = settings.value("lotwactive").toBool();
+    lotwTQSLpath = settings.value("lotwpath").toString();
+    lotwUtilities->setUser(settings.value("lotwuser").toString());
+    lotwUtilities->setPass(settings.value("lotwpass").toString());
+
+    if (softwareVersion!=settings.value("version").toString())
     {
-        if (softwareVersion!=value)
-        {
-            itIsANewversion = true;
-        }
+        itIsANewversion = true;
     }
-    else if(field=="MAINWINDOWSIZE")
+    aux.clear();
+    aux = settings.value("mainwindowsize").toString();
+    if (aux.contains("x"))
     {
         QStringList values;
         values.clear();
-        values << value.split("x");
+        values << aux.split("x");
         if ((values.at(0).toInt()>0) && (values.at(1).toInt()>0))
         {
             windowSize.setWidth(values.at(0).toInt());
             windowSize.setHeight(values.at(1).toInt());
-            //setWindowSize(values.at(0).toInt(), values.at(1).toInt());
         }
     }
-    else if(field=="DELETEALWAYSADIFILE")
-    {
-        deleteAlwaysAdiFile = util->trueOrFalse(value);
-        //qDebug() << "Delete Aways Adif File = " << deleteAlwaysAdiFile ;
-    }
-    else if (field == "CHECKVALIDCALLS")
-    {
-         //g_callsignCheck = util->trueOrFalse (value);
-         util->setCallValidation(util->trueOrFalse (value));
-         mainQSOEntryWidget->setCallValidation(util->trueOrFalse (value));
-         filemanager->setCallValidation(util->trueOrFalse (value));
-    }
-    //else if(field=="LATESTBACKUP")
-    //{
-    //}
-    //else
-    //{
-      //qDebug() << "MainWindow::processConfigLine: NONE: " << QT_ENDL;
-    //}
+    deleteAlwaysAdiFile = settings.value("deletealwaysadifile").toBool();
 
-    // Lines are: Option = value;
-    //qDebug() << Q_FUNC_INFO << "(" << field << "/" << value << ")" << " - END";
+    util->setCallValidation(settings.value("checkvalidcalls").toBool());
+    mainQSOEntryWidget->setCallValidation(settings.value("checkvalidcalls").toBool());
+    filemanager->setCallValidation(settings.value("checkvalidcalls").toBool());
+
     logEvent(Q_FUNC_INFO, "END", Debug);
     return true;
 }

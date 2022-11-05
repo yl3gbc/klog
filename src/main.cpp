@@ -68,6 +68,10 @@ int main(int argc, char *argv[])
     app.setOrganizationDomain("klog.xyz");
     app.setApplicationVersion(QString(APP_VERSION));
     QString version = QCoreApplication::applicationVersion();
+
+    QSettings settings(util.getCfgFile (), QSettings::IniFormat);
+
+
     //qDebug() << "KLog Main: -10 " << QT_ENDL;
     // Now we check if the user is executing from the command line
     arguments.clear();
