@@ -6,7 +6,7 @@
     <message>
         <location filename="../aboutdialog.cpp" line="44"/>
         <source>About KLog</source>
-        <translation>Klosg DXCC</translation>
+        <translation>Klogs DXCC</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="51"/>
@@ -7688,17 +7688,17 @@ The log will not be opened.</source>
     <message>
         <location filename="../startwizard.cpp" line="68"/>
         <source>KLog - The free hamradio logging program</source>
-        <translation type="unfinished"></translation>
+        <translation>KLog – bezmaksas radioamatieru sakaru žurnāla programma</translation>
     </message>
     <message>
         <location filename="../startwizard.cpp" line="93"/>
         <source>Quit Setup</source>
-        <translation type="unfinished"></translation>
+        <translation>Aizvērt iestatīšanu.</translation>
     </message>
     <message>
         <location filename="../startwizard.cpp" line="93"/>
         <source>Setup is not complete yet. Are you sure you want to quit setup?</source>
-        <translation type="unfinished"></translation>
+        <translation>Iestatīšana vēl nav pabeigta. Vai tiešām vēlaties to aizvērt?</translation>
     </message>
 </context>
 <context>
