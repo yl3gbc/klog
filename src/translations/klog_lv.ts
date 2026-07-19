@@ -1174,86 +1174,99 @@ Vai vēlaties mēģināt vēlreiz?</translation>
         <location filename="../filemanager.cpp" line="888"/>
         <source>You have canceled the file import. The file will be removed and no data will be imported.
 Do you still want to cancel?</source>
-        <translation type="unfinished"></translation>
+        <translation>Faila importēšana tika atcelta. Fails tiks noņemts, un dati netiks importēti.
+Vai tiešām vēlaties atcelt?</translation>
     </message>
     <message>
         <location filename="../filemanager.cpp" line="1111"/>
         <source>KLog has found one QSO without the Station Callsign defined.
 
 Enter the Station Callsign that was used to do this QSO with %1 on %2:</source>
-        <translation type="unfinished"></translation>
+        <translation>KLog atrada vienu QSO, kuram nav norādīts stacijas izsaukuma signāls.
+
+Ievadiet stacijas izsaukuma signālu, kas tika izmantots šim QSO ar %1 datumā %2:
+</translation>
     </message>
     <message>
         <location filename="../filemanager.cpp" line="1112"/>
         <location filename="../filemanager.cpp" line="1117"/>
         <source>KLog - QSO without Station Callsign</source>
-        <translation type="unfinished"></translation>
+        <translation>KLog - QSO bez norādīta stacijas izsaukuma signāla</translation>
     </message>
     <message>
         <location filename="../filemanager.cpp" line="1118"/>
         <source>KLog has found one QSO without the Station Callsign defined.
 
 Enter the Station Callsign that was used to do this QSO on %1:</source>
-        <translation type="unfinished"></translation>
+        <translation>KLog atrada vienu QSO, kuram nav norādīts stacijas izsaukuma signāls.
+
+Ievadiet stacijas izsaukuma signālu, kas tika izmantots šim QSO datumā %1:
+</translation>
     </message>
     <message>
         <location filename="../filemanager.cpp" line="1476"/>
         <source>KLog - Don&apos;t ask again</source>
-        <translation type="unfinished"></translation>
+        <translation>KLog – Vairs nejautāt</translation>
     </message>
     <message>
         <location filename="../filemanager.cpp" line="1478"/>
         <source>Do you want to reuse your answer?</source>
-        <translation type="unfinished"></translation>
+        <translation>Vai vēlaties izmantot savu atbildi vēlreiz?</translation>
     </message>
     <message>
         <location filename="../filemanager.cpp" line="1479"/>
         <source>KLog will use automatically your previous answer for any other similar ocurrence, if any, without asking you again.</source>
-        <translation type="unfinished"></translation>
+        <translation>KLog automātiski izmantos jūsu iepriekšējo atbildi jebkuram citam līdzīgam gadījumam, ja tāds būs, vairs jums nejautājot.</translation>
     </message>
     <message>
         <location filename="../filemanager.cpp" line="1502"/>
         <source>&lt;ul&gt;&lt;li&gt;Date/Time:&lt;/i&gt; %1&lt;/li&gt;&lt;li&gt;Callsign: %2&lt;/li&gt;&lt;li&gt;Band: %3&lt;/li&gt;&lt;li&gt;Mode: %4&lt;/li&gt;&lt;/ul&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;ul&gt;&lt;li&gt;Datums/laiks: %1&lt;/li&gt;&lt;li&gt;Izsaukuma signāls: %2&lt;/li&gt;&lt;li&gt;Diapazons: %3&lt;/li&gt;&lt;li&gt;Režīms: %4&lt;/li&gt;&lt;/ul&gt;</translation>
     </message>
     <message>
         <location filename="../filemanager.cpp" line="1506"/>
         <source>KLog - QSO not found</source>
-        <translation type="unfinished"></translation>
+        <translation>KLog - QSO netika atrasts</translation>
     </message>
     <message>
         <location filename="../filemanager.cpp" line="1508"/>
         <source>Do you want to add this QSO to the log?:
 
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Vai vēlaties pievienot žurnālam šo QSO:
+
+</translation>
     </message>
     <message>
         <location filename="../filemanager.cpp" line="1509"/>
         <source>We have found a QSO coming from LoTW that is not in your local log.
 
 Do you want KLog to add this QSO to the log?</source>
-        <translation type="unfinished"></translation>
+        <translation>Mēs atradām no LoTW saņemtu QSO, kura nav jūsu lokālajā žurnālā.
+
+Vai vēlaties, lai KLog pievieno šo QSO žurnālam?
+</translation>
     </message>
     <message>
         <location filename="../filemanager.cpp" line="1531"/>
         <source>KLog - Invalid call detected</source>
-        <translation type="unfinished">KLog — konstatēts nederīgs izsaukumasignals</translation>
+        <translatorcomment>KLog – konstatēts nederīgs izsaukuma signāls</translatorcomment>
+        <translation>KLog — konstatēts nederīgs izsaukumasignals</translation>
     </message>
     <message>
         <location filename="../filemanager.cpp" line="1537"/>
         <source>An empty callsign has been detected. Do you want to export this QSO anyway (click on Yes) or remove the field from the exported log file?</source>
-        <translation type="unfinished"></translation>
+        <translation>Konstatēts tukšs izsaukuma signāls. Vai tomēr eksportēt šo QSO, vai noņemt šo lauku no eksportētā žurnāla faila?</translation>
     </message>
     <message>
         <location filename="../filemanager.cpp" line="1541"/>
         <source>An invalid callsign has been detected %1. Do you want to export this callsign anyway (click on Yes) or remove the call from the exported log file?</source>
-        <translation type="unfinished"></translation>
+        <translation>Konstatēts nederīgs izsaukuma signāls %1. Vai tomēr vēlaties eksportēt šo izsaukuma signālu, noklikšķinot uz “Jā”, vai noņemt šo izsaukuma signālu no eksportētā žurnāla faila?</translation>
     </message>
     <message>
         <location filename="../filemanager.cpp" line="1544"/>
         <source>Exporting wrong calls may create problems in the applications you are potentially importing this logfile to. It may, however, be a good callsign that is wrongly identified by KLog as not valid. You can, however, edit the ADIF file once the export process is finished.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nepareizu izsaukuma signālu eksportēšana var radīt problēmas programmās, kurās importēsiet šo žurnāla failu. Tomēr izsaukuma signāls var būt derīgs, bet KLog to kļūdaini atpazinis kā nederīgu. Pēc eksportēšanas ADIF failu varēsiet rediģēt.</translation>
     </message>
 </context>
 <context>
