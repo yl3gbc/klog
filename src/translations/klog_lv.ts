@@ -6,7 +6,7 @@
     <message>
         <location filename="../aboutdialog.cpp" line="44"/>
         <source>About KLog</source>
-        <translation>Klogs DXCC</translation>
+        <translation>Klogs</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="51"/>
@@ -141,7 +141,7 @@
     <message>
         <location filename="../aboutdialog.cpp" line="170"/>
         <source>KLog</source>
-        <translation>KLog</translation>
+        <translation>KLogs</translation>
     </message>
     <message>
         <location filename="../aboutdialog.cpp" line="173"/>
@@ -960,7 +960,7 @@ Vai vēlaties mēģināt vēlreiz?</translation>
         <location filename="../dataproxy_sqlite.cpp" line="4911"/>
         <source>Manager</source>
         <comment>Common term in hamradio, do not translate if not sure</comment>
-        <translation type="unfinished"></translation>
+        <translation>Pārvaldnieks</translation>
     </message>
     <message>
         <source>KLog DXCC</source>
