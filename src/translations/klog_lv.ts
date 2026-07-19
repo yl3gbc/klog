@@ -433,7 +433,7 @@
         <location filename="../awardswidget.cpp" line="99"/>
         <location filename="../awardswidget.cpp" line="294"/>
         <source>Select the year you want to check.</source>
-        <translation>Atlasiet gadu, kuru vēlaties pārbaudīt.</translation>
+        <translation>Atlasiet gadu , kuru vēlaties pārbaudīt.</translation>
     </message>
     <message>
         <location filename="../awardswidget.cpp" line="101"/>
@@ -481,7 +481,7 @@
         <location filename="../awardswidget.cpp" line="188"/>
         <location filename="../awardswidget.cpp" line="408"/>
         <source>Annual</source>
-        <translation type="unfinished">Visi</translation>
+        <translation>Gada pārskats.</translation>
     </message>
     <message>
         <location filename="../awardswidget.cpp" line="281"/>
@@ -554,12 +554,12 @@
     <message>
         <location filename="../startwizard.cpp" line="924"/>
         <source>&amp;Download</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Lejupielādēt</translation>
     </message>
     <message>
         <location filename="../startwizard.cpp" line="925"/>
         <source>&amp;Ignore</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ignorēt</translation>
     </message>
     <message>
         <location filename="../startwizard.cpp" line="944"/>
@@ -1072,7 +1072,7 @@ Vai vēlaties mēģināt vēlreiz?</translation>
     <message>
         <location filename="../filemanager.cpp" line="179"/>
         <source>The selected callsign (%1) is not valid, please check it again to export the log.</source>
-        <translation type="unfinished"></translation>
+        <translation>Atlasītais izsaukuma signāls (%1) nav derīgs. Pārbaudiet to vēlreiz, lai eksportētu žurnālu.</translation>
     </message>
     <message>
         <location filename="../filemanager.cpp" line="380"/>
@@ -1091,25 +1091,25 @@ Vai vēlaties mēģināt vēlreiz?</translation>
         <location filename="../filemanager.cpp" line="607"/>
         <location filename="../filemanager.cpp" line="887"/>
         <source>KLog - User cancelled</source>
-        <translation type="unfinished"></translation>
+        <translation>KLog - Darbību atcēla lietotājs</translation>
     </message>
     <message>
         <location filename="../filemanager.cpp" line="415"/>
         <location filename="../filemanager.cpp" line="608"/>
         <source>You have canceled the file export. The file will be removed and no data will be exported.</source>
-        <translation type="unfinished"></translation>
+        <translation>Faila eksportēšana tika atcelta. Fails tiks noņemts, un dati netiks eksportēti.</translation>
     </message>
     <message>
         <location filename="../filemanager.cpp" line="415"/>
         <location filename="../filemanager.cpp" line="608"/>
         <source>Do you still want to cancel?</source>
-        <translation type="unfinished"></translation>
+        <translation>Vai tiešām vēlaties atcelt?</translation>
     </message>
     <message>
         <location filename="../filemanager.cpp" line="383"/>
         <location filename="../filemanager.cpp" line="575"/>
         <source>Export progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Eksportēšanas progress</translation>
     </message>
     <message>
         <location filename="../filemanager.cpp" line="406"/>
@@ -1122,17 +1122,17 @@ Vai vēlaties mēģināt vēlreiz?</translation>
     <message>
         <location filename="../filemanager.cpp" line="689"/>
         <source>KLog - File not opened</source>
-        <translation type="unfinished"></translation>
+        <translation>KLog - Failu neizdevās atvērt</translation>
     </message>
     <message>
         <location filename="../filemanager.cpp" line="690"/>
         <source>It was not possible to open the file %1 for reading.</source>
-        <translation type="unfinished">Nevarēja atvērt failu %1 lasīšanai.</translation>
+        <translation>Failu %1 nebija iespējams atvērt lasīšanai.</translation>
     </message>
     <message>
         <location filename="../filemanager.cpp" line="691"/>
         <source>KLog was not able to read the LoTW file</source>
-        <translation type="unfinished"></translation>
+        <translation>KLog nevarēja nolasīt LoTW failu</translation>
     </message>
     <message>
         <source>Abort processing</source>
@@ -1163,12 +1163,12 @@ Vai vēlaties mēģināt vēlreiz?</translation>
     <message>
         <location filename="../filemanager.cpp" line="773"/>
         <source>Reading ADIF file...</source>
-        <translation type="unfinished"></translation>
+        <translation>Tiek nolasīts ADIF fails...</translation>
     </message>
     <message>
         <location filename="../filemanager.cpp" line="817"/>
         <source>Importing ADIF file...</source>
-        <translation type="unfinished"></translation>
+        <translation>Tiek importēts ADIF fails...</translation>
     </message>
     <message>
         <location filename="../filemanager.cpp" line="888"/>
