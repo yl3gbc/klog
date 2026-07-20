@@ -1275,27 +1275,27 @@ Vai vēlaties, lai KLog pievieno šo QSO žurnālam?
         <location filename="../setuppages/hamlibnetworkconfigwidget.cpp" line="15"/>
         <location filename="../setuppages/hamlibnetworkconfigwidget.cpp" line="21"/>
         <source>Enter the hostname or address of the radio.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ievadiet radioiekārtas nosaukumu vai adresi.</translation>
     </message>
     <message>
         <location filename="../setuppages/hamlibnetworkconfigwidget.cpp" line="16"/>
         <source>Set de network port of the radio.</source>
-        <translation type="unfinished"></translation>
+        <translation>Iestatiet radioiekārtas tīkla portu.</translation>
     </message>
     <message>
         <location filename="../setuppages/hamlibnetworkconfigwidget.cpp" line="19"/>
         <source>Host/Address</source>
-        <translation type="unfinished"></translation>
+        <translation>Resursdators/adrese</translation>
     </message>
     <message>
         <location filename="../setuppages/hamlibnetworkconfigwidget.cpp" line="25"/>
         <source>Port</source>
-        <translation type="unfinished"></translation>
+        <translation>Ports</translation>
     </message>
     <message>
         <location filename="../setuppages/hamlibnetworkconfigwidget.cpp" line="27"/>
         <source>Enter the port of the radio.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ievadiet radioiekārtas portu.</translation>
     </message>
 </context>
 <context>
@@ -1542,7 +1542,7 @@ Vai vēlaties, lai KLog pievieno šo QSO žurnālam?
         <location filename="../infowidget.cpp" line="129"/>
         <location filename="../infowidget.cpp" line="134"/>
         <source>Deg</source>
-        <translation type="unfinished"></translation>
+        <translation>Grādi</translation>
     </message>
     <message>
         <location filename="../infowidget.cpp" line="359"/>
