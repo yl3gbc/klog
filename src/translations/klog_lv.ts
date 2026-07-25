@@ -8300,33 +8300,33 @@ The log will not be opened.</source>
     <message>
         <location filename="../charts/statsqsosperyearbarchartwidget.cpp" line="65"/>
         <source>QSOs per year</source>
-        <translation type="unfinished"></translation>
+        <translation>QSO skaits gadā</translation>
     </message>
     <message>
         <location filename="../charts/statsqsosperyearbarchartwidget.cpp" line="81"/>
         <source>Reading data ... </source>
-        <translation type="unfinished">Notiek datu lasīšana ... </translation>
+        <translation>Tiek nolasīti dati ...</translation>
     </message>
     <message>
         <location filename="../charts/statsqsosperyearbarchartwidget.cpp" line="81"/>
         <source>Abort reading</source>
-        <translation type="unfinished">Pārtraukt lasīšanu</translation>
+        <translation>Pārtraukt lasīšanu</translation>
     </message>
     <message>
         <location filename="../charts/statsqsosperyearbarchartwidget.cpp" line="64"/>
         <location filename="../charts/statsqsosperyearbarchartwidget.cpp" line="77"/>
         <source>QSOs</source>
-        <translation type="unfinished">QSO</translation>
+        <translation>QSO</translation>
     </message>
     <message>
         <location filename="../charts/statsqsosperyearbarchartwidget.cpp" line="94"/>
         <source>Reading data ...</source>
-        <translation type="unfinished">Notiek datu lasīšana ...</translation>
+        <translation>Notiek datu lasīšana ...</translation>
     </message>
     <message>
         <location filename="../charts/statsqsosperyearbarchartwidget.cpp" line="94"/>
         <source>QSO: %1/%2</source>
-        <translation type="unfinished"></translation>
+        <translation>QSO: %1/%2</translation>
     </message>
 </context>
 <context>
