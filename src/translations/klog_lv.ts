@@ -376,7 +376,7 @@
         <location filename="../awards.cpp" line="1315"/>
         <source>N</source>
         <comment>Needed, please try to keep the N</comment>
-        <translation type="unfinished"></translation>
+        <translation>N</translation>
     </message>
     <message>
         <location filename="../awards.cpp" line="1316"/>
@@ -7754,47 +7754,47 @@ The log will not be opened.</source>
     <message>
         <location filename="../statisticswidget.cpp" line="271"/>
         <source>QSO per hour</source>
-        <translation type="unfinished"></translation>
+        <translation>QSO pa stundām</translation>
     </message>
     <message>
         <location filename="../statisticswidget.cpp" line="272"/>
         <source>QSO per month</source>
-        <translation type="unfinished"></translation>
+        <translation>QSO pa mēnešiem</translation>
     </message>
     <message>
         <location filename="../statisticswidget.cpp" line="273"/>
         <source>Worked / Confirmed status</source>
-        <translation type="unfinished"></translation>
+        <translation>Nostrādāts / apstiprināts</translation>
     </message>
     <message>
         <location filename="../statisticswidget.cpp" line="274"/>
         <source>Worked / Sent status</source>
-        <translation type="unfinished"></translation>
+        <translation>Nostrādāts / nosūtīts</translation>
     </message>
     <message>
         <location filename="../statisticswidget.cpp" line="275"/>
         <source>Sent / Confirmed status</source>
-        <translation type="unfinished"></translation>
+        <translation>Nosūtīšanas / apstiprināšanas statuss</translation>
     </message>
     <message>
         <location filename="../statisticswidget.cpp" line="276"/>
         <source>Satellite grid status</source>
-        <translation type="unfinished"></translation>
+        <translation>Satelītu lokatoru lauku statuss</translation>
     </message>
     <message>
         <location filename="../statisticswidget.cpp" line="277"/>
         <source>Satellite DXCC status</source>
-        <translation type="unfinished"></translation>
+        <translation>Satelītu DXCC statuss</translation>
     </message>
     <message>
         <location filename="../statisticswidget.cpp" line="278"/>
         <source>Grids per band status</source>
-        <translation type="unfinished"></translation>
+        <translation>Lokatoru statuss pa diapazoniem</translation>
     </message>
     <message>
         <location filename="../statisticswidget.cpp" line="279"/>
         <source>DXCC per band status</source>
-        <translation type="unfinished"></translation>
+        <translation>DXCC statuss pa diapazoniem</translation>
     </message>
 </context>
 <context>
@@ -8021,37 +8021,37 @@ The log will not be opened.</source>
     <message>
         <location filename="../charts/statsqsosperbandbarchartwidget.cpp" line="74"/>
         <source>QSOs per band</source>
-        <translation type="unfinished"></translation>
+        <translation>QSO skaits pa diapazoniem</translation>
     </message>
     <message>
         <location filename="../charts/statsqsosperbandbarchartwidget.cpp" line="78"/>
         <source>Reading data ... </source>
-        <translation type="unfinished">Notiek datu lasīšana ... </translation>
+        <translation>Notiek datu lasīšana ... </translation>
     </message>
     <message>
         <location filename="../charts/statsqsosperbandbarchartwidget.cpp" line="78"/>
         <source>Abort reading</source>
-        <translation type="unfinished">Pārtraukt lasīšanu</translation>
+        <translation>Pārtraukt lasīšanu</translation>
     </message>
     <message>
         <location filename="../charts/statsqsosperbandbarchartwidget.cpp" line="83"/>
         <source>Bands</source>
-        <translation type="unfinished">Diapazons</translation>
+        <translation>Diapazons</translation>
     </message>
     <message>
         <location filename="../charts/statsqsosperbandbarchartwidget.cpp" line="84"/>
         <source>QSOs per band distribution</source>
-        <translation type="unfinished"></translation>
+        <translation>QSO sadalījums pa diapazoniem</translation>
     </message>
     <message>
         <location filename="../charts/statsqsosperbandbarchartwidget.cpp" line="94"/>
         <source>Reading data ...</source>
-        <translation type="unfinished">Notiek datu lasīšana ...</translation>
+        <translation>Notiek datu nolasīšana ...</translation>
     </message>
     <message>
         <location filename="../charts/statsqsosperbandbarchartwidget.cpp" line="94"/>
         <source>Bands: </source>
-        <translation type="unfinished"></translation>
+        <translation>Diapazoni: </translation>
     </message>
 </context>
 <context>
@@ -8060,32 +8060,32 @@ The log will not be opened.</source>
         <location filename="../charts/statsqsospercontinentbarchartwidget.cpp" line="75"/>
         <location filename="../charts/statsqsospercontinentbarchartwidget.cpp" line="89"/>
         <source>QSOs per continent</source>
-        <translation type="unfinished"></translation>
+        <translation>QSO pa kontinentiem</translation>
     </message>
     <message>
         <location filename="../charts/statsqsospercontinentbarchartwidget.cpp" line="79"/>
         <source>Reading data ... </source>
-        <translation type="unfinished">Notiek datu lasīšana ... </translation>
+        <translation>Notiek datu nolasīšana ...</translation>
     </message>
     <message>
         <location filename="../charts/statsqsospercontinentbarchartwidget.cpp" line="79"/>
         <source>Abort reading</source>
-        <translation type="unfinished">Pārtraukt lasīšanu</translation>
+        <translation>Pārtraukt lasīšanu</translation>
     </message>
     <message>
         <location filename="../charts/statsqsospercontinentbarchartwidget.cpp" line="88"/>
         <source>Continents</source>
-        <translation type="unfinished"></translation>
+        <translation>Kontinenti</translation>
     </message>
     <message>
         <location filename="../charts/statsqsospercontinentbarchartwidget.cpp" line="98"/>
         <source>Reading data ...</source>
-        <translation type="unfinished">Notiek datu lasīšana ...</translation>
+        <translation>Notiek datu lasīšana ...</translation>
     </message>
     <message>
         <location filename="../charts/statsqsospercontinentbarchartwidget.cpp" line="98"/>
         <source>Hours: </source>
-        <translation type="unfinished"></translation>
+        <translation>Stundas:</translation>
     </message>
 </context>
 <context>
