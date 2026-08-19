@@ -8644,7 +8644,7 @@ The log will not be opened.</source>
         <location filename="../elogclublog.cpp" line="133"/>
         <location filename="../elogclublog.cpp" line="142"/>
         <source>We have received an undefined error from Clublog (%1)</source>
-        <translation type="unfinished"></translation>
+        <translation>Esam saņēmuši nenoteiktu kļūdu no ClubLog (%1)</translation>
     </message>
     <message>
         <location filename="../elogclublog.cpp" line="134"/>
