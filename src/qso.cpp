@@ -1796,15 +1796,18 @@ int QSO::getKlogDxcc() const
 
 bool QSO::setPropMode(const QString &_c)
 {
-    //qDebug() << Q_FUNC_INFO << _c;
-    ////Utilities util(Q_FUNC_INFO);
-    if (!util->isValidPropMode (_c))
+    qDebug() << Q_FUNC_INFO << ": " << _c;
+    if (!util->isValidPropMode(_c))
     {
-        //qDebug() << Q_FUNC_INFO << " - Not valid!";
         propMode = QString();
         return false;
     }
-    //qDebug() << Q_FUNC_INFO << " - OK END";
+    if ((_c.toUpper() == "SAT") && satName.isEmpty())
+    {
+        // Propagation mode SAT requires a satellite name to be set
+        propMode = QString();
+        return false;
+    }
     propMode = _c.toUpper();
     return true;
 }
@@ -2133,6 +2136,7 @@ bool QSO::getKeepSatTab() const{return keepSat;}
 
 bool QSO::setSatName(const QString &_c)
 {
+    qDebug() << Q_FUNC_INFO << ": " << _c;
     if (!_c.isEmpty())
     {
         satName = _c;
@@ -2141,6 +2145,10 @@ bool QSO::setSatName(const QString &_c)
     else
     {
         satName = QString();
+        if (propMode == "SAT")
+        {
+            setPropMode(QString());   // no satellite -> no SAT prop mode
+        }
         return false;
     }
 }
@@ -2152,17 +2160,19 @@ QString QSO::getSatName() const
 
 bool QSO::setSatMode(const QString &_c)
 {
-    //qDebug() << Q_FUNC_INFO << ": " << _c;
+    qDebug() << Q_FUNC_INFO << ": " << _c;
+    qDebug() << Q_FUNC_INFO << "PROP_MODE: " << _c;
     if (!_c.isEmpty())
     {
-        satMode = _c;
-        return true;
+        if (getSatName().length()>0)
+        {
+            satMode = _c;
+            return true;
+        }
     }
-    else
-    {
-        satMode = QString();
-        return false;
-    }
+
+    satMode = QString();
+    return false;
 }
 
 QString QSO::getSatMode() const

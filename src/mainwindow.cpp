@@ -260,6 +260,7 @@ void MainWindow::init_variables()
     qrzAutoChanging = false;
     qrzcomResponseValid = false;
     changingBand = false;
+    freqDrivenBandChange = false;
     logEvents = true;
     //Default band/modes
     bands << "10M" << "15M" << "20M" << "40M" << "80M" << "160M";
@@ -986,7 +987,7 @@ void MainWindow::slotBandChanged (const QString &_b)
     currentMode = currentModeShown;
     syncDXAssistantState();   // "Follow my band" tracks the band in use
 
-    if ((!isFRinBand) || (QSOTabWidget->getTXFreq()<=0))
+    if ((!freqDrivenBandChange) && ((!isFRinBand) || (QSOTabWidget->getTXFreq()<=0)))
     {
           //qDebug() << "MainWindow::slotBandChanged: Freq is not in band or empty"  ;
           //qDebug() << "MainWindow::slotBandChanged: Band: " << mainQSOEntryWidget->getBand()  ;
@@ -2549,7 +2550,16 @@ void MainWindow::createMenusCommon()
     exitAct = new QAction(tr("E&xit"), this);
     fileMenu->addAction(exitAct);
     //exitAct->setMenuRole(QAction::QuitRole);
-    exitAct->setShortcut(Qt::CTRL | Qt::Key_X);
+    // Ctrl+X is the system Cut everywhere, and on macOS Qt::CTRL is the Command
+    // key, so Exit was claiming Cmd+X. Worse, the text of this action gives it
+    // QuitRole by Qt's heuristic, so on macOS it becomes the native "Quit KLog"
+    // entry and that is the shortcut the user sees there.
+    // QKeySequence::Quit is Cmd+Q on macOS and Ctrl+Q on the Unix desktops;
+    // Windows has no standard binding for it, so Ctrl+Q is set explicitly.
+    QKeySequence quitSequence(QKeySequence::Quit);
+    if (quitSequence.isEmpty())
+        quitSequence = QKeySequence(Qt::CTRL | Qt::Key_Q);
+    exitAct->setShortcut(quitSequence);
     //connect(exitAct, SIGNAL(triggered()), this, SLOT(close()));
     connect(exitAct, SIGNAL(triggered()), this, SLOT(slotFileClose()));
 
@@ -3186,7 +3196,7 @@ void MainWindow::slotHelpAboutAction()
 
     logEvent(Q_FUNC_INFO, "Start", Devel);
     if (!aboutDialog)
-        aboutDialog = new AboutDialog(softwareVersion, pkgVersion);
+        aboutDialog = new AboutDialog(softwareVersion, pkgVersion, this);
     aboutDialog->exec();
     logEvent(Q_FUNC_INFO, "END", Debug);
     //helpAboutDialog->exec();
@@ -5408,7 +5418,13 @@ void MainWindow::slotShowStats()
 {
     logEvent(Q_FUNC_INFO, "Start", Devel);
     if (!statsWidget)
+    {
         statsWidget = new StatisticsWidget(dataProxy);
+        // Parented so it is destroyed with the main window, but kept as a
+        // top level window: without an owner the whole statistics panel (16
+        // chart widgets) was never freed.
+        statsWidget->setParent(this, Qt::Window);
+    }
     statsWidget->show();
     logEvent(Q_FUNC_INFO, "END", Debug);
 }
@@ -6228,7 +6244,16 @@ void MainWindow::slotFreqTXChanged(const Frequency  _fr)
     }
 
     if (!changingBand)
+    {
+        // setBand() can re-enter slotBandChanged() synchronously (directly, or via the
+        // satellite tab's band combos). At that point txFreqSpinBox may still hold the
+        // frequency from before this edit, so slotBandChanged must not use it to decide
+        // whether to reset the TX frequency: the correct value is the one being applied
+        // a few lines below, via setTXFreq(_fr).
+        freqDrivenBandChange = true;
         mainQSOEntryWidget->setBand(dataProxy->getBandNameFromFreq(_fr));
+        freqDrivenBandChange = false;
+    }
 
     //qDebug() << Q_FUNC_INFO << " - 10";
     QSOTabWidget->setTXFreq (_fr);
