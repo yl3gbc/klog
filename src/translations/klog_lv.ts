@@ -3711,7 +3711,7 @@ Open the LoTW tab in the Setup and configure your LoTW connection.</source>
     <message>
         <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="136"/>
         <source>Date of the LoTW sending.</source>
-        <translation type="unfinished">Klog - Iestatījumu  atjaunināšana</translation>
+        <translation>Klog Iestatījumu atjaunināšana.</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="137"/>
