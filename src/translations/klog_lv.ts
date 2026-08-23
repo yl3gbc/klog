@@ -8065,7 +8065,7 @@ The log will not be opened.</source>
     <message>
         <location filename="../charts/statsqsospercontinentbarchartwidget.cpp" line="79"/>
         <source>Reading data ... </source>
-        <translation>Notiek datu nolasīšana ...</translation>
+        <translation>Notiek datu nolasīšana ... </translation>
     </message>
     <message>
         <location filename="../charts/statsqsospercontinentbarchartwidget.cpp" line="79"/>
@@ -8085,7 +8085,7 @@ The log will not be opened.</source>
     <message>
         <location filename="../charts/statsqsospercontinentbarchartwidget.cpp" line="98"/>
         <source>Hours: </source>
-        <translation>Stundas:</translation>
+        <translation>Stundas: </translation>
     </message>
 </context>
 <context>
@@ -8305,7 +8305,7 @@ The log will not be opened.</source>
     <message>
         <location filename="../charts/statsqsosperyearbarchartwidget.cpp" line="81"/>
         <source>Reading data ... </source>
-        <translation>Tiek nolasīti dati ...</translation>
+        <translation>Tiek nolasīti dati ... </translation>
     </message>
     <message>
         <location filename="../charts/statsqsosperyearbarchartwidget.cpp" line="81"/>
