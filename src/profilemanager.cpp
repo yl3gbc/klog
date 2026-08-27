@@ -99,6 +99,26 @@ bool ProfileManager::ensureSchemaAndMigrate(QString *errorOut)
         }
         db.commit();
     }
+
+    // Trigeris: katrs jauns QSO automatiski sanem profile_id/variant_id
+    // pec lognumber -> logs.stationcall kartejuma. Darbojas visiem ievades
+    // celiem (manuala ievade, ADIF imports, UDP) bez izmainam KLog koda.
+    q.prepare(QStringLiteral(
+        "CREATE TRIGGER IF NOT EXISTS trg_log_profile "
+        "AFTER INSERT ON log "
+        "WHEN NEW.profile_id IS NULL "
+        "BEGIN "
+        " UPDATE log SET "
+        "  profile_id = (SELECT p.profile_id FROM logs l JOIN profiles p ON p.callsign = "
+        "    CASE WHEN instr(upper(trim(l.stationcall)),'/')>0 "
+        "     THEN substr(upper(trim(l.stationcall)),1,instr(upper(trim(l.stationcall)),'/')-1) "
+        "     ELSE upper(trim(l.stationcall)) END WHERE l.id = NEW.lognumber), "
+        "  variant_id = (SELECT v.variant_id FROM logs l JOIN profile_variants v "
+        "    ON v.station_callsign = upper(trim(l.stationcall)) WHERE l.id = NEW.lognumber) "
+        " WHERE id = NEW.id; "
+        "END"));
+    if (!exec(q, "createTrigger")) return false;
+
     return true;
 }
 
