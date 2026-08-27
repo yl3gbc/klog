@@ -256,12 +256,14 @@ int StartProfileDialog::chooseProfileOnStartup(ProfileManager *pm, QWidget *pare
                 QSettings s2(klogngCfgFile(), QSettings::IniFormat);
                 s2.setValue(QStringLiteral("SelectedLog"), ln);
                 const Profile ap = pm->getProfile(last);
+                s2.beginGroup(QStringLiteral("UserData"));
                 if (!ap.callsign.isEmpty())
                     s2.setValue(QStringLiteral("Callsign"), ap.callsign);
                 if (!ap.gridsquare.isEmpty())
                     s2.setValue(QStringLiteral("StationLocator"), ap.gridsquare);
                 if (!ap.operatorName.isEmpty())
                     s2.setValue(QStringLiteral("Operators"), ap.operatorName);
+                s2.endGroup();
                 s2.sync();
             }
             return last;
@@ -276,12 +278,14 @@ int StartProfileDialog::chooseProfileOnStartup(ProfileManager *pm, QWidget *pare
             QSettings s2(klogngCfgFile(), QSettings::IniFormat);
             s2.setValue(QStringLiteral("SelectedLog"), ln);
             const Profile ap = pm->getProfile(dlg.selectedProfileId());
+            s2.beginGroup(QStringLiteral("UserData"));
             if (!ap.callsign.isEmpty())
                 s2.setValue(QStringLiteral("Callsign"), ap.callsign);
             if (!ap.gridsquare.isEmpty())
                 s2.setValue(QStringLiteral("StationLocator"), ap.gridsquare);
             if (!ap.operatorName.isEmpty())
                 s2.setValue(QStringLiteral("Operators"), ap.operatorName);
+            s2.endGroup();
             s2.sync();
         }
         return dlg.selectedProfileId();
