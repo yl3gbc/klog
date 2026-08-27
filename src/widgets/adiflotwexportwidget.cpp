@@ -25,6 +25,7 @@
  *****************************************************************************/
 #include <QMessageBox>
 #include "adiflotwexportwidget.h"
+#include <QDebug>
 #include "../callsign.h"
 #include "../locator.h"
 
@@ -364,6 +365,7 @@ QList<int> AdifLoTWExportWidget::fillTable()
             case ModeADIF:
             //justQueued = false;
             //_qsos.append(dataProxy->getQSOsListLoTWToSend(_myCall, startDate->date(), endDate->date(), justQueued, logNumber));
+             qWarning() << "KLOGNG EXPORT: logNumber =" << logNumber << " myCall =" << _myCall << " myGrid =" << _myGrid;
              _qsos.append(dataProxy->getQSOsListToBeExported(_myCall, _myGrid, startDate->date(), endDate->date(), logNumber));
             // qsos.append(dataProxy->getQSOsListToBeExported(_myCall, _myGrid, startDate->date(), endDate->date()));
             //qDebug() << Q_FUNC_INFO << " ADIF";
