@@ -278,6 +278,8 @@ set(CMAKE_AUTORCC ON)
 
 # Add executable
 add_executable(klog WIN32 MACOSX_BUNDLE
+    profilemanager.cpp profilemanager.h
+    startprofiledialog.cpp startprofiledialog.h
     ${KLOG_SOURCES}
     ${KLOG_HEADERS}
     ${SRC_UI}
@@ -286,6 +288,7 @@ add_executable(klog WIN32 MACOSX_BUNDLE
     ${KLOG_MAN}
     ${KLOG_TS_FILES}
 )
+set_target_properties(klog PROPERTIES OUTPUT_NAME "klogng")
 
 source_group("Documentation" FILES ${KLOG_DOC} ${KLOG_DOC_LINUX})
 source_group("Man Pages"     FILES ${KLOG_MAN})

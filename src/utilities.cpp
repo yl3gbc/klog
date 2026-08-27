@@ -457,12 +457,12 @@ QString Utilities::getHomeDir()
 {
 //TODO: To be removed when the defaultDir is saved in the config file
 #if defined(Q_OS_WIN)
-         //qDebug() << "WINDOWS DETECTED!: "  << QDir::homePath() + "/klog" ;
-    return QDir::homePath()+"/klog";  // We create the \klog for the logs and data
+         //qDebug() << "WINDOWS DETECTED!: "  << QDir::homePath() + "/klogng" ;
+    return QDir::homePath()+"/klogng";  // We create the \klog for the logs and data
 
 #else
          //qDebug() << "NO WINDOWS DETECTED!"  ;
-    return QDir::homePath()+"/.klog";  // We create the ~/.klog for the logs and data
+    return QDir::homePath()+"/.klogng";  // We create the ~/.klog for the logs and data
 #endif
 }
 

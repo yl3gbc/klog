@@ -24,6 +24,8 @@
  *                                                                           *
  *****************************************************************************/
 #include <QtWidgets>
+#include "profilemanager.h"
+#include "startprofiledialog.h"
 // #include <QtSql>
 #include <QTranslator>
 // #include <cstdlib>
@@ -179,7 +181,7 @@ int main(int argc, char *argv[])
     iconSt = ":/img/klog.ico";
     QIcon KLogIcon(iconSt);
     QApplication::setWindowIcon(KLogIcon);
-    app.setApplicationName(QString("KLog"));
+    app.setApplicationName(QString("KLogNG"));
     app.setOrganizationName("EA4K");
     app.setOrganizationDomain("klog.xyz");
     app.setApplicationVersion(QString(APP_VERSION));
@@ -361,6 +363,18 @@ int main(int argc, char *argv[])
 
     splash.showMessage("Creating window...");
     QApplication::processEvents();
+
+    ProfileManager profileManager;
+    QString profileErr;
+    if (!profileManager.ensureSchemaAndMigrate(&profileErr))
+    {
+        qWarning() << "KLogNG profili: " << profileErr;
+    }
+    splash.hide();
+    const int activeProfileId = StartProfileDialog::chooseProfileOnStartup(&profileManager);
+    if (activeProfileId < 0)
+        return 0;
+    qInfo() << "KLogNG aktivais profils:" << activeProfileId;
 
     MainWindow mw(&dataProxy, &world);
 
