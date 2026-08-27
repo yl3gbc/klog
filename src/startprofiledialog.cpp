@@ -11,6 +11,25 @@
 #include <QLineEdit>
 #include <QFormLayout>
 #include <QDialogButtonBox>
+#include <QApplication>
+#include <QStyleFactory>
+
+static void forceLightPalette(QWidget *w)
+{
+    QPalette p;
+    p.setColor(QPalette::Window,          QColor(0xf0,0xf0,0xf0));
+    p.setColor(QPalette::WindowText,      Qt::black);
+    p.setColor(QPalette::Base,            Qt::white);
+    p.setColor(QPalette::AlternateBase,   QColor(0xe9,0xe9,0xe9));
+    p.setColor(QPalette::Text,            Qt::black);
+    p.setColor(QPalette::Button,          QColor(0xf0,0xf0,0xf0));
+    p.setColor(QPalette::ButtonText,      Qt::black);
+    p.setColor(QPalette::Highlight,       QColor(0x30,0x8c,0xc6));
+    p.setColor(QPalette::HighlightedText, Qt::white);
+    p.setColor(QPalette::ToolTipBase,     Qt::white);
+    p.setColor(QPalette::ToolTipText,     Qt::black);
+    w->setPalette(p);
+}
 
 static const char *SETT_OPEN_LAST   = "profiles/openLastOnStart";
 static const char *SETT_LAST_PROFILE= "profiles/lastProfileId";
@@ -18,6 +37,8 @@ static const char *SETT_LAST_PROFILE= "profiles/lastProfileId";
 StartProfileDialog::StartProfileDialog(ProfileManager *pm_, QWidget *parent)
     : QDialog(parent), pm(pm_)
 {
+    setStyle(QStyleFactory::create(QStringLiteral("Fusion")));
+    forceLightPalette(this);
     setWindowTitle(tr("Profila izvele"));
     setModal(true);
     resize(420, 380);
@@ -174,6 +195,22 @@ void StartProfileDialog::deleteSelected()
 
 int StartProfileDialog::chooseProfileOnStartup(ProfileManager *pm, QWidget *parent)
 {
+    qApp->setStyle(QStyleFactory::create(QStringLiteral("Fusion")));
+    QPalette lp;
+    lp.setColor(QPalette::Window,          QColor(0xf0,0xf0,0xf0));
+    lp.setColor(QPalette::WindowText,      Qt::black);
+    lp.setColor(QPalette::Base,            Qt::white);
+    lp.setColor(QPalette::AlternateBase,   QColor(0xe9,0xe9,0xe9));
+    lp.setColor(QPalette::Text,            Qt::black);
+    lp.setColor(QPalette::Button,          QColor(0xf0,0xf0,0xf0));
+    lp.setColor(QPalette::ButtonText,      Qt::black);
+    lp.setColor(QPalette::Highlight,       QColor(0x30,0x8c,0xc6));
+    lp.setColor(QPalette::HighlightedText, Qt::white);
+    lp.setColor(QPalette::ToolTipBase,     Qt::white);
+    lp.setColor(QPalette::ToolTipText,     Qt::black);
+    lp.setColor(QPalette::PlaceholderText, QColor(0x80,0x80,0x80));
+    qApp->setPalette(lp);
+
     QSettings sett;
     if (sett.value(QLatin1String(SETT_OPEN_LAST), false).toBool()) {
         const int last = sett.value(QLatin1String(SETT_LAST_PROFILE), -1).toInt();
