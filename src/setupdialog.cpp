@@ -578,7 +578,7 @@ void SetupDialog::readActiveModes (const QStringList &actives)
     }
 
     modes.clear();
-    modes = dataProxy->getModesInLog(-1);
+    modes = dataProxy->getSubModesInLog(-1);   // The submodes worked, not just their parent mode
     modes << _amodes;
     modes.removeDuplicates();
     logEvent(Q_FUNC_INFO, "END", Debug);
@@ -591,6 +591,7 @@ void SetupDialog::setDefaults()
     logEvent(Q_FUNC_INFO, "Start", Devel);
     miscPage->setRealTime("TRUE");
     miscPage->setUTCTime("TRUE");
+    miscPage->setShowSeconds(false);
     miscPage->setImperial("FALSE"); //Metric system is the default
     miscPage->setAlwaysADIF("FALSE");
     miscPage->setSendQSLWhenRec("TRUE");
@@ -602,8 +603,9 @@ void SetupDialog::setDefaults()
     //miscPage->setLogSort("FALSE");
     miscPage->setSetEQSLByDefault("TRUE");
     miscPage->setCheckCalls (true);
+    miscPage->setIncludeModeForNeeded(true);
 
-    UDPPage->setUDPServer(false);
+    UDPPage->setUDPServer(true);
     UDPPage->setUDPServerPort(2237);
     UDPPage->setTimeout(2000);
     UDPPage->setLogFromWSJTx(false);
@@ -694,7 +696,7 @@ void SetupDialog::checkIfNewBandOrMode()
         //qDebug() << "SetupDialog::checkIfNewBandOrMode -5";
 
     _items.clear();
-    _items << dataProxy->getModesInLog(-1);
+    _items << dataProxy->getSubModesInLog(-1);   // The submodes worked, not just their parent mode
     _items << bandModePage->getModes();
     _items.removeDuplicates();
     bandModePage->setActiveModes(_items);

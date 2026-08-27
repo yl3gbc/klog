@@ -68,6 +68,10 @@ eLogClubLog::~eLogClubLog()
     //qDebug()<< Q_FUNC_INFO << " - Result = " << QString::number(result);
 
     const QByteArray sdata = data->readAll();
+    // The finished() signal of QNetworkAccessManager does not hand over a
+    // reply that deletes itself: the answer has been read, so the reply can
+    // go. Done here because this function has several exit points.
+    data->deleteLater();
 
     QString text = QString();
 
@@ -163,6 +167,7 @@ void eLogClubLog::slotFileUploadFinished(QNetworkReply *data)
           //qDebug()<< "eLogClubLog::slotFileUploadFinished - Result = " << QString::number(result);
 
     const QByteArray sdata = data->readAll();
+    data->deleteLater();      // Not deleted by QNetworkAccessManager
 
     QString text;
 
@@ -446,9 +451,10 @@ NOTES
        //qDebug()<< "eLogClubLog::getClubLogAdif: 60" ;
     qso = qso + "<BAND:" + QString::number((_q.at(7)).length()) + ">" + _q.at(7) + " ";
        //qDebug()<< "eLogClubLog::getClubLogAdif: 70" ;
-    if ((_q.at(8)).length()> 2)
+    const QString bandRX = (_q.at(8)).trimmed();
+    if ((!bandRX.isEmpty()) && (bandRX != "0") && (QString::compare(_q.at(7), bandRX) != 0))
     {
-        qso = qso + "<BAND_RX:" + QString::number((_q.at(8)).length()) + ">" + _q.at(8) + " ";
+        qso = qso + "<BAND_RX:" + QString::number(bandRX.length()) + ">" + bandRX + " ";
     }
 
     if ((_q.at(9)).length()> 2)

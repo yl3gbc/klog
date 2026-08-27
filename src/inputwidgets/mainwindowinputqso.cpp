@@ -45,6 +45,8 @@ MainWindowInputQSO::MainWindowInputQSO(DataProxy_SQLite *dp, QWidget *parent) :
     rxFreqSpinBox = new QDoubleSpinBox;
     splitCheckBox = new QCheckBox;
     rxPowerSpinBox = new QDoubleSpinBox;
+    commentLineEdit = new QLineEdit;
+    keepCommentCheckBox = new QCheckBox;
     dataProxy = dp;
 
     createUI();
@@ -76,6 +78,8 @@ void MainWindowInputQSO::createUI()
     nameLineEdit->setToolTip(tr("Name of the contacted operator."));
     qthLineEdit->setToolTip(tr("QTH of the contacted station."));
     locatorLineEdit->setToolTip(tr("Locator of the contacted station."));
+    commentLineEdit->setToolTip(tr("Add a comment for this QSO."));
+    keepCommentCheckBox->setToolTip(tr("Data entered in this tab will be copied into the next QSO."));
 
     rxPowerSpinBox->setDecimals(2);
     rxPowerSpinBox->setMaximum(9999);
@@ -104,7 +108,7 @@ void MainWindowInputQSO::createUI()
     qthLabel->setText(tr("QTH"));
     qthLabel->setAlignment(Qt::AlignCenter);
 
-    QLabel *locLabel = new QLabel(this);
+    locLabel = new QLabel(this);
     locLabel->setText(tr("DX Locator"));
     locLabel->setAlignment(Qt::AlignCenter);
 
@@ -209,14 +213,34 @@ void MainWindowInputQSO::createUI()
     rxPwrLayout->addWidget(rxPowerSpinBoxLabelN);
     rxPwrLayout->addWidget(rxPowerSpinBox);
 
+    QLabel *commentLabel = new QLabel(this);
+    commentLabel->setText(tr("Comment"));
+    commentLabel->setAlignment(Qt::AlignCenter);
+
+    QLabel *keepCommentLabel = new QLabel(this);
+    keepCommentLabel->setText(tr("Keep"));
+    keepCommentLabel->setAlignment(Qt::AlignVCenter | Qt::AlignRight);
+    keepCommentLabel->setToolTip(tr("Data entered in this tab will be copied into the next QSO."));
+
+    QHBoxLayout *commentFieldHLayout = new QHBoxLayout;
+    commentFieldHLayout->addWidget(commentLineEdit, 1);
+    commentFieldHLayout->addWidget(keepCommentLabel);
+    commentFieldHLayout->addWidget(keepCommentCheckBox);
+
+    QVBoxLayout *commentLayout = new QVBoxLayout;
+    commentLayout->addWidget(commentLabel);
+    commentLayout->addLayout(commentFieldHLayout);
+
     QHBoxLayout *namePwrHLayout = new QHBoxLayout;
-    namePwrHLayout->addLayout(nameLayout);
-    namePwrHLayout->addLayout(rxPwrLayout);
+    namePwrHLayout->addLayout(nameLayout, 1);
+    namePwrHLayout->addLayout(rxPwrLayout, 1);
 
     QVBoxLayout *namePwrLayout = new QVBoxLayout;
     namePwrLayout->addStretch(1);
     namePwrLayout->addLayout(namePwrHLayout);
-    namePwrLayout->addStretch(5);
+    namePwrLayout->addStretch(1);
+    namePwrLayout->addLayout(commentLayout);
+    namePwrLayout->addStretch(1);
 
     QVBoxLayout *qsoInputTabWidgetMainLayout = new QVBoxLayout;
     qsoInputTabWidgetMainLayout->addLayout(rstfreqLayout);
@@ -240,6 +264,27 @@ void MainWindowInputQSO::createUI()
     QWidget::setTabOrder (nameLineEdit, qthLineEdit);
     QWidget::setTabOrder (qthLineEdit, locatorLineEdit);
     QWidget::setTabOrder (locatorLineEdit, rxPowerSpinBox);
+    QWidget::setTabOrder (rxPowerSpinBox, commentLineEdit);
+}
+
+QString MainWindowInputQSO::getComment()
+{
+    return commentLineEdit->text();
+}
+
+void MainWindowInputQSO::setComment(const QString &_st)
+{
+    commentLineEdit->setText(_st);
+}
+
+bool MainWindowInputQSO::getKeepComment()
+{
+    return keepCommentCheckBox->isChecked();
+}
+
+void MainWindowInputQSO::setKeepComment(bool _b)
+{
+    keepCommentCheckBox->setChecked(_b);
 }
 
 QSO MainWindowInputQSO::getQSOData(QSO _qso)
@@ -254,6 +299,7 @@ QSO MainWindowInputQSO::getQSOData(QSO _qso)
     qso.setFreqRX(getRXFreq().toDouble());
     qso.setBandRX(dataProxy->getBandNameFromFreq(getRXFreq().toDouble()));
     qso.setRXPwr(getRXPwr());
+    qso.setComment(getComment());
     setRSTToMode(qso.getSubmode(), true);
 
     qso.setBandRX (dataProxy->getBandNameFromFreq (getRXFreq()));
@@ -272,9 +318,40 @@ void MainWindowInputQSO::setQSOData(const QSO &_qso)
     setQTH(qso.getQTH());
     setRSTRX(qso.getRSTRX());
     setRSTTX(qso.getRSTTX());
-    setTXFreq(qso.getFreqTX());
-    setRXFreq(qso.getFreqRX());
+    // --- Reconcile TX/RX frequency & band before showing them ---
+    // (A QSO logged with band_rx but no freq_rx must not display RX = 0.00.)
+    Frequency freqTXv(qso.getFreqTX());
+    Frequency freqRXv(qso.getFreqRX());
+
+    // TX: a valid frequency wins; otherwise the stored band defines it.
+    if (dataProxy->getBandIdFromFreq(freqTXv) <= 1)      // freqTX missing / out of band
+    {
+        if (dataProxy->isValidBand(qso.getBand()))
+            freqTXv = dataProxy->getLowLimitBandFromBandName(qso.getBand());
+    }
+
+    // RX: a valid frequency wins; otherwise derive it.
+    if (dataProxy->getBandIdFromFreq(freqRXv) <= 1)      // freqRX missing / out of band
+    {
+        if (dataProxy->isValidBand(qso.getBandRX()) &&
+            (qso.getBandRX() != qso.getBand()))
+        {
+            // RX band is a *different* valid band → derive RX freq from the RX band.
+            freqRXv = dataProxy->getLowLimitBandFromBandName(qso.getBandRX());
+        }
+        else
+        {
+            // RX band missing or equal to TX band → mirror the TX frequency.
+            freqRXv = freqTXv;
+        }
+    }
+
+    setTXFreq(freqTXv);
+    setRXFreq(freqRXv);
+    //setTXFreq(qso.getFreqTX());
+    //setRXFreq(qso.getFreqRX());
     setRXPwr(qso.getRXPwr());
+    setComment(qso.getComment());
     fillingQSO = false;
 }
 
@@ -312,6 +389,9 @@ void MainWindowInputQSO::clear()
     nameLineEdit->clear();
     locatorLineEdit->clear();
     rxPowerSpinBox->setValue(0);
+    if (!keepCommentCheckBox->isChecked())
+        commentLineEdit->clear();
+    setNewGrid(false);
     modify = false;
     fillingQSO = false;
 }
@@ -346,6 +426,25 @@ void MainWindowInputQSO::clearDXLocator()
    //qDebug() << Q_FUNC_INFO << " - Start";
     locatorLineEdit->clear ();
     completedWithPreviousLocator = false;
+    setNewGrid(false);
+}
+
+void MainWindowInputQSO::setNewGrid(const bool _new, const QString &_text)
+{
+   //qDebug() << Q_FUNC_INFO << " - " << _new << _text;
+    // While a new grid is being entered, the DX Locator label turns into a red
+    // "New Locator..." (text supplied by the caller, which knows the band/prop)
+    // until the QSO is saved (or the grid is no longer new).
+    if (_new)
+    {
+        locLabel->setText(_text);
+        locLabel->setStyleSheet("QLabel { color : red; font-weight : bold; }");
+    }
+    else
+    {
+        locLabel->setText(tr("DX Locator"));
+        locLabel->setStyleSheet(QString());
+    }
 }
 
 void MainWindowInputQSO::slotReturnPressed()
@@ -811,7 +910,6 @@ void MainWindowInputQSO::receiveFocus()
 
 bool MainWindowInputQSO::eventFilter (QObject *object, QEvent *event)
 {
-    Q_UNUSED(object);
    //qDebug() << Q_FUNC_INFO << " - Start";
     if (!(event->type() == QEvent::Paint ))
     {
@@ -833,6 +931,10 @@ bool MainWindowInputQSO::eventFilter (QObject *object, QEvent *event)
             return true;
         }
     }
-    return QWidget::event(event);
+    // An event filter answers "did I swallow this event?". QWidget::event()
+    // does something else entirely: it delivers the event to *this* widget,
+    // whatever object it was really meant for, and hands back whether that
+    // widget accepted it. Everything not handled above is simply let through.
+    return QWidget::eventFilter(object, event);
 }
 

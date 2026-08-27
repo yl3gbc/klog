@@ -355,7 +355,7 @@ void Adif::setModes()
         {"DIGITALVOICE", "PH", {"C4FM", "DMR", "DSTAR", "FREEDV", "M17"}},
         {"DOMINO", "DG", {"DOM-M", "DOM4", "DOM5", "DOM8", "DOM11", "DOM16", "DOM22", "DOM44",
                           "DOM88", "DOMINOEX", "DOMINOF" }},
-        {"DYNAMIC", "DG", {"VARA HF", "VARA SATELLITE", "VARA FM 1200", "VARA FM 9600" }},
+        {"DYNAMIC", "DG", {"VARA HF", "VARA SATELLITE", "VARA FM 1200", "VARA FM 9600", "FREEDATA" }},
         {"FAX", "DG", {}},
         {"FM", "FM", {}},
         {"FSK441", "DG", {}},
@@ -375,6 +375,7 @@ void Adif::setModes()
         {"MSK144", "DG", {}},
         {"MTONE", "DG", {"SCAMP_OO", "SCAMP_OO_SLW" }},
         {"MT63", "DG", {}},
+        {"OFDM", "DG", {"RIBBIT_PIX", "RIBBIT_SMS"}},
         {"OLIVIA", "DG", {"OLIVIA 4/125", "OLIVIA 4/250", "OLIVIA 8/250", "OLIVIA 8/500",
                           "OLIVIA 16/500", "OLIVIA 16/1000", "OLIVIA 32/1000"}},
         {"OPERA", "DG", {"OPERA-BEACON", "OPERA-QSO"}},
@@ -541,6 +542,11 @@ bool Adif::isValidLogId(const int _b)
     return (_b>0);
 }
 
+bool Adif::isValidAltitude(const double _b)
+{
+    return (_b>0.0);
+}
+
 bool Adif::isValidAntPath(const QString &_s)
 {
     return ((_s == "G") || (_s == "O") || (_s == "S") || (_s == "L"));
@@ -551,41 +557,24 @@ bool Adif::isValidQSO_COMPLETE(const QString &_s)
     return ((_s == "Y") || (_s == "N") || (_s == "NIL") || (_s == "?"));
 }
 
-int Adif::setQSO_COMPLETEToDB(const QString &_s)
+bool Adif::isValidSilentKey(const QString &_s)
 {
-    if (_s == "Y")
-        return 1;
-    if (_s == "N")
-        return 2;
-    if (_s == "NIL")
-        return 3;
-    return 4;
+    return (_s == "Y");
 }
 
-QString Adif::getQSO_COMPLETEFromDB(const QString &_s)
-{// Returns the ADIF QSO_COMPLETE
-    //1=Y, 2=N, 3=NIL, 4=?
-    //qDebug() << Q_FUNC_INFO << ": " << _s;
-    int i = _s.toInt();
-    switch (i)
-    {
-        case 2:
-        {
-            return "N";
-        }
-        case 3:
-        {
-            return "NIL";
-        }
-        case 4:
-        {
-            return "?";
-        }
-        default:
-        {
-            return "Y";
-        }
-    }
+bool Adif::isValidQSORandom(const bool _qsoRandom)
+{
+    return (!_qsoRandom);
+}
+
+bool Adif::isValidForceInit(const bool _forceInit, const QString &_propMode)
+{
+    return (_forceInit && (_propMode == "EME"));
+}
+
+bool Adif::isValidQSOCompleteToExport(const QString &_s)
+{
+    return (isValidQSO_COMPLETE(_s) && (_s != "Y"));
 }
 
 bool Adif::isValidPOTA(const QString &_s)
@@ -692,6 +681,12 @@ QString Adif::getADIFField(const QString &_fieldName, const QString &_data)
     }
     if (fieldN == "DISTANCE" )
         if (_data.toDouble() <= 0.0)
+            return QString();
+    // A band is never "0": drop BAND/BAND_RX placeholders so no export path
+    // (ADIF file or online logbook) can emit an invalid band. Keeping this
+    // rule here means every caller benefits from it in one single place.
+    if ((fieldN == "BAND") || (fieldN == "BAND_RX"))
+        if (_data.trimmed() == "0")
             return QString();
     //qDebug() << Q_FUNC_INFO << " - Returning: " << QString ("<%1:%2>%3 ").arg(fieldN).arg(_data.length ()).arg(_data);
     return QString ("<%1:%2>%3 ").arg(fieldN).arg(_data.length ()).arg(_data);

@@ -263,9 +263,11 @@ void DXCCStatusWidget::addEntity(const QList<int> &_ent)
         }
         else
         {
-            // Check all submodes of the parent mode (e.g. SSB includes USB, LSB, SSB)
+            // Check the sideband group (SSB includes USB, LSB, SSB); for every other
+            // mode this is just currentMode itself -- a submode-specific selection like
+            // FT4 must not also match FT2 just because both are ADIF's MFSK (klog#1121).
             qsoStatus = QSOStatus::unknown;
-            const QList<int> groupIds = dataProxy->getModeGroupIds(currentMode);
+            const QList<int> groupIds = dataProxy->getSidebandGroupIds(currentMode);
             for (const int mId : groupIds)
             {
                 QSOStatus s = awards->getQSOStatus(_dxcc, bandId, mId);
@@ -623,8 +625,6 @@ void DXCCStatusWidget::slotItemDoubleClicked(QTableWidgetItem  * item )
     QList<int> qsos;
     qsos.clear();
 
-    QTableWidgetItem * it = new QTableWidgetItem(0);
-
     //qDebug() << Q_FUNC_INFO << ": - Columns: " << QString::number(columns) ;
 
     if (item)
@@ -646,9 +646,6 @@ void DXCCStatusWidget::slotItemDoubleClicked(QTableWidgetItem  * item )
             //qDebug() << Q_FUNC_INFO << ": - column header: " << (dxccView->horizontalHeaderItem(i))->text();
             //entityName = (dxccView->item(row,i))->text() ;
               //qDebug() << Q_FUNC_INFO << ": - item: " ;
-
-            it->setText(dxccView->item(row,i)->text());
-            //qDebug() << Q_FUNC_INFO << ": - column-txt: "  << it->text();
 
             QString band = dxccView->horizontalHeaderItem(i)->text();
             //qDebug() << Q_FUNC_INFO << ": band: " << band;

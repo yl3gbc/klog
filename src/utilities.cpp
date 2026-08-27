@@ -26,6 +26,9 @@
 #include "utilities.h"
 #include "callsign.h"
 #include <QRegularExpression>
+// Qt headers are not in cppcheck's include path on the CI; silence the false positive.
+// cppcheck-suppress missingIncludeSystem
+#include <QCoreApplication>
 //bool c;
 Utilities::Utilities(const QString &_parentName)
 {
@@ -497,7 +500,7 @@ QStringList Utilities::getDefaultLogFields()
 {
     QStringList fields;
     fields.clear();
-    fields << "qso_date" << "call" << "rst_sent" << "rst_rcvd" << "bandid" << "modeid" << "comment";
+    fields << "qso_date" << "call" << "rst_sent" << "rst_rcvd" << "bandid" << "submode" << "comment";
     return fields;
 }
 
@@ -581,6 +584,49 @@ QString Utilities::getCfgFile()
     return getHomeDir() + "/klogrc";
 
 #endif
+}
+
+QStringList Utilities::getTranslationSearchPaths()
+{
+    QStringList searchPaths;
+#if defined(Q_OS_MACOS)
+    // .app bundle: KLog.app/Contents/Resources/translations/
+    // (CMakeLists: MACOSX_PACKAGE_LOCATION Resources/translations)
+    searchPaths << QCoreApplication::applicationDirPath() + "/../Resources/translations";
+#elif defined(Q_OS_WIN)
+    // Alongside the .exe (CMakeLists: DESTINATION translations)
+    searchPaths << QCoreApplication::applicationDirPath() + "/translations";
+#else
+    // Linux FHS (CMakeLists: DESTINATION ${CMAKE_INSTALL_DATADIR}/klog/translations)
+    searchPaths << QCoreApplication::applicationDirPath() + "/../share/klog/translations";
+    searchPaths << "/usr/share/klog/translations";
+    searchPaths << "/usr/local/share/klog/translations";
+#endif
+    // Fallback for development builds on every platform
+    searchPaths << QCoreApplication::applicationDirPath() + "/translations";
+    searchPaths << QCoreApplication::applicationDirPath() + "/../src/translations";
+    // qt_add_translations generates the .qm files in <build>/src in development builds
+    searchPaths << QCoreApplication::applicationDirPath() + "/../src";
+    return searchPaths;
+}
+
+QStringList Utilities::getAvailableLanguages()
+{
+    QStringList languages;
+    languages << "en"; // English is built-in; no translation file needed.
+    const QStringList paths = getTranslationSearchPaths();
+    for (const QString &dir : paths)
+    {
+        const QStringList files = QDir(dir).entryList(QStringList("klog_*.qm"), QDir::Files);
+        for (const QString &file : files)
+        {   // klog_<code>.qm
+            QString code = file.mid(5, file.length() - 8).toLower();
+            if (!code.isEmpty() && !languages.contains(code))
+                languages << code;
+        }
+    }
+    languages.sort();
+    return languages;
 }
 
 QString Utilities::getDebugLogFile()
@@ -1417,7 +1463,7 @@ void Utilities::setLogColumnNames()
     columnNames.insert("rst_rcvd", QObject::tr("RSTrx"));
     columnNames.insert("bandid", QObject::tr("Band"));
     columnNames.insert("comment", QObject::tr("Comment"));
-    columnNames.insert("modeid", QObject::tr("Mode"));
+    columnNames.insert("modeid", QObject::tr("Mode ADIF"));
     columnNames.insert("cqz", QObject::tr("CQz"));
     columnNames.insert("ituz", QObject::tr("ITUz"));
     columnNames.insert("dxcc", QObject::tr("DXCC"));
@@ -1543,7 +1589,7 @@ void Utilities::setLogColumnNames()
     columnNames.insert("stx_string", QObject::tr("STX String"));
     columnNames.insert("state", QObject::tr("State"));
     columnNames.insert("station_callsign", QObject::tr("Station Callsign"));
-    columnNames.insert("submode", QObject::tr("Submode"));
+    columnNames.insert("submode", QObject::tr("Mode"));
     columnNames.insert("swl", QObject::tr("SWL", "Do not translate if unsure, common hamradio term."));
     columnNames.insert("uksmg", QObject::tr("UKSMG"));
     columnNames.insert("usaca_counties", QObject::tr("USACA counties"));
@@ -1568,9 +1614,24 @@ QString Utilities::getLogColumnName(const QString &_column)
     return _column;
 }
 
+QString Utilities::getLogColumnNameForSettings(const QString &_column)
+{
+    // The log view keeps the "Mode" label simple, but in the field selector we
+    // clarify that this field is ADIF's submode, since that is what hams call "Mode".
+    if (_column == "submode")
+    {
+        return QObject::tr("Mode (ADIF submode)");
+    }
+    return getLogColumnName(_column);
+}
+
 QString Utilities::getLogColumnDBName(const QString &_column)
 {
     //qDebug() << QString("%1-%2").arg(Q_FUNC_INFO).arg(parentName) << ": " << _column;
+    if (_column == QObject::tr("Mode (ADIF submode)"))
+    {
+        return "submode";
+    }
     QString aux = columnNames.key(_column);
     if (!aux.isEmpty())
     {

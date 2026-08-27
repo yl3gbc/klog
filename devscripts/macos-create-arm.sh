@@ -65,13 +65,31 @@ echo "[2/4] Configuring with CMake..."
 echo "[3/4] Building..."
 "$CMAKE_BIN" --build "$PROJECT_DIR/build" -j 4
 
+# --- Check the translations made it into the bundle ---
+# CMake copies build/src/klog_*.qm into Contents/Resources/translations, which is
+# where KLog looks for them. If LinguistTools is missing they are silently
+# skipped, and KLog would be shipped in English only.
+if ! ls "$APP/Contents/Resources/translations"/klog_*.qm >/dev/null 2>&1; then
+    echo "ERROR: No KLog translations in $APP/Contents/Resources/translations"
+    echo "       Check that Qt6 LinguistTools (lrelease) is available."
+    exit 1
+fi
+
 # --- Deploy Qt into the bundle and create DMG ---
 echo "[4/4] Deploying Qt and creating DMG..."
 
-"$QT_DIR/bin/macdeployqt6" "$APP" \
-    -qmldir="$PROJECT_DIR/src/qml" \
-	-codesign="-" \
-    -dmg
+# Run from build/bin and pass a relative app name: macdeployqt derives the
+# DMG volume name (shown as the Finder window title when the DMG is opened)
+# from the path it's invoked with, so an absolute path leaks the build
+# machine's directory (e.g. the Jenkins workspace) into that title.
+# https://bugreports.qt.io/browse/QTBUG-60324
+(
+    cd "$PROJECT_DIR/build/bin"
+    "$QT_DIR/bin/macdeployqt6" "${APP_NAME}.app" \
+        -qmldir="$PROJECT_DIR/src/qml" \
+        -codesign="-" \
+        -dmg
+)
 
 # macdeployqt6 names the DMG after the .app: KLog.dmg
 mv "$PROJECT_DIR/build/bin/${APP_NAME}.dmg" "$DEVSCRIPTS_DIR/KLog-$KLOG_VERSION-arm64.dmg"

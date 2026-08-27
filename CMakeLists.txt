@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.22)
-project(KLog VERSION 2.5.2 LANGUAGES CXX)
-set(APP_PKGVERSION "2.5.2")
+project(KLog VERSION 2.6 LANGUAGES CXX)
+set(APP_PKGVERSION "2.6")
 
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 add_compile_definitions(KLOG_USE_VERSION_H)
@@ -79,7 +79,7 @@ endif()
 add_subdirectory(src)
 
 # Option to enable/disable tests
-option(BUILD_TESTING "Build the testing tree." ON)
+option(BUILD_TESTING "Build the testing tree." OFF)
 if(NOT BUILD_TESTING)
     message(WARNING "BUILD_TESTING OFF")
 endif()

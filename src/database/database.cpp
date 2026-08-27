@@ -432,7 +432,13 @@ bool DataBase::recreateTableLog()
         return false;
     }
     //qDebug() << Q_FUNC_INFO << " - 50";
-    return execQuery(Q_FUNC_INFO, "ALTER TABLE logtemp RENAME TO log");
+    if (!execQuery(Q_FUNC_INFO, "ALTER TABLE logtemp RENAME TO log"))
+    {
+        return false;
+    }
+    // logtemp was created without indexes (see createTableLog()); now that it is "log",
+    // give it the same ones a freshly created "log" table would have.
+    return createLogIndexes();
 }
 
 bool DataBase::createTableLog(bool temp)
@@ -564,7 +570,7 @@ bool DataBase::createTableLog(bool temp)
              "qsl_rcvd_via VARCHAR(1), "
              "qsl_sent_via VARCHAR(1), "
              "qsl_via VARCHAR, "
-             "qso_complete INTEGER, "
+             "qso_complete VARCHAR(3), "  // ADIF value: Y, N, NIL or ?
              "qso_random INTEGER, "
              "qth VARCHAR, "
              "region VARCHAR, "
@@ -598,7 +604,10 @@ bool DataBase::createTableLog(bool temp)
              "marked VARCHAR(1), "
              "lognumber INTEGER NOT NULL, "
 
-             "UNIQUE (call, qso_date, bandid, modeid, lognumber), "
+             // Keyed on submode (the specific submode worked, e.g. FT4), not modeid (the ADIF
+             // parent mode, e.g. MFSK): modeid is shared by every submode of the same ADIF
+             // family, so keying on it collapses genuinely different QSOs (see issue #1119).
+             "UNIQUE (call, qso_date, bandid, submode, lognumber), "
              "FOREIGN KEY (qsl_rcvd_via) REFERENCES qsl_via_enumeration, "
              "FOREIGN KEY (qsl_sent_via) REFERENCES qsl_via_enumeration, "
              "FOREIGN KEY (qsl_rcvd) REFERENCES qsl_rec_status, "
@@ -626,6 +635,15 @@ bool DataBase::createTableLog(bool temp)
     if (execQuery(Q_FUNC_INFO, stringQuery))
     {
         //qDebug() << Q_FUNC_INFO << ": Query OK";
+        // Only index the final "log" table, not the short-lived "logtemp" migration
+        // scratch table used by recreateTableLog(): indexes slow down its bulk INSERT
+        // for no benefit, and recreateTableLog() creates them itself after the rename
+        // (see createLogIndexes()), once "logtemp" has actually become "log".
+        if (temp && !createLogIndexes())
+        {
+            logEvent(Q_FUNC_INFO, "END-3", Debug);
+            return false;
+        }
         logEvent(Q_FUNC_INFO, "END-1", Debug);
         return true;
     }
@@ -635,6 +653,29 @@ bool DataBase::createTableLog(bool temp)
         logEvent(Q_FUNC_INFO, "END-2", Debug);
         return false;
     }
+}
+
+bool DataBase::createLogIndexes()
+{
+    // bandid/modeid/submode/lognumber back every "active bands/modes in this log" query
+    // (getBandsInLog, getModesInLog, getSubModesInLog) and the duplicate-QSO lookups --
+    // without an index each of those is a full table scan, and they run repeatedly (e.g.
+    // every time the Settings dialog opens or closes). IF NOT EXISTS: this runs both
+    // right after a fresh "log" table is created and after recreateTableLog() rebuilds
+    // it, and by design always targets the literal "log" name, never "logtemp", so a
+    // pre-existing index here just means an earlier call already did the job.
+    const QStringList indexQueries = {
+        QStringLiteral("CREATE INDEX IF NOT EXISTS idx_log_bandid ON log (bandid)"),
+        QStringLiteral("CREATE INDEX IF NOT EXISTS idx_log_modeid ON log (modeid)"),
+        QStringLiteral("CREATE INDEX IF NOT EXISTS idx_log_submode ON log (submode)"),
+        QStringLiteral("CREATE INDEX IF NOT EXISTS idx_log_lognumber ON log (lognumber)")
+    };
+    for (const QString &indexQuery : indexQueries)
+    {
+        if (!execQuery(Q_FUNC_INFO, indexQuery))
+            return false;
+    }
+    return true;
 }
 
 bool DataBase::createDataBase()
@@ -969,7 +1010,7 @@ bool DataBase::updateToLatest()
 /*
  * With the DB updates, the function that is called from here should be also updated.
  * The updateXXX are recursive calls that calls the previous one.
- * Update float DBVersionf = 0.028f; in database.h to the latest version!
+ * Update float DBVersionf = 0.031f; in database.h to the latest version!
  * To rebuild the Mode table and add new modes
  */
     //qDebug() << Q_FUNC_INFO << " - Start";
@@ -980,7 +1021,7 @@ bool DataBase::updateToLatest()
         //return false;
     }
     //qDebug() << Q_FUNC_INFO << " - Let's update!";
-    return updateTo028();
+    return updateTo031();
 }
 
 
@@ -2393,18 +2434,18 @@ bool DataBase::updateTableLogs()
 
 bool DataBase::updateModeIdFromSubModeId()
 {// Updates the log with the new mode IDs in each QSO:
-    // STEP-1: Get the modeid and QSOid from the log
-    // STEP-2: uses the modeid to get the name of the mode in the mode table (the old one)
-    // STEP-3: uses the name of the mode in the modetemp table (the new one) to get the new ID
-    // STEP-4: Updates the new ID in the QSO in the log
-    //TODO: Optimize this function
+    // STEP-1: Get the modeid, submode and QSOid from the log
+    // STEP-2: uses those ids to get the names of the mode/submode in the mode table (the old one)
+    // STEP-3: uses those names in the modetemp table (the new one) to get the new IDs
+    // STEP-4: Updates the new IDs in the QSO in the log
+    // Both modeid and submode point to the mode table, so both have to be remapped whenever
+    // that table is rebuilt or they would end up pointing to the wrong mode.
 
     //qDebug() << Q_FUNC_INFO ;
     bool cancel = false;
     bool alreadyCancelled = false;
     QString modetxt = QString();
     QString sq = QString();
-    bool sqlOk2 = false;
     bool sqlOk3 = false;
     int modeFound = -1;
     int id = -1;
@@ -2446,7 +2487,24 @@ bool DataBase::updateModeIdFromSubModeId()
     while (qMode.next())
         modeIDs.insert(qMode.value(0).toString(), qMode.value(1).toInt());
 
-    sqlOk = query.exec("SELECT modeid, id FROM log ORDER BY modeid");                                                   // STEP-1
+    // Old id -> submode name, so STEP-2 is a hash lookup instead of a reverse search
+    QHash<int, QString> oldIdToSubmode;
+    for (auto it = modeIDs.cbegin(); it != modeIDs.cend(); ++it)
+        oldIdToSubmode.insert(it.value(), it.key());
+
+    // Submode name -> new id, so STEP-3 needs no query per QSO
+    QHash<QString, int> newModeIDs;
+    QSqlQuery qNewMode;
+    if (!qNewMode.exec("SELECT submode, id FROM modetemp"))
+    {
+        queryErrorManagement(Q_FUNC_INFO, qNewMode.lastError().databaseText(),
+                             qNewMode.lastError().text(), qNewMode.lastQuery());
+        return false;
+    }
+    while (qNewMode.next())
+        newModeIDs.insert(qNewMode.value(0).toString(), qNewMode.value(1).toInt());
+
+    sqlOk = query.exec("SELECT modeid, id, submode FROM log ORDER BY modeid");                                          // STEP-1
 
     if (sqlOk)
     {
@@ -2468,56 +2526,41 @@ bool DataBase::updateModeIdFromSubModeId()
 
                 modeFound = (query.value(0)).toInt();
                 id = (query.value(1)).toInt();
+                const int oldSubModeId = (query.value(2)).toInt();
                      //qDebug() << Q_FUNC_INFO << ": (STEP-1) modeFound (numb): " << QString::number(modeFound) ;
-                modetxt = modeIDs.key(modeFound);
-                //modetxt = getModeNameFromNumber(modeFound, false);   //TODO: Create a QHash to speed this up                                                   //STEP-2
+                modetxt = oldIdToSubmode.value(modeFound);                                                              // STEP-2
 
                      //qDebug() << Q_FUNC_INFO << ": (STEP-2) mode found (txt): " << modetxt ;
 
-                //TODO The following query can be executed in: getModeIdFromSubMode()
+                // log.submode is remapped together with log.modeid: both are ids of the mode
+                // table and would dangle otherwise. QSOs older than the submode column fall
+                // back to the mode, which is all that was ever stored for them.
+                const QString subModeTxt = oldIdToSubmode.value(oldSubModeId > 0 ? oldSubModeId : modeFound);
 
-                sq = QString("SELECT id FROM modetemp WHERE submode='%1'").arg(modetxt);                                // STEP-3
-                QSqlQuery query2;
-                sqlOk2 = query2.exec(sq);
+                const int newModeId    = newModeIDs.value(modetxt, -1);                                                 // STEP-3
+                const int newSubModeId = newModeIDs.value(subModeTxt, -1);
 
-                if (sqlOk2)
+                if (newModeId > 0)
                 {
-                         //qDebug() << Q_FUNC_INFO << ": (STEP-3) sqlOK2 TRUE" ;
-                    if (query2.next())
-                    {
-                        if (query2.isValid())
-                        {
-                            modeFound = query2.value(0).toInt();
-                            query2.finish();
-                            sq = QString ("UPDATE log SET modeid='%1' WHERE id='%2'").arg(modeFound).arg(id);           // STEP-4
-                            sqlOk3 = execQuery(Q_FUNC_INFO, sq);
+                    if (newSubModeId > 0)
+                        sq = QString ("UPDATE log SET modeid='%1', submode='%2' WHERE id='%3'")                          // STEP-4
+                                 .arg(newModeId).arg(newSubModeId).arg(id);
+                    else
+                        sq = QString ("UPDATE log SET modeid='%1' WHERE id='%2'").arg(newModeId).arg(id);
+                    sqlOk3 = execQuery(Q_FUNC_INFO, sq);
 
-                            if (sqlOk3)
-                            {
-                                //qDebug() << Q_FUNC_INFO << ": (STEP-4) ID: " << QString::number(id) << " updated to: " << QString::number(modeFound) <<"/"<< modetxt ;
-                            }
-                            else
-                            {
-                                // queryErrorManagement(Q_FUNC_INFO, query3.lastError().databaseText(), query3.lastError().nativeErrorCode(), query3.lastQuery());
-                                //qDebug() << Q_FUNC_INFO << ": (STEP-4) ID: " << QString::number(id) << " NOT updated-2"  ;
-                            }
-                        }
-                        else
-                        {
-                            query2.finish();
-                                 //qDebug() << Q_FUNC_INFO << ": (STEP-3) query2 not valid "   ;
-                        }
+                    if (sqlOk3)
+                    {
+                        //qDebug() << Q_FUNC_INFO << ": (STEP-4) ID: " << QString::number(id) << " updated to: " << QString::number(newModeId) <<"/"<< modetxt ;
                     }
                     else
                     {
-                          //qDebug() << Q_FUNC_INFO << ": query2 not next "   ;
+                        //qDebug() << Q_FUNC_INFO << ": (STEP-4) ID: " << QString::number(id) << " NOT updated-2"  ;
                     }
                 }
                 else
                 {
-                    queryErrorManagement(Q_FUNC_INFO, query2.lastError().databaseText(), query2.lastError().nativeErrorCode(), query2.lastQuery());
-                    query2.finish();
-                         //qDebug() << Q_FUNC_INFO << ": ID: " << QString::number(id) << " NOT updated-1"  ;
+                         //qDebug() << Q_FUNC_INFO << ": ID: " << QString::number(id) << " NOT updated-1, mode not found: " << modetxt ;
                 }
             }
 
@@ -4595,6 +4638,112 @@ bool DataBase::updateTo028()
         return false;
 
     return updateDBVersion(softVersion, "0.028");
+}
+
+bool DataBase::updateTo029()
+{
+    // Updates the DB to 0.029:
+    // log.submode was declared but never written, so the submode of every QSO was lost.
+    // Fill it in for the existing QSOs pointing it to the mode row already referenced by
+    // log.modeid. In DBs coming from old KLog versions, modeid may point to a real submode
+    // row (USB, C4FM...) and this recovers that information; in newer ones modeid points to
+    // the parent mode and submode simply becomes equal to the mode, which is all that was
+    // ever stored for those QSOs.
+    // log.submode is declared VARCHAR but holds mode ids, as its foreign key already stated;
+    // SQLite applies numeric affinity when comparing it against mode.id, so the joins work.
+
+    //qDebug() << Q_FUNC_INFO << " latestRead: " << getDBVersion() ;
+
+    latestReaded = getDBVersion();
+    if (latestReaded >= 0.029f)
+    {
+        //qDebug() << Q_FUNC_INFO << " - I am in 029" ;
+        return true;
+    }
+
+    if (!updateTo028())
+        return false;
+
+    // Now I am in the previous version and I can update the DB.
+
+    if (!execQuery(Q_FUNC_INFO, "UPDATE log SET submode = modeid "
+                                "WHERE submode IS NULL OR TRIM(submode) = '' OR submode = '0'"))
+        return false;
+
+    return updateDBVersion(softVersion, "0.029");
+}
+
+bool DataBase::updateTo030()
+{
+    // Updates the DB to 0.030:
+    // Adds the OFDM mode (RIBBIT_PIX, RIBBIT_SMS submodes) and the FREEDATA submode
+    // of DYNAMIC, both new in ADIF 3.1.7.
+
+    //qDebug() << Q_FUNC_INFO << " latestRead: " << getDBVersion() ;
+
+    latestReaded = getDBVersion();
+    if (latestReaded >= 0.030f)
+    {
+        //qDebug() << Q_FUNC_INFO << " - I am in 030" ;
+        return true;
+    }
+
+    if (!updateTo029())
+        return false;
+
+    // Now I am in the previous version and I can update the DB.
+
+    if (!updateTheModeTableAndSyncLog())
+        return false;
+
+    return updateDBVersion(softVersion, "0.030");
+}
+
+bool DataBase::updateTo031()
+{
+    // Updates the DB to 0.031:
+    // log's UNIQUE constraint was keyed on modeid (the ADIF parent mode, e.g. MFSK)
+    // instead of submode (the specific submode worked, e.g. FT4). Since modeid is
+    // shared by every submode of the same ADIF family, two genuinely different QSOs
+    // (same call/band/timestamp/log, different submode) could collide on INSERT and
+    // the second one would be silently dropped as an "expected duplicate".
+    // Recreating the table picks up the fixed constraint from createTableLog(), which
+    // also now indexes bandid/modeid/submode/lognumber -- those queries used to be full
+    // table scans -- so this same rebuild fixes both at once.
+    // Existing data cannot violate the new (finer-grained) constraint: any two rows
+    // that would collide on submode already shared the same modeid, so they could
+    // never have coexisted under the old constraint in the first place.
+    // See https://github.com/ea4k/klog/issues/1119
+    //
+    // Also switches qso_complete from a numeric code (1=Y, 2=N, 3=NIL, 4=?) to
+    // storing the ADIF value itself, matching Adif::isValidQSO_COMPLETE's Y/N/NIL/?
+    // domain directly instead of round-tripping through Adif::setQSO_COMPLETEToDB /
+    // getQSO_COMPLETEFromDB. createTableLog() now declares the column as VARCHAR(3),
+    // so recreateTableLog() copies the old numeric codes in as text ("1".."4"), which
+    // the UPDATE below then translates to the ADIF value.
+
+    //qDebug() << Q_FUNC_INFO << " latestRead: " << getDBVersion() ;
+
+    latestReaded = getDBVersion();
+    if (latestReaded >= 0.031f)
+    {
+        //qDebug() << Q_FUNC_INFO << " - I am in 031" ;
+        return true;
+    }
+
+    if (!updateTo030())
+        return false;
+
+    // Now I am in the previous version and I can update the DB.
+
+    if (!recreateTableLog())
+        return false;
+
+    if (!execQuery(Q_FUNC_INFO, "UPDATE log SET qso_complete = CASE qso_complete "
+                                "WHEN '2' THEN 'N' WHEN '3' THEN 'NIL' WHEN '4' THEN '?' ELSE 'Y' END"))
+        return false;
+
+    return updateDBVersion(softVersion, "0.031");
 }
 
 int DataBase::getNumberOfQsos(const int _logNumber)

@@ -86,6 +86,8 @@ public:
     QString getTQSLsPath();   // Depending on the OS where are usually installed the executables
     QString getHomeDir();
     QString getCfgFile();
+    QStringList getTranslationSearchPaths(); // Folders where the klog_*.qm files may be installed
+    QStringList getAvailableLanguages();     // 2-letter codes of the languages with a translation installed (plus built-in English)
     QString getCTYFile();
     QString getDebugLogFile();
     QString getSaveSpotsLogFile();
@@ -157,6 +159,7 @@ public:
 
     // Translate the LOG table fields into human readable
     QString getLogColumnName(const QString &_column);
+    QString getLogColumnNameForSettings(const QString &_column);
     QString getLogColumnDBName(const QString &_column);
 
     // Creates the ADIF DATE & TIME formats

@@ -86,6 +86,7 @@ public:
 
     int getIdFromModeName(const QString& _modeName);
     int getIdFromBandName(const QString& _bandName);
+    int getSubModeIdFromQSO(const QSO &_qso);   // mode table id of the submode to store in log.submode
     //int getSubModeIdFromSubMode(const QString &_subModeName);
 
     bool isValidMode(const QString& _modeName);
@@ -108,6 +109,7 @@ public:
     QStringList getModesIDs();
     QStringList getBandsInLog(const int _log);
     QStringList getModesInLog(const int _log);
+    QStringList getSubModesInLog(const int _log);   // The submodes worked, not just their parent mode
     int getMostUsedBand(const int _log);
     int getMostUsedMode(const int _log);
 
@@ -117,6 +119,10 @@ public:
     QString getSubModeFromId (const int _id);
     QString getNameFromSubMode (const QString &_sm); // Checks if a submode is deprecated TODO: CHeck if really needed
     QList<int> getModeGroupIds(const int _modeId); // Returns all mode IDs sharing the same parent mode
+    QList<int> getSidebandGroupIds(const int _modeId); // Like getModeGroupIds(), but only for USB/LSB/SSB
+    QList<int> getModeIdsForFilter(const QString &_mode); // Mode -> whole group, submode -> just itself
+    QString getSubModeIdCSV(const QString &_mode);        // Those ids, ready for an SQL IN clause
+    QString getSubModeFilterSQL(const QString &_mode);    // " AND submode IN (...) ", empty if no filter
     // qString getNameFromSubMode (const QString &_sm); // DEPRECATED
     bool isModeDeprecated (const QString &_sm);
 
@@ -190,6 +196,11 @@ public:
     QStringList getFilteredLocators(const QString &_band, const QString &_mode, const QString &_prop, const QString &_sat, bool _confirmed = false);
     // Returns list of {id, callsign, band, mode} maps for QSOs matching a locator prefix and current filters
     QVariantList getQSOsForLocator(const QString &_locator, const QString &_band, const QString &_mode, const QString &_prop, const QString &_sat, bool _confirmed = false);
+    // Returns true if no QSO in the given log already has a gridsquare starting with _grid (4-char field).
+    // When _prop is "SAT" the check is band-independent and only considers satellite QSOs (separate stats);
+    // otherwise it is restricted to _bandId and excludes satellite QSOs.
+    // _excludeQsoId lets the caller ignore one QSO (e.g. the one being edited); pass -1 to exclude none.
+    bool isNewGridOnBand(const QString &_grid, const int _bandId, const int _logNumber, const QString &_prop, const int _excludeQsoId = -1);
     //bool updateAwardWAZ();
     // QRZ.com
     bool QRZCOMModifyFullLog(const int _currentLog); // Mark all the log as modified to be sent to QRZ.com
@@ -400,8 +411,7 @@ public:
     int findDuplicateId(const QString &call, const QDateTime &newTime, int bandId, int modeId, int marginSeconds);
     inline int findDuplicateId(const QSO &qso, int marginSeconds)
     {
-        int modeId = getIdFromModeName(qso.getSubmode().isEmpty() ? qso.getMode() : qso.getSubmode());
-        return findDuplicateId(qso.getCall(), qso.getDateTimeOn(), getIdFromBandName(qso.getBand()), modeId, marginSeconds);
+        return findDuplicateId(qso.getCall(), qso.getDateTimeOn(), getIdFromBandName(qso.getBand()), getSubModeIdFromQSO(qso), marginSeconds);
     }
 
     //QHash<QString, int> getHashTableData(const DataTableHash _data);

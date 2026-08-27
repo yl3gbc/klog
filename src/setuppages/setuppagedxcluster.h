@@ -48,6 +48,7 @@ public:
 private slots:
     void slotAddButtonClicked();
     void slotDeleteButtonClicked();
+    void slotDXAssistantEnabledClicked();   // Greys out what only applies when it is on
 
 private:
     void createActions();
@@ -70,6 +71,12 @@ private:
     QCheckBox *sendSpotsToMapCheckbox;
 
     QCheckBox *saveAllDXClusterDataQCheckbox;
+
+    QCheckBox *dxAssistantEnabledCheckbox;
+    QCheckBox *dxAssistantClubLogMWCheckbox;
+    // Where the spots the DX Assistant scores come from
+    QCheckBox *dxAssistantSourceDXClusterCheckbox;
+    QCheckBox *dxAssistantSourceWSJTXCheckbox;
 
     Utilities *util;
     // qStringList dxClusterServers;

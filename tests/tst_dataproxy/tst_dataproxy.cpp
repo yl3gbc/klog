@@ -52,6 +52,10 @@ private slots:
     void test_primarySubdivisions();
     void test_qsosCache();
     void test_addQSO();
+    void test_submodeRoundTrip_data();
+    void test_submodeRoundTrip();
+    void test_modeIdsForFilter();
+    void test_subModesInLog();
     void test_bandClassification_data();
     void test_bandClassification();
 
@@ -317,6 +321,98 @@ void tst_DataProxy::test_addQSO()
 
     int id = dataProxy->addQSO(qso);
     QVERIFY2(id > 0, qPrintable(QString("addQSO returned %1").arg(id)));
+}
+
+void tst_DataProxy::test_submodeRoundTrip_data()
+{
+    QTest::addColumn<QString>("entered");          // What the user picks in the mode combobox
+    QTest::addColumn<QString>("expectedMode");
+    QTest::addColumn<QString>("expectedSubmode");
+    QTest::addColumn<int>("minute");               // Keeps every row a different QSO
+
+    QTest::newRow("C4FM") << "C4FM" << "DIGITALVOICE" << "C4FM" << 1;
+    QTest::newRow("USB")  << "USB"  << "SSB"          << "USB"  << 2;
+    QTest::newRow("LSB")  << "LSB"  << "SSB"          << "LSB"  << 3;
+    QTest::newRow("FT4")  << "FT4"  << "MFSK"         << "FT4"  << 4;
+    QTest::newRow("JT9C") << "JT9C" << "JT9"          << "JT9C" << 5;
+    QTest::newRow("SSB")  << "SSB"  << "SSB"          << "SSB"  << 6;
+    QTest::newRow("CW")   << "CW"   << "CW"           << "CW"   << 7;
+}
+
+void tst_DataProxy::test_submodeRoundTrip()
+{
+    // The submode must survive the trip to the DB and back (issue #1062)
+    QFETCH(QString, entered);
+    QFETCH(QString, expectedMode);
+    QFETCH(QString, expectedSubmode);
+    QFETCH(int, minute);
+
+    QSO qso;
+    qso.clear();
+    qso.setCall("EA4K");
+    qso.setDateTimeOn(QDateTime(QDate(2024, 3, 28), QTime(10, minute, 0), QTimeZone::UTC));
+    qso.setBand("10M");
+    qso.setMode(entered);
+    qso.setLogId(1);
+
+    const int id = dataProxy->addQSO(qso);
+    QVERIFY2(id > 0, qPrintable(QString("addQSO returned %1 for %2").arg(id).arg(entered)));
+
+    // The mode goes to log.modeid and the submode to log.submode, each one on its own column.
+    // Every mode has a row repeating its own name as submode, so modeid resolves to the mode.
+    QSqlQuery q;
+    QVERIFY(q.exec(QString("SELECT modeid, submode FROM log WHERE id=%1").arg(id)));
+    QVERIFY(q.next());
+    QCOMPARE(dataProxy->getSubModeFromId(q.value(0).toInt()), expectedMode);
+    QCOMPARE(dataProxy->getSubModeFromId(q.value(1).toInt()), expectedSubmode);
+
+    const QSO stored = dataProxy->fromDB(id);
+    QCOMPARE(stored.getMode(), expectedMode);
+    QCOMPARE(stored.getSubmode(), expectedSubmode);
+}
+
+void tst_DataProxy::test_modeIdsForFilter()
+{
+    // A parent mode filters its whole group, a submode filters only itself
+    const QList<int> ssb = dataProxy->getModeIdsForFilter("SSB");
+    QVERIFY2(ssb.count() >= 3, "SSB should cover at least SSB, USB and LSB");
+    QVERIFY(ssb.contains(dataProxy->getIdFromModeName("USB")));
+    QVERIFY(ssb.contains(dataProxy->getIdFromModeName("LSB")));
+    QVERIFY(ssb.contains(dataProxy->getIdFromModeName("SSB")));
+
+    const QList<int> usb = dataProxy->getModeIdsForFilter("USB");
+    QCOMPARE(usb.count(), 1);
+    QCOMPARE(usb.first(), dataProxy->getIdFromModeName("USB"));
+
+    // A mode with no submodes of its own resolves to a single id
+    const QList<int> fm = dataProxy->getModeIdsForFilter("FM");
+    QCOMPARE(fm.count(), 1);
+
+    // Nothing to filter on
+    QVERIFY(dataProxy->getModeIdsForFilter("ALL").isEmpty());
+    QVERIFY(dataProxy->getModeIdsForFilter("NOTAMODE").isEmpty());
+    QVERIFY(dataProxy->getSubModeIdCSV("ALL").isEmpty());
+    QVERIFY(dataProxy->getSubModeFilterSQL("").isEmpty());
+}
+
+void tst_DataProxy::test_subModesInLog()
+{
+    // The QSOs added by test_submodeRoundTrip are in log 1
+    const QStringList subModes = dataProxy->getSubModesInLog(1);
+    QVERIFY2(subModes.contains("C4FM"), "C4FM was worked and must be listed as a submode");
+    QVERIFY2(subModes.contains("USB"),  "USB was worked and must be listed as a submode");
+    QVERIFY2(subModes.contains("LSB"),  "LSB was worked and must be listed as a submode");
+    QVERIFY2(subModes.contains("FT4"),  "FT4 was worked and must be listed as a submode");
+
+    // Counting: a submode counts only its own QSOs, its parent mode counts the whole group
+    const int usb      = dataProxy->getQSOsInMode("USB",  1);
+    const int lsb      = dataProxy->getQSOsInMode("LSB",  1);
+    const int ssbGroup = dataProxy->getQSOsInMode("SSB",  1);
+    QCOMPARE(usb, 1);
+    QCOMPARE(lsb, 1);
+    QCOMPARE(dataProxy->getQSOsInMode("C4FM", 1), 1);
+    // The group holds USB, LSB and the QSOs logged as plain SSB, so it is strictly bigger
+    QVERIFY2(ssbGroup > usb + lsb, "SSB must count its submodes and the plain SSB QSOs");
 }
 
 void tst_DataProxy::test_bandClassification_data()

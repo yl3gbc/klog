@@ -52,8 +52,12 @@ if defined _KLOGVER set KLOGDEVELVERSION=%_KLOGVER:~1,-2%
 
 echo Building KLog %KLOGDEVELVERSION%
 
-rem --- Clean previous installer from devscripts ---
-del klog-*win64*.exe 2>nul
+rem --- Expose the version to the Jenkinsfile so it can archive/upload the ---
+rem --- exact installer filename instead of a broad "*win64*.exe" glob.    ---
+echo %KLOGDEVELVERSION%> version.txt
+
+rem --- Clean previous installers from devscripts (any leftover version) ---
+del /Q KLog-*-win64.exe 2>nul
 
 rem --- Go to project root ---
 cd ..
@@ -95,9 +99,25 @@ copy /Y "%OPENSSL_DIR%\bin\*.dll" src\release\
 copy /Y "%HAMLIB_DIR%\bin\*.dll" src\release\
 
 rem --- Deploy Qt runtime ---
-windeployqt6 --dir src\release --release --compiler-runtime --qmldir src\qml src\release\klog.exe
+rem :: --no-translations: KLog never installs a Qt base translator (see
+rem :: loadTranslations() in main.cpp, it only loads klog_*.qm), so the qt_*.qm
+rem :: files windeployqt6 would deploy are unused and must not be packaged.
+windeployqt6 --dir src\release --release --compiler-runtime --no-translations --qmldir src\qml src\release\klog.exe
 if %errorlevel% neq 0 (
     echo ERROR: windeployqt6 failed
+    exit /b 1
+)
+
+rem --- Deploy the KLog translations ---
+rem :: qt_add_translations compiles the .ts files into build\src\klog_*.qm.
+rem :: windeployqt6 does not deploy them, so the KLog ones have to be copied by
+rem :: hand into the translations folder next to klog.exe, which is where KLog
+rem :: looks for them (Utilities::getTranslationSearchPaths).
+echo Deploying KLog translations...
+if not exist src\release\translations mkdir src\release\translations
+copy /Y build\src\klog_*.qm src\release\translations\
+if %errorlevel% neq 0 (
+    echo ERROR: No KLog translation files ^(klog_*.qm^) found in build\src
     exit /b 1
 )
 

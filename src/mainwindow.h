@@ -46,12 +46,13 @@ class TipsDialog;
 //#include "locator.h"
 #include "dxcluster/dxcluster.h"
 #include "dxcluster/dxspot.h"
-//#include "dxcluster/dxclusterassistant.h"
+#include "dxcluster/dxclusterassistant.h"
+#include "dxcluster/dxassistantengine.h"
+#include "dxcluster/clublogmostwanted.h"
 #include "frequency.h"
 #include "awards.h"
 #include "inputwidgets/mainwindowsattab.h"
 #include "inputwidgets/mainwindowmydatatab.h"
-#include "inputwidgets/mainwindowinputcomment.h"
 #include "inputwidgets/mainwindowinputothers.h"
 #include "inputwidgets/mainwindowinputeqsl.h"
 #include "inputwidgets/mainwindowinputqsl.h"
@@ -231,6 +232,20 @@ private slots:
     void slotUpdateSATSDAT();
     void slotShowStats();
 
+    // <DX-ASSISTANT>
+    void slotDXAssistantNewSpot(const DXSpot &_spot);
+    // Every line WSJT-X decodes, straight from the UDP server
+    void slotWSJTXStationDecoded(const QString &_caller, const QString &_remoteStation,
+                                 const double _freq, const QString &_mode, const int _snr,
+                                 const bool _callingCQ, const QDateTime &_dateTime);
+    void slotDXAssistantRecalculate();
+    void slotDXAssistantSendSpotToUI(const DXSpot &_spot);
+    void slotDXAssistantLogSpot(const DXSpot &_spot);
+    void slotDXAssistantEnabledChanged(const bool _enabled);   // "DX A" button
+    void slotDXAssistantQSY(const DXSpot &_spot);
+    void slotDXAssistantSpotsToMap(const QList<DXSpot> &_spots);
+    // </DX-ASSISTANT>
+
     void slotWorldReload(const bool _b);
 
     void slotExitFromSlotDialog(const int exitID);
@@ -319,9 +334,6 @@ private slots:
     //void slotShowQSOFromDXCCWidget(const int _q);
     void slotShowQSOsFromDXCCWidget(QList<int> _qsos);
 
-    // DXCLUSTER ASSISTANT
-    //void slotShowDXClusterAssistant();
-
     //UDP Server (WXJT-x)
     void slotWSJXstatusFromUDPServer(const int _type, const QString &_dxcall, const double _freq, const QString &_mode,
                                  const QString &_report, const QString &_de_call, const QString &_de_grid,
@@ -348,6 +360,18 @@ private:
     void checkHomeDir();        // Refactored from init()
     bool showWSJTXDuplicatedMSG(const QSO &_qso);  //Shows an error if the QSO received from WSJTX is dupe.
     void startServices();
+    void initDXAssistant();
+    void reconfigureDXAssistantUI(const bool _enabled);  // Adds/removes the DX Assistant tab
+    void syncDXAssistantState();   // Pushes the current band and rig state to the widget
+    // Scores a spot, whatever its source, and hands it to the DX Assistant
+    void feedDXAssistantWithSpot(const DXSpot &_spot);
+    // A station WSJT-X hears is a spot like any other: it is turned into a
+    // DXSpot and scored by the very same engine the DXCluster uses.
+    void checkWSJTXSpotWithDXAssistant(const QString &_dxCall, const double _freq,
+                                       const QString &_mode, const QString &_spotter,
+                                       const QString &_comment, const QDateTime &_dateTime);
+    bool wsjtxSpotAlreadyChecked(const QString &_dxCall, const double _freq,
+                                 const QString &_spotter);
     void backupCurrentQSO();
     void restoreCurrentQSO(const bool restoreConfig);
     void showMessageToEnableTheOnlineService(const OnLineProvider _service);
@@ -429,6 +453,7 @@ private:
     //bool checkContest();
     void showStatusOfDXCC(EntityStatus _entityStatus);
     void showDXMarathonNeeded(const int _dxcc, const int _cqz, const int _year, const int _log);
+    void checkNewGrid();    // Updates the QSO tab "New Locator" label depending on the DX locator, band and prop mode
 
     bool createConnection();
     void openSetup(const int _page=0);
@@ -602,7 +627,6 @@ private:
     QAction *qslSentRequestedAct;
     QAction *qslRecRequestedAct;
     QAction *showMapAct;
-    // qAction *dxClusterAssistantAct;
 
     QStringList bands;
     QStringList modes;
@@ -622,6 +646,9 @@ private:
     bool txFreqBeingChanged,  updatingBands; //rxFreqBeingChanged  // When the freqs is being modified it is defined to true to prevent other automated to change.
     bool txFreqBeingAutoChanged, rxFreqBeingAutoChanged;        // This is defined to true when freq is being changed by the Sat tab to prevent a loop.
     bool changingBand;  // True when the bands are being changed
+    bool freqDrivenBandChange;  // True while slotFreqTXChanged is switching the band as a side effect of a
+                                 // TX frequency edit; tells slotBandChanged not to reset that same TX
+                                 // frequency using its own (still stale at that point) reading of it.
     bool qslingNeeded;
     bool noMoreErrorShown;              // If true, the errors shown in slotQueryErrorManagement will not be shown anymore in that KLog execution
     bool noMoreModeErrorShown;          // If true, the non-valid modes received from WSJT-x will not be showed to the user
@@ -629,7 +656,6 @@ private:
     bool manualMode;                    // If true, hamlib and WSJTX are not updatind the interface
     MainWindowSatTab *satTabWidget;
     MainWindowMyDataTab *myDataTabWidget;
-    MainWindowInputComment *commentTabWidget;
     MainWindowInputOthers *othersTabWidget;
     MainWindowInputEQSL *eQSLTabWidget;
     MainWindowInputQSL *QSLTabWidget;
@@ -652,7 +678,23 @@ private:
     bool dxClusterShowHF, dxClusterShowVHF, dxClusterShowWARC, dxClusterShowWorked, dxClusterShowConfirmed, dxClusterShowAnn, dxClusterShowWWV, dxClusterShowWCY;
     // </CLUSTER>
 
-   // DXClusterAssistant *dxClusterAssistant;
+    // <DX-ASSISTANT>
+    DXClusterAssistant *dxClusterAssistant;   // Tab of dxUpRightTab; created when the feature is enabled
+    DXAssistantEngine *dxAssistantEngine;
+    ClubLogMostWanted *clubLogMostWanted;
+    QString myContinent;                      // Derived once at startup from the station callsign
+    bool dxAssistantEnabled;
+    bool clubLogMostWantedEnabled;
+    // Where the spots the DX Assistant scores are allowed to come from
+    bool dxAssistantSourceDXCluster;
+    bool dxAssistantSourceWSJTX;
+    // WSJT-X repeats its status message about once per second and decodes the
+    // same station once per transmission period: rescoring every one of them
+    // would hit the database for nothing, so a station is only handed over to
+    // the assistant once per minute.
+    static constexpr int WSJTX_SPOT_REFRESH_SECONDS = 60;
+    QHash<QString, QDateTime> wsjtxCheckedSpots;   // Callsign+band+spotter -> when it was scored
+    // </DX-ASSISTANT>
 
     // </UI>
     int infoTimeout; // timeout that temporary info will stay in the infobars

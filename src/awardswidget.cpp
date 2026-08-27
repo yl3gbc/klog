@@ -53,7 +53,8 @@ AwardsWidget::AwardsWidget(DataProxy_SQLite *dp, World *injectedWorld, QWidget *
     yearlyLabelN = new QLabel();
     yearlyScoreLabelN = new QLabel();
 
-    recalculateAwardsButton = new QPushButton;
+    // recalculateAwardsButton is created in createUI(), where it gets its text
+    // and its parent. Allocating it here as well would just leak that object.
     includeModeForNeededCheckBox = new QCheckBox;
     dataProxy = dp;
     world = injectedWorld;
@@ -327,8 +328,12 @@ void AwardsWidget::showAwards()
     checkIfValidLog();
     int _num = 0;
 
+    // getSidebandGroupIds, not getModeGroupIds: the latter groups by shared ADIF parent,
+    // which for any family but USB/LSB/SSB pulls in operationally different submodes
+    // (e.g. FT4 also counting FT2, FST4, JS8, Q65...) instead of just the selected one
+    // (klog#1122).
     const QList<int> modeFilter = (includeModeForNeededCheckBox->isChecked() && currentMode >= 0)
-        ? dataProxy->getModeGroupIds(currentMode)
+        ? dataProxy->getSidebandGroupIds(currentMode)
         : QList<int>();
 
     _num = dataProxy->getHowManyQSOInLog(currentLog, modeFilter);
@@ -369,8 +374,12 @@ void AwardsWidget::showDXMarathon(const int _year)
     emit debugLog(Q_FUNC_INFO, "Start", Devel);
     int i = 0;
 
+    // getSidebandGroupIds, not getModeGroupIds: the latter groups by shared ADIF parent,
+    // which for any family but USB/LSB/SSB pulls in operationally different submodes
+    // (e.g. FT4 also counting FT2, FST4, JS8, Q65...) instead of just the selected one
+    // (klog#1122).
     const QList<int> modeFilter = (includeModeForNeededCheckBox->isChecked() && currentMode >= 0)
-        ? dataProxy->getModeGroupIds(currentMode)
+        ? dataProxy->getSidebandGroupIds(currentMode)
         : QList<int>();
 
     i = dataProxy->getQSOonYear(_year, currentLog, modeFilter);

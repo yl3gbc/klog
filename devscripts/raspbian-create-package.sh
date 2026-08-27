@@ -36,51 +36,65 @@
 # *    along with KLog.  If not, see <https://www.gnu.org/licenses/>.         *
 # *                                                                           *
 #*****************************************************************************/
- 
+
 set -e
- 
+
 DEVSCRIPTS_DIR="$(cd "$(dirname "$0")" && pwd)"
 PROJECT_DIR="$(dirname "$DEVSCRIPTS_DIR")"
- 
+
 # --- Read version from CMakeLists.txt ---
 KLOG_VERSION=$(grep 'APP_PKGVERSION' "$PROJECT_DIR/CMakeLists.txt" | sed 's/.*"\(.*\)".*/\1/')
 if [ -z "$KLOG_VERSION" ]; then
     KLOG_VERSION=$(grep 'project(KLog VERSION' "$PROJECT_DIR/CMakeLists.txt" | awk '{print $3}')
 fi
- 
+
 echo "Building KLog $KLOG_VERSION .deb package"
- 
+
 # --- Detect architecture ---
 ARCH=$(dpkg --print-architecture)
 echo "Architecture: $ARCH"
- 
-# --- Expected output filename ---
-DEB_NAME="klog_${KLOG_VERSION}_${ARCH}.deb"
- 
+
 # --- Clean previous build ---
 echo "[1/4] Cleaning..."
 rm -rf "$PROJECT_DIR/build"
 rm -f "$DEVSCRIPTS_DIR"/klog_*.deb
 rm -f "$DEVSCRIPTS_DIR"/klog_*.tar.gz
- 
+
 # --- CMake configure ---
 echo "[2/4] Configuring with CMake..."
 cmake -S "$PROJECT_DIR" -B "$PROJECT_DIR/build" \
     -G "Ninja" \
     -DCMAKE_BUILD_TYPE=Release \
     -DBUILD_TESTING=OFF
- 
+
 # --- Build ---
 echo "[3/4] Building..."
 cmake --build "$PROJECT_DIR/build" -j "$(nproc)"
- 
+
 # --- Generate .deb with CPack ---
 echo "[4/4] Generating .deb package with CPack..."
 cd "$PROJECT_DIR/build"
 cpack -G DEB
- 
-# --- Move .deb to devscripts directory ---
-mv "$PROJECT_DIR/build/"*.deb "$DEVSCRIPTS_DIR/$DEB_NAME"
- 
+
+# --- Find whatever CPack generated and rename it ---
+CPACK_DEB=$(find "$PROJECT_DIR/build" -maxdepth 1 -name "*.deb" | head -1)
+if [ -z "$CPACK_DEB" ]; then
+    echo "ERROR: CPack did not generate any .deb file"
+    exit 1
+fi
+
+# --- Check the translations made it into the package ---
+# The .qm files are installed into /usr/share/klog/translations, which is where
+# KLog looks for them. If LinguistTools is missing they are silently skipped,
+# and KLog would be shipped in English only.
+if ! dpkg-deb -c "$CPACK_DEB" | grep -q "share/klog/translations/klog_.*\.qm"; then
+    echo "ERROR: $CPACK_DEB contains no KLog translation files"
+    echo "       Check that Qt6 LinguistTools (lrelease) is available."
+    exit 1
+fi
+
+FINAL_NAME="klog_${KLOG_VERSION}_raspberrypi_${ARCH}.deb"
+mv "$CPACK_DEB" "$DEVSCRIPTS_DIR/${FINAL_NAME}"
+
 echo ""
-echo "Done! KLog $KLOG_VERSION -> devscripts/$DEB_NAME"
+echo "Done! KLog $KLOG_VERSION -> devscripts/$FINAL_NAME"

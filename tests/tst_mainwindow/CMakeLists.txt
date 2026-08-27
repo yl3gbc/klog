@@ -11,6 +11,7 @@ set(CMAKE_AUTOMOC ON)
 
 # Find all Qt6 components you link against
 find_package(Qt6 REQUIRED COMPONENTS
+  Concurrent
   Core
   Test
   Charts
@@ -45,6 +46,8 @@ add_executable(tst_mainwindow
   ../../src/fileawardmanager.cpp
   ../../src/locator.cpp
   ../../src/widgets/map/locatorinfoprovider.cpp
+  ../../src/dxcluster/clublogmostwanted.cpp
+  ../../src/dxcluster/dxassistantengine.cpp
   ../../src/dxcluster/dxcluster.cpp
   ../../src/dxcluster/dxclusterassistant.cpp
   ../../src/dxcluster/dxspot.cpp
@@ -53,7 +56,6 @@ add_executable(tst_mainwindow
   ../../src/awarddxmarathon.cpp
   ../../src/inputwidgets/mainwindowsattab.cpp
   ../../src/inputwidgets/mainwindowmydatatab.cpp
-  ../../src/inputwidgets/mainwindowinputcomment.cpp
   ../../src/inputwidgets/mainwindowinputothers.cpp
   ../../src/inputwidgets/mainwindowinputeqsl.cpp
   ../../src/inputwidgets/mainwindowinputqsl.cpp
@@ -160,6 +162,8 @@ add_executable(tst_mainwindow
   ../../src/fileawardmanager.h
   ../../src/locator.h
   ../../src/widgets/map/locatorinfoprovider.h
+  ../../src/dxcluster/clublogmostwanted.h
+  ../../src/dxcluster/dxassistantengine.h
   ../../src/dxcluster/dxcluster.h
   ../../src/dxcluster/dxclusterassistant.h
   ../../src/dxcluster/dxspot.h
@@ -168,7 +172,6 @@ add_executable(tst_mainwindow
   ../../src/awarddxmarathon.h
   ../../src/inputwidgets/mainwindowsattab.h
   ../../src/inputwidgets/mainwindowmydatatab.h
-  ../../src/inputwidgets/mainwindowinputcomment.h
   ../../src/inputwidgets/mainwindowinputothers.h
   ../../src/inputwidgets/mainwindowinputeqsl.h
   ../../src/inputwidgets/mainwindowinputqsl.h

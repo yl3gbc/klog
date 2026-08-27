@@ -34,10 +34,14 @@
 
 static QString buildModeInClause(const QList<int> &modeIds)
 {
+    // Filters on submode, not modeid: modeid is the ADIF parent mode (e.g. MFSK), shared
+    // by every submode of that family, so filtering "by the current mode" actually
+    // included every submode of its whole family (e.g. FT4 also pulling in FT2, FST4,
+    // JS8, Q65...) instead of just the one the caller asked for. See klog#1122.
     if (modeIds.isEmpty()) return QString();
     QStringList parts;
     for (int id : modeIds) parts << QString::number(id);
-    return QString(" AND modeid IN (%1)").arg(parts.join(QLatin1Char(',')));
+    return QString(" AND submode IN (%1)").arg(parts.join(QLatin1Char(',')));
 }
 
 //#include <QDebug>
@@ -444,6 +448,56 @@ QString DataProxy_SQLite::getNameFromSubMode (const QString &_sm)
     return m_cache.getModeNameFromSubmode(_sm);
 }
 
+int DataProxy_SQLite::getSubModeIdFromQSO(const QSO &_qso)
+{
+    // log.modeid holds the id of the parent mode while log.submode holds the id of the
+    // submode actually worked (C4FM, USB, FT4...). Both point to the mode table, where
+    // every mode also has a row repeating its own name as submode (SSB/SSB, CW/CW...),
+    // so this lookup resolves even when no specific submode is known.
+    const QString subMode = _qso.getSubmode().isEmpty() ? _qso.getMode() : _qso.getSubmode();
+    return getIdFromModeName(subMode);
+}
+
+QList<int> DataProxy_SQLite::getModeIdsForFilter(const QString &_mode)
+{
+    // Returns the mode table ids to match against log.submode for a mode or a submode name.
+    // A parent mode covers its whole group, so SSB brings USB and LSB with it, while a submode
+    // matches only itself. An unknown name returns an empty list, meaning "do not filter".
+    const int id = getIdFromModeName(_mode);
+    if (id <= 0)
+        return QList<int>();
+
+    // Every mode has a row repeating its own name as submode, so a name whose parent is
+    // itself is a parent mode and anything else is a submode.
+    if (getNameFromSubMode(_mode).compare(_mode, Qt::CaseInsensitive) == 0)
+        return getModeGroupIds(id);
+
+    return QList<int>() << id;
+}
+
+QString DataProxy_SQLite::getSubModeIdCSV(const QString &_mode)
+{
+    // The ids of getModeIdsForFilter as a comma separated list, ready for an SQL IN clause.
+    // Empty when the mode does not filter anything (ALL, empty or unknown).
+    if (_mode.isEmpty() || (_mode.toUpper() == "ALL"))
+        return QString();
+
+    QStringList parts;
+    const QList<int> ids = getModeIdsForFilter(_mode);
+    for (int id : ids)
+        parts << QString::number(id);
+    return parts.join(QLatin1Char(','));
+}
+
+QString DataProxy_SQLite::getSubModeFilterSQL(const QString &_mode)
+{
+    // The SQL predicate matching the QSOs of a mode or submode, empty when nothing is filtered
+    const QString csv = getSubModeIdCSV(_mode);
+    if (csv.isEmpty())
+        return QString();
+    return QString(" AND submode IN (%1) ").arg(csv);
+}
+
 QList<int> DataProxy_SQLite::getModeGroupIds(const int _modeId)
 {
     // Returns all mode IDs that share the same parent mode as _modeId
@@ -455,6 +509,26 @@ QList<int> DataProxy_SQLite::getModeGroupIds(const int _modeId)
 
     QList<int> ids;
     QSqlQuery query(QString("SELECT id FROM mode WHERE name='%1'").arg(parentMode));
+    while (query.next())
+        ids << query.value(0).toInt();
+    return ids.isEmpty() ? (QList<int>() << _modeId) : ids;
+}
+
+QList<int> DataProxy_SQLite::getSidebandGroupIds(const int _modeId)
+{
+    // Unlike getModeGroupIds(), only groups the one family where that is actually
+    // correct: USB/LSB/SSB are the same contact in practice. getModeGroupIds() groups
+    // by shared ADIF parent instead, which for any other family lumps together
+    // operationally distinct modes (e.g. FT2 and FT4, both MFSK) that should not be
+    // treated as interchangeable for DXCC/award status. See klog#1121.
+    ensureCacheReady();
+    static const QSet<QString> sidebandSynonyms = {QStringLiteral("USB"), QStringLiteral("LSB"), QStringLiteral("SSB")};
+    const QString subMode = m_cache.getModeFromId(_modeId).submode.toUpper();
+    if (!sidebandSynonyms.contains(subMode))
+        return QList<int>() << _modeId;
+
+    QList<int> ids;
+    QSqlQuery query(QStringLiteral("SELECT id FROM mode WHERE submode IN ('USB','LSB','SSB')"));
     while (query.next())
         ids << query.value(0).toInt();
     return ids.isEmpty() ? (QList<int>() << _modeId) : ids;
@@ -771,6 +845,34 @@ QStringList DataProxy_SQLite::getModesInLog(const int _log)
     return modes;
 }
 
+QStringList DataProxy_SQLite::getSubModesInLog(const int _log)
+{
+    // As getModesInLog, but joining log.submode, so the submodes actually worked are returned
+    // (USB and LSB instead of just SSB) rather than the parent mode of each QSO.
+    QStringList subModes = QStringList();
+    QString queryString = QString();
+    if (_log <=0 )
+    {
+        queryString = QString("SELECT mode.submode, COUNT (mode.submode) FROM log, mode WHERE mode.id = log.submode GROUP BY mode.submode ORDER BY count (mode.submode) DESC");
+    }
+    else
+    {
+        queryString = QString("SELECT mode.submode, COUNT (mode.submode) FROM log, mode WHERE mode.id = log.submode AND log.lognumber='%1' GROUP BY mode.submode ORDER BY count (mode.submode) DESC").arg(_log);
+    }
+
+    QSqlQuery query;
+    query.exec(queryString);
+
+    while (query.next()) {
+        if (query.isValid()){
+            subModes << query.value(0).toString();
+        }
+    }
+    query.finish();
+    subModes.sort();
+    return subModes;
+}
+
 int DataProxy_SQLite::getMostUsedBand(const int _log)
 {
        //qDebug() << Q_FUNC_INFO << " - Start ";
@@ -819,11 +921,12 @@ int DataProxy_SQLite::getMostUsedMode(const int _log)
     QString queryString = QString();
     if (_log <=0 )
     {
-        queryString = QString("SELECT mode.id, mode.submode, COUNT (mode.submode) FROM log, mode WHERE mode.id = log.modeid GROUP BY mode.submode  ORDER BY count (mode.submode) DESC LIMIT 1");
+        // Joined on log.submode so the most used submode is preselected, not just its parent mode
+        queryString = QString("SELECT mode.id, mode.submode, COUNT (mode.submode) FROM log, mode WHERE mode.id = log.submode GROUP BY mode.submode  ORDER BY count (mode.submode) DESC LIMIT 1");
     }
     else
     {
-        queryString = QString("SELECT mode.id, mode.submode, COUNT (mode.submode) FROM log, mode WHERE mode.id = log.modeid AND log.lognumber='%1' GROUP BY mode.submode  ORDER BY count (mode.submode) DESC LIMIT 1").arg(_log);
+        queryString = QString("SELECT mode.id, mode.submode, COUNT (mode.submode) FROM log, mode WHERE mode.id = log.submode AND log.lognumber='%1' GROUP BY mode.submode  ORDER BY count (mode.submode) DESC LIMIT 1").arg(_log);
     }
     QSqlQuery query;
     //query.setForwardOnly(true);
@@ -2006,9 +2109,10 @@ QStringList DataProxy_SQLite::getFilteredLocators(const QString &_band, const QS
         where << "bandid = :bandid";
     }
 
-    const int modeId = getIdFromModeName(_mode);
-    if (modeId > 0) {
-        where << "modeid = :modeid";
+    // Filtered on log.submode: a parent mode covers its group, a submode only itself
+    const QString modeIdCSV = getSubModeIdCSV(_mode);
+    if (!modeIdCSV.isEmpty()) {
+        where << QString("submode IN (%1)").arg(modeIdCSV);
     }
     // Propagation + satellite handling
     const bool propValid = isValidPropMode(_prop);
@@ -2061,7 +2165,6 @@ QStringList DataProxy_SQLite::getFilteredLocators(const QString &_band, const QS
     query.prepare(sql);
 
     if (bandId > 0) query.bindValue(":bandid", bandId);
-    if (modeId > 0) query.bindValue(":modeid", modeId);
     if (propValid)  query.bindValue(":prop", _prop);
     if (isSat && satDbId > 0) query.bindValue(":satname", _sat);
 
@@ -2100,9 +2203,10 @@ QVariantList DataProxy_SQLite::getQSOsForLocator(const QString &_locator, const 
     if (bandId > 0)
         where << "l.bandid = :bandid";
 
-    const int modeId = getIdFromModeName(_mode);
-    if (modeId > 0)
-        where << "l.modeid = :modeid";
+    // Filtered on log.submode: a parent mode covers its group, a submode only itself
+    const QString modeIdCSV = getSubModeIdCSV(_mode);
+    if (!modeIdCSV.isEmpty())
+        where << QString("l.submode IN (%1)").arg(modeIdCSV);
 
     const bool propValid = isValidPropMode(_prop);
     const bool isSat = (propValid && _prop == "SAT");
@@ -2133,7 +2237,6 @@ QVariantList DataProxy_SQLite::getQSOsForLocator(const QString &_locator, const 
     query.bindValue(":loc", _locator.toUpper());
     query.bindValue(":locprefix", _locator.toUpper() + "%");
     if (bandId > 0) query.bindValue(":bandid", bandId);
-    if (modeId > 0) query.bindValue(":modeid", modeId);
     if (propValid)  query.bindValue(":prop", _prop);
     if (isSat && satDbId > 0) query.bindValue(":satname", _sat);
 
@@ -2153,6 +2256,65 @@ QVariantList DataProxy_SQLite::getQSOsForLocator(const QString &_locator, const 
     }
     query.finish();
     return result;
+}
+
+bool DataProxy_SQLite::isNewGridOnBand(const QString &_grid, const int _bandId, const int _logNumber, const QString &_prop, const int _excludeQsoId)
+{
+    //qDebug() << Q_FUNC_INFO << " - grid: " << _grid << " bandId: " << _bandId << " log: " << _logNumber << " prop: " << _prop << " exclude: " << _excludeQsoId;
+    logEvent(Q_FUNC_INFO, "Start", Devel);
+
+    const QString grid = _grid.trimmed().toUpper();
+    const bool isSat = (_prop.trimmed().toUpper() == "SAT");
+
+    // Satellite stats are kept apart and are not band-dependent; terrestrial needs a valid band.
+    if (grid.isEmpty() || _logNumber < 0 || (!isSat && _bandId <= 0))
+    {
+        logEvent(Q_FUNC_INFO, "END-1", Debug);
+        return false;
+    }
+
+    QStringList where;
+    where << "lognumber = :lognumber" << "UPPER(gridsquare) LIKE :gridprefix";
+    if (isSat)
+    {
+        // Count only satellite QSOs, regardless of band (separate statistics).
+        where << "prop_mode = 'SAT'";
+    }
+    else
+    {
+        // Count QSOs on this band, excluding any made via satellite.
+        where << "bandid = :bandid" << "COALESCE(prop_mode,'') <> 'SAT'";
+    }
+    if (_excludeQsoId > 0)
+        where << "id <> :excludeid";
+
+    const QString queryString = "SELECT COUNT(id) FROM log WHERE " + where.join(" AND ");
+
+    QSqlQuery query;
+    if (!query.prepare(queryString))
+    {
+        logEvent(Q_FUNC_INFO, "END-2", Debug);
+        return false;
+    }
+    query.bindValue(":lognumber", _logNumber);
+    query.bindValue(":gridprefix", grid + "%");
+    if (!isSat)
+        query.bindValue(":bandid", _bandId);
+    if (_excludeQsoId > 0)
+        query.bindValue(":excludeid", _excludeQsoId);
+
+    if (query.exec() && query.next() && query.isValid())
+    {
+        const int count = query.value(0).toInt();
+        query.finish();
+        logEvent(Q_FUNC_INFO, "END-3", Debug);
+        return (count == 0);
+    }
+
+    emit queryError(Q_FUNC_INFO, query.lastError().databaseText(), query.lastError().text(), query.lastQuery());
+    query.finish();
+    logEvent(Q_FUNC_INFO, "END-4", Debug);
+    return false;
 }
 
 bool DataProxy_SQLite::QRZCOMModifyFullLog(const int _currentLog)
@@ -2401,6 +2563,13 @@ int DataProxy_SQLite::addQSO(QSO &_qso)
     if (!_qso.isComplete())
         return -1;
     _qso.clearQSLDateIfNeeded();
+    if ((_qso.getCQZone() <= 0) && (_qso.getDXCC() > 0))
+    {
+        const int entityCQz = getCQzFromEntity(_qso.getDXCC());
+        if (entityCQz > 0)
+            _qso.setCQZone(entityCQz);
+    }
+
 
     prepareStaticQueries();
     if (!m_queriesPrepared)
@@ -2554,6 +2723,7 @@ QSqlQuery DataProxy_SQLite::getPreparedQuery(const QString &_s, const QSO &_qso)
     query.bindValue(":bandid", getIdFromBandName(_qso.getBand()));
     //query.bindValue(":modeid", _qso.getModeIdFromModeName());
     query.bindValue(":modeid", getIdFromModeName(_qso.getMode()));
+    query.bindValue(":submode", getSubModeIdFromQSO(_qso));
     query.bindValue(":cqz", _qso.getCQZone());
     query.bindValue(":ituz", _qso.getItuZone());
     query.bindValue(":dxcc", _qso.getDXCC());
@@ -2713,7 +2883,7 @@ QSqlQuery DataProxy_SQLite::getPreparedQuery(const QString &_s, const QSO &_qso)
     query.bindValue(":qsl_sent_via", _qso.getQSLSentVia());
     query.bindValue(":qsl_via", _qso.getQSLVia());
     if (adif.isValidQSO_COMPLETE(_qso.getQSOComplete()))
-        query.bindValue(":qso_complete", adif.setQSO_COMPLETEToDB(_qso.getQSOComplete()));
+        query.bindValue(":qso_complete", _qso.getQSOComplete());
     query.bindValue(":qso_random", util.boolToCharToSQLite (_qso.getQSORandom()));
     query.bindValue(":qth", _qso.getQTH());
     query.bindValue(":region", _qso.getRegion ());
@@ -2741,7 +2911,6 @@ QSqlQuery DataProxy_SQLite::getPreparedQuery(const QString &_s, const QSO &_qso)
         query.bindValue(":stx", _qso.getStx());
     query.bindValue(":state", _qso.getState());
     query.bindValue(":station_callsign", _qso.getStationCallsign());
-    // query.bindValue(":submode", _qso.getModeIdFromModeName());
 
     query.bindValue(":swl", util.boolToCharToSQLite (_qso.getSwl()));
     if (adif.isValidUKSMG(_qso.getUksmg()))
@@ -2792,6 +2961,7 @@ void DataProxy_SQLite::bindQSOValues(QSqlQuery &query, const QSO &_qso)
     query.bindValue(":bandid", getIdFromBandName(_qso.getBand()));
     //query.bindValue(":modeid", _qso.getModeIdFromModeName());
     query.bindValue(":modeid", getIdFromModeName(_qso.getMode()));
+    query.bindValue(":submode", getSubModeIdFromQSO(_qso));
     query.bindValue(":cqz", _qso.getCQZone());
     query.bindValue(":ituz", _qso.getItuZone());
     query.bindValue(":dxcc", _qso.getDXCC());
@@ -2951,18 +3121,21 @@ void DataProxy_SQLite::bindQSOValues(QSqlQuery &query, const QSO &_qso)
     query.bindValue(":qsl_sent_via", _qso.getQSLSentVia());
     query.bindValue(":qsl_via", _qso.getQSLVia());
     if (adif.isValidQSO_COMPLETE(_qso.getQSOComplete()))
-        query.bindValue(":qso_complete", adif.setQSO_COMPLETEToDB(_qso.getQSOComplete()));
+        query.bindValue(":qso_complete", _qso.getQSOComplete());
     query.bindValue(":qso_random", util.boolToCharToSQLite (_qso.getQSORandom()));
     query.bindValue(":qth", _qso.getQTH());
     query.bindValue(":region", _qso.getRegion ());
     query.bindValue(":rig", _qso.getRig ());
     if (adif.isValidPower(_qso.getRXPwr()))
         query.bindValue(":rx_pwr", _qso.getRXPwr());
-    if (_qso.getPropMode() == "SAT")
-    {
-        query.bindValue(":sat_mode", _qso.getSatMode());
-        query.bindValue(":sat_name", _qso.getSatName());
-    }
+    // m_insertQuery/m_updateQuery are prepared once and reused for every
+    // QSO, so a placeholder that isn't rebound here keeps whatever value
+    // was bound the last time this query object was executed - it must
+    // always be (re)bound, even to empty, or a QSO that stops being SAT
+    // would silently keep (or inherit from a previous unrelated QSO) a
+    // stale sat_mode/sat_name in the DB.
+    query.bindValue(":sat_mode", _qso.getSatMode());
+    query.bindValue(":sat_name", _qso.getSatName());
     if (adif.isValidSFI(_qso.getSFI()))
         query.bindValue(":sfi", _qso.getSFI());
     query.bindValue(":sig", _qso.getSIG());
@@ -2979,7 +3152,6 @@ void DataProxy_SQLite::bindQSOValues(QSqlQuery &query, const QSO &_qso)
         query.bindValue(":stx", _qso.getStx());
     query.bindValue(":state", _qso.getState());
     query.bindValue(":station_callsign", _qso.getStationCallsign());
-    // query.bindValue(":submode", _qso.getModeIdFromModeName());
 
     query.bindValue(":swl", util.boolToCharToSQLite (_qso.getSwl()));
     if (adif.isValidUKSMG(_qso.getUksmg()))
@@ -3017,15 +3189,18 @@ QSO DataProxy_SQLite::fromDB(const int _qsoId)
     if (_qsoId<1)
         return QSO();
 
+    // The submode is read from log.submode; QSOs logged before that column was populated
+    // fall back to the mode pointed at by log.modeid, which in old DBs may itself be a submode.
     QString queryString = "SELECT log.*, "
                           "t_band.name AS band_name, "
                           "t_band_rx.name AS bandrx_name, "
                           "t_mode.name AS mode_name, "
-                          "t_mode.submode AS submode_name "
+                          "COALESCE(t_submode.submode, t_mode.submode) AS submode_name "
                           "FROM log "
                           "LEFT JOIN band AS t_band ON log.bandid = t_band.id "
                           "LEFT JOIN band AS t_band_rx ON log.band_rx = t_band_rx.id "
                           "LEFT JOIN mode AS t_mode ON log.modeid = t_mode.id "
+                          "LEFT JOIN mode AS t_submode ON log.submode = t_submode.id "
                           "WHERE log.id = :idQSO";
 
 
@@ -3242,8 +3417,7 @@ QSO DataProxy_SQLite::fromDB(const int _qsoId)
     qso.setQSLSenVia((query.value(rec.indexOf("qsl_sent_via"))).toString());
 
     qso.setQSLVia((query.value(rec.indexOf("qsl_via"))).toString());
-    Adif adif(Q_FUNC_INFO);
-    qso.setQSOComplete(adif.getQSO_COMPLETEFromDB((query.value(rec.indexOf("qso_complete"))).toString()));
+    qso.setQSOComplete((query.value(rec.indexOf("qso_complete"))).toString());
     qso.setQSORandom(util.QStringToBool((query.value(rec.indexOf("qso_random"))).toString()));
     //qDebug() << Q_FUNC_INFO << "  - 120";
     qso.setQTH((query.value(rec.indexOf("qth"))).toString());
@@ -3496,7 +3670,10 @@ int DataProxy_SQLite::isThisQSODuplicated (const QSO &_qso, const int _secs)
 {
    //qDebug() << Q_FUNC_INFO << " - 000";
     int bandId = getIdFromBandName(_qso.getBand());
-    int modeId = getIdFromModeName(_qso.getMode());
+    // Use the submode id, not the parent mode id: modeid is shared by every submode of
+    // the same ADIF family (e.g. FT2 and FT4 are both MFSK), so comparing by modeid
+    // flagged genuinely different QSOs as duplicates. See issue #1120.
+    int modeId = getSubModeIdFromQSO(_qso);
     return findDuplicateId(_qso.getCall(), _qso.getDateTimeOn(), bandId, modeId, _secs );
 }
 
@@ -6768,8 +6945,10 @@ int DataProxy_SQLite::getQSOsInMode(const QString &_mode, const int _log)
     {
        return 0;
     }
-    int modeId = getIdFromModeName(_mode);
-    if ( modeId < 0)
+    // Counted on log.submode, so a submode counts only its own QSOs while a parent mode
+    // still counts the whole group.
+    const QString modeFilter = getSubModeFilterSQL(_mode);
+    if (modeFilter.isEmpty())
     {
         return 0;
     }
@@ -6778,11 +6957,11 @@ int DataProxy_SQLite::getQSOsInMode(const QString &_mode, const int _log)
     QSqlQuery query; //query.setForwardOnly(true);
     if (_log < 0)
     {
-        queryString = QString("SELECT count(id) FROM log WHERE modeid='%1'").arg(modeId);
+        queryString = QString("SELECT count(id) FROM log WHERE 1=1 %1").arg(modeFilter);
     }
     else
     {
-        queryString = QString("SELECT count(id) FROM log WHERE modeid='%1' AND lognumber='%2'").arg(modeId).arg(_log);
+        queryString = QString("SELECT count(id) FROM log WHERE lognumber='%1' %2").arg(QString::number(_log), modeFilter);
     }
 
     bool sqlOK = query.exec(queryString);
@@ -8411,12 +8590,14 @@ QString DataProxy_SQLite::getADIFFromQSOQuery(QSqlRecord rec, ExportMode _em, bo
     qso.setFreqRX((aux.toDouble()));
 
     aux = getADIFValueFromRec(rec, "modeid");
-    // qString aux2 = getSubModeFromId(aux.toInt());
+    const int recModeId = aux.toInt();
+    qso.setMode(getSubModeFromId(recModeId));   // setMode derives the parent mode by itself
 
-    qso.setMode(getSubModeFromId(aux.toInt()));
-
+    // The submode is taken from log.submode. QSOs logged before that column was populated
+    // fall back to log.modeid, which in old DBs may itself point to a submode row.
     aux = getADIFValueFromRec(rec, "submode");
-    qso.setSubmode(getSubModeFromId(aux.toInt()));
+    const int recSubModeId = aux.toInt();
+    qso.setSubmode(getSubModeFromId(recSubModeId > 0 ? recSubModeId : recModeId));
 
     qso.setPropMode(getADIFValueFromRec(rec, "prop_mode"));
     qso.setSatName(getADIFValueFromRec(rec, "sat_name"));
@@ -8585,10 +8766,8 @@ QString DataProxy_SQLite::getADIFFromQSOQuery(QSqlRecord rec, ExportMode _em, bo
     qso.setQSL_SENT(getADIFValueFromRec(rec, "qsl_sent"));
     qso.setQSLSenVia(getADIFValueFromRec(rec, "qsl_sent_via"));
     qso.setQSLVia(getADIFValueFromRec(rec, "qsl_via"));
-    Adif adif(Q_FUNC_INFO);
-    adif.getQSO_COMPLETEFromDB(getADIFValueFromRec(rec, "qso_complete"));
-        // qso.setQSOComplete(util->getADIFQSO_CompleteFromDB(getADIFValueFromRec(rec, "qso_complete")));
-        qso.setQSORandom(util->QStringToBool(getADIFValueFromRec(rec, "qso_random")));
+    qso.setQSOComplete(getADIFValueFromRec(rec, "qso_complete"));
+    qso.setQSORandom(util->QStringToBool(getADIFValueFromRec(rec, "qso_random")));
 
     qso.setQTH(getADIFValueFromRec(rec, "qth"));
     qso.setRSTTX(getADIFValueFromRec(rec, "rst_sent"));
@@ -8929,28 +9108,23 @@ int DataProxy_SQLite::getFieldInBand(ValidFieldsForStats _field, const QString &
 
    if (!modeIds.isEmpty())
    {
-       // Use the provided mode IDs list (mode group, e.g. SSB includes USB/LSB/SSB)
+       // Use the provided mode IDs list (mode group, e.g. SSB includes USB/LSB/SSB),
+       // filtered on submode like the _mode branch below -- modeid (the ADIF parent
+       // mode) would pull in every submode of the whole family instead (klog#1122).
        QStringList parts;
        for (int id : modeIds) parts << QString::number(id);
-       modeString = QString(" AND modeid IN (%1)").arg(parts.join(QLatin1Char(',')));
+       modeString = QString(" AND submode IN (%1)").arg(parts.join(QLatin1Char(',')));
    }
-   else
+   else if (_mode.toUpper() != "ALL")
    {
-   int modeId = getIdFromModeName(_mode);
-   if (_mode.toUpper() == "ALL")
-   {
-       //qDebug() << Q_FUNC_INFO << ": ALL Modes" ;
-   }
-   else if (modeId > 0)
-   {
-       //qDebug() << Q_FUNC_INFO << ": Valid Mode" ;
-       modeString = QString(" AND modeid='%1' ").arg(modeId);
-   }
-   else
-   {
-       //qDebug() << Q_FUNC_INFO << ": Mode not valid!" ;
-       return 0;
-   }
+       // Filtered on log.submode: a parent mode brings its whole group (SSB covers USB and
+       // LSB) while a submode matches only its own QSOs.
+       modeString = getSubModeFilterSQL(_mode);
+       if (modeString.isEmpty())
+       {
+           //qDebug() << Q_FUNC_INFO << ": Mode not valid!" ;
+           return 0;
+       }
    } // end of modeIds.isEmpty() block
 
     QString logString = QString();
@@ -9045,7 +9219,10 @@ DataProxy_SQLite::loadDupeCacheBG(const QString &dbPath, int logId)
             qWarning() << Q_FUNC_INFO << "failed to open DB:" << dbPath;
             return result;
         }
-        QString queryString = "SELECT id, call, qso_date, bandid, modeid FROM log";
+        // Keyed on submode, not modeid: modeid is shared by every submode of the same
+        // ADIF family (e.g. FT2 and FT4 are both MFSK), so building the cache from it
+        // flagged genuinely different QSOs as duplicates. See issue #1120.
+        QString queryString = "SELECT id, call, qso_date, bandid, submode FROM log";
         if (logId > 0)
             queryString += QString(" WHERE lognumber=%1").arg(logId);
         QSqlQuery q(bgDb);

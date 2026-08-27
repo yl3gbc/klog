@@ -1011,6 +1011,18 @@ bool QSO::setMode(const QString &_c)
     return false;
 }
 
+bool QSO::setModeFromADIF(const QString &_c)
+{
+    // ADIF does not mandate any order between the MODE and SUBMODE fields. If SUBMODE has
+    // already been read, a MODE naming that very group must not overwrite it: a record with
+    // <SUBMODE:4>C4FM before <MODE:12>DIGITALVOICE has to keep C4FM as the submode.
+    // Setting the mode from the UI keeps using setMode(), where picking the parent mode
+    // deliberately clears any previously selected submode.
+    if (haveSubMode && !submode.isEmpty() && (adif->getModeFromSubmode(submode) == _c))
+        return true;
+    return setMode(_c);
+}
+
 QString QSO::getMode() const { return mode; }
 
 bool QSO::setDate(const QDate &_c)
@@ -1784,15 +1796,18 @@ int QSO::getKlogDxcc() const
 
 bool QSO::setPropMode(const QString &_c)
 {
-    //qDebug() << Q_FUNC_INFO << _c;
-    ////Utilities util(Q_FUNC_INFO);
-    if (!util->isValidPropMode (_c))
+    //qDebug() << Q_FUNC_INFO << ": " << _c;
+    if (!util->isValidPropMode(_c))
     {
-        //qDebug() << Q_FUNC_INFO << " - Not valid!";
         propMode = QString();
         return false;
     }
-    //qDebug() << Q_FUNC_INFO << " - OK END";
+    if ((_c.toUpper() == "SAT") && satName.isEmpty())
+    {
+        // Propagation mode SAT requires a satellite name to be set
+        propMode = QString();
+        return false;
+    }
     propMode = _c.toUpper();
     return true;
 }
@@ -2121,6 +2136,7 @@ bool QSO::getKeepSatTab() const{return keepSat;}
 
 bool QSO::setSatName(const QString &_c)
 {
+    //qDebug() << Q_FUNC_INFO << ": " << _c;
     if (!_c.isEmpty())
     {
         satName = _c;
@@ -2129,6 +2145,10 @@ bool QSO::setSatName(const QString &_c)
     else
     {
         satName = QString();
+        if (propMode == "SAT")
+        {
+            setPropMode(QString());   // no satellite -> no SAT prop mode
+        }
         return false;
     }
 }
@@ -2141,16 +2161,18 @@ QString QSO::getSatName() const
 bool QSO::setSatMode(const QString &_c)
 {
     //qDebug() << Q_FUNC_INFO << ": " << _c;
+    //qDebug() << Q_FUNC_INFO << "PROP_MODE: " << _c;
     if (!_c.isEmpty())
     {
-        satMode = _c;
-        return true;
+        if (getSatName().length()>0)
+        {
+            satMode = _c;
+            return true;
+        }
     }
-    else
-    {
-        satMode = QString();
-        return false;
-    }
+
+    satMode = QString();
+    return false;
 }
 
 QString QSO::getSatMode() const
@@ -3352,7 +3374,16 @@ bool QSO::setSubmode(const QString &_c)
 {
     logEvent (Q_FUNC_INFO, "Start", Debug);
     //qDebug() << Q_FUNC_INFO << ": " << _c;
-    return setMode(_c);
+    // Every mode is also a valid submode of itself (SSB/SSB, CW/CW...), so a plain mode
+    // name is accepted here and simply results in mode == submode.
+    if (!adif->isValidSubMode(_c))
+        return false;
+
+    submode = _c;
+    haveSubMode = true;
+    mode = adif->getModeFromSubmode(submode);
+    haveMode = true;
+    return true;
 }
 
 QString QSO::getSubmode() const { return submode; }
@@ -3630,7 +3661,7 @@ void QSO::InitializeHash() {
         {"LOTW_QSL_RCVD", decltype(std::mem_fn(&QSO::decltype_function))(&QSO::setLoTWQSL_RCVD)},
         {"LOTW_QSL_SENT", decltype(std::mem_fn(&QSO::decltype_function))(&QSO::setLoTWQSL_SENT)},
         {"MAX_BURSTS", decltype(std::mem_fn(&QSO::decltype_function))(&QSO::setMaxBursts)},
-        {"MODE", decltype(std::mem_fn(&QSO::decltype_function))(&QSO::setMode)},
+        {"MODE", decltype(std::mem_fn(&QSO::decltype_function))(&QSO::setModeFromADIF)},
         {"MS_SHOWER", decltype(std::mem_fn(&QSO::decltype_function))(&QSO::setMsShower)},
         {"MY_ALTITUDE", decltype(std::mem_fn(&QSO::decltype_function))(&QSO::setMyAltitude)},
         {"MY_ANTENNA", decltype(std::mem_fn(&QSO::decltype_function))(&QSO::setMyAntenna)},
@@ -3876,27 +3907,15 @@ void QSO::clearQSLDateIfNeeded()
 
 QString QSO::getADIF(ExportMode _em)
 {
-    //qDebug() << Q_FUNC_INFO << " - Start";
+    Q_UNUSED(_em);
+    // Every ADIF record KLog writes -to a file or to an online logbook- is
+    // produced by this single serializer. The destination-specific field
+    // subsets (LoTW, eQSL, Club Log...) are obtained by limiting the columns
+    // that are read from the database before the QSO is serialized, not by
+    // using a different ADIF writer per destination.
     if (!isComplete())
         return QString();
-    //qDebug() << Q_FUNC_INFO << " - My_POTA_REF: " << getMyPOTA_Ref();
-    QString adifStr;
-    switch (_em) {
-    case ModeADIF:
-        adifStr =  getADIFStandard();
-    break;
-    case ModeLotW:
-        adifStr = getADIFLoTW();
-    break;
-    case ModeEQSL:
-        adifStr = getADIFeQSL();
-    break;
-    default:
-        adifStr = getADIFStandard();
-    break;
-    }
-
-    return adifStr + "<EOR>\n";
+    return getADIFStandard() + "<EOR>\n";
 }
 
 QString QSO::getADIFStandard()
@@ -3923,6 +3942,8 @@ QString QSO::getADIFStandard()
     adifStr.append(adif->getADIFField ("RST_RCVD", RST_rx));
     adifStr.append(adif->getADIFField ("RST_SENT",  RST_tx));
     adifStr.append(adif->getADIFField ("BAND",  band));
+    // BAND_RX is only meaningful for split/cross-band QSOs. Empty and "0"
+    // values are discarded centrally by Adif::getADIFField().
     if (QString::compare(band, band_rx) != 0)
         adifStr.append(adif->getADIFField ("BAND_RX",  band_rx));
     adifStr.append(adif->getADIFField ("MODE",  mode));
@@ -3946,7 +3967,7 @@ QString QSO::getADIFStandard()
     adifStr.append(adif->getADIFField ("ADDRESS",  address));
     if (age>0.0)  //Only relevant if Age >0
         adifStr.append(adif->getADIFField ("AGE",  QString::number(age)));
-    if (getAltitude() != 0)
+    if (adif->isValidAltitude(getAltitude()))
         adifStr.append(adif->getADIFField ("ALTITUDE",  QString::number(getAltitude())));
     adifStr.append(adif->getADIFField ("CNTY",  county));
     adifStr.append(adif->getADIFField ("COMMENT",  comment));
@@ -3990,12 +4011,12 @@ QString QSO::getADIFStandard()
     if ((eQSLSDate.isValid()) && (adif->isValidQSLSENT(eqsl_qsl_sent)))
         adifStr.append(adif->getADIFField ("eqsl_qslsdate", util->getADIFDateFromQDate(eQSLSDate) ));
 
-    if (fists>0)
+    if (adif->isValidFISTS(fists))
         adifStr.append(adif->getADIFField ("fists", QString::number(fists)));
 
-    if (fists_cc>0)
+    if (adif->isValidFISTS(fists_cc))
         adifStr.append(adif->getADIFField ("fists_cc", QString::number(fists_cc)));
-    if (forceInit)      // Only relevant if true
+    if (adif->isValidForceInit(forceInit, propMode))
         adifStr.append(adif->getADIFField ("force_init", adif->getADIFBoolFromBool(getForceInit()) ));
 
     //qDebug() << Q_FUNC_INFO << ": Printing FREQ: " << QString::number(freq_tx);
@@ -4043,7 +4064,7 @@ QString QSO::getADIFStandard()
         adifStr.append(adif->getADIFField ("max_bursts", QString::number(getMaxBursts()) ));
 
     adifStr.append(adif->getADIFField ("ms_shower",  ms_shower));
-    if (getMyAltitude() != 0)
+    if (adif->isValidAltitude(getMyAltitude()))
         adifStr.append(adif->getADIFField ("my_altitude",  QString::number(getMyAltitude())));
     adifStr.append(adif->getADIFField ("my_antenna", my_antenna));
     adifStr.append(adif->getADIFField ("my_arrl_sect", my_arrl_sect ));
@@ -4122,11 +4143,10 @@ QString QSO::getADIFStandard()
     if (getQSL_SENT()=="Y")                // Valid case to use qslsentVia
         adifStr.append(adif->getADIFField ("qsl_sent_via", qslSenVia));
     adifStr.append(adif->getADIFField ("qsl_via", qslVia));
-    if (getQSOComplete() != "Y")
+    if (adif->isValidQSOCompleteToExport(getQSOComplete()))
         adifStr.append(adif->getADIFField ("qso_complete", getQSOComplete()));
 
-    //TODO: Check wether it makes sense to use this field for ALL QSOs or just when it is not random.
-    if (!getQSORandom())
+    if (adif->isValidQSORandom(getQSORandom()))
         adifStr.append(adif->getADIFField ("qso_random", adif->getADIFBoolFromBool(getQSORandom())));
 
     adifStr.append(adif->getADIFField ("qth", qth));
@@ -4142,7 +4162,7 @@ QString QSO::getADIFStandard()
         adifStr.append(adif->getADIFField ("sfi", QString::number(sfi)));
     adifStr.append(adif->getADIFField ("sig", sig));
     adifStr.append(adif->getADIFField ("sig_info", sig_info));
-    if (silent_key) //We only save if SK
+    if (adif->isValidSilentKey(silent_key ? "Y" : "N"))
         adifStr.append(adif->getADIFField ("silent_key", adif->getADIFBoolFromBool(silent_key)));
     adifStr.append(adif->getADIFField ("skcc", skcc));
 
@@ -4173,134 +4193,6 @@ QString QSO::getADIFStandard()
     adifStr.append(adif->getADIFField ("web", web));
     if (adif->isValidLogId(getLogId()))
         adifStr.append(adif->getADIFField ("APP_KLOG_LOGN", QString::number(getLogId())));
-    return adifStr;
-}
-
-QString QSO::getADIFLoTW()
-{//id, call, freq, bandid, band_rx, freq_rx, modeid, gridsquare, my_gridsquare, qso_date, prop_mode, sat_name, station_callsign
-    //qDebug() << Q_FUNC_INFO << " - Start";
-    logEvent (Q_FUNC_INFO, "Start", Debug);
-    if (!isComplete())
-        return QString();
-    //Adif adif(Q_FUNC_INFO);
-
-    QString adifStr = QString();
-    adifStr.append(adif->getADIFField ("CALL", callsign));
-    if (freq_tx.isValid())
-        adifStr.append(adif->getADIFField ("freq",  freq_tx.toQString()));
-    if ((freq_rx.isValid()) && (freq_tx != freq_rx))
-        adifStr.append(adif->getADIFField ("freq_rx", freq_rx.toQString()));
-    adifStr.append(adif->getADIFField ("MODE",  mode));
-
-    adifStr.append(adif->getADIFField ("BAND",  band));
-    if (QString::compare(band, band_rx) != 0)
-        adifStr.append(adif->getADIFField ("BAND_RX",  band_rx));
-
-    if (!qso_dateTime.isValid())
-        return QString();
-    //Utilities util(Q_FUNC_INFO);
-    adifStr.append(adif->getADIFField ("QSO_DATE",  util->getADIFDateFromQDateTime(qso_dateTime)));
-    adifStr.append(adif->getADIFField ("TIME_ON",  util->getADIFTimeFromQDateTime(qso_dateTime)));
-
-    adifStr.append(adif->getADIFField ("gridsquare",  gridsquare));
-    adifStr.append(adif->getADIFField ("my_gridsquare", my_gridsquare ));
-    adifStr.append(adif->getADIFField ("prop_mode", propMode));
-    adifStr.append(adif->getADIFField ("sat_name", getSatName()));
-    adifStr.append(adif->getADIFField ("station_callsign", stationCallsign));
-    return adifStr;
-}
-
-QString QSO::getADIFClubLog()
-{
-// https://clublog.freshdesk.com/support/solutions/articles/53202-which-adif-fields-does-club-log-use-
-// call, rst_sent, rst_rcvd, freq, bandid, band_rx, modeid, qso_date, qsl_rcvd, qslrdate, qslsdate,
-// prop_mode, operator, station_callsign, dxcc, qsl_sent, lotw_qsl_rcvd, credit_granted, notes, qso_date_off
-    logEvent (Q_FUNC_INFO, "Start", Debug);
-    //qDebug() << Q_FUNC_INFO << " - Start";
-    if (!isComplete())
-        return QString();
-    //Adif adif(Q_FUNC_INFO);
-
-    QString adifStr = QString();
-    adifStr.append(adif->getADIFField ("CALL", callsign));
-    adifStr.append(adif->getADIFField ("RST_RCVD", RST_rx));
-    adifStr.append(adif->getADIFField ("RST_SENT",  RST_tx));
-    if (freq_tx.isValid())
-        adifStr.append(adif->getADIFField ("freq",  freq_tx.toQString()));
-    adifStr.append(adif->getADIFField ("BAND",  band));
-    if (QString::compare(band, band_rx) != 0)
-        adifStr.append(adif->getADIFField ("BAND_RX",  band_rx));
-    adifStr.append(adif->getADIFField ("MODE",  mode));
-
-    if (!qso_dateTime.isValid())
-        return QString();
-    //Utilities util(Q_FUNC_INFO);
-    adifStr.append(adif->getADIFField ("QSO_DATE",  util->getADIFDateFromQDateTime(qso_dateTime)));
-    adifStr.append(adif->getADIFField ("TIME_ON",  util->getADIFTimeFromQDateTime(qso_dateTime)));
-    {
-        int adifDxcc   = (dxcc >= 1000) ? (dxcc % 1000) : dxcc;
-        int klogExport = (dxcc >= 1000) ? dxcc : klogDxcc;
-        if (adif->isValidDXCC(adifDxcc) && adifDxcc > 0)
-            adifStr.append(adif->getADIFField("DXCC", QString::number(adifDxcc)));
-        if (klogExport >= 1000)
-            adifStr.append(adif->getADIFField("APP_KLOG_DXCC", QString::number(klogExport)));
-    }
-    adifStr.append(adif->getADIFField ("credit_granted", credit_granted ));
-    adifStr.append(adif->getADIFField ("lotw_qsl_rcvd", lotw_qsl_rcvd));
-    adifStr.append(adif->getADIFField ("qsl_rcvd", getQSL_RCVD()));
-    if ((QSLRDate.isValid()) && ( adif->isValidQSLRCVD(qsl_rcvd)))
-        adifStr.append(adif->getADIFField ("qslrdate", util->getADIFDateFromQDate(QSLRDate) ));
-    adifStr.append(adif->getADIFField ("qsl_sent", getQSL_SENT()));
-    if ((QSLSDate.isValid()) && ( adif->isValidQSLSENT(qsl_sent)))
-        adifStr.append(adif->getADIFField ("qslsdate", util->getADIFDateFromQDate(QSLSDate) ));
-    adifStr.append(adif->getADIFField ("notes", notes));
-    adifStr.append(adif->getADIFField ("operator", operatorCall));
-    adifStr.append(adif->getADIFField ("prop_mode", propMode));
-    adifStr.append(adif->getADIFField ("station_callsign", stationCallsign));
-
-    if (qso_dateTime_off.isValid())
-    {
-        if (qso_dateTime_off.date() != qso_dateTime.date())
-            adifStr.append(adif->getADIFField ("QSO_DATE_OFF",  util->getADIFDateFromQDate(qso_dateTime_off.date())));
-        //if (qso_dateTime_off.time() != qso_dateTime.time())
-        //     adifStr.append(adif->getADIFField ("TIME_OFF",  util->getADIFTimeFromQTime(qso_dateTime_off.time())));
-    }
-    return adifStr;
-}
-
-QString QSO::getADIFeQSL()
-{
-    // id, call, rst_sent, freq, bandid, modeid, submode, qso_date, prop_mode, operator,
-    // station_callsign, my_cnty, my_gridsquare, my_lat, my_lon, qslmsg, sat_mode, sat_name
-    if (!isComplete())
-        return QString();
-    //Adif adif(Q_FUNC_INFO);
-
-    QString adifStr = QString();
-    adifStr.append(adif->getADIFField ("CALL", callsign));
-    adifStr.append(adif->getADIFField ("RST_RCVD", RST_rx));
-    adifStr.append(adif->getADIFField ("RST_SENT",  RST_tx));
-    if (freq_tx.isValid())
-        adifStr.append(adif->getADIFField ("freq",  freq_tx.toQString()));
-    adifStr.append(adif->getADIFField ("BAND",  band));
-    adifStr.append(adif->getADIFField ("MODE",  mode));
-    if (QString::compare(mode, submode) != 0)
-        adifStr.append(adif->getADIFField ("SUBMODE", submode ));
-    //Utilities util(Q_FUNC_INFO);
-    adifStr.append(adif->getADIFField ("QSO_DATE",  util->getADIFDateFromQDateTime(qso_dateTime)));
-    adifStr.append(adif->getADIFField ("TIME_ON",  util->getADIFTimeFromQDateTime(qso_dateTime)));
-
-    adifStr.append(adif->getADIFField ("my_cnty", my_county));
-    adifStr.append(adif->getADIFField ("my_gridsquare", my_gridsquare ));
-    adifStr.append(adif->getADIFField ("my_lat", my_latitude));
-    adifStr.append(adif->getADIFField ("my_lon", my_longitude));
-    adifStr.append(adif->getADIFField ("operator", operatorCall));
-    adifStr.append(adif->getADIFField ("prop_mode", propMode));
-    adifStr.append(adif->getADIFField ("qslmsg", qslmsg));
-    adifStr.append(adif->getADIFField ("sat_mode", getSatMode()));
-    adifStr.append(adif->getADIFField ("sat_name", getSatName()));
-    adifStr.append(adif->getADIFField ("station_callsign", stationCallsign));
-
     return adifStr;
 }
 

@@ -40,6 +40,7 @@
 #include "tipsdialog.h"
 #include <QCoreApplication>
 #include <QElapsedTimer>
+#include <QFileInfo>
 
 
 MainWindow::MainWindow(DataProxy_SQLite *dp, World *injectedWorld):
@@ -129,8 +130,6 @@ MainWindow::MainWindow(DataProxy_SQLite *dp, World *injectedWorld):
    ////qInfo() << "[KLOG-TIMING] ctor 023 - MainWindowInputQSO:" << timer.elapsed() << "ms"; timer.restart();
     myDataTabWidget = new MainWindowMyDataTab(dataProxy);
    ////qInfo() << "[KLOG-TIMING] ctor 024 - MainWindowMyDataTab:" << timer.elapsed() << "ms"; timer.restart();
-    commentTabWidget = new MainWindowInputComment();
-   ////qInfo() << "[KLOG-TIMING] ctor 025 - MainWindowInputComment:" << timer.elapsed() << "ms"; timer.restart();
     othersTabWidget = new MainWindowInputOthers(dataProxy, world);
    ////qInfo() << "[KLOG-TIMING] ctor 026 - MainWindowInputOthers:" << timer.elapsed() << "ms"; timer.restart();
     eQSLTabWidget = new MainWindowInputEQSL(dataProxy);
@@ -246,12 +245,22 @@ void MainWindow::init_variables()
     aboutDialog  = nullptr;
     tipsDialog   = nullptr;
     statsWidget  = nullptr;
+    dxUpRightTab = nullptr;   // Created in createUIDX(); hosts the DX Assistant tab
+    dxClusterAssistant = nullptr;
+    dxAssistantEngine  = nullptr;
+    clubLogMostWanted  = nullptr;
+    dxAssistantEnabled = false;
+    clubLogMostWantedEnabled = false;
+    dxAssistantSourceDXCluster = true;   // Both sources feed it unless the
+    dxAssistantSourceWSJTX = true;       // user says otherwise in Setup
+    myContinent = QString();
     QRZCOMAutoCheckAct->setCheckable(true);
     QRZCOMAutoCheckAct->setChecked(false);
     manualMode = false;
     qrzAutoChanging = false;
     qrzcomResponseValid = false;
     changingBand = false;
+    freqDrivenBandChange = false;
     logEvents = true;
     //Default band/modes
     bands << "10M" << "15M" << "20M" << "40M" << "80M" << "160M";
@@ -304,6 +313,7 @@ void MainWindow::init_variables()
     udpLoggedLocator = "";
     udpLoggedCall = "";
     udpSavedRealTime = true;
+    wsjtxCheckedSpots.clear();
 
     UDPServerStart = false;   // By default the UDP server is started
 
@@ -479,6 +489,8 @@ void MainWindow::init()
     createUI();
     //qInfo() << "[KLOG-TIMING] init() 08 - createUI():" << initTimer.elapsed() << "ms"; initTimer.restart();
 
+    initDXAssistant();   // Needs the settings (readSettingsFile) and the UI (createUI)
+
     slotClearButtonClicked(Q_FUNC_INFO);
     infoWidget->showInfo(-1);
     //qInfo() << "[KLOG-TIMING] init() 08b - slotClearButtonClicked+showInfo():" << initTimer.elapsed() << "ms"; initTimer.restart();
@@ -643,6 +655,8 @@ void MainWindow::createActionsCommon(){
     //CLUSTER
     connect(dxClusterWidget.get(), SIGNAL(dxspotclicked(DXSpot)), this, SLOT(slotAnalyzeDxClusterSignal(DXSpot) ) );
     connect(dxClusterWidget.get(), SIGNAL(dxspotArrived(DXSpot)), this, SLOT(slotDXClusterSpotArrived(DXSpot) ) );
+    connect(dxClusterWidget.get(), &DXClusterWidget::dxAssistantEnabledChanged,
+            this, &MainWindow::slotDXAssistantEnabledChanged);
     connect(mapWindow, &MapWindowWidget::spotDoubleClicked, this, &MainWindow::slotMapSpotDoubleClicked);
     connect(mapWindow, &MapWindowWidget::editQSORequested, this, &MainWindow::qsoToEdit);
 
@@ -696,6 +710,8 @@ void MainWindow::createActionsCommon(){
 
     connect(UDPLogServer, SIGNAL(clearSignal(QString)), this, SLOT(slotClearButtonClicked(QString) ) );
     connect(UDPLogServer, SIGNAL(logged(QSO)), this, SLOT(slotQSOReceived(QSO) ) );
+    // Every station WSJT-X decodes goes to the DX Assistant
+    connect(UDPLogServer, &UDPServer::stationDecoded, this, &MainWindow::slotWSJTXStationDecoded);
 
     connect(this, SIGNAL(queryError(QString, QString, QString, QString)), this, SLOT(slotQueryErrorManagement(QString, QString, QString, QString)) );
 
@@ -870,10 +886,6 @@ void MainWindow::slotShowMap()
     //mapWindow->addLocators(a, QColor(0, 0, 255, 127));
 }
 
-//void MainWindow::slotShowDXClusterAssistant()
-//{
-    //dxClusterAssistant->show();
-//}
 void MainWindow::setMainWindowTitle()
 {
     //qDebug() << Q_FUNC_INFO << " - Start";
@@ -973,8 +985,9 @@ void MainWindow::slotBandChanged (const QString &_b)
     currentModeShown = dataProxy->getIdFromModeName(mainQSOEntryWidget->getMode());
     currentBand = currentBandShown;
     currentMode = currentModeShown;
+    syncDXAssistantState();   // "Follow my band" tracks the band in use
 
-    if ((!isFRinBand) || (QSOTabWidget->getTXFreq()<=0))
+    if ((!freqDrivenBandChange) && ((!isFRinBand) || (QSOTabWidget->getTXFreq()<=0)))
     {
           //qDebug() << "MainWindow::slotBandChanged: Freq is not in band or empty"  ;
           //qDebug() << "MainWindow::slotBandChanged: Band: " << mainQSOEntryWidget->getBand()  ;
@@ -1002,6 +1015,7 @@ void MainWindow::slotBandChanged (const QString &_b)
         _entityStatus.status = awards.getQSOStatus(_entityStatus.dxcc, _entityStatus.bandId, manageMode ? _entityStatus.modeId : -1);
         showStatusOfDXCC(_entityStatus);
     }
+    checkNewGrid();
     changingBand = false;
     logEvent(Q_FUNC_INFO, "END", Debug);
       //qDebug() << "MainWindow::slotBandChanged: END" ;
@@ -1021,6 +1035,7 @@ void MainWindow::slotModeChanged (const QString &_m)
     currentModeShown = dataProxy->getIdFromModeName(_m);
     currentBand = currentBandShown;
     currentMode = currentModeShown;
+    syncDXAssistantState();   // "Follow my band" tracks the band in use
     infoWidget->setCurrentMode(currentModeShown);
     if (manageMode)
     {
@@ -1156,7 +1171,8 @@ void MainWindow::actionsJustAfterAddingOneQSO(const QSO& _qso)
         {
              //qDebug() << Q_FUNC_INFO << " -  Lastid: "<< QString::number(lastId) ;
             int bandId = dataProxy->getIdFromBandName(_qso.getBand());
-            int modeId = dataProxy->getIdFromModeName(_qso.getMode());
+            // Submode id, not modeid: the duplicate cache is keyed by submode (issue #1120).
+            int modeId = dataProxy->getSubModeIdFromQSO(_qso);
             dataProxy->addDuplicateCache(lastId, _qso, bandId, modeId);
             awards.setAwards();   //Update the DXCC award status
             // Send to CLUBLOG if enabled
@@ -1177,6 +1193,19 @@ void MainWindow::actionsJustAfterAddingOneQSO(const QSO& _qso)
         }
         //awards.setAwards(lastId);
     }
+    // The spot that led to this QSO has served its purpose, so it leaves the
+    // DX Assistant. This runs after awards.setAwards() above, whose
+    // recalculation only drops the spots that became confirmed: a station
+    // merely worked scores on and would otherwise stay in the list.
+    if (dxClusterAssistant != nullptr)
+    {
+        const QString modeOfQSO = _qso.getSubmode().isEmpty() ? _qso.getMode()
+                                                              : _qso.getSubmode();
+        dxClusterAssistant->removeSpotsOfLoggedQSO(_qso.getCall(),
+                                                   dataProxy->getIdFromBandName(_qso.getBand()),
+                                                   modeOfQSO);
+    }
+
     logWindow->refresh();
     //awards.updateDXCCStatus(-1);
     dxccStatusWidget->refresh();
@@ -1299,7 +1328,6 @@ void MainWindow::getQSODataFromUI()
     //qDebug() << Q_FUNC_INFO << " -  001";
     qsoInUI = QSOTabWidget->getQSOData(qsoInUI);
     //qDebug() << Q_FUNC_INFO << " -  002";
-    qsoInUI = commentTabWidget->getQSOData(qsoInUI);
     //qDebug() << Q_FUNC_INFO << " -  003";
     qsoInUI = othersTabWidget->getQSOData(qsoInUI);
     //qDebug() << Q_FUNC_INFO << " -  004";
@@ -2309,7 +2337,6 @@ void MainWindow::clearUIDX(bool _full)
 
     mainQSOEntryWidget->clear();
     QSOTabWidget->clear();
-    commentTabWidget->clear(_full);
     infoLabel1->clear();
     infoLabel2->clear();
 
@@ -2524,7 +2551,16 @@ void MainWindow::createMenusCommon()
     exitAct = new QAction(tr("E&xit"), this);
     fileMenu->addAction(exitAct);
     //exitAct->setMenuRole(QAction::QuitRole);
-    exitAct->setShortcut(Qt::CTRL | Qt::Key_X);
+    // Ctrl+X is the system Cut everywhere, and on macOS Qt::CTRL is the Command
+    // key, so Exit was claiming Cmd+X. Worse, the text of this action gives it
+    // QuitRole by Qt's heuristic, so on macOS it becomes the native "Quit KLog"
+    // entry and that is the shortcut the user sees there.
+    // QKeySequence::Quit is Cmd+Q on macOS and Ctrl+Q on the Unix desktops;
+    // Windows has no standard binding for it, so Ctrl+Q is set explicitly.
+    QKeySequence quitSequence(QKeySequence::Quit);
+    if (quitSequence.isEmpty())
+        quitSequence = QKeySequence(Qt::CTRL | Qt::Key_Q);
+    exitAct->setShortcut(quitSequence);
     //connect(exitAct, SIGNAL(triggered()), this, SLOT(close()));
     connect(exitAct, SIGNAL(triggered()), this, SLOT(slotFileClose()));
 
@@ -2677,11 +2713,6 @@ void MainWindow::createMenusCommon()
     toolMenu->addAction(showMapAct);
     connect(showMapAct, SIGNAL(triggered()), this, SLOT(slotShowMap()));
     showMapAct->setToolTip(tr("Show the statistics of your radio activity."));
-
-    //dxClusterAssistantAct = new QAction (tr("DXCluster Assistant"), this);
-    //toolMenu->addAction(dxClusterAssistantAct);
-    //connect(dxClusterAssistantAct, SIGNAL(triggered()), this, SLOT(slotShowDXClusterAssistant()));
-    //dxClusterAssistantAct->setToolTip(tr("Show the statistics of your radio activity."));
 
 
      //qDebug() << "MainWindow::createMenusCommon before" ;
@@ -2848,6 +2879,7 @@ void MainWindow::slotLoTWDownloadedFileProcess(const QString &_fn)
         msgBox.setInformativeText(aux);
         msgBox.exec();
         logWindow->refresh();
+        logWindow->scrollToTop();
         dxccStatusWidget->refresh();
         //TODO: Add the QSOs to the widget and show showAdifImportWidget->show();
     }
@@ -3165,7 +3197,7 @@ void MainWindow::slotHelpAboutAction()
 
     logEvent(Q_FUNC_INFO, "Start", Devel);
     if (!aboutDialog)
-        aboutDialog = new AboutDialog(softwareVersion, pkgVersion);
+        aboutDialog = new AboutDialog(softwareVersion, pkgVersion, this);
     aboutDialog->exec();
     logEvent(Q_FUNC_INFO, "END", Debug);
     //helpAboutDialog->exec();
@@ -3343,6 +3375,7 @@ void MainWindow::slotSetupDialogFinished (const int _s)
         applySettings ();
        //qDebug() << Q_FUNC_INFO << " - 010 - " << (QTime::currentTime()).toString ("HH:mm:ss");
         reconfigureDXMarathonUI(manageDxMarathon);
+        initDXAssistant();   // The station callsign or the enabled flag may have changed
         logEvent(Q_FUNC_INFO, "Just after loadSettings", Debug);
        //qDebug() << "MainWindow::slotSetupDialogFinished: logmodel to be created-2" ;
         logEvent(Q_FUNC_INFO, "logmodel to be created-2", Debug);
@@ -3416,6 +3449,7 @@ void MainWindow::slotSetupDialogFinished (const int _s)
                 const bool ok = watcher->result();
                 watcher->deleteLater();
                 hamlibActive = ok;
+                syncDXAssistantState();   // Gates "QSY to this freq"
                 if (ok)
                 {
                     hamlib->startPolling();
@@ -3433,6 +3467,7 @@ void MainWindow::slotSetupDialogFinished (const int _s)
         {
             hamlib->init(false);
             hamlibActive = false;
+            syncDXAssistantState();   // Gates "QSY to this freq"
         }
     }
 
@@ -3609,6 +3644,7 @@ void MainWindow::slotInitHamlib()
         watcher->deleteLater();
 
         hamlibActive = ok;
+        syncDXAssistantState();   // Gates "QSY to this freq"
         if (ok)
         {
             // Timer must be started on the main thread (QTimer affinity).
@@ -3659,6 +3695,7 @@ void MainWindow::slotHamlibRigDisconnected()
     logEvent(Q_FUNC_INFO, "Rig disconnected", Warning);
    //qDebug() << Q_FUNC_INFO ;
     hamlibActive = false;
+    syncDXAssistantState();   // Gates "QSY to this freq"
 
     QMessageBox msgBox(this);
     msgBox.setIcon(QMessageBox::Warning);
@@ -3730,6 +3767,8 @@ void MainWindow::setColors (const QColor &_newOne, const QColor &_needed, const 
     dxClusterWidget->setColors  (_newOne, _needed, _worked, _confirmed, _default);
     infoWidget->setColors       (_newOne, _needed, _worked, _confirmed, _default);
     dxccStatusWidget->setColors (_newOne, _needed, _worked, _confirmed, _default);
+    if (dxClusterAssistant != nullptr)
+        dxClusterAssistant->setColors(_newOne, _needed, _worked);
 }
 
 bool MainWindow::applySettings()
@@ -3782,6 +3821,145 @@ void MainWindow::startServices()
     logEvent(Q_FUNC_INFO, "END", Debug);
 }
 
+void MainWindow::initDXAssistant()
+{
+    logEvent(Q_FUNC_INFO, "Start", Devel);
+
+    // The feature is off by default; the tab appears only once it is
+    // enabled in Setup, in the DXCluster page.
+    if (!dxAssistantEnabled)
+    {   // Already-created objects stay idle: the slots guard on the flag
+        reconfigureDXAssistantUI(false);   // Drops the tab if it was there
+        logEvent(Q_FUNC_INFO, "END - Disabled in settings", Debug);
+        return;
+    }
+
+    myContinent = world->getQRZContinentShortName(mainQRZ);
+    // Feeds the DX Assistant "My DXCC" spotter filter; -1 disables it
+    const int myDXCC = world->getQRZARRLId(mainQRZ);
+
+    if (clubLogMostWantedEnabled && (clubLogMostWanted == nullptr))
+    {
+        clubLogMostWanted = new ClubLogMostWanted(this);
+        clubLogMostWanted->setKLogVersion(softwareVersion);
+        clubLogMostWanted->setPrefixResolver([this](const QString &_prefix)
+        {
+            return world->getQRZARRLId(_prefix);
+        });
+        // Loads any cached list immediately; the fetch below is skipped while
+        // the cache is younger than the TTL.
+        clubLogMostWanted->setCacheFile(util->getHomeDir() + "/clublog_mostwanted.json");
+        clubLogMostWanted->fetchIfStale();
+
+        // ClubLog most-wanted list refreshed -> recalculate
+        connect(clubLogMostWanted, SIGNAL(mostWantedUpdated()),
+                this, SLOT(slotDXAssistantRecalculate()));
+        // Surface silent download/parse failures in the KLog debug log
+        connect(clubLogMostWanted, &ClubLogMostWanted::fetchFailed,
+                this, [this](const QString &_reason)
+        {
+            logEvent("ClubLogMostWanted", _reason, Warning);
+        });
+    }
+    // The integration can be toggled in the Setup dialog: a null pointer
+    // simply yields rank 0 for every entity.
+    ClubLogMostWanted *mostWantedInUse = clubLogMostWantedEnabled ? clubLogMostWanted : nullptr;
+
+    if (dxAssistantEngine == nullptr)
+    {
+        dxAssistantEngine = new DXAssistantEngine(&awards, world, dataProxy,
+                                                  mostWantedInUse, myContinent, this);
+
+        // New cluster spot -> score it -> feed the assistant
+        connect(dxClusterWidget.get(), SIGNAL(dxspotArrived(DXSpot)),
+                this, SLOT(slotDXAssistantNewSpot(DXSpot)));
+        // New QSO logged -> recalculate all spot scores
+        connect(&awards, SIGNAL(awardDXCCUpdated()),
+                this, SLOT(slotDXAssistantRecalculate()));
+    }
+    else
+    {   // Re-entering after the Setup dialog: refresh what may have changed
+        dxAssistantEngine->setUserContinent(myContinent);
+        dxAssistantEngine->setMostWanted(mostWantedInUse);
+    }
+    dxAssistantEngine->setUserDXCC(myDXCC);
+    // Feeds the "My call" spotter filter: the spots KLog heard itself carry
+    // the station callsign in use, and fall back to the one in the user data.
+    dxAssistantEngine->setUserCallsign(stationCallsign.isEmpty() ? mainQRZ : stationCallsign);
+    reconfigureDXAssistantUI(true);   // Creates the widget and shows its tab
+    if (dxClusterAssistant != nullptr)
+        dxClusterAssistant->setEngine(dxAssistantEngine);
+
+    logEvent(Q_FUNC_INFO, "END", Debug);
+}
+
+// Keeps the DX Assistant tab of dxUpRightTab in sync with the enabled flag.
+// The widget itself is never destroyed once created: disabling the feature
+// only removes its tab, so re-enabling it brings back the spots it holds.
+void MainWindow::reconfigureDXAssistantUI(const bool _enabled)
+{
+    logEvent(Q_FUNC_INFO, "Start", Devel);
+    // The "DX A" button follows the setting wherever it was changed from:
+    // this button, the Setup dialog, or the config file at startup.
+    dxClusterWidget->setDXAssistantEnabled(_enabled);
+
+    if (dxUpRightTab == nullptr)
+    {   // createUIDX() has not run yet; initDXAssistant() will call us again
+        logEvent(Q_FUNC_INFO, "END - No UI yet", Debug);
+        return;
+    }
+
+    if (!_enabled)
+    {
+        if (dxClusterAssistant != nullptr)
+        {
+            const int tabIndex = dxUpRightTab->indexOf(dxClusterAssistant);
+            if (tabIndex >= 0)
+                dxUpRightTab->removeTab(tabIndex);
+            // removeTab() does not reparent the page: adopt it explicitly so
+            // it does not linger on top of the tab widget.
+            dxClusterAssistant->setParent(this);
+            dxClusterAssistant->hide();
+        }
+        logEvent(Q_FUNC_INFO, "END - Disabled", Debug);
+        return;
+    }
+
+    if (dxClusterAssistant == nullptr)
+    {
+        dxClusterAssistant = new DXClusterAssistant(&awards, world, dataProxy,
+                                                    Q_FUNC_INFO, this);
+        dxClusterAssistant->init();
+        dxClusterAssistant->setColors(newOneColor, neededColor, workedColor);
+        connect(dxClusterAssistant, SIGNAL(spotSendToUI(DXSpot)),
+                this, SLOT(slotDXAssistantSendSpotToUI(DXSpot)));
+        connect(dxClusterAssistant, SIGNAL(spotLogDirectly(DXSpot)),
+                this, SLOT(slotDXAssistantLogSpot(DXSpot)));
+        connect(dxClusterAssistant, SIGNAL(spotQSY(DXSpot)),
+                this, SLOT(slotDXAssistantQSY(DXSpot)));
+        connect(dxClusterAssistant, &DXClusterAssistant::spotsSendToMap,
+                this, &MainWindow::slotDXAssistantSpotsToMap);
+    }
+    syncDXAssistantState();
+
+    if (dxUpRightTab->indexOf(dxClusterAssistant) < 0)
+    {   // addTab() takes care of the page visibility; no explicit show()
+        dxUpRightTab->addTab(dxClusterAssistant, tr("DX Assistant"));
+    }
+
+    logEvent(Q_FUNC_INFO, "END", Debug);
+}
+
+// The widget cannot reach MainWindow's state, so the two things its menu
+// depends on are pushed in whenever they change.
+void MainWindow::syncDXAssistantState()
+{
+    if (dxClusterAssistant == nullptr)
+        return;
+    dxClusterAssistant->setCurrentBand(currentBand);
+    dxClusterAssistant->setRigConnected(hamlibActive);
+}
+
 void MainWindow::checkIfNewBandOrMode()
 {//Checks the log to see if there is a QSO with a band/mode
 //that is not currently selected as active
@@ -3795,7 +3973,7 @@ void MainWindow::checkIfNewBandOrMode()
       //qDebug() << Q_FUNC_INFO << " - 1 " << QTime::currentTime().toString("hh:mm:ss") ;
     QStringList bandsInLog = dataProxy->getBandsInLog(currentLog);
       //qDebug() << Q_FUNC_INFO << " - 2 " << QTime::currentTime().toString("hh:mm:ss") ;
-    QStringList modesInLog = dataProxy->getModesInLog(currentLog);
+    QStringList modesInLog = dataProxy->getSubModesInLog(currentLog);   // Submodes, so imported QSOs find their mode
       //qDebug() << Q_FUNC_INFO << " - 3 " << QTime::currentTime().toString("hh:mm:ss") ;
     QStringList qsTemp;
     qsTemp.clear();
@@ -3820,6 +3998,7 @@ void MainWindow::checkIfNewBandOrMode()
       //qDebug() << Q_FUNC_INFO << " - modes - " << QString::number(modes.length()) << " - " << QTime::currentTime().toString("hh:mm:ss") ;
     mainQSOEntryWidget->setModes(modes);
     mapWindow->setModes(modes);
+    logWindow->setActiveModes(modes);
 
 
      //qDebug() << Q_FUNC_INFO << " - setting bands"  << QTime::currentTime().toString("hh:mm:ss") ;
@@ -3954,7 +4133,8 @@ void MainWindow::readActiveModes (const QStringList actives)
     QStringList __modes;
     __modes.clear();
     __modes = actives;
-    __modes << dataProxy->getModesInLog(currentLog);
+    // The submodes worked, so a QSO imported on C4FM or FT4 finds its mode in the list
+    __modes << dataProxy->getSubModesInLog(currentLog);
     __modes.removeDuplicates();
     modes.clear();
 
@@ -4006,7 +4186,6 @@ void MainWindow::createUIDX()
     dxUpLeftTab->addTab (QSOTabWidget, tr("QSO"));
     dxUpLeftTab->addTab(QSLTabWidget, tr("QSL"));
     dxUpLeftTab->addTab(eQSLTabWidget, tr("eQSL"));
-    dxUpLeftTab->addTab(commentTabWidget, tr("Comment"));
 
     dxUpLeftTab->addTab(othersTabWidget, tr("Others"));
 
@@ -4635,43 +4814,149 @@ void MainWindow::slotADIFImport(){
    //qDebug() << Q_FUNC_INFO << " - Start";
     logEvent(Q_FUNC_INFO, "Start", Devel);
 
-    QString fileName = QFileDialog::getOpenFileName(this, tr("Open File"),
-                                                     util->getHomeDir(),
-                                                     "ADIF (*.adi *.adif)");
-    if (fileName.isNull())
+    // Use the native file dialog (via a QFileDialog instance so we can tell a
+    // cancel from an empty result). When the user cancels, exec() returns
+    // Rejected and we abort. Only when the dialog was accepted but returned no
+    // files -a bug seen with the native macOS dialog- do we retry with the
+    // non-native dialog. This keeps the macOS workaround without reopening a
+    // second dialog on a plain cancel.
+    QStringList fileNames;
+    QFileDialog dialog(this, tr("Open File"), util->getHomeDir(), "ADIF (*.adi *.adif)");
+    dialog.setFileMode(QFileDialog::ExistingFiles);
+    dialog.setAcceptMode(QFileDialog::AcceptOpen);
+    if (dialog.exec() == QDialog::Accepted)
     {
-        int OSVersion = QOperatingSystemVersion::currentType();
-        if (OSVersion == QOperatingSystemVersion::MacOS)
+        fileNames = dialog.selectedFiles();
+        if (fileNames.isEmpty() &&
+            QOperatingSystemVersion::currentType() == QOperatingSystemVersion::MacOS)
         {
-           //qDebug() << Q_FUNC_INFO << " - Failed to read with MacOS Dialog";
-            fileName = QFileDialog::getOpenFileName(this, tr("Open File"),
-                                                             util->getHomeDir(),
-                                                             "ADIF (*.adi *.adif)",
-                                                             nullptr,
-                                                             QFileDialog::DontUseNativeDialog);
+           //qDebug() << Q_FUNC_INFO << " - Native macOS dialog returned no files, retrying non-native";
+            QFileDialog fallback(this, tr("Open File"), util->getHomeDir(), "ADIF (*.adi *.adif)");
+            fallback.setFileMode(QFileDialog::ExistingFiles);
+            fallback.setAcceptMode(QFileDialog::AcceptOpen);
+            fallback.setOption(QFileDialog::DontUseNativeDialog, true);
+            if (fallback.exec() == QDialog::Accepted)
+                fileNames = fallback.selectedFiles();
         }
     }
+    // Empty here means the user cancelled (or selected nothing): just abort.
+    if (fileNames.isEmpty())
+        return;
     //qDebug() << Q_FUNC_INFO << " - CurrentLog: " << currentLog;
-    if (!fileName.isNull())
+    int totalLoggedQSOs = 0;
+    int globalImported = 0;   // Imported QSOs across all files in this batch
+    int globalIgnored = 0;    // Ignored (duplicated) QSOs across all files in this batch
+    bool importCancelled = false;   // Aborted from the progress dialog (current file rolled back)
+    bool importStopped = false;     // User chose not to continue with the next file
+    const int fileCount = fileNames.count();
+    for (int fileIndex = 0; fileIndex < fileCount; fileIndex++)
     {
+        const QString fileName = fileNames.at(fileIndex);
+        if (fileName.isNull())
+            continue;
+
+        // When importing more than one file, announce the file we are about to
+        // import (X/Y and its name) before starting to read it.
+        if (fileCount > 1)
+            statusBar()->showMessage(tr("Importing file %1/%2: %3")
+                                         .arg(fileIndex + 1)
+                                         .arg(fileCount)
+                                         .arg(QFileInfo(fileName).fileName()));
+
        //qDebug() << Q_FUNC_INFO << " - fileName is not Null 010";
-        int loggedQSOs = filemanager->adifReadLog(fileName, QString(), currentLog);  // Empty StationCallsign by default
+        // Empty StationCallsign by default; pass file index (1-based) and total so
+        // the import progress dialog shows "File X/Y" and the file name. The
+        // per-file imported/ignored counters come back through the out-params.
+        int importedThisFile = 0;
+        int ignoredThisFile = 0;
+        int loggedQSOs = filemanager->adifReadLog(fileName, QString(), currentLog, fileIndex + 1, fileCount, &importedThisFile, &ignoredThisFile);
        //qDebug() << Q_FUNC_INFO << " - loggedQSOs: " << loggedQSOs;
-        if (loggedQSOs>0)
+        if (loggedQSOs == FileManager::ADIF_IMPORT_CANCELLED)
         {
-            updateQSLRecAndSent();
-            logWindow->refresh();
-           //qDebug() << Q_FUNC_INFO << " -3";
-            m_adifImporting = true;
-            checkIfNewBandOrMode();
-           //qDebug() << Q_FUNC_INFO << " -4" ;
-            awardsWidget->fillOperatingYears();
-           //qDebug() << Q_FUNC_INFO << " -5" ;
-            m_adifImporting = false;
-            slotShowAwards();
-           //qDebug() << Q_FUNC_INFO << " -6" ;
+            // The user aborted from the progress dialog: cancel the whole import
+            // process, not only the current file. Do not import any remaining file.
+            importCancelled = true;
+            break;
         }
+        if (loggedQSOs>0)
+            totalLoggedQSOs += loggedQSOs;
+        globalImported += importedThisFile;
+        globalIgnored  += ignoredThisFile;
         //qDebug() << Q_FUNC_INFO << " - 020";
+
+        // Is there another (non-null) file to import after this one?
+        bool moreFilesToCome = false;
+        for (int j = fileIndex + 1; j < fileCount; j++)
+        {
+            if (!fileNames.at(j).isNull())
+            {
+                moreFilesToCome = true;
+                break;
+            }
+        }
+
+        // Between files, summarise this file and ask whether to continue with the
+        // next one. If the user says no, the already-imported files are kept and
+        // the batch stops here.
+        if (moreFilesToCome)
+        {
+            QMessageBox msgBox(this);
+            msgBox.setWindowTitle(tr("KLog - File import finished"));
+            msgBox.setText(tr("The import of the ADIF file has finished."));
+            msgBox.setInformativeText(tr("Imported QSOs: %1\nIgnored duplicated: %2\n\nDo you want to continue importing the next file?")
+                                          .arg(importedThisFile).arg(ignoredThisFile));
+            msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
+            msgBox.setDefaultButton(QMessageBox::Yes);
+            if (msgBox.exec() == QMessageBox::No)
+            {
+                importStopped = true;
+                break;
+            }
+        }
+    }
+
+    if (importCancelled)
+    {
+        statusBar()->showMessage(tr("Import cancelled by the user."), 5000);
+    }
+    else if (fileCount > 1)
+    {
+        // Final summary for the whole batch, with the global imported/ignored tally.
+        QMessageBox msgBox(this);
+        msgBox.setWindowTitle(tr("KLog - Import finished"));
+        msgBox.setText(importStopped ? tr("The ADIF import has been stopped.")
+                                     : tr("The ADIF import has finished."));
+        msgBox.setInformativeText(tr("Total imported QSOs: %1\nTotal ignored duplicated: %2")
+                                      .arg(globalImported).arg(globalIgnored));
+        msgBox.setStandardButtons(QMessageBox::Ok);
+        msgBox.exec();
+        statusBar()->showMessage(tr("Import of %1 files finished.").arg(fileCount), 5000);
+    }
+    else if (globalIgnored > 0)
+    {
+        // Single file: keep showing a summary when there were duplicates.
+        QMessageBox msgBox(this);
+        msgBox.setWindowTitle(tr("KLog - Import finished"));
+        msgBox.setText(tr("The ADIF file import has finished."));
+        msgBox.setInformativeText(tr("Imported QSOs: %1\nIgnored duplicated: %2")
+                                      .arg(globalImported).arg(globalIgnored));
+        msgBox.setStandardButtons(QMessageBox::Ok);
+        msgBox.exec();
+    }
+    if (totalLoggedQSOs>0)
+    {
+        updateQSLRecAndSent();
+        logWindow->refresh();
+        logWindow->scrollToTop();
+       //qDebug() << Q_FUNC_INFO << " -3";
+        m_adifImporting = true;
+        checkIfNewBandOrMode();
+       //qDebug() << Q_FUNC_INFO << " -4" ;
+        awardsWidget->fillOperatingYears();
+       //qDebug() << Q_FUNC_INFO << " -5" ;
+        m_adifImporting = false;
+        slotShowAwards();
+       //qDebug() << Q_FUNC_INFO << " -6" ;
     }
     logEvent(Q_FUNC_INFO, "END", Debug);
    //qDebug() << Q_FUNC_INFO << " - END";
@@ -4686,7 +4971,6 @@ void MainWindow::sendQSOToUI(const QSO &_qso)
    //qDebug() << Q_FUNC_INFO << ": " << _qso.getMode();
    //qDebug() << Q_FUNC_INFO << ": " << _qso.getSubmode();
     mainQSOEntryWidget->setQSOData(_qso);
-    commentTabWidget->setQSOData(_qso);
     satTabWidget->setQSOData(_qso);
     othersTabWidget->setQSOData(_qso);
     QSLTabWidget->setQSOData(_qso);
@@ -4794,6 +5078,35 @@ void MainWindow::slotLocatorTextChanged(const QString &_loc)
     {
         infoWidget->showDistanceAndBearing(myDataTabWidget->getMyLocator(), _loc);
     }
+    checkNewGrid();
+    logEvent(Q_FUNC_INFO, "END", Debug);
+}
+
+void MainWindow::checkNewGrid()
+{
+    logEvent(Q_FUNC_INFO, "Start", Devel);
+    const QString loc = QSOTabWidget->getDXLocator();
+    Locator locator;
+    if (!locator.isValidLocator(loc) || loc.length() < 4)
+    {
+        QSOTabWidget->setNewGrid(false);
+        logEvent(Q_FUNC_INFO, "END-1", Debug);
+        return;
+    }
+    const QString bandName = mainQSOEntryWidget->getBand();
+    const int bandId = dataProxy->getIdFromBandName(bandName);
+    const QString grid4 = loc.left(4).toUpper();
+    // Satellite QSOs are tracked apart from terrestrial bands.
+    const QString prop = othersTabWidget->getPropModeFromComboBox();
+    const bool isSat = (prop.trimmed().toUpper() == "SAT");
+    // When editing a QSO, exclude it from the count so its own grid does not mask a "new" status.
+    const int excludeId = modify ? modifyingQSOid : -1;
+    const bool isNew = dataProxy->isNewGridOnBand(grid4, bandId, currentLog, prop, excludeId);
+    if (isNew)
+        QSOTabWidget->setNewGrid(true, isSat ? tr("New Locator on Sats")
+                                             : tr("New Locator on %1 Band").arg(bandName));
+    else
+        QSOTabWidget->setNewGrid(false);
     logEvent(Q_FUNC_INFO, "END", Debug);
 }
 
@@ -5107,8 +5420,244 @@ void MainWindow::slotShowStats()
 {
     logEvent(Q_FUNC_INFO, "Start", Devel);
     if (!statsWidget)
+    {
         statsWidget = new StatisticsWidget(dataProxy);
+        // Parented so it is destroyed with the main window, but kept as a
+        // top level window: without an owner the whole statistics panel (16
+        // chart widgets) was never freed.
+        statsWidget->setParent(this, Qt::Window);
+    }
     statsWidget->show();
+    logEvent(Q_FUNC_INFO, "END", Debug);
+}
+
+void MainWindow::slotDXAssistantNewSpot(const DXSpot &_spot)
+{
+    // Called for every arriving DXCluster spot, one of the two sources the
+    // user can pick in Setup.
+    if (!dxAssistantSourceDXCluster)
+        return;
+    feedDXAssistantWithSpot(_spot);
+}
+
+void MainWindow::feedDXAssistantWithSpot(const DXSpot &_spot)
+{
+    // Scoring only makes sense once the assistant tab exists to show the
+    // result.
+    if (!dxAssistantEnabled || (dxAssistantEngine == nullptr) || (dxClusterAssistant == nullptr))
+        return;
+
+    DXSpot spot = _spot;
+    bool workable = dxAssistantEngine->score(spot);
+    // Every spot counts towards "Most active band", even the discarded ones
+    dxClusterAssistant->registerBandActivity(spot);
+    if (workable)
+        dxClusterAssistant->addOrUpdateSpot(spot);
+}
+
+void MainWindow::checkWSJTXSpotWithDXAssistant(const QString &_dxCall, const double _freq,
+                                               const QString &_mode, const QString &_spotter,
+                                               const QString &_comment, const QDateTime &_dateTime)
+{
+    // A station arriving from WSJT-X deserves the same treatment as a
+    // DXCluster spot: it is scored by the DX Assistant engine and, if it is
+    // worth working, it shows up in the DX Assistant tab. WSJT-X is the other
+    // source the user can pick in Setup.
+    if (!dxAssistantSourceWSJTX)
+        return;
+    if (!dxAssistantEnabled || (dxAssistantEngine == nullptr) || (dxClusterAssistant == nullptr))
+        return;
+    if (_dxCall.isEmpty() || (_freq <= 0.0))
+        return;
+    // We heard the DX ourselves, so the local station is the spotter: that
+    // also gives the spot the same-continent bonus it deserves.
+    const QString spotter = _spotter.isEmpty() ? stationCallsign : _spotter;
+    if (wsjtxSpotAlreadyChecked(_dxCall, _freq, spotter))
+        return;
+
+    DXSpot spot;
+    spot.clear();
+    spot.setDXCall(_dxCall.toUpper());
+    Frequency freq;
+    freq.fromDouble(_freq, MHz);
+    spot.setFrequency(freq);
+    spot.setMode(_mode);
+    spot.setSpotter(spotter);
+    spot.setComment(_comment);
+    spot.setSource(SpotSourceWSJTX);
+    spot.setDateTime(_dateTime.isValid() ? _dateTime.toUTC() : QDateTime::currentDateTimeUtc());
+    feedDXAssistantWithSpot(spot);
+}
+
+bool MainWindow::wsjtxSpotAlreadyChecked(const QString &_dxCall, const double _freq,
+                                         const QString &_spotter)
+{
+    // WSJT-X keeps repeating the same station: while its status message says
+    // the same one about once per second, its decodes bring the ones on the
+    // air once per transmission period. Scoring every single one of them
+    // would hit the database for nothing, but the spot still has to be
+    // refreshed often enough not to age out of the list while the station is
+    // still being heard.
+    const QDateTime now = QDateTime::currentDateTimeUtc();
+    // The assistant holds one entry per callsign and band, and each decode of
+    // the same station comes with a slightly different audio offset, so the
+    // band is what identifies the spot, not the exact frequency. The spotter
+    // is part of the key because a station reported by somebody closer to us
+    // is a different report, and one that may take the entry over.
+    const QString spotKey = _dxCall.toUpper() + "-" +
+                            QString::number(dataProxy->getBandIdFromFreq(Frequency(_freq, MHz))) +
+                            "-" + _spotter.toUpper();
+
+    const QDateTime lastCheck = wsjtxCheckedSpots.value(spotKey);
+    if (lastCheck.isValid() && (lastCheck.secsTo(now) < WSJTX_SPOT_REFRESH_SECONDS))
+        return true;
+
+    // Stations that are no longer heard would pile up otherwise
+    wsjtxCheckedSpots.removeIf([&now](QHash<QString, QDateTime>::iterator it)
+    {
+        return it.value().secsTo(now) >= WSJTX_SPOT_REFRESH_SECONDS;
+    });
+    wsjtxCheckedSpots.insert(spotKey, now);
+    return false;
+}
+
+void MainWindow::slotWSJTXStationDecoded(const QString &_caller, const QString &_remoteStation,
+                                         const double _freq, const QString &_mode, const int _snr,
+                                         const bool _callingCQ, const QDateTime &_dateTime)
+{
+    logEvent(Q_FUNC_INFO, "Start", Devel);
+    // A decoded line gives up to two spots, and they are not the same thing:
+    //
+    // - The caller transmitted the message and we decoded it here, so we
+    //   heard it ourselves and we are its spotter. The SNR is its signal.
+    // - The remote station is the one being called. We did not hear it: its
+    //   callsign was simply read out of the message, and it was the caller
+    //   who heard it, so the caller is its spotter, exactly as a DXCluster
+    //   spot names the station that reported the DX.
+    const QString myCall = stationCallsign.toUpper();
+    if (_caller == myCall)
+    {
+        logEvent(Q_FUNC_INFO, "END-1", Debug);
+        return;
+    }
+
+    // The comment tells the spot apart from a DXCluster one and carries what
+    // only a local decode knows: whether the station is calling CQ and how
+    // strong it is being heard.
+    QString comment = _callingCQ ? QString("WSJT-X CQ") : QString("WSJT-X");
+    comment.append(QString(" %1 dB").arg(_snr));
+    checkWSJTXSpotWithDXAssistant(_caller, _freq, _mode, stationCallsign, comment, _dateTime);
+
+    if (!_remoteStation.isEmpty() && (_remoteStation != myCall))
+    {   // Heard by the caller, not by us: no SNR of our own to report
+        checkWSJTXSpotWithDXAssistant(_remoteStation, _freq, _mode, _caller,
+                                      tr("WSJT-X, worked by %1").arg(_caller), _dateTime);
+    }
+    logEvent(Q_FUNC_INFO, "END", Debug);
+}
+
+void MainWindow::slotDXAssistantRecalculate()
+{
+    // Called after Awards update or ClubLog list refresh
+    if (dxClusterAssistant != nullptr)
+        dxClusterAssistant->recalculateAll();
+}
+
+void MainWindow::slotDXAssistantSendSpotToUI(const DXSpot &_spot)
+{
+    logEvent(Q_FUNC_INFO, "Start", Devel);
+    DXSpot spot = _spot;
+    clusterSpotToLog(spot.getDxCall(), spot.getFrequency());
+    logEvent(Q_FUNC_INFO, "END", Debug);
+}
+
+void MainWindow::slotDXAssistantLogSpot(const DXSpot &_spot)
+{
+    logEvent(Q_FUNC_INFO, "Start", Devel);
+    DXSpot spot = _spot;
+    clusterSpotToLog(spot.getDxCall(), spot.getFrequency());
+    slotQRZReturnPressed();   // Logs the QSO immediately, without user interaction
+    logEvent(Q_FUNC_INFO, "END", Debug);
+}
+
+void MainWindow::slotDXAssistantEnabledChanged(const bool _enabled)
+{   // The "DX A" button of the DXCluster widget: same setting the Setup
+    // dialog writes, so it is persisted here too and survives a restart.
+    logEvent(Q_FUNC_INFO, "Start", Devel);
+    if (dxAssistantEnabled == _enabled)
+        return;
+
+    dxAssistantEnabled = _enabled;
+
+    QSettings settings(util->getCfgFile(), QSettings::IniFormat);
+    settings.beginGroup("DXAssistant");
+    settings.setValue("enabled", QVariant(dxAssistantEnabled));
+    settings.endGroup();
+
+    // Builds the engine and adds the tab, or drops the tab when disabling
+    initDXAssistant();
+
+    // Enabling from the button is a deliberate "I want to see it now", so the
+    // new tab is brought to the front. Startup and the Setup dialog go through
+    // initDXAssistant() alone and leave the current tab where the user left it.
+    if (_enabled && (dxClusterAssistant != nullptr) && (dxUpRightTab != nullptr))
+    {
+        const int tabIndex = dxUpRightTab->indexOf(dxClusterAssistant);
+        if (tabIndex >= 0)
+        {
+            dxUpRightTab->setCurrentIndex(tabIndex);
+            dxClusterAssistant->setFocus();
+        }
+    }
+    logEvent(Q_FUNC_INFO, "END", Debug);
+}
+
+void MainWindow::slotDXAssistantQSY(const DXSpot &_spot)
+{   // Tune the radio only: the QSO entry form is deliberately left alone so
+    // the operator can listen before committing to the spot.
+    logEvent(Q_FUNC_INFO, "Start", Devel);
+    if (!hamlibActive || manualMode)
+    {   // The menu entry is offered only with a rig connected, but the state
+        // may have changed while the menu was open.
+        logEvent(Q_FUNC_INFO, "END - No rig to tune", Debug);
+        return;
+    }
+    DXSpot spot = _spot;
+    hamlib->setFreq(spot.getFrequency(), false);
+    logEvent(Q_FUNC_INFO, "END", Debug);
+}
+
+void MainWindow::slotDXAssistantSpotsToMap(const QList<DXSpot> &_spots)
+{   // Explicit user request: unlike the automatic cluster feed, this ignores
+    // the "send spots to map" preference and opens the map.
+    logEvent(Q_FUNC_INFO, "Start", Devel);
+    Locator locator;
+    for (const DXSpot &spot : _spots)
+    {
+        DXSpot sp = spot;
+        QString dxGrid = world->getQRZLocator(sp.getDxCall());
+        if (dxGrid.isEmpty() || !locator.isValidLocator(dxGrid))
+            dxGrid = world->getLocator(world->getQRZARRLId(sp.getDxCall()));
+        if (dxGrid.isEmpty() || !locator.isValidLocator(dxGrid))
+        {
+            logEvent(Q_FUNC_INFO, "No valid locator for " + sp.getDxCall(), Warning);
+            continue;
+        }
+        // Colour by what the spot is worth to the operator, matching the
+        // colours the DX Assistant table already uses.
+        QColor spotColor = defaultColor;
+        switch (sp.getStatusBand())
+        {
+        case ATNO:   spotColor = newOneColor; break;
+        case needed: spotColor = neededColor; break;
+        case worked: spotColor = workedColor; break;
+        default:     break;
+        }
+        mapWindow->addMarker(locator.getLocatorCoordinate(dxGrid), sp.getDxCall(),
+                             spotColor, sp.getFrequency().toDouble());
+    }
+    mapWindow->show();
+    mapWindow->raise();
     logEvent(Q_FUNC_INFO, "END", Debug);
 }
 
@@ -5509,6 +6058,14 @@ void MainWindow::defineStationCallsign()
     }
     dxClusterWidget->setMyQRZ(stationCallsign);
     adifLoTWExportWidget->setDefaultStationCallsign(stationCallsign);
+    // The station callsign also decides what the "My call" spotter filter of
+    // the DX Assistant considers ours, and it changes with the log in use.
+    if (dxAssistantEngine != nullptr)
+    {
+        dxAssistantEngine->setUserCallsign(stationCallsign);
+        if (dxClusterAssistant != nullptr)
+            dxClusterAssistant->applyViewFilters();
+    }
 
     logEvent(Q_FUNC_INFO, "END", Debug);
        //qDebug() << Q_FUNC_INFO << ": " << stationCallsign << " - END" ;
@@ -5521,6 +6078,7 @@ void MainWindow::slotSetPropModeFromSat(const QString &_p, bool _keep)
 
     othersTabWidget->setPropMode(_p, _keep);
     QSOTabWidget->setPropModeFromSat(_p);
+    checkNewGrid();
     logEvent(Q_FUNC_INFO, "END", Debug);
     //int indexC = propModeComboBox->findText(" - " + _p + " - ", Qt::MatchContains);
     //propModeComboBox->setCurrentIndex(indexC);
@@ -5534,6 +6092,7 @@ void MainWindow::slotSetPropModeFromOther(const QString &_p)
          //qDebug() << Q_FUNC_INFO << ": Is NOT SAT propagation mode";
         satTabWidget->setNoSat();
     }
+    checkNewGrid();
 }
 
 void MainWindow::clearIfNotCompleted()
@@ -5687,7 +6246,16 @@ void MainWindow::slotFreqTXChanged(const Frequency  _fr)
     }
 
     if (!changingBand)
+    {
+        // setBand() can re-enter slotBandChanged() synchronously (directly, or via the
+        // satellite tab's band combos). At that point txFreqSpinBox may still hold the
+        // frequency from before this edit, so slotBandChanged must not use it to decide
+        // whether to reset the TX frequency: the correct value is the one being applied
+        // a few lines below, via setTXFreq(_fr).
+        freqDrivenBandChange = true;
         mainQSOEntryWidget->setBand(dataProxy->getBandNameFromFreq(_fr));
+        freqDrivenBandChange = false;
+    }
 
     //qDebug() << Q_FUNC_INFO << " - 10";
     QSOTabWidget->setTXFreq (_fr);
@@ -5749,7 +6317,7 @@ void MainWindow::populateFormFromUDPQso(const QSO &_qso, const QDateTime &_arriv
     // QRZ only overwrites empty fields (see slotElogQRZCOMFoundData), so setting
     // name/comment/RST here preserves values that FreeDV already provided.
     if (!_qso.getComment().isEmpty())
-        commentTabWidget->setData(_qso.getComment());
+        QSOTabWidget->setComment(_qso.getComment());
     if (!_qso.getName().isEmpty())
         QSOTabWidget->setName(_qso.getName());
     if (!_qso.getRSTTX().isEmpty())
@@ -6015,6 +6583,11 @@ void MainWindow::slotWSJXstatusFromUDPServer(const int _type, const QString &_dx
 
             myDataTabWidget->setStationCallsign(_de_call.toUpper());
 
+            // The station is now shown in the UI: check it against the DX
+            // Assistant, exactly as KLog does with the DXCluster spots.
+            checkWSJTXSpotWithDXAssistant(_dxcall, _freq, _mode, _de_call,
+                                          "WSJT-X", QDateTime::currentDateTimeUtc());
+
      //TODO: Check what to do with _de_call -> Check if _de_call == station callsign and update if needed.
      //TODO: Check what to do with _de_grid -> Check if _de_grid == My Grid and update if needed.
      //TODO: Check what to do with _submode.
@@ -6042,6 +6615,7 @@ void MainWindow::addNewValidMode(const QString &_mode)
     readActiveModes (_newM);
     mainQSOEntryWidget->setModes(modes);
     mapWindow->setModes(modes);
+    logWindow->setActiveModes(modes);
 
     logEvent(Q_FUNC_INFO, "END", Debug);
         //qDebug() << "MainWindow::addNewValidMode: END"  ;
@@ -6319,7 +6893,7 @@ void MainWindow::backupCurrentQSO()
     backupQSO->setManualMode (mainQSOEntryWidget->getManualMode());
     backupQSO->setLogId (currentLog);
 
-    backupQSO->setKeepComment (commentTabWidget->getKeep ());
+    backupQSO->setKeepComment (QSOTabWidget->getKeepComment ());
     backupQSO->setKeepOthers (othersTabWidget->getKeep ());
     backupQSO->setKeepMyData (myDataTabWidget->getKeep ());
     backupQSO->setKeepSatTab (satTabWidget->getKeep ());
@@ -6388,9 +6962,8 @@ void MainWindow::restoreCurrentQSO(const bool restoreConfig)
     eQSLTabWidget->setQRZCOMStatus (backupQSO->getQRZCOMStatus ());
     eQSLTabWidget->setQRZCOMDate (backupQSO->getQRZCOMDate ());
 
-    // MainWindowInputComment
-    commentTabWidget->setData (backupQSO->getComment ());
-    commentTabWidget->setKeep (backupQSO->getKeepComment ());
+    QSOTabWidget->setComment (backupQSO->getComment ());
+    QSOTabWidget->setKeepComment (backupQSO->getKeepComment ());
 
     // MainWindowInputOthers
 
@@ -6553,6 +7126,13 @@ bool MainWindow::loadSettings()
     lotwSentDefault = settings.value("LoTWSentDefault", "Q").toString();
     settings.endGroup ();
 
+    settings.beginGroup ("DXAssistant");
+    dxAssistantEnabled = settings.value("enabled", false).toBool();
+    clubLogMostWantedEnabled = settings.value("clublogMostWantedEnabled", false).toBool();
+    dxAssistantSourceDXCluster = settings.value("sourceDXCluster", true).toBool();
+    dxAssistantSourceWSJTX = settings.value("sourceWSJTX", true).toBool();
+    settings.endGroup ();
+
     eQSLTabWidget->loadSettings();
 
       //qDebug() << Q_FUNC_INFO << " - 30 - modes";
@@ -6630,7 +7210,7 @@ bool MainWindow::loadSettings()
     sendQSLWhenRec = (settings.value ("SendQSLWhenRec", true).toBool ());
     manageDxMarathon = (settings.value ("ManageDXMarathon", false).toBool ());
     awardsWidget->setManageDXMarathon (manageDxMarathon);
-    manageMode = (settings.value ("IncludeModeForNeeded", false).toBool ());
+    manageMode = (settings.value ("IncludeModeForNeeded", true).toBool ());
     awardsWidget->setIncludeModeForNeeded (manageMode);
     searchWidget->setShowCallInSearch(settings.value ("ShowCallsignInSearch", true).toBool ());
     checkNewVersions = settings.value ("CheckNewVersions", true).toBool ();
@@ -6704,7 +7284,7 @@ bool MainWindow::loadSettings()
 
     UDPLogServer->loadSettings ();
     settings.beginGroup ("UDPServer");
-    UDPServerStart = settings.value ("UDPServer", false).toBool ();
+    UDPServerStart = settings.value ("UDPServer", true).toBool ();
       //qDebug() << Q_FUNC_INFO << "UDPServer = " << util->boolToQString (UDPServerStart);
     //UDPLogServer->setNetworkInterface(settings.value ("UDPNetworkInterface").toString ());
     //UDPLogServer->setPort(settings.value ("UDPServerPort", 2237).toInt ());

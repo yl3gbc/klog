@@ -74,10 +74,11 @@ set(KLOG_SOURCES
    charts/statssentconfirmedpiechartwidget.cpp
    charts/statsworkedconfirmedpiechartwidget.cpp
    charts/statsworkedsentpiechartwidget.cpp
+   dxcluster/clublogmostwanted.cpp
+   dxcluster/dxassistantengine.cpp
    dxcluster/dxclusterassistant.cpp
    dxcluster/dxcluster.cpp
    dxcluster/dxspot.cpp
-   inputwidgets/mainwindowinputcomment.cpp
    inputwidgets/mainwindowinputeqsl.cpp
    inputwidgets/mainwindowinputothers.cpp
    inputwidgets/mainwindowinputqsl.cpp
@@ -176,10 +177,11 @@ set(KLOG_HEADERS
    charts/statssentconfirmedpiechartwidget.h
    charts/statsworkedconfirmedpiechartwidget.h
    charts/statsworkedsentpiechartwidget.h
+   dxcluster/clublogmostwanted.h
+   dxcluster/dxassistantengine.h
    dxcluster/dxclusterassistant.h
    dxcluster/dxcluster.h
    dxcluster/dxspot.h
-   inputwidgets/mainwindowinputcomment.h
    inputwidgets/mainwindowinputeqsl.h
    inputwidgets/mainwindowinputothers.h
    inputwidgets/mainwindowinputqsl.h
@@ -369,8 +371,12 @@ endif()
 if(APPLE)
     install(TARGETS klog BUNDLE DESTINATION .)
     set_source_files_properties(${KLOG_DOC} PROPERTIES MACOSX_PACKAGE_LOCATION Resources)
-    set_source_files_properties(${QM_FILES} PROPERTIES MACOSX_PACKAGE_LOCATION Resources/translations)
-    target_sources(klog PRIVATE ${QM_FILES})
+    # The .qm files travel inside the bundle, in Contents/Resources/translations,
+    # which is where Utilities::getTranslationSearchPaths() looks for them.
+    if(QM_FILES)
+        set_source_files_properties(${QM_FILES} PROPERTIES MACOSX_PACKAGE_LOCATION Resources/translations)
+        target_sources(klog PRIVATE ${QM_FILES})
+    endif()
     set_target_properties(klog PROPERTIES
            # OUTPUT_NAME controls the .app bundle name visible in the DMG and Finder.
            # Without this the bundle inherits the target name "klog" (lowercase).
@@ -379,7 +385,7 @@ if(APPLE)
            MACOSX_BUNDLE_ICON_FILE               klog.icns
            MACOSX_BUNDLE_BUNDLE_VERSION          "${APP_PKGVERSION}"
            MACOSX_BUNDLE_SHORT_VERSION_STRING    "${APP_PKGVERSION}"
-           MACOSX_BUNDLE_GUI_IDENTIFIER          "es.ea4k.klog"
+           MACOSX_BUNDLE_GUI_IDENTIFIER          "io.github.ea4k.klog"
        )
     set_source_files_properties(klog.icns PROPERTIES MACOSX_PACKAGE_LOCATION Resources)
     target_sources(klog PRIVATE klog.icns)
@@ -392,16 +398,20 @@ elseif(WIN32)
        RUNTIME DESTINATION .
    )
    install(FILES ${KLOG_DOC} DESTINATION .)
-   install(FILES ${QM_FILES} DESTINATION translations)
+   # Guarded like the Linux branch: without LinguistTools QM_FILES is empty and
+   # install(FILES) with no file is a configuration error.
+   if(QM_FILES)
+       install(FILES ${QM_FILES} DESTINATION translations)
+   endif()
 else()
    # =========================================================================
     # Linux / Unix install — FHS + Debian Policy compliant
     # =========================================================================
 
     # freedesktop integration files — only defined and used on Linux
-    set(KLOG_DESKTOP  klog.desktop)
+    set(KLOG_DESKTOP  io.github.ea4k.klog.desktop)
     set(KLOG_ICON     img/klog_256x256.png)
-    set(KLOG_METAINFO klog.metainfo.xml)
+    #set(KLOG_METAINFO io.github.ea4k.klog.metainfo.xml)
 
     # Binary: /usr/bin/klog
     install(TARGETS klog
@@ -452,9 +462,9 @@ else()
     # AppStream metainfo: /usr/share/metainfo/klog.metainfo.xml
     # Required to appear in GNOME Software, KDE Discover, and future Debian
     # software catalogs. Debian Package Tracker warning: no-metainfo (active).
-    install(FILES ${KLOG_METAINFO}
-        DESTINATION ${CMAKE_INSTALL_DATADIR}/metainfo
-    )
+    #install(FILES ${KLOG_METAINFO}
+    #    DESTINATION ${CMAKE_INSTALL_DATADIR}/metainfo
+    #)
 endif()
 
 # Other platform-specific stuff (icons, etc)
@@ -463,3 +473,17 @@ if(WIN32)
 elseif(APPLE)
     # Set MacOS bundle properties if any
 endif()
+
+# Get today's date for the release entry
+string(TIMESTAMP KLOG_BUILD_DATE "%Y-%m-%d")
+
+# Generate metainfo from template
+configure_file(
+    io.github.ea4k.klog.metainfo.xml.in
+    io.github.ea4k.klog.metainfo.xml
+    @ONLY
+)
+
+# Install the generated file
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/io.github.ea4k.klog.metainfo.xml
+        DESTINATION ${CMAKE_INSTALL_DATADIR}/metainfo)
