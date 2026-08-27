@@ -34,6 +34,13 @@ static void forceLightPalette(QWidget *w)
 static const char *SETT_OPEN_LAST   = "profiles/openLastOnStart";
 static const char *SETT_LAST_PROFILE= "profiles/lastProfileId";
 
+#include <QDir>
+// Tas pats ini fails, ko lieto KLog (Utilities::getCfgFile ekvivalents)
+static QString klogngCfgFile()
+{
+    return QDir::homePath() + QStringLiteral("/.klogng/klogrc");
+}
+
 StartProfileDialog::StartProfileDialog(ProfileManager *pm_, QWidget *parent)
     : QDialog(parent), pm(pm_)
 {
@@ -67,7 +74,7 @@ StartProfileDialog::StartProfileDialog(ProfileManager *pm_, QWidget *parent)
     connect(cancelBtn, &QPushButton::clicked, this, &QDialog::reject);
 
     openLastCheck = new QCheckBox(tr("Nakamreiz atvert so profilu automatiski"), this);
-    QSettings sett;
+    QSettings sett(klogngCfgFile(), QSettings::IniFormat);
     openLastCheck->setChecked(sett.value(QLatin1String(SETT_OPEN_LAST), false).toBool());
 
     auto *btnCol = new QVBoxLayout;
@@ -123,7 +130,7 @@ void StartProfileDialog::openSelected()
     const int id = currentRowProfileId();
     if (id < 0) return;
     selectedId = id;
-    QSettings sett;
+    QSettings sett(klogngCfgFile(), QSettings::IniFormat);
     sett.setValue(QLatin1String(SETT_OPEN_LAST), openLastCheck->isChecked());
     sett.setValue(QLatin1String(SETT_LAST_PROFILE), id);
     accept();
@@ -238,7 +245,7 @@ int StartProfileDialog::chooseProfileOnStartup(ProfileManager *pm, QWidget *pare
     lp.setColor(QPalette::PlaceholderText, QColor(0x80,0x80,0x80));
     qApp->setPalette(lp);
 
-    QSettings sett;
+    QSettings sett(klogngCfgFile(), QSettings::IniFormat);
     if (sett.value(QLatin1String(SETT_OPEN_LAST), false).toBool()) {
         const int last = sett.value(QLatin1String(SETT_LAST_PROFILE), -1).toInt();
         if (last > 0 && pm->getProfile(last).id == last)
@@ -246,8 +253,15 @@ int StartProfileDialog::chooseProfileOnStartup(ProfileManager *pm, QWidget *pare
             const int ln = lognumberForProfile(pm, last);
             if (ln > 0)
             {
-                QSettings s2;
+                QSettings s2(klogngCfgFile(), QSettings::IniFormat);
                 s2.setValue(QStringLiteral("SelectedLog"), ln);
+                const Profile ap = pm->getProfile(last);
+                if (!ap.callsign.isEmpty())
+                    s2.setValue(QStringLiteral("Callsign"), ap.callsign);
+                if (!ap.gridsquare.isEmpty())
+                    s2.setValue(QStringLiteral("StationLocator"), ap.gridsquare);
+                if (!ap.operatorName.isEmpty())
+                    s2.setValue(QStringLiteral("Operators"), ap.operatorName);
                 s2.sync();
             }
             return last;
@@ -259,8 +273,15 @@ int StartProfileDialog::chooseProfileOnStartup(ProfileManager *pm, QWidget *pare
         const int ln = lognumberForProfile(pm, dlg.selectedProfileId());
         if (ln > 0)
         {
-            QSettings s2;
+            QSettings s2(klogngCfgFile(), QSettings::IniFormat);
             s2.setValue(QStringLiteral("SelectedLog"), ln);
+            const Profile ap = pm->getProfile(dlg.selectedProfileId());
+            if (!ap.callsign.isEmpty())
+                s2.setValue(QStringLiteral("Callsign"), ap.callsign);
+            if (!ap.gridsquare.isEmpty())
+                s2.setValue(QStringLiteral("StationLocator"), ap.gridsquare);
+            if (!ap.operatorName.isEmpty())
+                s2.setValue(QStringLiteral("Operators"), ap.operatorName);
             s2.sync();
         }
         return dlg.selectedProfileId();
