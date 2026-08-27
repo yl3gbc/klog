@@ -15,6 +15,13 @@ struct Profile {
     int     ituZone = 0;
     int     dxcc    = 0;
     QString comment;
+    // KLog My Data lauki
+    QString name;
+    QString address1, address2, address3, address4;
+    QString city, zipCode, province, country;
+    QString rig1, rig2, rig3;
+    QString antenna1, antenna2, antenna3;
+    double  power = 0.0;
     int     qsoCount = 0;
 };
 
@@ -45,6 +52,9 @@ public:
     bool deleteVariant(int variantId);
 
     int  qsoCount(int profileId) const;
+
+    // Nolasa KLog [UserData] iestatijumus no klogrc un saglaba tos profila
+    bool saveSettingsToProfile(int profileId, const QString &cfgFile);
 
 private:
     bool exec(QSqlQuery &q, const char *ctx) const;

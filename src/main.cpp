@@ -368,7 +368,7 @@ int main(int argc, char *argv[])
         qWarning() << "KLogNG profili: " << profileErr;
     }
     splash.hide();
-    const int activeProfileId = StartProfileDialog::chooseProfileOnStartup(&profileManager);
+    const int activeProfileId = StartProfileDialog::chooseProfileOnStartup(&profileManager, &world);
     if (activeProfileId < 0)
         return 0;
     qInfo() << "KLogNG aktivais profils:" << activeProfileId;

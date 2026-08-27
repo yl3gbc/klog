@@ -1,4 +1,5 @@
 #include "startprofiledialog.h"
+#include "world.h"
 
 #include <QTableWidget>
 #include <QHeaderView>
@@ -41,8 +42,8 @@ static QString klogngCfgFile()
     return QDir::homePath() + QStringLiteral("/.klogng/klogrc");
 }
 
-StartProfileDialog::StartProfileDialog(ProfileManager *pm_, QWidget *parent)
-    : QDialog(parent), pm(pm_)
+StartProfileDialog::StartProfileDialog(ProfileManager *pm_, World *world_, QWidget *parent)
+    : QDialog(parent), pm(pm_), world(world_)
 {
     setStyle(QStyleFactory::create(QStringLiteral("Fusion")));
     forceLightPalette(this);
@@ -136,36 +137,135 @@ void StartProfileDialog::openSelected()
     accept();
 }
 
-static bool editProfileDialog(QWidget *parent, Profile &p, const QString &title)
+#include <QTabWidget>
+#include <QSpinBox>
+#include <QDoubleSpinBox>
+
+static bool editProfileDialog(QWidget *parent, Profile &p, const QString &title, World *world)
+
 {
-    QDialog d(parent);
-    d.setWindowTitle(title);
-    QFormLayout form(&d);
-    QLineEdit call(p.callsign), name(p.operatorName),
-              grid(p.gridsquare), comment(p.comment);
-    form.addRow(QObject::tr("Izsaukuma zime:"), &call);
-    form.addRow(QObject::tr("Operatora vards:"), &name);
-    form.addRow(QObject::tr("Lokators:"), &grid);
-    form.addRow(QObject::tr("Piezime:"), &comment);
-    QDialogButtonBox box(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
-    form.addRow(&box);
-    QObject::connect(&box, &QDialogButtonBox::accepted, &d, &QDialog::accept);
-    QObject::connect(&box, &QDialogButtonBox::rejected, &d, &QDialog::reject);
-    if (d.exec() != QDialog::Accepted)
-        return false;
-    if (call.text().trimmed().isEmpty())
-        return false;
+    QDialog dlg(parent);
+    dlg.setWindowTitle(title);
+    dlg.resize(520, 460);
+
+    auto *callP = new QLineEdit(p.callsign, &dlg);
+    auto *operP = new QLineEdit(p.operatorName, &dlg);
+    auto *gridP = new QLineEdit(p.gridsquare, &dlg);
+    auto *qthP = new QLineEdit(p.qth, &dlg);
+    auto *commentP = new QLineEdit(p.comment, &dlg);
+    auto *nameP = new QLineEdit(p.name, &dlg);
+    QLineEdit &call = *callP, &oper = *operP, &grid = *gridP,
+              &qth = *qthP, &comment = *commentP, &name = *nameP;
+    auto *cqzP = new QSpinBox(&dlg); auto *ituzP = new QSpinBox(&dlg);
+    QSpinBox &cqz = *cqzP, &ituz = *ituzP;
+    cqz.setRange(0, 40); cqz.setValue(p.cqZone);
+    ituz.setRange(0, 90); ituz.setValue(p.ituZone);
+
+    auto *a1P=new QLineEdit(p.address1,&dlg); auto *a2P=new QLineEdit(p.address2,&dlg);
+    auto *a3P=new QLineEdit(p.address3,&dlg); auto *a4P=new QLineEdit(p.address4,&dlg);
+    auto *cityP=new QLineEdit(p.city,&dlg); auto *zipP=new QLineEdit(p.zipCode,&dlg);
+    auto *provP=new QLineEdit(p.province,&dlg); auto *countryP=new QLineEdit(p.country,&dlg);
+    QLineEdit &a1=*a1P,&a2=*a2P,&a3=*a3P,&a4=*a4P,&city=*cityP,&zip=*zipP,&prov=*provP,&country=*countryP;
+
+    auto *r1P=new QLineEdit(p.rig1,&dlg); auto *r2P=new QLineEdit(p.rig2,&dlg);
+    auto *r3P=new QLineEdit(p.rig3,&dlg); auto *n1P=new QLineEdit(p.antenna1,&dlg);
+    auto *n2P=new QLineEdit(p.antenna2,&dlg); auto *n3P=new QLineEdit(p.antenna3,&dlg);
+    QLineEdit &r1=*r1P,&r2=*r2P,&r3=*r3P,&n1=*n1P,&n2=*n2P,&n3=*n3P;
+    auto *pwrP = new QDoubleSpinBox(&dlg); QDoubleSpinBox &pwr = *pwrP;
+    pwr.setRange(0, 10000); pwr.setDecimals(1); pwr.setSuffix(" W"); pwr.setValue(p.power);
+
+    // Automatiska zonu/DXCC aizpilde pec zimes.
+    // /MM un /AM: nav DXCC, neko neaizpildam (kustigi objekti).
+    auto fillFromCallsign = [&call, &cqz, &ituz, &country, world]() {
+            if (!world) return;
+            const QString c = call.text().trimmed().toUpper();
+            if (c.isEmpty()) return;
+            if (c.endsWith(QStringLiteral("/MM")) || c.endsWith(QStringLiteral("/AM")))
+                return;                       // juras/gaisa stacija - bez DXCC
+            const int cq  = world->getQRZCqz(c);
+            const int itu = world->getQRZItuz(c);
+            const int dx  = world->getQRZARRLId(c);
+            if (dx < 0) return;               // prefikss nav atpazits
+            if (cqz.value() == 0 && cq > 0)   cqz.setValue(cq);
+            if (ituz.value() == 0 && itu > 0) ituz.setValue(itu);
+            if (country.text().trimmed().isEmpty())
+                country.setText(world->getQRZEntityName(c));
+    };
+    QObject::connect(&call, &QLineEdit::editingFinished, fillFromCallsign);
+    fillFromCallsign();   // uzreiz ari atverot dialogu (tuksiem laukiem)
+
+    // Automatiska zonu/DXCC aizpilde pec zimes.
+    // /MM un /AM: nav DXCC, neko neaizpildam (kustigi objekti).
+
+
+    auto *tabsP = new QTabWidget(&dlg); QTabWidget &tabs = *tabsP;
+
+    auto *wStationP = new QWidget(&dlg); QWidget &wStation = *wStationP; QFormLayout fs(&wStation);
+    fs.addRow(QObject::tr("Izsaukuma zime:"), &call);
+    fs.addRow(QObject::tr("Operatora vards:"), &name);
+    fs.addRow(QObject::tr("Operatori (ADIF):"), &oper);
+    fs.addRow(QObject::tr("Lokators:"), &grid);
+    fs.addRow(QObject::tr("QTH:"), &qth);
+    fs.addRow(QObject::tr("CQ zona:"), &cqz);
+    fs.addRow(QObject::tr("ITU zona:"), &ituz);
+    fs.addRow(QObject::tr("Piezime:"), &comment);
+    tabs.addTab(&wStation, QObject::tr("Stacija"));
+
+    auto *wAddrP = new QWidget(&dlg); QWidget &wAddr = *wAddrP; QFormLayout fa(&wAddr);
+    fa.addRow(QObject::tr("Adrese 1:"), &a1);
+    fa.addRow(QObject::tr("Adrese 2:"), &a2);
+    fa.addRow(QObject::tr("Adrese 3:"), &a3);
+    fa.addRow(QObject::tr("Adrese 4:"), &a4);
+    fa.addRow(QObject::tr("Pilseta:"), &city);
+    fa.addRow(QObject::tr("Pasta indekss:"), &zip);
+    fa.addRow(QObject::tr("Novads/State:"), &prov);
+    fa.addRow(QObject::tr("Valsts:"), &country);
+    tabs.addTab(&wAddr, QObject::tr("Adrese"));
+
+    auto *wRigP = new QWidget(&dlg); QWidget &wRig = *wRigP; QFormLayout fr(&wRig);
+    fr.addRow(QObject::tr("Transiveris 1:"), &r1);
+    fr.addRow(QObject::tr("Transiveris 2:"), &r2);
+    fr.addRow(QObject::tr("Transiveris 3:"), &r3);
+    fr.addRow(QObject::tr("Antena 1:"), &n1);
+    fr.addRow(QObject::tr("Antena 2:"), &n2);
+    fr.addRow(QObject::tr("Antena 3:"), &n3);
+    fr.addRow(QObject::tr("Jauda:"), &pwr);
+    tabs.addTab(&wRig, QObject::tr("Aparatura"));
+
+    auto *boxP = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, &dlg);
+    QDialogButtonBox &box = *boxP;
+    QObject::connect(&box, &QDialogButtonBox::accepted, &dlg, &QDialog::accept);
+    QObject::connect(&box, &QDialogButtonBox::rejected, &dlg, &QDialog::reject);
+
+    QVBoxLayout root(&dlg);
+    root.addWidget(&tabs);
+    root.addWidget(&box);
+
+    if (dlg.exec() != QDialog::Accepted) return false;
+    if (call.text().trimmed().isEmpty()) return false;
+
     p.callsign = call.text().trimmed().toUpper();
-    p.operatorName = name.text();
+    p.operatorName = oper.text();
+    p.name = name.text();
     p.gridsquare = grid.text().trimmed().toUpper();
+    p.qth = qth.text();
+    p.cqZone = cqz.value();
+    p.ituZone = ituz.value();
     p.comment = comment.text();
+    p.address1 = a1.text();  p.address2 = a2.text();
+    p.address3 = a3.text();  p.address4 = a4.text();
+    p.city = city.text();    p.zipCode = zip.text();
+    p.province = prov.text(); p.country = country.text();
+    p.rig1 = r1.text();  p.rig2 = r2.text();  p.rig3 = r3.text();
+    p.antenna1 = n1.text(); p.antenna2 = n2.text(); p.antenna3 = n3.text();
+    p.power = pwr.value();
     return true;
 }
 
 void StartProfileDialog::newProfile()
 {
     Profile p;
-    if (!editProfileDialog(this, p, tr("Jauns profils")))
+    if (!editProfileDialog(this, p, tr("Jauns profils"), world))
         return;
     if (pm->createProfile(p) < 0)
         QMessageBox::warning(this, tr("Kluda"),
@@ -178,7 +278,7 @@ void StartProfileDialog::editSelected()
     const int id = currentRowProfileId();
     if (id < 0) return;
     Profile p = pm->getProfile(id);
-    if (!editProfileDialog(this, p, tr("Rediget profilu %1").arg(p.callsign)))
+    if (!editProfileDialog(this, p, tr("Rediget profilu %1").arg(p.callsign), world))
         return;
     pm->updateProfile(p);
     reload();
@@ -205,6 +305,34 @@ void StartProfileDialog::deleteSelected()
 #include <QVariant>
 #include <QDate>
 
+// Uzstada visu profila datu komplektu KLog konfigura (UserData grupa)
+static void applyProfileToSettings(QSettings &st, const Profile &ap)
+{
+    st.beginGroup(QStringLiteral("UserData"));
+    if (!ap.callsign.isEmpty())     st.setValue(QStringLiteral("Callsign"), ap.callsign);
+    if (!ap.gridsquare.isEmpty())   st.setValue(QStringLiteral("StationLocator"), ap.gridsquare);
+    if (!ap.operatorName.isEmpty()) st.setValue(QStringLiteral("Operators"), ap.operatorName);
+    if (!ap.name.isEmpty())         st.setValue(QStringLiteral("Name"), ap.name);
+    if (ap.cqZone > 0)              st.setValue(QStringLiteral("CQz"), ap.cqZone);
+    if (ap.ituZone > 0)             st.setValue(QStringLiteral("ITUz"), ap.ituZone);
+    if (!ap.address1.isEmpty())     st.setValue(QStringLiteral("Address1"), ap.address1);
+    if (!ap.address2.isEmpty())     st.setValue(QStringLiteral("Address2"), ap.address2);
+    if (!ap.address3.isEmpty())     st.setValue(QStringLiteral("Address3"), ap.address3);
+    if (!ap.address4.isEmpty())     st.setValue(QStringLiteral("Address4"), ap.address4);
+    if (!ap.city.isEmpty())         st.setValue(QStringLiteral("City"), ap.city);
+    if (!ap.zipCode.isEmpty())      st.setValue(QStringLiteral("ZipCode"), ap.zipCode);
+    if (!ap.province.isEmpty())     st.setValue(QStringLiteral("ProvinceState"), ap.province);
+    if (!ap.country.isEmpty())      st.setValue(QStringLiteral("Country"), ap.country);
+    if (!ap.rig1.isEmpty())         st.setValue(QStringLiteral("Rig1"), ap.rig1);
+    if (!ap.rig2.isEmpty())         st.setValue(QStringLiteral("Rig2"), ap.rig2);
+    if (!ap.rig3.isEmpty())         st.setValue(QStringLiteral("Rig3"), ap.rig3);
+    if (!ap.antenna1.isEmpty())     st.setValue(QStringLiteral("Antenna1"), ap.antenna1);
+    if (!ap.antenna2.isEmpty())     st.setValue(QStringLiteral("Antenna2"), ap.antenna2);
+    if (!ap.antenna3.isEmpty())     st.setValue(QStringLiteral("Antenna3"), ap.antenna3);
+    if (ap.power > 0)               st.setValue(QStringLiteral("Power"), ap.power);
+    st.endGroup();
+}
+
 static int lognumberForProfile(ProfileManager *pm, int profileId)
 {
     const Profile p = pm->getProfile(profileId);
@@ -227,7 +355,7 @@ static int lognumberForProfile(ProfileManager *pm, int profileId)
     return -1;
 }
 
-int StartProfileDialog::chooseProfileOnStartup(ProfileManager *pm, QWidget *parent)
+int StartProfileDialog::chooseProfileOnStartup(ProfileManager *pm, World *world, QWidget *parent)
 {
     qApp->setStyle(QStyleFactory::create(QStringLiteral("Fusion")));
     QPalette lp;
@@ -256,20 +384,13 @@ int StartProfileDialog::chooseProfileOnStartup(ProfileManager *pm, QWidget *pare
                 QSettings s2(klogngCfgFile(), QSettings::IniFormat);
                 s2.setValue(QStringLiteral("SelectedLog"), ln);
                 const Profile ap = pm->getProfile(last);
-                s2.beginGroup(QStringLiteral("UserData"));
-                if (!ap.callsign.isEmpty())
-                    s2.setValue(QStringLiteral("Callsign"), ap.callsign);
-                if (!ap.gridsquare.isEmpty())
-                    s2.setValue(QStringLiteral("StationLocator"), ap.gridsquare);
-                if (!ap.operatorName.isEmpty())
-                    s2.setValue(QStringLiteral("Operators"), ap.operatorName);
-                s2.endGroup();
+                applyProfileToSettings(s2, ap);
                 s2.sync();
             }
             return last;
         }
     }
-    StartProfileDialog dlg(pm, parent);
+    StartProfileDialog dlg(pm, world, parent);
     if (dlg.exec() == QDialog::Accepted)
     {
         const int ln = lognumberForProfile(pm, dlg.selectedProfileId());
@@ -278,14 +399,7 @@ int StartProfileDialog::chooseProfileOnStartup(ProfileManager *pm, QWidget *pare
             QSettings s2(klogngCfgFile(), QSettings::IniFormat);
             s2.setValue(QStringLiteral("SelectedLog"), ln);
             const Profile ap = pm->getProfile(dlg.selectedProfileId());
-            s2.beginGroup(QStringLiteral("UserData"));
-            if (!ap.callsign.isEmpty())
-                s2.setValue(QStringLiteral("Callsign"), ap.callsign);
-            if (!ap.gridsquare.isEmpty())
-                s2.setValue(QStringLiteral("StationLocator"), ap.gridsquare);
-            if (!ap.operatorName.isEmpty())
-                s2.setValue(QStringLiteral("Operators"), ap.operatorName);
-            s2.endGroup();
+            applyProfileToSettings(s2, ap);
             s2.sync();
         }
         return dlg.selectedProfileId();

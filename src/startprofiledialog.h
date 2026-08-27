@@ -5,6 +5,7 @@
 #include "profilemanager.h"
 
 class QTableWidget;
+class World;
 class QCheckBox;
 class QPushButton;
 
@@ -12,11 +13,11 @@ class StartProfileDialog : public QDialog
 {
     Q_OBJECT
 public:
-    explicit StartProfileDialog(ProfileManager *pm, QWidget *parent = nullptr);
+    explicit StartProfileDialog(ProfileManager *pm, World *world = nullptr, QWidget *parent = nullptr);
 
     int  selectedProfileId() const { return selectedId; }
 
-    static int chooseProfileOnStartup(ProfileManager *pm, QWidget *parent = nullptr);
+    static int chooseProfileOnStartup(ProfileManager *pm, World *world = nullptr, QWidget *parent = nullptr);
 
 private slots:
     void openSelected();
@@ -29,6 +30,7 @@ private:
     int  currentRowProfileId() const;
 
     ProfileManager *pm;
+    World          *world = nullptr;
     QTableWidget   *table;
     QCheckBox      *openLastCheck;
     QPushButton    *openBtn;

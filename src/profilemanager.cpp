@@ -4,6 +4,7 @@
 #include <QVariant>
 #include <QObject>
 #include <QDebug>
+#include <QSettings>
 
 bool ProfileManager::exec(QSqlQuery &q, const char *ctx) const
 {
@@ -45,6 +46,29 @@ bool ProfileManager::ensureSchemaAndMigrate(QString *errorOut)
         " note VARCHAR,"
         " UNIQUE (profile_id, station_callsign))"));
     if (!exec(q, "createVariants")) return false;
+
+    // Papildu KLog My Data lauki profila (idempotenti - kluda ja jau ir, to ignorejam)
+    const QStringList newCols = {
+        "name VARCHAR", "address1 VARCHAR", "address2 VARCHAR", "address3 VARCHAR",
+        "address4 VARCHAR", "city VARCHAR", "zip_code VARCHAR", "province VARCHAR",
+        "country VARCHAR", "rig1 VARCHAR", "rig2 VARCHAR", "rig3 VARCHAR",
+        "antenna1 VARCHAR", "antenna2 VARCHAR", "antenna3 VARCHAR", "power REAL"
+    };
+    {
+        QStringList have;
+        q.prepare(QStringLiteral("PRAGMA table_info(profiles)"));
+        if (exec(q, "profilesInfo"))
+            while (q.next()) have << q.value(1).toString();
+        for (const QString &def : newCols)
+        {
+            const QString col = def.section(' ', 0, 0);
+            if (!have.contains(col))
+            {
+                q.prepare(QStringLiteral("ALTER TABLE profiles ADD COLUMN ") + def);
+                exec(q, "addProfileCol");
+            }
+        }
+    }
 
     bool hasProfileCol = false;
     q.prepare(QStringLiteral("PRAGMA table_info(log)"));
@@ -155,7 +179,9 @@ Profile ProfileManager::getProfile(int id) const
     QSqlQuery q(QSqlDatabase::database());
     q.prepare(QStringLiteral(
         "SELECT profile_id, callsign, operator_name, gridsquare, qth,"
-        " cq_zone, itu_zone, dxcc, comment FROM profiles WHERE profile_id = :id"));
+        " cq_zone, itu_zone, dxcc, comment, name, address1, address2, address3,"
+        " address4, city, zip_code, province, country, rig1, rig2, rig3,"
+        " antenna1, antenna2, antenna3, power FROM profiles WHERE profile_id = :id"));
     q.bindValue(QStringLiteral(":id"), id);
     if (exec(q, "getProfile") && q.next()) {
         p.id = q.value(0).toInt();
@@ -167,6 +193,22 @@ Profile ProfileManager::getProfile(int id) const
         p.ituZone = q.value(6).toInt();
         p.dxcc = q.value(7).toInt();
         p.comment = q.value(8).toString();
+        p.name = q.value(9).toString();
+        p.address1 = q.value(10).toString();
+        p.address2 = q.value(11).toString();
+        p.address3 = q.value(12).toString();
+        p.address4 = q.value(13).toString();
+        p.city = q.value(14).toString();
+        p.zipCode = q.value(15).toString();
+        p.province = q.value(16).toString();
+        p.country = q.value(17).toString();
+        p.rig1 = q.value(18).toString();
+        p.rig2 = q.value(19).toString();
+        p.rig3 = q.value(20).toString();
+        p.antenna1 = q.value(21).toString();
+        p.antenna2 = q.value(22).toString();
+        p.antenna3 = q.value(23).toString();
+        p.power = q.value(24).toDouble();
     }
     return p;
 }
@@ -195,7 +237,11 @@ bool ProfileManager::updateProfile(const Profile &p)
     QSqlQuery q(QSqlDatabase::database());
     q.prepare(QStringLiteral(
         "UPDATE profiles SET callsign=:c, operator_name=:o, gridsquare=:g,"
-        " qth=:q, cq_zone=:cq, itu_zone=:itu, dxcc=:dx, comment=:cm "
+        " qth=:q, cq_zone=:cq, itu_zone=:itu, dxcc=:dx, comment=:cm,"
+        " name=:nm, address1=:a1, address2=:a2, address3=:a3, address4=:a4,"
+        " city=:ct, zip_code=:zp, province=:pv, country=:co,"
+        " rig1=:r1, rig2=:r2, rig3=:r3,"
+        " antenna1=:n1, antenna2=:n2, antenna3=:n3, power=:pw "
         "WHERE profile_id=:id"));
     q.bindValue(QStringLiteral(":c"),  p.callsign.trimmed().toUpper());
     q.bindValue(QStringLiteral(":o"),  p.operatorName);
@@ -205,6 +251,22 @@ bool ProfileManager::updateProfile(const Profile &p)
     q.bindValue(QStringLiteral(":itu"),p.ituZone);
     q.bindValue(QStringLiteral(":dx"), p.dxcc);
     q.bindValue(QStringLiteral(":cm"), p.comment);
+    q.bindValue(QStringLiteral(":nm"), p.name);
+    q.bindValue(QStringLiteral(":a1"), p.address1);
+    q.bindValue(QStringLiteral(":a2"), p.address2);
+    q.bindValue(QStringLiteral(":a3"), p.address3);
+    q.bindValue(QStringLiteral(":a4"), p.address4);
+    q.bindValue(QStringLiteral(":ct"), p.city);
+    q.bindValue(QStringLiteral(":zp"), p.zipCode);
+    q.bindValue(QStringLiteral(":pv"), p.province);
+    q.bindValue(QStringLiteral(":co"), p.country);
+    q.bindValue(QStringLiteral(":r1"), p.rig1);
+    q.bindValue(QStringLiteral(":r2"), p.rig2);
+    q.bindValue(QStringLiteral(":r3"), p.rig3);
+    q.bindValue(QStringLiteral(":n1"), p.antenna1);
+    q.bindValue(QStringLiteral(":n2"), p.antenna2);
+    q.bindValue(QStringLiteral(":n3"), p.antenna3);
+    q.bindValue(QStringLiteral(":pw"), p.power);
     q.bindValue(QStringLiteral(":id"), p.id);
     return exec(q, "updateProfile");
 }
@@ -285,4 +347,45 @@ bool ProfileManager::deleteVariant(int variantId)
     q.prepare(QStringLiteral("DELETE FROM profile_variants WHERE variant_id=:id"));
     q.bindValue(QStringLiteral(":id"), variantId);
     return exec(q, "deleteVariant");
+}
+
+
+bool ProfileManager::saveSettingsToProfile(int profileId, const QString &cfgFile)
+{
+    if (profileId < 0) return false;
+    Profile p = getProfile(profileId);
+    if (p.id < 0) return false;
+
+    QSettings st(cfgFile, QSettings::IniFormat);
+    st.beginGroup(QStringLiteral("UserData"));
+    const QString call = st.value(QStringLiteral("Callsign")).toString().trimmed().toUpper();
+    // zimi nemainam - tas ir profila identitate
+    if (!call.isEmpty() && call != p.callsign)
+    {
+        st.endGroup();
+        return false;   // Setup pusē nomainita zime - neparrakstam profilu
+    }
+    p.operatorName = st.value(QStringLiteral("Operators")).toString();
+    p.name         = st.value(QStringLiteral("Name")).toString();
+    p.gridsquare   = st.value(QStringLiteral("StationLocator")).toString();
+    p.cqZone       = st.value(QStringLiteral("CQz")).toInt();
+    p.ituZone      = st.value(QStringLiteral("ITUz")).toInt();
+    p.address1     = st.value(QStringLiteral("Address1")).toString();
+    p.address2     = st.value(QStringLiteral("Address2")).toString();
+    p.address3     = st.value(QStringLiteral("Address3")).toString();
+    p.address4     = st.value(QStringLiteral("Address4")).toString();
+    p.city         = st.value(QStringLiteral("City")).toString();
+    p.zipCode      = st.value(QStringLiteral("ZipCode")).toString();
+    p.province     = st.value(QStringLiteral("ProvinceState")).toString();
+    p.country      = st.value(QStringLiteral("Country")).toString();
+    p.rig1         = st.value(QStringLiteral("Rig1")).toString();
+    p.rig2         = st.value(QStringLiteral("Rig2")).toString();
+    p.rig3         = st.value(QStringLiteral("Rig3")).toString();
+    p.antenna1     = st.value(QStringLiteral("Antenna1")).toString();
+    p.antenna2     = st.value(QStringLiteral("Antenna2")).toString();
+    p.antenna3     = st.value(QStringLiteral("Antenna3")).toString();
+    p.power        = st.value(QStringLiteral("Power")).toDouble();
+    st.endGroup();
+
+    return updateProfile(p);
 }
