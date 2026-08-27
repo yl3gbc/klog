@@ -34,6 +34,12 @@ struct ProfileVariant {
     bool    dxccCounts = true;
 };
 
+struct ProfileClub {
+    int     profileId = -1;
+    QString club;        // isais nosaukums (SKCC, FISTS, AGB...)
+    QString memberNr;    // numurs var but ar burtiem (SKCC C/T/S limeni)
+};
+
 class ProfileManager
 {
 public:
@@ -55,6 +61,9 @@ public:
 
     // Nolasa KLog [UserData] iestatijumus no klogrc un saglaba tos profila
     bool saveSettingsToProfile(int profileId, const QString &cfgFile);
+
+    QList<ProfileClub> listClubs(int profileId) const;
+    bool setClubs(int profileId, const QList<ProfileClub> &clubs);
 
 private:
     bool exec(QSqlQuery &q, const char *ctx) const;

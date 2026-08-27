@@ -140,8 +140,11 @@ void StartProfileDialog::openSelected()
 #include <QTabWidget>
 #include <QSpinBox>
 #include <QDoubleSpinBox>
+#include <QTableWidget>
+#include <QPushButton>
+#include <QHeaderView>
 
-static bool editProfileDialog(QWidget *parent, Profile &p, const QString &title, World *world)
+static bool editProfileDialog(QWidget *parent, Profile &p, const QString &title, World *world, ProfileManager *pm)
 
 {
     QDialog dlg(parent);
@@ -232,6 +235,44 @@ static bool editProfileDialog(QWidget *parent, Profile &p, const QString &title,
     fr.addRow(QObject::tr("Jauda:"), &pwr);
     tabs.addTab(&wRig, QObject::tr("Aparatura"));
 
+    // --- Klubi ---
+    auto *wClub = new QWidget(&dlg);
+    auto *clubTable = new QTableWidget(wClub);
+    clubTable->setColumnCount(2);
+    clubTable->setHorizontalHeaderLabels({QObject::tr("Klubs"), QObject::tr("Biedra numurs")});
+    clubTable->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    clubTable->setSelectionBehavior(QAbstractItemView::SelectRows);
+    auto *addClub = new QPushButton(QObject::tr("Pievienot"), wClub);
+    auto *delClub = new QPushButton(QObject::tr("Nonemt"), wClub);
+    QObject::connect(addClub, &QPushButton::clicked, [clubTable]() {
+        const int r = clubTable->rowCount();
+        clubTable->insertRow(r);
+        clubTable->setItem(r, 0, new QTableWidgetItem());
+        clubTable->setItem(r, 1, new QTableWidgetItem());
+        clubTable->editItem(clubTable->item(r, 0));
+    });
+    QObject::connect(delClub, &QPushButton::clicked, [clubTable]() {
+        const int r = clubTable->currentRow();
+        if (r >= 0) clubTable->removeRow(r);
+    });
+    auto *clubBtns = new QHBoxLayout;
+    clubBtns->addWidget(addClub);
+    clubBtns->addWidget(delClub);
+    clubBtns->addStretch();
+    auto *clubLay = new QVBoxLayout(wClub);
+    clubLay->addWidget(clubTable, 1);
+    clubLay->addLayout(clubBtns);
+    if (pm && p.id > 0) {
+        const QList<ProfileClub> cl = pm->listClubs(p.id);
+        for (const ProfileClub &c : cl) {
+            const int r = clubTable->rowCount();
+            clubTable->insertRow(r);
+            clubTable->setItem(r, 0, new QTableWidgetItem(c.club));
+            clubTable->setItem(r, 1, new QTableWidgetItem(c.memberNr));
+        }
+    }
+    tabs.addTab(wClub, QObject::tr("Klubi"));
+
     auto *boxP = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, &dlg);
     QDialogButtonBox &box = *boxP;
     QObject::connect(&box, &QDialogButtonBox::accepted, &dlg, &QDialog::accept);
@@ -259,13 +300,25 @@ static bool editProfileDialog(QWidget *parent, Profile &p, const QString &title,
     p.rig1 = r1.text();  p.rig2 = r2.text();  p.rig3 = r3.text();
     p.antenna1 = n1.text(); p.antenna2 = n2.text(); p.antenna3 = n3.text();
     p.power = pwr.value();
+
+    if (pm && p.id > 0) {
+        QList<ProfileClub> cl;
+        for (int r = 0; r < clubTable->rowCount(); ++r) {
+            ProfileClub c;
+            c.profileId = p.id;
+            c.club     = clubTable->item(r,0) ? clubTable->item(r,0)->text() : QString();
+            c.memberNr = clubTable->item(r,1) ? clubTable->item(r,1)->text() : QString();
+            if (!c.club.trimmed().isEmpty()) cl.append(c);
+        }
+        pm->setClubs(p.id, cl);
+    }
     return true;
 }
 
 void StartProfileDialog::newProfile()
 {
     Profile p;
-    if (!editProfileDialog(this, p, tr("Jauns profils"), world))
+    if (!editProfileDialog(this, p, tr("Jauns profils"), world, pm))
         return;
     if (pm->createProfile(p) < 0)
         QMessageBox::warning(this, tr("Kluda"),
@@ -278,7 +331,7 @@ void StartProfileDialog::editSelected()
     const int id = currentRowProfileId();
     if (id < 0) return;
     Profile p = pm->getProfile(id);
-    if (!editProfileDialog(this, p, tr("Rediget profilu %1").arg(p.callsign), world))
+    if (!editProfileDialog(this, p, tr("Rediget profilu %1").arg(p.callsign), world, pm))
         return;
     pm->updateProfile(p);
     reload();

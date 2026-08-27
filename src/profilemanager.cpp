@@ -47,6 +47,14 @@ bool ProfileManager::ensureSchemaAndMigrate(QString *errorOut)
         " UNIQUE (profile_id, station_callsign))"));
     if (!exec(q, "createVariants")) return false;
 
+    q.prepare(QStringLiteral(
+        "CREATE TABLE IF NOT EXISTS profile_clubs ("
+        " profile_id INTEGER NOT NULL REFERENCES profiles(profile_id),"
+        " club VARCHAR(20) NOT NULL,"
+        " member_nr VARCHAR(20),"
+        " PRIMARY KEY (profile_id, club))"));
+    if (!exec(q, "createClubs")) return false;
+
     // Papildu KLog My Data lauki profila (idempotenti - kluda ja jau ir, to ignorejam)
     const QStringList newCols = {
         "name VARCHAR", "address1 VARCHAR", "address2 VARCHAR", "address3 VARCHAR",
@@ -388,4 +396,46 @@ bool ProfileManager::saveSettingsToProfile(int profileId, const QString &cfgFile
     st.endGroup();
 
     return updateProfile(p);
+}
+
+
+QList<ProfileClub> ProfileManager::listClubs(int profileId) const
+{
+    QList<ProfileClub> out;
+    QSqlQuery q(QSqlDatabase::database());
+    q.prepare(QStringLiteral(
+        "SELECT profile_id, club, member_nr FROM profile_clubs "
+        "WHERE profile_id=:id ORDER BY club"));
+    q.bindValue(QStringLiteral(":id"), profileId);
+    if (!exec(q, "listClubs")) return out;
+    while (q.next()) {
+        ProfileClub c;
+        c.profileId = q.value(0).toInt();
+        c.club      = q.value(1).toString();
+        c.memberNr  = q.value(2).toString();
+        out.append(c);
+    }
+    return out;
+}
+
+bool ProfileManager::setClubs(int profileId, const QList<ProfileClub> &clubs)
+{
+    QSqlDatabase db = QSqlDatabase::database();
+    db.transaction();
+    QSqlQuery q(db);
+    q.prepare(QStringLiteral("DELETE FROM profile_clubs WHERE profile_id=:id"));
+    q.bindValue(QStringLiteral(":id"), profileId);
+    if (!exec(q, "clearClubs")) { db.rollback(); return false; }
+    for (const ProfileClub &c : clubs) {
+        if (c.club.trimmed().isEmpty()) continue;
+        q.prepare(QStringLiteral(
+            "INSERT INTO profile_clubs (profile_id, club, member_nr) "
+            "VALUES (:p, :c, :n)"));
+        q.bindValue(QStringLiteral(":p"), profileId);
+        q.bindValue(QStringLiteral(":c"), c.club.trimmed().toUpper());
+        q.bindValue(QStringLiteral(":n"), c.memberNr.trimmed());
+        if (!exec(q, "insertClub")) { db.rollback(); return false; }
+    }
+    db.commit();
+    return true;
 }
