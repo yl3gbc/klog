@@ -1,5 +1,7 @@
 #include "startprofiledialog.h"
 #include "world.h"
+#include "setupdialog.h"
+#include "dataproxy_sqlite.h"
 
 #include <QTableWidget>
 #include <QHeaderView>
@@ -42,8 +44,8 @@ static QString klogngCfgFile()
     return QDir::homePath() + QStringLiteral("/.klogng/klogrc");
 }
 
-StartProfileDialog::StartProfileDialog(ProfileManager *pm_, World *world_, QWidget *parent)
-    : QDialog(parent), pm(pm_), world(world_)
+StartProfileDialog::StartProfileDialog(ProfileManager *pm_, World *world_, DataProxy_SQLite *dp_, QWidget *parent)
+    : QDialog(parent), pm(pm_), world(world_), dataProxy(dp_)
 {
     setStyle(QStyleFactory::create(QStringLiteral("Fusion")));
     forceLightPalette(this);
@@ -144,7 +146,7 @@ void StartProfileDialog::openSelected()
 #include <QPushButton>
 #include <QHeaderView>
 
-static bool editProfileDialog(QWidget *parent, Profile &p, const QString &title, World *world, ProfileManager *pm)
+static bool editProfileDialog(QWidget *parent, Profile &p, const QString &title, World *world, ProfileManager *pm, DataProxy_SQLite *dp)
 
 {
     QDialog dlg(parent);
@@ -206,7 +208,7 @@ static bool editProfileDialog(QWidget *parent, Profile &p, const QString &title,
     auto *wStationP = new QWidget(&dlg); QWidget &wStation = *wStationP; QFormLayout fs(&wStation);
     fs.addRow(QObject::tr("Izsaukuma zime:"), &call);
     fs.addRow(QObject::tr("Operatora vards:"), &name);
-    fs.addRow(QObject::tr("Operatori (ADIF):"), &oper);
+    fs.addRow(QObject::tr("Operatoru zimes:"), &oper);
     fs.addRow(QObject::tr("Lokators:"), &grid);
     fs.addRow(QObject::tr("QTH:"), &qth);
     fs.addRow(QObject::tr("CQ zona:"), &cqz);
@@ -273,14 +275,32 @@ static bool editProfileDialog(QWidget *parent, Profile &p, const QString &title,
     }
     tabs.addTab(wClub, QObject::tr("Klubi"));
 
+    // Poga uz pilno KLog konfiguraciju
+    auto *fullCfgBtn = new QPushButton(QObject::tr("Pilnie iestatijumi..."), &dlg);
+    fullCfgBtn->setEnabled(dp != nullptr);
+    QObject::connect(fullCfgBtn, &QPushButton::clicked, [&dlg, dp, world, pm, &p]() {
+        if (!dp) return;
+        SetupDialog sd(dp, world, &dlg);
+        sd.init(QString(), 0, true);
+        sd.exec();
+        // pec aizversanas nolasam UserData atpakal profila
+        if (pm && p.id > 0)
+            pm->saveSettingsToProfile(p.id, QDir::homePath() + QStringLiteral("/.klogng/klogrc"));
+    });
+
     auto *boxP = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, &dlg);
     QDialogButtonBox &box = *boxP;
     QObject::connect(&box, &QDialogButtonBox::accepted, &dlg, &QDialog::accept);
     QObject::connect(&box, &QDialogButtonBox::rejected, &dlg, &QDialog::reject);
 
+    auto *bottom = new QHBoxLayout;
+    bottom->addWidget(fullCfgBtn);
+    bottom->addStretch();
+    bottom->addWidget(&box);
+
     QVBoxLayout root(&dlg);
     root.addWidget(&tabs);
-    root.addWidget(&box);
+    root.addLayout(bottom);
 
     if (dlg.exec() != QDialog::Accepted) return false;
     if (call.text().trimmed().isEmpty()) return false;
@@ -318,7 +338,7 @@ static bool editProfileDialog(QWidget *parent, Profile &p, const QString &title,
 void StartProfileDialog::newProfile()
 {
     Profile p;
-    if (!editProfileDialog(this, p, tr("Jauns profils"), world, pm))
+    if (!editProfileDialog(this, p, tr("Jauns profils"), world, pm, dataProxy))
         return;
     if (pm->createProfile(p) < 0)
         QMessageBox::warning(this, tr("Kluda"),
@@ -331,7 +351,7 @@ void StartProfileDialog::editSelected()
     const int id = currentRowProfileId();
     if (id < 0) return;
     Profile p = pm->getProfile(id);
-    if (!editProfileDialog(this, p, tr("Rediget profilu %1").arg(p.callsign), world, pm))
+    if (!editProfileDialog(this, p, tr("Rediget profilu %1").arg(p.callsign), world, pm, dataProxy))
         return;
     pm->updateProfile(p);
     reload();
@@ -408,7 +428,7 @@ static int lognumberForProfile(ProfileManager *pm, int profileId)
     return -1;
 }
 
-int StartProfileDialog::chooseProfileOnStartup(ProfileManager *pm, World *world, QWidget *parent)
+int StartProfileDialog::chooseProfileOnStartup(ProfileManager *pm, World *world, DataProxy_SQLite *dp, QWidget *parent)
 {
     qApp->setStyle(QStyleFactory::create(QStringLiteral("Fusion")));
     QPalette lp;
@@ -443,7 +463,7 @@ int StartProfileDialog::chooseProfileOnStartup(ProfileManager *pm, World *world,
             return last;
         }
     }
-    StartProfileDialog dlg(pm, world, parent);
+    StartProfileDialog dlg(pm, world, dp, parent);
     if (dlg.exec() == QDialog::Accepted)
     {
         const int ln = lognumberForProfile(pm, dlg.selectedProfileId());

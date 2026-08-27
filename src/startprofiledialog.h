@@ -6,6 +6,7 @@
 
 class QTableWidget;
 class World;
+class DataProxy_SQLite;
 class QCheckBox;
 class QPushButton;
 
@@ -13,11 +14,11 @@ class StartProfileDialog : public QDialog
 {
     Q_OBJECT
 public:
-    explicit StartProfileDialog(ProfileManager *pm, World *world = nullptr, QWidget *parent = nullptr);
+    explicit StartProfileDialog(ProfileManager *pm, World *world = nullptr, DataProxy_SQLite *dp = nullptr, QWidget *parent = nullptr);
 
     int  selectedProfileId() const { return selectedId; }
 
-    static int chooseProfileOnStartup(ProfileManager *pm, World *world = nullptr, QWidget *parent = nullptr);
+    static int chooseProfileOnStartup(ProfileManager *pm, World *world = nullptr, DataProxy_SQLite *dp = nullptr, QWidget *parent = nullptr);
 
 private slots:
     void openSelected();
@@ -31,6 +32,7 @@ private:
 
     ProfileManager *pm;
     World          *world = nullptr;
+    DataProxy_SQLite *dataProxy = nullptr;
     QTableWidget   *table;
     QCheckBox      *openLastCheck;
     QPushButton    *openBtn;
