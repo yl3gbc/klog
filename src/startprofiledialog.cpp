@@ -193,6 +193,33 @@ void StartProfileDialog::deleteSelected()
     reload();
 }
 
+#include <QSqlQuery>
+#include <QSqlDatabase>
+#include <QVariant>
+#include <QDate>
+
+static int lognumberForProfile(ProfileManager *pm, int profileId)
+{
+    const Profile p = pm->getProfile(profileId);
+    if (p.id < 0) return -1;
+    QSqlQuery q(QSqlDatabase::database());
+    q.prepare(QStringLiteral(
+        "SELECT id FROM logs WHERE upper(trim(stationcall)) = :c "
+        "ORDER BY id LIMIT 1"));
+    q.bindValue(QStringLiteral(":c"), p.callsign);
+    if (q.exec() && q.next())
+        return q.value(0).toInt();
+    // logs ieraksta nav (jauns profils) - izveidojam
+    q.prepare(QStringLiteral(
+        "INSERT INTO logs (logdate, stationcall, logtype, logtypen) "
+        "VALUES (:d, :c, 'DX', 1)"));
+    q.bindValue(QStringLiteral(":d"), QDate::currentDate().toString(QStringLiteral("yyyy-MM-dd")));
+    q.bindValue(QStringLiteral(":c"), p.callsign);
+    if (q.exec())
+        return q.lastInsertId().toInt();
+    return -1;
+}
+
 int StartProfileDialog::chooseProfileOnStartup(ProfileManager *pm, QWidget *parent)
 {
     qApp->setStyle(QStyleFactory::create(QStringLiteral("Fusion")));
@@ -215,10 +242,28 @@ int StartProfileDialog::chooseProfileOnStartup(ProfileManager *pm, QWidget *pare
     if (sett.value(QLatin1String(SETT_OPEN_LAST), false).toBool()) {
         const int last = sett.value(QLatin1String(SETT_LAST_PROFILE), -1).toInt();
         if (last > 0 && pm->getProfile(last).id == last)
+        {
+            const int ln = lognumberForProfile(pm, last);
+            if (ln > 0)
+            {
+                QSettings s2;
+                s2.setValue(QStringLiteral("SelectedLog"), ln);
+                s2.sync();
+            }
             return last;
+        }
     }
     StartProfileDialog dlg(pm, parent);
     if (dlg.exec() == QDialog::Accepted)
+    {
+        const int ln = lognumberForProfile(pm, dlg.selectedProfileId());
+        if (ln > 0)
+        {
+            QSettings s2;
+            s2.setValue(QStringLiteral("SelectedLog"), ln);
+            s2.sync();
+        }
         return dlg.selectedProfileId();
+    }
     return -1;
 }
