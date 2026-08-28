@@ -22,6 +22,11 @@ struct Profile {
     QString rig1, rig2, rig3;
     QString antenna1, antenna2, antenna3;
     double  power = 0.0;
+    // eLog servisi
+    QString clublogEmail, clublogPass, clublogAppPass;
+    QString qrzUser, qrzPass, qrzLogbookKey;
+    QString eqslCall, eqslPass;
+    QString lotwUser, lotwPass;
     int     qsoCount = 0;
 };
 

@@ -60,7 +60,11 @@ bool ProfileManager::ensureSchemaAndMigrate(QString *errorOut)
         "name VARCHAR", "address1 VARCHAR", "address2 VARCHAR", "address3 VARCHAR",
         "address4 VARCHAR", "city VARCHAR", "zip_code VARCHAR", "province VARCHAR",
         "country VARCHAR", "rig1 VARCHAR", "rig2 VARCHAR", "rig3 VARCHAR",
-        "antenna1 VARCHAR", "antenna2 VARCHAR", "antenna3 VARCHAR", "power REAL"
+        "antenna1 VARCHAR", "antenna2 VARCHAR", "antenna3 VARCHAR", "power REAL",
+        "clublog_email VARCHAR", "clublog_pass VARCHAR", "clublog_app_pass VARCHAR",
+        "qrz_user VARCHAR", "qrz_pass VARCHAR", "qrz_logbook_key VARCHAR",
+        "eqsl_call VARCHAR", "eqsl_pass VARCHAR",
+        "lotw_user VARCHAR", "lotw_pass VARCHAR"
     };
     {
         QStringList have;
@@ -189,7 +193,11 @@ Profile ProfileManager::getProfile(int id) const
         "SELECT profile_id, callsign, operator_name, gridsquare, qth,"
         " cq_zone, itu_zone, dxcc, comment, name, address1, address2, address3,"
         " address4, city, zip_code, province, country, rig1, rig2, rig3,"
-        " antenna1, antenna2, antenna3, power FROM profiles WHERE profile_id = :id"));
+        " antenna1, antenna2, antenna3, power,"
+        " clublog_email, clublog_pass, clublog_app_pass,"
+        " qrz_user, qrz_pass, qrz_logbook_key,"
+        " eqsl_call, eqsl_pass, lotw_user, lotw_pass"
+        " FROM profiles WHERE profile_id = :id"));
     q.bindValue(QStringLiteral(":id"), id);
     if (exec(q, "getProfile") && q.next()) {
         p.id = q.value(0).toInt();
@@ -217,6 +225,16 @@ Profile ProfileManager::getProfile(int id) const
         p.antenna2 = q.value(22).toString();
         p.antenna3 = q.value(23).toString();
         p.power = q.value(24).toDouble();
+        p.clublogEmail   = q.value(25).toString();
+        p.clublogPass    = q.value(26).toString();
+        p.clublogAppPass = q.value(27).toString();
+        p.qrzUser        = q.value(28).toString();
+        p.qrzPass        = q.value(29).toString();
+        p.qrzLogbookKey  = q.value(30).toString();
+        p.eqslCall       = q.value(31).toString();
+        p.eqslPass       = q.value(32).toString();
+        p.lotwUser       = q.value(33).toString();
+        p.lotwPass       = q.value(34).toString();
     }
     return p;
 }
@@ -249,7 +267,11 @@ bool ProfileManager::updateProfile(const Profile &p)
         " name=:nm, address1=:a1, address2=:a2, address3=:a3, address4=:a4,"
         " city=:ct, zip_code=:zp, province=:pv, country=:co,"
         " rig1=:r1, rig2=:r2, rig3=:r3,"
-        " antenna1=:n1, antenna2=:n2, antenna3=:n3, power=:pw "
+        " antenna1=:n1, antenna2=:n2, antenna3=:n3, power=:pw,"
+        " clublog_email=:ce, clublog_pass=:cp, clublog_app_pass=:ca,"
+        " qrz_user=:qu, qrz_pass=:qp, qrz_logbook_key=:qk,"
+        " eqsl_call=:ec, eqsl_pass=:ep,"
+        " lotw_user=:lu, lotw_pass=:lp "
         "WHERE profile_id=:id"));
     q.bindValue(QStringLiteral(":c"),  p.callsign.trimmed().toUpper());
     q.bindValue(QStringLiteral(":o"),  p.operatorName);
@@ -275,6 +297,16 @@ bool ProfileManager::updateProfile(const Profile &p)
     q.bindValue(QStringLiteral(":n2"), p.antenna2);
     q.bindValue(QStringLiteral(":n3"), p.antenna3);
     q.bindValue(QStringLiteral(":pw"), p.power);
+    q.bindValue(QStringLiteral(":ce"), p.clublogEmail);
+    q.bindValue(QStringLiteral(":cp"), p.clublogPass);
+    q.bindValue(QStringLiteral(":ca"), p.clublogAppPass);
+    q.bindValue(QStringLiteral(":qu"), p.qrzUser);
+    q.bindValue(QStringLiteral(":qp"), p.qrzPass);
+    q.bindValue(QStringLiteral(":qk"), p.qrzLogbookKey);
+    q.bindValue(QStringLiteral(":ec"), p.eqslCall);
+    q.bindValue(QStringLiteral(":ep"), p.eqslPass);
+    q.bindValue(QStringLiteral(":lu"), p.lotwUser);
+    q.bindValue(QStringLiteral(":lp"), p.lotwPass);
     q.bindValue(QStringLiteral(":id"), p.id);
     return exec(q, "updateProfile");
 }
@@ -393,6 +425,28 @@ bool ProfileManager::saveSettingsToProfile(int profileId, const QString &cfgFile
     p.antenna2     = st.value(QStringLiteral("Antenna2")).toString();
     p.antenna3     = st.value(QStringLiteral("Antenna3")).toString();
     p.power        = st.value(QStringLiteral("Power")).toDouble();
+    st.endGroup();
+
+    st.beginGroup(QStringLiteral("ClubLog"));
+    p.clublogEmail   = st.value(QStringLiteral("ClubLogEmail")).toString();
+    p.clublogPass    = st.value(QStringLiteral("ClubLogPass")).toString();
+    p.clublogAppPass = st.value(QStringLiteral("ClubLogAppPass")).toString();
+    st.endGroup();
+
+    st.beginGroup(QStringLiteral("QRZcom"));
+    p.qrzUser       = st.value(QStringLiteral("QRZcomUser")).toString();
+    p.qrzPass       = st.value(QStringLiteral("QRZcomPass")).toString();
+    p.qrzLogbookKey = st.value(QStringLiteral("QRZcomLogBookKey")).toString();
+    st.endGroup();
+
+    st.beginGroup(QStringLiteral("eQSL"));
+    p.eqslCall = st.value(QStringLiteral("eQSLCall")).toString();
+    p.eqslPass = st.value(QStringLiteral("eQSLPass")).toString();
+    st.endGroup();
+
+    st.beginGroup(QStringLiteral("LoTW"));
+    p.lotwUser = st.value(QStringLiteral("LoTWUser")).toString();
+    p.lotwPass = st.value(QStringLiteral("LoTWPass")).toString();
     st.endGroup();
 
     return updateProfile(p);

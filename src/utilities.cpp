@@ -24,6 +24,8 @@
  *                                                                           *
  *****************************************************************************/
 #include "utilities.h"
+#include <QFile>
+#include <QDir>
 #include "callsign.h"
 #include <QRegularExpression>
 // Qt headers are not in cppcheck's include path on the CI; silence the false positive.
@@ -581,6 +583,22 @@ QString Utilities::getCfgFile()
 
 #else
          //qDebug() << "NO WINDOWS DETECTED!: " << getHomeDir() + "/klogrc.cfg"  ;
+    // KLogNG: katram profilam savs konfiguracijas fails.
+    // Aktivais profils glabajas ~/.klogng/active-profile
+    {
+        QFile ap(getHomeDir() + "/active-profile");
+        if (ap.exists() && ap.open(QIODevice::ReadOnly | QIODevice::Text))
+        {
+            const QString name = QString::fromUtf8(ap.readAll()).trimmed();
+            ap.close();
+            if (!name.isEmpty())
+            {
+                const QString dir = getHomeDir() + "/profiles/" + name;
+                QDir().mkpath(dir);
+                return dir + "/klogrc";
+            }
+        }
+    }
     return getHomeDir() + "/klogrc";
 
 #endif

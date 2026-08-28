@@ -39,9 +39,40 @@ static const char *SETT_LAST_PROFILE= "profiles/lastProfileId";
 
 #include <QDir>
 // Tas pats ini fails, ko lieto KLog (Utilities::getCfgFile ekvivalents)
+#include <QFile>
+#include <QTextStream>
+
+// Ieraksta aktiva profila vardu ~/.klogng/active-profile un nodrosina,
+// ka profilam ir savs klogrc (pirmaja reize nokope esoso).
+static void writeActiveProfile(const QString &callsign)
+{
+    const QString home = QDir::homePath() + QStringLiteral("/.klogng");
+    QFile ap(home + QStringLiteral("/active-profile"));
+    if (ap.open(QIODevice::WriteOnly | QIODevice::Text))
+    {
+        QTextStream out(&ap);
+        out << callsign;
+        ap.close();
+    }
+    const QString pdir = home + QStringLiteral("/profiles/") + callsign;
+    QDir().mkpath(pdir);
+    const QString pcfg = pdir + QStringLiteral("/klogrc");
+    if (!QFile::exists(pcfg))
+        QFile::copy(home + QStringLiteral("/klogrc"), pcfg);
+}
+
 static QString klogngCfgFile()
 {
-    return QDir::homePath() + QStringLiteral("/.klogng/klogrc");
+    const QString home = QDir::homePath() + QStringLiteral("/.klogng");
+    QFile ap(home + QStringLiteral("/active-profile"));
+    if (ap.exists() && ap.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
+        const QString n = QString::fromUtf8(ap.readAll()).trimmed();
+        ap.close();
+        if (!n.isEmpty())
+            return home + QStringLiteral("/profiles/") + n + QStringLiteral("/klogrc");
+    }
+    return home + QStringLiteral("/klogrc");
 }
 
 StartProfileDialog::StartProfileDialog(ProfileManager *pm_, World *world_, DataProxy_SQLite *dp_, QWidget *parent)
@@ -404,6 +435,28 @@ static void applyProfileToSettings(QSettings &st, const Profile &ap)
     if (!ap.antenna3.isEmpty())     st.setValue(QStringLiteral("Antenna3"), ap.antenna3);
     if (ap.power > 0)               st.setValue(QStringLiteral("Power"), ap.power);
     st.endGroup();
+
+    st.beginGroup(QStringLiteral("ClubLog"));
+    if (!ap.clublogEmail.isEmpty())   st.setValue(QStringLiteral("ClubLogEmail"), ap.clublogEmail);
+    if (!ap.clublogPass.isEmpty())    st.setValue(QStringLiteral("ClubLogPass"), ap.clublogPass);
+    if (!ap.clublogAppPass.isEmpty()) st.setValue(QStringLiteral("ClubLogAppPass"), ap.clublogAppPass);
+    st.endGroup();
+
+    st.beginGroup(QStringLiteral("QRZcom"));
+    if (!ap.qrzUser.isEmpty())       st.setValue(QStringLiteral("QRZcomUser"), ap.qrzUser);
+    if (!ap.qrzPass.isEmpty())       st.setValue(QStringLiteral("QRZcomPass"), ap.qrzPass);
+    if (!ap.qrzLogbookKey.isEmpty()) st.setValue(QStringLiteral("QRZcomLogBookKey"), ap.qrzLogbookKey);
+    st.endGroup();
+
+    st.beginGroup(QStringLiteral("eQSL"));
+    if (!ap.eqslCall.isEmpty()) st.setValue(QStringLiteral("eQSLCall"), ap.eqslCall);
+    if (!ap.eqslPass.isEmpty()) st.setValue(QStringLiteral("eQSLPass"), ap.eqslPass);
+    st.endGroup();
+
+    st.beginGroup(QStringLiteral("LoTW"));
+    if (!ap.lotwUser.isEmpty()) st.setValue(QStringLiteral("LoTWUser"), ap.lotwUser);
+    if (!ap.lotwPass.isEmpty()) st.setValue(QStringLiteral("LoTWPass"), ap.lotwPass);
+    st.endGroup();
 }
 
 static int lognumberForProfile(ProfileManager *pm, int profileId)
@@ -454,9 +507,10 @@ int StartProfileDialog::chooseProfileOnStartup(ProfileManager *pm, World *world,
             const int ln = lognumberForProfile(pm, last);
             if (ln > 0)
             {
+                const Profile ap = pm->getProfile(last);
+                writeActiveProfile(ap.callsign);
                 QSettings s2(klogngCfgFile(), QSettings::IniFormat);
                 s2.setValue(QStringLiteral("SelectedLog"), ln);
-                const Profile ap = pm->getProfile(last);
                 applyProfileToSettings(s2, ap);
                 s2.sync();
             }
@@ -469,9 +523,10 @@ int StartProfileDialog::chooseProfileOnStartup(ProfileManager *pm, World *world,
         const int ln = lognumberForProfile(pm, dlg.selectedProfileId());
         if (ln > 0)
         {
+            const Profile ap = pm->getProfile(dlg.selectedProfileId());
+            writeActiveProfile(ap.callsign);
             QSettings s2(klogngCfgFile(), QSettings::IniFormat);
             s2.setValue(QStringLiteral("SelectedLog"), ln);
-            const Profile ap = pm->getProfile(dlg.selectedProfileId());
             applyProfileToSettings(s2, ap);
             s2.sync();
         }
