@@ -24,6 +24,8 @@
  *                                                                           *
  *****************************************************************************/
 #include "dxccstatuswidget.h"
+#include <QSettings>
+#include "utilities.h"
 #include <type_traits>  // Include this header to use std::as_const
 #include <QTimer>
 //#include <QDebug>
@@ -458,8 +460,22 @@ void DXCCStatusWidget::setDefaultBands()
      */
 
     bandNames.clear();
-    //bandNames << "160M" << "80M" << "40M" << "30M" << "20M" << "17M" << "15M" << "12M" << "10M" << "6M" << "4M" << "2M" << "70CM";
-    bandNames << "160M" << "80M" << "40M" << "30M" << "20M" << "17M" << "15M" << "12M" << "10M";
+    // KLogNG: joslas nem no aktiva profila konfiguracijas ([BandMode] Bands),
+    // nevis izsutas. Ja ta nav pieejama, atkapjas uz iepriekseijo sarakstu.
+    {
+        Utilities util(Q_FUNC_INFO);
+        QSettings st(util.getCfgFile(), QSettings::IniFormat);
+        st.beginGroup(QStringLiteral("BandMode"));
+        const QStringList cfg = st.value(QStringLiteral("Bands")).toStringList();
+        st.endGroup();
+        for (const QString &b : cfg)
+        {
+            const QString t = b.trimmed().toUpper();
+            if (!t.isEmpty()) bandNames << t;
+        }
+    }
+    if (bandNames.isEmpty())
+        bandNames << "160M" << "80M" << "40M" << "30M" << "20M" << "17M" << "15M" << "12M" << "10M";
 
     setBands(Q_FUNC_INFO, bandNames, false);
     //fillData();

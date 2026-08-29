@@ -25,6 +25,8 @@
  *****************************************************************************/
 
 #include "infowidget.h"
+#include <QSettings>
+#include "utilities.h"
 
 InfoWidget::InfoWidget(Awards *awards, World *injectedWorld, QWidget *parent) :
     QWidget(parent),
@@ -79,18 +81,31 @@ InfoWidget::~InfoWidget()
 
 void InfoWidget::createUI()
 {
-    bandLabel1->setText(tr("10M"));
-    bandLabel2->setText(tr("15M"));
-    bandLabel3->setText(tr("20M"));
-    bandLabel4->setText(tr("40M"));
-    bandLabel5->setText(tr("80M"));
-    bandLabel6->setText(tr("160M"));
-    bandLabel7->setText(tr("2M"));
-    bandLabel8->setText(tr("6M"));
-    bandLabel9->setText(tr("12M"));
-    bandLabel10->setText(tr("17M"));
-    bandLabel11->setText(tr("30M"));
-    bandLabel12->setText(tr("70CM"));
+    // KLogNG: joslas no profila konfiguracijas ([BandMode] Bands)
+    {
+        QList<QLabel *> bl;
+        bl << bandLabel1 << bandLabel2 << bandLabel3 << bandLabel4
+           << bandLabel5 << bandLabel6 << bandLabel7 << bandLabel8
+           << bandLabel9 << bandLabel10 << bandLabel11 << bandLabel12;
+        QStringList bands;
+        Utilities util(Q_FUNC_INFO);
+        QSettings st(util.getCfgFile(), QSettings::IniFormat);
+        st.beginGroup(QStringLiteral("BandMode"));
+        const QStringList cfg = st.value(QStringLiteral("Bands")).toStringList();
+        st.endGroup();
+        for (const QString &b : cfg) {
+            const QString t = b.trimmed().toUpper();
+            if (!t.isEmpty()) bands << t;
+        }
+        if (bands.isEmpty())
+            bands << "10M" << "15M" << "20M" << "40M" << "80M" << "160M"
+                  << "2M" << "6M" << "12M" << "17M" << "30M" << "70CM";
+        for (int i = 0; i < bl.size(); ++i) {
+            const bool has = (i < bands.size());
+            bl.at(i)->setText(has ? bands.at(i) : QString());
+            bl.at(i)->setVisible(has);
+        }
+    }
 
     bandLabel1->setAlignment(Qt::AlignCenter);
     bandLabel2->setAlignment(Qt::AlignCenter);

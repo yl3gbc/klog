@@ -36,6 +36,7 @@
 #include "updatesettings.h"
 //#include "database.h"
 #include "mainwindow.h"
+#include "solarindicator.h"
 #include "aboutdialog.h"
 #include "tipsdialog.h"
 #include <QCoreApplication>
@@ -859,6 +860,7 @@ void MainWindow::createStatusBar()
 {
     logEvent(Q_FUNC_INFO, "Start", Devel);
     statusBar()->showMessage(tr("Ready"));
+    statusBar()->addPermanentWidget(new SolarIndicator(this));
     logEvent(Q_FUNC_INFO, "END", Debug);
 }
 
