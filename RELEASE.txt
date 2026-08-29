@@ -1,0 +1,110 @@
+KLogNG - First Modernisation
+Arnis, YL3GBC - 29 August 2026
+
+Repository: https://github.com/yl3gbc/klog/tree/klogng-main
+
+
+WHAT THIS IS
+
+KLogNG is a fork of KLog (ea4k/klog) that adds support for operating
+several callsigns from one installation. Everything below runs on a real
+log of 20,200 QSOs across three callsigns and has been tested in daily use.
+
+
+STATION PROFILES
+
+Many of us run more than one callsign. In my case three: YL3GBC, YL3AUG
+and YL3ARH. Each has its own locator, QSL address, equipment and LoTW
+account. KLog already stored several logs internally, but switching
+between them meant going into Setup and retyping the station data.
+
+Now each log is a full station profile. On startup a dialog lists the
+profiles with their QSO counts; picking one switches the log and the
+entire configuration in a single step.
+
+  - Profile selection dialog at startup (CQRLOG style), with an option
+    to open the last profile automatically
+  - Profile editor with four tabs: Station, Address, Equipment, Clubs
+  - CQ and ITU zones and the country fill in automatically from the
+    callsign prefix; /MM and /AM are excluded on purpose, since a
+    maritime or aeronautical mobile station belongs to no DXCC entity
+  - A profile holding QSOs cannot be deleted
+  - Migration from the existing log table happens automatically on first
+    run and is idempotent
+
+
+SEPARATE CONFIGURATION PER PROFILE
+
+Each profile keeps its own configuration file in
+~/.klogng/profiles/<CALLSIGN>/klogrc. Nothing is shared, so settings can
+never leak from one callsign to another - including settings not yet
+thought of.
+
+eLog accounts are part of the profile: ClubLog, QRZ.com, eQSL and LoTW
+each have their own credentials per callsign.
+
+
+NEW QSOs
+
+Profile assignment happens through an SQLite trigger rather than in the
+application code, so it works identically for manual entry, ADIF import
+and QSOs arriving over UDP from WSJT-X or JTDX - without touching any
+existing code path.
+
+
+GRAYLINE MAP
+
+A grayline map is available both as a tab next to Info/Awards/Search and
+as a dockable panel that can be moved to a second monitor.
+
+  - Day/night terminator calculated in real time, redrawn every minute
+  - Subsolar point shown as the sun current position
+  - A line from your station to the current correspondent, drawn as soon
+    as the DX locator is entered
+
+
+SOLAR INDICATORS
+
+Solar flux, A and K index in the status bar, updated hourly from
+hamqsl.com.
+
+
+BAND PANEL
+
+The band panel now shows the bands configured in the active profile
+instead of a fixed list. Different stations can work different bands.
+
+
+ISSUES FOUND IN KLOG WHILE BUILDING THIS
+
+Three things turned up that look like upstream defects, each with a
+reproducible case:
+
+  1. The duplicate-QSO time window is the same for every mode. The 600 s
+     default discards genuine FT4/FT8 contacts made minutes apart with
+     the same station. Example: ON4KBU, 2025-04-03, 14:58 and 15:01,
+     15m FT4 - the second one is dropped.
+
+  2. The callsign validator rejects valid special callsigns. 4JT3DJ
+     (Azerbaijan, listed on QRZ with 35,192 lookups) is refused silently,
+     both on ADIF import and on manual entry.
+
+  3. Locator comparison is case sensitive, so KO26cw (the Maidenhead and
+     JTDX form) and KO26CW count as different squares and QSOs drop out
+     of the export filter.
+
+The third one is fixed in this fork. The other two are reported
+separately.
+
+
+STILL TO DO
+
+  - Dialog strings are still in Latvian in the source; they will move to
+    English so they follow the normal Qt translation route through the
+    .ts files
+  - Latvian translation of the new strings
+  - Georgian translation starts in September
+
+
+73,
+Arnis, YL3GBC
