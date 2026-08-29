@@ -21,6 +21,13 @@ void GrayLineWidget::setMyLocator(const QString &grid)
     update();
 }
 
+void GrayLineWidget::setDxLocator(const QString &grid)
+{
+    dxGrid = grid.trimmed().toUpper();
+    dxPos = (dxGrid.length() >= 4) ? gridToXY(dxGrid) : QPointF(-1, -1);
+    update();
+}
+
 // Maidenhead -> ekrana koordinatas
 QPointF GrayLineWidget::gridToXY(const QString &grid) const
 {
@@ -167,6 +174,16 @@ void GrayLineWidget::paintEvent(QPaintEvent *)
         p.setPen(QPen(Qt::white, 1));
         for (const QPointF &q : qsoPoints)
             if (q.x() >= 0) p.drawEllipse(q, 2.5, 2.5);
+
+        // tekosais QSO: linija uz korespondentu
+        if (dxPos.x() >= 0)
+        {
+            p.setPen(QPen(QColor(255, 60, 60, 220), 2));
+            p.drawLine(myPos, dxPos);
+            p.setBrush(QColor(255, 240, 80));
+            p.setPen(QPen(QColor(120, 60, 0), 1.5));
+            p.drawEllipse(dxPos, 4, 4);
+        }
 
         // musu pozicija
         p.setBrush(QColor(0xcc, 0x22, 0x22));

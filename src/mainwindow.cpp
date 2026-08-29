@@ -4256,6 +4256,9 @@ void MainWindow::createUIDX()
         lay->addWidget(gl, 0, Qt::AlignHCenter | Qt::AlignTop);
         lay->addStretch();
         dxUpRightTab->addTab(page, tr("Grayline"));
+        if (QSOTabWidget)
+            connect(QSOTabWidget, SIGNAL(dxLocatorChanged(QString)),
+                    gl, SLOT(setDxLocator(QString)));
         connect(dxUpRightTab, &QTabWidget::currentChanged, this, [this](int idx) {
             const bool isMap = (dxUpRightTab->tabText(idx) == tr("Grayline"));
             dxUpRightTab->setMaximumHeight(isMap ? 240 : QWIDGETSIZE_MAX);

@@ -18,10 +18,12 @@ public:
     explicit GrayLineWidget(QWidget *parent = nullptr);
 
     void setMyLocator(const QString &grid);
+
     void setDataProxy(DataProxy_SQLite *dp) { dataProxy = dp; }
 
 public slots:
     void refreshQSOs();
+    void setDxLocator(const QString &grid);
 
 protected:
     void paintEvent(QPaintEvent *) override;
@@ -39,6 +41,8 @@ private:
     QString myGrid;
     QPointF myPos;
     QVector<QPointF> qsoPoints;
+    QString dxGrid;
+    QPointF dxPos = QPointF(-1, -1);
     QTimer timer;
     QPixmap worldMap;
     QPixmap scaled;
