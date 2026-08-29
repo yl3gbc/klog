@@ -37,6 +37,8 @@
 //#include "database.h"
 #include "mainwindow.h"
 #include "solarindicator.h"
+#include "graylinewidget.h"
+#include <QDockWidget>
 #include "aboutdialog.h"
 #include "tipsdialog.h"
 #include <QCoreApplication>
@@ -861,6 +863,17 @@ void MainWindow::createStatusBar()
     logEvent(Q_FUNC_INFO, "Start", Devel);
     statusBar()->showMessage(tr("Ready"));
     statusBar()->addPermanentWidget(new SolarIndicator(this));
+    {
+        auto *gl = new GrayLineWidget(this);
+        gl->setDataProxy(dataProxy);
+        auto *dock = new QDockWidget(tr("Grayline"), this);
+        dock->setObjectName(QStringLiteral("graylineDock"));
+        dock->setWidget(gl);
+        dock->setAllowedAreas(Qt::AllDockWidgetAreas);
+        addDockWidget(Qt::BottomDockWidgetArea, dock);
+        dock->hide();
+
+    }
     logEvent(Q_FUNC_INFO, "END", Debug);
 }
 
@@ -2574,6 +2587,24 @@ void MainWindow::createMenusCommon()
     connect(fillQsoAct, SIGNAL(triggered()), this, SLOT(fillQSOData()));
     fillQsoAct->setToolTip(tr("Go through the log reusing previous QSOs to fill missing information in other QSOs."));
 
+    {
+        QDockWidget *gd = findChild<QDockWidget *>(QStringLiteral("graylineDock"));
+        if (gd)
+        {
+            QAction *act = gd->toggleViewAction();
+            act->setText(tr("Grayline map"));
+            toolMenu->addAction(act);
+        }
+    }
+    {
+        QDockWidget *gd = findChild<QDockWidget *>(QStringLiteral("graylineDock"));
+        if (gd)
+        {
+            QAction *act = gd->toggleViewAction();
+            act->setText(tr("Grayline map"));
+            toolMenu->addAction(act);
+        }
+    }
     toolMenu->addSeparator();
     qslToolMenu = toolMenu->addMenu(tr("QSL tools ..."));
 
@@ -4193,6 +4224,13 @@ void MainWindow::createUIDX()
 
     dxUpLeftTab->addTab(myDataTabWidget, tr("My Data"));
     dxUpLeftTab->addTab(satTabWidget, tr("Satellite"));
+    if (dxUpRightTab && !findChild<GrayLineWidget *>(QStringLiteral("graylineTab")))
+    {
+        auto *gl = new GrayLineWidget(dxUpRightTab);
+        gl->setObjectName(QStringLiteral("graylineTab"));
+        gl->setDataProxy(dataProxy);
+        dxUpRightTab->addTab(gl, tr("Grayline"));
+    }
 
 
       //qDebug() << "MainWindow::createUIDX-90" ;
