@@ -38,6 +38,7 @@
 #include "mainwindow.h"
 #include "solarindicator.h"
 #include "graylinewidget.h"
+#include <QSettings>
 #include <QDockWidget>
 #include <QVBoxLayout>
 #include <QHBoxLayout>
@@ -4259,6 +4260,20 @@ void MainWindow::createUIDX()
         if (QSOTabWidget)
             connect(QSOTabWidget, SIGNAL(dxLocatorChanged(QString)),
                     gl, SLOT(setDxLocator(QString)));
+        {   // musu pozicija no profila konfiguracijas
+            Utilities u(Q_FUNC_INFO);
+            QSettings st(u.getCfgFile(), QSettings::IniFormat);
+            st.beginGroup(QStringLiteral("UserData"));
+            gl->setMyLocator(st.value(QStringLiteral("StationLocator")).toString());
+            st.endGroup();
+        }
+        {   // musu pozicija no profila konfiguracijas
+            Utilities u(Q_FUNC_INFO);
+            QSettings st(u.getCfgFile(), QSettings::IniFormat);
+            st.beginGroup(QStringLiteral("UserData"));
+            gl->setMyLocator(st.value(QStringLiteral("StationLocator")).toString());
+            st.endGroup();
+        }
         connect(dxUpRightTab, &QTabWidget::currentChanged, this, [this](int idx) {
             const bool isMap = (dxUpRightTab->tabText(idx) == tr("Grayline"));
             dxUpRightTab->setMaximumHeight(isMap ? 240 : QWIDGETSIZE_MAX);
