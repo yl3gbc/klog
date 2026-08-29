@@ -3987,7 +3987,9 @@ QString DataProxy_SQLite::getStringQueryMyGrid (const QString &_a)
     Locator locator;
     if (locator.isValidLocator(_a))
     {
-        return QString("my_gridsquare='%1'").arg(_a);
+        // KLogNG: registrneatkarigs salidzinajums. JTDX un Maidenhead standarts
+        // raksta KO26cw (pedejie divi mazie), KLog vietam KO26CW - viena vieta.
+        return QString("UPPER(my_gridsquare)=UPPER('%1')").arg(_a);
     }
     else if (_a == "ALL")
     {
