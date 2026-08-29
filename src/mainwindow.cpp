@@ -39,6 +39,8 @@
 #include "solarindicator.h"
 #include "graylinewidget.h"
 #include <QDockWidget>
+#include <QVBoxLayout>
+#include <QHBoxLayout>
 #include "aboutdialog.h"
 #include "tipsdialog.h"
 #include <QCoreApplication>
@@ -862,13 +864,32 @@ void MainWindow::createStatusBar()
 {
     logEvent(Q_FUNC_INFO, "Start", Devel);
     statusBar()->showMessage(tr("Ready"));
+    if (infoLabel1) infoLabel1->hide();
+    if (infoLabel2) infoLabel2->hide();
+    // Pirmaja paradisana Qt vel nezina galigos izmerus - piespiezam parrekinu
+    QTimer::singleShot(0, this, [this]() {
+        if (!dxUpRightTab) return;
+        const int cur = dxUpRightTab->currentIndex();
+        for (int i = 0; i < dxUpRightTab->count(); ++i)
+        {
+            dxUpRightTab->setCurrentIndex(i);
+            if (dxUpRightTab->widget(i)) dxUpRightTab->widget(i)->adjustSize();
+        }
+        dxUpRightTab->setCurrentIndex(cur);
+    });
     statusBar()->addPermanentWidget(new SolarIndicator(this));
     {
-        auto *gl = new GrayLineWidget(this);
+        auto *dockPage = new QWidget(this);
+        auto *dlay = new QHBoxLayout(dockPage);
+        dlay->setContentsMargins(0, 0, 0, 0);
+        auto *gl = new GrayLineWidget(dockPage);
         gl->setDataProxy(dataProxy);
+        dlay->addStretch();
+        dlay->addWidget(gl);
+        dlay->addStretch();
         auto *dock = new QDockWidget(tr("Grayline"), this);
         dock->setObjectName(QStringLiteral("graylineDock"));
-        dock->setWidget(gl);
+        dock->setWidget(dockPage);
         dock->setAllowedAreas(Qt::AllDockWidgetAreas);
         addDockWidget(Qt::BottomDockWidgetArea, dock);
         dock->hide();
@@ -4226,10 +4247,29 @@ void MainWindow::createUIDX()
     dxUpLeftTab->addTab(satTabWidget, tr("Satellite"));
     if (dxUpRightTab && !findChild<GrayLineWidget *>(QStringLiteral("graylineTab")))
     {
-        auto *gl = new GrayLineWidget(dxUpRightTab);
+        auto *page = new QWidget(dxUpRightTab);
+        auto *lay = new QVBoxLayout(page);
+        lay->setContentsMargins(0, 0, 0, 0);
+        auto *gl = new GrayLineWidget(page);
         gl->setObjectName(QStringLiteral("graylineTab"));
         gl->setDataProxy(dataProxy);
-        dxUpRightTab->addTab(gl, tr("Grayline"));
+        lay->addWidget(gl, 0, Qt::AlignHCenter | Qt::AlignTop);
+        lay->addStretch();
+        dxUpRightTab->addTab(page, tr("Grayline"));
+        connect(dxUpRightTab, &QTabWidget::currentChanged, this, [this](int idx) {
+            const bool isMap = (dxUpRightTab->tabText(idx) == tr("Grayline"));
+            dxUpRightTab->setMaximumHeight(isMap ? 240 : QWIDGETSIZE_MAX);
+        });
+        // Katrai cilnei savs augstums: aktiva cilne izpletas, parejas saraujas
+        for (int i = 0; i < dxUpRightTab->count(); ++i)
+            dxUpRightTab->widget(i)->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Ignored);
+        connect(dxUpRightTab, &QTabWidget::currentChanged, this, [this](int idx) {
+            for (int i = 0; i < dxUpRightTab->count(); ++i)
+                dxUpRightTab->widget(i)->setSizePolicy(
+                    QSizePolicy::Preferred,
+                    (i == idx) ? QSizePolicy::Preferred : QSizePolicy::Ignored);
+            dxUpRightTab->widget(idx)->adjustSize();
+        });
     }
 
 

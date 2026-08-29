@@ -6,10 +6,10 @@
 
 GrayLineWidget::GrayLineWidget(QWidget *parent) : QWidget(parent)
 {
-    setMinimumSize(320, 180);
-    worldMap.load(QStringLiteral(":/img/world.jpg"));
+    setFixedSize(425, 205);
+    worldMap.load(QStringLiteral(":/img/YL3GBC.png"));
     if (worldMap.isNull())
-        worldMap.load(QDir::homePath() + QStringLiteral("/klogng/src/img/world.jpg"));
+        worldMap.load(QDir::homePath() + QStringLiteral("/klogng/src/img/YL3GBC.png"));
     connect(&timer, &QTimer::timeout, this, QOverload<>::of(&QWidget::update));
     timer.start(60000);   // terminators parzimejas reizi minute
 }
@@ -39,10 +39,13 @@ QPointF GrayLineWidget::gridToXY(const QString &grid) const
     return lonLatToXY(lon, lat);
 }
 
+// Karte aizpilda visu logu; ja logs ir augstaks neka 2:1, polaros apgabalus
+// apgriez (tur tapat maz notiek), proporcijas paliek pareizas.
 QRect GrayLineWidget::mapRect() const
 {
-    int w = width(), h = w / 2;
-    if (h > height()) { h = height(); w = h * 2; }
+    int w = width();
+    int h = w / 2;
+    if (h < height()) { h = height(); w = h * 2; }
     return QRect((width() - w) / 2, (height() - h) / 2, w, h);
 }
 
