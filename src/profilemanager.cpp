@@ -316,8 +316,8 @@ bool ProfileManager::deleteProfile(int id, QString *errorOut)
     const int n = qsoCount(id);
     if (n > 0) {
         if (errorOut)
-            *errorOut = QObject::tr("Profila ir %1 QSO. Vispirms eksporte tos "
-                                    "ADIF formata vai parcel uz citu profilu.").arg(n);
+            *errorOut = QObject::tr("The profile holds %1 QSOs. Export them to ADIF "
+                                    "or move them to another profile first.").arg(n);
         return false;
     }
     QSqlDatabase db = QSqlDatabase::database();

@@ -80,13 +80,13 @@ StartProfileDialog::StartProfileDialog(ProfileManager *pm_, World *world_, DataP
 {
     setStyle(QStyleFactory::create(QStringLiteral("Fusion")));
     forceLightPalette(this);
-    setWindowTitle(tr("Profila izvele"));
+    setWindowTitle(tr("Select profile"));
     setModal(true);
     resize(420, 380);
 
     table = new QTableWidget(this);
     table->setColumnCount(3);
-    table->setHorizontalHeaderLabels({tr("Zime"), tr("QSO"), tr("Piezime")});
+    table->setHorizontalHeaderLabels({tr("Callsign"), tr("QSOs"), tr("Note")});
     table->horizontalHeader()->setSectionResizeMode(0, QHeaderView::Stretch);
     table->setSelectionBehavior(QAbstractItemView::SelectRows);
     table->setSelectionMode(QAbstractItemView::SingleSelection);
@@ -94,11 +94,11 @@ StartProfileDialog::StartProfileDialog(ProfileManager *pm_, World *world_, DataP
     connect(table, &QTableWidget::cellDoubleClicked,
             this, [this](int, int){ openSelected(); });
 
-    openBtn   = new QPushButton(tr("Atvert"), this);
-    auto *newBtn = new QPushButton(tr("Jauns profils"), this);
-    editBtn   = new QPushButton(tr("Redigert"), this);
-    deleteBtn = new QPushButton(tr("Dzest"), this);
-    auto *cancelBtn = new QPushButton(tr("Atcelt"), this);
+    openBtn   = new QPushButton(tr("Open"), this);
+    auto *newBtn = new QPushButton(tr("New profile"), this);
+    editBtn   = new QPushButton(tr("Edit"), this);
+    deleteBtn = new QPushButton(tr("Delete"), this);
+    auto *cancelBtn = new QPushButton(tr("Cancel"), this);
     openBtn->setDefault(true);
 
     connect(openBtn,   &QPushButton::clicked, this, &StartProfileDialog::openSelected);
@@ -107,7 +107,7 @@ StartProfileDialog::StartProfileDialog(ProfileManager *pm_, World *world_, DataP
     connect(deleteBtn, &QPushButton::clicked, this, &StartProfileDialog::deleteSelected);
     connect(cancelBtn, &QPushButton::clicked, this, &QDialog::reject);
 
-    openLastCheck = new QCheckBox(tr("Nakamreiz atvert so profilu automatiski"), this);
+    openLastCheck = new QCheckBox(tr("Open this profile automatically next time"), this);
     QSettings sett(klogngCfgFile(), QSettings::IniFormat);
     openLastCheck->setChecked(sett.value(QLatin1String(SETT_OPEN_LAST), false).toBool());
 
@@ -237,46 +237,46 @@ static bool editProfileDialog(QWidget *parent, Profile &p, const QString &title,
     auto *tabsP = new QTabWidget(&dlg); QTabWidget &tabs = *tabsP;
 
     auto *wStationP = new QWidget(&dlg); QWidget &wStation = *wStationP; QFormLayout fs(&wStation);
-    fs.addRow(QObject::tr("Izsaukuma zime:"), &call);
-    fs.addRow(QObject::tr("Operatora vards:"), &name);
-    fs.addRow(QObject::tr("Operatoru zimes:"), &oper);
-    fs.addRow(QObject::tr("Lokators:"), &grid);
+    fs.addRow(QObject::tr("Callsign:"), &call);
+    fs.addRow(QObject::tr("Operator name:"), &name);
+    fs.addRow(QObject::tr("Operator callsigns:"), &oper);
+    fs.addRow(QObject::tr("Locator:"), &grid);
     fs.addRow(QObject::tr("QTH:"), &qth);
-    fs.addRow(QObject::tr("CQ zona:"), &cqz);
-    fs.addRow(QObject::tr("ITU zona:"), &ituz);
-    fs.addRow(QObject::tr("Piezime:"), &comment);
-    tabs.addTab(&wStation, QObject::tr("Stacija"));
+    fs.addRow(QObject::tr("CQ zone:"), &cqz);
+    fs.addRow(QObject::tr("ITU zone:"), &ituz);
+    fs.addRow(QObject::tr("Note:"), &comment);
+    tabs.addTab(&wStation, QObject::tr("Station"));
 
     auto *wAddrP = new QWidget(&dlg); QWidget &wAddr = *wAddrP; QFormLayout fa(&wAddr);
-    fa.addRow(QObject::tr("Adrese 1:"), &a1);
-    fa.addRow(QObject::tr("Adrese 2:"), &a2);
-    fa.addRow(QObject::tr("Adrese 3:"), &a3);
-    fa.addRow(QObject::tr("Adrese 4:"), &a4);
-    fa.addRow(QObject::tr("Pilseta:"), &city);
-    fa.addRow(QObject::tr("Pasta indekss:"), &zip);
-    fa.addRow(QObject::tr("Novads/State:"), &prov);
-    fa.addRow(QObject::tr("Valsts:"), &country);
-    tabs.addTab(&wAddr, QObject::tr("Adrese"));
+    fa.addRow(QObject::tr("Address 1:"), &a1);
+    fa.addRow(QObject::tr("Address 2:"), &a2);
+    fa.addRow(QObject::tr("Address 3:"), &a3);
+    fa.addRow(QObject::tr("Address 4:"), &a4);
+    fa.addRow(QObject::tr("City:"), &city);
+    fa.addRow(QObject::tr("Postal code:"), &zip);
+    fa.addRow(QObject::tr("Province/State:"), &prov);
+    fa.addRow(QObject::tr("Country:"), &country);
+    tabs.addTab(&wAddr, QObject::tr("Address"));
 
     auto *wRigP = new QWidget(&dlg); QWidget &wRig = *wRigP; QFormLayout fr(&wRig);
-    fr.addRow(QObject::tr("Transiveris 1:"), &r1);
-    fr.addRow(QObject::tr("Transiveris 2:"), &r2);
-    fr.addRow(QObject::tr("Transiveris 3:"), &r3);
-    fr.addRow(QObject::tr("Antena 1:"), &n1);
-    fr.addRow(QObject::tr("Antena 2:"), &n2);
-    fr.addRow(QObject::tr("Antena 3:"), &n3);
-    fr.addRow(QObject::tr("Jauda:"), &pwr);
-    tabs.addTab(&wRig, QObject::tr("Aparatura"));
+    fr.addRow(QObject::tr("Rig 1:"), &r1);
+    fr.addRow(QObject::tr("Rig 2:"), &r2);
+    fr.addRow(QObject::tr("Rig 3:"), &r3);
+    fr.addRow(QObject::tr("Antenna 1:"), &n1);
+    fr.addRow(QObject::tr("Antenna 2:"), &n2);
+    fr.addRow(QObject::tr("Antenna 3:"), &n3);
+    fr.addRow(QObject::tr("Power:"), &pwr);
+    tabs.addTab(&wRig, QObject::tr("Equipment"));
 
     // --- Klubi ---
     auto *wClub = new QWidget(&dlg);
     auto *clubTable = new QTableWidget(wClub);
     clubTable->setColumnCount(2);
-    clubTable->setHorizontalHeaderLabels({QObject::tr("Klubs"), QObject::tr("Biedra numurs")});
+    clubTable->setHorizontalHeaderLabels({QObject::tr("Club"), QObject::tr("Member number")});
     clubTable->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
     clubTable->setSelectionBehavior(QAbstractItemView::SelectRows);
-    auto *addClub = new QPushButton(QObject::tr("Pievienot"), wClub);
-    auto *delClub = new QPushButton(QObject::tr("Nonemt"), wClub);
+    auto *addClub = new QPushButton(QObject::tr("Add"), wClub);
+    auto *delClub = new QPushButton(QObject::tr("Remove"), wClub);
     QObject::connect(addClub, &QPushButton::clicked, [clubTable]() {
         const int r = clubTable->rowCount();
         clubTable->insertRow(r);
@@ -304,10 +304,10 @@ static bool editProfileDialog(QWidget *parent, Profile &p, const QString &title,
             clubTable->setItem(r, 1, new QTableWidgetItem(c.memberNr));
         }
     }
-    tabs.addTab(wClub, QObject::tr("Klubi"));
+    tabs.addTab(wClub, QObject::tr("Clubs"));
 
     // Poga uz pilno KLog konfiguraciju
-    auto *fullCfgBtn = new QPushButton(QObject::tr("Pilnie iestatijumi..."), &dlg);
+    auto *fullCfgBtn = new QPushButton(QObject::tr("Full settings..."), &dlg);
     fullCfgBtn->setEnabled(dp != nullptr);
     QObject::connect(fullCfgBtn, &QPushButton::clicked, [&dlg, dp, world, pm, &p]() {
         if (!dp) return;
@@ -369,11 +369,11 @@ static bool editProfileDialog(QWidget *parent, Profile &p, const QString &title,
 void StartProfileDialog::newProfile()
 {
     Profile p;
-    if (!editProfileDialog(this, p, tr("Jauns profils"), world, pm, dataProxy))
+    if (!editProfileDialog(this, p, tr("New profile"), world, pm, dataProxy))
         return;
     if (pm->createProfile(p) < 0)
-        QMessageBox::warning(this, tr("Kluda"),
-            tr("Profilu neizdevas izveidot. Vai zime %1 jau eksiste?").arg(p.callsign));
+        QMessageBox::warning(this, tr("Error"),
+            tr("Could not create the profile. Does callsign %1 already exist?").arg(p.callsign));
     reload();
 }
 
@@ -382,7 +382,7 @@ void StartProfileDialog::editSelected()
     const int id = currentRowProfileId();
     if (id < 0) return;
     Profile p = pm->getProfile(id);
-    if (!editProfileDialog(this, p, tr("Rediget profilu %1").arg(p.callsign), world, pm, dataProxy))
+    if (!editProfileDialog(this, p, tr("Edit profile %1").arg(p.callsign), world, pm, dataProxy))
         return;
     pm->updateProfile(p);
     reload();
@@ -394,13 +394,13 @@ void StartProfileDialog::deleteSelected()
     if (id < 0) return;
     const Profile p = pm->getProfile(id);
     const int n = pm->qsoCount(id);
-    if (QMessageBox::question(this, tr("Dzest profilu?"),
-            tr("Dzest profilu %1 (%2 QSO)?").arg(p.callsign).arg(n))
+    if (QMessageBox::question(this, tr("Delete profile?"),
+            tr("Delete profile %1 (%2 QSOs)?").arg(p.callsign).arg(n))
         != QMessageBox::Yes)
         return;
     QString err;
     if (!pm->deleteProfile(id, &err))
-        QMessageBox::warning(this, tr("Nevar dzest"), err);
+        QMessageBox::warning(this, tr("Cannot delete"), err);
     reload();
 }
 
