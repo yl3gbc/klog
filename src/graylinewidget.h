@@ -8,6 +8,7 @@
 #include <QPointF>
 
 class DataProxy_SQLite;
+class World;
 
 // Grayline karte: diena/nakts terminators, musu pozicija,
 // lielaa loka linijas uz nostradatajiem QSO.
@@ -20,10 +21,12 @@ public:
     void setMyLocator(const QString &grid);
 
     void setDataProxy(DataProxy_SQLite *dp) { dataProxy = dp; }
+    void setWorld(World *w) { world = w; }
 
 public slots:
     void refreshQSOs();
     void setDxLocator(const QString &grid);
+    void setDxCallsign(const QString &call);
 
 protected:
     void paintEvent(QPaintEvent *) override;
@@ -38,6 +41,7 @@ private:
     void drawSun(QPainter &p);
 
     DataProxy_SQLite *dataProxy = nullptr;
+    World *world = nullptr;
     QString myGrid;
     QPointF myPos;
     QVector<QPointF> qsoPoints;

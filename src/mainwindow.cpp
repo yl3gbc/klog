@@ -4257,9 +4257,13 @@ void MainWindow::createUIDX()
         lay->addWidget(gl, 0, Qt::AlignHCenter | Qt::AlignTop);
         lay->addStretch();
         dxUpRightTab->addTab(page, tr("Grayline"));
+        gl->setWorld(world);
         if (QSOTabWidget)
             connect(QSOTabWidget, SIGNAL(dxLocatorChanged(QString)),
                     gl, SLOT(setDxLocator(QString)));
+        if (mainQSOEntryWidget)
+            connect(mainQSOEntryWidget, SIGNAL(currentQRZSignal(QString)),
+                    gl, SLOT(setDxCallsign(QString)));
         {   // musu pozicija no profila konfiguracijas
             Utilities u(Q_FUNC_INFO);
             QSettings st(u.getCfgFile(), QSettings::IniFormat);

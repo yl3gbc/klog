@@ -3,6 +3,8 @@
 #include <QtMath>
 #include <QDateTime>
 #include <QDir>
+#include "world.h"
+#include "dataproxy_sqlite.h"
 
 GrayLineWidget::GrayLineWidget(QWidget *parent) : QWidget(parent)
 {
@@ -18,6 +20,19 @@ void GrayLineWidget::setMyLocator(const QString &grid)
 {
     myGrid = grid.trimmed().toUpper();
     myPos = gridToXY(myGrid);
+    update();
+}
+
+// Ja korespondents lokatoru nedod, nemam DXCC entitates koordinatas
+void GrayLineWidget::setDxCallsign(const QString &call)
+{
+    if (!dxGrid.isEmpty()) return;          // lokators ir - to nemainam
+    if (!world || call.trimmed().length() < 3) { dxPos = QPointF(-1, -1); update(); return; }
+    const int enti = world->getQRZARRLId(call.trimmed().toUpper());
+    if (enti <= 0) { dxPos = QPointF(-1, -1); update(); return; }
+    const double lon = world->getLongitude(enti);
+    const double lat = world->getLatitude(enti);
+    dxPos = (qFuzzyIsNull(lon) && qFuzzyIsNull(lat)) ? QPointF(-1, -1) : lonLatToXY(lon, lat);
     update();
 }
 
@@ -70,41 +85,35 @@ void GrayLineWidget::drawTerminator(QPainter &p)
     const QDateTime now = QDateTime::currentDateTimeUtc();
     const int doy = now.date().dayOfYear();
     const double hour = now.time().hour() + now.time().minute() / 60.0;
-
-    // Saules deklinacija
     const double decl = 23.44 * qSin(qDegreesToRadians(360.0 / 365.24 * (doy - 81)));
-    // Subsolara garuma grads
     const double sunLon = 180.0 - hour * 15.0;
 
-    // Katram pikselim pa horizontali atrodam terminatora platumu
-    QPolygonF term;
-    for (int px = 0; px <= width(); ++px)
-    {
-        const double lon = px / (double)width() * 360.0 - 180.0;
-        const double ha = qDegreesToRadians(lon - sunLon);
-        const double td = qTan(qDegreesToRadians(qFuzzyIsNull(decl) ? 0.001 : decl));
-        double lat = qRadiansToDegrees(qAtan(-qCos(ha) / td));
-        term << lonLatToXY(lon, lat);
-    }
-
-    // Nakts puse: ziemelu vai dienvidu, atkariba no deklinacijas
-    QPolygonF night = term;
-    if (decl >= 0) {          // ziemelu vasara -> nakts uz dienvidiem no terminatora
-        night << QPointF(mapRect().right(), mapRect().bottom())
-              << QPointF(mapRect().left(), mapRect().bottom());
-    } else {
-        night << QPointF(mapRect().right(), mapRect().top())
-              << QPointF(mapRect().left(), mapRect().top());
-    }
+    const QRect r = mapRect();
+    const double sd = qSin(qDegreesToRadians(decl));
+    const double cd = qCos(qDegreesToRadians(decl));
 
     p.setPen(Qt::NoPen);
     p.setBrush(QColor(10, 15, 50, 120));
-    p.drawPolygon(night);
 
-    // pati grayline svitra
-    p.setPen(QPen(QColor(255, 180, 60, 200), 1.5));
-    p.setBrush(Qt::NoBrush);
-    p.drawPolyline(term);
+    for (int px = r.left(); px <= r.right(); ++px)
+    {
+        const double lon = (px - r.left()) / (double)r.width() * 360.0 - 180.0;
+        const double cha = qCos(qDegreesToRadians(lon - sunLon));
+        int yStart = -1;
+        for (int py = r.top(); py <= r.bottom(); ++py)
+        {
+            const double lat = 90.0 - (py - r.top()) / (double)r.height() * 180.0;
+            const double alt = qSin(qDegreesToRadians(lat)) * sd
+                             + qCos(qDegreesToRadians(lat)) * cd * cha;
+            const bool night = (alt < 0.0);
+            if (night && yStart < 0) yStart = py;
+            if ((!night || py == r.bottom()) && yStart >= 0)
+            {
+                p.drawRect(px, yStart, 1, py - yStart + 1);
+                yStart = -1;
+            }
+        }
+    }
 }
 
 void GrayLineWidget::drawWorld(QPainter &p)
