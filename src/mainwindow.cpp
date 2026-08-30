@@ -6396,6 +6396,33 @@ void MainWindow::slotQSOReceived(const QSO &_qso)
                                      ? _qso.getDateTimeOn()
                                      : QDateTime::currentDateTimeUtc();
 
+    // KLogNG: bridinam, ja ienakosa QSO stacijas zime vai lokators neatbilst
+    // aktivajam profilam. Testejot ar vairakiem profiliem viegli aizmirst
+    // parslegt WSJT-X/JTDX, un QSO nonak nepareizaja zurnala.
+    {
+        Utilities u(Q_FUNC_INFO);
+        QSettings st(u.getCfgFile(), QSettings::IniFormat);
+        st.beginGroup(QStringLiteral("UserData"));
+        const QString profCall = st.value(QStringLiteral("Callsign")).toString().trimmed().toUpper();
+        const QString profGrid = st.value(QStringLiteral("StationLocator")).toString().trimmed().toUpper();
+        st.endGroup();
+
+        const QString qsoCall = _qso.getStationCallsign().trimmed().toUpper();
+        const QString qsoGrid = _qso.getMyGridSquare().trimmed().toUpper();
+
+        QStringList diff;
+        if (!qsoCall.isEmpty() && !profCall.isEmpty() && qsoCall != profCall)
+            diff << tr("callsign %1 (profile: %2)").arg(qsoCall, profCall);
+        if (!qsoGrid.isEmpty() && !profGrid.isEmpty() && qsoGrid != profGrid)
+            diff << tr("locator %1 (profile: %2)").arg(qsoGrid, profGrid);
+
+        if (!diff.isEmpty())
+            QMessageBox::warning(this, tr("Station data mismatch"),
+                tr("The QSO received over UDP does not match the active profile:\n\n%1\n\n"
+                   "Check the station settings in WSJT-X or JTDX before continuing.")
+                   .arg(diff.join(QStringLiteral("\n"))));
+    }
+
     if (!wsjtxAutoLog)
         populateFormFromUDPQso(_qso, udpArrivalTime);
     else
