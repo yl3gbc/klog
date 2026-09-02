@@ -148,6 +148,7 @@ public:
     //void showNotWar();
 
 private slots:
+    void slotUpdateServices(const QString &call);
     //void slotQueryErrorManagement(QString functionFailed, QString errorCodeS, QString nativeError, QString failedQuery);
     //void slotTest();        // Slot for testing purposes only
 
@@ -505,6 +506,7 @@ private:
     QWidget *mainWidget;
     // qWidget *dxClusterTabWidget;//, *searchTabWidget;
     World *world;
+    class CallsignServices *callsignServices = nullptr;
     FileManager *filemanager;
     //FileAwardManager *fileAwardManager;
     //Locator *locator;

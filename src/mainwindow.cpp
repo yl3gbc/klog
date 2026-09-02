@@ -37,6 +37,7 @@
 //#include "database.h"
 #include "mainwindow.h"
 #include "solarindicator.h"
+#include "callsignservices.h"
 #include "graylinewidget.h"
 #include <QSettings>
 #include <QDockWidget>
@@ -879,6 +880,13 @@ void MainWindow::createStatusBar()
         dxUpRightTab->setCurrentIndex(cur);
     });
     statusBar()->addPermanentWidget(new SolarIndicator(this));
+    {   // Servisu indikators zem komentaru lauka (LoTW / eQSL)
+        auto *svc = new CallsignServices(util->getHomeDir() + QStringLiteral("/data"), this);
+        if (QSOTabWidget)
+            connect(mainQSOEntryWidget, SIGNAL(currentQRZSignal(QString)),
+                    this, SLOT(slotUpdateServices(QString)));
+        callsignServices = svc;
+    }
     {
         auto *dockPage = new QWidget(this);
         auto *dlay = new QHBoxLayout(dockPage);
@@ -4668,8 +4676,20 @@ void MainWindow::slotLoTWDownload()
 
     bool ok;
 
+    // KLogNG: noklusejumu nem no aktiva profila, bet lietotajs var mainit
+    // (piem., lai atnestu vecas, vairs neaktivas zimes vesturi).
+    int defIdx = 0;
+    {
+        Utilities u(Q_FUNC_INFO);
+        QSettings st(u.getCfgFile(), QSettings::IniFormat);
+        st.beginGroup(QStringLiteral("UserData"));
+        const QString profCall = st.value(QStringLiteral("Callsign")).toString().trimmed().toUpper();
+        st.endGroup();
+        for (int i = 0; i < calls.size(); ++i)
+            if (calls.at(i).trimmed().toUpper() == profCall) { defIdx = i; break; }
+    }
     QString callToUse = QInputDialog::getItem(this, tr("KLog - Select the Station Callsign."),
-                                         tr("Select the Station Callsign to use when quering LoTW:"), calls, 0, false, &ok);
+                                         tr("Select the Station Callsign to use when quering LoTW:"), calls, defIdx, false, &ok);
 
       //qDebug() << "MainWindow::slotDownUpload: " << callToUse ;
     if (ok && !callToUse.isEmpty())
@@ -7537,4 +7557,16 @@ void MainWindow::logEvent(QString _func, QString _msg,  DebugLogLevel _level)
 
     if (logLevel<=_level)
         showKLogLogWidget->add(_func, _msg, _level);
+}
+
+
+void MainWindow::slotUpdateServices(const QString &call)
+{
+    if (!callsignServices || !QSOTabWidget) return;
+    QStringList v;
+    if (callsignServices->usesLoTW(call))
+        v << QStringLiteral("<b style='color:#1565c0'>LoTW</b>");
+    if (callsignServices->useseQSL(call))
+        v << QStringLiteral("<b style='color:#2e7d32'>eQSL</b>");
+    QSOTabWidget->setServices(v.join(QStringLiteral(" &nbsp;&middot;&nbsp; ")));
 }

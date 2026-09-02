@@ -43,6 +43,7 @@ class MainWindowInputQSO : public QWidget
     friend class tst_MainWindowInputQSO;
 
 public:
+    void setServices(const QString &html);
     explicit MainWindowInputQSO(DataProxy_SQLite *dp, QWidget *parent = nullptr);
     ~MainWindowInputQSO();
     void setDarkMode (const bool _dm);
@@ -127,6 +128,7 @@ private:
 
     QLineEdit *rstTXLineEdit, *rstRXLineEdit, *qthLineEdit, *locatorLineEdit, *nameLineEdit;
     QLineEdit *commentLineEdit;
+    QLabel *servicesLabel;
     QLabel *locLabel;           // DX Locator label; turns into a red "New Locator" when the grid is new
     QDoubleSpinBox *rxPowerSpinBox,  *txFreqSpinBox, *rxFreqSpinBox;
     QCheckBox *splitCheckBox;

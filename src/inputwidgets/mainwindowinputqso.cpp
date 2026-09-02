@@ -227,9 +227,18 @@ void MainWindowInputQSO::createUI()
     commentFieldHLayout->addWidget(keepCommentLabel);
     commentFieldHLayout->addWidget(keepCommentCheckBox);
 
+    // KLogNG: servisu indikators (LoTW / eQSL), ka CQRLOG
+    servicesLabel = new QLabel(this);
+    servicesLabel->setObjectName(QStringLiteral("servicesLabel"));
+    servicesLabel->setTextFormat(Qt::RichText);
+    servicesLabel->setAlignment(Qt::AlignCenter);
+    servicesLabel->setMinimumHeight(18);
+    servicesLabel->setToolTip(tr("Services where this callsign is registered."));
+
     QVBoxLayout *commentLayout = new QVBoxLayout;
     commentLayout->addWidget(commentLabel);
     commentLayout->addLayout(commentFieldHLayout);
+    commentLayout->addWidget(servicesLabel);
 
     QHBoxLayout *namePwrHLayout = new QHBoxLayout;
     namePwrHLayout->addLayout(nameLayout, 1);
@@ -938,3 +947,9 @@ bool MainWindowInputQSO::eventFilter (QObject *object, QEvent *event)
     return QWidget::eventFilter(object, event);
 }
 
+
+
+void MainWindowInputQSO::setServices(const QString &html)
+{
+    if (servicesLabel) servicesLabel->setText(html);
+}
