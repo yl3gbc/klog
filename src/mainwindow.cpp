@@ -7562,11 +7562,16 @@ void MainWindow::logEvent(QString _func, QString _msg,  DebugLogLevel _level)
 
 void MainWindow::slotUpdateServices(const QString &call)
 {
-    if (!callsignServices || !QSOTabWidget) return;
+    if (!QSOTabWidget) return;
+    const QString c = call.trimmed().toUpper();
+    if (c.length() < 3) { QSOTabWidget->setServices(QString()); return; }
     QStringList v;
-    if (callsignServices->usesLoTW(call))
-        v << QStringLiteral("<b style='color:#1565c0'>LoTW</b>");
-    if (callsignServices->useseQSL(call))
+    if (callsignServices && callsignServices->usesLoTW(c))
+        v << QStringLiteral("<b style='color:#c62828'>LoTW</b>");
+    if (callsignServices && callsignServices->useseQSL(c))
         v << QStringLiteral("<b style='color:#2e7d32'>eQSL</b>");
-    QSOTabWidget->setServices(v.join(QStringLiteral(" &nbsp;&middot;&nbsp; ")));
+    v << QStringLiteral("<a href='https://www.qrz.com/db/%1' style='color:#1565c0;text-decoration:none'><b>QRZ</b></a>").arg(c);
+    v << QStringLiteral("<a href='https://www.hamqth.com/%1' style='color:#00695c;text-decoration:none'><b>HamQTH</b></a>").arg(c);
+    v << QStringLiteral("<a href='https://clublog.org/logsearch/%1' style='color:#e65100;text-decoration:none'><b>ClubLog</b></a>").arg(c);
+    QSOTabWidget->setServices(v.join(QStringLiteral(" &nbsp;&nbsp; ")));
 }

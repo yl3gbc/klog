@@ -234,10 +234,12 @@ void MainWindowInputQSO::createUI()
     servicesLabel->setAlignment(Qt::AlignCenter);
     servicesLabel->setMinimumHeight(18);
     servicesLabel->setToolTip(tr("Services where this callsign is registered."));
+    servicesLabel->setOpenExternalLinks(true);
 
     QVBoxLayout *commentLayout = new QVBoxLayout;
     commentLayout->addWidget(commentLabel);
     commentLayout->addLayout(commentFieldHLayout);
+
     commentLayout->addWidget(servicesLabel);
 
     QHBoxLayout *namePwrHLayout = new QHBoxLayout;
