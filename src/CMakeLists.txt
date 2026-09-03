@@ -283,6 +283,7 @@ add_executable(klog WIN32 MACOSX_BUNDLE
     profilemanager.cpp profilemanager.h
     solarindicator.cpp solarindicator.h
     callsignservices.cpp callsignservices.h
+    clubmembers.cpp clubmembers.h
     graylinewidget.cpp graylinewidget.h
     startprofiledialog.cpp startprofiledialog.h
     ${KLOG_SOURCES}

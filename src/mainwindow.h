@@ -507,6 +507,7 @@ private:
     // qWidget *dxClusterTabWidget;//, *searchTabWidget;
     World *world;
     class CallsignServices *callsignServices = nullptr;
+    class ClubMembers *clubMembers = nullptr;
     FileManager *filemanager;
     //FileAwardManager *fileAwardManager;
     //Locator *locator;
