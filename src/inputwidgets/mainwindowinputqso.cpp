@@ -240,7 +240,12 @@ void MainWindowInputQSO::createUI()
     commentLayout->addWidget(commentLabel);
     commentLayout->addLayout(commentFieldHLayout);
 
+    clubsLabel = new QLabel(this);
+    clubsLabel->setTextFormat(Qt::RichText);
+    clubsLabel->setAlignment(Qt::AlignCenter);
+
     commentLayout->addWidget(servicesLabel);
+    commentLayout->addWidget(clubsLabel);
 
     QHBoxLayout *namePwrHLayout = new QHBoxLayout;
     namePwrHLayout->addLayout(nameLayout, 1);
@@ -954,4 +959,12 @@ bool MainWindowInputQSO::eventFilter (QObject *object, QEvent *event)
 void MainWindowInputQSO::setServices(const QString &html)
 {
     if (servicesLabel) servicesLabel->setText(html);
+}
+
+
+void MainWindowInputQSO::setClubs(const QString &html, const QString &tip)
+{
+    if (!clubsLabel) return;
+    clubsLabel->setText(html);
+    clubsLabel->setToolTip(tip);
 }

@@ -7575,8 +7575,5 @@ void MainWindow::slotUpdateServices(const QString &call)
     v << QStringLiteral("<a href='https://www.qrz.com/db/%1' style='color:#1565c0;text-decoration:none'><b>QRZ</b></a>").arg(c);
     v << QStringLiteral("<a href='https://www.hamqth.com/%1' style='color:#00695c;text-decoration:none'><b>HamQTH</b></a>").arg(c);
     v << QStringLiteral("<a href='https://clublog.org/logsearch/%1' style='color:#e65100;text-decoration:none'><b>ClubLog</b></a>").arg(c);
-    if (clubMembers)
-        for (const QString &cl : clubMembers->lookup(c))
-            v << QStringLiteral("<b style='color:#6a1b9a'>%1</b>").arg(cl);
     QSOTabWidget->setServices(v.join(QStringLiteral(" &nbsp;&nbsp; ")));
 }
