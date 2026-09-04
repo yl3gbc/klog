@@ -7577,3 +7577,19 @@ void MainWindow::slotUpdateServices(const QString &call)
     v << QStringLiteral("<a href='https://clublog.org/logsearch/%1' style='color:#e65100;text-decoration:none'><b>ClubLog</b></a>").arg(c);
     QSOTabWidget->setServices(v.join(QStringLiteral(" &nbsp;&nbsp; ")));
 }
+
+
+// HamQTH atbilde: aizpildam tikai TUKSOS laukus, lai nepazaudetu ievadito
+void MainWindow::slotHamQTHData(const QString &call, const QString &dok,
+                                const QString &name, const QString &qth,
+                                const QString &grid)
+{
+    Q_UNUSED(name); Q_UNUSED(qth); Q_UNUSED(grid);
+    if (dok.isEmpty() || call.isEmpty()) return;
+    QSqlQuery q;
+    q.prepare("UPDATE log SET darc_dok=:dok WHERE call=:call "
+              "AND (darc_dok IS NULL OR darc_dok='')");
+    q.bindValue(":dok", dok);
+    q.bindValue(":call", call.toUpper());
+    q.exec();
+}

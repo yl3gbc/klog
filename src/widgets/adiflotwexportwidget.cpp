@@ -168,9 +168,9 @@ void AdifLoTWExportWidget::setDefaultStationComboBox()
         //stationCallsignComboBox->blockSignals(false);
         return;
     }
-    if (stationCallsignComboBox->findText(defaultStationCallsign, Qt::MatchCaseSensitive) >= 0)
+    if (stationCallsignComboBox->findText(defaultStationCallsign, Qt::MatchFixedString) >= 0)
     {
-       stationCallsignComboBox->setCurrentIndex(stationCallsignComboBox->findText(defaultStationCallsign, Qt::MatchCaseSensitive));
+       stationCallsignComboBox->setCurrentIndex(stationCallsignComboBox->findText(defaultStationCallsign, Qt::MatchFixedString));
     }
     //stationCallsignComboBox->blockSignals(false);
      //qDebug() << Q_FUNC_INFO << " - END";
@@ -185,14 +185,14 @@ void AdifLoTWExportWidget::setDefaultMyGridComboBox()
         //qDebug() << Q_FUNC_INFO << " - END-1";
         return;
     }
-    if (myGridSquareComboBox->findText(defaultMyGrid, Qt::MatchCaseSensitive) >= 0)
+    if (myGridSquareComboBox->findText(defaultMyGrid, Qt::MatchFixedString) >= 0)
     {
-       myGridSquareComboBox->setCurrentIndex(myGridSquareComboBox->findText(defaultMyGrid, Qt::MatchCaseSensitive));
+       myGridSquareComboBox->setCurrentIndex(myGridSquareComboBox->findText(defaultMyGrid, Qt::MatchFixedString));
        //qDebug() << Q_FUNC_INFO << ": 1: " << myGridSquareComboBox->currentText();
     }
     else if (myGridSquareComboBox->count()>=3)
     {
-       myGridSquareComboBox->findText(myGridSquareComboBox->itemText(2), Qt::MatchCaseSensitive);
+       myGridSquareComboBox->findText(myGridSquareComboBox->itemText(2), Qt::MatchFixedString);
        //qDebug() << Q_FUNC_INFO << ": 2:  " << myGridSquareComboBox->currentText();
     }
     else
@@ -276,9 +276,9 @@ void AdifLoTWExportWidget::fillStationMyGridComboBox()
     myGridSquareComboBox->addItem(tr("ALL"));
     myGridSquareComboBox->addItems(grids);
 
-    if (myGridSquareComboBox->findText(tempGrid, Qt::MatchCaseSensitive) >= 0)
+    if (myGridSquareComboBox->findText(tempGrid, Qt::MatchFixedString) >= 0)
     {
-       myGridSquareComboBox->setCurrentIndex(myGridSquareComboBox->findText(tempGrid, Qt::MatchCaseSensitive));
+       myGridSquareComboBox->setCurrentIndex(myGridSquareComboBox->findText(tempGrid, Qt::MatchFixedString));
     }
      //qDebug() << Q_FUNC_INFO << " - END";
 }
@@ -472,7 +472,7 @@ void AdifLoTWExportWidget::slotStationCallsignChanged()
     //qDebug() << Q_FUNC_INFO << " - 03" ;
     fillStationMyGridComboBox();
     updateIfNeeded();
-    stationCallsignComboBox->setCurrentIndex(stationCallsignComboBox->findText(tmpCall, Qt::MatchCaseSensitive));
+    stationCallsignComboBox->setCurrentIndex(stationCallsignComboBox->findText(tmpCall, Qt::MatchFixedString));
     blockAllSignals (false);
      //qDebug() << Q_FUNC_INFO << " - END";
 }
@@ -533,7 +533,7 @@ void AdifLoTWExportWidget::slotMyGridChanged()
 
     qsos = fillTable();
 
-    myGridSquareComboBox->setCurrentIndex(myGridSquareComboBox->findText(tmpGrid, Qt::MatchCaseSensitive));
+    myGridSquareComboBox->setCurrentIndex(myGridSquareComboBox->findText(tmpGrid, Qt::MatchFixedString));
     blockAllSignals (false);
      //qDebug() << Q_FUNC_INFO << " - END";
 }

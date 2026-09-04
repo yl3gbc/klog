@@ -149,6 +149,7 @@ public:
 
 private slots:
     void slotUpdateServices(const QString &call);
+    void slotHamQTHData(const QString &call, const QString &dok, const QString &name, const QString &qth, const QString &grid);
     //void slotQueryErrorManagement(QString functionFailed, QString errorCodeS, QString nativeError, QString failedQuery);
     //void slotTest();        // Slot for testing purposes only
 
@@ -508,6 +509,7 @@ private:
     World *world;
     class CallsignServices *callsignServices = nullptr;
     class ClubMembers *clubMembers = nullptr;
+    class HamQTH *hamQTH = nullptr;
     FileManager *filemanager;
     //FileAwardManager *fileAwardManager;
     //Locator *locator;
