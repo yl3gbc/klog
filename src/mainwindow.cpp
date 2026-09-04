@@ -6501,6 +6501,8 @@ void MainWindow::autoLogUDPQso(const QSO &_qso, const QDateTime &_arrivalTime)
     dxcc = util->getNormalizedDXCCValue(dxcc);
     q.setDXCC(dxcc);
     q.setClubLogStatus(clublogSentDefault);
+    qWarning() << "KLOGNG UDP: lotwSentDefault =" << lotwSentDefault
+               << " eqsl =" << eqslSentDefault << " clublog =" << clublogSentDefault;
     q.setLoTWQSL_SENT(lotwSentDefault);
     q.setEQSLQSL_SENT(eqslSentDefault);
     q.setQRZCOMStatus(qrzcomSentDefault);
