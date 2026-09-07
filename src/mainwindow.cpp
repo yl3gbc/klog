@@ -2946,6 +2946,8 @@ void MainWindow::slotLoTWDownloadedFileProcess(const QString &_fn)
         logWindow->refresh();
         logWindow->scrollToTop();
         dxccStatusWidget->refresh();
+        // KLogNG: parrekinam ari Awards paneli, citadi skaitli paliek veci
+        if (awardsWidget) awardsWidget->showAwards();
         //TODO: Add the QSOs to the widget and show showAdifImportWidget->show();
     }
     else
