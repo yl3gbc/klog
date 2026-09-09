@@ -4968,6 +4968,26 @@ void MainWindow::slotADIFImport(){
     // Empty here means the user cancelled (or selected nothing): just abort.
     if (fileNames.isEmpty())
         return;
+
+    // KLogNG: ADIF faili no WSJT-X/JTDX un citam programmam parasti nesatur
+    // QSL statusa laukus, tapec importetie QSO paliek bez statusa un
+    // augsupielade tos neredz. Jautajam, vai tos atzimet ka gaidosus.
+    bool markQueued = false;
+    {
+        QMessageBox mb(this);
+        mb.setWindowTitle(tr("KLog - ADIF import"));
+        mb.setIcon(QMessageBox::Question);
+        mb.setText(tr("Mark the imported QSOs as pending upload?"));
+        mb.setInformativeText(tr("Log files exported by WSJT-X, JTDX and similar "
+            "programs do not carry QSL status fields. Unless they are marked as "
+            "queued, the imported QSOs will not appear in the LoTW, eQSL or "
+            "Club Log upload dialogs.\n\nAnswer No if these QSOs have already "
+            "been uploaded elsewhere."));
+        mb.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
+        mb.setDefaultButton(QMessageBox::Yes);
+        markQueued = (mb.exec() == QMessageBox::Yes);
+    }
+
     //qDebug() << Q_FUNC_INFO << " - CurrentLog: " << currentLog;
     int totalLoggedQSOs = 0;
     int globalImported = 0;   // Imported QSOs across all files in this batch
@@ -5071,6 +5091,27 @@ void MainWindow::slotADIFImport(){
     }
     if (totalLoggedQSOs>0)
     {
+        // KLogNG: ADIF faili no WSJT-X, JTDX, MSHV un citam digitalajam
+        // programmam nesatur QSL statusa laukus, tapec importetie QSO paliek
+        // bez statusa un augsupielades dialogi tos neredz.
+        if (markQueued)
+        {
+            QSqlQuery q;
+            q.prepare("UPDATE log SET "
+                      " lotw_qsl_sent = CASE WHEN lotw_qsl_sent IS NULL OR lotw_qsl_sent='' "
+                      "                 THEN 'Q' ELSE lotw_qsl_sent END,"
+                      " eqsl_qsl_sent = CASE WHEN eqsl_qsl_sent IS NULL OR eqsl_qsl_sent='' "
+                      "                 THEN 'Q' ELSE eqsl_qsl_sent END,"
+                      " clublog_qso_upload_status = CASE WHEN clublog_qso_upload_status IS NULL "
+                      "                 OR clublog_qso_upload_status='' THEN 'M' "
+                      "                 ELSE clublog_qso_upload_status END "
+                      "WHERE lognumber=:log AND ("
+                      " lotw_qsl_sent IS NULL OR lotw_qsl_sent=''"
+                      " OR eqsl_qsl_sent IS NULL OR eqsl_qsl_sent=''"
+                      " OR clublog_qso_upload_status IS NULL OR clublog_qso_upload_status='')");
+            q.bindValue(":log", currentLog);
+            q.exec();
+        }
         updateQSLRecAndSent();
         logWindow->refresh();
         logWindow->scrollToTop();
