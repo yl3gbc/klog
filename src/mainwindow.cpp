@@ -39,6 +39,8 @@
 #include "solarindicator.h"
 #include "callsignservices.h"
 #include "clubmembers.h"
+#include "hamqth.h"
+#include "wsjtxlogwatcher.h"
 #include "graylinewidget.h"
 #include <QSettings>
 #include <QDockWidget>
@@ -888,6 +890,29 @@ void MainWindow::createStatusBar()
                     this, SLOT(slotUpdateServices(QString)));
         callsignServices = svc;
         clubMembers = new ClubMembers(util->getHomeDir() + QStringLiteral("/data/clubs"), this);
+        hamQTH = new HamQTH(this);
+        {
+            QSettings st(util->getCfgFile(), QSettings::IniFormat);
+            st.beginGroup(QStringLiteral("HamQTH"));
+            hamQTH->setCredentials(st.value(QStringLiteral("HamQTHUser")).toString(),
+                                   st.value(QStringLiteral("HamQTHPass")).toString());
+            st.endGroup();
+        }
+        connect(hamQTH, &HamQTH::dataReady, this, &MainWindow::slotHamQTHData);
+        wsjtxWatcher = new WSJTXLogWatcher(dataProxy, this);
+        connect(wsjtxWatcher, &WSJTXLogWatcher::qsosImported,
+                this, &MainWindow::slotWSJTXLogQSOsFound);
+        {
+            QSettings st(util->getCfgFile(), QSettings::IniFormat);
+            st.beginGroup(QStringLiteral("UDPServer"));
+            const QString wf = st.value(QStringLiteral("WSJTXLogFile")).toString();
+            st.endGroup();
+            if (!wf.isEmpty())
+            {
+                wsjtxWatcher->setLogFile(wf);
+                QTimer::singleShot(4000, this, [this]() { wsjtxWatcher->checkNow(); });
+            }
+        }
     }
     {
         auto *dockPage = new QWidget(this);
@@ -7637,4 +7662,20 @@ void MainWindow::slotHamQTHData(const QString &call, const QString &dok,
     q.bindValue(":dok", dok);
     q.bindValue(":call", call.toUpper());
     q.exec();
+}
+
+void MainWindow::slotWSJTXLogQSOsFound(int count)
+{
+    if (count <= 0) return;
+    QMessageBox mb(this);
+    mb.setWindowTitle(tr("KLog - WSJT-X log"));
+    mb.setIcon(QMessageBox::Question);
+    mb.setText(tr("%1 QSOs in the WSJT-X log file are not in your log.").arg(count));
+    mb.setInformativeText(tr("This happens when the digital program was started "
+        "before KLog, so the QSOs were never received over UDP.\n\n"
+        "Do you want to import them now?"));
+    mb.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
+    mb.setDefaultButton(QMessageBox::Yes);
+    if (mb.exec() == QMessageBox::Yes)
+        slotADIFImport();
 }

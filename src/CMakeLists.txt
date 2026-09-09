@@ -285,6 +285,7 @@ add_executable(klog WIN32 MACOSX_BUNDLE
     callsignservices.cpp callsignservices.h
     clubmembers.cpp clubmembers.h
     hamqth.cpp hamqth.h
+    wsjtxlogwatcher.cpp wsjtxlogwatcher.h
     graylinewidget.cpp graylinewidget.h
     startprofiledialog.cpp startprofiledialog.h
     ${KLOG_SOURCES}
