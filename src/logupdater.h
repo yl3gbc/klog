@@ -8,8 +8,6 @@
 class QRZComLookup;
 class HamQTH;
 
-// Iet cauri zurnalam un aizpilda trukstosos laukus no callbook.
-// Viena zime sekunde, lai serveris neierobezotu.
 class LogUpdater : public QObject
 {
     Q_OBJECT
