@@ -40,6 +40,7 @@
 #include "callsignservices.h"
 #include "clubmembers.h"
 #include "hamqth.h"
+#include "qrzcomlookup.h"
 #include "wsjtxlogwatcher.h"
 #include "graylinewidget.h"
 #include <QSettings>
@@ -899,6 +900,15 @@ void MainWindow::createStatusBar()
             st.endGroup();
         }
         connect(hamQTH, &HamQTH::dataReady, this, &MainWindow::slotHamQTHData);
+        qrzLookup = new QRZComLookup(this);
+        {
+            QSettings st(util->getCfgFile(), QSettings::IniFormat);
+            st.beginGroup(QStringLiteral("QRZcom"));
+            qrzLookup->setCredentials(st.value(QStringLiteral("QRZcomUser")).toString(),
+                                      st.value(QStringLiteral("QRZcomPass")).toString());
+            st.endGroup();
+        }
+        connect(qrzLookup, &QRZComLookup::dataReady, this, &MainWindow::slotQRZData);
         wsjtxWatcher = new WSJTXLogWatcher(dataProxy, this);
         connect(wsjtxWatcher, &WSJTXLogWatcher::qsosImported,
                 this, &MainWindow::slotWSJTXLogQSOsFound);
@@ -6569,8 +6579,6 @@ void MainWindow::autoLogUDPQso(const QSO &_qso, const QDateTime &_arrivalTime)
     dxcc = util->getNormalizedDXCCValue(dxcc);
     q.setDXCC(dxcc);
     q.setClubLogStatus(clublogSentDefault);
-    qWarning() << "KLOGNG UDP: lotwSentDefault =" << lotwSentDefault
-               << " eqsl =" << eqslSentDefault << " clublog =" << clublogSentDefault;
     q.setLoTWQSL_SENT(lotwSentDefault);
     q.setEQSLQSL_SENT(eqslSentDefault);
     q.setQRZCOMStatus(qrzcomSentDefault);
@@ -7638,6 +7646,10 @@ void MainWindow::slotUpdateServices(const QString &call)
     const QString c = call.trimmed().toUpper();
     if (c.length() < 3) { QSOTabWidget->setServices(QString()); return; }
     QStringList v;
+    if (qrzLookup && qrzLookup->isReady())
+        qrzLookup->lookup(c);
+    if (hamQTH && hamQTH->isReady())
+        hamQTH->lookup(c);
     if (callsignServices && callsignServices->usesLoTW(c))
         v << QStringLiteral("<b style='color:#c62828'>LoTW</b>");
     if (callsignServices && callsignServices->useseQSL(c))
@@ -7654,8 +7666,23 @@ void MainWindow::slotHamQTHData(const QString &call, const QString &dok,
                                 const QString &name, const QString &qth,
                                 const QString &grid)
 {
-    Q_UNUSED(name); Q_UNUSED(qth); Q_UNUSED(grid);
-    if (dok.isEmpty() || call.isEmpty()) return;
+    if (call.isEmpty()) return;
+
+    // Aizpildam tikai TUKSOS laukus, lai nepazaudetu ievadito.
+    // Lokators: ja JT/digi programma to atsutija, tas ir precizaks (rada,
+    // kur korespondents TOBRID ir), tapec callbook versiju liekam tikai
+    // tad, ja lauks ir tukss.
+    if (QSOTabWidget)
+    {
+        if (!name.isEmpty() && QSOTabWidget->getName().trimmed().isEmpty())
+            QSOTabWidget->setName(name);
+        if (!qth.isEmpty() && QSOTabWidget->getQTH().trimmed().isEmpty())
+            QSOTabWidget->setQTH(qth);
+        if (!grid.isEmpty() && QSOTabWidget->getDXLocator().trimmed().isEmpty())
+            QSOTabWidget->setDXLocator(grid);
+    }
+
+    if (dok.isEmpty()) return;
     QSqlQuery q;
     q.prepare("UPDATE log SET darc_dok=:dok WHERE call=:call "
               "AND (darc_dok IS NULL OR darc_dok='')");
@@ -7678,4 +7705,18 @@ void MainWindow::slotWSJTXLogQSOsFound(int count)
     mb.setDefaultButton(QMessageBox::Yes);
     if (mb.exec() == QMessageBox::Yes)
         slotADIFImport();
+}
+
+
+void MainWindow::slotQRZData(const QString &call, const QString &name,
+                             const QString &qth, const QString &grid)
+{
+    Q_UNUSED(call);
+    if (!QSOTabWidget) return;
+    if (!name.isEmpty() && QSOTabWidget->getName().trimmed().isEmpty())
+        QSOTabWidget->setName(name);
+    if (!qth.isEmpty() && QSOTabWidget->getQTH().trimmed().isEmpty())
+        QSOTabWidget->setQTH(qth);
+    if (!grid.isEmpty() && QSOTabWidget->getDXLocator().trimmed().isEmpty())
+        QSOTabWidget->setDXLocator(grid.toUpper());
 }
