@@ -41,6 +41,7 @@
 #include "clubmembers.h"
 #include "hamqth.h"
 #include "qrzcomlookup.h"
+#include "logupdater.h"
 #include "wsjtxlogwatcher.h"
 #include "graylinewidget.h"
 #include <QSettings>
@@ -909,6 +910,14 @@ void MainWindow::createStatusBar()
             st.endGroup();
         }
         connect(qrzLookup, &QRZComLookup::dataReady, this, &MainWindow::slotQRZData);
+        logUpdater = new LogUpdater(qrzLookup, hamQTH, this);
+        connect(logUpdater, &LogUpdater::progress, this, [this](int d, int t, int u) {
+            statusBar()->showMessage(tr("Callbook: %1/%2, updated %3").arg(d).arg(t).arg(u));
+        });
+        connect(logUpdater, &LogUpdater::finished, this, [this](int u) {
+            statusBar()->showMessage(tr("Callbook update finished: %1 updated.").arg(u), 10000);
+            if (logWindow) logWindow->refresh();
+        });
         wsjtxWatcher = new WSJTXLogWatcher(dataProxy, this);
         connect(wsjtxWatcher, &WSJTXLogWatcher::qsosImported,
                 this, &MainWindow::slotWSJTXLogQSOsFound);
@@ -2671,6 +2680,12 @@ void MainWindow::createMenusCommon()
             act->setText(tr("Grayline map"));
             toolMenu->addAction(act);
         }
+    }
+    {
+        QAction *upd = new QAction(tr("Update log from callbook..."), this);
+        upd->setStatusTip(tr("Fill in missing name, QTH and locator from QRZ.com and HamQTH"));
+        connect(upd, &QAction::triggered, this, &MainWindow::slotUpdateFromCallbook);
+        toolMenu->addAction(upd);
     }
     toolMenu->addSeparator();
     qslToolMenu = toolMenu->addMenu(tr("QSL tools ..."));
@@ -7719,4 +7734,22 @@ void MainWindow::slotQRZData(const QString &call, const QString &name,
         QSOTabWidget->setQTH(qth);
     if (!grid.isEmpty() && QSOTabWidget->getDXLocator().trimmed().isEmpty())
         QSOTabWidget->setDXLocator(grid.toUpper());
+}
+
+
+void MainWindow::slotUpdateFromCallbook()
+{
+    if (!logUpdater || !qrzLookup) return;
+    if (logUpdater->isRunning()) { logUpdater->stop(); return; }
+    QStringList calls;
+    QSqlQuery q("SELECT DISTINCT call FROM log WHERE "
+                "(name IS NULL OR name='') OR (qth IS NULL OR qth='') "
+                "OR (gridsquare IS NULL OR gridsquare='') ORDER BY call");
+    while (q.next()) calls << q.value(0).toString();
+    if (calls.isEmpty()) return;
+    if (QMessageBox::question(this, tr("KLog - Update from callbook"),
+            tr("%1 callsigns are missing name, QTH or locator. Query the "
+               "callbooks and fill in the empty fields?").arg(calls.size()))
+        != QMessageBox::Yes) return;
+    logUpdater->start(calls);
 }

@@ -150,6 +150,7 @@ public:
 private slots:
     void slotUpdateServices(const QString &call);
     void slotWSJTXLogQSOsFound(int count);
+    void slotUpdateFromCallbook();
     void slotQRZData(const QString &call, const QString &name, const QString &qth, const QString &grid);
     void slotHamQTHData(const QString &call, const QString &dok, const QString &name, const QString &qth, const QString &grid);
     //void slotQueryErrorManagement(QString functionFailed, QString errorCodeS, QString nativeError, QString failedQuery);
@@ -513,6 +514,7 @@ private:
     class ClubMembers *clubMembers = nullptr;
     class HamQTH *hamQTH = nullptr;
     class QRZComLookup *qrzLookup = nullptr;
+    class LogUpdater *logUpdater = nullptr;
     class WSJTXLogWatcher *wsjtxWatcher = nullptr;
     FileManager *filemanager;
     //FileAwardManager *fileAwardManager;

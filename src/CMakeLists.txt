@@ -286,6 +286,7 @@ add_executable(klog WIN32 MACOSX_BUNDLE
     clubmembers.cpp clubmembers.h
     hamqth.cpp hamqth.h
     qrzcomlookup.cpp qrzcomlookup.h
+    logupdater.cpp logupdater.h
     wsjtxlogwatcher.cpp wsjtxlogwatcher.h
     graylinewidget.cpp graylinewidget.h
     startprofiledialog.cpp startprofiledialog.h
