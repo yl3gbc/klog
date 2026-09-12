@@ -36,6 +36,7 @@
 #include "updatesettings.h"
 //#include "database.h"
 #include "mainwindow.h"
+#include <QProcess>
 #include "solarindicator.h"
 #include "callsignservices.h"
 #include "clubmembers.h"
@@ -3067,7 +3068,20 @@ bool MainWindow::callTQSL(const QString &_filename, const QString &_call)
     }
     else
     {
-        ok = QProcess::execute(lotwTQSLpath, arguments);
+        // TQSL dazkart atgriez 0, lai gan augsupielade neizdevas (piem., LoTW
+        // nav sasniedzams). Tapec parbaudam ari izvadu, ne tikai izejas kodu.
+        QProcess tqsl;
+        tqsl.setProcessChannelMode(QProcess::MergedChannels);
+        tqsl.start(lotwTQSLpath, arguments);
+        tqsl.waitForFinished(-1);
+        const QString tqslOut = QString::fromLocal8Bit(tqsl.readAll());
+        ok = tqsl.exitCode();
+        if (ok == 0 && (tqslOut.contains(QStringLiteral("Unable to upload"), Qt::CaseInsensitive) ||
+                        tqslOut.contains(QStringLiteral("is unreachable"), Qt::CaseInsensitive) ||
+                        tqslOut.contains(QStringLiteral("upload appears to have failed"), Qt::CaseInsensitive)))
+        {
+            ok = 11;   // LoTW connection error
+        }
 
     //qDebug() << Q_FUNC_INFO << " -ok: " << QString::number(ok) ;
 
@@ -4533,9 +4547,12 @@ void MainWindow::fileExportLoTW2(const QString &_call, QList<int> _qsos)
     {
         msgBox.setIcon(QMessageBox::Question);
         msgBox.setWindowTitle(tr("KLog - LoTW"));
-        msgBox.setText(tr("TQSL finished with no error.\n\nDo you want to mark as Sent all the QSOs uploaded to LoTW?") );
+        msgBox.setText(tr("Did TQSL report a successful upload?\n\n"
+            "Answer Yes only if TQSL confirmed the QSOs reached LoTW. TQSL does "
+            "not always report a failed upload back to KLog, so marking the QSOs "
+            "as sent after a failure would hide them from the next upload."));
         msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::No );
-        msgBox.setDefaultButton(QMessageBox::Yes);
+        msgBox.setDefaultButton(QMessageBox::No);
         int i = msgBox.exec();
         if (i == QMessageBox::Yes)
         {
