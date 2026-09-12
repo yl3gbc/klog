@@ -81,6 +81,8 @@ private:
     QLCDNumber *dxccConfirmedQLCDNumber, *dxccWorkedQLCDNumber,
                 *wazConfirmedQLCDNumber, *wazWorkedQLCDNumber,
                 *localConfirmedQLCDNumber, *localWorkedQLCDNumber,
+                *ituConfirmedQLCDNumber, *ituWorkedQLCDNumber,
+                *dokConfirmedQLCDNumber, *dokWorkedQLCDNumber,
                 *qsoConfirmedQLCDNumber, *qsoWorkedQLCDNumber,
                 *yearlyQSOLCDNumber, *yearlyDXCCQLCDNumber, *yearlyCQQLCDNumber, *yearlyScoreQLCDNumber;
     QLabel *yearlyLabelN, *yearlyScoreLabelN;

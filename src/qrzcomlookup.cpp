@@ -26,11 +26,13 @@ void QRZComLookup::lookup(const QString &call)
     if (!isReady() || call.trimmed().length() < 3) return;
     QString c = call.trimmed().toUpper();
     const QStringList parts = c.split(QLatin1Char('/'), Qt::SkipEmptyParts);
+    const QString full = c;
     if (parts.size() > 1)
     {
         c = parts.at(0);
         for (const QString &p : parts) if (p.length() > c.length()) c = p;
     }
+    if (c != full) origCall.insert(c, full);
     if (sid.isEmpty())
     {
         if (!pending.contains(c)) pending << c;
@@ -98,5 +100,8 @@ void QRZComLookup::onLookup()
     static const QRegularExpression zip("^\\s*\\d{4,6}\\s+");
     qth.remove(zip);
 
-    emit dataReady(call, name, qth, qrzTag(xml, QStringLiteral("grid")));
+    // Atdodam PILNO zimi, ne bazes - citadi UPDATE neatrod DB6LL/P
+    const QString out = origCall.value(call, call);
+    origCall.remove(call);
+    emit dataReady(out, name, qth, qrzTag(xml, QStringLiteral("grid")));
 }

@@ -7742,9 +7742,12 @@ void MainWindow::slotUpdateFromCallbook()
     if (!logUpdater || !qrzLookup) return;
     if (logUpdater->isRunning()) { logUpdater->stop(); return; }
     QStringList calls;
-    QSqlQuery q("SELECT DISTINCT call FROM log WHERE "
-                "(name IS NULL OR name='') OR (qth IS NULL OR qth='') "
-                "OR (gridsquare IS NULL OR gridsquare='') ORDER BY call");
+    QSqlQuery q;
+    q.prepare("SELECT DISTINCT call FROM log WHERE lognumber=:log AND ("
+              "(name IS NULL OR name='') OR (qth IS NULL OR qth='') "
+              "OR (gridsquare IS NULL OR gridsquare='')) ORDER BY call");
+    q.bindValue(":log", currentLog);
+    q.exec();
     while (q.next()) calls << q.value(0).toString();
     if (calls.isEmpty()) return;
     if (QMessageBox::question(this, tr("KLog - Update from callbook"),

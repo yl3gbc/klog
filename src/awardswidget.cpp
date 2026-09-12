@@ -25,6 +25,7 @@
  *****************************************************************************/
 
 #include "awardswidget.h"
+#include <QSqlQuery>
 
 AwardsWidget::AwardsWidget(DataProxy_SQLite *dp, World *injectedWorld, QWidget *parent) :
     QWidget(parent)
@@ -39,6 +40,10 @@ AwardsWidget::AwardsWidget(DataProxy_SQLite *dp, World *injectedWorld, QWidget *
     dxccWorkedQLCDNumber = new QLCDNumber;
     wazConfirmedQLCDNumber = new QLCDNumber;
     wazWorkedQLCDNumber = new QLCDNumber;
+    ituConfirmedQLCDNumber = new QLCDNumber;
+    ituWorkedQLCDNumber = new QLCDNumber;
+    dokConfirmedQLCDNumber = new QLCDNumber;
+    dokWorkedQLCDNumber = new QLCDNumber;
     //localConfirmedQLCDNumber = new QLCDNumber;
     //localWorkedQLCDNumber = new QLCDNumber;
     qsoConfirmedQLCDNumber = new QLCDNumber;
@@ -121,6 +126,12 @@ void AwardsWidget::createUI()
 
     QLabel *wazLabelN = new QLabel(tr("WAZ"));
     wazLabelN->setAlignment(Qt::AlignVCenter | Qt::AlignCenter);
+
+    QLabel *ituLabelN = new QLabel(tr("ITU"));
+    ituLabelN->setAlignment(Qt::AlignVCenter | Qt::AlignCenter);
+
+    QLabel *dokLabelN = new QLabel(tr("DARC DOK"));
+    dokLabelN->setAlignment(Qt::AlignVCenter | Qt::AlignCenter);
 
     // qLabel *localLabelN = new QLabel(tr("Local"));
     //localLabelN->setAlignment(Qt::AlignVCenter | Qt::AlignCenter);
@@ -235,18 +246,24 @@ void AwardsWidget::createUI()
       //qDebug() << "AwardsWidget::createUI-162"  ;
     //dxUpRightAwardsTabLayout->addWidget(localConfirmedQLCDNumber, 3, 2);
       //qDebug() << "AwardsWidget::createUI-163"  ;
-    dxUpRightAwardsTabLayout->addWidget(qsoNLabelN, 4, 0);
+    dxUpRightAwardsTabLayout->addWidget(ituLabelN, 3, 0);
+    dxUpRightAwardsTabLayout->addWidget(ituWorkedQLCDNumber, 3, 1);
+    dxUpRightAwardsTabLayout->addWidget(ituConfirmedQLCDNumber, 3, 2);
+    dxUpRightAwardsTabLayout->addWidget(dokLabelN, 4, 0);
+    dxUpRightAwardsTabLayout->addWidget(dokWorkedQLCDNumber, 4, 1);
+    dxUpRightAwardsTabLayout->addWidget(dokConfirmedQLCDNumber, 4, 2);
+    dxUpRightAwardsTabLayout->addWidget(qsoNLabelN, 5, 0);
       //qDebug() << "AwardsWidget::createUI-164"  ;
-    dxUpRightAwardsTabLayout->addWidget(qsoWorkedQLCDNumber, 4, 1);
+    dxUpRightAwardsTabLayout->addWidget(qsoWorkedQLCDNumber, 5, 1);
       //qDebug() << "AwardsWidget::createUI-165"  ;
-    dxUpRightAwardsTabLayout->addWidget(qsoConfirmedQLCDNumber, 4, 2);
+    dxUpRightAwardsTabLayout->addWidget(qsoConfirmedQLCDNumber, 5, 2);
       //qDebug() << "AwardsWidget::createUI-166"  ;
-    dxUpRightAwardsTabLayout->addLayout(yearlyTLayout, 5, 0);
+    dxUpRightAwardsTabLayout->addLayout(yearlyTLayout, 6, 0);
       //qDebug() << "AwardsWidget::createUI-167"  ;
-    dxUpRightAwardsTabLayout->addLayout(yearlyDLayout, 5, 1, 1, -1);
+    dxUpRightAwardsTabLayout->addLayout(yearlyDLayout, 6, 1, 1, -1);
       //qDebug() << "AwardsWidget::createUI-168"  ;
-    dxUpRightAwardsTabLayout->addWidget(includeModeForNeededCheckBox, 6, 0);
-    dxUpRightAwardsTabLayout->addWidget(recalculateAwardsButton, 6, 1);
+    dxUpRightAwardsTabLayout->addWidget(includeModeForNeededCheckBox, 7, 0);
+    dxUpRightAwardsTabLayout->addWidget(recalculateAwardsButton, 7, 1);
 
       //qDebug() << "AwardsWidget::createUI-200"  ;
     setLayout(dxUpRightAwardsTabLayout);
@@ -362,6 +379,27 @@ void AwardsWidget::showAwards()
     dxccConfirmedQLCDNumber->display(dataProxy->getFieldInBand(DXCC, "ALL", true, "ALL", currentLog, modeFilter));
     wazWorkedQLCDNumber->display(awards->getWAZWorked(currentLog, modeFilter));
     wazConfirmedQLCDNumber->display(awards->getWAZConfirmed(currentLog, modeFilter));
+
+    // KLogNG: ITU zonas un DARC DOK
+    {
+        QSqlQuery q;
+        q.prepare("SELECT count(DISTINCT ituz) FROM log WHERE lognumber=:l AND ituz>0");
+        q.bindValue(":l", currentLog);
+        if (q.exec() && q.next()) ituWorkedQLCDNumber->display(q.value(0).toInt());
+        q.prepare("SELECT count(DISTINCT ituz) FROM log WHERE lognumber=:l AND ituz>0 "
+                  "AND (lotw_qsl_rcvd='Y' OR qsl_rcvd='Y' OR eqsl_qsl_rcvd='Y')");
+        q.bindValue(":l", currentLog);
+        if (q.exec() && q.next()) ituConfirmedQLCDNumber->display(q.value(0).toInt());
+        q.prepare("SELECT count(DISTINCT darc_dok) FROM log WHERE lognumber=:l "
+                  "AND darc_dok IS NOT NULL AND darc_dok<>''");
+        q.bindValue(":l", currentLog);
+        if (q.exec() && q.next()) dokWorkedQLCDNumber->display(q.value(0).toInt());
+        q.prepare("SELECT count(DISTINCT darc_dok) FROM log WHERE lognumber=:l "
+                  "AND darc_dok IS NOT NULL AND darc_dok<>'' "
+                  "AND (lotw_qsl_rcvd='Y' OR qsl_rcvd='Y' OR eqsl_qsl_rcvd='Y')");
+        q.bindValue(":l", currentLog);
+        if (q.exec() && q.next()) dokConfirmedQLCDNumber->display(q.value(0).toInt());
+    }
 
     showDXMarathon(selectedYear);
     emit debugLog(Q_FUNC_INFO, "End", Devel);

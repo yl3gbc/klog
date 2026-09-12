@@ -4,6 +4,7 @@
 #include <QObject>
 #include <QString>
 #include <QStringList>
+#include <QHash>
 #include <QNetworkAccessManager>
 
 // QRZ.com XML API (xml.qrz.com/xml/1.34): vards, QTH, lokators.
@@ -30,6 +31,7 @@ private:
     QNetworkAccessManager net;
     QString user, pass, sid;
     QStringList pending;
+    QHash<QString, QString> origCall;   // baze -> pilna zime
 };
 
 #endif
