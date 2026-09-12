@@ -44,6 +44,8 @@ AwardsWidget::AwardsWidget(DataProxy_SQLite *dp, World *injectedWorld, QWidget *
     ituWorkedQLCDNumber = new QLCDNumber;
     dokConfirmedQLCDNumber = new QLCDNumber;
     dokWorkedQLCDNumber = new QLCDNumber;
+    wasConfirmedQLCDNumber = new QLCDNumber;
+    wasWorkedQLCDNumber = new QLCDNumber;
     //localConfirmedQLCDNumber = new QLCDNumber;
     //localWorkedQLCDNumber = new QLCDNumber;
     qsoConfirmedQLCDNumber = new QLCDNumber;
@@ -130,6 +132,9 @@ void AwardsWidget::createUI()
     QLabel *ituLabelN = new QLabel(tr("ITU"));
     ituLabelN->setAlignment(Qt::AlignVCenter | Qt::AlignCenter);
 
+    QLabel *wasLabelN = new QLabel(tr("WAS"));
+    wasLabelN->setAlignment(Qt::AlignVCenter | Qt::AlignCenter);
+
     QLabel *dokLabelN = new QLabel(tr("DARC DOK"));
     dokLabelN->setAlignment(Qt::AlignVCenter | Qt::AlignCenter);
 
@@ -154,6 +159,12 @@ void AwardsWidget::createUI()
     qsoNLabelN->setFrameStyle(QFrame::StyledPanel);
     wazLabelN->setFrameShadow(QFrame::Raised);
     wazLabelN->setFrameStyle(QFrame::StyledPanel);
+    ituLabelN->setFrameShadow(QFrame::Raised);
+    ituLabelN->setFrameStyle(QFrame::StyledPanel);
+    wasLabelN->setFrameShadow(QFrame::Raised);
+    wasLabelN->setFrameStyle(QFrame::StyledPanel);
+    dokLabelN->setFrameShadow(QFrame::Raised);
+    dokLabelN->setFrameStyle(QFrame::StyledPanel);
     //localLabelN->setFrameShadow(QFrame::Raised);
     //localLabelN->setFrameStyle(QFrame::StyledPanel);
     dxccLabelN->setFrameShadow(QFrame::Raised);
@@ -186,6 +197,9 @@ void AwardsWidget::createUI()
     //localLabelN->setFrameStyle(QFrame::StyledPanel | QFrame::Raised);
     qsoNLabelN->setFrameStyle(QFrame::StyledPanel | QFrame::Raised);
     wazLabelN->setFrameStyle(QFrame::StyledPanel | QFrame::Raised);
+    ituLabelN->setFrameStyle(QFrame::StyledPanel | QFrame::Raised);
+    wasLabelN->setFrameStyle(QFrame::StyledPanel | QFrame::Raised);
+    dokLabelN->setFrameStyle(QFrame::StyledPanel | QFrame::Raised);
     dxccLabelN->setFrameStyle(QFrame::StyledPanel | QFrame::Raised);
     workedLabelN->setFrameStyle(QFrame::StyledPanel | QFrame::Raised);
     confirmedLabelN->setFrameStyle(QFrame::StyledPanel | QFrame::Raised);
@@ -249,21 +263,24 @@ void AwardsWidget::createUI()
     dxUpRightAwardsTabLayout->addWidget(ituLabelN, 3, 0);
     dxUpRightAwardsTabLayout->addWidget(ituWorkedQLCDNumber, 3, 1);
     dxUpRightAwardsTabLayout->addWidget(ituConfirmedQLCDNumber, 3, 2);
-    dxUpRightAwardsTabLayout->addWidget(dokLabelN, 4, 0);
-    dxUpRightAwardsTabLayout->addWidget(dokWorkedQLCDNumber, 4, 1);
-    dxUpRightAwardsTabLayout->addWidget(dokConfirmedQLCDNumber, 4, 2);
-    dxUpRightAwardsTabLayout->addWidget(qsoNLabelN, 5, 0);
+    dxUpRightAwardsTabLayout->addWidget(wasLabelN, 4, 0);
+    dxUpRightAwardsTabLayout->addWidget(wasWorkedQLCDNumber, 4, 1);
+    dxUpRightAwardsTabLayout->addWidget(wasConfirmedQLCDNumber, 4, 2);
+    dxUpRightAwardsTabLayout->addWidget(dokLabelN, 5, 0);
+    dxUpRightAwardsTabLayout->addWidget(dokWorkedQLCDNumber, 5, 1);
+    dxUpRightAwardsTabLayout->addWidget(dokConfirmedQLCDNumber, 5, 2);
+    dxUpRightAwardsTabLayout->addWidget(qsoNLabelN, 6, 0);
       //qDebug() << "AwardsWidget::createUI-164"  ;
-    dxUpRightAwardsTabLayout->addWidget(qsoWorkedQLCDNumber, 5, 1);
+    dxUpRightAwardsTabLayout->addWidget(qsoWorkedQLCDNumber, 6, 1);
       //qDebug() << "AwardsWidget::createUI-165"  ;
-    dxUpRightAwardsTabLayout->addWidget(qsoConfirmedQLCDNumber, 5, 2);
+    dxUpRightAwardsTabLayout->addWidget(qsoConfirmedQLCDNumber, 6, 2);
       //qDebug() << "AwardsWidget::createUI-166"  ;
-    dxUpRightAwardsTabLayout->addLayout(yearlyTLayout, 6, 0);
+    dxUpRightAwardsTabLayout->addLayout(yearlyTLayout, 7, 0);
       //qDebug() << "AwardsWidget::createUI-167"  ;
-    dxUpRightAwardsTabLayout->addLayout(yearlyDLayout, 6, 1, 1, -1);
+    dxUpRightAwardsTabLayout->addLayout(yearlyDLayout, 7, 1, 1, -1);
       //qDebug() << "AwardsWidget::createUI-168"  ;
-    dxUpRightAwardsTabLayout->addWidget(includeModeForNeededCheckBox, 7, 0);
-    dxUpRightAwardsTabLayout->addWidget(recalculateAwardsButton, 7, 1);
+    dxUpRightAwardsTabLayout->addWidget(includeModeForNeededCheckBox, 8, 0);
+    dxUpRightAwardsTabLayout->addWidget(recalculateAwardsButton, 8, 1);
 
       //qDebug() << "AwardsWidget::createUI-200"  ;
     setLayout(dxUpRightAwardsTabLayout);
@@ -390,6 +407,17 @@ void AwardsWidget::showAwards()
                   "AND (lotw_qsl_rcvd='Y' OR qsl_rcvd='Y' OR eqsl_qsl_rcvd='Y')");
         q.bindValue(":l", currentLog);
         if (q.exec() && q.next()) ituConfirmedQLCDNumber->display(q.value(0).toInt());
+        // WAS: tikai ASV stati (DXCC 291), jo state lauku lieto ari citas valstis
+        q.prepare("SELECT count(DISTINCT state) FROM log WHERE lognumber=:l "
+                  "AND dxcc=291 AND state IS NOT NULL AND state<>''");
+        q.bindValue(":l", currentLog);
+        if (q.exec() && q.next()) wasWorkedQLCDNumber->display(q.value(0).toInt());
+        q.prepare("SELECT count(DISTINCT state) FROM log WHERE lognumber=:l "
+                  "AND dxcc=291 AND state IS NOT NULL AND state<>'' "
+                  "AND (lotw_qsl_rcvd='Y' OR qsl_rcvd='Y' OR eqsl_qsl_rcvd='Y')");
+        q.bindValue(":l", currentLog);
+        if (q.exec() && q.next()) wasConfirmedQLCDNumber->display(q.value(0).toInt());
+
         q.prepare("SELECT count(DISTINCT darc_dok) FROM log WHERE lognumber=:l "
                   "AND darc_dok IS NOT NULL AND darc_dok<>''");
         q.bindValue(":l", currentLog);

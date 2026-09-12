@@ -82,6 +82,7 @@ private:
                 *wazConfirmedQLCDNumber, *wazWorkedQLCDNumber,
                 *localConfirmedQLCDNumber, *localWorkedQLCDNumber,
                 *ituConfirmedQLCDNumber, *ituWorkedQLCDNumber,
+                *wasConfirmedQLCDNumber, *wasWorkedQLCDNumber,
                 *dokConfirmedQLCDNumber, *dokWorkedQLCDNumber,
                 *qsoConfirmedQLCDNumber, *qsoWorkedQLCDNumber,
                 *yearlyQSOLCDNumber, *yearlyDXCCQLCDNumber, *yearlyCQQLCDNumber, *yearlyScoreQLCDNumber;
