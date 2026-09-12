@@ -266,6 +266,7 @@ set(KLOG_TS_FILES
     translations/klog_hr.ts
     translations/klog_it.ts
     translations/klog_ja.ts
+    translations/klog_ka.ts
     translations/klog_lv.ts
     translations/klog_nl.ts
     translations/klog_pl.ts
