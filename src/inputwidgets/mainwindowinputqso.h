@@ -53,6 +53,9 @@ public:
     void setPaletteRightDXLocator(const bool _ok);
 
     QString getDXLocator();
+    QString getDOK();
+    void setDOK(const QString &_st);
+    void showDOKField(bool _show);
     void setDXLocator(const QString &_loc, bool _completing = false);
     void setNewGrid(const bool _new, const QString &_text = QString());   // Turns the DX Locator label into a red "New Locator..." when the grid is new
 
@@ -130,6 +133,8 @@ private:
     QLineEdit *rstTXLineEdit, *rstRXLineEdit, *qthLineEdit, *locatorLineEdit, *nameLineEdit;
     QLineEdit *commentLineEdit;
     QLabel *servicesLabel;
+    QLineEdit *dokLineEdit;
+    QLabel *dokLabel;
     QLabel *clubsLabel;
     QLabel *locLabel;           // DX Locator label; turns into a red "New Locator" when the grid is new
     QDoubleSpinBox *rxPowerSpinBox,  *txFreqSpinBox, *rxFreqSpinBox;

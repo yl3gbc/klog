@@ -28,6 +28,7 @@
 //
 
 #include "mainwindowinputqso.h"
+#include <QDebug>
 
 MainWindowInputQSO::MainWindowInputQSO(DataProxy_SQLite *dp, QWidget *parent) :
     QWidget(parent)
@@ -189,9 +190,19 @@ void MainWindowInputQSO::createUI()
     freqLayout->addLayout(freqTitleLayout);
     freqLayout->addLayout(freqDataLayout);
 
+    // KLogNG: DARC DOK lauks, redzams tikai vacu stacijam
+    dokLabel = new QLabel(tr("DARC DOK"));
+    dokLabel->setAlignment(Qt::AlignCenter);
+    dokLineEdit = new QLineEdit;
+    dokLineEdit->setToolTip(tr("DARC DOK of this station (German stations only)."));
+    dokLabel->hide();
+    dokLineEdit->hide();
+
     QVBoxLayout *locVLayout = new QVBoxLayout;
     locVLayout->addWidget(locLabel);
     locVLayout->addWidget(locatorLineEdit);
+    locVLayout->addWidget(dokLabel);
+    locVLayout->addWidget(dokLineEdit);
 
     QVBoxLayout *freqLocLayout = new QVBoxLayout;
     freqLocLayout->addLayout(freqLayout);
@@ -967,4 +978,23 @@ void MainWindowInputQSO::setClubs(const QString &html, const QString &tip)
     if (!clubsLabel) return;
     clubsLabel->setText(html);
     clubsLabel->setToolTip(tip);
+}
+
+
+QString MainWindowInputQSO::getDOK()
+{
+    return dokLineEdit ? dokLineEdit->text().trimmed().toUpper() : QString();
+}
+
+void MainWindowInputQSO::setDOK(const QString &_st)
+{
+    if (dokLineEdit) dokLineEdit->setText(_st.trimmed().toUpper());
+}
+
+void MainWindowInputQSO::showDOKField(bool _show)
+{
+    if (!dokLabel || !dokLineEdit) return;
+    dokLabel->setVisible(_show);
+    dokLineEdit->setVisible(_show);
+    if (!_show) dokLineEdit->clear();
 }

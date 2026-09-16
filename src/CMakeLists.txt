@@ -286,6 +286,7 @@ add_executable(klog WIN32 MACOSX_BUNDLE
     callsignservices.cpp callsignservices.h
     clubmembers.cpp clubmembers.h
     hamqth.cpp hamqth.h
+    dokdata.cpp dokdata.h
     qrzcomlookup.cpp qrzcomlookup.h
     logupdater.cpp logupdater.h
     wsjtxlogwatcher.cpp wsjtxlogwatcher.h

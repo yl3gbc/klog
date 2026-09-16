@@ -57,8 +57,6 @@ void HamQTH::onLogin()
 
     const QString xml = QString::fromUtf8(r->readAll());
     sid = tagValue(xml, QStringLiteral("session_id"));
-    qWarning() << "KLOGNG HAMQTH LOGIN: sid=" << (sid.isEmpty() ? QStringLiteral("TUKSS") : sid.left(8))
-               << " pending=" << pending.size() << " atbilde=" << xml.left(200);
     if (sid.isEmpty()) { pending.clear(); return; }
 
     const QStringList q = pending;
@@ -68,7 +66,6 @@ void HamQTH::onLogin()
 
 void HamQTH::doLookup(const QString &call)
 {
-    qWarning() << "KLOGNG HAMQTH DOLOOKUP:" << call;
     QUrl url("https://www.hamqth.com/xml.php");
     QUrlQuery q;
     q.addQueryItem("id", sid);
@@ -91,18 +88,15 @@ void HamQTH::onLookup()
     const QString xml  = QString::fromUtf8(r->readAll());
 
     // Sesija beigusies - pieteicamies no jauna un atkartojam
-    if (xml.contains(QStringLiteral("<error>"), Qt::CaseInsensitive) &&
-        xml.contains(QStringLiteral("session"), Qt::CaseInsensitive))
+    // Tikai IStas sesijas kludas, ne "callsign not found"
+    if (xml.contains(QStringLiteral("Session does not exist"), Qt::CaseInsensitive) ||
+        xml.contains(QStringLiteral("Session expired"), Qt::CaseInsensitive) ||
+        xml.contains(QStringLiteral("Wrong user name or password"), Qt::CaseInsensitive))
     {
         sid.clear();
-        lookup(call);
         return;
     }
 
-    qWarning() << "KLOGNG HAMQTH ATBILDE:" << call
-               << "dok=" << tagValue(xml, QStringLiteral("dok"))
-               << "nick=" << tagValue(xml, QStringLiteral("nick"))
-               << "err=" << xml.contains(QStringLiteral("<error>"));
     emit dataReady(call,
                    tagValue(xml, QStringLiteral("dok")),
                    tagValue(xml, QStringLiteral("nick")),

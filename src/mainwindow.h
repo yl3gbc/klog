@@ -513,6 +513,7 @@ private:
     class CallsignServices *callsignServices = nullptr;
     class ClubMembers *clubMembers = nullptr;
     class HamQTH *hamQTH = nullptr;
+    class DOKData *dokData = nullptr;
     class QRZComLookup *qrzLookup = nullptr;
     class LogUpdater *logUpdater = nullptr;
     class WSJTXLogWatcher *wsjtxWatcher = nullptr;

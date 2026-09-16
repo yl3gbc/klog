@@ -41,6 +41,7 @@
 #include "callsignservices.h"
 #include "clubmembers.h"
 #include "hamqth.h"
+#include "dokdata.h"
 #include "qrzcomlookup.h"
 #include "logupdater.h"
 #include "wsjtxlogwatcher.h"
@@ -893,6 +894,7 @@ void MainWindow::createStatusBar()
                     this, SLOT(slotUpdateServices(QString)));
         callsignServices = svc;
         clubMembers = new ClubMembers(util->getHomeDir() + QStringLiteral("/data/clubs"), this);
+        dokData = new DOKData(util->getHomeDir() + QStringLiteral("/data"), this);
         hamQTH = new HamQTH(this);
         {
             QSettings st(util->getCfgFile(), QSettings::IniFormat);
@@ -7680,6 +7682,23 @@ void MainWindow::slotUpdateServices(const QString &call)
     QStringList v;
     if (qrzLookup && qrzLookup->isReady())
         qrzLookup->lookup(c);
+    // DOK lauks tikai vacu stacijam (DXCC 230)
+    {
+        static const QStringList dePfx = {"DA","DB","DC","DD","DE","DF","DG","DH",
+                                          "DI","DJ","DK","DL","DM","DN","DO","DP",
+                                          "DQ","DR"};
+        bool isDE = false;
+        for (const QString &p : dePfx) if (c.startsWith(p)) { isDE = true; break; }
+        if (QSOTabWidget) QSOTabWidget->showDOKField(isDE);
+        if (isDE && dokData && QSOTabWidget)
+        {
+            const QString sd = dokData->specialDOK(c, mainQSOEntryWidget->getDate());
+            if (!sd.isEmpty())
+            {
+                QSOTabWidget->setDOK(sd);
+            }
+        }
+    }
     if (hamQTH && hamQTH->isReady())
         hamQTH->lookup(c);
     if (callsignServices && callsignServices->usesLoTW(c))
@@ -7715,6 +7734,8 @@ void MainWindow::slotHamQTHData(const QString &call, const QString &dok,
     }
 
     if (dok.isEmpty()) return;
+    if (QSOTabWidget && QSOTabWidget->getDOK().isEmpty())
+        QSOTabWidget->setDOK(dok);
     QSqlQuery q;
     q.prepare("UPDATE log SET darc_dok=:dok WHERE call=:call "
               "AND (darc_dok IS NULL OR darc_dok='')");
