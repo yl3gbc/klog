@@ -55,6 +55,20 @@ bool ProfileManager::ensureSchemaAndMigrate(QString *errorOut)
         " PRIMARY KEY (profile_id, club))"));
     if (!exec(q, "createClubs")) return false;
 
+    // KLogNG: korespondenta klubu numuri QSO ieraksta.
+    // Atseviskas rindas, lai diplomu vaicajumi ir tiri.
+    q.prepare(QStringLiteral(
+        "CREATE TABLE IF NOT EXISTS qso_clubs ("
+        " qso_id INTEGER NOT NULL,"
+        " club VARCHAR(20) NOT NULL,"
+        " member_nr VARCHAR(20),"
+        " PRIMARY KEY (qso_id, club))"));
+    if (!exec(q, "createQSOClubs")) return false;
+
+    q.prepare(QStringLiteral(
+        "CREATE INDEX IF NOT EXISTS idx_qso_clubs_club ON qso_clubs(club)"));
+    exec(q, "createQSOClubsIndex");
+
     // Papildu KLog My Data lauki profila (idempotenti - kluda ja jau ir, to ignorejam)
     const QStringList newCols = {
         "name VARCHAR", "address1 VARCHAR", "address2 VARCHAR", "address3 VARCHAR",

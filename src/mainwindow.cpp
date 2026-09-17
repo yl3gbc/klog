@@ -1204,6 +1204,8 @@ void MainWindow::slotQRZReturnPressed()
     if (modify)
         qsoInUI.setQSOid(modifyingQSOid);
     int addedOK = dataProxy->addQSO(qsoInUI);
+    if (addedOK > 0 && clubMembers)
+        clubMembers->saveForQSO(addedOK, qsoInUI.getCall());
    //qDebug() << Q_FUNC_INFO << ": id: " <<  QString::number(addedOK);
     if (addedOK>0)
     {
@@ -6621,6 +6623,8 @@ void MainWindow::autoLogUDPQso(const QSO &_qso, const QDateTime &_arrivalTime)
         return;
 
     int addedQSO = dataProxy->addQSO(q);
+    if (addedQSO > 0 && clubMembers)
+        clubMembers->saveForQSO(addedQSO, q.getCall());
     if (addedQSO > 0)
     {
         actionsJustAfterAddingOneQSO(q);

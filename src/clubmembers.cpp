@@ -3,6 +3,7 @@
 #include <QFile>
 #include <QTextStream>
 #include "callsignservices.h"
+#include <QSqlQuery>
 
 ClubMembers::ClubMembers(const QString &dataDir, QObject *parent)
     : QObject(parent), dir(dataDir)
@@ -60,4 +61,28 @@ QStringList ClubMembers::lookup(const QString &call) const
                               : QStringLiteral("%1 #%2").arg(cl.shortName, num));
     }
     return out;
+}
+
+// Saglaba korespondenta klubu numurus QSO ierakstam.
+// Meklē pilno zimi, tad bazes zimi bez prefiksa/sufiksa.
+void ClubMembers::saveForQSO(int qsoId, const QString &call) const
+{
+    if (qsoId <= 0) return;
+    const QString c = call.trimmed().toUpper();
+    if (c.length() < 3) return;
+    const QString base = CallsignServices::baseCall(c);
+
+    for (const Club &cl : clubs)
+    {
+        if (!cl.members.contains(c) && !cl.members.contains(base)) continue;
+        const QString num = cl.members.contains(c) ? cl.members.value(c)
+                                                   : cl.members.value(base);
+        QSqlQuery q;
+        q.prepare("INSERT OR REPLACE INTO qso_clubs (qso_id, club, member_nr) "
+                  "VALUES (:id, :club, :nr)");
+        q.bindValue(":id", qsoId);
+        q.bindValue(":club", cl.shortName);
+        q.bindValue(":nr", num);
+        q.exec();
+    }
 }

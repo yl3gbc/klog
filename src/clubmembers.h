@@ -18,6 +18,7 @@ public:
     // Atgriež "AGB #265" formā, katram klubam, kur zīme atrasta
     QStringList lookup(const QString &call) const;
     void reload();
+    void saveForQSO(int qsoId, const QString &call) const;
     int clubCount() const { return clubs.size(); }
 
 private:
