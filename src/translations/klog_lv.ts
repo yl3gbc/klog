@@ -1,210 +1,191 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
+<?xml version='1.0' encoding='utf-8'?>
 <TS version="2.1" language="lv_LV">
 <context>
     <name>AboutDialog</name>
     <message>
-        <location filename="../aboutdialog.cpp" line="44"/>
+        <location filename="../aboutdialog.cpp" line="49" />
         <source>About KLog</source>
-        <translation>Klogs</translation>
+        <translation>Klosg DXCC</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="51"/>
+        <location filename="../aboutdialog.cpp" line="57" />
         <source>By</source>
         <translation>Autors</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="53"/>
+        <location filename="../aboutdialog.cpp" line="59" />
         <source>KLog is a free logbook for hamradio operators.</source>
         <translation>KLog ir bezmaksas hamradio operatoriem.žurnāls.</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="54"/>
+        <location filename="../aboutdialog.cpp" line="60" />
         <source>Please be aware that this is a development release and it may contain many bugs.&lt;br&gt;Backup your data before using this software!</source>
         <translation>Lūdzu, ņemiet vērā, ka šis ir izstrādes laidiens un tajā var būt daudz kļūdu.&lt;br&gt;Pirms šīs programmatūras izmantošanas dublējiet savus datus!</translation>
     </message>
     <message>
-        <source>Since 0.6.2, KLog has been fully rewritten to provide a cross-platform application that runs on all major operating systems (Linux, macOS and Windows) and to support new functionality.</source>
-        <translation type="vanished">Kopš 0.6.2 KLog ir pilnībā pārrakstīts, lai nodrošinātu starpplatformu lietojumprogrammu, kas darbojas visās lielākajās operētājsistēmās (Linux, macOS un Windows), un atbalstītu jaunas funkcionalitātes.</translation>
-    </message>
-    <message>
-        <location filename="../aboutdialog.cpp" line="58"/>
-        <source>Please provide your review in KLog&apos;s eHam review page:</source>
+        <location filename="../aboutdialog.cpp" line="66" />
+        <source>Please provide your review in KLog's eHam review page:</source>
         <translation>Lūdzu, sniedziet savu atsauksmi KLog eHam pārskata lapā:</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="61"/>
+        <location filename="../aboutdialog.cpp" line="70" />
         <source>Find more information and the latest release at</source>
         <translation>Plašāku informāciju un jaunāko izlaidumu meklējiet vietnē</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="62"/>
+        <location filename="../aboutdialog.cpp" line="72" />
         <source>Author</source>
         <translation>Autors</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="85"/>
-        <location filename="../aboutdialog.cpp" line="86"/>
+        <location filename="../aboutdialog.cpp" line="97" />
+        <location filename="../aboutdialog.cpp" line="98" />
+        <location filename="../aboutdialog.cpp" line="99" />
         <source>today</source>
         <translation>šodien</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="85"/>
+        <location filename="../aboutdialog.cpp" line="97" />
         <source>Main developer</source>
         <translation>Galvenais izstrādātājs</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="91"/>
+        <location filename="../aboutdialog.cpp" line="104" />
         <source>KLog is developed by a very small team and you are invited to join!</source>
         <translation>KLog izstrādā ļoti maza komanda, un jūs esat aicināti pievienoties!</translation>
     </message>
     <message>
-        <source>If you want to provide support you are welcome to join the &lt;a href=&quot;https://lists.nongnu.org/mailman/listinfo/klog-devel&quot;&gt;KLog development mailing list&lt;/a&gt;!</source>
-        <translation type="vanished">Ja vēlaties sniegt atbalstu, laipni lūdzam pievienoties &lt;a href=&quot;https://lists.nongnu.org/mailman/listinfo/klog-devel&quot;&gt;KLog izstrādes adresātu sarakstam&lt;/a&gt;!</translation>
+        <location filename="../aboutdialog.cpp" line="124" />
+        <source>If KLog is still not in your language and you want to help us, you are welcome to contact us through the &lt;a href=https://t.me/klogdevel&gt;KLog-devel telegram group&lt;/a&gt;!</source>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="91"/>
+        <location filename="../aboutdialog.cpp" line="104" />
         <source>You can also help us by sending bug reports or small code contributions, ideas or whatever you think may improve KLog.</source>
         <translation>Varat arī mums palīdzēt, nosūtot kļūdu ziņojumus vai nelielu koda ieguldījumu, idejas vai visu, kas, jūsuprāt, varētu uzlabot KLog.</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="92"/>
-        <location filename="../aboutdialog.cpp" line="171"/>
+        <location filename="../aboutdialog.cpp" line="104" />
+        <source>If you want to provide support you are welcome to join the &lt;a href=https://t.me/klogdevel&gt;KLog-devel telegram group&lt;/a&gt;!</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../aboutdialog.cpp" line="105" />
+        <location filename="../aboutdialog.cpp" line="184" />
         <source>Authors</source>
         <translation>Autori</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="111"/>
+        <location filename="../aboutdialog.cpp" line="124" />
         <source>Translators bring KLog into your language. They are really an important part of the KLog development team.</source>
         <translation>Tulkotājimi ienes KLog jūsu valodā. Viņi patiešām ir svarīga KLog izstrādes komandas sastāvdaļa.</translation>
     </message>
     <message>
-        <source>If KLog is still not in your language and you want to help us, you are welcome to contact us through the &lt;a href=&quot;https://lists.nongnu.org/mailman/listinfo/klog-devel&quot;&gt;KLog development mailing list&lt;/a&gt;!</source>
-        <translation type="vanished">Ja KLog joprojām nav jūsu valodā un vēlaties mums palīdzēt, varat sazināties ar mums, izmantojot &lt;a href=&quot;https://lists.nongnu.org/mailman/listinfo/klog-devel&quot;&gt;KLog izstrādes vēstuli. saraksts&lt;/a&gt;!</translation>
-    </message>
-    <message>
-        <location filename="../aboutdialog.cpp" line="56"/>
+        <location filename="../aboutdialog.cpp" line="63" />
         <source>Since 0.6.2, KLog has been fully rewritten to provide a cross-platform application that runs on all major operating systems (GNU/Linux, macOS and Windows) and to support new functionality.</source>
         <translation>Kopš 0.6.2 KLog ir pilnībā pārrakstīts, lai nodrošinātu starpplatformu lietojumprogrammu, kas darbojas visās lielākajās operētājsistēmās (GNU/Linux, macOS un Windows), un atbalstītu jaunas funkcionalitātes.</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="91"/>
-        <source>If you want to provide support you are welcome to join the &lt;a href=&quot;https://groups.io/g/klog&quot;&gt;KLog mailing list&lt;/a&gt;!</source>
-        <translation>Ja vēlaties sniegt atbalstu, laipni lūdzam pievienoties &lt;a href=&quot;https://groups.io/g/klog&quot;&gt;KLog adresātu sarakstam&lt;/a&gt;!</translation>
-    </message>
-    <message>
-        <location filename="../aboutdialog.cpp" line="111"/>
-        <source>If KLog is still not in your language and you want to help us, you are welcome to contact us through the &lt;a href=&quot;https://groups.io/g/klog&quot;&gt;KLog mailing list&lt;/a&gt;!</source>
-        <translation>Ja KLog joprojām nav jūsu valodā un vēlaties mums palīdzēt, varat sazināties ar mums, izmantojot &lt;a href=&quot;https://groups.io/g/klog&quot;&gt;KLog adresātu sarakstu&lt;/a&gt;!</translation>
-    </message>
-    <message>
-        <location filename="../aboutdialog.cpp" line="112"/>
-        <location filename="../aboutdialog.cpp" line="172"/>
+        <location filename="../aboutdialog.cpp" line="125" />
+        <location filename="../aboutdialog.cpp" line="185" />
         <source>Translators</source>
         <translation>Tulkotāji</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="128"/>
-        <source>Privacy advisory</source>
-        <translation>Privātuma ieteikums</translation>
-    </message>
-    <message>
-        <location filename="../aboutdialog.cpp" line="129"/>
-        <source>KLog developers have included a feature that reports some user data to the KLog server with the sole purpose of identifying the number of installed versions, to focus development in one direction or another taking into account users&apos; needs.</source>
-        <translation>KLog izstrādātāji ir iekļāvuši funkciju, kas ziņo par dažiem lietotāja datiem KLog serverim ar vienīgo mērķi identificēt instalēto versiju skaitu, lai fokusētu attīstību vienā vai otrā virzienā, ņemot vērā lietotāju vajadzības.</translation>
-    </message>
-    <message>
-        <location filename="../aboutdialog.cpp" line="130"/>
-        <source>At present, the data that is provided is the following:</source>
-        <translation>Šobrīd sniegtie dati ir šādi:</translation>
-    </message>
-    <message>
-        <location filename="../aboutdialog.cpp" line="131"/>
-        <source>Callsign</source>
-        <translation>Izsaukuma signāls</translation>
-    </message>
-    <message>
-        <location filename="../aboutdialog.cpp" line="131"/>
-        <source>KLog version</source>
-        <translation>KLog versija</translation>
-    </message>
-    <message>
-        <location filename="../aboutdialog.cpp" line="131"/>
-        <source>Operating system</source>
-        <translation>Operētājsistēma</translation>
-    </message>
-    <message>
-        <location filename="../aboutdialog.cpp" line="132"/>
-        <source>Be aware that you can enable/disable this feature from the Misc tab in the Setup page.</source>
-        <translation>Ņemiet vērā, ka šo funkciju varat iespējot/atspējot iestatīšanas lapas cilnē Dažādi.</translation>
-    </message>
-    <message>
-        <location filename="../aboutdialog.cpp" line="170"/>
+        <location filename="../aboutdialog.cpp" line="183" />
         <source>KLog</source>
-        <translation>KLogs</translation>
+        <translation>KLog</translation>
+    </message>
+</context>
+<context>
+    <name>AddSpecialCallsignDialog</name>
+    <message>
+        <location filename="../setuppages/setuppageworldeditor.cpp" line="38" />
+        <source>Add Special Callsign</source>
+        <translation>Pievienot speciālo izsaukuma signālu</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="173"/>
-        <source>Privacy</source>
-        <translation>Privātums</translation>
+        <location filename="../setuppages/setuppageworldeditor.cpp" line="41" />
+        <source>e.g. RI1ANY</source>
+        <translation>piem., RI1ANY</translation>
+    </message>
+    <message>
+        <location filename="../setuppages/setuppageworldeditor.cpp" line="54" />
+        <source>Override CQ Zone:</source>
+        <translation>Aizstāt CQ zonu:</translation>
+    </message>
+    <message>
+        <location filename="../setuppages/setuppageworldeditor.cpp" line="60" />
+        <source>Override ITU Zone:</source>
+        <translation>Aizstāt ITU zonu:</translation>
+    </message>
+    <message>
+        <location filename="../setuppages/setuppageworldeditor.cpp" line="85" />
+        <source>Callsign:</source>
+        <translation>Izsaukuma signāls:</translation>
+    </message>
+    <message>
+        <location filename="../setuppages/setuppageworldeditor.cpp" line="86" />
+        <source>Entity:</source>
+        <translation>Entītija:</translation>
     </message>
 </context>
 <context>
     <name>Adif</name>
     <message>
-        <location filename="../adif.cpp" line="442"/>
+        <location filename="../adif.cpp" line="636" />
         <source>Uploaded</source>
         <translation>Augšupielādēts</translation>
     </message>
     <message>
-        <location filename="../adif.cpp" line="442"/>
+        <location filename="../adif.cpp" line="636" />
         <source>Do not Upload</source>
         <translation>Neaugšupielādēt</translation>
     </message>
     <message>
-        <location filename="../adif.cpp" line="442"/>
+        <location filename="../adif.cpp" line="636" />
         <source>Modified</source>
         <translation>Pārveidots</translation>
     </message>
     <message>
-        <location filename="../adif.cpp" line="452"/>
+        <location filename="../adif.cpp" line="646" />
         <source>Sent</source>
         <translation>Sūtīt</translation>
     </message>
     <message>
-        <location filename="../adif.cpp" line="452"/>
+        <location filename="../adif.cpp" line="646" />
         <source>Do not send</source>
         <translation>Nesūtiet</translation>
     </message>
     <message>
-        <location filename="../adif.cpp" line="452"/>
-        <location filename="../adif.cpp" line="462"/>
+        <location filename="../adif.cpp" line="646" />
+        <location filename="../adif.cpp" line="656" />
         <source>Requested</source>
         <translation>Pieprasīts</translation>
     </message>
     <message>
-        <location filename="../adif.cpp" line="452"/>
+        <location filename="../adif.cpp" line="646" />
         <source>Queued</source>
         <translation>Rindā</translation>
     </message>
     <message>
-        <location filename="../adif.cpp" line="452"/>
-        <location filename="../adif.cpp" line="462"/>
+        <location filename="../adif.cpp" line="646" />
+        <location filename="../adif.cpp" line="656" />
         <source>Invalid/Ignore</source>
         <translation>Nederīgs/Ignorēt</translation>
     </message>
     <message>
-        <location filename="../adif.cpp" line="462"/>
+        <location filename="../adif.cpp" line="656" />
         <source>Yes</source>
         <translation>Jā</translation>
     </message>
     <message>
-        <location filename="../adif.cpp" line="462"/>
+        <location filename="../adif.cpp" line="656" />
         <source>No</source>
         <translation>Nē</translation>
     </message>
     <message>
-        <location filename="../adif.cpp" line="462"/>
+        <location filename="../adif.cpp" line="656" />
         <source>Verified</source>
         <translation>Verificēt</translation>
     </message>
@@ -212,148 +193,140 @@
 <context>
     <name>AdifLoTWExportWidget</name>
     <message>
-        <location filename="../widgets/adiflotwexportwidget.cpp" line="95"/>
+        <location filename="../widgets/adiflotwexportwidget.cpp" line="96" />
         <source>Select the Station Callsign that you want to use to upload the log.</source>
         <translation>Atlasiet stacijas izsaukuma signālu, kuru vēlaties izmantot žurnāla augšupielādei.</translation>
     </message>
     <message>
-        <location filename="../widgets/adiflotwexportwidget.cpp" line="99"/>
+        <location filename="../widgets/adiflotwexportwidget.cpp" line="100" />
         <source>Select the start date to export the QSOs. The default date is the date of the first QSO with this station callsign.</source>
         <translation>Izvēlieties sākuma datumu, lai eksportētu QSO. Noklusējuma datums ir pirmā QSO datums ar šo stacijas izsaukuma signālu.</translation>
     </message>
     <message>
-        <location filename="../widgets/adiflotwexportwidget.cpp" line="103"/>
+        <location filename="../widgets/adiflotwexportwidget.cpp" line="104" />
         <source>Select the end date to export the QSOs. The default date is the date of the last QSO with this station callsign.</source>
         <translation>Atlasiet beigu datumu, lai eksportētu QSO. Noklusējuma datums ir pēdējā QSO datums ar šo stacijas izsaukuma signālu.</translation>
     </message>
     <message>
-        <location filename="../widgets/adiflotwexportwidget.cpp" line="106"/>
+        <location filename="../widgets/adiflotwexportwidget.cpp" line="107" />
         <source>Station callsign</source>
         <translation>Stacijas izsaukuma signāls</translation>
     </message>
     <message>
-        <location filename="../widgets/adiflotwexportwidget.cpp" line="109"/>
-        <location filename="../widgets/adiflotwexportwidget.cpp" line="127"/>
+        <location filename="../widgets/adiflotwexportwidget.cpp" line="110" />
+        <location filename="../widgets/adiflotwexportwidget.cpp" line="128" />
         <source>My Locator</source>
         <translation>mans Lokators</translation>
     </message>
     <message>
-        <location filename="../widgets/adiflotwexportwidget.cpp" line="112"/>
+        <location filename="../widgets/adiflotwexportwidget.cpp" line="113" />
         <source>Start date</source>
         <translation>Sākuma datums</translation>
     </message>
     <message>
-        <location filename="../widgets/adiflotwexportwidget.cpp" line="115"/>
+        <location filename="../widgets/adiflotwexportwidget.cpp" line="116" />
         <source>End date</source>
         <translation>Beigu datums</translation>
     </message>
     <message>
-        <location filename="../widgets/adiflotwexportwidget.cpp" line="117"/>
+        <location filename="../widgets/adiflotwexportwidget.cpp" line="118" />
         <source>Ok</source>
         <translation>Labi</translation>
     </message>
     <message>
-        <location filename="../widgets/adiflotwexportwidget.cpp" line="118"/>
+        <location filename="../widgets/adiflotwexportwidget.cpp" line="119" />
         <source>Cancel</source>
         <translation>Atcelt</translation>
     </message>
     <message>
-        <location filename="../widgets/adiflotwexportwidget.cpp" line="127"/>
+        <location filename="../widgets/adiflotwexportwidget.cpp" line="128" />
         <source>DX</source>
         <translation>DX</translation>
     </message>
     <message>
-        <location filename="../widgets/adiflotwexportwidget.cpp" line="127"/>
+        <location filename="../widgets/adiflotwexportwidget.cpp" line="128" />
         <source>Date/Time</source>
         <translation>Datums Laiks</translation>
     </message>
     <message>
-        <location filename="../widgets/adiflotwexportwidget.cpp" line="127"/>
+        <location filename="../widgets/adiflotwexportwidget.cpp" line="128" />
         <source>Band</source>
         <translation>Diepazons</translation>
     </message>
     <message>
-        <location filename="../widgets/adiflotwexportwidget.cpp" line="127"/>
+        <location filename="../widgets/adiflotwexportwidget.cpp" line="128" />
         <source>Mode</source>
         <translation>Režīms</translation>
     </message>
     <message>
-        <location filename="../widgets/adiflotwexportwidget.cpp" line="210"/>
-        <location filename="../widgets/adiflotwexportwidget.cpp" line="274"/>
+        <location filename="../widgets/adiflotwexportwidget.cpp" line="211" />
+        <location filename="../widgets/adiflotwexportwidget.cpp" line="275" />
         <source>Not defined</source>
         <translation>Nav definēts</translation>
     </message>
     <message>
-        <location filename="../widgets/adiflotwexportwidget.cpp" line="215"/>
-        <location filename="../widgets/adiflotwexportwidget.cpp" line="275"/>
+        <location filename="../widgets/adiflotwexportwidget.cpp" line="216" />
+        <location filename="../widgets/adiflotwexportwidget.cpp" line="276" />
         <source>ALL</source>
         <translation>Vissi</translation>
     </message>
     <message>
-        <location filename="../widgets/adiflotwexportwidget.cpp" line="410"/>
+        <location filename="../widgets/adiflotwexportwidget.cpp" line="411" />
         <source>QSOs: %1/%2</source>
         <translation>QSO: %1/%2</translation>
     </message>
     <message>
-        <location filename="../widgets/adiflotwexportwidget.cpp" line="658"/>
+        <location filename="../widgets/adiflotwexportwidget.cpp" line="659" />
         <source>KLog Warning</source>
         <translation>KLog brīdinājums</translation>
     </message>
     <message>
-        <location filename="../widgets/adiflotwexportwidget.cpp" line="658"/>
+        <location filename="../widgets/adiflotwexportwidget.cpp" line="659" />
         <source>There are no queued QSOs.</source>
         <translation>Rindā nav QSO.</translation>
     </message>
     <message>
-        <source>All</source>
-        <translation type="vanished">Visi</translation>
-    </message>
-    <message>
-        <source>QSOs: </source>
-        <translation type="vanished">QSO: </translation>
-    </message>
-    <message>
-        <location filename="../widgets/adiflotwexportwidget.cpp" line="689"/>
+        <location filename="../widgets/adiflotwexportwidget.cpp" line="690" />
         <source>KLog - QSOs to be uploaded to LoTW.</source>
         <translation>KLog — QSO, kas jāaugšupielādē LoTW.</translation>
     </message>
     <message>
-        <location filename="../widgets/adiflotwexportwidget.cpp" line="690"/>
+        <location filename="../widgets/adiflotwexportwidget.cpp" line="691" />
         <source>This table shows the QSOs that will be sent to LoTW.</source>
         <translation>Šajā tabulā parādīti QSO, kas tiks nosūtīti uz LoTW.</translation>
     </message>
     <message>
-        <location filename="../widgets/adiflotwexportwidget.cpp" line="694"/>
+        <location filename="../widgets/adiflotwexportwidget.cpp" line="695" />
         <source>KLog - QSOs to be uploaded to ClubLog.</source>
         <translation>KLog - QSO, kas augšupielādējami ClubLog.</translation>
     </message>
     <message>
-        <location filename="../widgets/adiflotwexportwidget.cpp" line="695"/>
+        <location filename="../widgets/adiflotwexportwidget.cpp" line="696" />
         <source>This table shows the QSOs that will be sent to ClubLog.</source>
         <translation>Šajā tabulā parādīti QSO, kas tiks nosūtīti uz ClubLog.</translation>
     </message>
     <message>
-        <location filename="../widgets/adiflotwexportwidget.cpp" line="699"/>
+        <location filename="../widgets/adiflotwexportwidget.cpp" line="700" />
         <source>KLog - QSOs to be uploaded to eQSL.cc.</source>
         <translation>KLog — QSO, kas augšupielādējami eQSL.cc.</translation>
     </message>
     <message>
-        <location filename="../widgets/adiflotwexportwidget.cpp" line="700"/>
+        <location filename="../widgets/adiflotwexportwidget.cpp" line="701" />
         <source>This table shows the QSOs that will be sent to eQSL.cc.</source>
         <translation>Šajā tabulā parādīti QSO, kas tiks nosūtīti uz eQSL.cc.</translation>
     </message>
     <message>
-        <location filename="../widgets/adiflotwexportwidget.cpp" line="704"/>
+        <location filename="../widgets/adiflotwexportwidget.cpp" line="705" />
         <source>KLog - QSOs to be uploaded to QRZ.com.</source>
         <translation>KLog — QSO, kas jāaugšupielādē uz QRZ.com.</translation>
     </message>
     <message>
-        <location filename="../widgets/adiflotwexportwidget.cpp" line="705"/>
+        <location filename="../widgets/adiflotwexportwidget.cpp" line="706" />
         <source>This table shows the QSOs that will be sent to QRZ.com.</source>
         <translation>Šajā tabulā parādīti QSO, kas tiks nosūtīti uz QRZ.com.</translation>
     </message>
     <message>
-        <location filename="../widgets/adiflotwexportwidget.cpp" line="710"/>
+        <location filename="../widgets/adiflotwexportwidget.cpp" line="711" />
         <source>This table shows the QSOs that will be exported to ADIF.</source>
         <translation>Šajā tabulā parādīti QSO, kas tiks eksportēti uz ADIF.</translation>
     </message>
@@ -361,180 +334,246 @@
 <context>
     <name>Awards</name>
     <message>
-        <location filename="../awards.cpp" line="1311"/>
+        <location filename="../awards.cpp" line="737" />
         <source>A</source>
         <comment>Do not translate</comment>
-        <translation></translation>
+        <translation />
     </message>
     <message>
-        <location filename="../awards.cpp" line="1312"/>
+        <location filename="../awards.cpp" line="738" />
         <source>ATNO</source>
         <comment>All Time New One, Do not translate</comment>
         <translation>Pirmreizējs DXCC sakars</translation>
     </message>
     <message>
-        <location filename="../awards.cpp" line="1315"/>
+        <location filename="../awards.cpp" line="741" />
         <source>N</source>
         <comment>Needed, please try to keep the N</comment>
         <translation>N</translation>
     </message>
     <message>
-        <location filename="../awards.cpp" line="1316"/>
+        <location filename="../awards.cpp" line="742" />
         <source>Needed</source>
         <translation>Nepieciešams</translation>
     </message>
     <message>
-        <location filename="../awards.cpp" line="1319"/>
+        <location filename="../awards.cpp" line="745" />
         <source>W</source>
         <comment>Worked, please try to keep the W</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../awards.cpp" line="1320"/>
+        <location filename="../awards.cpp" line="746" />
         <source>Worked</source>
         <translation>Strādāja</translation>
     </message>
     <message>
-        <location filename="../awards.cpp" line="1323"/>
+        <location filename="../awards.cpp" line="749" />
         <source>C</source>
         <comment>Confirmed, please try to keep the C</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../awards.cpp" line="1324"/>
+        <location filename="../awards.cpp" line="750" />
+        <location filename="../awards.cpp" line="790" />
         <source>Confirmed</source>
         <translation>Apstiprināts</translation>
     </message>
     <message>
-        <location filename="../awards.cpp" line="1328"/>
+        <location filename="../awards.cpp" line="754" />
         <source>U</source>
         <comment>Unknown</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../awards.cpp" line="1329"/>
+        <location filename="../awards.cpp" line="755" />
         <source>Unknown</source>
         <translation>Nezināms</translation>
+    </message>
+    <message>
+        <location filename="../awards.cpp" line="768" />
+        <source>New One, work it!</source>
+        <translation>Pirmreizējs, strādā!</translation>
+    </message>
+    <message>
+        <location filename="../awards.cpp" line="773" />
+        <source>Needed (band/mode), work it!</source>
+        <translation>Nepieciešams (diapazons/režīms), strādā!</translation>
+    </message>
+    <message>
+        <location filename="../awards.cpp" line="775" />
+        <source>Needed, work it!</source>
+        <translation>Nepieciešams, strādā!</translation>
+    </message>
+    <message>
+        <location filename="../awards.cpp" line="780" />
+        <source>Worked (band/mode) but not confirmed</source>
+        <translation>Strādāts (diapazons/režīms), bet nav apstiprināts</translation>
+    </message>
+    <message>
+        <location filename="../awards.cpp" line="782" />
+        <source>Worked but not confirmed</source>
+        <translation>Strādāts, bet nav apstiprināts</translation>
+    </message>
+    <message>
+        <location filename="../awards.cpp" line="788" />
+        <source>Confirmed (band/mode)</source>
+        <translation>Apstiprināts (diapazons/režīms)</translation>
+    </message>
+    <message>
+        <location filename="../awards.cpp" line="794" />
+        <source>Unknown!</source>
+        <translation>Nezināms!</translation>
+    </message>
+    <message>
+        <location filename="../awards.cpp" line="798" />
+        <source>Not identified</source>
+        <translation>Nav atpazīts</translation>
     </message>
 </context>
 <context>
     <name>AwardsWidget</name>
     <message>
-        <location filename="../awardswidget.cpp" line="97"/>
+        <location filename="../awardswidget.cpp" line="107" />
         <source>Recalculate</source>
         <translation>Pārrēķināt</translation>
     </message>
     <message>
-        <location filename="../awardswidget.cpp" line="98"/>
+        <location filename="../awardswidget.cpp" line="108" />
         <source>Click to recalculate the award status.</source>
         <translation>Noklikšķiniet, lai pārrēķinātu balvas statusu.</translation>
     </message>
     <message>
-        <location filename="../awardswidget.cpp" line="99"/>
-        <location filename="../awardswidget.cpp" line="294"/>
-        <source>Select the year you want to check.</source>
-        <translation>Atlasiet gadu , kuru vēlaties pārbaudīt.</translation>
+        <location filename="../awardswidget.cpp" line="109" />
+        <source>Check band &amp;&amp; mode for needed</source>
+        <translation>Nosakot nepieciešamos, pārbaudīt diapazonu un režīmu</translation>
     </message>
     <message>
-        <location filename="../awardswidget.cpp" line="101"/>
-        <location filename="../awardswidget.cpp" line="122"/>
+        <location filename="../awardswidget.cpp" line="111" />
+        <source>If checked, KLog considers both band and mode when evaluating if a QSO is needed or confirmed.</source>
+        <translation>Ja atzīmēts, KLog ņem vērā gan diapazonu, gan režīmu, pārbaudot, vai QSO ir nepieciešams vai apstiprināts.</translation>
+    </message>
+    <message>
+        <location filename="../awardswidget.cpp" line="112" />
+        <location filename="../awardswidget.cpp" line="336" />
+        <source>Select the year you want to check.</source>
+        <translation>Atlasiet gadu, kuru vēlaties pārbaudīt.</translation>
+    </message>
+    <message>
+        <location filename="../awardswidget.cpp" line="114" />
+        <location filename="../awardswidget.cpp" line="144" />
         <source>QSOs</source>
         <translation>QSO</translation>
     </message>
     <message>
-        <location filename="../awardswidget.cpp" line="102"/>
-        <location filename="../awardswidget.cpp" line="113"/>
+        <location filename="../awardswidget.cpp" line="115" />
+        <location filename="../awardswidget.cpp" line="126" />
         <source>DXCC</source>
         <translation>DXCC</translation>
     </message>
     <message>
-        <location filename="../awardswidget.cpp" line="103"/>
+        <location filename="../awardswidget.cpp" line="116" />
         <source>CQ</source>
         <translation>CQ</translation>
     </message>
     <message>
-        <location filename="../awardswidget.cpp" line="105"/>
+        <location filename="../awardswidget.cpp" line="118" />
         <source>Award</source>
         <translation>Balva</translation>
     </message>
     <message>
-        <location filename="../awardswidget.cpp" line="107"/>
+        <location filename="../awardswidget.cpp" line="120" />
         <source>Confirmed</source>
         <translation>Apstiprināts</translation>
     </message>
     <message>
-        <location filename="../awardswidget.cpp" line="110"/>
+        <location filename="../awardswidget.cpp" line="123" />
         <source>Worked</source>
         <translation>Strādāja</translation>
     </message>
     <message>
-        <location filename="../awardswidget.cpp" line="116"/>
+        <location filename="../awardswidget.cpp" line="129" />
         <source>WAZ</source>
         <translation>WAZ</translation>
     </message>
     <message>
-        <location filename="../awardswidget.cpp" line="187"/>
+        <location filename="../awardswidget.cpp" line="132" />
+        <source>ITU</source>
+        <translation type="unfinished">ITU</translation>
+    </message>
+    <message>
+        <location filename="../awardswidget.cpp" line="135" />
+        <source>WAS</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../awardswidget.cpp" line="138" />
+        <source>DARC DOK</source>
+        <translation>DARC DOK</translation>
+    </message>
+    <message>
+        <location filename="../awardswidget.cpp" line="218" />
         <source>Score</source>
         <translation>Rezultāts</translation>
     </message>
     <message>
-        <location filename="../awardswidget.cpp" line="188"/>
-        <location filename="../awardswidget.cpp" line="408"/>
+        <location filename="../awardswidget.cpp" line="219" />
+        <location filename="../awardswidget.cpp" line="491" />
         <source>Annual</source>
-        <translation>Gada pārskats</translation>
+        <translation>Visi</translation>
     </message>
     <message>
-        <location filename="../awardswidget.cpp" line="281"/>
+        <location filename="../awardswidget.cpp" line="323" />
         <source>Number of confirmed DXCC entities.</source>
         <translation>Apstiprināto DXCC skaits.</translation>
     </message>
     <message>
-        <location filename="../awardswidget.cpp" line="282"/>
+        <location filename="../awardswidget.cpp" line="324" />
         <source>Number of worked DXCC entities.</source>
         <translation>Nostrādāto DXCC skaits.</translation>
     </message>
     <message>
-        <location filename="../awardswidget.cpp" line="283"/>
+        <location filename="../awardswidget.cpp" line="325" />
         <source>Number of confirmed WAZ zones.</source>
         <translation>Apstiprināto WAZ zonu skaits.</translation>
     </message>
     <message>
-        <location filename="../awardswidget.cpp" line="284"/>
+        <location filename="../awardswidget.cpp" line="326" />
         <source>Number of worked WAZ zones.</source>
         <translation>Nostrādāto WAZ zonu skaits.</translation>
     </message>
     <message>
-        <location filename="../awardswidget.cpp" line="287"/>
+        <location filename="../awardswidget.cpp" line="329" />
         <source>Number of confirmed QSOs.</source>
         <translation>Apstiprināto QSO skaits.</translation>
     </message>
     <message>
-        <location filename="../awardswidget.cpp" line="288"/>
+        <location filename="../awardswidget.cpp" line="330" />
         <source>Number of worked QSOs.</source>
         <translation>Nostrādāto QSO skaits.</translation>
     </message>
     <message>
-        <location filename="../awardswidget.cpp" line="290"/>
+        <location filename="../awardswidget.cpp" line="332" />
         <source>Number of QSOs worked in the selected year.</source>
         <translation>Nostrādāto QSO skaits izvēlētajā gadā.</translation>
     </message>
     <message>
-        <location filename="../awardswidget.cpp" line="291"/>
+        <location filename="../awardswidget.cpp" line="333" />
         <source>Number of DXCCs worked in the selected year.</source>
         <translation>Nostrādāto DXCC skaits atlasītajā gadā.</translation>
     </message>
     <message>
-        <location filename="../awardswidget.cpp" line="292"/>
+        <location filename="../awardswidget.cpp" line="334" />
         <source>Number of CQ Zones worked in the selected year.</source>
         <translation>Nostrādāto CQ zonu skaits izvēlētajā gadā.</translation>
     </message>
     <message>
-        <location filename="../awardswidget.cpp" line="293"/>
+        <location filename="../awardswidget.cpp" line="335" />
         <source>Score for the DXMarathon in the selected year.</source>
         <translation>Rezultāts DXMarathon izvēlētajā gadā.</translation>
     </message>
     <message>
-        <location filename="../awardswidget.cpp" line="401"/>
+        <location filename="../awardswidget.cpp" line="484" />
         <source>DX-Marathon</source>
         <translation>DX-maratons</translation>
     </message>
@@ -542,451 +581,764 @@
 <context>
     <name>CTYPage</name>
     <message>
-        <location filename="../startwizard.cpp" line="915"/>
+        <location filename="../startwizard.cpp" line="915" />
         <source>Country data download</source>
         <translation>Valsts datu lejupielāde</translation>
     </message>
     <message>
-        <location filename="../startwizard.cpp" line="918"/>
+        <location filename="../startwizard.cpp" line="918" />
         <source>KLog needs country data...</source>
         <translation>KLog nepieciešami valstu dati...</translation>
     </message>
     <message>
-        <location filename="../startwizard.cpp" line="924"/>
+        <location filename="../startwizard.cpp" line="924" />
         <source>&amp;Download</source>
         <translation>&amp;Lejupielādēt</translation>
     </message>
     <message>
-        <location filename="../startwizard.cpp" line="925"/>
+        <location filename="../startwizard.cpp" line="925" />
         <source>&amp;Ignore</source>
         <translation>&amp;Ignorēt</translation>
     </message>
     <message>
-        <location filename="../startwizard.cpp" line="944"/>
+        <location filename="../startwizard.cpp" line="944" />
         <source>Country data needed</source>
         <translation>Nepieciešami valsts dati</translation>
     </message>
     <message>
-        <location filename="../startwizard.cpp" line="947"/>
+        <location filename="../startwizard.cpp" line="947" />
         <source>KLog uses the cty.csv file from https://www.country-files.com/ to get DXCC information.</source>
         <translation>KLog izmanto cty.csv failu no https://www.country-files.com/, lai iegūtu DXCC informāciju.</translation>
     </message>
     <message>
-        <location filename="../startwizard.cpp" line="949"/>
+        <location filename="../startwizard.cpp" line="949" />
         <source>You need to download the cty.csv file if you want KLog to show you the countries, locator, etc. of the QSOs you do.</source>
         <translation>Jums ir jālejupielādē cty.csv fails, ja vēlaties, lai KLog parādītu jūsu veikto QSO valstis, vietrādi utt.</translation>
     </message>
     <message>
-        <location filename="../startwizard.cpp" line="951"/>
+        <location filename="../startwizard.cpp" line="951" />
         <source>Click on Download to download now.</source>
         <translation>Noklikšķiniet uz Lejupielādēt, lai lejupielādētu tūlīt.</translation>
     </message>
     <message>
-        <location filename="../startwizard.cpp" line="1026"/>
+        <location filename="../startwizard.cpp" line="1026" />
         <source>KLog</source>
         <translation>Klogs</translation>
     </message>
     <message>
-        <location filename="../startwizard.cpp" line="1027"/>
-        <source>I can&apos;t find the host. Please check your network and try again
+        <location filename="../startwizard.cpp" line="1027" />
+        <source>I can't find the host. Please check your network and try again
 Do you want to try again?</source>
         <translation>Es nevaru atrast saimnieku. Lūdzu, pārbaudiet savu tīklu un mēģiniet vēlreiz
 Vai vēlaties mēģināt vēlreiz?</translation>
     </message>
 </context>
 <context>
+    <name>DXAssistantSpotModel</name>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="84" />
+        <source>Priority</source>
+        <translation>Prioritāte</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="85" />
+        <source>Score</source>
+        <translation>Rezultāts</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="86" />
+        <source>DX Call</source>
+        <translation>DX izsaukuma signāls</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="87" />
+        <source>Country</source>
+        <translation>Valsts</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="88" />
+        <source>Freq (kHz)</source>
+        <translation>Frekvence (kHz)</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="89" />
+        <source>Mode</source>
+        <translation>Mode</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="90" />
+        <source>Status</source>
+        <translation>Statuss</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="91" />
+        <source>Spotter</source>
+        <translation>Ziņotājs</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="92" />
+        <source>Source</source>
+        <translation>Avots</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="93" />
+        <source>Age</source>
+        <translation>Vecums</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="94" />
+        <source>MW Rank</source>
+        <translation>MW vērtējums</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="128" />
+        <source>ATNO</source>
+        <translation>Pirmreizējs DXCC sakars</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="129" />
+        <source>Needed</source>
+        <translation>Nepieciešams</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="130" />
+        <source>Worked</source>
+        <translation>Strādāja</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="144" />
+        <source>DXCluster</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="145" />
+        <source>WSJT-X</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="210" />
+        <source>Received at %1 UTC</source>
+        <translation>Saņemts %1 UTC</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="261" />
+        <source>%1 min</source>
+        <translation>%1 min</translation>
+    </message>
+</context>
+<context>
     <name>DXCCStatusWidget</name>
     <message>
-        <location filename="../dxccstatuswidget.cpp" line="93"/>
+        <location filename="../dxccstatuswidget.cpp" line="99" />
         <source>Update</source>
         <translation>Atjaunināt</translation>
     </message>
     <message>
-        <location filename="../dxccstatuswidget.cpp" line="134"/>
-        <source>It seems that the DXCC status in your database is not updated and KLog can&apos;t find any dxcc information. You can try to fix this by updating the log.</source>
+        <location filename="../dxccstatuswidget.cpp" line="140" />
+        <source>It seems that the DXCC status in your database is not updated and KLog can't find any dxcc information. You can try to fix this by updating the log.</source>
         <translation>Šķiet, ka DXCC statuss jūsu datu bāzē nav atjaunināts un KLog nevar atrast dxcc informāciju. Varat mēģināt to novērst, atjauninot žurnālu.</translation>
     </message>
     <message>
-        <location filename="../dxccstatuswidget.cpp" line="135"/>
+        <location filename="../dxccstatuswidget.cpp" line="141" />
         <source>Do you want to update your DXCC status?</source>
         <translation>Vai vēlaties atjaunināt savu DXCC statusu?</translation>
     </message>
     <message>
-        <location filename="../dxccstatuswidget.cpp" line="336"/>
+        <location filename="../dxccstatuswidget.cpp" line="363" />
         <source>Prefix</source>
         <translation>Prefix</translation>
     </message>
     <message>
-        <location filename="../dxccstatuswidget.cpp" line="336"/>
+        <location filename="../dxccstatuswidget.cpp" line="363" />
         <source>Entity</source>
         <translation>Entity</translation>
     </message>
     <message>
-        <location filename="../dxccstatuswidget.cpp" line="537"/>
+        <location filename="../dxccstatuswidget.cpp" line="569" />
         <source>Pref: </source>
         <translation>Prefiks: </translation>
     </message>
     <message>
-        <location filename="../dxccstatuswidget.cpp" line="538"/>
+        <location filename="../dxccstatuswidget.cpp" line="570" />
         <source>CQ: </source>
         <translation>CQ: </translation>
     </message>
     <message>
-        <location filename="../dxccstatuswidget.cpp" line="539"/>
+        <location filename="../dxccstatuswidget.cpp" line="571" />
         <source>ITU: </source>
         <translation>ITU: </translation>
     </message>
     <message>
-        <location filename="../dxccstatuswidget.cpp" line="541"/>
+        <location filename="../dxccstatuswidget.cpp" line="573" />
         <source>Beam: </source>
         <translation>Sija: </translation>
     </message>
     <message>
-        <location filename="../dxccstatuswidget.cpp" line="548"/>
+        <location filename="../dxccstatuswidget.cpp" line="580" />
         <source>Entity not worked in this band.</source>
         <translation>Vienība nedarbojās šajā joslā.</translation>
+    </message>
+    <message>
+        <location filename="../dxccstatuswidget.cpp" line="606" />
+        <source />
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
     <name>DXClusterAssistant</name>
     <message>
-        <location filename="../dxcluster/dxclusterassistant.cpp" line="61"/>
-        <source>DX</source>
-        <translation>DX</translation>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="572" />
+        <source>DX Assistant</source>
+        <translation>DX asistents</translation>
     </message>
     <message>
-        <location filename="../dxcluster/dxclusterassistant.cpp" line="61"/>
-        <source>Freq</source>
-        <translation>Biežums</translation>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="621" />
+        <source>The band where most DX spots are arriving right now.</source>
+        <translation>Diapazons, kurā šobrīd pienāk visvairāk DX ziņojumu.</translation>
     </message>
     <message>
-        <location filename="../dxcluster/dxclusterassistant.cpp" line="61"/>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="623" />
+        <source>The band where you have the most to gain, based on your log.</source>
+        <translation>Diapazons, kurā tev ir vislielākais ieguvums, spriežot pēc žurnāla.</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="942" />
+        <source>Most active band: %1</source>
+        <translation>Aktīvākais diapazons: %1</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="943" />
+        <source>Band to be: %1</source>
+        <translation>Ieteicamais diapazons: %1</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="1192" />
+        <source>Hide these spots</source>
+        <translation>Paslēpt šos ziņojumus</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="1193" />
+        <source>Hide this spot</source>
+        <translation>Paslēpt šo ziņojumu</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="1195" />
+        <source>Hide these callsigns for the rest of the session.</source>
+        <translation>Paslēpt šos izsaukuma signālus līdz sesijas beigām.</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="1196" />
+        <source>Hide this callsign for the rest of the session.</source>
+        <translation>Paslēpt šo izsaukuma signālu līdz sesijas beigām.</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="1199" />
+        <source>Copy Callsign</source>
+        <translation>Kopēt izsaukuma signālu</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="1200" />
+        <source>Copy the DX callsign of this spot to the clipboard.</source>
+        <translation>Kopēt šī ziņojuma DX izsaukuma signālu starpliktuvē.</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="1206" />
+        <source>Filters</source>
+        <translation>Filtri</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="1211" />
+        <source>Reset all</source>
+        <translation>Atiestatīt visu</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="1212" />
+        <source>Remove all filtering and put every filter back to its default.</source>
+        <translation>Noņemt visus filtrus un atjaunot noklusējuma vērtības.</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="1227" />
+        <source>Columns</source>
+        <translation>Kolonnas</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="1230" />
+        <source>Hide this column</source>
+        <translation>Paslēpt šo kolonnu</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="1236" />
+        <source>Show</source>
+        <translation>Rādīt</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="1240" />
+        <source>All</source>
+        <translation>Visi</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="1252" />
+        <source>Bands</source>
+        <translation>Diapazons</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="1253" />
+        <source>Follow my band</source>
+        <translation>Sekot manam diapazonam</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="1256" />
+        <source>Show only the spots on the band you are working on.</source>
+        <translation>Rādīt tikai ziņojumus diapazonā, kurā strādā.</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="1282" />
+        <source>Spotter</source>
+        <translation>Ziņotājs</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="1286" />
+        <source>My call</source>
+        <translation>Mans izsaukuma signāls</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="1287" />
+        <source>My DXCC</source>
+        <translation>Mans DXCC</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="1288" />
+        <source>My continent</source>
+        <translation>Mans kontinents</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="1289" />
+        <source>ALL</source>
+        <translation>Vissi</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="1301" />
+        <source>Age</source>
+        <translation>Vecums</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="1303" />
+        <source>15 minutes</source>
+        <translation>15 minūtes</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="1303" />
+        <source>30 minutes</source>
+        <translation>30 minūtes</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="1304" />
+        <source>1 hour</source>
+        <translation>1 stunda</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="1304" />
+        <source>2 hours</source>
+        <translation>2 stundas</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="1315" />
+        <source>Number spots</source>
+        <translation>Ziņojumu skaits</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="1327" />
         <source>Status</source>
         <translation>Statuss</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="1340" />
+        <source>Source</source>
+        <translation>Avots</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="1352" />
+        <source>DXCC</source>
+        <translation>DXCC</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="1375" />
+        <source>Spot</source>
+        <translation>Ziņojums</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="1377" />
+        <source>Send to UI</source>
+        <translation>Nosūtīt uz formu</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="1378" />
+        <source>Fill the QSO entry form with this spot.</source>
+        <translation>Aizpildīt QSO ievades formu ar šo ziņojumu.</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="1380" />
+        <source>Log this QSO</source>
+        <translation>Ierakstīt šo QSO</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="1381" />
+        <source>Add this QSO to the log immediately.</source>
+        <translation>Uzreiz pievienot šo QSO žurnālam.</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="1386" />
+        <source>QSY to this freq</source>
+        <translation>Pāriet uz šo frekvenci</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="1387" />
+        <source>Tune the radio to the frequency of this spot.</source>
+        <translation>Noskaņot radioiekārtu uz šī ziņojuma frekvenci.</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="1390" />
+        <source>Look up on QRZ.com</source>
+        <translation>Meklēt QRZ.com</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="1391" />
+        <source>Open this callsign's page on QRZ.com.</source>
+        <translation>Atvērt šī izsaukuma signāla lapu QRZ.com.</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="1401" />
+        <source>Clear all</source>
+        <translation>Notīrīt visu</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="1402" />
+        <source>Remove every spot and list again the ones hidden or worked this session.</source>
+        <translation>Noņemt visus ziņojumus un parādīt tos, kas šajā sesijā paslēpti vai strādāti.</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="1408" />
+        <source>Show to map</source>
+        <translation>Rādīt kartē</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="1409" />
+        <source>Plot the spots currently shown on the map.</source>
+        <translation>Attēlot kartē šobrīd redzamos ziņojumus.</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="1412" />
+        <source>Refresh</source>
+        <translation>Atsvaidzināt</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxclusterassistant.cpp" line="1413" />
+        <source>Score every spot again against your log.</source>
+        <translation>Pārvērtēt visus ziņojumus pret žurnālu.</translation>
     </message>
 </context>
 <context>
     <name>DXClusterWidget</name>
     <message>
-        <location filename="../dxcluster/dxcluster.cpp" line="55"/>
+        <location filename="../dxcluster/dxcluster.cpp" line="58" />
         <source>Click on Connect to connect to the DX-Cluster server</source>
         <translation>Noklikšķiniet uz Savienot lai izveidotu savienojumu ar DX-Cluster serveri</translation>
     </message>
     <message>
-        <location filename="../dxcluster/dxcluster.cpp" line="59"/>
-        <location filename="../dxcluster/dxcluster.cpp" line="489"/>
+        <location filename="../dxcluster/dxcluster.cpp" line="62" />
+        <location filename="../dxcluster/dxcluster.cpp" line="536" />
         <source>Connect</source>
         <translation>Savienot</translation>
     </message>
     <message>
-        <location filename="../dxcluster/dxcluster.cpp" line="60"/>
-        <location filename="../dxcluster/dxcluster.cpp" line="471"/>
-        <location filename="../dxcluster/dxcluster.cpp" line="546"/>
+        <location filename="../dxcluster/dxcluster.cpp" line="63" />
+        <location filename="../dxcluster/dxcluster.cpp" line="518" />
+        <location filename="../dxcluster/dxcluster.cpp" line="593" />
         <source>Clear</source>
         <translation>Dzēst</translation>
     </message>
     <message>
-        <location filename="../dxcluster/dxcluster.cpp" line="108"/>
+        <location filename="../dxcluster/dxcluster.cpp" line="119" />
         <source>Check in QRZ.com</source>
         <translation>Pārbaudiet QRZ.com</translation>
     </message>
     <message>
-        <location filename="../dxcluster/dxcluster.cpp" line="110"/>
+        <location filename="../dxcluster/dxcluster.cpp" line="121" />
         <source>Check this callsign in QRZ.com</source>
         <translation>Pārbaudiet šo izsaukuma signālu vietnē QRZ.com</translation>
     </message>
     <message>
-        <location filename="../dxcluster/dxcluster.cpp" line="143"/>
-        <location filename="../dxcluster/dxcluster.cpp" line="174"/>
+        <location filename="../dxcluster/dxcluster.cpp" line="156" />
+        <location filename="../dxcluster/dxcluster.cpp" line="206" />
         <source>Click on connect to connect to the DX-Cluster</source>
         <translation>Noklikšķiniet uz izveidot savienojumu, lai izveidotu savienojumu ar DX-klasteri</translation>
     </message>
     <message>
-        <location filename="../dxcluster/dxcluster.cpp" line="211"/>
+        <location filename="../dxcluster/dxcluster.cpp" line="243" />
         <source>Trying to connect to the server</source>
         <translation>Mēģina izveidot savienojumu ar serveri</translation>
     </message>
     <message>
-        <location filename="../dxcluster/dxcluster.cpp" line="239"/>
+        <location filename="../dxcluster/dxcluster.cpp" line="271" />
         <source>KLog DXCluster</source>
         <translation>Klog DXCluster</translation>
     </message>
     <message>
-        <location filename="../dxcluster/dxcluster.cpp" line="224"/>
+        <location filename="../dxcluster/dxcluster.cpp" line="256" />
         <source>The host was not found. Please check:</source>
         <translation>Saimnieks netika atrasts. Lūdzu pārbaudi:</translation>
     </message>
     <message>
-        <location filename="../dxcluster/dxcluster.cpp" line="142"/>
+        <location filename="../dxcluster/dxcluster.cpp" line="64" />
+        <source>DX A</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../dxcluster/dxcluster.cpp" line="154" />
         <source>Clears the DXCluster command line.</source>
         <translation>Notīra DXCluster komandrindu.</translation>
     </message>
     <message>
-        <location filename="../dxcluster/dxcluster.cpp" line="221"/>
+        <location filename="../dxcluster/dxcluster.cpp" line="155" />
+        <source>Enable/Disable DX Assistant</source>
+        <translation>Ieslēgt/izslēgt DX asistentu</translation>
+    </message>
+    <message>
+        <location filename="../dxcluster/dxcluster.cpp" line="253" />
         <source>The DXCluster server desconnected the session.</source>
         <translation>DX klastera serveris pārtrauca sesiju.</translation>
     </message>
     <message>
-        <location filename="../dxcluster/dxcluster.cpp" line="225"/>
+        <location filename="../dxcluster/dxcluster.cpp" line="257" />
         <source>- your network connection;
 - the host name and port settings.</source>
         <translation>- jūsu tīkla savienojums;
 - resursdatora nosaukums un porta iestatījumi.</translation>
     </message>
     <message>
-        <location filename="../dxcluster/dxcluster.cpp" line="229"/>
+        <location filename="../dxcluster/dxcluster.cpp" line="261" />
         <source>The connection was refused by the peer. Make sure the DXCluster server is running, and check that the host name and port settings are correct.</source>
         <translation>Līdzinieks atteicās izveidot savienojumu. Pārliecinieties, vai darbojas DXCluster serveris, un pārbaudiet, vai resursdatora nosaukums un porta iestatījumi ir pareizi.</translation>
     </message>
     <message>
-        <location filename="../dxcluster/dxcluster.cpp" line="235"/>
+        <location filename="../dxcluster/dxcluster.cpp" line="267" />
         <source>The following error occurred: %1.</source>
         <translation>Radās šāda kļūda: %1.</translation>
     </message>
     <message>
-        <location filename="../dxcluster/dxcluster.cpp" line="439"/>
+        <location filename="../dxcluster/dxcluster.cpp" line="485" />
         <source>Connected to server</source>
         <translation>Savienots ar serveri</translation>
     </message>
     <message>
-        <location filename="../dxcluster/dxcluster.cpp" line="446"/>
-        <location filename="../dxcluster/dxcluster.cpp" line="457"/>
+        <location filename="../dxcluster/dxcluster.cpp" line="492" />
+        <location filename="../dxcluster/dxcluster.cpp" line="503" />
         <source>KLog message</source>
         <translation>Klog ziņojums</translation>
     </message>
     <message>
-        <location filename="../dxcluster/dxcluster.cpp" line="447"/>
+        <location filename="../dxcluster/dxcluster.cpp" line="493" />
         <source>Enter your callsign to connect to the cluster:</source>
         <translation>Ievadiet savu izsaukuma signālu, lai izveidotu savienojumu ar klasteri:</translation>
     </message>
     <message>
-        <location filename="../dxcluster/dxcluster.cpp" line="458"/>
+        <location filename="../dxcluster/dxcluster.cpp" line="504" />
         <source>Enter your password to connect to the cluster:
 (Just hit enter for no password)</source>
         <translation>Ievadiet savu paroli, lai izveidotu savienojumu ar klasteri:
 (Vienkārši nospiediet Enter, lai bez paroles)</translation>
     </message>
     <message>
-        <location filename="../dxcluster/dxcluster.cpp" line="470"/>
-        <location filename="../dxcluster/dxcluster.cpp" line="511"/>
-        <location filename="../dxcluster/dxcluster.cpp" line="542"/>
+        <location filename="../dxcluster/dxcluster.cpp" line="517" />
+        <location filename="../dxcluster/dxcluster.cpp" line="558" />
+        <location filename="../dxcluster/dxcluster.cpp" line="589" />
         <source>Disconnect</source>
         <translation>Atvienoties</translation>
     </message>
     <message>
-        <source>Not logged on, you may need to enter your callsign again.</source>
-        <translation type="vanished">Neesat pieteicies, iespējams, vēlreiz jāievada izsaukuma signāls.</translation>
-    </message>
-    <message>
-        <location filename="../dxcluster/dxcluster.cpp" line="478"/>
+        <location filename="../dxcluster/dxcluster.cpp" line="525" />
         <source>Enter here the commands to be sent to the DX-Cluster server.</source>
         <translation>Šeit ievadiet komandas, kas jānosūta uz DX-Cluster serveri.</translation>
     </message>
     <message>
-        <location filename="../dxcluster/dxcluster.cpp" line="485"/>
+        <location filename="../dxcluster/dxcluster.cpp" line="532" />
         <source>Connection closed by the server</source>
         <translation>Savienojumu noslēdzis serveris</translation>
     </message>
     <message>
-        <location filename="../dxcluster/dxcluster.cpp" line="491"/>
+        <location filename="../dxcluster/dxcluster.cpp" line="538" />
         <source>Click on Connect to connect to the DX-Cluster server.</source>
         <translation>Noklikšķiniet uz Savienot, lai izveidotu savienojumu ar DX-Cluster serveri.</translation>
     </message>
     <message>
-        <location filename="../dxcluster/dxcluster.cpp" line="544"/>
+        <location filename="../dxcluster/dxcluster.cpp" line="591" />
         <source>Send</source>
         <translation>Sūtīt</translation>
     </message>
     <message>
-        <location filename="../dxcluster/dxcluster.cpp" line="757"/>
+        <location filename="../dxcluster/dxcluster.cpp" line="828" />
         <source>It was not possible to open the file to save the DX-Spots for writing. DX-Cluster activity will not be saved!</source>
         <translation>Nevarēja atvērt failu, lai saglabātu DX-Spots rakstīšanai. DX klastera darbība netiks saglabāta!</translation>
     </message>
 </context>
 <context>
+    <name>DataBase</name>
+    <message>
+        <location filename="../database/database.cpp" line="2608" />
+        <source>KLog - DB update</source>
+        <translation>KLog — datubāzes atjaunināšana</translation>
+    </message>
+    <message>
+        <location filename="../database/database.cpp" line="2609" />
+        <source>Canceling this update will cause data inconsistencies and possibly data loss. Do you still want to cancel?</source>
+        <translation type="unfinished" />
+    </message>
+</context>
+<context>
     <name>DataProxy_SQLite</name>
     <message>
-        <location filename="../dataproxy_sqlite.cpp" line="149"/>
+        <location filename="../dataproxy_sqlite.cpp" line="319" />
         <source>Software version in DB is null</source>
         <translation>Programmatūras versija DB ir nulle</translation>
     </message>
     <message>
-        <location filename="../dataproxy_sqlite.cpp" line="149"/>
-        <source>Query didn&apos;t failed</source>
+        <location filename="../dataproxy_sqlite.cpp" line="319" />
+        <source>Query didn't failed</source>
         <translation>Vaicājums neizdevās</translation>
     </message>
     <message>
-        <location filename="../dataproxy_sqlite.cpp" line="4138"/>
+        <location filename="../dataproxy_sqlite.cpp" line="5307" />
         <source>Aircraft Scatter</source>
         <comment>Common term in hamradio, do not translate if not sure</comment>
         <translation>Lidmašīnu izkliede</translation>
     </message>
     <message>
-        <location filename="../dataproxy_sqlite.cpp" line="4142"/>
+        <location filename="../dataproxy_sqlite.cpp" line="5311" />
         <source>Aurora</source>
         <translation>Aurora</translation>
     </message>
     <message>
-        <location filename="../dataproxy_sqlite.cpp" line="4146"/>
+        <location filename="../dataproxy_sqlite.cpp" line="5315" />
         <source>Aurora-E</source>
         <translation>Aurora-E</translation>
     </message>
     <message>
-        <location filename="../dataproxy_sqlite.cpp" line="4150"/>
+        <location filename="../dataproxy_sqlite.cpp" line="5319" />
         <source>Back scatter</source>
         <comment>Common term in hamradio, do not translate if not sure</comment>
-        <translation></translation>
+        <translation>Atpakaļizkliede</translation>
     </message>
     <message>
-        <location filename="../dataproxy_sqlite.cpp" line="4154"/>
+        <location filename="../dataproxy_sqlite.cpp" line="5323" />
         <source>Earth-Moon-Earth</source>
         <translation>Zeme-Mēness-Zeme</translation>
     </message>
     <message>
-        <location filename="../dataproxy_sqlite.cpp" line="4158"/>
+        <location filename="../dataproxy_sqlite.cpp" line="5327" />
         <source>Sporadic E</source>
         <translation>Sporādisks E</translation>
     </message>
     <message>
-        <location filename="../dataproxy_sqlite.cpp" line="4162"/>
+        <location filename="../dataproxy_sqlite.cpp" line="5331" />
         <source>Field Aligned Irregularities</source>
         <comment>Common term in hamradio, do not translate if not sure</comment>
         <translation>Laukā izlīdzinātie pārkāpumi</translation>
     </message>
     <message>
-        <location filename="../dataproxy_sqlite.cpp" line="4166"/>
+        <location filename="../dataproxy_sqlite.cpp" line="5335" />
         <source>F2 Reflection</source>
         <comment>Common term in hamradio, do not translate if not sure</comment>
         <translation>F2 Atspulgs</translation>
     </message>
     <message>
-        <location filename="../dataproxy_sqlite.cpp" line="4170"/>
+        <location filename="../dataproxy_sqlite.cpp" line="5339" />
         <source>Internet-assisted</source>
         <translation>Ar interneta palīdzību</translation>
     </message>
     <message>
-        <location filename="../dataproxy_sqlite.cpp" line="4174"/>
+        <location filename="../dataproxy_sqlite.cpp" line="5343" />
         <source>Ionoscatter</source>
         <comment>Common term in hamradio, do not translate if not sure</comment>
         <translation>Jonu izkliede</translation>
     </message>
     <message>
-        <location filename="../dataproxy_sqlite.cpp" line="4178"/>
+        <location filename="../dataproxy_sqlite.cpp" line="5347" />
         <source>Meteor scatter</source>
         <comment>Common term in hamradio, do not translate if not sure</comment>
         <translation>Meteoru izkliede</translation>
     </message>
     <message>
-        <location filename="../dataproxy_sqlite.cpp" line="4182"/>
+        <location filename="../dataproxy_sqlite.cpp" line="5351" />
         <source>Terrestrial or atmospheric repeater or transponder</source>
         <translation>Virszemes vai atmosfēras atkārtotājs vai retranslators</translation>
     </message>
     <message>
-        <location filename="../dataproxy_sqlite.cpp" line="4186"/>
+        <location filename="../dataproxy_sqlite.cpp" line="5355" />
         <source>Rain scatter</source>
         <comment>Common term in hamradio, do not translate if not sure</comment>
         <translation>Lietus izkliedē</translation>
     </message>
     <message>
-        <location filename="../dataproxy_sqlite.cpp" line="4190"/>
+        <location filename="../dataproxy_sqlite.cpp" line="5359" />
         <source>Satellite</source>
         <translation>Satelīts</translation>
     </message>
     <message>
-        <location filename="../dataproxy_sqlite.cpp" line="4194"/>
+        <location filename="../dataproxy_sqlite.cpp" line="5363" />
         <source>Trans-equatorial</source>
         <comment>Common term in hamradio, do not translate if not sure</comment>
         <translation>Transekvatoriāls</translation>
     </message>
     <message>
-        <location filename="../dataproxy_sqlite.cpp" line="4198"/>
+        <location filename="../dataproxy_sqlite.cpp" line="5367" />
         <source>Tropospheric ducting</source>
         <comment>Common term in hamradio, do not translate if not sure</comment>
         <translation>Troposfēras kanāli</translation>
     </message>
     <message>
-        <source>Yes</source>
-        <translation type="vanished">Jā</translation>
+        <location filename="../dataproxy_sqlite.cpp" line="5371" />
+        <source />
+        <translation type="unfinished" />
     </message>
     <message>
-        <source>No</source>
-        <translation type="vanished">Nē</translation>
-    </message>
-    <message>
-        <source>Requested</source>
-        <translation type="vanished">Pieprasīts</translation>
-    </message>
-    <message>
-        <source>Ignore/Invalid</source>
-        <translation type="vanished">Ignorēt/nederīgs</translation>
-    </message>
-    <message>
-        <source>Validated</source>
-        <translation type="vanished">Apstiprināts</translation>
-    </message>
-    <message>
-        <source>Queued</source>
-        <translation type="vanished">Rindā</translation>
-    </message>
-    <message>
-        <source>Uploaded</source>
-        <translation type="vanished">Augšupielādēts</translation>
-    </message>
-    <message>
-        <source>Do not upload</source>
-        <translation type="vanished">Neaugšupielādēt</translation>
-    </message>
-    <message>
-        <source>Modified</source>
-        <translation type="vanished">Pārveidots</translation>
-    </message>
-    <message>
-        <location filename="../dataproxy_sqlite.cpp" line="4899"/>
+        <location filename="../dataproxy_sqlite.cpp" line="6068" />
         <source>Bureau</source>
         <comment>Common term in hamradio, do not translate if not sure</comment>
         <translation>Birojs</translation>
     </message>
     <message>
-        <location filename="../dataproxy_sqlite.cpp" line="4903"/>
+        <location filename="../dataproxy_sqlite.cpp" line="6072" />
         <source>Direct</source>
         <translation>Tieša</translation>
     </message>
     <message>
-        <location filename="../dataproxy_sqlite.cpp" line="4907"/>
+        <location filename="../dataproxy_sqlite.cpp" line="6076" />
         <source>Electronic</source>
         <translation>Elektroniskā</translation>
     </message>
     <message>
-        <location filename="../dataproxy_sqlite.cpp" line="4911"/>
+        <location filename="../dataproxy_sqlite.cpp" line="6080" />
         <source>Manager</source>
         <comment>Common term in hamradio, do not translate if not sure</comment>
-        <translation>Pārvaldnieks</translation>
+        <translation>Menedžeris</translation>
     </message>
     <message>
-        <source>KLog DXCC</source>
-        <translation type="vanished">Klog DXCC</translation>
-    </message>
-    <message>
-        <source>All QSOs have been updated with a DXCC and the Continent.</source>
-        <translation type="vanished">Visi QSO ir atjaunināti ar DXCC un kontinentu.</translation>
-    </message>
-    <message>
-        <location filename="../dataproxy_sqlite.cpp" line="7597"/>
+        <location filename="../dataproxy_sqlite.cpp" line="8820" />
         <source>KLog - Invalid call detected</source>
         <translation>KLog — konstatēts nederīgs izsaukumasignals</translation>
     </message>
     <message>
-        <location filename="../dataproxy_sqlite.cpp" line="7603"/>
+        <location filename="../dataproxy_sqlite.cpp" line="8826" />
         <source>An empty callsign has been detected. Do you want to export this QSO anyway (click on Yes) or remove the field from the exported ADIF record?</source>
         <translation>Ir konstatēts tukšs izsaukuma signāls. Vai tomēr vēlaties eksportēt šo QSO (noklikšķināt uz Jā) vai noņemt lauku no eksportētā ADIF ieraksta?</translation>
     </message>
     <message>
-        <location filename="../dataproxy_sqlite.cpp" line="7607"/>
+        <location filename="../dataproxy_sqlite.cpp" line="8830" />
         <source>An invalid callsign has been detected %1. Do you want to export this callsign anyway (click on Yes) or remove the call from the exported log?</source>
         <translation>Ir konstatēts nederīgs izsaukuma signāls %1. Vai tomēr vēlaties eksportēt šo izsaukuma signālu (noklikšķināt uz Jā) vai noņemt zvanu no eksportētā žurnāla?</translation>
     </message>
     <message>
-        <location filename="../dataproxy_sqlite.cpp" line="7611"/>
+        <location filename="../dataproxy_sqlite.cpp" line="8834" />
         <source>Exporting wrong calls may create problems in the applications you are potentially importing this logfile to. It may, however, be a good callsign that is wrongly identified by KLog as not valid.</source>
         <translation>Nepareizu zvanu eksportēšana var radīt problēmas lietojumprogrammās, kurās, iespējams, importējat šo žurnālfailu. Tomēr tas var būt labs izsaukuma signāls, ko KLog nepareizi identificē kā nederīgu.</translation>
     </message>
@@ -994,70 +1346,82 @@ Vai vēlaties mēģināt vēlreiz?</translation>
 <context>
     <name>DownLoadCTY</name>
     <message>
-        <location filename="../downloadcty.cpp" line="93"/>
+        <location filename="../downloadcty.cpp" line="95" />
         <source>Download of cty.csv failed with the following error code: </source>
         <translation>Cty.csv lejupielāde neizdevās ar šādu kļūdas kodu: </translation>
     </message>
     <message>
-        <location filename="../downloadcty.cpp" line="105"/>
+        <location filename="../downloadcty.cpp" line="107" />
         <source>Download of cty.csv done.</source>
         <translation>Cty.csv lejupielāde ir pabeigta.</translation>
     </message>
     <message>
-        <location filename="../downloadcty.cpp" line="174"/>
+        <location filename="../downloadcty.cpp" line="176" />
         <source>There is already a cty.csv file in the folder but it will be replaced with the new one.</source>
         <translation>Mapē jau ir fails cty.csv, taču tas tiks aizstāts ar jaunu.</translation>
     </message>
     <message>
-        <location filename="../downloadcty.cpp" line="201"/>
+        <location filename="../downloadcty.cpp" line="203" />
         <source>Could not open %1 for writing</source>
         <translation>Nevarēja atvērt %1 rakstīšanai</translation>
+    </message>
+    <message>
+        <location filename="../downloadcty.cpp" line="228" />
+        <source>The downloaded file does not look like a country file.</source>
+        <translation>Lejupielādētais fails neizskatās pēc valstu datu faila.</translation>
+    </message>
+    <message>
+        <location filename="../downloadcty.cpp" line="229" />
+        <source>The server returned a web page instead of the data file, or the file was much smaller than expected. The existing country data has been kept.
+
+You can download the file manually from https://www.country-files.com/ and copy it into your KLog folder.</source>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
     <name>FileAwardManager</name>
     <message>
-        <location filename="../fileawardmanager.cpp" line="46"/>
+        <location filename="../fileawardmanager.cpp" line="48" />
         <source>Open Award file</source>
         <translation>Atveriet balvas failu</translation>
     </message>
     <message>
-        <location filename="../fileawardmanager.cpp" line="46"/>
+        <location filename="../fileawardmanager.cpp" line="48" />
         <source>Award files (*.awa)</source>
         <translation>Apbalvojuma faili (*.awa)</translation>
     </message>
     <message>
-        <location filename="../fileawardmanager.cpp" line="52"/>
+        <location filename="../fileawardmanager.cpp" line="54" />
         <source>Award file not opened</source>
         <translation>Balvas fails nav atvērts</translation>
     </message>
     <message>
-        <location filename="../fileawardmanager.cpp" line="52"/>
+        <location filename="../fileawardmanager.cpp" line="54" />
         <source>KLog was not able to read the award file</source>
         <translation>KLog nevarēja nolasīt balvas failu</translation>
     </message>
     <message>
-        <location filename="../fileawardmanager.cpp" line="52"/>
+        <location filename="../fileawardmanager.cpp" line="54" />
         <source>It was not possible to open the file %1 for reading.</source>
         <translation>Nevarēja atvērt failu %1 lasīšanai.</translation>
     </message>
     <message>
-        <location filename="../fileawardmanager.cpp" line="95"/>
+        <location filename="../fileawardmanager.cpp" line="97" />
         <source>AWA wrong format</source>
         <translation>AWA nepareizs formāts</translation>
     </message>
     <message>
-        <location filename="../fileawardmanager.cpp" line="95"/>
+        <location filename="../fileawardmanager.cpp" line="97" />
         <source>The AWA file does not have the right format</source>
         <translation>AWA failam nav pareizais formāts</translation>
     </message>
     <message>
-        <location filename="../fileawardmanager.cpp" line="95"/>
+        <location filename="../fileawardmanager.cpp" line="97" />
         <source>AWA file does not have an &lt;EOH&gt; field</source>
         <translation>AWA failam nav &lt;EOH&gt; lauka</translation>
     </message>
     <message>
-        <location filename="../fileawardmanager.cpp" line="237"/>
+        <location filename="../fileawardmanager.cpp" line="239" />
         <source>KLog - %1</source>
         <translation>Klog — %1</translation>
     </message>
@@ -1065,136 +1429,136 @@ Vai vēlaties mēģināt vēlreiz?</translation>
 <context>
     <name>FileManager</name>
     <message>
-        <location filename="../filemanager.cpp" line="153"/>
+        <location filename="../filemanager.cpp" line="159" />
         <source>KLog - Error</source>
         <translation>KLog — kļūda</translation>
     </message>
     <message>
-        <location filename="../filemanager.cpp" line="179"/>
+        <location filename="../filemanager.cpp" line="185" />
         <source>The selected callsign (%1) is not valid, please check it again to export the log.</source>
         <translation>Atlasītais izsaukuma signāls (%1) nav derīgs. Pārbaudiet to vēlreiz, lai eksportētu žurnālu.</translation>
     </message>
     <message>
-        <location filename="../filemanager.cpp" line="380"/>
-        <location filename="../filemanager.cpp" line="572"/>
+        <location filename="../filemanager.cpp" line="290" />
+        <location filename="../filemanager.cpp" line="485" />
         <source>Writing ADIF file...</source>
         <translation>Notiek ADIF faila rakstīšana...</translation>
     </message>
     <message>
-        <location filename="../filemanager.cpp" line="380"/>
-        <location filename="../filemanager.cpp" line="572"/>
+        <location filename="../filemanager.cpp" line="290" />
+        <location filename="../filemanager.cpp" line="485" />
         <source>Abort writing</source>
         <translation>Pārtraukt rakstīšanu</translation>
     </message>
     <message>
-        <location filename="../filemanager.cpp" line="414"/>
-        <location filename="../filemanager.cpp" line="607"/>
-        <location filename="../filemanager.cpp" line="887"/>
+        <location filename="../filemanager.cpp" line="324" />
+        <location filename="../filemanager.cpp" line="520" />
+        <location filename="../filemanager.cpp" line="1067" />
         <source>KLog - User cancelled</source>
         <translation>KLog - Darbību atcēla lietotājs</translation>
     </message>
     <message>
-        <location filename="../filemanager.cpp" line="415"/>
-        <location filename="../filemanager.cpp" line="608"/>
+        <location filename="../filemanager.cpp" line="325" />
+        <location filename="../filemanager.cpp" line="521" />
         <source>You have canceled the file export. The file will be removed and no data will be exported.</source>
         <translation>Faila eksportēšana tika atcelta. Fails tiks noņemts, un dati netiks eksportēti.</translation>
     </message>
     <message>
-        <location filename="../filemanager.cpp" line="415"/>
-        <location filename="../filemanager.cpp" line="608"/>
+        <location filename="../filemanager.cpp" line="325" />
+        <location filename="../filemanager.cpp" line="521" />
         <source>Do you still want to cancel?</source>
         <translation>Vai tiešām vēlaties atcelt?</translation>
     </message>
     <message>
-        <location filename="../filemanager.cpp" line="383"/>
-        <location filename="../filemanager.cpp" line="575"/>
+        <location filename="../filemanager.cpp" line="293" />
+        <location filename="../filemanager.cpp" line="488" />
         <source>Export progress</source>
         <translation>Eksportēšanas progress</translation>
     </message>
     <message>
-        <location filename="../filemanager.cpp" line="406"/>
-        <location filename="../filemanager.cpp" line="596"/>
+        <location filename="../filemanager.cpp" line="316" />
+        <location filename="../filemanager.cpp" line="509" />
         <source>Writing ADIF file...
  QSO: </source>
         <translation>Notiek ADIF faila rakstīšana...
  QSO: </translation>
     </message>
     <message>
-        <location filename="../filemanager.cpp" line="689"/>
+        <location filename="../filemanager.cpp" line="602" />
         <source>KLog - File not opened</source>
         <translation>KLog - Failu neizdevās atvērt</translation>
     </message>
     <message>
-        <location filename="../filemanager.cpp" line="690"/>
+        <location filename="../filemanager.cpp" line="603" />
         <source>It was not possible to open the file %1 for reading.</source>
-        <translation>Failu %1 nebija iespējams atvērt lasīšanai.</translation>
+        <translation>Nevarēja atvērt failu %1 lasīšanai.</translation>
     </message>
     <message>
-        <location filename="../filemanager.cpp" line="691"/>
+        <location filename="../filemanager.cpp" line="604" />
         <source>KLog was not able to read the LoTW file</source>
         <translation>KLog nevarēja nolasīt LoTW failu</translation>
     </message>
     <message>
-        <source>Abort processing</source>
-        <translation type="vanished">Pārtraukt apstrādi</translation>
-    </message>
-    <message>
-        <source>LoTW reading</source>
-        <translation type="vanished">LoTW lasīšana</translation>
-    </message>
-    <message>
-        <source>KLog - Add new QSOs?</source>
-        <translation type="vanished">Klog — pievienot jaunus QSO?</translation>
-    </message>
-    <message>
-        <source>Reading LoTW file...</source>
-        <translation type="vanished">Notiek LoTW faila lasīšana...</translation>
-    </message>
-    <message>
-        <location filename="../filemanager.cpp" line="773"/>
+        <location filename="../filemanager.cpp" line="873" />
         <source>Abort reading</source>
         <translation>Pārtraukt lasīšanu</translation>
     </message>
     <message>
-        <location filename="../filemanager.cpp" line="817"/>
-        <source> QSO: </source>
-        <translation> QSO: </translation>
-    </message>
-    <message>
-        <location filename="../filemanager.cpp" line="773"/>
+        <location filename="../filemanager.cpp" line="873" />
         <source>Reading ADIF file...</source>
         <translation>Tiek nolasīts ADIF fails...</translation>
     </message>
     <message>
-        <location filename="../filemanager.cpp" line="817"/>
-        <source>Importing ADIF file...</source>
-        <translation>Tiek importēts ADIF fails...</translation>
+        <location filename="../filemanager.cpp" line="870" />
+        <source>File %1/%2: %3</source>
+        <translation>Fails %1/%2: %3</translation>
     </message>
     <message>
-        <location filename="../filemanager.cpp" line="888"/>
+        <location filename="../filemanager.cpp" line="875" />
+        <source>KLog - Importing file %1/%2</source>
+        <translation>KLog — importē failu %1/%2</translation>
+    </message>
+    <message>
+        <location filename="../filemanager.cpp" line="941" />
+        <source>Importing ADIF file... 
+QSO: </source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../filemanager.cpp" line="992" />
+        <source>KLog - Duplicated QSOs!</source>
+        <translation>KLog — dublēti QSO!</translation>
+    </message>
+    <message>
+        <location filename="../filemanager.cpp" line="993" />
+        <source>This file contains duplicated QSOs. Duplicated QSOs will not be imported</source>
+        <translation>Šis fails satur dublētus QSO. Dublētie QSO netiks importēti</translation>
+    </message>
+    <message>
+        <location filename="../filemanager.cpp" line="1068" />
         <source>You have canceled the file import. The file will be removed and no data will be imported.
 Do you still want to cancel?</source>
         <translation>Faila importēšana tika atcelta. Fails tiks noņemts, un dati netiks importēti.
 Vai tiešām vēlaties atcelt?</translation>
     </message>
     <message>
-        <location filename="../filemanager.cpp" line="1111"/>
+        <location filename="../filemanager.cpp" line="1318" />
         <source>KLog has found one QSO without the Station Callsign defined.
 
 Enter the Station Callsign that was used to do this QSO with %1 on %2:</source>
-        <translation>KLog atrada vienu QSO kuram nav norādīts stacijas izsaukuma signāls.
+        <translation>KLog atrada vienu QSO, kuram nav norādīts stacijas izsaukuma signāls.
 
-Ievadiet stacijas izsaukuma signālu kas tika izmantots šim QSO ar %1 datumā %2:
+Ievadiet stacijas izsaukuma signālu, kas tika izmantots šim QSO ar %1 datumā %2:
 </translation>
     </message>
     <message>
-        <location filename="../filemanager.cpp" line="1112"/>
-        <location filename="../filemanager.cpp" line="1117"/>
+        <location filename="../filemanager.cpp" line="1319" />
+        <location filename="../filemanager.cpp" line="1324" />
         <source>KLog - QSO without Station Callsign</source>
         <translation>KLog - QSO bez norādīta stacijas izsaukuma signāla</translation>
     </message>
     <message>
-        <location filename="../filemanager.cpp" line="1118"/>
+        <location filename="../filemanager.cpp" line="1325" />
         <source>KLog has found one QSO without the Station Callsign defined.
 
 Enter the Station Callsign that was used to do this QSO on %1:</source>
@@ -1204,32 +1568,32 @@ Ievadiet stacijas izsaukuma signālu, kas tika izmantots šim QSO datumā %1:
 </translation>
     </message>
     <message>
-        <location filename="../filemanager.cpp" line="1476"/>
-        <source>KLog - Don&apos;t ask again</source>
+        <location filename="../filemanager.cpp" line="1691" />
+        <source>KLog - Don't ask again</source>
         <translation>KLog – Vairs nejautāt</translation>
     </message>
     <message>
-        <location filename="../filemanager.cpp" line="1478"/>
+        <location filename="../filemanager.cpp" line="1693" />
         <source>Do you want to reuse your answer?</source>
         <translation>Vai vēlaties izmantot savu atbildi vēlreiz?</translation>
     </message>
     <message>
-        <location filename="../filemanager.cpp" line="1479"/>
+        <location filename="../filemanager.cpp" line="1694" />
         <source>KLog will use automatically your previous answer for any other similar ocurrence, if any, without asking you again.</source>
         <translation>KLog automātiski izmantos jūsu iepriekšējo atbildi jebkuram citam līdzīgam gadījumam, ja tāds būs, vairs jums nejautājot.</translation>
     </message>
     <message>
-        <location filename="../filemanager.cpp" line="1502"/>
+        <location filename="../filemanager.cpp" line="1717" />
         <source>&lt;ul&gt;&lt;li&gt;Date/Time:&lt;/i&gt; %1&lt;/li&gt;&lt;li&gt;Callsign: %2&lt;/li&gt;&lt;li&gt;Band: %3&lt;/li&gt;&lt;li&gt;Mode: %4&lt;/li&gt;&lt;/ul&gt;</source>
         <translation>&lt;ul&gt;&lt;li&gt;Datums/laiks: %1&lt;/li&gt;&lt;li&gt;Izsaukuma signāls: %2&lt;/li&gt;&lt;li&gt;Diapazons: %3&lt;/li&gt;&lt;li&gt;Režīms: %4&lt;/li&gt;&lt;/ul&gt;</translation>
     </message>
     <message>
-        <location filename="../filemanager.cpp" line="1506"/>
+        <location filename="../filemanager.cpp" line="1721" />
         <source>KLog - QSO not found</source>
         <translation>KLog - QSO netika atrasts</translation>
     </message>
     <message>
-        <location filename="../filemanager.cpp" line="1508"/>
+        <location filename="../filemanager.cpp" line="1723" />
         <source>Do you want to add this QSO to the log?:
 
 </source>
@@ -1238,7 +1602,7 @@ Ievadiet stacijas izsaukuma signālu, kas tika izmantots šim QSO datumā %1:
 </translation>
     </message>
     <message>
-        <location filename="../filemanager.cpp" line="1509"/>
+        <location filename="../filemanager.cpp" line="1724" />
         <source>We have found a QSO coming from LoTW that is not in your local log.
 
 Do you want KLog to add this QSO to the log?</source>
@@ -1248,23 +1612,22 @@ Vai vēlaties, lai KLog pievieno šo QSO žurnālam?
 </translation>
     </message>
     <message>
-        <location filename="../filemanager.cpp" line="1531"/>
+        <location filename="../filemanager.cpp" line="1746" />
         <source>KLog - Invalid call detected</source>
-        <translatorcomment>KLog – konstatēts nederīgs izsaukuma signāls</translatorcomment>
         <translation>KLog — konstatēts nederīgs izsaukumasignals</translation>
     </message>
     <message>
-        <location filename="../filemanager.cpp" line="1537"/>
+        <location filename="../filemanager.cpp" line="1752" />
         <source>An empty callsign has been detected. Do you want to export this QSO anyway (click on Yes) or remove the field from the exported log file?</source>
         <translation>Konstatēts tukšs izsaukuma signāls. Vai tomēr eksportēt šo QSO, vai noņemt šo lauku no eksportētā žurnāla faila?</translation>
     </message>
     <message>
-        <location filename="../filemanager.cpp" line="1541"/>
+        <location filename="../filemanager.cpp" line="1756" />
         <source>An invalid callsign has been detected %1. Do you want to export this callsign anyway (click on Yes) or remove the call from the exported log file?</source>
         <translation>Konstatēts nederīgs izsaukuma signāls %1. Vai tomēr vēlaties eksportēt šo izsaukuma signālu, noklikšķinot uz “Jā”, vai noņemt šo izsaukuma signālu no eksportētā žurnāla faila?</translation>
     </message>
     <message>
-        <location filename="../filemanager.cpp" line="1544"/>
+        <location filename="../filemanager.cpp" line="1759" />
         <source>Exporting wrong calls may create problems in the applications you are potentially importing this logfile to. It may, however, be a good callsign that is wrongly identified by KLog as not valid. You can, however, edit the ADIF file once the export process is finished.</source>
         <translation>Nepareizu izsaukuma signālu eksportēšana var radīt problēmas programmās, kurās importēsiet šo žurnāla failu. Tomēr izsaukuma signāls var būt derīgs, bet KLog to kļūdaini atpazinis kā nederīgu. Pēc eksportēšanas ADIF failu varēsiet rediģēt.</translation>
     </message>
@@ -1272,28 +1635,28 @@ Vai vēlaties, lai KLog pievieno šo QSO žurnālam?
 <context>
     <name>HamLibNetworkConfigWidget</name>
     <message>
-        <location filename="../setuppages/hamlibnetworkconfigwidget.cpp" line="15"/>
-        <location filename="../setuppages/hamlibnetworkconfigwidget.cpp" line="21"/>
+        <location filename="../setuppages/hamlibnetworkconfigwidget.cpp" line="15" />
+        <location filename="../setuppages/hamlibnetworkconfigwidget.cpp" line="21" />
         <source>Enter the hostname or address of the radio.</source>
         <translation>Ievadiet radioiekārtas nosaukumu vai adresi.</translation>
     </message>
     <message>
-        <location filename="../setuppages/hamlibnetworkconfigwidget.cpp" line="16"/>
+        <location filename="../setuppages/hamlibnetworkconfigwidget.cpp" line="16" />
         <source>Set de network port of the radio.</source>
         <translation>Iestatiet radioiekārtas tīkla portu.</translation>
     </message>
     <message>
-        <location filename="../setuppages/hamlibnetworkconfigwidget.cpp" line="19"/>
+        <location filename="../setuppages/hamlibnetworkconfigwidget.cpp" line="19" />
         <source>Host/Address</source>
         <translation>Resursdators/adrese</translation>
     </message>
     <message>
-        <location filename="../setuppages/hamlibnetworkconfigwidget.cpp" line="25"/>
+        <location filename="../setuppages/hamlibnetworkconfigwidget.cpp" line="25" />
         <source>Port</source>
         <translation>Ports</translation>
     </message>
     <message>
-        <location filename="../setuppages/hamlibnetworkconfigwidget.cpp" line="27"/>
+        <location filename="../setuppages/hamlibnetworkconfigwidget.cpp" line="27" />
         <source>Enter the port of the radio.</source>
         <translation>Ievadiet radioiekārtas portu.</translation>
     </message>
@@ -1301,258 +1664,198 @@ Vai vēlaties, lai KLog pievieno šo QSO žurnālam?
 <context>
     <name>HamLibSerialConfigWidget</name>
     <message>
-        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="25"/>
+        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="25" />
         <source>Bauds</source>
-        <translation type="unfinished"></translation>
+        <translation>Bodi</translation>
     </message>
     <message>
-        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="27"/>
+        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="27" />
         <source>Select the serial port speed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Izvēlieties seriālā porta ātrumu.</translation>
     </message>
     <message>
-        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="31"/>
+        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="31" />
         <source>Port</source>
-        <translation type="unfinished"></translation>
+        <translation>Ports</translation>
     </message>
     <message>
-        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="33"/>
+        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="33" />
         <source>Select the serial port. Only the serial ports that are detected are shown.</source>
-        <translation type="unfinished"></translation>
+        <translation>Izvēlieties seriālo portu. Rādīti tikai atrastie porti.</translation>
     </message>
     <message>
-        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="37"/>
+        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="37" />
         <source>Scan</source>
-        <translation type="unfinished"></translation>
+        <translation>Meklēt</translation>
     </message>
     <message>
-        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="39"/>
+        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="39" />
         <source>Click to identify the serial ports available in your computer.</source>
-        <translation type="unfinished"></translation>
+        <translation>Noklikšķiniet, lai atrastu datorā pieejamos seriālos portus.</translation>
     </message>
     <message>
-        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="50"/>
+        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="50" />
         <source>5 bits</source>
-        <translation type="unfinished"></translation>
+        <translation>5 biti</translation>
     </message>
     <message>
-        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="50"/>
+        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="50" />
         <source>6 bits</source>
-        <translation type="unfinished"></translation>
+        <translation>6 biti</translation>
     </message>
     <message>
-        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="50"/>
+        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="50" />
         <source>7 bits</source>
-        <translation type="unfinished"></translation>
+        <translation>7 biti</translation>
     </message>
     <message>
-        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="50"/>
+        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="50" />
         <source>8 bits</source>
-        <translation type="unfinished"></translation>
+        <translation>8 biti</translation>
     </message>
     <message>
-        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="52"/>
+        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="52" />
         <source>Data bits</source>
-        <translation type="unfinished"></translation>
+        <translation>Datu biti</translation>
     </message>
     <message>
-        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="54"/>
+        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="54" />
         <source>Select the serial data bits.</source>
-        <translation type="unfinished"></translation>
+        <translation>Izvēlieties datu bitu skaitu.</translation>
     </message>
     <message>
-        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="60"/>
+        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="60" />
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Nav</translation>
     </message>
     <message>
-        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="60"/>
+        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="60" />
         <source>Hardware</source>
-        <translation type="unfinished"></translation>
+        <translation>Aparatūras</translation>
     </message>
     <message>
-        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="60"/>
+        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="60" />
         <source>Software XON/XOFF</source>
-        <translation type="unfinished"></translation>
+        <translation>Programmatūras XON/XOFF</translation>
     </message>
     <message>
-        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="62"/>
+        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="62" />
         <source>Flow control</source>
-        <translation type="unfinished"></translation>
+        <translation>Plūsmas vadība</translation>
     </message>
     <message>
-        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="64"/>
+        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="64" />
         <source>Select the serial flow control</source>
-        <translation type="unfinished"></translation>
+        <translation>Izvēlieties plūsmas vadību</translation>
     </message>
     <message>
-        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="71"/>
+        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="71" />
         <source>No parity</source>
-        <translation type="unfinished"></translation>
+        <translation>Bez paritātes</translation>
     </message>
     <message>
-        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="71"/>
+        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="71" />
         <source>Even</source>
-        <translation type="unfinished"></translation>
+        <translation>Pāra</translation>
     </message>
     <message>
-        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="71"/>
+        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="71" />
         <source>Odd</source>
-        <translation type="unfinished"></translation>
+        <translation>Nepāra</translation>
     </message>
     <message>
-        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="71"/>
+        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="71" />
         <source>Space</source>
-        <translation type="unfinished"></translation>
+        <translation>Atstarpe</translation>
     </message>
     <message>
-        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="71"/>
+        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="71" />
         <source>Mark</source>
-        <translation type="unfinished"></translation>
+        <translation>Atzīme</translation>
     </message>
     <message>
-        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="73"/>
+        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="73" />
         <source>Parity</source>
-        <translation type="unfinished"></translation>
+        <translation>Paritāte</translation>
     </message>
     <message>
-        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="75"/>
+        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="75" />
         <source>Select the serial parity.</source>
-        <translation type="unfinished"></translation>
+        <translation>Izvēlieties paritāti.</translation>
     </message>
     <message>
-        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="82"/>
+        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="82" />
         <source>1 bit</source>
-        <translation type="unfinished"></translation>
+        <translation>1 bits</translation>
     </message>
     <message>
-        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="82"/>
+        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="82" />
         <source>1.5 bits</source>
-        <translation type="unfinished"></translation>
+        <translation>1,5 biti</translation>
     </message>
     <message>
-        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="82"/>
+        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="82" />
         <source>2 bits</source>
-        <translation type="unfinished"></translation>
+        <translation>2 biti</translation>
     </message>
     <message>
-        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="84"/>
+        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="84" />
         <source>Stop bits</source>
-        <translation type="unfinished"></translation>
+        <translation>Stopbiti</translation>
     </message>
     <message>
-        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="86"/>
+        <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="86" />
         <source>Select the serial stop bits.</source>
-        <translation type="unfinished"></translation>
+        <translation>Izvēlieties stopbitu skaitu.</translation>
     </message>
 </context>
 <context>
     <name>InfoWidget</name>
     <message>
-        <location filename="../infowidget.cpp" line="81"/>
-        <source>10M</source>
-        <translation>10M</translation>
-    </message>
-    <message>
-        <location filename="../infowidget.cpp" line="82"/>
-        <source>15M</source>
-        <translation>15M</translation>
-    </message>
-    <message>
-        <location filename="../infowidget.cpp" line="83"/>
-        <source>20M</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../infowidget.cpp" line="84"/>
-        <source>40M</source>
-        <translation>40M</translation>
-    </message>
-    <message>
-        <location filename="../infowidget.cpp" line="85"/>
-        <source>80M</source>
-        <translation>80M</translation>
-    </message>
-    <message>
-        <location filename="../infowidget.cpp" line="86"/>
-        <source>160M</source>
-        <translation>160M</translation>
-    </message>
-    <message>
-        <location filename="../infowidget.cpp" line="87"/>
-        <source>2M</source>
-        <translation>2M</translation>
-    </message>
-    <message>
-        <location filename="../infowidget.cpp" line="88"/>
-        <source>6M</source>
-        <translation>6M</translation>
-    </message>
-    <message>
-        <location filename="../infowidget.cpp" line="89"/>
-        <source>12M</source>
-        <translation>12M</translation>
-    </message>
-    <message>
-        <location filename="../infowidget.cpp" line="90"/>
-        <source>17M</source>
-        <translation>17M</translation>
-    </message>
-    <message>
-        <location filename="../infowidget.cpp" line="91"/>
-        <source>30M</source>
-        <translation>30M</translation>
-    </message>
-    <message>
-        <location filename="../infowidget.cpp" line="92"/>
-        <source>70CM</source>
-        <translation>70CM</translation>
-    </message>
-    <message>
-        <location filename="../infowidget.cpp" line="107"/>
+        <location filename="../infowidget.cpp" line="123" />
         <source>Continent</source>
         <translation>Kontinents</translation>
     </message>
     <message>
-        <location filename="../infowidget.cpp" line="111"/>
+        <location filename="../infowidget.cpp" line="127" />
         <source>Prefix</source>
         <translation>Prefiks</translation>
     </message>
     <message>
-        <location filename="../infowidget.cpp" line="115"/>
+        <location filename="../infowidget.cpp" line="131" />
         <source>CQ</source>
         <translation>CQ</translation>
     </message>
     <message>
-        <location filename="../infowidget.cpp" line="119"/>
+        <location filename="../infowidget.cpp" line="135" />
         <source>ITU</source>
         <translation>ITU</translation>
     </message>
     <message>
-        <location filename="../infowidget.cpp" line="123"/>
+        <location filename="../infowidget.cpp" line="139" />
         <source>Short Path</source>
         <translation>Īss ceļš</translation>
     </message>
     <message>
-        <location filename="../infowidget.cpp" line="126"/>
+        <location filename="../infowidget.cpp" line="142" />
         <source>Long Path</source>
         <translation>Garais ceļš</translation>
     </message>
     <message>
-        <location filename="../infowidget.cpp" line="129"/>
-        <location filename="../infowidget.cpp" line="134"/>
+        <location filename="../infowidget.cpp" line="145" />
+        <location filename="../infowidget.cpp" line="150" />
         <source>Deg</source>
         <translation>Grādi</translation>
     </message>
     <message>
-        <location filename="../infowidget.cpp" line="359"/>
-        <location filename="../infowidget.cpp" line="360"/>
+        <location filename="../infowidget.cpp" line="386" />
+        <location filename="../infowidget.cpp" line="387" />
         <source>Miles</source>
         <translation>Jūdzes</translation>
     </message>
     <message>
-        <location filename="../infowidget.cpp" line="366"/>
-        <location filename="../infowidget.cpp" line="367"/>
+        <location filename="../infowidget.cpp" line="393" />
+        <location filename="../infowidget.cpp" line="394" />
         <source>Km</source>
         <translation>Km</translation>
     </message>
@@ -1560,71 +1863,67 @@ Vai vēlaties, lai KLog pievieno šo QSO žurnālam?
 <context>
     <name>IntroPage</name>
     <message>
-        <location filename="../startwizard.cpp" line="143"/>
+        <location filename="../startwizard.cpp" line="143" />
         <source>Welcome to KLog!</source>
         <translation>Laipni lūdzam KLog!</translation>
     </message>
     <message>
-        <location filename="../startwizard.cpp" line="145"/>
+        <location filename="../startwizard.cpp" line="145" />
         <source>Welcome to KLog! - brought to you under the terms of the GPL!</source>
         <translation>Laipni lūdzam KLog! - sniegta jums saskaņā ar GPL noteikumiem!</translation>
     </message>
     <message>
-        <location filename="../startwizard.cpp" line="153"/>
+        <location filename="../startwizard.cpp" line="153" />
         <source>Welcome to KLog</source>
         <translation>Laipni lūdzam KLog</translation>
     </message>
     <message>
-        <location filename="../startwizard.cpp" line="154"/>
-        <source>This looks like it&apos;s the first time you&apos;ve run KLog on this computer.</source>
+        <location filename="../startwizard.cpp" line="154" />
+        <source>This looks like it's the first time you've run KLog on this computer.</source>
         <translation>Šķiet, ka šī ir pirmā reize, kad šajā datorā palaižat KLog.</translation>
     </message>
     <message>
-        <source>KLog is a free hamradio logging program that can run on Linux, macOS, and Windows.</source>
-        <translation type="vanished">KLog ir bezmaksas hamradio reģistrēšanas programma, kas var darboties operētājsistēmās Linux, macOS un Windows.</translation>
-    </message>
-    <message>
-        <location filename="../startwizard.cpp" line="155"/>
+        <location filename="../startwizard.cpp" line="155" />
         <source>KLog is a free hamradio logging program that can run on GNU/Linux, macOS, and Windows. </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../startwizard.cpp" line="156"/>
+        <location filename="../startwizard.cpp" line="156" />
         <source>It is designed to provide general purpose DX, and contest logging.</source>
         <translation>Tas ir paredzēts, lai nodrošinātu vispārējas nozīmes DX un sacensību reģistrēšanu.</translation>
     </message>
     <message>
-        <location filename="../startwizard.cpp" line="157"/>
+        <location filename="../startwizard.cpp" line="157" />
         <source>It supports QSL management, import and export of ADIF </source>
         <translation>Tā atbalsta QSL pārvaldību, ADIF importu un eksportu </translation>
     </message>
     <message>
-        <location filename="../startwizard.cpp" line="158"/>
+        <location filename="../startwizard.cpp" line="158" />
         <source>and Cabrillo file formats and many other features...</source>
         <translation>un Cabrillo failu formāti un daudzas citas funkcijas...</translation>
     </message>
     <message>
-        <location filename="../startwizard.cpp" line="159"/>
+        <location filename="../startwizard.cpp" line="159" />
         <source>Before you can start using KLog, you will be asked to:</source>
         <translation>Pirms sākat lietot KLog, jums tiks lūgts:</translation>
     </message>
     <message>
-        <location filename="../startwizard.cpp" line="160"/>
+        <location filename="../startwizard.cpp" line="160" />
         <source>Acknowledge to the terms of the license.</source>
         <translation>Apstipriniet licences nosacījumus.</translation>
     </message>
     <message>
-        <location filename="../startwizard.cpp" line="161"/>
+        <location filename="../startwizard.cpp" line="161" />
         <source>Download the DX entities information.</source>
         <translation>Lejupielādējiet DX entītiju informāciju.</translation>
     </message>
     <message>
-        <location filename="../startwizard.cpp" line="162"/>
+        <location filename="../startwizard.cpp" line="162" />
         <source>Enter your callsign, CQ zone, etc. and main configuration.</source>
         <translation>Ievadiet savu izsaukuma signālu, CQ zonu utt. un galveno konfigurāciju.</translation>
     </message>
     <message>
-        <location filename="../startwizard.cpp" line="163"/>
+        <location filename="../startwizard.cpp" line="163" />
         <source>Enjoy KLog and contact the development team if you have any suggestions!</source>
         <translation>Izbaudiet KLog un sazinieties ar izstrādes komandu, ja jums ir kādi ieteikumi!</translation>
     </message>
@@ -1632,22 +1931,22 @@ Vai vēlaties, lai KLog pievieno šo QSO žurnālam?
 <context>
     <name>LicPage</name>
     <message>
-        <location filename="../startwizard.cpp" line="183"/>
+        <location filename="../startwizard.cpp" line="183" />
         <source>KLog License information</source>
         <translation>Informācija par KLog licenzi</translation>
     </message>
     <message>
-        <location filename="../startwizard.cpp" line="186"/>
+        <location filename="../startwizard.cpp" line="186" />
         <source>Welcome to KLog!- brought to you under the terms of the GPL!</source>
         <translation>Laipni lūdzam KLog! — nodrošināts saskaņā ar GPL noteikumiem!</translation>
     </message>
     <message>
-        <location filename="../startwizard.cpp" line="827"/>
+        <location filename="../startwizard.cpp" line="827" />
         <source>Acknowledge</source>
         <translation>Atzīt</translation>
     </message>
     <message>
-        <location filename="../startwizard.cpp" line="828"/>
+        <location filename="../startwizard.cpp" line="828" />
         <source>Be aware that KLog is free software.</source>
         <translation>Ņemiet vērā, ka KLog ir bezmaksas programmatūra.</translation>
     </message>
@@ -1655,2817 +1954,3016 @@ Vai vēlaties, lai KLog pievieno šo QSO žurnālam?
 <context>
     <name>LoTWUtilities</name>
     <message>
-        <location filename="../lotwutilities.cpp" line="63"/>
+        <location filename="../elog/lotwutilities.cpp" line="63" />
         <source>Double click on the date that you want to use as the start date for downloading QSOs.</source>
         <translation>Veiciet dubultklikšķi uz datuma, kuru vēlaties izmantot kā QSO lejupielādes sākuma datumu.</translation>
     </message>
     <message>
-        <location filename="../lotwutilities.cpp" line="111"/>
+        <location filename="../elog/lotwutilities.cpp" line="111" />
         <source>KLog - LoTW password needed</source>
         <translation>KLog — nepieciešama LoTW parole</translation>
     </message>
     <message>
-        <location filename="../lotwutilities.cpp" line="112"/>
+        <location filename="../elog/lotwutilities.cpp" line="112" />
         <source>Please enter your LoTW password: </source>
-        <translation type="unfinished"></translation>
+        <translation>Lūdzu, ievadiet savu LoTW paroli: </translation>
     </message>
     <message>
-        <location filename="../lotwutilities.cpp" line="188"/>
+        <location filename="../elog/lotwutilities.cpp" line="191" />
         <source>KLog - LoTW Station callsign</source>
-        <translation>KLog - LoTW stacijas izsaukuma signāls</translation>
+        <translation>KLog — LoTW stacijas izsaukuma signāls</translation>
     </message>
     <message>
-        <location filename="../lotwutilities.cpp" line="189"/>
+        <location filename="../elog/lotwutilities.cpp" line="192" />
         <source>There is not a single QSO in the log with that station callsign.</source>
-        <translation type="unfinished"></translation>
+        <translation>Žurnālā nav neviena QSO ar šo stacijas izsaukuma signālu.</translation>
     </message>
     <message>
-        <location filename="../lotwutilities.cpp" line="190"/>
+        <location filename="../elog/lotwutilities.cpp" line="193" />
         <source>Are you sure that you want to use that station callsign (%1)?</source>
-        <translation type="unfinished"></translation>
+        <translation>Vai tiešām vēlaties izmantot šo stacijas izsaukuma signālu (%1)?</translation>
     </message>
     <message>
-        <location filename="../lotwutilities.cpp" line="252"/>
-        <location filename="../lotwutilities.cpp" line="379"/>
+        <location filename="../elog/lotwutilities.cpp" line="255" />
+        <location filename="../elog/lotwutilities.cpp" line="383" />
         <source>KLog - LoTW File already exists</source>
-        <translation type="unfinished"></translation>
+        <translation>KLog — LoTW fails jau pastāv</translation>
     </message>
     <message>
-        <location filename="../lotwutilities.cpp" line="253"/>
-        <location filename="../lotwutilities.cpp" line="380"/>
+        <location filename="../elog/lotwutilities.cpp" line="256" />
+        <location filename="../elog/lotwutilities.cpp" line="384" />
         <source>There is a file already existing with the name that will be used.</source>
-        <translation type="unfinished"></translation>
+        <translation>Fails ar šādu nosaukumu jau pastāv.</translation>
     </message>
     <message>
-        <location filename="../lotwutilities.cpp" line="254"/>
-        <location filename="../lotwutilities.cpp" line="381"/>
+        <location filename="../elog/lotwutilities.cpp" line="257" />
+        <location filename="../elog/lotwutilities.cpp" line="385" />
         <source>The file %1 already exist. Do you want to overwrite?</source>
-        <translation type="unfinished"></translation>
+        <translation>Fails %1 jau pastāv. Vai vēlaties to pārrakstīt?</translation>
     </message>
     <message>
-        <location filename="../lotwutilities.cpp" line="279"/>
-        <location filename="../lotwutilities.cpp" line="406"/>
-        <source>KLog - LoTW Can&apos;t write the file</source>
-        <translation type="unfinished"></translation>
+        <location filename="../elog/lotwutilities.cpp" line="282" />
+        <location filename="../elog/lotwutilities.cpp" line="410" />
+        <source>KLog - LoTW Can't write the file</source>
+        <translation>KLog — LoTW nevar ierakstīt failu</translation>
     </message>
     <message>
-        <location filename="../lotwutilities.cpp" line="280"/>
-        <location filename="../lotwutilities.cpp" line="407"/>
+        <location filename="../elog/lotwutilities.cpp" line="283" />
+        <location filename="../elog/lotwutilities.cpp" line="411" />
         <source>KLog was not able to save the file %1.
 Error returned: %2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../lotwutilities.cpp" line="281"/>
-        <location filename="../lotwutilities.cpp" line="408"/>
+        <location filename="../elog/lotwutilities.cpp" line="285" />
+        <location filename="../elog/lotwutilities.cpp" line="413" />
         <source>The file %1 already exists.</source>
-        <translation type="unfinished"></translation>
+        <translation>Fails %1 jau pastāv.</translation>
     </message>
     <message>
-        <location filename="../lotwutilities.cpp" line="299"/>
-        <location filename="../lotwutilities.cpp" line="426"/>
+        <location filename="../elog/lotwutilities.cpp" line="303" />
+        <location filename="../elog/lotwutilities.cpp" line="431" />
         <source>Downloading data to file: %1.</source>
-        <translation type="unfinished"></translation>
+        <translation>Lejupielādē datus failā: %1.</translation>
     </message>
     <message>
-        <location filename="../lotwutilities.cpp" line="301"/>
-        <location filename="../lotwutilities.cpp" line="428"/>
-        <location filename="../lotwutilities.cpp" line="689"/>
+        <location filename="../elog/lotwutilities.cpp" line="305" />
+        <location filename="../elog/lotwutilities.cpp" line="433" />
+        <location filename="../elog/lotwutilities.cpp" line="703" />
         <source>KLog - LoTW download</source>
         <translation>KLog — LoTW lejupielāde</translation>
     </message>
     <message>
-        <location filename="../lotwutilities.cpp" line="334"/>
+        <location filename="../elog/lotwutilities.cpp" line="338" />
         <source>KLog - LoTW Start date selection</source>
-        <translation type="unfinished"></translation>
+        <translation>KLog — LoTW sākuma datuma izvēle</translation>
     </message>
     <message>
-        <location filename="../lotwutilities.cpp" line="335"/>
+        <location filename="../elog/lotwutilities.cpp" line="339" />
         <source>This is the first date of a QSO with the callsign %1 in this log If you think that in LoTW you may have previous QSOs, answer No.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../lotwutilities.cpp" line="336"/>
+        <location filename="../elog/lotwutilities.cpp" line="340" />
         <source>Do you want to use this date (%1) as start date?</source>
-        <translation type="unfinished"></translation>
+        <translation>Vai vēlaties izmantot šo datumu (%1) kā sākuma datumu?</translation>
     </message>
     <message>
-        <location filename="../lotwutilities.cpp" line="508"/>
+        <location filename="../elog/lotwutilities.cpp" line="516" />
         <source>KLog - LoTW Download error</source>
-        <translation type="unfinished"></translation>
+        <translation>KLog — LoTW lejupielādes kļūda</translation>
     </message>
     <message>
-        <location filename="../lotwutilities.cpp" line="510"/>
+        <location filename="../elog/lotwutilities.cpp" line="518" />
         <source>There was an error (%1) while downloading the file from LoTW.</source>
-        <translation type="unfinished"></translation>
+        <translation>Lejupielādējot failu no LoTW, radās kļūda (%1).</translation>
     </message>
     <message>
-        <location filename="../lotwutilities.cpp" line="511"/>
+        <location filename="../elog/lotwutilities.cpp" line="519" />
         <source>The downloading error details are: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Lejupielādes kļūdas apraksts: %1</translation>
     </message>
     <message>
-        <location filename="../lotwutilities.cpp" line="523"/>
+        <location filename="../elog/lotwutilities.cpp" line="531" />
         <source>KLog - LoTW Redirection found</source>
-        <translation type="unfinished"></translation>
+        <translation>KLog — LoTW atrasta pāradresācija</translation>
     </message>
     <message>
-        <location filename="../lotwutilities.cpp" line="524"/>
+        <location filename="../elog/lotwutilities.cpp" line="532" />
         <source>The remote server redirected our connection to %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Attālais serveris pāradresēja savienojumu uz %1</translation>
     </message>
     <message>
-        <location filename="../lotwutilities.cpp" line="525"/>
+        <location filename="../elog/lotwutilities.cpp" line="533" />
         <source>Do you want to follow the redirection?</source>
-        <translation type="unfinished"></translation>
+        <translation>Vai vēlaties sekot pāradresācijai?</translation>
     </message>
     <message>
-        <location filename="../lotwutilities.cpp" line="599"/>
+        <location filename="../elog/lotwutilities.cpp" line="613" />
         <source>KLog - LoTW File not found</source>
         <translation>KLog — LoTW fails nav atrasts</translation>
     </message>
     <message>
-        <location filename="../lotwutilities.cpp" line="600"/>
-        <source>KLog can&apos;t find the downloaded file.</source>
-        <translation type="unfinished"></translation>
+        <location filename="../elog/lotwutilities.cpp" line="614" />
+        <source>KLog can't find the downloaded file.</source>
+        <translation>KLog nevar atrast lejupielādēto failu.</translation>
     </message>
     <message>
-        <location filename="../lotwutilities.cpp" line="601"/>
+        <location filename="../elog/lotwutilities.cpp" line="615" />
         <source>It was not possible for find the file %1 that has been just downloaded.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../lotwutilities.cpp" line="660"/>
+        <location filename="../elog/lotwutilities.cpp" line="674" />
         <source>KLog - LoTW user/password error</source>
-        <translation type="unfinished"></translation>
+        <translation>KLog — LoTW lietotāja vai paroles kļūda</translation>
     </message>
     <message>
-        <location filename="../lotwutilities.cpp" line="661"/>
+        <location filename="../elog/lotwutilities.cpp" line="675" />
         <source>LoTW server did not recognized your user/password</source>
-        <translation type="unfinished"></translation>
+        <translation>LoTW serveris neatpazina jūsu lietotājvārdu vai paroli</translation>
     </message>
     <message>
-        <location filename="../lotwutilities.cpp" line="662"/>
+        <location filename="../elog/lotwutilities.cpp" line="676" />
         <source>Check your user and password and ensure your are using the right one before trying again.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../lotwutilities.cpp" line="666"/>
+        <location filename="../elog/lotwutilities.cpp" line="680" />
         <source>KLog - LoTW No QSOs </source>
-        <translation type="unfinished"></translation>
+        <translation>KLog — LoTW nav QSO </translation>
     </message>
     <message>
-        <location filename="../lotwutilities.cpp" line="667"/>
+        <location filename="../elog/lotwutilities.cpp" line="681" />
         <source>LoTW sent no QSOs</source>
-        <translation type="unfinished"></translation>
+        <translation>LoTW neatsūtīja nevienu QSO</translation>
     </message>
     <message>
-        <location filename="../lotwutilities.cpp" line="668"/>
+        <location filename="../elog/lotwutilities.cpp" line="682" />
         <source>It seems that LoTW has no QSO with the Station Callsign you are using (%1).</source>
-        <translation type="unfinished"></translation>
+        <translation>Šķiet, ka LoTW nav neviena QSO ar izmantoto stacijas izsaukuma signālu (%1).</translation>
     </message>
     <message>
-        <location filename="../lotwutilities.cpp" line="672"/>
+        <location filename="../elog/lotwutilities.cpp" line="686" />
         <source>KLog - LoTW Unknown error</source>
-        <translation type="unfinished"></translation>
+        <translation>KLog — LoTW nezināma kļūda</translation>
     </message>
     <message>
-        <location filename="../lotwutilities.cpp" line="673"/>
-        <source>KLog can&apos;t recognize the file that has been downloaded from LoTW.</source>
-        <translation type="unfinished"></translation>
+        <location filename="../elog/lotwutilities.cpp" line="687" />
+        <source>KLog can't recognize the file that has been downloaded from LoTW.</source>
+        <translation>KLog neatpazīst no LoTW lejupielādēto failu.</translation>
     </message>
     <message>
-        <location filename="../lotwutilities.cpp" line="674"/>
+        <location filename="../elog/lotwutilities.cpp" line="688" />
         <source>Try again and send the downloaded file (%1) to the KLog developer for analysis.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../lotwutilities.cpp" line="690"/>
+        <location filename="../elog/lotwutilities.cpp" line="704" />
         <source>KLog downloaded %1 QSOs successfully. Do you want to update your log with the downloaded data?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../lotwutilities.cpp" line="691"/>
+        <location filename="../elog/lotwutilities.cpp" line="705" />
         <source>Now KLog will process the downloaded QSO and update your local log.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tagad KLog apstrādās lejupielādētos QSO un atjauninās vietējo žurnālu.</translation>
     </message>
 </context>
 <context>
     <name>LogModel</name>
     <message>
-        <source>Date</source>
-        <translation type="vanished">Datums</translation>
-    </message>
-    <message>
-        <source>Call</source>
-        <translation type="vanished">Izsaukuma signāls</translation>
-    </message>
-    <message>
-        <source>Band</source>
-        <translation type="vanished">Diapazons</translation>
-    </message>
-    <message>
-        <source>Mode</source>
-        <translation type="vanished">Režīms</translation>
-    </message>
-    <message>
-        <source>RSTtx</source>
-        <translation type="vanished">RSTtx</translation>
-    </message>
-    <message>
-        <source>RSTrx</source>
-        <translation type="vanished">RSTrx</translation>
-    </message>
-    <message>
-        <source>Comment</source>
-        <translation type="vanished">Komentāri</translation>
+        <location filename="../logmodel.cpp" line="141" />
+        <location filename="../logmodel.cpp" line="147" />
+        <source>Unknown</source>
+        <translation>Nezināms</translation>
     </message>
 </context>
 <context>
     <name>LogWindow</name>
     <message>
-        <location filename="../logwindow.cpp" line="222"/>
+        <location filename="../logwindow.cpp" line="479" />
         <source>There was a problem with the log, please restart KLog and contact the development team if the error persist.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../logwindow.cpp" line="327"/>
+        <location filename="../logwindow.cpp" line="591" />
         <source>QSL Send</source>
-        <translation type="unfinished"></translation>
+        <translation>QSL nosūtīts</translation>
     </message>
     <message>
-        <location filename="../logwindow.cpp" line="336"/>
+        <location filename="../logwindow.cpp" line="600" />
         <source>QSL Rcvd</source>
-        <translation type="unfinished"></translation>
+        <translation>QSL saņemts</translation>
     </message>
     <message>
-        <location filename="../logwindow.cpp" line="388"/>
+        <location filename="../logwindow.cpp" line="685" />
         <source>&amp;Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Dzēst</translation>
     </message>
     <message>
-        <location filename="../logwindow.cpp" line="390"/>
+        <location filename="../logwindow.cpp" line="687" />
         <source>Delete a QSO</source>
-        <translation type="unfinished"></translation>
+        <translation>Dzēst QSO</translation>
     </message>
     <message>
-        <location filename="../logwindow.cpp" line="393"/>
+        <location filename="../logwindow.cpp" line="690" />
         <source>&amp;Edit QSO</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Rediģēt QSO</translation>
     </message>
     <message>
-        <location filename="../logwindow.cpp" line="395"/>
+        <location filename="../logwindow.cpp" line="692" />
         <source>Edit this QSO</source>
-        <translation type="unfinished"></translation>
+        <translation>Rediģēt šo QSO</translation>
     </message>
     <message>
-        <location filename="../logwindow.cpp" line="398"/>
+        <location filename="../logwindow.cpp" line="695" />
         <source>Via &amp;bureau</source>
-        <translation type="unfinished"></translation>
+        <translation>Caur &amp;biroju</translation>
     </message>
     <message>
-        <location filename="../logwindow.cpp" line="400"/>
+        <location filename="../logwindow.cpp" line="697" />
         <source>Send this QSL via bureau</source>
-        <translation type="unfinished"></translation>
+        <translation>Sūtīt šo QSL caur biroju</translation>
     </message>
     <message>
-        <location filename="../logwindow.cpp" line="403"/>
+        <location filename="../logwindow.cpp" line="700" />
         <source>D&amp;irect</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tieši</translation>
     </message>
     <message>
-        <location filename="../logwindow.cpp" line="405"/>
+        <location filename="../logwindow.cpp" line="702" />
         <source>Send this QSL via direct</source>
-        <translation type="unfinished"></translation>
+        <translation>Sūtīt šo QSL tieši</translation>
     </message>
     <message>
-        <location filename="../logwindow.cpp" line="408"/>
-        <location filename="../logwindow.cpp" line="454"/>
-        <location filename="../logwindow.cpp" line="462"/>
+        <location filename="../logwindow.cpp" line="705" />
+        <location filename="../logwindow.cpp" line="751" />
+        <location filename="../logwindow.cpp" line="759" />
         <source>Via bureau</source>
-        <translation type="unfinished"></translation>
+        <translation>Caur biroju</translation>
     </message>
     <message>
-        <location filename="../logwindow.cpp" line="410"/>
+        <location filename="../logwindow.cpp" line="707" />
         <source>QSL &amp;received via bureau</source>
-        <translation type="unfinished"></translation>
+        <translation>QSL &amp;saņemts caur biroju</translation>
     </message>
     <message>
-        <location filename="../logwindow.cpp" line="413"/>
-        <location filename="../logwindow.cpp" line="458"/>
-        <location filename="../logwindow.cpp" line="466"/>
+        <location filename="../logwindow.cpp" line="710" />
+        <location filename="../logwindow.cpp" line="755" />
+        <location filename="../logwindow.cpp" line="763" />
         <source>Direct</source>
-        <translation type="unfinished">Tieša</translation>
+        <translation>Tieša</translation>
     </message>
     <message>
-        <location filename="../logwindow.cpp" line="415"/>
+        <location filename="../logwindow.cpp" line="712" />
         <source>QSL received via direc&amp;t</source>
-        <translation type="unfinished"></translation>
+        <translation>QSL saņemts &amp;tieši</translation>
     </message>
     <message>
-        <location filename="../logwindow.cpp" line="418"/>
+        <location filename="../logwindow.cpp" line="715" />
         <source>Check in QRZ.com</source>
-        <translation type="unfinished"></translation>
+        <translation>Pārbaudiet QRZ.com</translation>
     </message>
     <message>
-        <location filename="../logwindow.cpp" line="420"/>
+        <location filename="../logwindow.cpp" line="717" />
         <source>Check this callsign in QRZ.com</source>
-        <translation type="unfinished"></translation>
+        <translation>Pārbaudiet šo izsaukuma signālu vietnē QRZ.com</translation>
     </message>
     <message>
-        <location filename="../logwindow.cpp" line="423"/>
+        <location filename="../logwindow.cpp" line="720" />
         <source>Check in DXHeat.com</source>
-        <translation type="unfinished"></translation>
+        <translation>Pārbaudīt DXHeat.com</translation>
     </message>
     <message>
-        <location filename="../logwindow.cpp" line="425"/>
+        <location filename="../logwindow.cpp" line="722" />
         <source>Check this callsign in DXHeat.com</source>
-        <translation type="unfinished"></translation>
+        <translation>Pārbaudīt šo izsaukuma signālu DXHeat.com</translation>
     </message>
     <message>
-        <location filename="../logwindow.cpp" line="428"/>
+        <location filename="../logwindow.cpp" line="725" />
         <source>Delete selected QSOs</source>
-        <translation type="unfinished"></translation>
+        <translation>Dzēst atlasītos QSO</translation>
     </message>
     <message>
-        <location filename="../logwindow.cpp" line="430"/>
+        <location filename="../logwindow.cpp" line="727" />
         <source>Delete the selected QSOs</source>
-        <translation type="unfinished"></translation>
+        <translation>Dzēst atlasītos QSO</translation>
     </message>
     <message>
-        <location filename="../logwindow.cpp" line="433"/>
+        <location filename="../logwindow.cpp" line="730" />
         <source>Export to ADIF</source>
-        <translation type="unfinished"></translation>
+        <translation>Eksportēt uz ADIF</translation>
     </message>
     <message>
-        <location filename="../logwindow.cpp" line="434"/>
+        <location filename="../logwindow.cpp" line="731" />
         <source>Export the selected QSOs to an ADIF file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Eksportēt atlasītos QSO uz ADIF failu.</translation>
     </message>
     <message>
-        <location filename="../logwindow.cpp" line="442"/>
+        <location filename="../logwindow.cpp" line="739" />
         <source>Upload to LoTW</source>
-        <translation type="unfinished"></translation>
+        <translation>Augšupielādēt uz LoTW</translation>
     </message>
     <message>
-        <location filename="../logwindow.cpp" line="443"/>
+        <location filename="../logwindow.cpp" line="740" />
         <source>Upload the selected QSOs to LoTW</source>
-        <translation type="unfinished"></translation>
+        <translation>Augšupielādēt atlasītos QSO uz LoTW</translation>
     </message>
     <message>
-        <location filename="../logwindow.cpp" line="446"/>
+        <location filename="../logwindow.cpp" line="743" />
         <source>Upload to ClubLog</source>
-        <translation type="unfinished"></translation>
+        <translation>Augšupielādēt uz ClubLog</translation>
     </message>
     <message>
-        <location filename="../logwindow.cpp" line="447"/>
+        <location filename="../logwindow.cpp" line="744" />
         <source>Upload the selected QSOs to ClubLog</source>
-        <translation type="unfinished"></translation>
+        <translation>Augšupielādēt atlasītos QSO uz ClubLog</translation>
     </message>
     <message>
-        <location filename="../logwindow.cpp" line="450"/>
+        <location filename="../logwindow.cpp" line="747" />
         <source>Upload to eQSL.cc</source>
-        <translation type="unfinished"></translation>
+        <translation>Augšupielādēt uz eQSL.cc</translation>
     </message>
     <message>
-        <location filename="../logwindow.cpp" line="451"/>
+        <location filename="../logwindow.cpp" line="748" />
         <source>Upload the selected QSOs to eQSL.cc</source>
-        <translation type="unfinished"></translation>
+        <translation>Augšupielādēt atlasītos QSO uz eQSL.cc</translation>
     </message>
     <message>
-        <location filename="../logwindow.cpp" line="455"/>
+        <location filename="../logwindow.cpp" line="752" />
         <source>Send these QSLs via bureau</source>
-        <translation type="unfinished"></translation>
+        <translation>Sūtīt šos QSL caur biroju</translation>
     </message>
     <message>
-        <location filename="../logwindow.cpp" line="459"/>
+        <location filename="../logwindow.cpp" line="756" />
         <source>Send these QSLs via direct</source>
-        <translation type="unfinished"></translation>
+        <translation>Sūtīt šos QSL tieši</translation>
     </message>
     <message>
-        <location filename="../logwindow.cpp" line="463"/>
+        <location filename="../logwindow.cpp" line="760" />
         <source>QSLs received via bureau</source>
-        <translation type="unfinished"></translation>
+        <translation>QSL saņemti caur biroju</translation>
     </message>
     <message>
-        <location filename="../logwindow.cpp" line="467"/>
+        <location filename="../logwindow.cpp" line="764" />
         <source>QSLs received via direc&amp;t</source>
-        <translation type="unfinished"></translation>
+        <translation>QSL saņemti &amp;tieši</translation>
     </message>
     <message>
-        <location filename="../logwindow.cpp" line="470"/>
+        <location filename="../logwindow.cpp" line="767" />
         <source>Select none</source>
-        <translation type="unfinished"></translation>
+        <translation>Atcelt atlasi</translation>
     </message>
     <message>
-        <location filename="../logwindow.cpp" line="471"/>
+        <location filename="../logwindow.cpp" line="768" />
         <source>Remove all selections</source>
-        <translation type="unfinished"></translation>
+        <translation>Noņemt visas atlases</translation>
     </message>
     <message>
-        <location filename="../logwindow.cpp" line="474"/>
+        <location filename="../logwindow.cpp" line="771" />
         <source>Select all</source>
-        <translation type="unfinished"></translation>
+        <translation>Atlasīt visu</translation>
     </message>
     <message>
-        <location filename="../logwindow.cpp" line="475"/>
+        <location filename="../logwindow.cpp" line="772" />
         <source>Select all the QSOs</source>
-        <translation type="unfinished"></translation>
+        <translation>Atlasīt visus QSO</translation>
     </message>
 </context>
 <context>
     <name>MainQSOEntryWidget</name>
     <message>
-        <location filename="../mainqsoentrywidget.cpp" line="48"/>
-        <location filename="../mainqsoentrywidget.cpp" line="940"/>
+        <location filename="../mainqsoentrywidget.cpp" line="48" />
+        <location filename="../mainqsoentrywidget.cpp" line="970" />
         <source>&amp;Add</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Pievienot</translation>
     </message>
     <message>
-        <location filename="../mainqsoentrywidget.cpp" line="49"/>
-        <location filename="../mainqsoentrywidget.cpp" line="941"/>
+        <location filename="../mainqsoentrywidget.cpp" line="49" />
+        <location filename="../mainqsoentrywidget.cpp" line="971" />
         <source>&amp;Clear</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Notīrīt</translation>
     </message>
     <message>
-        <location filename="../mainqsoentrywidget.cpp" line="84"/>
+        <location filename="../mainqsoentrywidget.cpp" line="86" />
         <source>Callsign of the QSO.</source>
-        <translation type="unfinished"></translation>
+        <translation>QSO izsaukuma signāls.</translation>
     </message>
     <message>
-        <location filename="../mainqsoentrywidget.cpp" line="85"/>
+        <location filename="../mainqsoentrywidget.cpp" line="87" />
         <source>Band of the QSO.</source>
-        <translation type="unfinished"></translation>
+        <translation>QSO diapazons.</translation>
     </message>
     <message>
-        <location filename="../mainqsoentrywidget.cpp" line="86"/>
+        <location filename="../mainqsoentrywidget.cpp" line="88" />
         <source>Mode of the QSO.</source>
-        <translation type="unfinished"></translation>
+        <translation>QSO režīms.</translation>
     </message>
     <message>
-        <location filename="../mainqsoentrywidget.cpp" line="87"/>
+        <location filename="../mainqsoentrywidget.cpp" line="89" />
         <source>Date of the QSO.</source>
-        <translation type="unfinished"></translation>
+        <translation>QSO datums.</translation>
     </message>
     <message>
-        <location filename="../mainqsoentrywidget.cpp" line="88"/>
+        <location filename="../mainqsoentrywidget.cpp" line="90" />
         <source>Time of the QSO.</source>
-        <translation type="unfinished"></translation>
+        <translation>QSO laiks.</translation>
     </message>
     <message>
-        <location filename="../mainqsoentrywidget.cpp" line="89"/>
+        <location filename="../mainqsoentrywidget.cpp" line="91" />
         <source>Add the QSO to the log.</source>
-        <translation type="unfinished"></translation>
+        <translation>Pievienot QSO žurnālam.</translation>
     </message>
     <message>
-        <location filename="../mainqsoentrywidget.cpp" line="90"/>
+        <location filename="../mainqsoentrywidget.cpp" line="92" />
         <source>Clears the QSO entry.</source>
-        <translation type="unfinished"></translation>
+        <translation>Notīra QSO ievadi.</translation>
     </message>
     <message>
-        <location filename="../mainqsoentrywidget.cpp" line="91"/>
+        <location filename="../mainqsoentrywidget.cpp" line="93" />
         <source>Look up info about the current callsign on qrz.com</source>
-        <translation type="unfinished"></translation>
+        <translation>Meklēt informāciju par šo izsaukuma signālu qrz.com</translation>
     </message>
     <message>
-        <location filename="../mainqsoentrywidget.cpp" line="92"/>
+        <location filename="../mainqsoentrywidget.cpp" line="94" />
         <source>KLog will show real time if enabled.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ja ieslēgts, KLog rādīs reālo laiku.</translation>
     </message>
     <message>
-        <location filename="../mainqsoentrywidget.cpp" line="93"/>
+        <location filename="../mainqsoentrywidget.cpp" line="95" />
         <source>Real time</source>
-        <translation type="unfinished"></translation>
+        <translation>Reālais laiks</translation>
     </message>
     <message>
-        <location filename="../mainqsoentrywidget.cpp" line="95"/>
+        <location filename="../mainqsoentrywidget.cpp" line="97" />
         <source>Stop wsjt-x and hamlib from automatically updating QSO information.</source>
-        <translation type="unfinished"></translation>
+        <translation>Neļaut WSJT-X un hamlib automātiski atjaunināt QSO informāciju.</translation>
     </message>
     <message>
-        <location filename="../mainqsoentrywidget.cpp" line="96"/>
+        <location filename="../mainqsoentrywidget.cpp" line="98" />
         <source>Manual Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Manuālais režīms</translation>
     </message>
     <message>
-        <location filename="../mainqsoentrywidget.cpp" line="114"/>
-        <location filename="../mainqsoentrywidget.cpp" line="1129"/>
+        <location filename="../mainqsoentrywidget.cpp" line="116" />
+        <location filename="../mainqsoentrywidget.cpp" line="456" />
+        <location filename="../mainqsoentrywidget.cpp" line="1114" />
+        <location filename="../mainqsoentrywidget.cpp" line="1133" />
+        <location filename="../mainqsoentrywidget.cpp" line="1147" />
         <source>Callsign</source>
-        <translation type="unfinished">Izsaukuma signāls</translation>
+        <translation>Izsaukuma signāls</translation>
     </message>
     <message>
-        <location filename="../mainqsoentrywidget.cpp" line="934"/>
+        <location filename="../mainqsoentrywidget.cpp" line="964" />
         <source>&amp;Save</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Saglabāt</translation>
     </message>
     <message>
-        <location filename="../mainqsoentrywidget.cpp" line="935"/>
+        <location filename="../mainqsoentrywidget.cpp" line="965" />
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Atcelt</translation>
     </message>
     <message>
-        <location filename="../mainqsoentrywidget.cpp" line="1135"/>
+        <location filename="../mainqsoentrywidget.cpp" line="1141" />
         <source>DUPE</source>
-        <comment>Translator: DUPE is a common world for hams. Do not translate of not sure</comment>
+        <comment>Translator: DUPE is a common word for hams. Do not translate if not sure</comment>
         <translation>DUPE</translation>
     </message>
 </context>
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="2522"/>
+        <location filename="../mainwindow.cpp" line="2797" />
         <source>Check always the current callsign in QRZ.com</source>
-        <translation type="unfinished"></translation>
+        <translation>Vienmēr pārbaudīt izsaukuma signālu QRZ.com</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="381"/>
+        <location filename="../mainwindow.cpp" line="399" />
         <source>KLog - File not open</source>
-        <translation type="unfinished"></translation>
+        <translation>KLog — fails nav atvērts</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="382"/>
+        <location filename="../mainwindow.cpp" line="400" />
         <source>It was not possible to open the debug file for writing. No debug log will be saved!</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="104"/>
+        <location filename="../mainwindow.cpp" line="122" />
         <source>Status bar ...</source>
-        <translation type="unfinished"></translation>
+        <translation>Statusa josla ...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="105"/>
-        <location filename="../mainwindow.cpp" line="162"/>
+        <location filename="../mainwindow.cpp" line="123" />
+        <location filename="../mainwindow.cpp" line="161" />
         <source>DX Entity</source>
-        <translation type="unfinished"></translation>
+        <translation>DX entītija</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="127"/>
+        <location filename="../mainwindow.cpp" line="134" />
         <source>Starting KLog</source>
-        <translation type="unfinished"></translation>
+        <translation>KLog startē</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="163"/>
+        <location filename="../mainwindow.cpp" line="162" />
         <source>&amp;Log Window</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Žurnāla logs</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="522"/>
+        <location filename="../mainwindow.cpp" line="547" />
         <source>KLog needs to update the Entities database.</source>
-        <translation type="unfinished"></translation>
+        <translation>KLog jāatjaunina entītiju datubāze.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="523"/>
+        <location filename="../mainwindow.cpp" line="548" />
         <source>You can update the entities database in Tools-&gt;Update cty.csv</source>
-        <translation type="unfinished"></translation>
+        <translation>Entītiju datubāzi var atjaunināt: Rīki -&gt; Atjaunināt cty.csv</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="756"/>
+        <location filename="../mainwindow.cpp" line="807" />
         <source>Log backup recommended!</source>
-        <translation type="unfinished"></translation>
+        <translation>Ieteicams izveidot žurnāla rezerves kopiju!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="813"/>
+        <location filename="../mainwindow.cpp" line="864" />
         <source>It seems that you are running this version of KLog for the first time.</source>
-        <translation type="unfinished"></translation>
+        <translation>Šķiet, ka šo KLog versiju palaižat pirmo reizi.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="824"/>
+        <location filename="../mainwindow.cpp" line="875" />
         <source>Ready</source>
-        <translation type="unfinished"></translation>
+        <translation>Gatavs</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="887"/>
-        <location filename="../mainwindow.cpp" line="3268"/>
+        <location filename="../mainwindow.cpp" line="1014" />
+        <location filename="../mainwindow.cpp" line="3622" />
         <source>KLog</source>
-        <translation type="unfinished"></translation>
+        <translation>Klogs</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1155"/>
+        <location filename="../mainwindow.cpp" line="1323" />
         <source>KLog - Not valid call</source>
-        <translation type="unfinished"></translation>
+        <translation>KLog — nederīgs izsaukuma signāls</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1156"/>
+        <location filename="../mainwindow.cpp" line="1324" />
         <source>The callsign %1 is not a valid call. Do you really want to add this callsign to the log?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1158"/>
+        <location filename="../mainwindow.cpp" line="1326" />
         <source>Adding non-valid calls to the log may create problems when applying for awards, exporting ADIF files to other systems or applications.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1217"/>
+        <location filename="../mainwindow.cpp" line="1388" />
         <source>KLog - Select correct entity</source>
-        <translation type="unfinished"></translation>
+        <translation>KLog — izvēlieties pareizo entītiju</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1328"/>
-        <location filename="../mainwindow.cpp" line="3858"/>
-        <location filename="../mainwindow.cpp" line="3872"/>
-        <location filename="../mainwindow.cpp" line="4358"/>
+        <location filename="../mainwindow.cpp" line="1504" />
+        <location filename="../mainwindow.cpp" line="4484" />
+        <location filename="../mainwindow.cpp" line="4499" />
+        <location filename="../mainwindow.cpp" line="5002" />
         <source>Save ADIF File</source>
-        <translation type="unfinished"></translation>
+        <translation>Saglabāt ADIF failu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1360"/>
+        <location filename="../mainwindow.cpp" line="1536" />
         <source>You have requested to delete several QSOs </source>
-        <translation type="unfinished"></translation>
+        <translation>Jūs pieprasījāt dzēst vairākus QSO </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1364"/>
+        <location filename="../mainwindow.cpp" line="1540" />
         <source>This operation shall remove definitely all the selected QSO and associated data and you will not be able to recover it again.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1365"/>
-        <location filename="../mainwindow.cpp" line="1420"/>
+        <location filename="../mainwindow.cpp" line="1541" />
+        <location filename="../mainwindow.cpp" line="1596" />
         <source>Are you sure?</source>
-        <translation type="unfinished"></translation>
+        <translation>Vai tiešām?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1415"/>
+        <location filename="../mainwindow.cpp" line="1591" />
         <source>You have requested to delete the QSO with: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Jūs pieprasījāt dzēst QSO ar: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1511"/>
+        <location filename="../mainwindow.cpp" line="1687" />
         <source>The ClubLog upload process has finished with an error and the log was possibly not uploaded.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1512"/>
+        <location filename="../mainwindow.cpp" line="1688" />
         <source>Please check your credentials, your Internet connection and your Clublog account. The received error code was: %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1531"/>
+        <location filename="../mainwindow.cpp" line="1707" />
         <source>Do you want to mark as Uploaded all the QSOs uploaded to ClubLog?</source>
-        <translation type="unfinished"></translation>
+        <translation>Vai atzīmēt kā augšupielādētus visus uz ClubLog nosūtītos QSO?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1530"/>
-        <location filename="../mainwindow.cpp" line="1545"/>
-        <location filename="../mainwindow.cpp" line="1556"/>
-        <location filename="../mainwindow.cpp" line="1566"/>
-        <location filename="../mainwindow.cpp" line="1576"/>
-        <location filename="../mainwindow.cpp" line="3984"/>
-        <location filename="../mainwindow.cpp" line="4000"/>
-        <location filename="../mainwindow.cpp" line="4009"/>
-        <location filename="../mainwindow.cpp" line="4045"/>
-        <location filename="../mainwindow.cpp" line="4202"/>
+        <location filename="../mainwindow.cpp" line="1706" />
+        <location filename="../mainwindow.cpp" line="1721" />
+        <location filename="../mainwindow.cpp" line="1732" />
+        <location filename="../mainwindow.cpp" line="1742" />
+        <location filename="../mainwindow.cpp" line="1752" />
+        <location filename="../mainwindow.cpp" line="4615" />
+        <location filename="../mainwindow.cpp" line="4631" />
+        <location filename="../mainwindow.cpp" line="4640" />
+        <location filename="../mainwindow.cpp" line="4677" />
+        <location filename="../mainwindow.cpp" line="4846" />
         <source>KLog - ClubLog</source>
-        <translation type="unfinished">KLog - ClubLog</translation>
+        <translation>KLog - ClubLog</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="73"/>
+        <location filename="../mainwindow.cpp" line="95" />
         <source>Always check the current callsign in QRZ.com</source>
-        <translation type="unfinished"></translation>
+        <translation>Vienmēr pārbaudīt izsaukuma signālu QRZ.com</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="187"/>
+        <location filename="../mainwindow.cpp" line="176" />
         <source>Upload queued QSOs to LoTW</source>
-        <translation type="unfinished"></translation>
+        <translation>Augšupielādēt rindā gaidošos QSO uz LoTW</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="405"/>
+        <location filename="../mainwindow.cpp" line="423" />
         <source>KLog - KLog folder not found</source>
-        <translation type="unfinished"></translation>
+        <translation>KLog — KLog mape nav atrasta</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="406"/>
+        <location filename="../mainwindow.cpp" line="424" />
         <source>It was not possible to define the KLog folder. Some functions may not work properly!</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="521"/>
+        <location filename="../mainwindow.cpp" line="546" />
         <source>KLog - CTY.dat update</source>
-        <translation type="unfinished"></translation>
+        <translation>KLog — CTY.dat atjaunināšana</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="524"/>
+        <location filename="../mainwindow.cpp" line="549" />
         <source>Do you want to update now?</source>
-        <translation type="unfinished"></translation>
+        <translation>Vai atjaunināt tagad?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="739"/>
+        <location filename="../mainwindow.cpp" line="793" />
         <source>You seem to have never backed up or exported your log to ADIF.</source>
-        <translation type="unfinished"></translation>
+        <translation>Šķiet, ka žurnāls nekad nav dublēts vai eksportēts uz ADIF.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="745"/>
+        <location filename="../mainwindow.cpp" line="799" />
         <source>Your latest backup seems older than one month.</source>
-        <translation type="unfinished"></translation>
+        <translation>Pēdējā rezerves kopija šķiet vecāka par mēnesi.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="759"/>
+        <location filename="../mainwindow.cpp" line="810" />
         <source>Regular backups prevent data loss and are good operator practice.
 Once exported, copy your ADIF file to a safe place such as a USB drive, cloud drive or other offsite computer.
 
 KLog will remind you to backup on a monthly basis.
 
 </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="773"/>
+        <location filename="../mainwindow.cpp" line="824" />
         <source>KLog - Backup</source>
-        <translation type="unfinished"></translation>
+        <translation>KLog — rezerves kopija</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="777"/>
+        <location filename="../mainwindow.cpp" line="828" />
         <source>Backup completed successfully</source>
-        <translation type="unfinished"></translation>
+        <translation>Rezerves kopija izveidota veiksmīgi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="778"/>
+        <location filename="../mainwindow.cpp" line="829" />
         <source>KLog will remind you again in approximately one month.</source>
-        <translation type="unfinished"></translation>
+        <translation>KLog atgādinās atkal apmēram pēc mēneša.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="783"/>
+        <location filename="../mainwindow.cpp" line="834" />
         <source>Backup failed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Rezerves kopija neizdevās.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="784"/>
+        <location filename="../mainwindow.cpp" line="835" />
         <source>Periodic data backups are recommended to prevent data loss and corruption of your log.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="804"/>
-        <location filename="../mainwindow.cpp" line="812"/>
+        <location filename="../mainwindow.cpp" line="855" />
+        <location filename="../mainwindow.cpp" line="863" />
         <source>KLog - New version detected!</source>
-        <translation type="unfinished"></translation>
+        <translation>KLog — atklāta jauna versija!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="805"/>
+        <location filename="../mainwindow.cpp" line="856" />
         <source>This version of KLog requires that the DXCC database is updated.</source>
-        <translation type="unfinished"></translation>
+        <translation>Šai KLog versijai nepieciešams atjaunināt DXCC datubāzi.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="806"/>
+        <location filename="../mainwindow.cpp" line="857" />
         <source>The database will be updated.</source>
-        <translation type="unfinished"></translation>
+        <translation>Datubāze tiks atjaunināta.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="814"/>
+        <location filename="../mainwindow.cpp" line="865" />
         <source>The setup will now open to allow you to change your settings.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tagad atvērsies iestatījumi, lai varētu tos mainīt.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="866"/>
+        <location filename="../mainwindow.cpp" line="993" />
         <source>KLog-%1 - Logbook of %2 - QSOs: %3</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="870"/>
+        <location filename="../mainwindow.cpp" line="997" />
         <source>KLog-%1 - Logbook of %2 - Station Callsign: %3 - QSOs: %4</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1510"/>
+        <location filename="../mainwindow.cpp" line="1686" />
         <source>KLog - ClubLog error</source>
-        <translation type="unfinished"></translation>
+        <translation>KLog — ClubLog kļūda</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1547"/>
+        <location filename="../mainwindow.cpp" line="1723" />
         <source>There was an error while updating to Yes the ClubLog QSO upload information.</source>
-        <translation type="unfinished"></translation>
+        <translation>Atjauninot ClubLog augšupielādes informāciju, radās kļūda.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1557"/>
+        <location filename="../mainwindow.cpp" line="1733" />
         <source>The ClubLog upload process has finished and KLog created a file (%1) in your KLog folder.
 
 Do you want KLog to remove that file?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1567"/>
-        <location filename="../mainwindow.cpp" line="1685"/>
-        <location filename="../mainwindow.cpp" line="3961"/>
+        <location filename="../mainwindow.cpp" line="1743" />
+        <location filename="../mainwindow.cpp" line="1861" />
+        <location filename="../mainwindow.cpp" line="4592" />
         <source>The file has been removed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Fails ir izdzēsts.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1577"/>
-        <location filename="../mainwindow.cpp" line="1695"/>
+        <location filename="../mainwindow.cpp" line="1753" />
+        <location filename="../mainwindow.cpp" line="1871" />
         <source>The file has not been removed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Fails nav izdzēsts.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1578"/>
-        <location filename="../mainwindow.cpp" line="1696"/>
+        <location filename="../mainwindow.cpp" line="1754" />
+        <location filename="../mainwindow.cpp" line="1872" />
         <source>It seems that there was something that prevented KLog from removing the file
 You can remove it manually.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1628"/>
+        <location filename="../mainwindow.cpp" line="1804" />
         <source>The eQSL upload process has finished with an error and the log was possibly not uploaded.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1629"/>
-        <location filename="../mainwindow.cpp" line="1747"/>
+        <location filename="../mainwindow.cpp" line="1805" />
+        <location filename="../mainwindow.cpp" line="1923" />
         <source>Please check your credentials, your Internet connection and your eQSL account. The received error code was: %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1648"/>
+        <location filename="../mainwindow.cpp" line="1824" />
         <source>Do you want to mark as Uploaded all the QSOs uploaded to eQSL?</source>
-        <translation type="unfinished"></translation>
+        <translation>Vai atzīmēt kā augšupielādētus visus uz eQSL nosūtītos QSO?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1647"/>
-        <location filename="../mainwindow.cpp" line="1662"/>
-        <location filename="../mainwindow.cpp" line="1674"/>
-        <location filename="../mainwindow.cpp" line="1684"/>
-        <location filename="../mainwindow.cpp" line="1694"/>
-        <location filename="../mainwindow.cpp" line="4232"/>
+        <location filename="../mainwindow.cpp" line="1823" />
+        <location filename="../mainwindow.cpp" line="1838" />
+        <location filename="../mainwindow.cpp" line="1850" />
+        <location filename="../mainwindow.cpp" line="1860" />
+        <location filename="../mainwindow.cpp" line="1870" />
+        <location filename="../mainwindow.cpp" line="4876" />
         <source>KLog - eQSL</source>
-        <translation type="unfinished">KLog - eQSL</translation>
+        <translation>KLog - eQSL</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1664"/>
+        <location filename="../mainwindow.cpp" line="1840" />
         <source>There was an error while updating to Yes the eQSL QSO upload information.</source>
-        <translation type="unfinished"></translation>
+        <translation>Atjauninot eQSL augšupielādes informāciju, radās kļūda.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1675"/>
+        <location filename="../mainwindow.cpp" line="1851" />
         <source>The eQSL upload process has finished and KLog created a file (%1) in your KLog folder.
 
 Do you want KLog to remove that file?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1746"/>
+        <location filename="../mainwindow.cpp" line="1922" />
         <source>The QRZ.com upload process has finished with an error and the log was possibly not uploaded.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1766"/>
+        <location filename="../mainwindow.cpp" line="1942" />
         <source>Do you want to mark as Uploaded all the QSOs uploaded to QRZ.com?</source>
-        <translation type="unfinished"></translation>
+        <translation>Vai atzīmēt kā augšupielādētus visus uz QRZ.com nosūtītos QSO?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1765"/>
-        <location filename="../mainwindow.cpp" line="1781"/>
-        <location filename="../mainwindow.cpp" line="1792"/>
-        <location filename="../mainwindow.cpp" line="4332"/>
-        <location filename="../mainwindow.cpp" line="4343"/>
+        <location filename="../mainwindow.cpp" line="1941" />
+        <location filename="../mainwindow.cpp" line="1957" />
+        <location filename="../mainwindow.cpp" line="1968" />
+        <location filename="../mainwindow.cpp" line="4976" />
+        <location filename="../mainwindow.cpp" line="4987" />
         <source>KLog - QRZ.com</source>
-        <translation type="unfinished">KLog — QRZ.com</translation>
+        <translation>KLog — QRZ.com</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1627"/>
+        <location filename="../mainwindow.cpp" line="1803" />
         <source>KLog - eQSL error</source>
-        <translation type="unfinished"></translation>
+        <translation>KLog — eQSL kļūda</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1720"/>
+        <location filename="../mainwindow.cpp" line="1896" />
         <source>KLog - QRZ.com warning</source>
-        <translation type="unfinished"></translation>
+        <translation>KLog — QRZ.com brīdinājums</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1721"/>
+        <location filename="../mainwindow.cpp" line="1897" />
         <source>QRZ.com has returned a non-subcribed error and queries to QRZ.com will be disabled.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1722"/>
+        <location filename="../mainwindow.cpp" line="1898" />
         <source>Please check your QRZ.com subcription or credentials.</source>
-        <translation type="unfinished"></translation>
+        <translation>Lūdzu, pārbaudiet savu QRZ.com abonementu vai pieteikšanās datus.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1783"/>
+        <location filename="../mainwindow.cpp" line="1959" />
         <source>There was an error while updating to Yes the QRZ.com QSO upload information.</source>
-        <translation type="unfinished"></translation>
+        <translation>Atjauninot QRZ.com augšupielādes informāciju, radās kļūda.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1793"/>
+        <location filename="../mainwindow.cpp" line="1969" />
         <source>The QRZ.com upload process has finished successfully</source>
-        <translation type="unfinished"></translation>
+        <translation>QRZ.com augšupielāde pabeigta veiksmīgi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1865"/>
+        <location filename="../mainwindow.cpp" line="2024" />
         <source>Call not found in QRZ.com</source>
-        <translation type="unfinished"></translation>
+        <translation>Izsaukuma signāls QRZ.com nav atrasts</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1745"/>
-        <location filename="../mainwindow.cpp" line="1870"/>
+        <location filename="../mainwindow.cpp" line="1921" />
+        <location filename="../mainwindow.cpp" line="2029" />
         <source>KLog - QRZ.com error</source>
-        <translation type="unfinished"></translation>
+        <translation>KLog — QRZ.com kļūda</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1190"/>
+        <location filename="../mainwindow.cpp" line="918" />
+        <source>Callbook: %1/%2, updated %3</source>
+        <translation>Izsaukumu grāmata: %1/%2, atjaunināti %3</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="921" />
+        <source>Callbook update finished: %1 updated.</source>
+        <translation>Izsaukumu grāmatas atjaunināšana pabeigta: %1 atjaunināti.</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="948" />
+        <location filename="../mainwindow.cpp" line="4339" />
+        <location filename="../mainwindow.cpp" line="4362" />
+        <source>Grayline</source>
+        <translation>Pelēkā līnija</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="1361" />
         <source>The entity that is selected is different from the one proposed by KLog:</source>
-        <translation type="unfinished"></translation>
+        <translation>Izvēlētā entītija atšķiras no tās, ko piedāvā KLog:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1195"/>
-        <location filename="../mainwindow.cpp" line="1202"/>
-        <source>Unknown</source>
-        <comment>Keep it short, its a button text</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="1196"/>
+        <location filename="../mainwindow.cpp" line="1367" />
         <source>- There is no selected DXCC.</source>
-        <translation type="unfinished"></translation>
+        <translation>- DXCC nav izvēlēts.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1203"/>
-        <source>- KLog couldn&apos;t find a DXCC</source>
-        <translation type="unfinished"></translation>
+        <location filename="../mainwindow.cpp" line="1374" />
+        <source>- KLog couldn't find a DXCC</source>
+        <translation>- KLog neatrada DXCC</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1206"/>
+        <location filename="../mainwindow.cpp" line="1377" />
         <source>Please select the one you want to keep for this QSO.</source>
-        <translation type="unfinished"></translation>
+        <translation>Lūdzu, izvēlieties to, kuru atstāt šim QSO.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1871"/>
+        <location filename="../mainwindow.cpp" line="2030" />
         <source>KLog has received an error from QRZ.com.</source>
-        <translation type="unfinished"></translation>
+        <translation>KLog saņēma kļūdu no QRZ.com.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1904"/>
+        <location filename="../mainwindow.cpp" line="2113" />
         <source>You need to activate the %1 service in the eLog preferences.</source>
-        <translation type="unfinished"></translation>
+        <translation>Jāaktivizē %1 serviss eLog iestatījumos.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1952"/>
+        <location filename="../mainwindow.cpp" line="2162" />
         <source>KLog - Exit</source>
-        <translation type="unfinished"></translation>
+        <translation>KLog — iziet</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1953"/>
+        <location filename="../mainwindow.cpp" line="2163" />
         <source>Do you really want to exit KLog?</source>
-        <translation type="unfinished"></translation>
+        <translation>Vai tiešām vēlaties aizvērt KLog?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2265"/>
+        <location filename="../mainwindow.cpp" line="2507" />
         <source>The logfile has been modified.</source>
-        <translation type="unfinished"></translation>
+        <translation>Žurnāla fails ir mainīts.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2265"/>
+        <location filename="../mainwindow.cpp" line="2507" />
         <source>Do you want to save your changes?</source>
-        <translation type="unfinished"></translation>
+        <translation>Vai vēlaties saglabāt izmaiņas?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2285"/>
+        <location filename="../mainwindow.cpp" line="2527" />
         <source>It is important to export to ADIF and save a copy as a backup.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ir svarīgi eksportēt uz ADIF un saglabāt kopiju kā rezerves kopiju.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2289"/>
+        <location filename="../mainwindow.cpp" line="2531" />
         <source>Saving the log was done successfully.</source>
-        <translation type="unfinished"></translation>
+        <translation>Žurnāls saglabāts veiksmīgi.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2297"/>
+        <location filename="../mainwindow.cpp" line="2539" />
         <source>The ADIF export was not properly done.</source>
-        <translation type="unfinished"></translation>
+        <translation>ADIF eksports netika pabeigts pareizi.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2345"/>
+        <location filename="../mainwindow.cpp" line="2587" />
         <source>&amp;File</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Fails</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2356"/>
+        <location filename="../mainwindow.cpp" line="2598" />
         <source>&amp;Import from ADIF ...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Importēt no ADIF ...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2359"/>
+        <location filename="../mainwindow.cpp" line="2601" />
         <source>Import an ADIF file into the current log.</source>
-        <translation type="unfinished"></translation>
+        <translation>Importēt ADIF failu pašreizējā žurnālā.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2369"/>
+        <location filename="../mainwindow.cpp" line="2611" />
         <source>Export to ADIF ...</source>
-        <translation type="unfinished"></translation>
+        <translation>Eksportēt uz ADIF ...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2373"/>
+        <location filename="../mainwindow.cpp" line="2615" />
         <source>Export the current log to an ADIF logfile.</source>
-        <translation type="unfinished"></translation>
+        <translation>Eksportēt pašreizējo žurnālu uz ADIF failu.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2375"/>
+        <location filename="../mainwindow.cpp" line="2617" />
         <source>Export all logs to ADIF ...</source>
-        <translation type="unfinished"></translation>
+        <translation>Eksportēt visus žurnālus uz ADIF ...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2379"/>
+        <location filename="../mainwindow.cpp" line="2621" />
         <source>Export ALL the QSOs into one ADIF file, merging QSOs from all the logs.</source>
-        <translation type="unfinished"></translation>
+        <translation>Eksportēt VISUS QSO vienā ADIF failā, apvienojot visus žurnālus.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2383"/>
+        <location filename="../mainwindow.cpp" line="2625" />
         <source>&amp;Print Log ...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Drukāt žurnālu ...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2386"/>
+        <location filename="../mainwindow.cpp" line="2628" />
         <source>Print your log.</source>
-        <translation type="unfinished"></translation>
+        <translation>Drukāt žurnālu.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2391"/>
+        <location filename="../mainwindow.cpp" line="2633" />
         <source>KLog folder</source>
-        <translation type="unfinished"></translation>
+        <translation>KLog mape</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2393"/>
+        <location filename="../mainwindow.cpp" line="2635" />
         <source>Opens the data folder of KLog.</source>
-        <translation type="unfinished"></translation>
+        <translation>Atver KLog datu mapi.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2398"/>
+        <location filename="../mainwindow.cpp" line="2640" />
         <source>Settings ...</source>
-        <translation type="unfinished"></translation>
+        <translation>Iestatījumi ...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2405"/>
+        <location filename="../mainwindow.cpp" line="2647" />
         <source>E&amp;xit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Iziet</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2412"/>
+        <location filename="../mainwindow.cpp" line="2663" />
         <source>&amp;Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Rīki</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2414"/>
+        <location filename="../mainwindow.cpp" line="2665" />
         <source>Fill in QSO data</source>
-        <translation type="unfinished"></translation>
+        <translation>Aizpildīt QSO datus</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2418"/>
+        <location filename="../mainwindow.cpp" line="2669" />
         <source>Go through the log reusing previous QSOs to fill missing information in other QSOs.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2421"/>
+        <location filename="../mainwindow.cpp" line="2676" />
+        <location filename="../mainwindow.cpp" line="2685" />
+        <source>Grayline map</source>
+        <translation>Pelēkās līnijas karte</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="2690" />
+        <source>Update log from callbook...</source>
+        <translation>Atjaunināt žurnālu no izsaukumu grāmatas...</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="2691" />
+        <source>Fill in missing name, QTH and locator from QRZ.com and HamQTH</source>
+        <translation>Aizpildīt trūkstošo vārdu, QTH un lokatoru no QRZ.com un HamQTH</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="2696" />
         <source>QSL tools ...</source>
-        <translation type="unfinished"></translation>
+        <translation>QSL rīki ...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2423"/>
+        <location filename="../mainwindow.cpp" line="2698" />
         <source>Find QSO to QSL</source>
-        <translation type="unfinished"></translation>
+        <translation>Atrast QSO, kam sūtīt QSL</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2426"/>
+        <location filename="../mainwindow.cpp" line="2701" />
         <source>Shows QSOs for which you should send your QSL and request the DX QSL.</source>
-        <translation type="unfinished"></translation>
+        <translation>Rāda QSO, kuriem jānosūta sava QSL un jāpieprasa DX QSL.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2428"/>
+        <location filename="../mainwindow.cpp" line="2703" />
         <source>Find My-QSLs pending to send</source>
-        <translation type="unfinished"></translation>
+        <translation>Atrast nenosūtītās savas QSL</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2432"/>
+        <location filename="../mainwindow.cpp" line="2707" />
         <source>Shows the QSOs with pending requests to send QSLs. You should keep this queue empty!</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2434"/>
+        <location filename="../mainwindow.cpp" line="2709" />
         <source>Find DX-QSLs pending to receive</source>
-        <translation type="unfinished"></translation>
+        <translation>Atrast nesaņemtās DX QSL</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2437"/>
+        <location filename="../mainwindow.cpp" line="2712" />
         <source>Shows DX-QSLs for which requests or QSLs have been sent with no answer.</source>
-        <translation type="unfinished"></translation>
+        <translation>Rāda DX QSL, kurām pieprasījums vai QSL nosūtīts bez atbildes.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2439"/>
+        <location filename="../mainwindow.cpp" line="2714" />
         <source>Find requested pending to receive</source>
-        <translation type="unfinished"></translation>
+        <translation>Atrast pieprasītās, kas nav saņemtas</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2442"/>
+        <location filename="../mainwindow.cpp" line="2717" />
         <source>Shows the DX-QSLs that have been requested.</source>
-        <translation type="unfinished"></translation>
+        <translation>Rāda pieprasītās DX QSL.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2445"/>
+        <location filename="../mainwindow.cpp" line="2720" />
         <source>LoTW tools ...</source>
-        <translation type="unfinished"></translation>
+        <translation>LoTW rīki ...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2450"/>
+        <location filename="../mainwindow.cpp" line="2725" />
         <source>Mark all non-sent QSOs in this log as queued to be uploaded.</source>
-        <translation type="unfinished"></translation>
+        <translation>Atzīmēt visus nenosūtītos šī žurnāla QSO kā rindā gaidošus.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2452"/>
+        <location filename="../mainwindow.cpp" line="2727" />
         <source>Queue all QSLs to be sent</source>
-        <translation type="unfinished"></translation>
+        <translation>Ielikt rindā visas nosūtāmās QSL</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2455"/>
+        <location filename="../mainwindow.cpp" line="2730" />
         <source>Put all the non-sent QSOs in the queue to be uploaded.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ielikt rindā visus nenosūtītos QSO.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2459"/>
+        <location filename="../mainwindow.cpp" line="2734" />
         <source>Mark all queued QSOs from this log as sent</source>
-        <translation type="unfinished"></translation>
+        <translation>Atzīmēt visus šī žurnāla rindā gaidošos QSO kā nosūtītus</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2462"/>
+        <location filename="../mainwindow.cpp" line="2737" />
         <source>Mark all queued QSOs in this log as sent to LoTW.</source>
-        <translation type="unfinished"></translation>
+        <translation>Atzīmēt visus šī žurnāla rindā gaidošos QSO kā nosūtītus uz LoTW.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2464"/>
+        <location filename="../mainwindow.cpp" line="2739" />
         <source>Mark all queued QSOs as sent</source>
-        <translation type="unfinished"></translation>
+        <translation>Atzīmēt visus rindā gaidošos QSO kā nosūtītus</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2467"/>
+        <location filename="../mainwindow.cpp" line="2742" />
         <source>Mark all queued QSOs as sent to LoTW.</source>
-        <translation type="unfinished"></translation>
+        <translation>Atzīmēt visus rindā gaidošos QSO kā nosūtītus uz LoTW.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2476"/>
+        <location filename="../mainwindow.cpp" line="2751" />
         <source>Download from LoTW ...</source>
-        <translation type="unfinished"></translation>
+        <translation>Lejupielādēt no LoTW ...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2481"/>
+        <location filename="../mainwindow.cpp" line="2756" />
         <source>Download the full log from LoTW ...</source>
-        <translation type="unfinished"></translation>
+        <translation>Lejupielādēt pilnu žurnālu no LoTW ...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2486"/>
+        <location filename="../mainwindow.cpp" line="2761" />
         <source>ClubLog tools ...</source>
-        <translation type="unfinished"></translation>
+        <translation>ClubLog rīki ...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2488"/>
-        <location filename="../mainwindow.cpp" line="2501"/>
+        <location filename="../mainwindow.cpp" line="2763" />
+        <location filename="../mainwindow.cpp" line="2776" />
         <source>Queue all the QSOs to be uploaded</source>
-        <translation type="unfinished"></translation>
+        <translation>Ielikt rindā visus augšupielādējamos QSO</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2493"/>
+        <location filename="../mainwindow.cpp" line="2768" />
         <source>Upload the queued QSOs to ClubLog ...</source>
-        <translation type="unfinished"></translation>
+        <translation>Augšupielādēt rindā gaidošos QSO uz ClubLog ...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2499"/>
+        <location filename="../mainwindow.cpp" line="2774" />
         <source>eQSL tools ...</source>
-        <translation type="unfinished"></translation>
+        <translation>eQSL rīki ...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2506"/>
+        <location filename="../mainwindow.cpp" line="2781" />
         <source>Upload the queued QSOs to eQSL.cc ...</source>
-        <translation type="unfinished"></translation>
+        <translation>Augšupielādēt rindā gaidošos QSO uz eQSL.cc ...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2512"/>
+        <location filename="../mainwindow.cpp" line="2787" />
         <source>QRZ.com tools ...</source>
-        <translation type="unfinished"></translation>
+        <translation>QRZ.com rīki ...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2514"/>
+        <location filename="../mainwindow.cpp" line="2789" />
         <source>Check the current callsign in QRZ.com</source>
-        <translation type="unfinished"></translation>
+        <translation>Pārbaudīt izsaukuma signālu QRZ.com</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2515"/>
+        <location filename="../mainwindow.cpp" line="2790" />
         <source>Queue all the QSO to be uploaded</source>
-        <translation type="unfinished"></translation>
+        <translation>Ielikt rindā visus augšupielādējamos QSO</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2516"/>
+        <location filename="../mainwindow.cpp" line="2791" />
         <source>Upload the queued QSOs to QRZ.com ...</source>
-        <translation type="unfinished"></translation>
+        <translation>Augšupielādēt rindā gaidošos QSO uz QRZ.com ...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2539"/>
+        <location filename="../mainwindow.cpp" line="2814" />
         <source>Update cty.csv</source>
-        <translation type="unfinished"></translation>
+        <translation>Atjaunināt cty.csv</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2543"/>
-        <location filename="../mainwindow.cpp" line="2548"/>
+        <location filename="../mainwindow.cpp" line="2818" />
+        <location filename="../mainwindow.cpp" line="2823" />
         <source>For updated DX-Entity data, update cty.csv.</source>
-        <translation type="unfinished"></translation>
+        <translation>Lai iegūtu jaunākos DX entītiju datus, atjauniniet cty.csv.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2545"/>
+        <location filename="../mainwindow.cpp" line="2820" />
         <source>Update Satellite Data</source>
-        <translation type="unfinished"></translation>
+        <translation>Atjaunināt satelītu datus</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2552"/>
+        <location filename="../mainwindow.cpp" line="2827" />
         <source>Stats</source>
-        <translation type="unfinished"></translation>
+        <translation>Statistika</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2555"/>
-        <location filename="../mainwindow.cpp" line="2560"/>
+        <location filename="../mainwindow.cpp" line="2830" />
+        <location filename="../mainwindow.cpp" line="2835" />
         <source>Show the statistics of your radio activity.</source>
-        <translation type="unfinished"></translation>
+        <translation>Rādīt radioaktivitātes statistiku.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2588"/>
+        <location filename="../mainwindow.cpp" line="2858" />
         <source>&amp;Help</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Palīdzība</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2591"/>
+        <location filename="../mainwindow.cpp" line="2861" />
         <source>Online manual (F1) ...</source>
-        <translation type="unfinished"></translation>
+        <translation>Tiešsaistes rokasgrāmata (F1) ...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2596"/>
+        <location filename="../mainwindow.cpp" line="2866" />
         <source>&amp;Tips ...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Padomi ...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2602"/>
+        <location filename="../mainwindow.cpp" line="2872" />
         <source>&amp;Debug ...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Atkļūdošana ...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2607"/>
+        <location filename="../mainwindow.cpp" line="2877" />
         <source>&amp;About ...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Par ...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2614"/>
+        <location filename="../mainwindow.cpp" line="2884" />
         <source>About Qt ...</source>
-        <translation type="unfinished"></translation>
+        <translation>Par Qt ...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2622"/>
+        <location filename="../mainwindow.cpp" line="2892" />
         <source>Check updates ...</source>
-        <translation type="unfinished"></translation>
+        <translation>Pārbaudīt atjauninājumus ...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2699"/>
+        <location filename="../mainwindow.cpp" line="2969" />
         <source>All pending QSOs of this log has been marked as queued for LoTW!</source>
-        <translation type="unfinished"></translation>
+        <translation>Visi šī žurnāla gaidošie QSO atzīmēti kā rindā uz LoTW!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2705"/>
+        <location filename="../mainwindow.cpp" line="2975" />
         <source>There was a problem to mark all pending QSOs of this log as queued for LoTW!</source>
-        <translation type="unfinished"></translation>
+        <translation>Neizdevās atzīmēt visus šī žurnāla gaidošos QSO kā rindā uz LoTW!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2736"/>
+        <location filename="../mainwindow.cpp" line="2997" />
         <source>Your log has been updated with the LoTW downloaded QSOs.</source>
-        <translation type="unfinished"></translation>
+        <translation>Žurnāls atjaunināts ar no LoTW lejupielādētajiem QSO.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2737"/>
+        <location filename="../mainwindow.cpp" line="2998" />
         <source>KLog has updated %1 QSOs from LoTW.</source>
-        <translation type="unfinished"></translation>
+        <translation>KLog atjaunināja %1 QSO no LoTW.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2747"/>
+        <location filename="../mainwindow.cpp" line="3011" />
         <source>Your log has not been updated.</source>
-        <translation type="unfinished"></translation>
+        <translation>Žurnāls netika atjaunināts.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2748"/>
+        <location filename="../mainwindow.cpp" line="3012" />
         <source>No QSO was updated with the data coming from LoTW. This may be because of errors in the logfile or simply because your log was already updated.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2764"/>
+        <location filename="../mainwindow.cpp" line="3028" />
         <source>Do you really want to mark ALL pending QSOs to be UPLOADED? Must be done ONLY IF THIS IS YOUR FIRST TIME uploading these QSOs to LoTW.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2777"/>
+        <location filename="../mainwindow.cpp" line="3041" />
         <source>All pending QSOs has been marked as queued for LoTW!</source>
-        <translation type="unfinished"></translation>
+        <translation>Visi gaidošie QSO atzīmēti kā rindā uz LoTW!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2782"/>
+        <location filename="../mainwindow.cpp" line="3046" />
         <source>There was a problem to mark all pending QSOs as queued for LoTW!</source>
-        <translation type="unfinished"></translation>
+        <translation>Neizdevās atzīmēt visus gaidošos QSO kā rindā uz LoTW!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2802"/>
+        <location filename="../mainwindow.cpp" line="3066" />
         <source>KLog - TQSL</source>
-        <translation type="unfinished"></translation>
+        <translation>KLog — TQSL</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2806"/>
-        <source>TQSL is not installed or KLog can&apos;t find it. Please check the configuration.</source>
-        <translation type="unfinished"></translation>
+        <location filename="../mainwindow.cpp" line="3070" />
+        <source>TQSL is not installed or KLog can't find it. Please check the configuration.</source>
+        <translation>TQSL nav instalēts vai KLog to nevar atrast. Lūdzu, pārbaudiet konfigurāciju.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2825"/>
+        <location filename="../mainwindow.cpp" line="3102" />
         <source>Error #1: The process was cancelled by the user or TQSL was not configured. No QSOs were uploaded.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2829"/>
+        <location filename="../mainwindow.cpp" line="3106" />
         <source>Error #2: Upload was rejected by LoTW, please check your data.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kļūda #2: LoTW noraidīja augšupielādi, pārbaudiet datus.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2833"/>
+        <location filename="../mainwindow.cpp" line="3110" />
         <source>Error #3: The TQSL server returned an unexpected response.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kļūda #3: TQSL serveris atgrieza negaidītu atbildi.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2837"/>
+        <location filename="../mainwindow.cpp" line="3114" />
         <source>Error #4: There was a TQSL error.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kļūda #4: Radās TQSL kļūda.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2841"/>
+        <location filename="../mainwindow.cpp" line="3118" />
         <source>Error #5: There was a TQSLLib error.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kļūda #5: Radās TQSLLib kļūda.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2845"/>
+        <location filename="../mainwindow.cpp" line="3122" />
         <source>Error #6: It was not possible to open the input file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kļūda #6: Neizdevās atvērt ievades failu.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2849"/>
+        <location filename="../mainwindow.cpp" line="3126" />
         <source>Error #7: It was not possible to open the ouput file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kļūda #7: Neizdevās atvērt izvades failu.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2853"/>
+        <location filename="../mainwindow.cpp" line="3130" />
         <source>Error #8: No QSOs were processed since some QSOs were duplicates or out of date range.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2857"/>
+        <location filename="../mainwindow.cpp" line="3134" />
         <source>Error #9: Some QSOs were processed, and some QSOs were ignored because they were duplicates or out of date range.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2861"/>
+        <location filename="../mainwindow.cpp" line="3138" />
         <source>Error #10: Command syntax error. KLog sent a bad syntax command.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kļūda #10: Komandas sintakses kļūda. KLog nosūtīja nepareizu komandu.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2865"/>
+        <location filename="../mainwindow.cpp" line="3142" />
         <source>Error #11: LoTW Connection error (no network or LoTW is unreachable).</source>
-        <translation type="unfinished"></translation>
+        <translation>Kļūda #11: LoTW savienojuma kļūda (nav tīkla vai LoTW nav sasniedzams).</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2868"/>
+        <location filename="../mainwindow.cpp" line="3145" />
         <source>Error #00: Unexpected error. Please contact the development team.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kļūda #00: Negaidīta kļūda. Lūdzu, sazinieties ar izstrādes komandu.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2900"/>
+        <location filename="../mainwindow.cpp" line="3177" />
         <source>The log that you have selected contains more than just one station callsign.</source>
-        <translation type="unfinished"></translation>
+        <translation>Izvēlētais žurnāls satur vairāk nekā vienu stacijas izsaukuma signālu.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2900"/>
+        <location filename="../mainwindow.cpp" line="3177" />
         <source>Please select the station callsign you want to mark as sent to LoTW:</source>
-        <translation type="unfinished"></translation>
+        <translation>Izvēlieties stacijas izsaukuma signālu, kuru atzīmēt kā nosūtītu uz LoTW:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2903"/>
+        <location filename="../mainwindow.cpp" line="3180" />
         <source>Station Callsign:</source>
-        <translation type="unfinished"></translation>
+        <translation>Stacijas izsaukuma signāls:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2915"/>
+        <location filename="../mainwindow.cpp" line="3192" />
         <source>Define Station Callsign</source>
-        <translation type="unfinished"></translation>
+        <translation>Norādiet stacijas izsaukuma signālu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2916"/>
+        <location filename="../mainwindow.cpp" line="3193" />
         <source>Enter the station callsign to use for this log or leave it empty for QSO without station callsign defined:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2931"/>
+        <location filename="../mainwindow.cpp" line="3208" />
         <source>KLog - No station selected</source>
-        <translation type="unfinished"></translation>
+        <translation>KLog — stacija nav izvēlēta</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2932"/>
+        <location filename="../mainwindow.cpp" line="3209" />
         <source>No station callsign has been selected and therefore no log will be marked</source>
-        <translation type="unfinished"></translation>
+        <translation>Stacijas izsaukuma signāls nav izvēlēts, tāpēc žurnāls netiks atzīmēts</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2987"/>
+        <location filename="../mainwindow.cpp" line="3264" />
         <source>All queued QSOs has been marked as sent to LoTW!</source>
-        <translation type="unfinished"></translation>
+        <translation>Visi rindā gaidošie QSO atzīmēti kā nosūtīti uz LoTW!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2967"/>
+        <location filename="../mainwindow.cpp" line="4554" />
+        <source>Did TQSL report a successful upload?
+
+Answer Yes only if TQSL confirmed the QSOs reached LoTW. TQSL does not always report a failed upload back to KLog, so marking the QSOs as sent after a failure would hide them from the next upload.</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5049" />
+        <source>KLog - ADIF import</source>
+        <translation>KLog — ADIF imports</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5051" />
+        <source>Mark the imported QSOs as pending upload?</source>
+        <translation>Atzīmēt importētos QSO kā gaidošus augšupielādei?</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5052" />
+        <source>Log files exported by WSJT-X, JTDX and similar programs do not carry QSL status fields. Unless they are marked as queued, the imported QSOs will not appear in the LoTW, eQSL or Club Log upload dialogs.
+
+Answer No if these QSOs have already been uploaded elsewhere.</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="6551" />
+        <source>callsign %1 (profile: %2)</source>
+        <translation>izsaukuma signāls %1 (profils: %2)</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="6553" />
+        <source>locator %1 (profile: %2)</source>
+        <translation>lokators %1 (profils: %2)</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="6556" />
+        <source>Station data mismatch</source>
+        <translation>Stacijas datu neatbilstība</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="6557" />
+        <source>The QSO received over UDP does not match the active profile:
+
+%1
+
+Check the station settings in WSJT-X or JTDX before continuing.</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="6921" />
+        <source>% - QSO Dupe</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="7755" />
+        <source>KLog - WSJT-X log</source>
+        <translation>KLog — WSJT-X žurnāls</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="7757" />
+        <source>%1 QSOs in the WSJT-X log file are not in your log.</source>
+        <translation>%1 QSO no WSJT-X žurnāla faila nav jūsu žurnālā.</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="7758" />
+        <source>This happens when the digital program was started before KLog, so the QSOs were never received over UDP.
+
+Do you want to import them now?</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="7795" />
+        <source>KLog - Update from callbook</source>
+        <translation>KLog — atjaunināšana no izsaukumu grāmatas</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="7796" />
+        <source>%1 callsigns are missing name, QTH or locator. Query the callbooks and fill in the empty fields?</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="3244" />
         <source>There was a problem to mark all queued QSOs of this log as sent to LoTW!</source>
-        <translation type="unfinished"></translation>
+        <translation>Neizdevās atzīmēt visus šī žurnāla rindā gaidošos QSO kā nosūtītus uz LoTW!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1903"/>
+        <location filename="../mainwindow.cpp" line="2112" />
         <source>KLog - %1</source>
-        <translation type="unfinished">Klog — %1</translation>
+        <translation>Klog — %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2284"/>
-        <location filename="../mainwindow.cpp" line="3827"/>
+        <location filename="../mainwindow.cpp" line="2526" />
+        <location filename="../mainwindow.cpp" line="4462" />
         <source>KLog - ADIF export</source>
-        <translation type="unfinished"></translation>
+        <translation>KLog — ADIF eksports</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2447"/>
+        <location filename="../mainwindow.cpp" line="2722" />
         <source>Queue all QSOs from this log to be sent</source>
-        <translation type="unfinished"></translation>
+        <translation>Ielikt rindā visus šī žurnāla QSO</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2557"/>
+        <location filename="../mainwindow.cpp" line="2832" />
         <source>Show Map</source>
-        <translation type="unfinished"></translation>
+        <translation>Rādīt karti</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2687"/>
+        <location filename="../mainwindow.cpp" line="2957" />
         <source>Do you really want to mark ALL the QSOs of this log to be UPLOADED? Must be done ONLY IF THIS IS YOUR FIRST TIME uploading these QSOs to LoTW.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2699"/>
-        <location filename="../mainwindow.cpp" line="2777"/>
+        <location filename="../mainwindow.cpp" line="2969" />
+        <location filename="../mainwindow.cpp" line="3041" />
         <source>Now you can upload them to LoTW.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tagad tos var augšupielādēt uz LoTW.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2916"/>
+        <location filename="../mainwindow.cpp" line="3193" />
         <source>You have selected no callsign. KLog will complete the QSOs without a station callsign defined and those with the callsign you are entering here.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2962"/>
+        <location filename="../mainwindow.cpp" line="3239" />
         <source>All queued QSOs of this log has been marked as sent to LoTW!</source>
-        <translation type="unfinished"></translation>
+        <translation>Visi šī žurnāla rindā gaidošie QSO atzīmēti kā nosūtīti uz LoTW!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2992"/>
+        <location filename="../mainwindow.cpp" line="3269" />
         <source>There was a problem to mark all queued QSOs as sent to LoTW!</source>
-        <translation type="unfinished"></translation>
+        <translation>Neizdevās atzīmēt visus rindā gaidošos QSO kā nosūtītus uz LoTW!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3045"/>
+        <location filename="../mainwindow.cpp" line="3322" />
         <source>About ...</source>
-        <translation type="unfinished"></translation>
+        <translation>Par ...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3102"/>
+        <location filename="../mainwindow.cpp" line="3400" />
         <source>Congratulations!</source>
-        <translation type="unfinished"></translation>
+        <translation>Apsveicam!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3102"/>
+        <location filename="../mainwindow.cpp" line="3400" />
         <source>You already have the latest version.</source>
-        <translation type="unfinished">Jums jau ir jaunākā versija.</translation>
+        <translation>Jums jau ir jaunākā versija.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3266"/>
+        <location filename="../mainwindow.cpp" line="3620" />
         <source>You can find the KLog data folder here: </source>
-        <translation type="unfinished"></translation>
+        <translation>KLog datu mape atrodas šeit: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3320"/>
+        <location filename="../mainwindow.cpp" line="3674" />
         <source>start</source>
-        <translation type="unfinished"></translation>
+        <translation>startēt</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3321"/>
-        <location filename="../mainwindow.cpp" line="3348"/>
+        <location filename="../mainwindow.cpp" line="3675" />
+        <location filename="../mainwindow.cpp" line="3702" />
         <source>UDP Server error
 The UDP server failed to %1.</source>
         <comment>start or stop</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3347"/>
+        <location filename="../mainwindow.cpp" line="3701" />
         <source>stop</source>
-        <translation type="unfinished"></translation>
+        <translation>apturēt</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3926"/>
-        <source>TQSL finished with no error.
-
-Do you want to mark as Sent all the QSOs uploaded to LoTW?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="4002"/>
+        <location filename="../mainwindow.cpp" line="4633" />
         <source>The selection you have done does not include any QSO</source>
-        <translation type="unfinished"></translation>
+        <translation>Atlasē nav neviena QSO</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4047"/>
+        <location filename="../mainwindow.cpp" line="4679" />
         <source>The selection you have done does not include any QSO.</source>
-        <translation type="unfinished"></translation>
+        <translation>Atlasē nav neviena QSO.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4203"/>
-        <location filename="../mainwindow.cpp" line="4233"/>
-        <location filename="../mainwindow.cpp" line="4263"/>
+        <location filename="../mainwindow.cpp" line="4847" />
+        <location filename="../mainwindow.cpp" line="4877" />
+        <location filename="../mainwindow.cpp" line="4907" />
         <source>Do you really want to mark ALL your QSOs to be UPLOADED? Must be done ONLY IF THIS IS YOUR FIRST TIME uploading QSOs to %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4203"/>
+        <location filename="../mainwindow.cpp" line="4847" />
         <source>ClubLog</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4262"/>
+        <location filename="../mainwindow.cpp" line="4906" />
         <source>KLog - QRZ.COM</source>
-        <translation type="unfinished"></translation>
+        <translation>KLog — QRZ.COM</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4263"/>
+        <location filename="../mainwindow.cpp" line="4907" />
         <source>QRZ.COM</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4333"/>
+        <location filename="../mainwindow.cpp" line="4977" />
         <source>To upload QSOs you need a qrz.com subscription. If you have one, go to Setup-&gt;QRZ.com tab to enable it.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5477"/>
+        <location filename="../mainwindow.cpp" line="6716" />
         <source>Duplicated QSOs have to match another existing QSO with the same call, band, mode, date and time, taking into account the period that can be defined in the settings.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5665"/>
-        <source>KLog - QSO Dupe</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="5666"/>
+        <location filename="../mainwindow.cpp" line="6922" />
         <source>A dupe QSO has been detected in the file and will not be added to the log.</source>
-        <translation type="unfinished"></translation>
+        <translation>Failā atrasts dublēts QSO, un tas netiks pievienots žurnālam.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5667"/>
+        <location filename="../mainwindow.cpp" line="6923" />
         <source>Please check the QSO information file and ensure it is properly added.</source>
-        <translation type="unfinished"></translation>
+        <translation>Lūdzu, pārbaudiet QSO informācijas failu un pārliecinieties, ka tas pievienots pareizi.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5687"/>
+        <location filename="../mainwindow.cpp" line="6928" />
+        <source>% - Duplicated satellite</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="6943" />
         <source>Native Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Sistēmas kļūda</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6321"/>
+        <location filename="../mainwindow.cpp" line="6955" />
+        <source>% - Show errors</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="7642" />
         <source>It seems that there are no QSOs in the database.</source>
-        <translation type="unfinished"></translation>
+        <translation>Šķiet, ka datubāzē nav neviena QSO.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6321"/>
+        <location filename="../mainwindow.cpp" line="7642" />
         <source>If you are sure that the database contains QSOs and KLog is not able to find them, please contact the developers (see About KLog) for help.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3712"/>
+        <location filename="../mainwindow.cpp" line="4301" />
         <source>Status of the DX entity.</source>
-        <translation type="unfinished"></translation>
+        <translation>DX entītijas statuss.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3714"/>
+        <location filename="../mainwindow.cpp" line="4303" />
         <source>Name of the DX entity.</source>
-        <translation type="unfinished"></translation>
+        <translation>DX entītijas nosaukums.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3732"/>
+        <location filename="../mainwindow.cpp" line="4321" />
         <source>QSO</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3733"/>
+        <location filename="../mainwindow.cpp" line="4322" />
         <source>QSL</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3734"/>
-        <location filename="../mainwindow.cpp" line="4233"/>
+        <location filename="../mainwindow.cpp" line="4323" />
+        <location filename="../mainwindow.cpp" line="4877" />
         <source>eQSL</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3735"/>
-        <location filename="../mainwindow.cpp" line="4834"/>
+        <location filename="../mainwindow.cpp" line="5960" />
         <source>Comment</source>
-        <translation type="unfinished">Komentāri</translation>
+        <translation>Komentāri</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3737"/>
+        <location filename="../mainwindow.cpp" line="4325" />
         <source>Others</source>
-        <translation type="unfinished"></translation>
+        <translation>Citi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3739"/>
+        <location filename="../mainwindow.cpp" line="4327" />
         <source>My Data</source>
-        <translation type="unfinished"></translation>
+        <translation>Mani dati</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3740"/>
+        <location filename="../mainwindow.cpp" line="4328" />
         <source>Satellite</source>
-        <translation type="unfinished"></translation>
+        <translation>Satelīti</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3757"/>
+        <location filename="../mainwindow.cpp" line="4392" />
         <source>Info</source>
-        <translation type="unfinished"></translation>
+        <translation>Informācija</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3763"/>
+        <location filename="../mainwindow.cpp" line="4398" />
         <source>Awards</source>
-        <translation type="unfinished"></translation>
+        <translation>Diplomi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3764"/>
+        <location filename="../mainwindow.cpp" line="4399" />
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Meklēt</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3766"/>
+        <location filename="../mainwindow.cpp" line="4401" />
         <source>Log</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3767"/>
+        <location filename="../mainwindow.cpp" line="4402" />
         <source>DX-Cluster</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3768"/>
+        <location filename="../mainwindow.cpp" line="4403" />
         <source>DXCC</source>
-        <translation type="unfinished">DXCC</translation>
+        <translation>DXCC</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3830"/>
+        <location filename="../mainwindow.cpp" line="4466" />
         <source>No QSOs have been exported to ADIF.</source>
-        <translation type="unfinished"></translation>
+        <translation>Neviens QSO netika eksportēts uz ADIF.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3834"/>
+        <location filename="../mainwindow.cpp" line="4471" />
         <source>KLog has exported %1 QSOs to the ADIF file: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>KLog eksportēja %1 QSO uz ADIF failu: %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2686"/>
-        <location filename="../mainwindow.cpp" line="2695"/>
-        <location filename="../mainwindow.cpp" line="2731"/>
-        <location filename="../mainwindow.cpp" line="2763"/>
-        <location filename="../mainwindow.cpp" line="2772"/>
-        <location filename="../mainwindow.cpp" line="2957"/>
-        <location filename="../mainwindow.cpp" line="2982"/>
-        <location filename="../mainwindow.cpp" line="3898"/>
-        <location filename="../mainwindow.cpp" line="3925"/>
-        <location filename="../mainwindow.cpp" line="3938"/>
-        <location filename="../mainwindow.cpp" line="3950"/>
-        <location filename="../mainwindow.cpp" line="3960"/>
-        <location filename="../mainwindow.cpp" line="4139"/>
-        <location filename="../mainwindow.cpp" line="4182"/>
+        <location filename="../mainwindow.cpp" line="2956" />
+        <location filename="../mainwindow.cpp" line="2965" />
+        <location filename="../mainwindow.cpp" line="2992" />
+        <location filename="../mainwindow.cpp" line="3027" />
+        <location filename="../mainwindow.cpp" line="3036" />
+        <location filename="../mainwindow.cpp" line="3234" />
+        <location filename="../mainwindow.cpp" line="3259" />
+        <location filename="../mainwindow.cpp" line="4526" />
+        <location filename="../mainwindow.cpp" line="4553" />
+        <location filename="../mainwindow.cpp" line="4569" />
+        <location filename="../mainwindow.cpp" line="4581" />
+        <location filename="../mainwindow.cpp" line="4591" />
+        <location filename="../mainwindow.cpp" line="4783" />
+        <location filename="../mainwindow.cpp" line="4826" />
         <source>KLog - LoTW</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3101"/>
+        <location filename="../mainwindow.cpp" line="1366" />
+        <location filename="../mainwindow.cpp" line="1373" />
+        <source>Unknown</source>
+        <comment>Keep it short, it's a button text</comment>
+        <translation>Nezināms</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="3399" />
         <source>KLog - Update checking result</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3900"/>
+        <location filename="../mainwindow.cpp" line="3796" />
+        <source>Radio connection failed</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="3797" />
+        <source>KLog could not connect to the radio at startup.</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="3798" />
+        <source>Please check the radio is on and the port settings are correct.
+You can reconfigure and test the connection in Setup → Hamlib.
+
+Do you want KLog to try to connect automatically on next startup?</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="3801" />
+        <location filename="../mainwindow.cpp" line="3841" />
+        <source>Yes, reconnect on startup</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="3802" />
+        <location filename="../mainwindow.cpp" line="3842" />
+        <source>No, disable radio connection</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="3837" />
+        <source>Radio disconnected</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="3838" />
+        <source>KLog lost communication with the radio.</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="3839" />
+        <source>Check that the radio is on and the cable is connected.
+
+Do you want KLog to try to connect automatically on next startup?</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="4082" />
+        <source>DX Assistant</source>
+        <translation>DX asistents</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="4528" />
         <source>You need to select one station callsign to be able to send your log to LoTW.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3940"/>
+        <location filename="../mainwindow.cpp" line="4571" />
         <source>There was an error while updating to Yes the LoTW QSL sent information.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3951"/>
+        <location filename="../mainwindow.cpp" line="4582" />
         <source>The LoTW upload process has finished and KLog created a file (%1) in your KLog folder.
 
 Do you want KLog to remove that file?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3986"/>
+        <location filename="../mainwindow.cpp" line="4617" />
         <source>You need to select one station callsign to be able to send your log to ClubLog.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4011"/>
+        <location filename="../mainwindow.cpp" line="4642" />
         <source>Do you want to add this QSOs to your ClubLog existing log?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4013"/>
-        <source>If you don&apos;t agree, this upload will overwrite your current ClubLog existing log.</source>
-        <translation type="unfinished"></translation>
+        <location filename="../mainwindow.cpp" line="4644" />
+        <source>If you don't agree, this upload will overwrite your current ClubLog existing log.</source>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4122"/>
-        <location filename="../mainwindow.cpp" line="4165"/>
+        <location filename="../mainwindow.cpp" line="4766" />
+        <location filename="../mainwindow.cpp" line="4809" />
         <source>KLog - Select the Station Callsign.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4123"/>
-        <location filename="../mainwindow.cpp" line="4166"/>
+        <location filename="../mainwindow.cpp" line="4767" />
+        <location filename="../mainwindow.cpp" line="4810" />
         <source>Select the Station Callsign to use when quering LoTW:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4141"/>
-        <location filename="../mainwindow.cpp" line="4184"/>
+        <location filename="../mainwindow.cpp" line="4785" />
+        <location filename="../mainwindow.cpp" line="4828" />
         <source>Please check the LoTW setup</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4142"/>
-        <location filename="../mainwindow.cpp" line="4185"/>
+        <location filename="../mainwindow.cpp" line="4786" />
+        <location filename="../mainwindow.cpp" line="4829" />
         <source>You have not defined a LoTW user or a proper Station Callsign.
 Open the LoTW tab in the Setup and configure your LoTW connection.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4213"/>
+        <location filename="../mainwindow.cpp" line="4857" />
         <source>The log is ready to be uploaded to ClubLog.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4214"/>
+        <location filename="../mainwindow.cpp" line="4858" />
         <source>All the QSOs in this log has been marked as Modified in the ClubLog status field</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4219"/>
+        <location filename="../mainwindow.cpp" line="4863" />
         <source>KLog could not mark the full log to be sent to ClubLog</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4220"/>
-        <location filename="../mainwindow.cpp" line="4250"/>
-        <location filename="../mainwindow.cpp" line="4280"/>
+        <location filename="../mainwindow.cpp" line="4864" />
+        <location filename="../mainwindow.cpp" line="4894" />
+        <location filename="../mainwindow.cpp" line="4924" />
         <source>Something prevented KLog from marking the QSOs as modified. Restart KLog and try again before contacting the KLog developers.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4243"/>
+        <location filename="../mainwindow.cpp" line="4887" />
         <source>The log is ready to be uploaded to eQSL.cc.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4244"/>
+        <location filename="../mainwindow.cpp" line="4888" />
         <source>All the QSOs in this log has been marked as Modified in the eQSL.cc status field</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4249"/>
+        <location filename="../mainwindow.cpp" line="4893" />
         <source>KLog could not mark the full log to be sent to eQSL</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4273"/>
+        <location filename="../mainwindow.cpp" line="4917" />
         <source>The log is ready to be uploaded to QRZ.com.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4274"/>
+        <location filename="../mainwindow.cpp" line="4918" />
         <source>All the QSOs in this log has been marked as Modified in the QRZ.com status field</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4279"/>
+        <location filename="../mainwindow.cpp" line="4923" />
         <source>KLog could not mark the full log to be sent to QRZ.com</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4344"/>
+        <location filename="../mainwindow.cpp" line="4988" />
         <source>You need to define a proper API Key for your QRZ.com logbook in the eLog preferences.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4370"/>
+        <location filename="../mainwindow.cpp" line="5021" />
+        <location filename="../mainwindow.cpp" line="5031" />
         <source>Open File</source>
-        <translation type="unfinished">Atver failu</translation>
+        <translation>Atver failu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4576"/>
+        <location filename="../mainwindow.cpp" line="5078" />
+        <source>Importing file %1/%2: %3</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5121" />
+        <source>KLog - File import finished</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5122" />
+        <source>The import of the ADIF file has finished.</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5123" />
+        <source>Imported QSOs: %1
+Ignored duplicated: %2
+
+Do you want to continue importing the next file?</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5137" />
+        <source>Import cancelled by the user.</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5143" />
+        <location filename="../mainwindow.cpp" line="5156" />
+        <source>KLog - Import finished</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5144" />
+        <source>The ADIF import has been stopped.</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5145" />
+        <source>The ADIF import has finished.</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5146" />
+        <source>Total imported QSOs: %1
+Total ignored duplicated: %2</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5150" />
+        <source>Import of %1 files finished.</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5157" />
+        <source>The ADIF file import has finished.</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5158" />
+        <source>Imported QSOs: %1
+Ignored duplicated: %2</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5344" />
+        <source>New Locator on Sats</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5345" />
+        <source>New Locator on %1 Band</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5419" />
         <source> - Needed for DXMarathon</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4629"/>
+        <location filename="../mainwindow.cpp" line="5517" />
         <source>Filling QSOs ...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4629"/>
+        <location filename="../mainwindow.cpp" line="5517" />
         <source>Abort filling</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4731"/>
+        <location filename="../mainwindow.cpp" line="5619" />
         <source>Filling DXCC, CQz, ITUz, Continent in QSOs...
  QSO: </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4820"/>
+        <location filename="../mainwindow.cpp" line="5792" />
+        <source>WSJT-X, worked by %1</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5946" />
         <source>Number</source>
-        <translation type="unfinished">Numurs</translation>
+        <translation>Numurs</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4822"/>
+        <location filename="../mainwindow.cpp" line="5948" />
         <source>Date/Time</source>
-        <translation type="unfinished">Datums Laiks</translation>
+        <translation>Datums Laiks</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4824"/>
+        <location filename="../mainwindow.cpp" line="5950" />
         <source>Callsign</source>
-        <translation type="unfinished">Izsaukuma signāls</translation>
+        <translation>Izsaukuma signāls</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4826"/>
+        <location filename="../mainwindow.cpp" line="5952" />
         <source>RSTtx</source>
-        <translation type="unfinished">RSTtx</translation>
+        <translation>RSTtx</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4828"/>
+        <location filename="../mainwindow.cpp" line="5954" />
         <source>RSTrx</source>
-        <translation type="unfinished">RSTrx</translation>
+        <translation>RSTrx</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4830"/>
+        <location filename="../mainwindow.cpp" line="5956" />
         <source>Band</source>
-        <translation type="unfinished"></translation>
+        <translation>Diapazons</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4832"/>
+        <location filename="../mainwindow.cpp" line="5958" />
         <source>Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Mode</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4847"/>
+        <location filename="../mainwindow.cpp" line="5973" />
         <source>Print Log</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4852"/>
+        <location filename="../mainwindow.cpp" line="5978" />
         <source>Printing the log ...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4852"/>
+        <location filename="../mainwindow.cpp" line="5978" />
         <source>Abort printing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4868"/>
-        <location filename="../mainwindow.cpp" line="4882"/>
+        <location filename="../mainwindow.cpp" line="5994" />
+        <location filename="../mainwindow.cpp" line="6008" />
         <source>Printing the log...
  QSO: </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5472"/>
-        <source>KLog - WSJTX Dupe QSO</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="5475"/>
-        <source>This QSO seems to be duplicated. Do you want to save or discard it?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="5404"/>
-        <source>QSO logged from WSJT-X:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="5422"/>
-        <source>KLog - QSO received - NEW</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="5428"/>
-        <source>&lt;HTML&gt;&lt;body&gt;ASK-The following QSO data has been received from to be logged:
+        <location filename="../mainwindow.cpp" line="6656" />
+        <source>&lt;HTML&gt;&lt;body&gt;The following QSO data has been received to be logged:
 
 &lt;table&gt;&lt;tr&gt;&lt;TH&gt;Callsign:&lt;/TH&gt;&lt;TD&gt;%1&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TH&gt;Freq:&lt;/TH&gt;&lt;TD&gt;%2&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TH&gt;Mode:&lt;/TH&gt;&lt;TD&gt;%3&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TH&gt;Time On:&lt;/TH&gt;&lt;TD&gt;%4&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TH&gt;Time Off:&lt;/TH&gt;&lt;TD&gt;%5&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TH&gt;RST TX:&lt;/TH&gt;&lt;TD&gt;%6&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TH&gt;RST RX:&lt;/TH&gt;&lt;TD&gt;%7&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TH&gt;Comment:&lt;/TH&gt;&lt;TD&gt;%8&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TH&gt;DX-Grid:&lt;/TH&gt;&lt;TD&gt;%9&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TH&gt;Local-Grid:&lt;/TH&gt;&lt;TD&gt;%10&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TH&gt;Station Callsign:&lt;/TH&gt;&lt;TD&gt;%11&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TH&gt;Operator Callsign:&lt;/TH&gt;&lt;TD&gt;%12&lt;/TD&gt;&lt;/TR&gt;&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5511"/>
+        <location filename="../mainwindow.cpp" line="6711" />
+        <source>KLog - WSJTX Dupe QSO</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="6714" />
+        <source>This QSO seems to be duplicated. Do you want to save or discard it?</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="6631" />
+        <source>QSO logged from WSJT-X:</source>
+        <translation>QSO ierakstīts no WSJT-X:</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="6649" />
+        <source>KLog - QSO received - NEW</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="6753" />
         <source>KLog - Non-supported mode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5514"/>
+        <location filename="../mainwindow.cpp" line="6756" />
         <source>A new mode not supported by KLog has been received from an external program or radio:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5514"/>
+        <location filename="../mainwindow.cpp" line="6756" />
         <source>If the received mode is correct, please contact KLog development team and request support for that mode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5514"/>
+        <location filename="../mainwindow.cpp" line="6756" />
         <source>Do you want to keep receiving these alerts? (disabling these alerts will prevent non-valid modes being detected)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5672"/>
-        <source>KLog - Duplicated satellite</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="5673"/>
+        <location filename="../mainwindow.cpp" line="6929" />
         <source>A duplicated satellite has been detected in the file and will not be imported.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5674"/>
+        <location filename="../mainwindow.cpp" line="6930" />
         <source>Please check the satellite information file and ensure it is properly populated.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5674"/>
+        <location filename="../mainwindow.cpp" line="6930" />
         <source>Now you will see a more detailed error that can be used for debugging...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5684"/>
+        <location filename="../mainwindow.cpp" line="6940" />
         <source>An unexpected error ocurred!!</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5684"/>
+        <location filename="../mainwindow.cpp" line="6940" />
         <source>If the problem persists, please contact the developers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5684"/>
+        <location filename="../mainwindow.cpp" line="6940" />
         <source>for analysis:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5686"/>
+        <location filename="../mainwindow.cpp" line="6942" />
         <source>Error in function</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5688"/>
+        <location filename="../mainwindow.cpp" line="6944" />
         <source>Error text</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5689"/>
+        <location filename="../mainwindow.cpp" line="6945" />
         <source>Failed query</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5691"/>
+        <location filename="../mainwindow.cpp" line="6947" />
         <source>Recommendation:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5691"/>
+        <location filename="../mainwindow.cpp" line="6947" />
         <source>Periodically export your data to ADIF to prevent a potential data loss.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5698"/>
-        <source>KLog - Show errors</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="5700"/>
+        <location filename="../mainwindow.cpp" line="6957" />
         <source>Do you want to keep showing errors?</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>MainWindowInputComment</name>
-    <message>
-        <location filename="../inputwidgets/mainwindowinputcomment.cpp" line="46"/>
-        <source>Comment</source>
-        <translation type="unfinished">Komentāri</translation>
-    </message>
-    <message>
-        <location filename="../inputwidgets/mainwindowinputcomment.cpp" line="48"/>
-        <source>Add a comment for this QSO.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../inputwidgets/mainwindowinputcomment.cpp" line="51"/>
-        <source>Keep this data</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../inputwidgets/mainwindowinputcomment.cpp" line="53"/>
-        <location filename="../inputwidgets/mainwindowinputcomment.cpp" line="55"/>
-        <source>Data entered in this tab will be copied into the next QSO.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
     <name>MainWindowInputEQSL</name>
     <message>
-        <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="132"/>
+        <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="135" />
         <source>Date of the ClubLog upload.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="133"/>
+        <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="136" />
         <source>Date of the QRZ.com upload.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="134"/>
+        <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="137" />
         <source>Date of the eQSL sending.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="135"/>
+        <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="138" />
         <source>Date of the eQSL reception.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="136"/>
+        <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="139" />
         <source>Date of the LoTW sending.</source>
-        <translation>Klog Iestatījumu atjaunināšana.</translation>
+        <translation>Klog - Iestatījumu atjaunināšana.</translation>
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="137"/>
+        <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="140" />
         <source>Date of the LoTW reception.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="139"/>
+        <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="142" />
         <source>Status on ClubLog.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="140"/>
+        <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="143" />
         <source>Status on QRZ.com.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="141"/>
+        <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="144" />
         <source>Status of the eQSL sending.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="142"/>
+        <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="145" />
         <source>Status of the eQSL reception.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="143"/>
+        <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="146" />
         <source>Status of the LoTW sending.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="144"/>
+        <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="147" />
         <source>Status of the LoTW reception.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="148"/>
+        <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="151" />
         <source>ClubLog</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="151"/>
+        <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="154" />
         <source>QRZ.com</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="154"/>
+        <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="157" />
         <source>eQSL Sent</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="157"/>
+        <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="160" />
         <source>eQSL Rec</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="160"/>
+        <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="163" />
         <source>LoTW Sent</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="163"/>
+        <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="166" />
         <source>LoTW Rec</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
     <name>MainWindowInputOthers</name>
     <message>
-        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="146"/>
+        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="147" />
         <source>Primary Div</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="147"/>
+        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="148" />
         <source>Secondary Div</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="148"/>
+        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="149" />
         <source>IOTA</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="149"/>
+        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="150" />
         <source>Entity</source>
-        <translation type="unfinished">Entity</translation>
+        <translation>Entity</translation>
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="150"/>
+        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="151" />
         <source>Propagation mode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="151"/>
+        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="152" />
         <source>Others</source>
-        <translation type="unfinished"></translation>
+        <translation>Citi</translation>
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="160"/>
+        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="161" />
         <source>Keep propagation mode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="161"/>
+        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="162" />
         <source>Show All</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="163"/>
+        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="164" />
         <source>Select the primary division for this QSO.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="164"/>
+        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="165" />
         <source>Select the secondary division for this QSO.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="165"/>
+        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="166" />
         <source>Select the entity for this QSO.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="166"/>
+        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="167" />
         <source>Select the propagation mode for this QSO.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="167"/>
+        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="168" />
         <source>Select the IOTA continent for this QSO.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="168"/>
+        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="169" />
         <source>Select the IOTA reference number for this QSO.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="169"/>
+        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="170" />
         <source>Keeps the same propagation mode for next QSO.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="170"/>
+        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="171" />
         <source>Show all subdivisions for the current DXCC Entity.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="172"/>
+        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="173" />
         <source>Select the appropriate ADIF field for this QSO.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="173"/>
+        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="174" />
         <source>Value for the selected ADIF field.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="236"/>
-        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="1151"/>
+        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="237" />
+        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="1160" />
         <source>None Identified</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="276"/>
+        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="277" />
         <source>Not Identified</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="734"/>
+        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="736" />
         <source>WWFF Ref</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="795"/>
+        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="797" />
         <source>Not selected</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="215"/>
+        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="216" />
         <source>Not - Not Identified</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="731"/>
+        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="733" />
         <source>SOTA Ref</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="731"/>
+        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="733" />
         <source>Age</source>
-        <translation type="unfinished"></translation>
+        <translation>Vecums</translation>
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="732"/>
+        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="734" />
         <source>POTA Ref</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="733"/>
+        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="735" />
         <source>SIG</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="733"/>
+        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="735" />
         <source>SIG Info</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="734"/>
+        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="736" />
         <source>VUCC grids</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="732"/>
+        <location filename="../inputwidgets/mainwindowinputothers.cpp" line="734" />
         <source>Distance</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
     <name>MainWindowInputQSL</name>
     <message>
-        <location filename="../inputwidgets/mainwindowinputqsl.cpp" line="103"/>
+        <location filename="../inputwidgets/mainwindowinputqsl.cpp" line="103" />
         <source>QSL Sent</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputqsl.cpp" line="106"/>
+        <location filename="../inputwidgets/mainwindowinputqsl.cpp" line="106" />
         <source>QSL Rec</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputqsl.cpp" line="109"/>
+        <location filename="../inputwidgets/mainwindowinputqsl.cpp" line="109" />
         <source>QSL Via</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputqsl.cpp" line="112"/>
+        <location filename="../inputwidgets/mainwindowinputqsl.cpp" line="112" />
         <source>QSL Msg</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputqsl.cpp" line="115"/>
+        <location filename="../inputwidgets/mainwindowinputqsl.cpp" line="115" />
         <source>Status of the QSL sending.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputqsl.cpp" line="116"/>
+        <location filename="../inputwidgets/mainwindowinputqsl.cpp" line="116" />
         <source>Status of the QSL reception.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputqsl.cpp" line="117"/>
+        <location filename="../inputwidgets/mainwindowinputqsl.cpp" line="117" />
         <source>QSL sending information.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputqsl.cpp" line="118"/>
+        <location filename="../inputwidgets/mainwindowinputqsl.cpp" line="118" />
         <source>QSL reception information.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputqsl.cpp" line="120"/>
+        <location filename="../inputwidgets/mainwindowinputqsl.cpp" line="120" />
         <source>Date of the QSL sending.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputqsl.cpp" line="121"/>
+        <location filename="../inputwidgets/mainwindowinputqsl.cpp" line="121" />
         <source>Date of the QSL reception.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputqsl.cpp" line="122"/>
+        <location filename="../inputwidgets/mainwindowinputqsl.cpp" line="122" />
         <source>Message of the QSL.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputqsl.cpp" line="123"/>
+        <location filename="../inputwidgets/mainwindowinputqsl.cpp" line="123" />
         <source>QSL via information.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
     <name>MainWindowInputQSO</name>
     <message>
-        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="71"/>
+        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="74" />
         <source>TX RST.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="72"/>
+        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="75" />
         <source>RX RST.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="73"/>
-        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="727"/>
+        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="76" />
+        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="846" />
         <source>TX Frequency in MHz.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="74"/>
-        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="786"/>
+        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="77" />
+        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="900" />
         <source>RX Frequency in MHz.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="75"/>
+        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="78" />
         <source>Power used by the contacted station.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="76"/>
+        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="79" />
         <source>Name of the contacted operator.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="77"/>
+        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="80" />
         <source>QTH of the contacted station.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="78"/>
+        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="81" />
         <source>Locator of the contacted station.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="82"/>
+        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="82" />
+        <source>Add a comment for this QSO.</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="83" />
+        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="234" />
+        <source>Data entered in this tab will be copied into the next QSO.</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="87" />
         <source>Watts</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="86"/>
-        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="92"/>
+        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="91" />
+        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="97" />
         <source>MHz</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="96"/>
+        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="101" />
         <source>Split</source>
         <comment>Translator: Split is a common hamradio term. Do not translate unless you are sure.</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="100"/>
+        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="105" />
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="104"/>
+        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="109" />
         <source>QTH</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="108"/>
+        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="113" />
+        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="472" />
         <source>DX Locator</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="112"/>
+        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="117" />
         <source>Power(rx)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="116"/>
+        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="121" />
         <source>RST</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="120"/>
-        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="162"/>
+        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="125" />
+        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="167" />
         <source>TX</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="124"/>
-        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="167"/>
+        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="129" />
+        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="172" />
         <source>RX</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="157"/>
+        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="162" />
         <source>Frequency</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="367"/>
+        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="194" />
+        <source>DARC DOK</source>
+        <translation type="unfinished">DARC DOK</translation>
+    </message>
+    <message>
+        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="197" />
+        <source>DARC DOK of this station (German stations only).</source>
+        <translation>Šīs stacijas DARC DOK (tikai Vācijas stacijām).</translation>
+    </message>
+    <message>
+        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="228" />
+        <source>Comment</source>
+        <translation>Komentāri</translation>
+    </message>
+    <message>
+        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="232" />
+        <source>Keep</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="247" />
+        <source>Services where this callsign is registered.</source>
+        <translation>Servisi, kuros šis izsaukuma signāls ir reģistrēts.</translation>
+    </message>
+    <message>
+        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="496" />
         <source>DX QTH locator.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="375"/>
+        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="504" />
         <source>DX QTH locator. Format should be Maidenhead like IN70AA up to 10 characters.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="743"/>
+        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="857" />
         <source>TX Frequency in MHz.
 Frequency is not in a hamradio band!</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="791"/>
+        <location filename="../inputwidgets/mainwindowinputqso.cpp" line="905" />
         <source>RX Frequency in MHz.
 Frequency is not in a hamradio band!</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
     <name>MainWindowMyDataTab</name>
     <message>
-        <location filename="../inputwidgets/mainwindowmydatatab.cpp" line="129"/>
+        <location filename="../inputwidgets/mainwindowmydatatab.cpp" line="129" />
         <source>Watts</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowmydatatab.cpp" line="131"/>
+        <location filename="../inputwidgets/mainwindowmydatatab.cpp" line="131" />
         <source>Keep this data</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowmydatatab.cpp" line="282"/>
+        <location filename="../inputwidgets/mainwindowmydatatab.cpp" line="282" />
         <source>My QTH locator.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowmydatatab.cpp" line="133"/>
+        <location filename="../inputwidgets/mainwindowmydatatab.cpp" line="133" />
         <source>Power</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowmydatatab.cpp" line="135"/>
+        <location filename="../inputwidgets/mainwindowmydatatab.cpp" line="135" />
         <source>Operator callsign</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowmydatatab.cpp" line="137"/>
+        <location filename="../inputwidgets/mainwindowmydatatab.cpp" line="137" />
         <source>Station Callsign</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowmydatatab.cpp" line="140"/>
+        <location filename="../inputwidgets/mainwindowmydatatab.cpp" line="140" />
         <source>My Locator</source>
-        <translation type="unfinished">mans Lokators</translation>
+        <translation>mans Lokators</translation>
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowmydatatab.cpp" line="294"/>
+        <location filename="../inputwidgets/mainwindowmydatatab.cpp" line="294" />
         <source>My QTH locator. Format should be Maidenhead like IN70AA up to 10 characters.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowmydatatab.cpp" line="546"/>
+        <location filename="../inputwidgets/mainwindowmydatatab.cpp" line="546" />
         <source>My Rig</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowmydatatab.cpp" line="546"/>
+        <location filename="../inputwidgets/mainwindowmydatatab.cpp" line="546" />
         <source>My Antenna</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowmydatatab.cpp" line="547"/>
+        <location filename="../inputwidgets/mainwindowmydatatab.cpp" line="547" />
         <source>My POTA Ref</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowmydatatab.cpp" line="547"/>
+        <location filename="../inputwidgets/mainwindowmydatatab.cpp" line="547" />
         <source>My SIG</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowmydatatab.cpp" line="548"/>
+        <location filename="../inputwidgets/mainwindowmydatatab.cpp" line="548" />
         <source>My SIG Info</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowmydatatab.cpp" line="548"/>
+        <location filename="../inputwidgets/mainwindowmydatatab.cpp" line="548" />
         <source>My SOTA Ref</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowmydatatab.cpp" line="550"/>
+        <location filename="../inputwidgets/mainwindowmydatatab.cpp" line="550" />
         <source>My WWFF Ref</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowmydatatab.cpp" line="549"/>
+        <location filename="../inputwidgets/mainwindowmydatatab.cpp" line="549" />
         <source>My VUCC_GRIDS</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
     <name>MainWindowSatTab</name>
     <message>
-        <location filename="../inputwidgets/mainwindowsattab.cpp" line="105"/>
+        <location filename="../inputwidgets/mainwindowsattab.cpp" line="115" />
         <source>Keep this data</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowsattab.cpp" line="107"/>
-        <location filename="../inputwidgets/mainwindowsattab.cpp" line="109"/>
+        <location filename="../inputwidgets/mainwindowsattab.cpp" line="117" />
+        <location filename="../inputwidgets/mainwindowsattab.cpp" line="119" />
         <source>Data entered in this tab will be copied into the next QSO.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowsattab.cpp" line="110"/>
-        <location filename="../inputwidgets/mainwindowsattab.cpp" line="401"/>
+        <location filename="../inputwidgets/mainwindowsattab.cpp" line="120" />
+        <location filename="../inputwidgets/mainwindowsattab.cpp" line="431" />
         <source>Other - Sat not in the list</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowsattab.cpp" line="113"/>
-        <source>Name of the Satellite if not in the list. Select: &quot;%1&quot; to enable this box. (format like AO-51).</source>
-        <translation type="unfinished"></translation>
+        <location filename="../inputwidgets/mainwindowsattab.cpp" line="123" />
+        <source>Name of the Satellite if not in the list. Select: "%1" to enable this box. (format like AO-51).</source>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowsattab.cpp" line="116"/>
+        <location filename="../inputwidgets/mainwindowsattab.cpp" line="126" />
         <source>Satellite mode used.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowsattab.cpp" line="117"/>
+        <location filename="../inputwidgets/mainwindowsattab.cpp" line="127" />
         <source>Select the satellite you are using.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowsattab.cpp" line="118"/>
+        <location filename="../inputwidgets/mainwindowsattab.cpp" line="128" />
         <source>UpLink band.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowsattab.cpp" line="119"/>
+        <location filename="../inputwidgets/mainwindowsattab.cpp" line="129" />
         <source>DownLink band.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowsattab.cpp" line="122"/>
+        <location filename="../inputwidgets/mainwindowsattab.cpp" line="132" />
         <source>UpLink</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowsattab.cpp" line="126"/>
+        <location filename="../inputwidgets/mainwindowsattab.cpp" line="136" />
         <source>DownLink</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowsattab.cpp" line="130"/>
+        <location filename="../inputwidgets/mainwindowsattab.cpp" line="140" />
         <source>Satellite</source>
-        <translation type="unfinished"></translation>
+        <translation>Satelīti</translation>
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowsattab.cpp" line="134"/>
+        <location filename="../inputwidgets/mainwindowsattab.cpp" line="144" />
         <source>Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Mode</translation>
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowsattab.cpp" line="138"/>
+        <location filename="../inputwidgets/mainwindowsattab.cpp" line="148" />
         <source>Other</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowsattab.cpp" line="400"/>
+        <location filename="../inputwidgets/mainwindowsattab.cpp" line="205" />
+        <location filename="../inputwidgets/mainwindowsattab.cpp" line="334" />
+        <source>Unknown</source>
+        <translation>Nezināms</translation>
+    </message>
+    <message>
+        <location filename="../inputwidgets/mainwindowsattab.cpp" line="430" />
         <source>Not Sat QSO</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowsattab.cpp" line="438"/>
+        <location filename="../inputwidgets/mainwindowsattab.cpp" line="468" />
         <source>KLog has detected a satellite name that it does not recognise. If it should use one of the names of known satellites instead, please select it from the list. Alternatively, please contact the development team to add the new satellite name.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowsattab.cpp" line="439"/>
+        <location filename="../inputwidgets/mainwindowsattab.cpp" line="469" />
         <source>The satellite you have in your QSO is: </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../inputwidgets/mainwindowsattab.cpp" line="439"/>
+        <location filename="../inputwidgets/mainwindowsattab.cpp" line="469" />
         <source>Please be aware that the satellite name will not be saved if it is not in the list, so that information may be lost!</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
     <name>MapWindowWidget</name>
     <message>
-        <location filename="../widgets/map/mapwindowwidget.cpp" line="74"/>
+        <location filename="../widgets/map/mapwindowwidget.cpp" line="116" />
         <source>Select QSOs in this band.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../widgets/map/mapwindowwidget.cpp" line="75"/>
+        <location filename="../widgets/map/mapwindowwidget.cpp" line="117" />
         <source>Select QSOs in this mode.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../widgets/map/mapwindowwidget.cpp" line="76"/>
+        <location filename="../widgets/map/mapwindowwidget.cpp" line="118" />
         <source>Select QSOs in this propagation mode.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../widgets/map/mapwindowwidget.cpp" line="77"/>
+        <location filename="../widgets/map/mapwindowwidget.cpp" line="119" />
         <source>Select QSOs using this Satellite.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../widgets/map/mapwindowwidget.cpp" line="78"/>
+        <location filename="../widgets/map/mapwindowwidget.cpp" line="120" />
         <source>Only confirmed</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../widgets/map/mapwindowwidget.cpp" line="80"/>
+        <location filename="../widgets/map/mapwindowwidget.cpp" line="122" />
         <source>Select only confirmed QSOs.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../widgets/map/mapwindowwidget.cpp" line="132"/>
+        <location filename="../widgets/map/mapwindowwidget.cpp" line="178" />
         <source>All bands</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../widgets/map/mapwindowwidget.cpp" line="133"/>
+        <location filename="../widgets/map/mapwindowwidget.cpp" line="179" />
         <source>Show nothing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../widgets/map/mapwindowwidget.cpp" line="146"/>
+        <location filename="../widgets/map/mapwindowwidget.cpp" line="192" />
         <source>All modes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../widgets/map/mapwindowwidget.cpp" line="160"/>
+        <location filename="../widgets/map/mapwindowwidget.cpp" line="206" />
         <source>All propagation modes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../widgets/map/mapwindowwidget.cpp" line="171"/>
+        <location filename="../widgets/map/mapwindowwidget.cpp" line="217" />
         <source>All satellites</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
     <name>OnlineMessageWidget</name>
     <message>
-        <location filename="../widgets/onlinemessagewidget.cpp" line="39"/>
+        <location filename="../widgets/onlinemessagewidget.cpp" line="39" />
         <source>The server returned the following error: %1</source>
         <translation>Serveris atgrieza šādu kļūdu: %1</translation>
-    </message>
-    <message>
-        <location filename="../widgets/onlinemessagewidget.cpp" line="171"/>
-        <source>Not identified</source>
-        <translation>Nav atpazīts</translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../awards.cpp" line="753"/>
-        <source>New One, work it!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../awards.cpp" line="757"/>
-        <location filename="../awards.cpp" line="761"/>
-        <location filename="../awards.cpp" line="767"/>
-        <location filename="../awards.cpp" line="770"/>
-        <location filename="../awards.cpp" line="773"/>
-        <location filename="../awards.cpp" line="776"/>
-        <location filename="../awards.cpp" line="782"/>
-        <location filename="../awards.cpp" line="788"/>
-        <source>Needed, work it!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../awards.cpp" line="764"/>
-        <location filename="../awards.cpp" line="779"/>
-        <location filename="../awards.cpp" line="785"/>
-        <location filename="../awards.cpp" line="791"/>
-        <source>Worked but not confirmed</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../awards.cpp" line="794"/>
+        <location filename="../awards.cpp" line="786" />
         <source>Confirmed</source>
-        <translation type="unfinished">Apstiprināts</translation>
+        <translation>Apstiprināts</translation>
     </message>
     <message>
-        <location filename="../awards.cpp" line="798"/>
-        <source>Not identified</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../database.cpp" line="235"/>
-        <location filename="../database.cpp" line="294"/>
+        <location filename="../database/database.cpp" line="237" />
+        <location filename="../database/database.cpp" line="297" />
         <source>Database Error</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../database.cpp" line="1263"/>
+        <location filename="../database/database.cpp" line="907" />
         <source>KLog DB needs to be upgraded.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../database.cpp" line="1264"/>
+        <location filename="../database/database.cpp" line="908" />
         <source>Do you want to upgrade it now?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../database.cpp" line="1264"/>
+        <location filename="../database/database.cpp" line="908" />
         <source>If DB is not upgraded KLog may not work properly.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../database.cpp" line="1301"/>
+        <location filename="../database/database.cpp" line="945" />
         <source>Upgrading software may potentially cause problems. Backing up your DB, before upgrading, is always a good idea.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../database.cpp" line="1302"/>
+        <location filename="../database/database.cpp" line="946" />
         <source>Do you want to backup your DB now?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../database.cpp" line="1343"/>
+        <location filename="../database/database.cpp" line="987" />
         <source>The backup finished successfully.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../database.cpp" line="1344"/>
+        <location filename="../database/database.cpp" line="988" />
         <source>You can find the backup in this file: %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../database.cpp" line="1353"/>
+        <location filename="../database/database.cpp" line="997" />
         <source>The backup was not properly done.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../database.cpp" line="1354"/>
+        <location filename="../database/database.cpp" line="998" />
         <source>You will be sent back to the starting point.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../database.cpp" line="1632"/>
-        <source>KLog - DB can&apos;t be updated automatically</source>
-        <translation type="unfinished"></translation>
+        <location filename="../database/database.cpp" line="1046" />
+        <source>KLog - DB can't be updated automatically</source>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../database.cpp" line="1633"/>
-        <source>You are upgrading from a too old KLog version and this upgrade can&apos;t be upgraded automatically from that version.</source>
-        <translation type="unfinished"></translation>
+        <location filename="../database/database.cpp" line="1047" />
+        <source>You are upgrading from a too old KLog version and this upgrade can't be upgraded automatically from that version.</source>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../database.cpp" line="1634"/>
+        <location filename="../database/database.cpp" line="1048" />
         <source>The process to upgrade is:
 - Using an old KLog version export your log to ADIF.
 - Remove your logbook.dat file from your KLog folder.
@@ -4473,1425 +4971,1615 @@ Frequency is not in a hamradio band!</source>
 - Import your ADIF file.
 
 KLog will finish when you click on OK.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../database.cpp" line="1762"/>
-        <location filename="../database.cpp" line="3488"/>
-        <location filename="../database.cpp" line="3654"/>
+        <location filename="../database/database.cpp" line="1176" />
         <source>KLog - DB update</source>
-        <translation type="unfinished"></translation>
+        <translation>KLog — datubāzes atjaunināšana</translation>
     </message>
     <message>
-        <location filename="../database.cpp" line="1820"/>
+        <location filename="../database/database.cpp" line="1234" />
         <source>KLog has detected a previous log in the DB. All data will be migrated to a newly created DX type log for you.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../database.cpp" line="1836"/>
+        <location filename="../database/database.cpp" line="1250" />
         <source>KLog: Enter Station callsign</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../database.cpp" line="1837"/>
+        <location filename="../database/database.cpp" line="1251" />
         <source>Enter the station callsign used in this log</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../database.cpp" line="1838"/>
-        <location filename="../utilities.cpp" line="1560"/>
+        <location filename="../database/database.cpp" line="1252" />
+        <location filename="../utilities.cpp" line="1609" />
         <source>Station Callsign</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../database.cpp" line="1880"/>
+        <location filename="../database/database.cpp" line="1294" />
         <source>All the data was migrated correctly. You should now go to Setup-&gt;Preferences-&gt;Logs to check that everything is okay.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../database.cpp" line="3402"/>
-        <location filename="../database.cpp" line="3421"/>
+        <location filename="../database/database.cpp" line="2475" />
+        <location filename="../database/database.cpp" line="2522" />
         <source>Updating mode information...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../database.cpp" line="3402"/>
-        <location filename="../database.cpp" line="3572"/>
-        <location filename="../world.cpp" line="902"/>
+        <location filename="../database/database.cpp" line="2475" />
+        <location filename="../database/database.cpp" line="2666" />
+        <location filename="../world.cpp" line="931" />
         <source>Abort updating</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../database.cpp" line="3421"/>
-        <location filename="../database.cpp" line="3591"/>
-        <location filename="../world.cpp" line="944"/>
+        <location filename="../database/database.cpp" line="2522" />
+        <location filename="../database/database.cpp" line="2686" />
+        <location filename="../world.cpp" line="973" />
         <source>QSO: </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../database.cpp" line="3489"/>
-        <location filename="../database.cpp" line="3655"/>
-        <source>Canceling this update will cause data inconsistencies and possibly data loss. Do you still want to cancel?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../database.cpp" line="3572"/>
-        <location filename="../database.cpp" line="3591"/>
+        <location filename="../database/database.cpp" line="2666" />
+        <location filename="../database/database.cpp" line="2686" />
         <source>Updating bands information...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../world.cpp" line="902"/>
+        <location filename="../world.cpp" line="931" />
         <source>Updating information...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../world.cpp" line="944"/>
+        <location filename="../world.cpp" line="973" />
         <source>Updating DXCC and Continent information...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1197"/>
+        <location filename="../utilities.cpp" line="1237" />
         <source>A wrong callsign has been found: %1. Please enter a new callsign or confirm that the current one is a good callsign.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1195"/>
+        <location filename="../utilities.cpp" line="1235" />
         <source>An empty callsign has been detected. If it is possible, please enter the right call.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1201"/>
+        <location filename="../utilities.cpp" line="1241" />
         <source>KLog - Not valid callsign found</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1428"/>
+        <location filename="../utilities.cpp" line="1477" />
         <source>Altitude</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1429"/>
+        <location filename="../utilities.cpp" line="1478" />
         <source>Date</source>
-        <translation type="unfinished">Datums</translation>
+        <translation>Datums</translation>
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1430"/>
+        <location filename="../utilities.cpp" line="1479" />
         <source>Call</source>
-        <translation type="unfinished">Izsaukuma signāls</translation>
+        <translation>Izsaukuma signāls</translation>
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1431"/>
+        <location filename="../utilities.cpp" line="1480" />
         <source>RSTtx</source>
-        <translation type="unfinished">RSTtx</translation>
+        <translation>RSTtx</translation>
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1432"/>
+        <location filename="../utilities.cpp" line="1481" />
         <source>RSTrx</source>
-        <translation type="unfinished">RSTrx</translation>
+        <translation>RSTrx</translation>
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1433"/>
+        <location filename="../utilities.cpp" line="1482" />
         <source>Band</source>
-        <translation type="unfinished"></translation>
+        <translation>Diapazons</translation>
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1434"/>
+        <location filename="../utilities.cpp" line="1483" />
         <source>Comment</source>
-        <translation type="unfinished">Komentāri</translation>
+        <translation>Komentāri</translation>
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1435"/>
+        <location filename="../utilities.cpp" line="1610" />
         <source>Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Mode</translation>
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1436"/>
+        <location filename="../utilities.cpp" line="1485" />
         <source>CQz</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1437"/>
+        <location filename="../utilities.cpp" line="1484" />
+        <source>Mode ADIF</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../utilities.cpp" line="1486" />
         <source>ITUz</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1438"/>
+        <location filename="../utilities.cpp" line="1487" />
         <source>DXCC</source>
-        <translation type="unfinished">DXCC</translation>
+        <translation>DXCC</translation>
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1439"/>
+        <location filename="../startprofiledialog.cpp" line="242" />
+        <source>Callsign:</source>
+        <translation>Izsaukuma signāls:</translation>
+    </message>
+    <message>
+        <location filename="../startprofiledialog.cpp" line="243" />
+        <source>Operator name:</source>
+        <translation>Operatora vārds:</translation>
+    </message>
+    <message>
+        <location filename="../startprofiledialog.cpp" line="244" />
+        <source>Operator callsigns:</source>
+        <translation>Operatoru izsaukuma signāli:</translation>
+    </message>
+    <message>
+        <location filename="../startprofiledialog.cpp" line="245" />
+        <source>Locator:</source>
+        <translation>Lokators:</translation>
+    </message>
+    <message>
+        <location filename="../startprofiledialog.cpp" line="246" />
+        <source>QTH:</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../startprofiledialog.cpp" line="247" />
+        <source>CQ zone:</source>
+        <translation>CQ zona:</translation>
+    </message>
+    <message>
+        <location filename="../startprofiledialog.cpp" line="248" />
+        <source>ITU zone:</source>
+        <translation>ITU zona:</translation>
+    </message>
+    <message>
+        <location filename="../startprofiledialog.cpp" line="249" />
+        <source>Note:</source>
+        <translation>Piezīme:</translation>
+    </message>
+    <message>
+        <location filename="../startprofiledialog.cpp" line="250" />
+        <source>Station</source>
+        <translation>Stacija</translation>
+    </message>
+    <message>
+        <location filename="../startprofiledialog.cpp" line="253" />
+        <source>Address 1:</source>
+        <translation>Adrese 1:</translation>
+    </message>
+    <message>
+        <location filename="../startprofiledialog.cpp" line="254" />
+        <source>Address 2:</source>
+        <translation>Adrese 2:</translation>
+    </message>
+    <message>
+        <location filename="../startprofiledialog.cpp" line="255" />
+        <source>Address 3:</source>
+        <translation>Adrese 3:</translation>
+    </message>
+    <message>
+        <location filename="../startprofiledialog.cpp" line="256" />
+        <source>Address 4:</source>
+        <translation>Adrese 4:</translation>
+    </message>
+    <message>
+        <location filename="../startprofiledialog.cpp" line="257" />
+        <source>City:</source>
+        <translation>Pilsēta:</translation>
+    </message>
+    <message>
+        <location filename="../startprofiledialog.cpp" line="258" />
+        <source>Postal code:</source>
+        <translation>Pasta indekss:</translation>
+    </message>
+    <message>
+        <location filename="../startprofiledialog.cpp" line="259" />
+        <source>Province/State:</source>
+        <translation>Novads/štats:</translation>
+    </message>
+    <message>
+        <location filename="../startprofiledialog.cpp" line="260" />
+        <source>Country:</source>
+        <translation>Valsts:</translation>
+    </message>
+    <message>
+        <location filename="../startprofiledialog.cpp" line="261" />
+        <location filename="../utilities.cpp" line="1488" />
         <source>Address</source>
-        <translation type="unfinished"></translation>
+        <translation>Adrese</translation>
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1440"/>
+        <location filename="../startprofiledialog.cpp" line="264" />
+        <source>Rig 1:</source>
+        <translation>Transīveris 1:</translation>
+    </message>
+    <message>
+        <location filename="../startprofiledialog.cpp" line="265" />
+        <source>Rig 2:</source>
+        <translation>Transīveris 2:</translation>
+    </message>
+    <message>
+        <location filename="../startprofiledialog.cpp" line="266" />
+        <source>Rig 3:</source>
+        <translation>Transīveris 3:</translation>
+    </message>
+    <message>
+        <location filename="../startprofiledialog.cpp" line="267" />
+        <source>Antenna 1:</source>
+        <translation>Antena 1:</translation>
+    </message>
+    <message>
+        <location filename="../startprofiledialog.cpp" line="268" />
+        <source>Antenna 2:</source>
+        <translation>Antena 2:</translation>
+    </message>
+    <message>
+        <location filename="../startprofiledialog.cpp" line="269" />
+        <source>Antenna 3:</source>
+        <translation>Antena 3:</translation>
+    </message>
+    <message>
+        <location filename="../startprofiledialog.cpp" line="270" />
+        <source>Power:</source>
+        <translation>Jauda:</translation>
+    </message>
+    <message>
+        <location filename="../startprofiledialog.cpp" line="271" />
+        <source>Equipment</source>
+        <translation>Aparatūra</translation>
+    </message>
+    <message>
+        <location filename="../startprofiledialog.cpp" line="277" />
+        <source>Club</source>
+        <translation>Klubs</translation>
+    </message>
+    <message>
+        <location filename="../startprofiledialog.cpp" line="277" />
+        <source>Member number</source>
+        <translation>Biedra numurs</translation>
+    </message>
+    <message>
+        <location filename="../startprofiledialog.cpp" line="280" />
+        <source>Add</source>
+        <translation>Vissi</translation>
+    </message>
+    <message>
+        <location filename="../startprofiledialog.cpp" line="281" />
+        <source>Remove</source>
+        <translation>Noņemt</translation>
+    </message>
+    <message>
+        <location filename="../startprofiledialog.cpp" line="293" />
+        <source>Find</source>
+        <translation>Atrast</translation>
+    </message>
+    <message>
+        <location filename="../startprofiledialog.cpp" line="294" />
+        <source>Search the club member lists for this callsign</source>
+        <translation>Meklēt šo izsaukuma signālu klubu biedru sarakstos</translation>
+    </message>
+    <message>
+        <location filename="../startprofiledialog.cpp" line="299" />
+        <location filename="../startprofiledialog.cpp" line="317" />
+        <source>KLog - Clubs</source>
+        <translation>KLog — klubi</translation>
+    </message>
+    <message>
+        <location filename="../startprofiledialog.cpp" line="300" />
+        <source>%1 was not found in any club member list.</source>
+        <translation>%1 netika atrasts nevienā klubu biedru sarakstā.</translation>
+    </message>
+    <message>
+        <location filename="../startprofiledialog.cpp" line="318" />
+        <source>Found in %1 club(s), %2 added.</source>
+        <translation>Atrasts %1 klubā(-os), pievienoti %2.</translation>
+    </message>
+    <message>
+        <location filename="../startprofiledialog.cpp" line="338" />
+        <source>Clubs</source>
+        <translation>Klubi</translation>
+    </message>
+    <message>
+        <location filename="../startprofiledialog.cpp" line="341" />
+        <source>Full settings...</source>
+        <translation>Pilnie iestatījumi...</translation>
+    </message>
+    <message>
+        <location filename="../utilities.cpp" line="1489" />
         <source>Age</source>
-        <translation type="unfinished"></translation>
+        <translation>Vecums</translation>
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1441"/>
+        <location filename="../utilities.cpp" line="1490" />
         <source>County</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1442"/>
+        <location filename="../utilities.cpp" line="1491" />
         <source>A_Index</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1443"/>
+        <location filename="../utilities.cpp" line="1492" />
         <source>Ant_Az</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1444"/>
+        <location filename="../utilities.cpp" line="1493" />
         <source>Ant_El</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1445"/>
+        <location filename="../utilities.cpp" line="1494" />
         <source>Ant_Path</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1446"/>
+        <location filename="../utilities.cpp" line="1495" />
         <source>ARRL_SECT</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1447"/>
+        <location filename="../utilities.cpp" line="1496" />
         <source>Award_Submitted</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1448"/>
+        <location filename="../utilities.cpp" line="1497" />
         <source>Award_granted</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1449"/>
+        <location filename="../utilities.cpp" line="1498" />
         <source>Band_RX</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1450"/>
+        <location filename="../utilities.cpp" line="1499" />
         <source>CheckContest</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1451"/>
+        <location filename="../utilities.cpp" line="1500" />
         <source>Class</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1453"/>
+        <location filename="../utilities.cpp" line="1502" />
         <source>ClubLog status</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1454"/>
+        <location filename="../utilities.cpp" line="1503" />
         <source>Continent</source>
-        <translation type="unfinished">Kontinents</translation>
+        <translation>Kontinents</translation>
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1455"/>
+        <location filename="../utilities.cpp" line="1504" />
         <source>Contacted_Op</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1456"/>
+        <location filename="../utilities.cpp" line="1505" />
         <source>Contest Id</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1457"/>
+        <location filename="../utilities.cpp" line="1506" />
         <source>Country</source>
-        <translation type="unfinished"></translation>
+        <translation>Valsts</translation>
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1458"/>
+        <location filename="../utilities.cpp" line="1507" />
         <source>Credit Submitted</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1459"/>
+        <location filename="../utilities.cpp" line="1508" />
         <source>Credit granted</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1461"/>
+        <location filename="../utilities.cpp" line="1510" />
         <source>Distance</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1462"/>
+        <location filename="../utilities.cpp" line="1511" />
         <source>Email</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1463"/>
+        <location filename="../utilities.cpp" line="1512" />
         <source>EQ_Call</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1464"/>
+        <location filename="../utilities.cpp" line="1513" />
         <source>eQSL RDate</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1466"/>
+        <location filename="../utilities.cpp" line="1515" />
         <source>eQSL Rcvd</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1467"/>
+        <location filename="../utilities.cpp" line="1516" />
         <source>eQSL Sent</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1468"/>
+        <location filename="../utilities.cpp" line="1517" />
         <source>Fists</source>
         <comment>Do not translate if unsure, common hamradio term.</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1469"/>
+        <location filename="../utilities.cpp" line="1518" />
         <source>Fists CC</source>
         <comment>Do not translate if unsure, common hamradio term.</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1470"/>
+        <location filename="../utilities.cpp" line="1519" />
         <source>Force Init</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1471"/>
+        <location filename="../utilities.cpp" line="1520" />
         <source>Freq</source>
-        <translation type="unfinished"></translation>
+        <translation>Biežums</translation>
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1472"/>
+        <location filename="../utilities.cpp" line="1521" />
         <source>Freq RX</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1473"/>
+        <location filename="../utilities.cpp" line="1522" />
         <source>Gridsquare</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1478"/>
+        <location filename="../utilities.cpp" line="1527" />
         <source>HRDLog status</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1481"/>
+        <location filename="../utilities.cpp" line="1530" />
         <source>IOTA</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1482"/>
+        <location filename="../utilities.cpp" line="1531" />
         <source>IOTA Island id</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1483"/>
+        <location filename="../utilities.cpp" line="1532" />
         <source>K Index</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1484"/>
+        <location filename="../utilities.cpp" line="1533" />
         <source>Lat</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1485"/>
+        <location filename="../utilities.cpp" line="1534" />
         <source>Lon</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1486"/>
+        <location filename="../utilities.cpp" line="1535" />
         <source>LoTW RDate</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1488"/>
+        <location filename="../utilities.cpp" line="1537" />
         <source>LoTW Rcvd</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1489"/>
+        <location filename="../utilities.cpp" line="1538" />
         <source>LoTW Sent</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1491"/>
+        <location filename="../utilities.cpp" line="1540" />
         <source>Max Bursts</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1492"/>
+        <location filename="../utilities.cpp" line="1541" />
         <source>MS Shower</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1494"/>
+        <location filename="../utilities.cpp" line="1543" />
         <source>My Antenna</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1496"/>
+        <location filename="../utilities.cpp" line="1545" />
         <source>My City</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1497"/>
+        <location filename="../utilities.cpp" line="1546" />
         <source>My Cnty</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1498"/>
+        <location filename="../utilities.cpp" line="1547" />
         <source>My Country</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1499"/>
+        <location filename="../utilities.cpp" line="1548" />
         <source>My CQz</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1500"/>
+        <location filename="../utilities.cpp" line="1549" />
         <source>My DXCC</source>
-        <translation type="unfinished"></translation>
+        <translation>Mans DXCC</translation>
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1501"/>
+        <location filename="../utilities.cpp" line="1550" />
         <source>My Fists</source>
         <comment>Do not translate if unsure, common hamradio term.</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1502"/>
+        <location filename="../utilities.cpp" line="1551" />
         <source>My Gridsquare</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1504"/>
+        <location filename="../utilities.cpp" line="1553" />
         <source>My IOTA</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1505"/>
+        <location filename="../utilities.cpp" line="1554" />
         <source>My IOTA island id</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1506"/>
+        <location filename="../utilities.cpp" line="1555" />
         <source>My ITUz</source>
-        <translation type="unfinished"></translation>
+        <translation>Mana ITUz</translation>
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1507"/>
+        <location filename="../utilities.cpp" line="1556" />
         <source>My Lat</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1508"/>
+        <location filename="../utilities.cpp" line="1557" />
         <source>My Lon</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1509"/>
+        <location filename="../utilities.cpp" line="1558" />
         <source>My Name</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1510"/>
+        <location filename="../utilities.cpp" line="1559" />
         <source>My Postal code</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1512"/>
+        <location filename="../utilities.cpp" line="1561" />
         <source>My Rig</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1513"/>
+        <location filename="../utilities.cpp" line="1562" />
         <source>My Sig</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1514"/>
+        <location filename="../utilities.cpp" line="1563" />
         <source>My Sig Info</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1452"/>
+        <location filename="../utilities.cpp" line="1641" />
+        <location filename="../utilities.cpp" line="1649" />
+        <source>Mode (ADIF submode)</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../utilities.cpp" line="1501" />
         <source>ClubLog SDate</source>
         <comment>Date when it was sent</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1460"/>
+        <location filename="../utilities.cpp" line="1509" />
         <source>Darc Dok</source>
         <comment>Do not translate if unsure, common hamradio term.</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1465"/>
+        <location filename="../utilities.cpp" line="1514" />
         <source>eQSL SDate</source>
         <comment>Date when it was sent</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1474"/>
+        <location filename="../utilities.cpp" line="1523" />
         <source>Gridsquare ext</source>
         <comment>Extended gridsquare</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1475"/>
+        <location filename="../utilities.cpp" line="1524" />
         <source>HamLog status</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1476"/>
+        <location filename="../utilities.cpp" line="1525" />
         <source>HamLog SDate</source>
         <comment>Date when it was sent</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1477"/>
+        <location filename="../utilities.cpp" line="1526" />
         <source>HRDLog SDate</source>
         <comment>Date when it was sent</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1479"/>
+        <location filename="../utilities.cpp" line="1528" />
         <source>HamQTH status</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1480"/>
+        <location filename="../utilities.cpp" line="1529" />
         <source>HamQTH SDate</source>
         <comment>Date when it was sent</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1487"/>
+        <location filename="../utilities.cpp" line="1536" />
         <source>LoTW SDate</source>
         <comment>Date when it was sent</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1490"/>
+        <location filename="../utilities.cpp" line="1539" />
         <source>Marcado</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1493"/>
+        <location filename="../utilities.cpp" line="1542" />
         <source>My Altitude</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1495"/>
+        <location filename="../utilities.cpp" line="1544" />
         <source>My ARRL Sect</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1503"/>
+        <location filename="../utilities.cpp" line="1552" />
         <source>My Gridsquare Ext</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1511"/>
+        <location filename="../utilities.cpp" line="1560" />
         <source>My POTA</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1515"/>
+        <location filename="../utilities.cpp" line="1564" />
         <source>My SOTA</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1516"/>
+        <location filename="../utilities.cpp" line="1565" />
         <source>My State</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1517"/>
+        <location filename="../utilities.cpp" line="1566" />
         <source>My Street</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1518"/>
+        <location filename="../utilities.cpp" line="1567" />
         <source>My USACA counties</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1519"/>
+        <location filename="../utilities.cpp" line="1568" />
         <source>My VUCC grids</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1520"/>
+        <location filename="../utilities.cpp" line="1569" />
         <source>My WWFF</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1521"/>
+        <location filename="../utilities.cpp" line="1570" />
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1522"/>
+        <location filename="../utilities.cpp" line="1571" />
         <source>Notes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1523"/>
+        <location filename="../utilities.cpp" line="1572" />
         <source>Nr bursts</source>
         <comment>Do not translate if unsure, common hamradio term.</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1524"/>
+        <location filename="../utilities.cpp" line="1573" />
         <source>Nr pings</source>
         <comment>Do not translate if unsure, common hamradio term.</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1525"/>
+        <location filename="../utilities.cpp" line="1574" />
         <source>Operator</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1526"/>
+        <location filename="../utilities.cpp" line="1575" />
         <source>Owner Callsign</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1527"/>
+        <location filename="../utilities.cpp" line="1576" />
         <source>POTA</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1528"/>
+        <location filename="../utilities.cpp" line="1577" />
         <source>Pfx</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1529"/>
+        <location filename="../utilities.cpp" line="1578" />
         <source>Precedence</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1530"/>
+        <location filename="../utilities.cpp" line="1579" />
         <source>Prop Mode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1531"/>
+        <location filename="../utilities.cpp" line="1580" />
         <source>Public Key</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1532"/>
+        <location filename="../utilities.cpp" line="1581" />
         <source>QRZcom SDate</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1533"/>
+        <location filename="../utilities.cpp" line="1582" />
         <source>QRZcom status</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1534"/>
+        <location filename="../utilities.cpp" line="1583" />
         <source>QSL msg</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1535"/>
+        <location filename="../utilities.cpp" line="1584" />
         <source>QSL RDate</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1536"/>
+        <location filename="../utilities.cpp" line="1585" />
         <source>QSL SDate</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1537"/>
+        <location filename="../utilities.cpp" line="1586" />
         <source>QSL Rcvd</source>
-        <translation type="unfinished"></translation>
+        <translation>QSL saņemts</translation>
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1538"/>
+        <location filename="../utilities.cpp" line="1587" />
         <source>QSL Sent</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1539"/>
+        <location filename="../utilities.cpp" line="1588" />
         <source>QSL rcvd via</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1540"/>
+        <location filename="../utilities.cpp" line="1589" />
         <source>QSL sent via</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1541"/>
+        <location filename="../utilities.cpp" line="1590" />
         <source>QSL via</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1542"/>
+        <location filename="../utilities.cpp" line="1591" />
         <source>QSO complete</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1543"/>
+        <location filename="../utilities.cpp" line="1592" />
         <source>QSO random</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1544"/>
+        <location filename="../utilities.cpp" line="1593" />
         <source>QTH</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1545"/>
+        <location filename="../utilities.cpp" line="1594" />
         <source>Region</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1546"/>
+        <location filename="../utilities.cpp" line="1595" />
         <source>Rig</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1547"/>
+        <location filename="../utilities.cpp" line="1596" />
         <source>RX Pwr</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1548"/>
+        <location filename="../utilities.cpp" line="1597" />
         <source>Sat mode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1549"/>
+        <location filename="../utilities.cpp" line="1598" />
         <source>Sat name</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1550"/>
+        <location filename="../utilities.cpp" line="1599" />
         <source>SFI</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1551"/>
+        <location filename="../utilities.cpp" line="1600" />
         <source>Sig</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1552"/>
+        <location filename="../utilities.cpp" line="1601" />
         <source>Sig Info</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1553"/>
+        <location filename="../utilities.cpp" line="1602" />
         <source>Silent key</source>
         <comment>Do not translate if unsure, common hamradio term.</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1554"/>
+        <location filename="../utilities.cpp" line="1603" />
         <source>SKCC</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1555"/>
+        <location filename="../utilities.cpp" line="1604" />
         <source>SOTA Ref</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1556"/>
+        <location filename="../utilities.cpp" line="1605" />
         <source>SRX String</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1557"/>
+        <location filename="../utilities.cpp" line="1606" />
         <source>SRX</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1558"/>
+        <location filename="../utilities.cpp" line="1607" />
         <source>STX String</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1559"/>
+        <location filename="../utilities.cpp" line="1608" />
         <source>State</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1561"/>
-        <source>Submode</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../utilities.cpp" line="1562"/>
+        <location filename="../utilities.cpp" line="1611" />
         <source>SWL</source>
         <comment>Do not translate if unsure, common hamradio term.</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1563"/>
+        <location filename="../utilities.cpp" line="1612" />
         <source>UKSMG</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1564"/>
+        <location filename="../utilities.cpp" line="1613" />
         <source>USACA counties</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1565"/>
+        <location filename="../utilities.cpp" line="1614" />
         <source>VE prov</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1566"/>
+        <location filename="../utilities.cpp" line="1615" />
         <source>VUCC grids</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1567"/>
+        <location filename="../utilities.cpp" line="1616" />
         <source>Ten-Ten</source>
         <comment>Do not translate, it is a hamradio group name.</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1568"/>
+        <location filename="../utilities.cpp" line="1617" />
         <source>TX Pwr</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1569"/>
+        <location filename="../utilities.cpp" line="1618" />
         <source>Web</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1570"/>
+        <location filename="../utilities.cpp" line="1619" />
         <source>WWFF</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1571"/>
+        <location filename="../utilities.cpp" line="1620" />
         <source>QSO Date off</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../utilities.cpp" line="1572"/>
+        <location filename="../utilities.cpp" line="1621" />
         <source>Log number</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../main.cpp" line="199"/>
+        <location filename="../main.cpp" line="276" />
         <source>KLog is already running.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../main.cpp" line="199"/>
+        <location filename="../main.cpp" line="277" />
         <source>It is allowed to run only one instance.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../profilemanager.cpp" line="334" />
+        <source>The profile holds %1 QSOs. Export them to ADIF or move them to another profile first.</source>
+        <translation>Profilā ir %1 QSO. Vispirms eksportē tos ADIF formātā vai pārcel uz citu profilu.</translation>
     </message>
 </context>
 <context>
     <name>SearchWidget</name>
     <message>
-        <location filename="../searchwidget.cpp" line="56"/>
+        <location filename="../searchwidget.cpp" line="57" />
         <source>&amp;Clear</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Notīrīt</translation>
     </message>
     <message>
-        <location filename="../searchwidget.cpp" line="57"/>
+        <location filename="../searchwidget.cpp" line="58" />
         <source>&amp;Export Highlighted</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../searchwidget.cpp" line="58"/>
-        <location filename="../searchwidget.cpp" line="765"/>
+        <location filename="../searchwidget.cpp" line="59" />
+        <location filename="../searchwidget.cpp" line="608" />
         <source>&amp;Select All</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../searchwidget.cpp" line="59"/>
+        <location filename="../searchwidget.cpp" line="60" />
         <source>&amp;Search</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../searchwidget.cpp" line="60"/>
+        <location filename="../searchwidget.cpp" line="61" />
         <source>All logs</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../searchwidget.cpp" line="168"/>
+        <location filename="../searchwidget.cpp" line="175" />
         <source>Clear the searches.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../searchwidget.cpp" line="169"/>
+        <location filename="../searchwidget.cpp" line="176" />
         <source>Export the search result to an ADIF file.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../searchwidget.cpp" line="170"/>
+        <location filename="../searchwidget.cpp" line="177" />
         <source>Select/Unselect all the QSOs shown.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../searchwidget.cpp" line="171"/>
+        <location filename="../searchwidget.cpp" line="178" />
         <source>Search in the log.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../searchwidget.cpp" line="172"/>
+        <location filename="../searchwidget.cpp" line="179" />
         <source>Search in all logs.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../searchwidget.cpp" line="173"/>
-        <source>Enter the callsign to search for. Enter &apos;*&apos; to show all the QSOs... it may be slow in big logs!</source>
-        <translation type="unfinished"></translation>
+        <location filename="../searchwidget.cpp" line="180" />
+        <source>Enter the callsign to search for. Enter '*' to show all the QSOs... it may be slow in big logs!</source>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../searchwidget.cpp" line="175"/>
+        <location filename="../searchwidget.cpp" line="182" />
         <source>Select the Station Callsign used to do this QSO.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../searchwidget.cpp" line="257"/>
+        <location filename="../searchwidget.cpp" line="253" />
         <source>You have requested to delete the QSO with: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Jūs pieprasījāt dzēst QSO ar: %1</translation>
     </message>
     <message>
-        <location filename="../searchwidget.cpp" line="262"/>
+        <location filename="../searchwidget.cpp" line="258" />
         <source>Are you sure?</source>
-        <translation type="unfinished"></translation>
+        <translation>Vai tiešām?</translation>
     </message>
     <message>
-        <location filename="../searchwidget.cpp" line="373"/>
+        <location filename="../searchwidget.cpp" line="369" />
         <source>All in log</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../searchwidget.cpp" line="374"/>
+        <location filename="../searchwidget.cpp" line="370" />
         <source>Not defined</source>
-        <translation type="unfinished">Nav definēts</translation>
+        <translation>Nav definēts</translation>
     </message>
     <message>
-        <location filename="../searchwidget.cpp" line="772"/>
+        <location filename="../searchwidget.cpp" line="615" />
         <source>&amp;Clear selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../searchwidget.cpp" line="830"/>
+        <location filename="../searchwidget.cpp" line="663" />
         <source>Save File</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
     <name>SearchWindow</name>
     <message>
-        <location filename="../searchwindow.cpp" line="88"/>
-        <location filename="../searchwindow.cpp" line="93"/>
-        <location filename="../searchwindow.cpp" line="198"/>
+        <location filename="../searchwindow.cpp" line="88" />
+        <location filename="../searchwindow.cpp" line="93" />
+        <location filename="../searchwindow.cpp" line="203" />
         <source>Call</source>
-        <translation type="unfinished">Izsaukuma signāls</translation>
+        <translation>Izsaukuma signāls</translation>
     </message>
     <message>
-        <location filename="../searchwindow.cpp" line="88"/>
-        <location filename="../searchwindow.cpp" line="93"/>
+        <location filename="../searchwindow.cpp" line="88" />
+        <location filename="../searchwindow.cpp" line="93" />
         <source>Date/Time</source>
-        <translation type="unfinished">Datums Laiks</translation>
+        <translation>Datums Laiks</translation>
     </message>
     <message>
-        <location filename="../searchwindow.cpp" line="88"/>
-        <location filename="../searchwindow.cpp" line="93"/>
-        <location filename="../searchwindow.cpp" line="204"/>
+        <location filename="../searchwindow.cpp" line="88" />
+        <location filename="../searchwindow.cpp" line="93" />
+        <location filename="../searchwindow.cpp" line="209" />
         <source>Band</source>
-        <translation type="unfinished"></translation>
+        <translation>Diapazons</translation>
     </message>
     <message>
-        <location filename="../searchwindow.cpp" line="88"/>
-        <location filename="../searchwindow.cpp" line="93"/>
-        <location filename="../searchwindow.cpp" line="209"/>
+        <location filename="../searchwindow.cpp" line="88" />
+        <location filename="../searchwindow.cpp" line="93" />
+        <location filename="../searchwindow.cpp" line="228" />
         <source>Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Mode</translation>
     </message>
     <message>
-        <location filename="../searchwindow.cpp" line="88"/>
-        <location filename="../searchwindow.cpp" line="93"/>
-        <location filename="../searchwindow.cpp" line="215"/>
+        <location filename="../searchwindow.cpp" line="88" />
+        <location filename="../searchwindow.cpp" line="93" />
+        <location filename="../searchwindow.cpp" line="235" />
         <source>QSL Sent</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../searchwindow.cpp" line="88"/>
-        <location filename="../searchwindow.cpp" line="93"/>
-        <location filename="../searchwindow.cpp" line="219"/>
-        <location filename="../searchwindow.cpp" line="311"/>
+        <location filename="../searchwindow.cpp" line="88" />
+        <location filename="../searchwindow.cpp" line="93" />
+        <location filename="../searchwindow.cpp" line="239" />
+        <location filename="../searchwindow.cpp" line="341" />
         <source>QSL Rcvd</source>
-        <translation type="unfinished"></translation>
+        <translation>QSL saņemts</translation>
     </message>
     <message>
-        <location filename="../searchwindow.cpp" line="88"/>
+        <location filename="../searchwindow.cpp" line="88" />
         <source>Station Callsign</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../searchwindow.cpp" line="88"/>
-        <location filename="../searchwindow.cpp" line="93"/>
+        <location filename="../searchwindow.cpp" line="88" />
+        <location filename="../searchwindow.cpp" line="93" />
         <source>ID</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../searchwindow.cpp" line="193"/>
+        <location filename="../searchwindow.cpp" line="198" />
         <source>Date/time</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../searchwindow.cpp" line="225"/>
+        <location filename="../searchwindow.cpp" line="222" />
+        <source>Mode ADIF</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../searchwindow.cpp" line="245" />
         <source>Station callsign</source>
-        <translation type="unfinished">Stacijas izsaukuma signāls</translation>
+        <translation>Stacijas izsaukuma signāls</translation>
     </message>
     <message>
-        <location filename="../searchwindow.cpp" line="293"/>
+        <location filename="../searchwindow.cpp" line="323" />
         <source>QSL Send</source>
-        <translation type="unfinished"></translation>
+        <translation>QSL nosūtīts</translation>
     </message>
     <message>
-        <location filename="../searchwindow.cpp" line="372"/>
+        <location filename="../searchwindow.cpp" line="402" />
         <source>&amp;Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Dzēst</translation>
     </message>
     <message>
-        <location filename="../searchwindow.cpp" line="373"/>
+        <location filename="../searchwindow.cpp" line="403" />
         <source>Delete a QSO</source>
-        <translation type="unfinished"></translation>
+        <translation>Dzēst QSO</translation>
     </message>
     <message>
-        <location filename="../searchwindow.cpp" line="376"/>
+        <location filename="../searchwindow.cpp" line="406" />
         <source>&amp;Edit QSO</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Rediģēt QSO</translation>
     </message>
     <message>
-        <location filename="../searchwindow.cpp" line="377"/>
+        <location filename="../searchwindow.cpp" line="407" />
         <source>Edit this QSO</source>
-        <translation type="unfinished"></translation>
+        <translation>Rediģēt šo QSO</translation>
     </message>
     <message>
-        <location filename="../searchwindow.cpp" line="380"/>
+        <location filename="../searchwindow.cpp" line="410" />
         <source>Via &amp;bureau</source>
-        <translation type="unfinished"></translation>
+        <translation>Caur &amp;biroju</translation>
     </message>
     <message>
-        <location filename="../searchwindow.cpp" line="381"/>
+        <location filename="../searchwindow.cpp" line="411" />
         <source>Send this QSL via bureau</source>
-        <translation type="unfinished"></translation>
+        <translation>Sūtīt šo QSL caur biroju</translation>
     </message>
     <message>
-        <location filename="../searchwindow.cpp" line="384"/>
+        <location filename="../searchwindow.cpp" line="414" />
         <source>D&amp;irect</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tieši</translation>
     </message>
     <message>
-        <location filename="../searchwindow.cpp" line="385"/>
+        <location filename="../searchwindow.cpp" line="415" />
         <source>Send this QSL via direct</source>
-        <translation type="unfinished"></translation>
+        <translation>Sūtīt šo QSL tieši</translation>
     </message>
     <message>
-        <location filename="../searchwindow.cpp" line="388"/>
+        <location filename="../searchwindow.cpp" line="418" />
         <source>Via bureau</source>
-        <translation type="unfinished"></translation>
+        <translation>Caur biroju</translation>
     </message>
     <message>
-        <location filename="../searchwindow.cpp" line="389"/>
+        <location filename="../searchwindow.cpp" line="419" />
         <source>QSL &amp;received via bureau</source>
-        <translation type="unfinished"></translation>
+        <translation>QSL &amp;saņemts caur biroju</translation>
     </message>
     <message>
-        <location filename="../searchwindow.cpp" line="392"/>
+        <location filename="../searchwindow.cpp" line="422" />
         <source>Direct</source>
-        <translation type="unfinished">Tieša</translation>
+        <translation>Tieša</translation>
     </message>
     <message>
-        <location filename="../searchwindow.cpp" line="393"/>
+        <location filename="../searchwindow.cpp" line="423" />
         <source>QSL received via direc&amp;t</source>
-        <translation type="unfinished"></translation>
+        <translation>QSL saņemts &amp;tieši</translation>
     </message>
     <message>
-        <location filename="../searchwindow.cpp" line="396"/>
+        <location filename="../searchwindow.cpp" line="426" />
         <source>Check in QRZ.com</source>
-        <translation type="unfinished"></translation>
+        <translation>Pārbaudiet QRZ.com</translation>
     </message>
     <message>
-        <location filename="../searchwindow.cpp" line="397"/>
+        <location filename="../searchwindow.cpp" line="427" />
         <source>Check this callsign in QRZ.com</source>
-        <translation type="unfinished"></translation>
+        <translation>Pārbaudiet šo izsaukuma signālu vietnē QRZ.com</translation>
     </message>
     <message>
-        <location filename="../searchwindow.cpp" line="400"/>
+        <location filename="../searchwindow.cpp" line="430" />
         <source>Check in DXHeat.com</source>
-        <translation type="unfinished"></translation>
+        <translation>Pārbaudīt DXHeat.com</translation>
     </message>
     <message>
-        <location filename="../searchwindow.cpp" line="401"/>
+        <location filename="../searchwindow.cpp" line="431" />
         <source>Check this callsign in DXHeat.com</source>
-        <translation type="unfinished"></translation>
+        <translation>Pārbaudīt šo izsaukuma signālu DXHeat.com</translation>
     </message>
     <message>
-        <location filename="../searchwindow.cpp" line="404"/>
+        <location filename="../searchwindow.cpp" line="434" />
         <source>&amp;Request my QSL</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../searchwindow.cpp" line="405"/>
+        <location filename="../searchwindow.cpp" line="435" />
         <source>Mark my QSL as requested</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../searchwindow.cpp" line="408"/>
+        <location filename="../searchwindow.cpp" line="438" />
         <source>Via Direct and mark DX QSL as requested</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../searchwindow.cpp" line="409"/>
+        <location filename="../searchwindow.cpp" line="439" />
         <source>Send this QSL via direct and mark DX QSL as requested</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../searchwindow.cpp" line="412"/>
+        <location filename="../searchwindow.cpp" line="442" />
         <source>Via Bureau and mark DX QSL as requested</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../searchwindow.cpp" line="413"/>
+        <location filename="../searchwindow.cpp" line="443" />
         <source>Send this QSL via bureau and mark DX QSL as requested</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../searchwindow.cpp" line="416"/>
+        <location filename="../searchwindow.cpp" line="446" />
         <source>&amp;Request the QSL</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../searchwindow.cpp" line="417"/>
+        <location filename="../searchwindow.cpp" line="447" />
         <source>Mark the QSL as requested</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../searchwindow.cpp" line="420"/>
+        <location filename="../searchwindow.cpp" line="450" />
         <source>Via bureau and mark my QSL as requested</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../searchwindow.cpp" line="421"/>
+        <location filename="../searchwindow.cpp" line="451" />
         <source>QSL received via bureau and mark my QSL as requested</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../searchwindow.cpp" line="424"/>
+        <location filename="../searchwindow.cpp" line="454" />
         <source>Direc&amp;t and mark as my QSL requested</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../searchwindow.cpp" line="425"/>
+        <location filename="../searchwindow.cpp" line="455" />
         <source>QSL received via direct and mark my QSL as requested</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../searchwindow.cpp" line="646"/>
+        <location filename="../searchwindow.cpp" line="676" />
         <source>Needed QSO to send the QSL</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../searchwindow.cpp" line="654"/>
+        <location filename="../searchwindow.cpp" line="684" />
         <source>My QSL requested to be sent</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../searchwindow.cpp" line="659"/>
-        <location filename="../searchwindow.cpp" line="664"/>
+        <location filename="../searchwindow.cpp" line="689" />
+        <location filename="../searchwindow.cpp" line="694" />
         <source>DX QSL pending to be received</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
     <name>SetupDialog</name>
     <message>
-        <location filename="../setupdialog.cpp" line="77"/>
-        <location filename="../setupdialog.cpp" line="284"/>
+        <location filename="../setupdialog.cpp" line="87" />
+        <location filename="../setupdialog.cpp" line="284" />
         <source>User data</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setupdialog.cpp" line="78"/>
-        <location filename="../setupdialog.cpp" line="296"/>
+        <location filename="../setupdialog.cpp" line="88" />
+        <location filename="../setupdialog.cpp" line="296" />
         <source>Bands/Modes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setupdialog.cpp" line="79"/>
+        <location filename="../setupdialog.cpp" line="89" />
         <source>Log widget</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setupdialog.cpp" line="80"/>
+        <location filename="../setupdialog.cpp" line="90" />
         <source>D&amp;X-Cluster</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setupdialog.cpp" line="81"/>
-        <location filename="../setupdialog.cpp" line="308"/>
+        <location filename="../setupdialog.cpp" line="91" />
+        <location filename="../setupdialog.cpp" line="308" />
         <source>Colors</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setupdialog.cpp" line="82"/>
-        <location filename="../setupdialog.cpp" line="314"/>
+        <location filename="../setupdialog.cpp" line="92" />
+        <location filename="../setupdialog.cpp" line="314" />
         <source>Misc</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setupdialog.cpp" line="83"/>
+        <location filename="../setupdialog.cpp" line="93" />
         <source>World Editor</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setupdialog.cpp" line="84"/>
-        <location filename="../setupdialog.cpp" line="290"/>
+        <location filename="../setupdialog.cpp" line="94" />
+        <location filename="../setupdialog.cpp" line="290" />
         <source>Logs</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setupdialog.cpp" line="85"/>
+        <location filename="../setupdialog.cpp" line="95" />
         <source>eLog</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setupdialog.cpp" line="86"/>
+        <location filename="../setupdialog.cpp" line="96" />
         <source>WSJT-X</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setupdialog.cpp" line="87"/>
+        <location filename="../setupdialog.cpp" line="97" />
         <source>Satellites</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setupdialog.cpp" line="89"/>
+        <location filename="../setupdialog.cpp" line="98" />
         <source>HamLib</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setupdialog.cpp" line="92"/>
+        <location filename="../setupdialog.cpp" line="101" />
         <source>Cancel</source>
-        <translation type="unfinished">Atcelt</translation>
+        <translation>Atcelt</translation>
     </message>
     <message>
-        <location filename="../setupdialog.cpp" line="93"/>
+        <location filename="../setupdialog.cpp" line="102" />
         <source>OK</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setupdialog.cpp" line="110"/>
+        <location filename="../setupdialog.cpp" line="117" />
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setupdialog.cpp" line="256"/>
+        <location filename="../setupdialog.cpp" line="256" />
         <source>You need to enter at least one log in the Logs tab.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setupdialog.cpp" line="257"/>
+        <location filename="../setupdialog.cpp" line="257" />
         <source>Do you want to add one log in the Logs tab or exit KLog?
 (Click Yes to add a log or No to exit KLog)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setupdialog.cpp" line="302"/>
+        <location filename="../setupdialog.cpp" line="302" />
         <source>DX-Cluster</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setupdialog.cpp" line="320"/>
+        <location filename="../setupdialog.cpp" line="320" />
         <source>World</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setupdialog.cpp" line="429"/>
+        <location filename="../setupdialog.cpp" line="431" />
         <source>DB has not been moved to new path.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setupdialog.cpp" line="430"/>
+        <location filename="../setupdialog.cpp" line="432" />
         <source>Go to the Misc tab and click on Move DB
  or the DB will not be moved to the new location.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setupdialog.cpp" line="441"/>
+        <location filename="../setupdialog.cpp" line="443" />
         <source>You need to enter at least a valid callsign.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setupdialog.cpp" line="442"/>
+        <location filename="../setupdialog.cpp" line="444" />
         <source>Go to the User tab and enter valid callsign.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setupdialog.cpp" line="453"/>
+        <location filename="../setupdialog.cpp" line="455" />
         <source>You have not selected the kind of log you want.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setupdialog.cpp" line="454"/>
+        <location filename="../setupdialog.cpp" line="456" />
         <source>You will be redirected to the Log tab.
 Please add and select the kind of log you want to use.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
     <name>SetupEntityDialog</name>
     <message>
-        <location filename="../setuppages/setupentitydialog.cpp" line="67"/>
+        <location filename="../setuppages/setupentitydialog.cpp" line="67" />
         <source>Entity</source>
-        <translation type="unfinished">Entity</translation>
+        <translation>Entity</translation>
     </message>
     <message>
-        <location filename="../setuppages/setupentitydialog.cpp" line="69"/>
+        <location filename="../setuppages/setupentitydialog.cpp" line="69" />
         <source>Name of the Entity.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setupentitydialog.cpp" line="71"/>
+        <location filename="../setuppages/setupentitydialog.cpp" line="71" />
         <source>CQ</source>
-        <translation type="unfinished">CQ</translation>
+        <translation>CQ</translation>
     </message>
     <message>
-        <location filename="../setuppages/setupentitydialog.cpp" line="73"/>
+        <location filename="../setuppages/setupentitydialog.cpp" line="73" />
         <source>CQ zone.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setupentitydialog.cpp" line="75"/>
+        <location filename="../setuppages/setupentitydialog.cpp" line="75" />
         <source>ITU</source>
-        <translation type="unfinished">ITU</translation>
+        <translation>ITU</translation>
     </message>
     <message>
-        <location filename="../setuppages/setupentitydialog.cpp" line="77"/>
+        <location filename="../setuppages/setupentitydialog.cpp" line="77" />
         <source>ITU zone.</source>
-        <translation type="unfinished"></translation>
+        <translation>ITU zona.</translation>
     </message>
     <message>
-        <location filename="../setuppages/setupentitydialog.cpp" line="83"/>
+        <location filename="../setuppages/setupentitydialog.cpp" line="83" />
         <source>Latitude</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setupentitydialog.cpp" line="85"/>
-        <location filename="../setuppages/setupentitydialog.cpp" line="89"/>
+        <location filename="../setuppages/setupentitydialog.cpp" line="85" />
+        <location filename="../setuppages/setupentitydialog.cpp" line="89" />
         <source>Longitude of the Entity.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setupentitydialog.cpp" line="87"/>
+        <location filename="../setuppages/setupentitydialog.cpp" line="87" />
         <source>Longitude</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setupentitydialog.cpp" line="91"/>
+        <location filename="../setuppages/setupentitydialog.cpp" line="91" />
         <source>UTC</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setupentitydialog.cpp" line="93"/>
+        <location filename="../setuppages/setupentitydialog.cpp" line="93" />
         <source>Local time difference to UTC.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setupentitydialog.cpp" line="95"/>
+        <location filename="../setuppages/setupentitydialog.cpp" line="95" />
         <source>Main prefix</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setupentitydialog.cpp" line="97"/>
+        <location filename="../setuppages/setupentitydialog.cpp" line="97" />
         <source>Main prefix of the entity.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setupentitydialog.cpp" line="101"/>
+        <location filename="../setuppages/setupentitydialog.cpp" line="101" />
         <source>ARRL ID</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setupentitydialog.cpp" line="103"/>
+        <location filename="../setuppages/setupentitydialog.cpp" line="103" />
         <source>ARRL ID.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setupentitydialog.cpp" line="109"/>
+        <location filename="../setuppages/setupentitydialog.cpp" line="109" />
         <source>Prefixes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setupentitydialog.cpp" line="111"/>
+        <location filename="../setuppages/setupentitydialog.cpp" line="111" />
         <source>Comma separated possible prefixes, e.g. EA1, EA2, ...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setupentitydialog.cpp" line="114"/>
+        <location filename="../setuppages/setupentitydialog.cpp" line="114" />
         <source>Date of the deletion.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setupentitydialog.cpp" line="116"/>
+        <location filename="../setuppages/setupentitydialog.cpp" line="116" />
         <source>Deleted</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setupentitydialog.cpp" line="118"/>
+        <location filename="../setuppages/setupentitydialog.cpp" line="118" />
         <source>Cancel</source>
-        <translation type="unfinished">Atcelt</translation>
+        <translation>Atcelt</translation>
     </message>
     <message>
-        <location filename="../setuppages/setupentitydialog.cpp" line="119"/>
+        <location filename="../setuppages/setupentitydialog.cpp" line="119" />
         <source>Ok</source>
-        <translation type="unfinished">Labi</translation>
+        <translation>Labi</translation>
     </message>
     <message>
-        <location filename="../setuppages/setupentitydialog.cpp" line="207"/>
+        <location filename="../setuppages/setupentitydialog.cpp" line="207" />
         <source>Entity Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
     <name>SetupPageBandMode</name>
     <message>
-        <location filename="../setuppages/setuppagebandmode.cpp" line="42"/>
+        <location filename="../setuppages/setuppagebandmode.cpp" line="42" />
         <source>Bands</source>
         <translation>Diapazoni</translation>
     </message>
     <message>
-        <location filename="../setuppages/setuppagebandmode.cpp" line="46"/>
+        <location filename="../setuppages/setuppagebandmode.cpp" line="46" />
         <source>Modes</source>
         <translation>Modes</translation>
     </message>
@@ -5899,511 +6587,586 @@ Please add and select the kind of log you want to use.</source>
 <context>
     <name>SetupPageColors</name>
     <message>
-        <location filename="../setuppages/setuppagecolors.cpp" line="45"/>
+        <location filename="../setuppages/setuppagecolors.cpp" line="45" />
         <source>New One</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagecolors.cpp" line="46"/>
+        <location filename="../setuppages/setuppagecolors.cpp" line="46" />
         <source>Needed in this band</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagecolors.cpp" line="47"/>
+        <location filename="../setuppages/setuppagecolors.cpp" line="47" />
         <source>Worked in this band</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagecolors.cpp" line="48"/>
+        <location filename="../setuppages/setuppagecolors.cpp" line="48" />
         <source>Confirmed in this band</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagecolors.cpp" line="49"/>
+        <location filename="../setuppages/setuppagecolors.cpp" line="49" />
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagecolors.cpp" line="50"/>
+        <location filename="../setuppages/setuppagecolors.cpp" line="50" />
         <source>WSJT-X palette</source>
-        <translation type="unfinished"></translation>
+        <translation>WSJT-X krāsu palete</translation>
     </message>
     <message>
-        <location filename="../setuppages/setuppagecolors.cpp" line="51"/>
+        <location filename="../setuppages/setuppagecolors.cpp" line="51" />
         <source>Default palette</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagecolors.cpp" line="52"/>
-        <location filename="../setuppages/setuppagecolors.cpp" line="322"/>
+        <location filename="../setuppages/setuppagecolors.cpp" line="52" />
+        <location filename="../setuppages/setuppagecolors.cpp" line="342" />
         <source>Dark Mode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagecolors.cpp" line="54"/>
+        <location filename="../setuppages/setuppagecolors.cpp" line="54" />
         <source>Color when the DXCC is an ATNO (All Time New One).</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagecolors.cpp" line="55"/>
+        <location filename="../setuppages/setuppagecolors.cpp" line="55" />
         <source>This DXCC was worked before in another band but not in the selected band. It may be needed due to the CQ, ITU, Grid, ...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagecolors.cpp" line="56"/>
+        <location filename="../setuppages/setuppagecolors.cpp" line="56" />
         <source>Worked DXCC, but not confirmed in this band.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagecolors.cpp" line="57"/>
+        <location filename="../setuppages/setuppagecolors.cpp" line="57" />
         <source>DXCC is confirmed in this band.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagecolors.cpp" line="58"/>
+        <location filename="../setuppages/setuppagecolors.cpp" line="58" />
         <source>Default color.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagecolors.cpp" line="59"/>
+        <location filename="../setuppages/setuppagecolors.cpp" line="59" />
         <source>Sets a palette of colors similar to the one used in WSJT-X.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagecolors.cpp" line="60"/>
+        <location filename="../setuppages/setuppagecolors.cpp" line="60" />
         <source>Sets the default palette.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagecolors.cpp" line="61"/>
+        <location filename="../setuppages/setuppagecolors.cpp" line="61" />
         <source>Sets the Dark Mode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagecolors.cpp" line="172"/>
+        <location filename="../setuppages/setuppagecolors.cpp" line="172" />
         <source>Choose a color</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagecolors.cpp" line="303"/>
+        <location filename="../setuppages/setuppagecolors.cpp" line="315" />
         <source>Light Mode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
     <name>SetupPageDxCluster</name>
     <message>
-        <location filename="../setuppages/setuppagedxcluster.cpp" line="75"/>
+        <location filename="../setuppages/setuppagedxcluster.cpp" line="75" />
         <source>Add</source>
-        <translation type="unfinished">Vissi</translation>
+        <translation>Vissi</translation>
     </message>
     <message>
-        <location filename="../setuppages/setuppagedxcluster.cpp" line="76"/>
+        <location filename="../setuppages/setuppagedxcluster.cpp" line="76" />
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Dzēst</translation>
     </message>
     <message>
-        <location filename="../setuppages/setuppagedxcluster.cpp" line="78"/>
+        <location filename="../setuppages/setuppagedxcluster.cpp" line="78" />
         <source>Show &amp;HF spots</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagedxcluster.cpp" line="79"/>
+        <location filename="../setuppages/setuppagedxcluster.cpp" line="79" />
         <source>Show V/&amp;UHF spots</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagedxcluster.cpp" line="80"/>
+        <location filename="../setuppages/setuppagedxcluster.cpp" line="80" />
         <source>Show W&amp;ARC spots</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagedxcluster.cpp" line="81"/>
+        <location filename="../setuppages/setuppagedxcluster.cpp" line="81" />
         <source>Show &amp;worked spots</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagedxcluster.cpp" line="82"/>
+        <location filename="../setuppages/setuppagedxcluster.cpp" line="82" />
         <source>Show &amp;confirmed spots</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagedxcluster.cpp" line="83"/>
+        <location filename="../setuppages/setuppagedxcluster.cpp" line="83" />
         <source>Show ANN/&amp;FULL messages</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagedxcluster.cpp" line="84"/>
+        <location filename="../setuppages/setuppagedxcluster.cpp" line="84" />
         <source>Show WW&amp;V messages</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagedxcluster.cpp" line="85"/>
+        <location filename="../setuppages/setuppagedxcluster.cpp" line="85" />
         <source>Show WC&amp;Y messages</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagedxcluster.cpp" line="86"/>
+        <location filename="../setuppages/setuppagedxcluster.cpp" line="86" />
         <source>Save DX Cluster activity</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagedxcluster.cpp" line="87"/>
+        <location filename="../setuppages/setuppagedxcluster.cpp" line="87" />
         <source>Saves all the DX-Cluster activity to a file in the KLog folder</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagedxcluster.cpp" line="89"/>
+        <location filename="../setuppages/setuppagedxcluster.cpp" line="89" />
         <source>Send DX Spots to the map</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagedxcluster.cpp" line="90"/>
+        <location filename="../setuppages/setuppagedxcluster.cpp" line="90" />
         <source>Sends the received DX Spots to the map to know where is the activity.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagedxcluster.cpp" line="92"/>
+        <location filename="../setuppages/setuppagedxcluster.cpp" line="92" />
         <source>DX Spots</source>
-        <translation type="unfinished">Satelītu Dati</translation>
+        <translation>Satelītu Dati</translation>
     </message>
     <message>
-        <location filename="../setuppages/setuppagedxcluster.cpp" line="103"/>
+        <location filename="../setuppages/setuppagedxcluster.cpp" line="103" />
         <source>Others</source>
-        <translation type="unfinished"></translation>
+        <translation>Citi</translation>
     </message>
     <message>
-        <location filename="../setuppages/setuppagedxcluster.cpp" line="111"/>
+        <location filename="../setuppages/setuppagedxcluster.cpp" line="125" />
+        <source>Enable DX Assistant</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../setuppages/setuppagedxcluster.cpp" line="126" />
+        <source>Adds a DX Assistant tab showing a prioritised list of DXCluster spots scored against your own log.</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../setuppages/setuppagedxcluster.cpp" line="127" />
+        <source>Enable ClubLog Most Wanted integration</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../setuppages/setuppagedxcluster.cpp" line="128" />
+        <source>Downloads the ClubLog Most Wanted list monthly and uses it to break ties between spots with the same score.</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../setuppages/setuppagedxcluster.cpp" line="138" />
+        <source>DXCluster</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../setuppages/setuppagedxcluster.cpp" line="139" />
+        <source>The spots arriving from the DXCluster are scored and shown in the DX Assistant.</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../setuppages/setuppagedxcluster.cpp" line="140" />
+        <source>WSJT-X</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../setuppages/setuppagedxcluster.cpp" line="141" />
+        <source>The stations WSJT-X decodes are scored and shown in the DX Assistant.</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../setuppages/setuppagedxcluster.cpp" line="142" />
+        <source>It needs the UDP Server to be started, in the UDP page.</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../setuppages/setuppagedxcluster.cpp" line="144" />
+        <source>Spot sources</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../setuppages/setuppagedxcluster.cpp" line="145" />
+        <source>Select where the spots analysed by the DX Assistant come from.</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../setuppages/setuppagedxcluster.cpp" line="152" />
+        <source>DX Assistant</source>
+        <translation>DX asistents</translation>
+    </message>
+    <message>
+        <location filename="../setuppages/setuppagedxcluster.cpp" line="161" />
         <source>Messages</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagedxcluster.cpp" line="180"/>
+        <location filename="../setuppages/setuppagedxcluster.cpp" line="244" />
         <source>KLog: Add a DXCluster server</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagedxcluster.cpp" line="181"/>
+        <location filename="../setuppages/setuppagedxcluster.cpp" line="245" />
         <source>Add the address followed by the :port
 Example: dxfun.com:8000
 If no port is specified, 41112 will be used by default:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
     <name>SetupPageELog</name>
     <message>
-        <location filename="../setuppages/setuppageelog.cpp" line="46"/>
+        <location filename="../setuppages/setuppageelog.cpp" line="46" />
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageelog.cpp" line="47"/>
+        <location filename="../setuppages/setuppageelog.cpp" line="47" />
         <source>ClubLog password</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageelog.cpp" line="48"/>
+        <location filename="../setuppages/setuppageelog.cpp" line="48" />
         <source>ClubLog App password</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageelog.cpp" line="49"/>
+        <location filename="../setuppages/setuppageelog.cpp" line="49" />
         <source>ClubLog email</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageelog.cpp" line="55"/>
+        <location filename="../setuppages/setuppageelog.cpp" line="55" />
         <source>Enter the email you used to register in ClubLog.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageelog.cpp" line="56"/>
-        <source>Enter your password ClubLog here. Warning: The password will be save on clear in the KLog config file!! (If you don&apos;t want to enter the password, KLog will ask you when it is needed.)</source>
-        <translation type="unfinished"></translation>
+        <location filename="../setuppages/setuppageelog.cpp" line="56" />
+        <source>Enter your password ClubLog here. Warning: The password will be save on clear in the KLog config file!! (If you don't want to enter the password, KLog will ask you when it is needed.)</source>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageelog.cpp" line="57"/>
+        <location filename="../setuppages/setuppageelog.cpp" line="57" />
         <source>Enter your application password ClubLog here. It can be obtained in ClubLog (Settings &gt; App Passwords menu). Warning: The app password will be save on clear in the KLog config file!!</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageelog.cpp" line="63"/>
+        <location filename="../setuppages/setuppageelog.cpp" line="63" />
         <source>Send QSOs in real time</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageelog.cpp" line="64"/>
+        <location filename="../setuppages/setuppageelog.cpp" line="64" />
         <source>Activate ClubLog</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageelog.cpp" line="65"/>
+        <location filename="../setuppages/setuppageelog.cpp" line="65" />
         <source>Send each QSO to ClubLog in real time, as they are added (or modified) in KLog.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageelog.cpp" line="66"/>
+        <location filename="../setuppages/setuppageelog.cpp" line="66" />
         <source>Starts the ClubLog support in KLog.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageelog.cpp" line="71"/>
+        <location filename="../setuppages/setuppageelog.cpp" line="71" />
         <source>Activate eQSL.cc</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageelog.cpp" line="72"/>
+        <location filename="../setuppages/setuppageelog.cpp" line="72" />
         <source>Enter your username of eQSL.cc.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageelog.cpp" line="73"/>
-        <source>Enter your password eQSL.cc here. Warning: The password will be save on clear in the KLog config file!! (If you don&apos;t want to enter the password, KLog will ask you when it is needed.)</source>
-        <translation type="unfinished"></translation>
+        <location filename="../setuppages/setuppageelog.cpp" line="73" />
+        <source>Enter your password eQSL.cc here. Warning: The password will be save on clear in the KLog config file!! (If you don't want to enter the password, KLog will ask you when it is needed.)</source>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageelog.cpp" line="76"/>
+        <location filename="../setuppages/setuppageelog.cpp" line="76" />
         <source>eQSL.cc password</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageelog.cpp" line="77"/>
+        <location filename="../setuppages/setuppageelog.cpp" line="77" />
         <source>eQSL.cc user</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageelog.cpp" line="83"/>
+        <location filename="../setuppages/setuppageelog.cpp" line="83" />
         <source>ClubLog</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageelog.cpp" line="84"/>
+        <location filename="../setuppages/setuppageelog.cpp" line="84" />
         <source>eQSL.cc</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageelog.cpp" line="94"/>
-        <location filename="../setuppages/setuppageelog.cpp" line="95"/>
+        <location filename="../setuppages/setuppageelog.cpp" line="94" />
+        <location filename="../setuppages/setuppageelog.cpp" line="95" />
         <source>Select the default option for new QSOs in Clublog</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageelog.cpp" line="124"/>
-        <location filename="../setuppages/setuppageelog.cpp" line="125"/>
+        <location filename="../setuppages/setuppageelog.cpp" line="124" />
+        <location filename="../setuppages/setuppageelog.cpp" line="125" />
         <source>Select the default option for new QSOs in eQSL</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageelog.cpp" line="136"/>
+        <location filename="../setuppages/setuppageelog.cpp" line="136" />
         <source>QRZ.com</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageelog.cpp" line="142"/>
+        <location filename="../setuppages/setuppageelog.cpp" line="142" />
         <source>Enter the user of your QRZ.com account. You need to be subscribed to QRZ.com to use this service.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageelog.cpp" line="144"/>
+        <location filename="../setuppages/setuppageelog.cpp" line="144" />
         <source>User</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageelog.cpp" line="147"/>
-        <source>Enter your password QRZ.com here. Warning: The password will be save on clear in the KLog config file!! (If you don&apos;t want to enter the password, KLog will ask you when it is needed.)</source>
-        <translation type="unfinished"></translation>
+        <location filename="../setuppages/setuppageelog.cpp" line="147" />
+        <source>Enter your password QRZ.com here. Warning: The password will be save on clear in the KLog config file!! (If you don't want to enter the password, KLog will ask you when it is needed.)</source>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageelog.cpp" line="150"/>
+        <location filename="../setuppages/setuppageelog.cpp" line="150" />
         <source>Password</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageelog.cpp" line="151"/>
+        <location filename="../setuppages/setuppageelog.cpp" line="151" />
         <source>Activate QRZ.com</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageelog.cpp" line="152"/>
+        <location filename="../setuppages/setuppageelog.cpp" line="152" />
         <source>Check automatically</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageelog.cpp" line="153"/>
+        <location filename="../setuppages/setuppageelog.cpp" line="153" />
         <source>Check in Qrz.com all Calls as they are entered</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageelog.cpp" line="155"/>
+        <location filename="../setuppages/setuppageelog.cpp" line="155" />
         <source>Paying Subscriber</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageelog.cpp" line="156"/>
+        <location filename="../setuppages/setuppageelog.cpp" line="156" />
         <source>Check it if you are paying for a qrz.com subscription</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageelog.cpp" line="158"/>
+        <location filename="../setuppages/setuppageelog.cpp" line="158" />
         <source>LogBook Key</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageelog.cpp" line="160"/>
+        <location filename="../setuppages/setuppageelog.cpp" line="160" />
         <source>LogBook Key for QSO uploading. You can get this key in your QRZ.com logbook webpage. Remember that you need a QRZ.com subscription to use this feature.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageelog.cpp" line="174"/>
-        <location filename="../setuppages/setuppageelog.cpp" line="175"/>
+        <location filename="../setuppages/setuppageelog.cpp" line="174" />
+        <location filename="../setuppages/setuppageelog.cpp" line="175" />
         <source>Select the default option for new QSOs in QRZ.com</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageelog.cpp" line="201"/>
+        <location filename="../setuppages/setuppageelog.cpp" line="201" />
         <source>LoTW</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageelog.cpp" line="202"/>
+        <location filename="../setuppages/setuppageelog.cpp" line="202" />
         <source>Upload</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageelog.cpp" line="203"/>
+        <location filename="../setuppages/setuppageelog.cpp" line="203" />
         <source>Download</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageelog.cpp" line="214"/>
+        <location filename="../setuppages/setuppageelog.cpp" line="214" />
         <source>TQSL path</source>
-        <translation type="unfinished"></translation>
+        <translation>TQSL ceļš</translation>
     </message>
     <message>
-        <location filename="../setuppages/setuppageelog.cpp" line="215"/>
+        <location filename="../setuppages/setuppageelog.cpp" line="215" />
         <source>Use TQSL</source>
-        <translation type="unfinished"></translation>
+        <translation>Izmantot TQSL</translation>
     </message>
     <message>
-        <location filename="../setuppages/setuppageelog.cpp" line="216"/>
+        <location filename="../setuppages/setuppageelog.cpp" line="216" />
         <source>LoTW password</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageelog.cpp" line="217"/>
+        <location filename="../setuppages/setuppageelog.cpp" line="217" />
         <source>LoTW user</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageelog.cpp" line="219"/>
+        <location filename="../setuppages/setuppageelog.cpp" line="219" />
         <source>Enter your LoTW user.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageelog.cpp" line="220"/>
-        <source>Enter your password LoTW here. Warning: The password will be save on clear in the KLog config file!! (If you don&apos;t want to enter the password, KLog will ask you when it is needed.)</source>
-        <translation type="unfinished"></translation>
+        <location filename="../setuppages/setuppageelog.cpp" line="220" />
+        <source>Enter your password LoTW here. Warning: The password will be save on clear in the KLog config file!! (If you don't want to enter the password, KLog will ask you when it is needed.)</source>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageelog.cpp" line="221"/>
+        <location filename="../setuppages/setuppageelog.cpp" line="221" />
         <source>Path to the TQSL software.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ceļš uz TQSL programmu.</translation>
     </message>
     <message>
-        <location filename="../setuppages/setuppageelog.cpp" line="222"/>
+        <location filename="../setuppages/setuppageelog.cpp" line="222" />
         <source>Enable the LoTW integration with TQSL. You will need to have TQSL installed</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageelog.cpp" line="224"/>
-        <location filename="../setuppages/setuppageelog.cpp" line="225"/>
+        <location filename="../setuppages/setuppageelog.cpp" line="224" />
+        <location filename="../setuppages/setuppageelog.cpp" line="225" />
         <source>Select the default option for new QSOs in LoTW</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageelog.cpp" line="533"/>
+        <location filename="../setuppages/setuppageelog.cpp" line="533" />
         <source>Select File</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
     <name>SetupPageHamLib</name>
     <message>
-        <location filename="../setuppages/setuppagehamlib.cpp" line="158"/>
+        <location filename="../setuppages/setuppagehamlib.cpp" line="193" />
         <source>Activate HamLib</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagehamlib.cpp" line="159"/>
+        <location filename="../setuppages/setuppagehamlib.cpp" line="194" />
         <source>Activates the hamlib support that will enable the connection to a radio.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagehamlib.cpp" line="160"/>
+        <location filename="../setuppages/setuppagehamlib.cpp" line="195" />
         <source>Read-Only mode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagehamlib.cpp" line="161"/>
+        <location filename="../setuppages/setuppagehamlib.cpp" line="196" />
         <source>If enabled, the KLog will read Freq/Mode from the radio but will never send any command to the radio.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagehamlib.cpp" line="162"/>
+        <location filename="../setuppages/setuppagehamlib.cpp" line="197" />
         <source>Test</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagehamlib.cpp" line="163"/>
+        <location filename="../setuppages/setuppagehamlib.cpp" line="198" />
         <source>Click to test the connection to the radio</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagehamlib.cpp" line="187"/>
+        <location filename="../setuppages/setuppagehamlib.cpp" line="205" />
+        <source>Shows the frequency read from the radio while connected</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../setuppages/setuppagehamlib.cpp" line="223" />
         <source>Radio</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagehamlib.cpp" line="189"/>
+        <location filename="../setuppages/setuppagehamlib.cpp" line="225" />
         <source>Select your rig.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagehamlib.cpp" line="204"/>
+        <location filename="../setuppages/setuppagehamlib.cpp" line="229" />
         <source>Serial</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagehamlib.cpp" line="205"/>
+        <location filename="../setuppages/setuppagehamlib.cpp" line="230" />
         <source>Network</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagehamlib.cpp" line="167"/>
+        <location filename="../setuppages/setuppagehamlib.cpp" line="207" />
         <source>Defines the interval to poll the radio in msecs.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagehamlib.cpp" line="95"/>
+        <location filename="../setuppages/setuppagehamlib.cpp" line="42" />
+        <source>000.0000 / %1</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../setuppages/setuppagehamlib.cpp" line="42" />
+        <source>Mode</source>
+        <translation>Mode</translation>
+    </message>
+    <message>
+        <location filename="../setuppages/setuppagehamlib.cpp" line="131" />
         <source>Test: OK</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagehamlib.cpp" line="106"/>
+        <location filename="../setuppages/setuppagehamlib.cpp" line="143" />
         <source>Test: NOK</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagehamlib.cpp" line="175"/>
+        <location filename="../setuppages/setuppagehamlib.cpp" line="215" />
         <source>Poll interval</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
     <name>SetupPageLogView</name>
     <message>
-        <location filename="../setuppages/setuppagelogview.cpp" line="43"/>
+        <location filename="../setuppages/setuppagelogview.cpp" line="43" />
         <source>Fields</source>
         <translation>Lauki</translation>
     </message>
@@ -6411,1246 +7174,1361 @@ If no port is specified, 41112 will be used by default:</source>
 <context>
     <name>SetupPageLogs</name>
     <message>
-        <location filename="../setuppages/setuppagelogs.cpp" line="56"/>
+        <location filename="../setuppages/setuppagelogs.cpp" line="56" />
         <source>&amp;New</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagelogs.cpp" line="57"/>
+        <location filename="../setuppages/setuppagelogs.cpp" line="57" />
         <source>&amp;Edit</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagelogs.cpp" line="58"/>
+        <location filename="../setuppages/setuppagelogs.cpp" line="58" />
         <source>&amp;Remove</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagelogs.cpp" line="60"/>
+        <location filename="../setuppages/setuppagelogs.cpp" line="60" />
         <source>Add a new log.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagelogs.cpp" line="61"/>
+        <location filename="../setuppages/setuppagelogs.cpp" line="61" />
         <source>Edit the selected log.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagelogs.cpp" line="62"/>
+        <location filename="../setuppages/setuppagelogs.cpp" line="62" />
         <source>Remove the selected log.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagelogs.cpp" line="149"/>
+        <location filename="../setuppages/setuppagelogs.cpp" line="150" />
         <source>KLog</source>
-        <translation type="unfinished"></translation>
+        <translation>Klogs</translation>
     </message>
     <message>
-        <location filename="../setuppages/setuppagelogs.cpp" line="150"/>
+        <location filename="../setuppages/setuppagelogs.cpp" line="151" />
         <source>Do you really want to remove this log?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagelogs.cpp" line="151"/>
+        <location filename="../setuppages/setuppagelogs.cpp" line="152" />
         <source>All the QSOs from this log will also be deleted...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagelogs.cpp" line="170"/>
+        <location filename="../setuppages/setuppagelogs.cpp" line="172" />
         <source>Log has not been removed. (#2)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagelogs.cpp" line="177"/>
+        <location filename="../setuppages/setuppagelogs.cpp" line="179" />
         <source>Log has not been removed. (#1)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagelogs.cpp" line="233"/>
+        <location filename="../setuppages/setuppagelogs.cpp" line="234" />
         <source>ID</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagelogs.cpp" line="236"/>
+        <location filename="../setuppages/setuppagelogs.cpp" line="237" />
         <source>Date</source>
-        <translation type="unfinished">Datums</translation>
+        <translation>Datums</translation>
     </message>
     <message>
-        <location filename="../setuppages/setuppagelogs.cpp" line="239"/>
+        <location filename="../setuppages/setuppagelogs.cpp" line="240" />
         <source>Station Callsign</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagelogs.cpp" line="242"/>
+        <location filename="../setuppages/setuppagelogs.cpp" line="243" />
         <source>Operators</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagelogs.cpp" line="245"/>
+        <location filename="../setuppages/setuppagelogs.cpp" line="246" />
         <source>Comments</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagelogs.cpp" line="248"/>
+        <location filename="../setuppages/setuppagelogs.cpp" line="249" />
         <source>QSOs</source>
-        <translation type="unfinished">QSO</translation>
+        <translation>QSO</translation>
     </message>
     <message>
-        <location filename="../setuppages/setuppagelogs.cpp" line="361"/>
+        <location filename="../setuppages/setuppagelogs.cpp" line="373" />
         <source>The new log could not be created.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagelogs.cpp" line="385"/>
+        <location filename="../setuppages/setuppagelogs.cpp" line="399" />
         <source>An error has occurred showing the following error code:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagelogs.cpp" line="388"/>
+        <location filename="../setuppages/setuppagelogs.cpp" line="402" />
         <source>KLog - SetupPageLogs</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
     <name>SetupPageLogsNew</name>
     <message>
-        <location filename="../setuppages/setuppagelogsnew.cpp" line="55"/>
+        <location filename="../setuppages/setuppagelogsnew.cpp" line="55" />
         <source>&amp;Date</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagelogsnew.cpp" line="56"/>
+        <location filename="../setuppages/setuppagelogsnew.cpp" line="56" />
         <source>&amp;Station Callsign</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagelogsnew.cpp" line="57"/>
+        <location filename="../setuppages/setuppagelogsnew.cpp" line="57" />
         <source>&amp;Operators</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagelogsnew.cpp" line="58"/>
+        <location filename="../setuppages/setuppagelogsnew.cpp" line="58" />
         <source>Comm&amp;ent</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagelogsnew.cpp" line="60"/>
+        <location filename="../setuppages/setuppagelogsnew.cpp" line="60" />
         <source>&amp;Ok</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagelogsnew.cpp" line="61"/>
+        <location filename="../setuppages/setuppagelogsnew.cpp" line="61" />
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Atcelt</translation>
     </message>
     <message>
-        <location filename="../setuppages/setuppagelogsnew.cpp" line="97"/>
+        <location filename="../setuppages/setuppagelogsnew.cpp" line="97" />
         <source>Callsign used for this log.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagelogsnew.cpp" line="98"/>
+        <location filename="../setuppages/setuppagelogsnew.cpp" line="98" />
         <source>Comma separated list of operators: callsign1, callsign2.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagelogsnew.cpp" line="100"/>
+        <location filename="../setuppages/setuppagelogsnew.cpp" line="100" />
         <source>Start date of this log.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagelogsnew.cpp" line="101"/>
+        <location filename="../setuppages/setuppagelogsnew.cpp" line="101" />
         <source>Add a comment about this log. If filled, it will be shown in the main KLog title to identify the log.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagelogsnew.cpp" line="209"/>
+        <location filename="../setuppages/setuppagelogsnew.cpp" line="209" />
         <source>You need to enter a valid callsign in the Station Callsign box.
 The log will not be opened.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
     <name>SetupPageMisc</name>
     <message>
-        <location filename="../setuppages/setuppagemisc.cpp" line="38"/>
+        <location filename="../setuppages/setuppagemisc.cpp" line="38" />
         <source>&amp;Imperial system</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Imperiālā sistēma</translation>
     </message>
     <message>
-        <location filename="../setuppages/setuppagemisc.cpp" line="39"/>
+        <location filename="../setuppages/setuppagemisc.cpp" line="39" />
         <source>&amp;Log in real time</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ierakstīt žurnālā reāllaikā</translation>
     </message>
     <message>
-        <location filename="../setuppages/setuppagemisc.cpp" line="41"/>
+        <location filename="../setuppages/setuppagemisc.cpp" line="41" />
         <source>&amp;Time in UTC</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagemisc.cpp" line="42"/>
+        <location filename="../setuppages/setuppagemisc.cpp" line="42" />
         <source>&amp;Save ADIF on exit</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagemisc.cpp" line="43"/>
+        <location filename="../setuppages/setuppagemisc.cpp" line="43" />
         <source>Use this &amp;default filename</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagemisc.cpp" line="44"/>
+        <location filename="../setuppages/setuppagemisc.cpp" line="44" />
         <source>Mark &amp;QSO to send QSL when QSL is received</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagemisc.cpp" line="45"/>
+        <location filename="../setuppages/setuppagemisc.cpp" line="45" />
         <source>Complete QSO with previous data</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagemisc.cpp" line="46"/>
+        <location filename="../setuppages/setuppagemisc.cpp" line="46" />
         <source>Show the Station &amp;Callsign used in the search box</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagemisc.cpp" line="48"/>
+        <location filename="../setuppages/setuppagemisc.cpp" line="48" />
         <source>&amp;Check for new versions automatically</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagemisc.cpp" line="50"/>
+        <location filename="../setuppages/setuppagemisc.cpp" line="50" />
         <source>Manage DX-Marathon</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagemisc.cpp" line="53"/>
+        <location filename="../setuppages/setuppagemisc.cpp" line="51" />
+        <source>Check band &amp;&amp; mode for needed status</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../setuppages/setuppagemisc.cpp" line="54" />
         <source>Mark sent eQSL &amp;&amp; LoTW in new QSO as queued</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagemisc.cpp" line="54"/>
+        <location filename="../setuppages/setuppagemisc.cpp" line="55" />
         <source>&amp;Delete always temp ADIF file after uploading QSOs</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagemisc.cpp" line="61"/>
-        <location filename="../setuppages/setuppagemisc.cpp" line="62"/>
+        <location filename="../setuppages/setuppagemisc.cpp" line="62" />
+        <location filename="../setuppages/setuppagemisc.cpp" line="63" />
         <source>Browse</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagemisc.cpp" line="63"/>
+        <location filename="../setuppages/setuppagemisc.cpp" line="64" />
         <source>Move DB</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagemisc.cpp" line="133"/>
+        <location filename="../setuppages/setuppagemisc.cpp" line="133" />
+        <source>If checked, KLog will consider both band and mode when evaluating if a QSO is needed or confirmed. If unchecked, only the band is taken into account.</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../setuppages/setuppagemisc.cpp" line="134" />
         <source>QSOs will be marked as pending to send a QSL if you receive the DX QSL and have not sent yours.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagemisc.cpp" line="134"/>
+        <location filename="../setuppages/setuppagemisc.cpp" line="135" />
         <source>The search box will also show the callsign on the air to do the QSO.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagemisc.cpp" line="136"/>
+        <location filename="../setuppages/setuppagemisc.cpp" line="137" />
         <source>Check if there is a new release of KLog available every time you start KLog.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagemisc.cpp" line="138"/>
+        <location filename="../setuppages/setuppagemisc.cpp" line="139" />
         <source>Check it for Imperial system (Miles instead of Kilometers).</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagemisc.cpp" line="139"/>
+        <location filename="../setuppages/setuppagemisc.cpp" line="140" />
         <source>Select to use real time.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagemisc.cpp" line="140"/>
+        <location filename="../setuppages/setuppagemisc.cpp" line="141" />
         <source>Select to use UTC time.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagemisc.cpp" line="141"/>
+        <location filename="../setuppages/setuppagemisc.cpp" line="142" />
         <source>Select if you want to save to ADIF on exit.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagemisc.cpp" line="142"/>
+        <location filename="../setuppages/setuppagemisc.cpp" line="143" />
         <source>Select to use the following name for the logfile without being asked for it again.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagemisc.cpp" line="143"/>
+        <location filename="../setuppages/setuppagemisc.cpp" line="144" />
         <source>Complete the current QSO with previous QSO data.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagemisc.cpp" line="144"/>
+        <location filename="../setuppages/setuppagemisc.cpp" line="145" />
         <source>Select if you want to manage DX-Marathon.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagemisc.cpp" line="145"/>
+        <location filename="../setuppages/setuppagemisc.cpp" line="146" />
         <source>This is the default file where ADIF data will be saved.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagemisc.cpp" line="146"/>
+        <location filename="../setuppages/setuppagemisc.cpp" line="147" />
         <source>This is the directory where the database (logbook.dat) will be saved.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagemisc.cpp" line="147"/>
+        <location filename="../setuppages/setuppagemisc.cpp" line="148" />
         <source>Click to change the default ADIF file.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagemisc.cpp" line="148"/>
+        <location filename="../setuppages/setuppagemisc.cpp" line="149" />
         <source>Click to change the path of the database.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagemisc.cpp" line="149"/>
+        <location filename="../setuppages/setuppagemisc.cpp" line="150" />
         <source>Click to move the DB to the new directory.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagemisc.cpp" line="37"/>
+        <location filename="../setuppages/setuppagemisc.cpp" line="37" />
         <source>Check non-valid calls</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagemisc.cpp" line="40"/>
+        <location filename="../setuppages/setuppagemisc.cpp" line="40" />
         <source>Show seconds</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagemisc.cpp" line="89"/>
+        <location filename="../setuppages/setuppagemisc.cpp" line="92" />
         <source>In seconds, enter the time range to consider a duplicate if same call, band and mode is entered.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagemisc.cpp" line="106"/>
+        <location filename="../setuppages/setuppagemisc.cpp" line="105" />
         <source>Show seconds in the QSO editor</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagemisc.cpp" line="132"/>
+        <location filename="../setuppages/setuppagemisc.cpp" line="131" />
         <source>If you disable this checkbox KLog will not check callsigns to identify wrong callsigns.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagemisc.cpp" line="150"/>
+        <location filename="../setuppages/setuppagemisc.cpp" line="151" />
         <source>Select the application debug log level. This may be useful if something is not working as expected. A debug file will be created in the KLog directory and/or shown with Help-&gt;Debug menu.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagemisc.cpp" line="152"/>
+        <location filename="../setuppages/setuppagemisc.cpp" line="153" />
         <source>Click to mark as Queued (to be sent) all the eQSL (LoTW and eQSL) in all the new QSO by default.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagemisc.cpp" line="153"/>
+        <location filename="../setuppages/setuppagemisc.cpp" line="154" />
         <source>Delete Always the adif file created after uploading QSOs</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagemisc.cpp" line="168"/>
+        <location filename="../setuppages/setuppagemisc.cpp" line="169" />
         <source>Log level</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagemisc.cpp" line="174"/>
+        <location filename="../setuppages/setuppagemisc.cpp" line="175" />
         <source>Dupe time range:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagemisc.cpp" line="309"/>
+        <location filename="../setuppages/setuppagemisc.cpp" line="311" />
         <source>Open File</source>
-        <translation type="unfinished">Atver failu</translation>
+        <translation>Atver failu</translation>
     </message>
     <message>
-        <location filename="../setuppages/setuppagemisc.cpp" line="469"/>
+        <location filename="../setuppages/setuppagemisc.cpp" line="458" />
         <source>Select Directory</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagemisc.cpp" line="499"/>
+        <location filename="../setuppages/setuppagemisc.cpp" line="488" />
         <source>This is the directory where DB (logbook.dat) will be saved.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagemisc.cpp" line="505"/>
+        <location filename="../setuppages/setuppagemisc.cpp" line="494" />
         <source>Please specify an existing directory where the database (logbook.dat) will be saved.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagemisc.cpp" line="526"/>
+        <location filename="../setuppages/setuppagemisc.cpp" line="515" />
         <source>KLog - Move DB</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagemisc.cpp" line="542"/>
+        <location filename="../setuppages/setuppagemisc.cpp" line="530" />
         <source>File moved</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagemisc.cpp" line="551"/>
+        <location filename="../setuppages/setuppagemisc.cpp" line="530" />
         <source>File copied</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagemisc.cpp" line="569"/>
+        <location filename="../setuppages/setuppagemisc.cpp" line="548" />
         <source>File already exist.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagemisc.cpp" line="570"/>
+        <location filename="../setuppages/setuppagemisc.cpp" line="549" />
         <source>The destination file already exist and KLog will not replace it. Please remove the file from the destination folder before moving the file with KLog to make sure KLog can copy the file.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagemisc.cpp" line="575"/>
+        <location filename="../setuppages/setuppagemisc.cpp" line="554" />
         <source>File NOT copied</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagemisc.cpp" line="576"/>
+        <location filename="../setuppages/setuppagemisc.cpp" line="555" />
         <source>The file was not copied due to an unknown problem.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagemisc.cpp" line="587"/>
+        <location filename="../setuppages/setuppagemisc.cpp" line="566" />
         <source>The target directory does not exist. Please select an existing directory.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
     <name>SetupPageSats</name>
     <message>
-        <location filename="../setuppages/setuppagesats.cpp" line="64"/>
+        <location filename="../setuppages/setuppagesats.cpp" line="65" />
         <source>&amp;New</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesats.cpp" line="65"/>
+        <location filename="../setuppages/setuppagesats.cpp" line="66" />
         <source>&amp;Edit</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesats.cpp" line="66"/>
+        <location filename="../setuppages/setuppagesats.cpp" line="67" />
         <source>&amp;Remove</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesats.cpp" line="67"/>
+        <location filename="../setuppages/setuppagesats.cpp" line="68" />
         <source>&amp;Import</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesats.cpp" line="68"/>
+        <location filename="../setuppages/setuppagesats.cpp" line="69" />
         <source>E&amp;xport</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesats.cpp" line="70"/>
+        <location filename="../setuppages/setuppagesats.cpp" line="71" />
         <source>Add a new satellite.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesats.cpp" line="71"/>
+        <location filename="../setuppages/setuppagesats.cpp" line="72" />
         <source>Edit the selected satellite.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesats.cpp" line="72"/>
+        <location filename="../setuppages/setuppagesats.cpp" line="73" />
         <source>Remove the selected satellite.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesats.cpp" line="73"/>
+        <location filename="../setuppages/setuppagesats.cpp" line="74" />
         <source>Import a satellites file. It will replace the satellites you have in the current list.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesats.cpp" line="74"/>
+        <location filename="../setuppages/setuppagesats.cpp" line="75" />
         <source>Export your current satellites to a file.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesats.cpp" line="76"/>
+        <location filename="../setuppages/setuppagesats.cpp" line="77" />
         <source>Select the sat you want to open.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesats.cpp" line="205"/>
+        <location filename="../setuppages/setuppagesats.cpp" line="206" />
         <source>KLog</source>
-        <translation type="unfinished"></translation>
+        <translation>Klogs</translation>
     </message>
     <message>
-        <location filename="../setuppages/setuppagesats.cpp" line="206"/>
+        <location filename="../setuppages/setuppagesats.cpp" line="207" />
         <source>Do you really want to remove this satellite?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesats.cpp" line="207"/>
+        <location filename="../setuppages/setuppagesats.cpp" line="208" />
         <source>This satellite will no be longer available to be selected ...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesats.cpp" line="225"/>
+        <location filename="../setuppages/setuppagesats.cpp" line="226" />
         <source>Sat has not been removed. (#2)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesats.cpp" line="232"/>
+        <location filename="../setuppages/setuppagesats.cpp" line="233" />
         <source>Sat has not been removed. (#1)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesats.cpp" line="288"/>
+        <location filename="../setuppages/setuppagesats.cpp" line="289" />
         <source>ID</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesats.cpp" line="291"/>
+        <location filename="../setuppages/setuppagesats.cpp" line="292" />
         <source>Short</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesats.cpp" line="294"/>
+        <location filename="../setuppages/setuppagesats.cpp" line="295" />
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesats.cpp" line="297"/>
+        <location filename="../setuppages/setuppagesats.cpp" line="298" />
         <source>Uplink</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesats.cpp" line="300"/>
+        <location filename="../setuppages/setuppagesats.cpp" line="301" />
         <source>Downlink</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesats.cpp" line="303"/>
+        <location filename="../setuppages/setuppagesats.cpp" line="304" />
         <source>Modes</source>
-        <translation type="unfinished">Modes</translation>
+        <translation>Modes</translation>
     </message>
     <message>
-        <location filename="../setuppages/setuppagesats.cpp" line="513"/>
+        <location filename="../setuppages/setuppagesats.cpp" line="517" />
         <source>An error has occurred showing the following error code:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesats.cpp" line="516"/>
+        <location filename="../setuppages/setuppagesats.cpp" line="520" />
         <source>KLog - SetupPageSats</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesats.cpp" line="524"/>
+        <location filename="../setuppages/setuppagesats.cpp" line="528" />
         <source>Open Satellites File</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesats.cpp" line="542"/>
+        <location filename="../setuppages/setuppagesats.cpp" line="548" />
         <source>KLog warning</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesats.cpp" line="544"/>
+        <location filename="../setuppages/setuppagesats.cpp" line="550" />
         <source>An unexpected error ocurred while importing the satellite data.
 
 It may be caused because the file you are trying to import does not have the right format.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesats.cpp" line="547"/>
+        <location filename="../setuppages/setuppagesats.cpp" line="553" />
         <source>Please check the format or contact the developer for analysis with the error code: </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesats.cpp" line="609"/>
+        <location filename="../setuppages/setuppagesats.cpp" line="614" />
         <source>Save Satellites File</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
     <name>SetupPageSatsNew</name>
     <message>
-        <location filename="../setuppages/setuppagesatsnew.cpp" line="48"/>
+        <location filename="../setuppages/setuppagesatsnew.cpp" line="48" />
         <source>Short name</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesatsnew.cpp" line="49"/>
+        <location filename="../setuppages/setuppagesatsnew.cpp" line="49" />
         <source>Sat name</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesatsnew.cpp" line="50"/>
+        <location filename="../setuppages/setuppagesatsnew.cpp" line="50" />
         <source>UpLink</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesatsnew.cpp" line="51"/>
+        <location filename="../setuppages/setuppagesatsnew.cpp" line="51" />
         <source>DownLink</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesatsnew.cpp" line="52"/>
+        <location filename="../setuppages/setuppagesatsnew.cpp" line="52" />
         <source>Modes</source>
-        <translation type="unfinished">Modes</translation>
+        <translation>Modes</translation>
     </message>
     <message>
-        <location filename="../setuppages/setuppagesatsnew.cpp" line="58"/>
+        <location filename="../setuppages/setuppagesatsnew.cpp" line="58" />
         <source>&amp;Ok</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesatsnew.cpp" line="59"/>
+        <location filename="../setuppages/setuppagesatsnew.cpp" line="59" />
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Atcelt</translation>
     </message>
     <message>
-        <location filename="../setuppages/setuppagesatsnew.cpp" line="110"/>
+        <location filename="../setuppages/setuppagesatsnew.cpp" line="110" />
         <source>Enter the short name. Try to use the LoTW short name so you can upload your QSO to LoTW afterwards.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesatsnew.cpp" line="111"/>
+        <location filename="../setuppages/setuppagesatsnew.cpp" line="111" />
         <source>Enter the name of the satellite.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesatsnew.cpp" line="112"/>
+        <location filename="../setuppages/setuppagesatsnew.cpp" line="112" />
         <source>Enter the uplink frequencies in this format: 144.300</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesatsnew.cpp" line="113"/>
+        <location filename="../setuppages/setuppagesatsnew.cpp" line="113" />
         <source>Enter the downlink frequencies in this format: 144.300</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesatsnew.cpp" line="114"/>
+        <location filename="../setuppages/setuppagesatsnew.cpp" line="114" />
         <source>Enter the modes in this format: USB</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesatsnew.cpp" line="377"/>
-        <source>Some of the data you have entered is not correct; the satellite can&apos;t be added.</source>
-        <translation type="unfinished"></translation>
+        <location filename="../setuppages/setuppagesatsnew.cpp" line="377" />
+        <source>Some of the data you have entered is not correct; the satellite can't be added.</source>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
     <name>SetupPageSubdivisionNew</name>
     <message>
-        <location filename="../setuppages/setuppagesubdivisionnew.cpp" line="65"/>
+        <location filename="../setuppages/setuppagesubdivisionnew.cpp" line="65" />
         <source>&amp;Date</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesubdivisionnew.cpp" line="66"/>
+        <location filename="../setuppages/setuppagesubdivisionnew.cpp" line="66" />
         <source>&amp;Station Callsign</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesubdivisionnew.cpp" line="67"/>
+        <location filename="../setuppages/setuppagesubdivisionnew.cpp" line="67" />
         <source>&amp;Operators</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesubdivisionnew.cpp" line="68"/>
+        <location filename="../setuppages/setuppagesubdivisionnew.cpp" line="68" />
         <source>Comm&amp;ent</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesubdivisionnew.cpp" line="70"/>
+        <location filename="../setuppages/setuppagesubdivisionnew.cpp" line="70" />
         <source>&amp;Ok</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesubdivisionnew.cpp" line="71"/>
+        <location filename="../setuppages/setuppagesubdivisionnew.cpp" line="71" />
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Atcelt</translation>
     </message>
     <message>
-        <location filename="../setuppages/setuppagesubdivisionnew.cpp" line="135"/>
+        <location filename="../setuppages/setuppagesubdivisionnew.cpp" line="135" />
         <source>Callsign used for this log.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesubdivisionnew.cpp" line="136"/>
+        <location filename="../setuppages/setuppagesubdivisionnew.cpp" line="136" />
         <source>Comma separated list of operators: callsign1, callsign2.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesubdivisionnew.cpp" line="138"/>
+        <location filename="../setuppages/setuppagesubdivisionnew.cpp" line="138" />
         <source>Start date of this log.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesubdivisionnew.cpp" line="139"/>
+        <location filename="../setuppages/setuppagesubdivisionnew.cpp" line="139" />
         <source>Add a comment about this log. If filled, it will be shown in the main KLog title to identify the log.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesubdivisionnew.cpp" line="552"/>
+        <location filename="../setuppages/setuppagesubdivisionnew.cpp" line="552" />
         <source>You need to enter a valid callsign in the Station Callsign box.
 The log will not be opened.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
     <name>SetupPageSubdivisions</name>
     <message>
-        <location filename="../setuppages/setuppagesubdivisions.cpp" line="56"/>
+        <location filename="../setuppages/setuppagesubdivisions.cpp" line="56" />
         <source>&amp;Remove</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesubdivisions.cpp" line="57"/>
+        <location filename="../setuppages/setuppagesubdivisions.cpp" line="57" />
         <source>Import new</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesubdivisions.cpp" line="58"/>
+        <location filename="../setuppages/setuppagesubdivisions.cpp" line="58" />
         <source>Import an AWA file with the subdivision details.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesubdivisions.cpp" line="61"/>
+        <location filename="../setuppages/setuppagesubdivisions.cpp" line="61" />
         <source>Remove the selected references.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesubdivisions.cpp" line="63"/>
+        <location filename="../setuppages/setuppagesubdivisions.cpp" line="63" />
         <source>Select the references you want to open.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesubdivisions.cpp" line="124"/>
+        <location filename="../setuppages/setuppagesubdivisions.cpp" line="124" />
         <source>KLog</source>
-        <translation type="unfinished"></translation>
+        <translation>Klogs</translation>
     </message>
     <message>
-        <location filename="../setuppages/setuppagesubdivisions.cpp" line="125"/>
+        <location filename="../setuppages/setuppagesubdivisions.cpp" line="125" />
         <source>Do you really want to remove the data of this entity?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesubdivisions.cpp" line="126"/>
+        <location filename="../setuppages/setuppagesubdivisions.cpp" line="126" />
         <source>All the subdivision information for this entity will be deleted...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesubdivisions.cpp" line="154"/>
+        <location filename="../setuppages/setuppagesubdivisions.cpp" line="154" />
         <source>Log has not been removed. (#3)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesubdivisions.cpp" line="159"/>
+        <location filename="../setuppages/setuppagesubdivisions.cpp" line="159" />
         <source>Log has not been removed. (#2)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesubdivisions.cpp" line="166"/>
+        <location filename="../setuppages/setuppagesubdivisions.cpp" line="166" />
         <source>Log has not been removed. (#1)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesubdivisions.cpp" line="214"/>
+        <location filename="../setuppages/setuppagesubdivisions.cpp" line="214" />
         <source>ID</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesubdivisions.cpp" line="217"/>
+        <location filename="../setuppages/setuppagesubdivisions.cpp" line="217" />
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesubdivisions.cpp" line="220"/>
+        <location filename="../setuppages/setuppagesubdivisions.cpp" line="220" />
         <source>Short Name</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesubdivisions.cpp" line="223"/>
+        <location filename="../setuppages/setuppagesubdivisions.cpp" line="223" />
         <source>CQ Zone</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesubdivisions.cpp" line="226"/>
+        <location filename="../setuppages/setuppagesubdivisions.cpp" line="226" />
         <source>ITU Zone</source>
-        <translation type="unfinished"></translation>
+        <translation>ITU zona</translation>
     </message>
     <message>
-        <location filename="../setuppages/setuppagesubdivisions.cpp" line="229"/>
+        <location filename="../setuppages/setuppagesubdivisions.cpp" line="229" />
         <source>Deleted</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesubdivisions.cpp" line="232"/>
+        <location filename="../setuppages/setuppagesubdivisions.cpp" line="232" />
         <source>Start Date</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesubdivisions.cpp" line="235"/>
+        <location filename="../setuppages/setuppagesubdivisions.cpp" line="235" />
         <source>End Date</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesubdivisions.cpp" line="238"/>
+        <location filename="../setuppages/setuppagesubdivisions.cpp" line="238" />
         <source>DXCC</source>
-        <translation type="unfinished">DXCC</translation>
+        <translation>DXCC</translation>
     </message>
     <message>
-        <location filename="../setuppages/setuppagesubdivisions.cpp" line="365"/>
+        <location filename="../setuppages/setuppagesubdivisions.cpp" line="365" />
         <source>An error has occurred showing the following error code:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppagesubdivisions.cpp" line="368"/>
+        <location filename="../setuppages/setuppagesubdivisions.cpp" line="368" />
         <source>KLog - SetupPageSubdivisions</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
     <name>SetupPageUDP</name>
     <message>
-        <location filename="../setuppages/setuppageudp.cpp" line="36"/>
+        <location filename="../setuppages/setuppageudp.cpp" line="36" />
         <source>Start UDP Server</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageudp.cpp" line="63"/>
+        <location filename="../setuppages/setuppageudp.cpp" line="64" />
         <source>Automatically log QSOs from WSJT-X</source>
-        <translation type="unfinished"></translation>
+        <translation>Automātiski ierakstīt QSO no WSJT-X</translation>
     </message>
     <message>
-        <location filename="../setuppages/setuppageudp.cpp" line="64"/>
+        <location filename="../setuppages/setuppageudp.cpp" line="65" />
         <source>Allow WSJT-X to send logged QSOs to KLog</source>
-        <translation type="unfinished"></translation>
+        <translation>Atļaut WSJT-X sūtīt ierakstītos QSO uz KLog</translation>
     </message>
     <message>
-        <location filename="../setuppages/setuppageudp.cpp" line="65"/>
-        <source>QSOs logged in WSJT-X will be sent to KLog and KLog will ask before logging into KLog unless &quot;%1&quot; is selected</source>
-        <translation type="unfinished"></translation>
+        <location filename="../setuppages/setuppageudp.cpp" line="66" />
+        <source>QSOs logged in WSJT-X will be sent to KLog and KLog will ask before logging into KLog unless "%1" is selected</source>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageudp.cpp" line="68"/>
+        <location filename="../setuppages/setuppageudp.cpp" line="69" />
         <source>KLog will automatically log any QSO coming from WSJT-X without any manual confirmation.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageudp.cpp" line="71"/>
+        <location filename="../setuppages/setuppageudp.cpp" line="72" />
         <source>Update status information from WSJT-X</source>
-        <translation type="unfinished"></translation>
+        <translation>Atjaunināt statusa informāciju no WSJT-X</translation>
     </message>
     <message>
-        <location filename="../setuppages/setuppageudp.cpp" line="72"/>
+        <location filename="../setuppages/setuppageudp.cpp" line="73" />
         <source>KLog will automatically show and update data coming from WSJT-X (DX callsign, Report, mode, ...)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageudp.cpp" line="88"/>
+        <location filename="../setuppages/setuppageudp.cpp" line="89" />
         <source>UDP port number where the UDP Server will listen for packets.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageudp.cpp" line="88"/>
+        <location filename="../setuppages/setuppageudp.cpp" line="89" />
         <source>Make sure it is the same port that the other programs are sending the data to. Default port is 2237.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageudp.cpp" line="89"/>
+        <location filename="../setuppages/setuppageudp.cpp" line="90" />
         <source>UDP Server will receive QSOs sent from other programs like WSJT-X allowing you to log in KLog automatically from those programs.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageudp.cpp" line="96"/>
+        <location filename="../setuppages/setuppageudp.cpp" line="97" />
         <source>UDP Port</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageudp.cpp" line="106"/>
-        <location filename="../setuppages/setuppageudp.cpp" line="108"/>
+        <location filename="../setuppages/setuppageudp.cpp" line="107" />
+        <location filename="../setuppages/setuppageudp.cpp" line="109" />
         <source>Select the interface to listen for UDP datagrams coming from WSJT-X.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageudp.cpp" line="107"/>
+        <location filename="../setuppages/setuppageudp.cpp" line="108" />
         <source>Network interface</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageudp.cpp" line="116"/>
+        <location filename="../setuppages/setuppageudp.cpp" line="114" />
+        <source>Multicast group address WSJT-X is sending the datagrams to.</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../setuppages/setuppageudp.cpp" line="115" />
+        <source>Leave it empty unless WSJT-X is configured to use multicast, needed to share the datagrams with other programs.</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../setuppages/setuppageudp.cpp" line="116" />
+        <source>Not used</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../setuppages/setuppageudp.cpp" line="118" />
+        <source>Multicast address</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../setuppages/setuppageudp.cpp" line="130" />
         <source>QSOs notification timeout (milisecs)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageudp.cpp" line="117"/>
+        <location filename="../setuppages/setuppageudp.cpp" line="131" />
         <source>Miliseconds that the notification of QSOs received from WSJTX will be shown.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
     <name>SetupPageUserDataPage</name>
     <message>
-        <location filename="../setuppages/setuppageuserdata.cpp" line="43"/>
+        <location filename="../setuppages/setuppageuserdata.cpp" line="44" />
         <source>&amp;Personal data</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageuserdata.cpp" line="44"/>
+        <location filename="../setuppages/setuppageuserdata.cpp" line="45" />
         <source>Station &amp;data</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageuserdata.cpp" line="69"/>
+        <location filename="../setuppages/setuppageuserdata.cpp" line="71" />
+        <source>System default</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../setuppages/setuppageuserdata.cpp" line="84" />
         <source>Enter your name.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageuserdata.cpp" line="70"/>
+        <location filename="../setuppages/setuppageuserdata.cpp" line="85" />
+        <source>Select the language of the KLog user interface. 'System default' uses the language of the operating system.</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../setuppages/setuppageuserdata.cpp" line="86" />
         <source>Enter your address - 1st line.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageuserdata.cpp" line="71"/>
+        <location filename="../setuppages/setuppageuserdata.cpp" line="87" />
         <source>Enter your address - 2nd line.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageuserdata.cpp" line="72"/>
+        <location filename="../setuppages/setuppageuserdata.cpp" line="88" />
         <source>Enter your address - 3rd line.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageuserdata.cpp" line="73"/>
+        <location filename="../setuppages/setuppageuserdata.cpp" line="89" />
         <source>Enter your address - 4th line.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageuserdata.cpp" line="74"/>
+        <location filename="../setuppages/setuppageuserdata.cpp" line="90" />
         <source>Enter your city.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageuserdata.cpp" line="75"/>
+        <location filename="../setuppages/setuppageuserdata.cpp" line="91" />
         <source>Enter your zip code.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageuserdata.cpp" line="76"/>
+        <location filename="../setuppages/setuppageuserdata.cpp" line="92" />
         <source>Enter your province or state.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageuserdata.cpp" line="77"/>
+        <location filename="../setuppages/setuppageuserdata.cpp" line="93" />
         <source>Enter your country.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageuserdata.cpp" line="79"/>
+        <location filename="../setuppages/setuppageuserdata.cpp" line="95" />
         <source>&amp;Name</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageuserdata.cpp" line="80"/>
+        <location filename="../setuppages/setuppageuserdata.cpp" line="96" />
+        <source>Lang&amp;uage</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../setuppages/setuppageuserdata.cpp" line="97" />
         <source>&amp;Address</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageuserdata.cpp" line="81"/>
+        <location filename="../setuppages/setuppageuserdata.cpp" line="98" />
         <source>Cit&amp;y</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageuserdata.cpp" line="82"/>
+        <location filename="../setuppages/setuppageuserdata.cpp" line="99" />
         <source>&amp;Zip Code</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageuserdata.cpp" line="83"/>
+        <location filename="../setuppages/setuppageuserdata.cpp" line="100" />
         <source>Pro&amp;v/State</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageuserdata.cpp" line="84"/>
+        <location filename="../setuppages/setuppageuserdata.cpp" line="101" />
         <source>Countr&amp;y</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageuserdata.cpp" line="130"/>
-        <location filename="../setuppages/setuppageuserdata.cpp" line="131"/>
-        <location filename="../setuppages/setuppageuserdata.cpp" line="132"/>
+        <location filename="../setuppages/setuppageuserdata.cpp" line="150" />
+        <location filename="../setuppages/setuppageuserdata.cpp" line="151" />
+        <location filename="../setuppages/setuppageuserdata.cpp" line="152" />
         <source>Enter your information for rig</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageuserdata.cpp" line="133"/>
-        <location filename="../setuppages/setuppageuserdata.cpp" line="134"/>
-        <location filename="../setuppages/setuppageuserdata.cpp" line="135"/>
+        <location filename="../setuppages/setuppageuserdata.cpp" line="153" />
+        <location filename="../setuppages/setuppageuserdata.cpp" line="154" />
+        <location filename="../setuppages/setuppageuserdata.cpp" line="155" />
         <source>Enter your information for antenna</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageuserdata.cpp" line="136"/>
+        <location filename="../setuppages/setuppageuserdata.cpp" line="156" />
         <source>Enter your power information.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageuserdata.cpp" line="138"/>
+        <location filename="../setuppages/setuppageuserdata.cpp" line="158" />
         <source>&amp;Rig 1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageuserdata.cpp" line="139"/>
+        <location filename="../setuppages/setuppageuserdata.cpp" line="159" />
         <source>R&amp;ig 2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageuserdata.cpp" line="140"/>
+        <location filename="../setuppages/setuppageuserdata.cpp" line="160" />
         <source>Ri&amp;g 3</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageuserdata.cpp" line="141"/>
+        <location filename="../setuppages/setuppageuserdata.cpp" line="161" />
         <source>Antenna &amp;1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageuserdata.cpp" line="142"/>
+        <location filename="../setuppages/setuppageuserdata.cpp" line="162" />
         <source>Antenna &amp;2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageuserdata.cpp" line="143"/>
+        <location filename="../setuppages/setuppageuserdata.cpp" line="163" />
         <source>Antenna &amp;3</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageuserdata.cpp" line="144"/>
+        <location filename="../setuppages/setuppageuserdata.cpp" line="164" />
         <source>Po&amp;wer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageuserdata.cpp" line="177"/>
+        <location filename="../setuppages/setuppageuserdata.cpp" line="197" />
         <source>Enter the station callsign that will be used for logging.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageuserdata.cpp" line="178"/>
+        <location filename="../setuppages/setuppageuserdata.cpp" line="198" />
         <source>Enter the operators (comma separated if more than one).</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageuserdata.cpp" line="179"/>
+        <location filename="../setuppages/setuppageuserdata.cpp" line="199" />
         <source>Enter the locator of your station. Alternatively, KLog can use an approximate locator based on your callsign.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageuserdata.cpp" line="181"/>
+        <location filename="../setuppages/setuppageuserdata.cpp" line="201" />
         <source>&amp;Callsign</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageuserdata.cpp" line="182"/>
+        <location filename="../setuppages/setuppageuserdata.cpp" line="202" />
         <source>&amp;Operators</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageuserdata.cpp" line="183"/>
+        <location filename="../setuppages/setuppageuserdata.cpp" line="203" />
         <source>&amp;CQ Zone</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageuserdata.cpp" line="184"/>
+        <location filename="../setuppages/setuppageuserdata.cpp" line="204" />
         <source>&amp;ITU Zone</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;ITU zona</translation>
     </message>
     <message>
-        <location filename="../setuppages/setuppageuserdata.cpp" line="185"/>
-        <location filename="../setuppages/setuppageuserdata.cpp" line="374"/>
+        <location filename="../setuppages/setuppageuserdata.cpp" line="205" />
+        <location filename="../setuppages/setuppageuserdata.cpp" line="394" />
         <source>&amp;Locator</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageuserdata.cpp" line="370"/>
+        <location filename="../setuppages/setuppageuserdata.cpp" line="390" />
         <source>&amp;Locator (not valid)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../setuppages/setuppageuserdata.cpp" line="745" />
+        <source>KLog - Language</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../setuppages/setuppageuserdata.cpp" line="746" />
+        <source>The language change will take effect the next time you start KLog.</source>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
     <name>SetupPageWorldEditor</name>
     <message>
-        <location filename="../setuppages/setuppageworldeditor.cpp" line="60"/>
+        <location filename="../setuppages/setuppageworldeditor.cpp" line="143" />
+        <location filename="../setuppages/setuppageworldeditor.cpp" line="465" />
         <source>Add</source>
-        <translation type="unfinished"></translation>
+        <translation>Vissi</translation>
     </message>
     <message>
-        <location filename="../setuppages/setuppageworldeditor.cpp" line="61"/>
+        <location filename="../setuppages/setuppageworldeditor.cpp" line="144" />
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Dzēst</translation>
     </message>
     <message>
-        <location filename="../setuppages/setuppageworldeditor.cpp" line="62"/>
+        <location filename="../setuppages/setuppageworldeditor.cpp" line="145" />
         <source>Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Rediģēt</translation>
     </message>
     <message>
-        <location filename="../setuppages/setuppageworldeditor.cpp" line="65"/>
+        <location filename="../setuppages/setuppageworldeditor.cpp" line="148" />
         <source>Export World</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageworldeditor.cpp" line="66"/>
+        <location filename="../setuppages/setuppageworldeditor.cpp" line="149" />
         <source>Import World</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageworldeditor.cpp" line="72"/>
-        <location filename="../setuppages/setuppageworldeditor.cpp" line="73"/>
-        <location filename="../setuppages/setuppageworldeditor.cpp" line="74"/>
-        <location filename="../setuppages/setuppageworldeditor.cpp" line="78"/>
+        <location filename="../setuppages/setuppageworldeditor.cpp" line="155" />
+        <location filename="../setuppages/setuppageworldeditor.cpp" line="156" />
+        <location filename="../setuppages/setuppageworldeditor.cpp" line="157" />
+        <location filename="../setuppages/setuppageworldeditor.cpp" line="161" />
         <source>Still not implemented.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageworldeditor.cpp" line="79"/>
+        <location filename="../setuppages/setuppageworldeditor.cpp" line="162" />
         <source>Import a new cty.csv file</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageworldeditor.cpp" line="109"/>
+        <location filename="../setuppages/setuppageworldeditor.cpp" line="194" />
         <source>An entities information file (cty.csv) has been detected in your KLog folder and will be loaded.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageworldeditor.cpp" line="122"/>
+        <location filename="../setuppages/setuppageworldeditor.cpp" line="205" />
         <source>No entities information file (cty.csv) has been detected in your KLog folder.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageworldeditor.cpp" line="123"/>
+        <location filename="../setuppages/setuppageworldeditor.cpp" line="206" />
         <source>KLog will not be able to show entities information.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageworldeditor.cpp" line="208"/>
+        <location filename="../setuppages/setuppageworldeditor.cpp" line="309" />
         <source>Prefix</source>
-        <translation type="unfinished"></translation>
+        <translation>Prefiks</translation>
     </message>
     <message>
-        <location filename="../setuppages/setuppageworldeditor.cpp" line="210"/>
+        <location filename="../setuppages/setuppageworldeditor.cpp" line="311" />
+        <location filename="../setuppages/setuppageworldeditor.cpp" line="458" />
         <source>Entity</source>
-        <translation type="unfinished">Entity</translation>
+        <translation>Entity</translation>
     </message>
     <message>
-        <location filename="../setuppages/setuppageworldeditor.cpp" line="212"/>
+        <location filename="../setuppages/setuppageworldeditor.cpp" line="313" />
         <source>ARRL ID</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageworldeditor.cpp" line="214"/>
+        <location filename="../setuppages/setuppageworldeditor.cpp" line="316" />
         <source>Continent</source>
-        <translation type="unfinished">Kontinents</translation>
+        <translation>Kontinents</translation>
     </message>
     <message>
-        <location filename="../setuppages/setuppageworldeditor.cpp" line="216"/>
+        <location filename="../setuppages/setuppageworldeditor.cpp" line="318" />
+        <location filename="../setuppages/setuppageworldeditor.cpp" line="458" />
         <source>CQ Zone</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageworldeditor.cpp" line="218"/>
+        <location filename="../setuppages/setuppageworldeditor.cpp" line="320" />
+        <location filename="../setuppages/setuppageworldeditor.cpp" line="458" />
         <source>ITU Zone</source>
-        <translation type="unfinished"></translation>
+        <translation>ITU zona</translation>
     </message>
     <message>
-        <location filename="../setuppages/setuppageworldeditor.cpp" line="220"/>
+        <location filename="../setuppages/setuppageworldeditor.cpp" line="322" />
         <source>UTC</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageworldeditor.cpp" line="222"/>
+        <location filename="../setuppages/setuppageworldeditor.cpp" line="324" />
         <source>Latitude</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageworldeditor.cpp" line="224"/>
+        <location filename="../setuppages/setuppageworldeditor.cpp" line="326" />
         <source>Longitude</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageworldeditor.cpp" line="227"/>
+        <location filename="../setuppages/setuppageworldeditor.cpp" line="329" />
         <source>Deleted</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageworldeditor.cpp" line="230"/>
+        <location filename="../setuppages/setuppageworldeditor.cpp" line="332" />
         <source>Since Date</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageworldeditor.cpp" line="232"/>
+        <location filename="../setuppages/setuppageworldeditor.cpp" line="334" />
         <source>To Date</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageworldeditor.cpp" line="328"/>
+        <location filename="../setuppages/setuppageworldeditor.cpp" line="431" />
         <source>Open File</source>
-        <translation type="unfinished">Atver failu</translation>
+        <translation>Atver failu</translation>
     </message>
     <message>
-        <location filename="../setuppages/setuppageworldeditor.cpp" line="328"/>
+        <location filename="../setuppages/setuppageworldeditor.cpp" line="431" />
         <source>BigCTY (*.csv)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageworldeditor.cpp" line="336"/>
+        <location filename="../setuppages/setuppageworldeditor.cpp" line="439" />
         <source>Entities information has been updated.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../setuppages/setuppageworldeditor.cpp" line="342"/>
+        <location filename="../setuppages/setuppageworldeditor.cpp" line="445" />
         <source>Entities information has not been updated.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../setuppages/setuppageworldeditor.cpp" line="454" />
+        <source>Special Callsigns</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../setuppages/setuppageworldeditor.cpp" line="455" />
+        <source>Callsigns not in the CTY data that should map to a specific DXCC entity (e.g. expedition callsigns like RI1ANY for Antarctica).</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../setuppages/setuppageworldeditor.cpp" line="458" />
+        <source>Callsign</source>
+        <translation>Izsaukuma signāls</translation>
+    </message>
+    <message>
+        <location filename="../setuppages/setuppageworldeditor.cpp" line="466" />
+        <source>Remove</source>
+        <translation>Noņemt</translation>
+    </message>
+    <message>
+        <location filename="../setuppages/setuppageworldeditor.cpp" line="518" />
+        <source>Invalid Callsign</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../setuppages/setuppageworldeditor.cpp" line="519" />
+        <source>'%1' is not a valid callsign.</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../setuppages/setuppageworldeditor.cpp" line="525" />
+        <location filename="../setuppages/setuppageworldeditor.cpp" line="553" />
+        <source>Error</source>
+        <translation>Kļūda</translation>
+    </message>
+    <message>
+        <location filename="../setuppages/setuppageworldeditor.cpp" line="526" />
+        <source>Could not add the special callsign. It may already exist.</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../setuppages/setuppageworldeditor.cpp" line="541" />
+        <source>Remove Special Callsign</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../setuppages/setuppageworldeditor.cpp" line="542" />
+        <source>Remove '%1' from the special callsigns list?</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../setuppages/setuppageworldeditor.cpp" line="554" />
+        <source>Could not remove the special callsign '%1'.</source>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
     <name>ShowAdifImportWidget</name>
     <message>
-        <location filename="../widgets/showadifimportwidget.cpp" line="55"/>
+        <location filename="../widgets/showadifimportwidget.cpp" line="55" />
         <source>The following QSOs are those QSOs that you have received the LoTW confirmation.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../widgets/showadifimportwidget.cpp" line="56"/>
+        <location filename="../widgets/showadifimportwidget.cpp" line="56" />
         <source>Ok</source>
         <translation>Labi</translation>
     </message>
     <message>
-        <location filename="../widgets/showadifimportwidget.cpp" line="66"/>
+        <location filename="../widgets/showadifimportwidget.cpp" line="66" />
         <source>DX</source>
         <translation>DX</translation>
     </message>
     <message>
-        <location filename="../widgets/showadifimportwidget.cpp" line="66"/>
+        <location filename="../widgets/showadifimportwidget.cpp" line="66" />
         <source>Date/Time</source>
         <translation>Datums/Laiks</translation>
     </message>
     <message>
-        <location filename="../widgets/showadifimportwidget.cpp" line="66"/>
+        <location filename="../widgets/showadifimportwidget.cpp" line="66" />
         <source>Band</source>
         <translation>Diepazons</translation>
     </message>
     <message>
-        <location filename="../widgets/showadifimportwidget.cpp" line="66"/>
+        <location filename="../widgets/showadifimportwidget.cpp" line="66" />
         <source>Mode</source>
         <translation>Izstarojuma veids</translation>
     </message>
@@ -7658,7 +8536,7 @@ The log will not be opened.</source>
 <context>
     <name>ShowErrorDialog</name>
     <message>
-        <location filename="../showerrordialog.cpp" line="33"/>
+        <location filename="../showerrordialog.cpp" line="33" />
         <source>KLog Message</source>
         <translation>KLog ziņojums</translation>
     </message>
@@ -7666,50 +8544,142 @@ The log will not be opened.</source>
 <context>
     <name>SoftwareUpdateDialog</name>
     <message>
-        <location filename="../softwareupdatedialog.cpp" line="42"/>
+        <location filename="../softwareupdatedialog.cpp" line="42" />
         <source>Ok</source>
         <translation>Labi</translation>
     </message>
     <message>
-        <location filename="../softwareupdatedialog.cpp" line="56"/>
+        <location filename="../softwareupdatedialog.cpp" line="56" />
         <source>KLog update</source>
         <translation>Klog atjauninājums</translation>
     </message>
     <message>
-        <location filename="../softwareupdatedialog.cpp" line="69"/>
+        <location filename="../softwareupdatedialog.cpp" line="69" />
         <source>&lt;center&gt;&lt;h2&gt;KLog new version (%1) is available! &lt;/h2&gt;&lt;/center&gt;&lt;br&gt;There is a new version of KLog available.&lt;br&gt;&lt;br&gt;&lt;b&gt;You can get the new version from:&lt;br&gt;&lt;br&gt;&lt;center&gt;&lt;a href=https://github.com/ea4k/klog&gt;https://github.com/ea4k/klog&lt;/a&gt;&lt;/center&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;center&gt;&lt;h2&gt;Ir pieejama jauna KLog versija (%1)! &lt;/h2&gt;&lt;/center&gt;&lt;br&gt;Ir pieejama jauna KLog versija.&lt;br&gt;&lt;br&gt;&lt;b&gt;Jauno versiju var iegūt šeit:&lt;br&gt;&lt;br&gt;&lt;center&gt;&lt;a href=https://github.com/ea4k/klog&gt;https://github.com/ea4k/klog&lt;/a&gt;&lt;/center&gt;</translation>
     </message>
     <message>
-        <location filename="../softwareupdatedialog.cpp" line="73"/>
+        <location filename="../softwareupdatedialog.cpp" line="73" />
         <source>Congratulations!</source>
-        <translation type="unfinished"></translation>
+        <translation>Apsveicam!</translation>
     </message>
     <message>
-        <location filename="../softwareupdatedialog.cpp" line="73"/>
+        <location filename="../softwareupdatedialog.cpp" line="73" />
         <source>Your KLog has been updated.</source>
         <translation>Jūsu KLog ir atjaunināts.</translation>
     </message>
     <message>
-        <location filename="../softwareupdatedialog.cpp" line="73"/>
+        <location filename="../softwareupdatedialog.cpp" line="73" />
         <source>You already have the latest version.</source>
         <translation>Jums jau ir jaunākā versija.</translation>
     </message>
 </context>
 <context>
+    <name>SolarIndicator</name>
+    <message>
+        <location filename="../solarindicator.cpp" line="15" />
+        <source>Solar flux, A and K index. Source: hamqsl.com</source>
+        <translation>Saules plūsma, A un K indekss. Avots: hamqsl.com</translation>
+    </message>
+</context>
+<context>
+    <name>StartProfileDialog</name>
+    <message>
+        <location filename="../startprofiledialog.cpp" line="85" />
+        <source>Select profile</source>
+        <translation>Profila izvēle</translation>
+    </message>
+    <message>
+        <location filename="../startprofiledialog.cpp" line="91" />
+        <source>Callsign</source>
+        <translation>Izsaukuma signāls</translation>
+    </message>
+    <message>
+        <location filename="../startprofiledialog.cpp" line="91" />
+        <source>QSOs</source>
+        <translation>QSO</translation>
+    </message>
+    <message>
+        <location filename="../startprofiledialog.cpp" line="91" />
+        <source>Note</source>
+        <translation>Piezīme</translation>
+    </message>
+    <message>
+        <location filename="../startprofiledialog.cpp" line="99" />
+        <source>Open</source>
+        <translation>Atvērt</translation>
+    </message>
+    <message>
+        <location filename="../startprofiledialog.cpp" line="100" />
+        <location filename="../startprofiledialog.cpp" line="403" />
+        <source>New profile</source>
+        <translation>Jauns profils</translation>
+    </message>
+    <message>
+        <location filename="../startprofiledialog.cpp" line="101" />
+        <source>Edit</source>
+        <translation>Rediģēt</translation>
+    </message>
+    <message>
+        <location filename="../startprofiledialog.cpp" line="102" />
+        <source>Delete</source>
+        <translation>Dzēst</translation>
+    </message>
+    <message>
+        <location filename="../startprofiledialog.cpp" line="103" />
+        <source>Cancel</source>
+        <translation>Atcelt</translation>
+    </message>
+    <message>
+        <location filename="../startprofiledialog.cpp" line="112" />
+        <source>Open this profile automatically next time</source>
+        <translation>Nākamreiz atvērt šo profilu automātiski</translation>
+    </message>
+    <message>
+        <location filename="../startprofiledialog.cpp" line="406" />
+        <source>Error</source>
+        <translation>Kļūda</translation>
+    </message>
+    <message>
+        <location filename="../startprofiledialog.cpp" line="407" />
+        <source>Could not create the profile. Does callsign %1 already exist?</source>
+        <translation>Profilu neizdevās izveidot. Vai izsaukuma signāls %1 jau eksistē?</translation>
+    </message>
+    <message>
+        <location filename="../startprofiledialog.cpp" line="416" />
+        <source>Edit profile %1</source>
+        <translation>Rediģēt profilu %1</translation>
+    </message>
+    <message>
+        <location filename="../startprofiledialog.cpp" line="428" />
+        <source>Delete profile?</source>
+        <translation>Dzēst profilu?</translation>
+    </message>
+    <message>
+        <location filename="../startprofiledialog.cpp" line="429" />
+        <source>Delete profile %1 (%2 QSOs)?</source>
+        <translation>Dzēst profilu %1 (%2 QSO)?</translation>
+    </message>
+    <message>
+        <location filename="../startprofiledialog.cpp" line="434" />
+        <source>Cannot delete</source>
+        <translation>Nevar dzēst</translation>
+    </message>
+</context>
+<context>
     <name>StartWizard</name>
     <message>
-        <location filename="../startwizard.cpp" line="68"/>
+        <location filename="../startwizard.cpp" line="68" />
         <source>KLog - The free hamradio logging program</source>
         <translation>KLog – bezmaksas radioamatieru sakaru žurnāla programma</translation>
     </message>
     <message>
-        <location filename="../startwizard.cpp" line="93"/>
+        <location filename="../startwizard.cpp" line="93" />
         <source>Quit Setup</source>
         <translation>Aizvērt iestatīšanu.</translation>
     </message>
     <message>
-        <location filename="../startwizard.cpp" line="93"/>
+        <location filename="../startwizard.cpp" line="93" />
         <source>Setup is not complete yet. Are you sure you want to quit setup?</source>
         <translation>Iestatīšana vēl nav pabeigta. Vai tiešām vēlaties to aizvērt?</translation>
     </message>
@@ -7717,82 +8687,82 @@ The log will not be opened.</source>
 <context>
     <name>StatisticsWidget</name>
     <message>
-        <location filename="../statisticswidget.cpp" line="264"/>
+        <location filename="../statisticswidget.cpp" line="264" />
         <source>QSO per year</source>
         <translation>QSO gadā</translation>
     </message>
     <message>
-        <location filename="../statisticswidget.cpp" line="265"/>
+        <location filename="../statisticswidget.cpp" line="265" />
         <source>DXCC per year</source>
         <translation>DXCC gadā</translation>
     </message>
     <message>
-        <location filename="../statisticswidget.cpp" line="266"/>
+        <location filename="../statisticswidget.cpp" line="266" />
         <source>CQ zones per year</source>
         <translation>CQ zonas gadā</translation>
     </message>
     <message>
-        <location filename="../statisticswidget.cpp" line="267"/>
+        <location filename="../statisticswidget.cpp" line="267" />
         <source>QSO per band</source>
         <translation>QSO katrā diapazonā</translation>
     </message>
     <message>
-        <location filename="../statisticswidget.cpp" line="268"/>
+        <location filename="../statisticswidget.cpp" line="268" />
         <source>QSO per mode</source>
         <translation>QSO katrāizstarojuma veidā</translation>
     </message>
     <message>
-        <location filename="../statisticswidget.cpp" line="269"/>
+        <location filename="../statisticswidget.cpp" line="269" />
         <source>QSO per DXCC</source>
         <translation>QSO caur DXCC</translation>
     </message>
     <message>
-        <location filename="../statisticswidget.cpp" line="270"/>
+        <location filename="../statisticswidget.cpp" line="270" />
         <source>QSO per Continent</source>
         <translation>QSO katrā kontinentā</translation>
     </message>
     <message>
-        <location filename="../statisticswidget.cpp" line="271"/>
+        <location filename="../statisticswidget.cpp" line="271" />
         <source>QSO per hour</source>
         <translation>QSO pa stundām</translation>
     </message>
     <message>
-        <location filename="../statisticswidget.cpp" line="272"/>
+        <location filename="../statisticswidget.cpp" line="272" />
         <source>QSO per month</source>
         <translation>QSO pa mēnešiem</translation>
     </message>
     <message>
-        <location filename="../statisticswidget.cpp" line="273"/>
+        <location filename="../statisticswidget.cpp" line="273" />
         <source>Worked / Confirmed status</source>
         <translation>Nostrādāts / apstiprināts</translation>
     </message>
     <message>
-        <location filename="../statisticswidget.cpp" line="274"/>
+        <location filename="../statisticswidget.cpp" line="274" />
         <source>Worked / Sent status</source>
         <translation>Nostrādāts / nosūtīts</translation>
     </message>
     <message>
-        <location filename="../statisticswidget.cpp" line="275"/>
+        <location filename="../statisticswidget.cpp" line="275" />
         <source>Sent / Confirmed status</source>
-        <translation>Nosūtīšanas / apstiprināšanas statuss</translation>
+        <translation>Nosūtīts / apstiprināts</translation>
     </message>
     <message>
-        <location filename="../statisticswidget.cpp" line="276"/>
+        <location filename="../statisticswidget.cpp" line="276" />
         <source>Satellite grid status</source>
         <translation>Satelītu lokatoru lauku statuss</translation>
     </message>
     <message>
-        <location filename="../statisticswidget.cpp" line="277"/>
+        <location filename="../statisticswidget.cpp" line="277" />
         <source>Satellite DXCC status</source>
         <translation>Satelītu DXCC statuss</translation>
     </message>
     <message>
-        <location filename="../statisticswidget.cpp" line="278"/>
+        <location filename="../statisticswidget.cpp" line="278" />
         <source>Grids per band status</source>
         <translation>Lokatoru statuss pa diapazoniem</translation>
     </message>
     <message>
-        <location filename="../statisticswidget.cpp" line="279"/>
+        <location filename="../statisticswidget.cpp" line="279" />
         <source>DXCC per band status</source>
         <translation>DXCC statuss pa diapazoniem</translation>
     </message>
@@ -7800,37 +8770,37 @@ The log will not be opened.</source>
 <context>
     <name>StatsCQZPerYearBarChartWidget</name>
     <message>
-        <location filename="../charts/statscqzperyearbarchartwidget.cpp" line="75"/>
+        <location filename="../charts/statscqzperyearbarchartwidget.cpp" line="75" />
         <source>CQ Zones per year</source>
         <translation>CQ zonas gadā</translation>
     </message>
     <message>
-        <location filename="../charts/statscqzperyearbarchartwidget.cpp" line="79"/>
+        <location filename="../charts/statscqzperyearbarchartwidget.cpp" line="79" />
         <source>Reading data ... </source>
         <translation>Notiek datu lasīšana ... </translation>
     </message>
     <message>
-        <location filename="../charts/statscqzperyearbarchartwidget.cpp" line="79"/>
+        <location filename="../charts/statscqzperyearbarchartwidget.cpp" line="79" />
         <source>Abort reading</source>
         <translation>Pārtraukt lasīšanu</translation>
     </message>
     <message>
-        <location filename="../charts/statscqzperyearbarchartwidget.cpp" line="84"/>
+        <location filename="../charts/statscqzperyearbarchartwidget.cpp" line="84" />
         <source>CQ zones</source>
         <translation>CQ zonas</translation>
     </message>
     <message>
-        <location filename="../charts/statscqzperyearbarchartwidget.cpp" line="85"/>
+        <location filename="../charts/statscqzperyearbarchartwidget.cpp" line="85" />
         <source>CQ zones per year</source>
         <translation>CQ zonas gadā</translation>
     </message>
     <message>
-        <location filename="../charts/statscqzperyearbarchartwidget.cpp" line="97"/>
+        <location filename="../charts/statscqzperyearbarchartwidget.cpp" line="97" />
         <source>Reading data ...</source>
         <translation>Notiek datu lasīšana ...</translation>
     </message>
     <message>
-        <location filename="../charts/statscqzperyearbarchartwidget.cpp" line="97"/>
+        <location filename="../charts/statscqzperyearbarchartwidget.cpp" line="97" />
         <source>Years: %1/%2</source>
         <translation>Gadi: %1/%2</translation>
     </message>
@@ -7838,58 +8808,58 @@ The log will not be opened.</source>
 <context>
     <name>StatsDXCCOnSatsWidget</name>
     <message>
-        <location filename="../charts/statsdxccsonsatswidget.cpp" line="56"/>
+        <location filename="../charts/statsdxccsonsatswidget.cpp" line="57" />
         <source>Show confirmed only</source>
         <translation>Rādīt tikai apstiprināts</translation>
     </message>
     <message>
-        <location filename="../charts/statsdxccsonsatswidget.cpp" line="58"/>
+        <location filename="../charts/statsdxccsonsatswidget.cpp" line="59" />
         <source>Only LEO sats</source>
         <comment>LEO means Low Earth Orbiting and it is a well known word for hams. Do not translate if not sure.</comment>
         <translation>Tikai LEO satelīti</translation>
     </message>
     <message>
-        <location filename="../charts/statsdxccsonsatswidget.cpp" line="74"/>
+        <location filename="../charts/statsdxccsonsatswidget.cpp" line="75" />
         <source>Number</source>
         <translation>Numurs</translation>
     </message>
     <message>
-        <location filename="../charts/statsdxccsonsatswidget.cpp" line="115"/>
+        <location filename="../charts/statsdxccsonsatswidget.cpp" line="117" />
         <source>Callsign</source>
         <translation>Izsaukuma signāls</translation>
     </message>
     <message>
-        <location filename="../charts/statsdxccsonsatswidget.cpp" line="116"/>
+        <location filename="../charts/statsdxccsonsatswidget.cpp" line="118" />
         <source>Date</source>
         <translation>Datums</translation>
     </message>
     <message>
-        <location filename="../charts/statsdxccsonsatswidget.cpp" line="117"/>
+        <location filename="../charts/statsdxccsonsatswidget.cpp" line="119" />
         <source>Band</source>
         <translation>Diapazons</translation>
     </message>
     <message>
-        <location filename="../charts/statsdxccsonsatswidget.cpp" line="118"/>
+        <location filename="../charts/statsdxccsonsatswidget.cpp" line="120" />
         <source>Mode</source>
         <translation>Mode</translation>
     </message>
     <message>
-        <location filename="../charts/statsdxccsonsatswidget.cpp" line="119"/>
+        <location filename="../charts/statsdxccsonsatswidget.cpp" line="121" />
         <source>DXCC</source>
         <translation>DXCC</translation>
     </message>
     <message>
-        <location filename="../charts/statsdxccsonsatswidget.cpp" line="120"/>
+        <location filename="../charts/statsdxccsonsatswidget.cpp" line="122" />
         <source>Satellite</source>
         <translation>Satelīti</translation>
     </message>
     <message>
-        <location filename="../charts/statsdxccsonsatswidget.cpp" line="121"/>
+        <location filename="../charts/statsdxccsonsatswidget.cpp" line="123" />
         <source>Confirmed</source>
         <translation>Apstiprināts</translation>
     </message>
     <message>
-        <location filename="../charts/statsdxccsonsatswidget.cpp" line="150"/>
+        <location filename="../charts/statsdxccsonsatswidget.cpp" line="152" />
         <source>No</source>
         <translation>Nē</translation>
     </message>
@@ -7897,159 +8867,159 @@ The log will not be opened.</source>
 <context>
     <name>StatsEntitiesPerYearBarChartWidget</name>
     <message>
-        <location filename="../charts/statsentitiesperyearbarchartwidget.cpp" line="81"/>
+        <location filename="../charts/statsentitiesperyearbarchartwidget.cpp" line="81" />
         <source>Chart title</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../charts/statsentitiesperyearbarchartwidget.cpp" line="85"/>
+        <location filename="../charts/statsentitiesperyearbarchartwidget.cpp" line="85" />
         <source>Reading data ... </source>
-        <translation type="unfinished">Notiek datu lasīšana ... </translation>
+        <translation>Notiek datu lasīšana ... </translation>
     </message>
     <message>
-        <location filename="../charts/statsentitiesperyearbarchartwidget.cpp" line="85"/>
+        <location filename="../charts/statsentitiesperyearbarchartwidget.cpp" line="85" />
         <source>Abort reading</source>
-        <translation type="unfinished">Pārtraukt lasīšanu</translation>
+        <translation>Pārtraukt lasīšanu</translation>
     </message>
     <message>
-        <location filename="../charts/statsentitiesperyearbarchartwidget.cpp" line="76"/>
-        <location filename="../charts/statsentitiesperyearbarchartwidget.cpp" line="77"/>
+        <location filename="../charts/statsentitiesperyearbarchartwidget.cpp" line="76" />
+        <location filename="../charts/statsentitiesperyearbarchartwidget.cpp" line="77" />
         <source>DXCC Entities</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../charts/statsentitiesperyearbarchartwidget.cpp" line="101"/>
+        <location filename="../charts/statsentitiesperyearbarchartwidget.cpp" line="101" />
         <source>Reading data ...</source>
-        <translation type="unfinished">Notiek datu lasīšana ...</translation>
+        <translation>Notiek datu lasīšana ...</translation>
     </message>
     <message>
-        <location filename="../charts/statsentitiesperyearbarchartwidget.cpp" line="101"/>
+        <location filename="../charts/statsentitiesperyearbarchartwidget.cpp" line="101" />
         <source>Entities: </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
     <name>StatsFieldPerBandWidget</name>
     <message>
-        <location filename="../charts/statsfieldperbandwidget.cpp" line="51"/>
-        <location filename="../charts/statsfieldperbandwidget.cpp" line="119"/>
+        <location filename="../charts/statsfieldperbandwidget.cpp" line="51" />
+        <location filename="../charts/statsfieldperbandwidget.cpp" line="123" />
         <source>All</source>
-        <translation type="unfinished">Visi</translation>
+        <translation>Visi</translation>
     </message>
     <message>
-        <location filename="../charts/statsfieldperbandwidget.cpp" line="67"/>
+        <location filename="../charts/statsfieldperbandwidget.cpp" line="71" />
         <source>Mode: </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../charts/statsfieldperbandwidget.cpp" line="93"/>
+        <location filename="../charts/statsfieldperbandwidget.cpp" line="97" />
         <source>Band</source>
-        <translation type="unfinished"></translation>
+        <translation>Diapazons</translation>
     </message>
     <message>
-        <location filename="../charts/statsfieldperbandwidget.cpp" line="94"/>
+        <location filename="../charts/statsfieldperbandwidget.cpp" line="98" />
         <source>Worked</source>
-        <translation type="unfinished">Strādāja</translation>
+        <translation>Strādāja</translation>
     </message>
     <message>
-        <location filename="../charts/statsfieldperbandwidget.cpp" line="95"/>
+        <location filename="../charts/statsfieldperbandwidget.cpp" line="99" />
         <source>Confirmed</source>
-        <translation type="unfinished">Apstiprināts</translation>
+        <translation>Apstiprināts</translation>
     </message>
 </context>
 <context>
     <name>StatsGridsOnSatsWidget</name>
     <message>
-        <location filename="../charts/statsgridsonsatswidget.cpp" line="56"/>
+        <location filename="../charts/statsgridsonsatswidget.cpp" line="57" />
         <source>Show confirmed only</source>
-        <translation type="unfinished">Rādīt tikai apstiprināts</translation>
+        <translation>Rādīt tikai apstiprināts</translation>
     </message>
     <message>
-        <location filename="../charts/statsgridsonsatswidget.cpp" line="58"/>
+        <location filename="../charts/statsgridsonsatswidget.cpp" line="59" />
         <source>Only LEO sats</source>
         <comment>LEO means Low Earth Orbiting and it is a well known word for hams. Do not translate if not sure.</comment>
-        <translation type="unfinished">Tikai LEO satelīti</translation>
+        <translation>Tikai LEO satelīti</translation>
     </message>
     <message>
-        <location filename="../charts/statsgridsonsatswidget.cpp" line="71"/>
+        <location filename="../charts/statsgridsonsatswidget.cpp" line="72" />
         <source>Number</source>
-        <translation type="unfinished">Numurs</translation>
+        <translation>Numurs</translation>
     </message>
     <message>
-        <location filename="../charts/statsgridsonsatswidget.cpp" line="107"/>
+        <location filename="../charts/statsgridsonsatswidget.cpp" line="108" />
         <source>Callsign</source>
-        <translation type="unfinished">Izsaukuma signāls</translation>
+        <translation>Izsaukuma signāls</translation>
     </message>
     <message>
-        <location filename="../charts/statsgridsonsatswidget.cpp" line="108"/>
+        <location filename="../charts/statsgridsonsatswidget.cpp" line="109" />
         <source>Date</source>
-        <translation type="unfinished">Datums</translation>
+        <translation>Datums</translation>
     </message>
     <message>
-        <location filename="../charts/statsgridsonsatswidget.cpp" line="109"/>
+        <location filename="../charts/statsgridsonsatswidget.cpp" line="110" />
         <source>Band</source>
-        <translation type="unfinished"></translation>
+        <translation>Diapazons</translation>
     </message>
     <message>
-        <location filename="../charts/statsgridsonsatswidget.cpp" line="110"/>
+        <location filename="../charts/statsgridsonsatswidget.cpp" line="111" />
         <source>Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Mode</translation>
     </message>
     <message>
-        <location filename="../charts/statsgridsonsatswidget.cpp" line="111"/>
+        <location filename="../charts/statsgridsonsatswidget.cpp" line="112" />
         <source>Grid</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../charts/statsgridsonsatswidget.cpp" line="112"/>
+        <location filename="../charts/statsgridsonsatswidget.cpp" line="113" />
         <source>Satellite</source>
-        <translation type="unfinished"></translation>
+        <translation>Satelīti</translation>
     </message>
     <message>
-        <location filename="../charts/statsgridsonsatswidget.cpp" line="113"/>
+        <location filename="../charts/statsgridsonsatswidget.cpp" line="114" />
         <source>Confirmed</source>
-        <translation type="unfinished">Apstiprināts</translation>
+        <translation>Apstiprināts</translation>
     </message>
     <message>
-        <location filename="../charts/statsgridsonsatswidget.cpp" line="141"/>
+        <location filename="../charts/statsgridsonsatswidget.cpp" line="142" />
         <source>No</source>
-        <translation type="unfinished">Nē</translation>
+        <translation>Nē</translation>
     </message>
 </context>
 <context>
     <name>StatsQSOsPerBandBarChartWidget</name>
     <message>
-        <location filename="../charts/statsqsosperbandbarchartwidget.cpp" line="74"/>
+        <location filename="../charts/statsqsosperbandbarchartwidget.cpp" line="74" />
         <source>QSOs per band</source>
         <translation>QSO skaits pa diapazoniem</translation>
     </message>
     <message>
-        <location filename="../charts/statsqsosperbandbarchartwidget.cpp" line="78"/>
+        <location filename="../charts/statsqsosperbandbarchartwidget.cpp" line="78" />
         <source>Reading data ... </source>
         <translation>Notiek datu lasīšana ... </translation>
     </message>
     <message>
-        <location filename="../charts/statsqsosperbandbarchartwidget.cpp" line="78"/>
+        <location filename="../charts/statsqsosperbandbarchartwidget.cpp" line="78" />
         <source>Abort reading</source>
         <translation>Pārtraukt lasīšanu</translation>
     </message>
     <message>
-        <location filename="../charts/statsqsosperbandbarchartwidget.cpp" line="83"/>
+        <location filename="../charts/statsqsosperbandbarchartwidget.cpp" line="83" />
         <source>Bands</source>
         <translation>Diapazons</translation>
     </message>
     <message>
-        <location filename="../charts/statsqsosperbandbarchartwidget.cpp" line="84"/>
+        <location filename="../charts/statsqsosperbandbarchartwidget.cpp" line="84" />
         <source>QSOs per band distribution</source>
         <translation>QSO sadalījums pa diapazoniem</translation>
     </message>
     <message>
-        <location filename="../charts/statsqsosperbandbarchartwidget.cpp" line="94"/>
+        <location filename="../charts/statsqsosperbandbarchartwidget.cpp" line="94" />
         <source>Reading data ...</source>
-        <translation>Notiek datu nolasīšana ...</translation>
+        <translation>Notiek datu lasīšana ...</translation>
     </message>
     <message>
-        <location filename="../charts/statsqsosperbandbarchartwidget.cpp" line="94"/>
+        <location filename="../charts/statsqsosperbandbarchartwidget.cpp" line="94" />
         <source>Bands: </source>
         <translation>Diapazoni: </translation>
     </message>
@@ -8057,33 +9027,33 @@ The log will not be opened.</source>
 <context>
     <name>StatsQSOsPerContinentBarChartWidget</name>
     <message>
-        <location filename="../charts/statsqsospercontinentbarchartwidget.cpp" line="75"/>
-        <location filename="../charts/statsqsospercontinentbarchartwidget.cpp" line="89"/>
+        <location filename="../charts/statsqsospercontinentbarchartwidget.cpp" line="75" />
+        <location filename="../charts/statsqsospercontinentbarchartwidget.cpp" line="89" />
         <source>QSOs per continent</source>
         <translation>QSO pa kontinentiem</translation>
     </message>
     <message>
-        <location filename="../charts/statsqsospercontinentbarchartwidget.cpp" line="79"/>
+        <location filename="../charts/statsqsospercontinentbarchartwidget.cpp" line="79" />
         <source>Reading data ... </source>
-        <translation>Notiek datu nolasīšana ... </translation>
+        <translation>Notiek datu lasīšana ... </translation>
     </message>
     <message>
-        <location filename="../charts/statsqsospercontinentbarchartwidget.cpp" line="79"/>
+        <location filename="../charts/statsqsospercontinentbarchartwidget.cpp" line="79" />
         <source>Abort reading</source>
         <translation>Pārtraukt lasīšanu</translation>
     </message>
     <message>
-        <location filename="../charts/statsqsospercontinentbarchartwidget.cpp" line="88"/>
+        <location filename="../charts/statsqsospercontinentbarchartwidget.cpp" line="88" />
         <source>Continents</source>
         <translation>Kontinenti</translation>
     </message>
     <message>
-        <location filename="../charts/statsqsospercontinentbarchartwidget.cpp" line="98"/>
+        <location filename="../charts/statsqsospercontinentbarchartwidget.cpp" line="98" />
         <source>Reading data ...</source>
         <translation>Notiek datu lasīšana ...</translation>
     </message>
     <message>
-        <location filename="../charts/statsqsospercontinentbarchartwidget.cpp" line="98"/>
+        <location filename="../charts/statsqsospercontinentbarchartwidget.cpp" line="98" />
         <source>Hours: </source>
         <translation>Stundas: </translation>
     </message>
@@ -8091,240 +9061,240 @@ The log will not be opened.</source>
 <context>
     <name>StatsQSOsPerDXCCBarChartWidget</name>
     <message>
-        <location filename="../charts/statsqsosperdxccbarchartwidget.cpp" line="79"/>
+        <location filename="../charts/statsqsosperdxccbarchartwidget.cpp" line="79" />
         <source>QSOs per DXCC</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../charts/statsqsosperdxccbarchartwidget.cpp" line="83"/>
+        <location filename="../charts/statsqsosperdxccbarchartwidget.cpp" line="83" />
         <source>Reading data ... </source>
-        <translation type="unfinished">Notiek datu lasīšana ... </translation>
+        <translation>Notiek datu lasīšana ... </translation>
     </message>
     <message>
-        <location filename="../charts/statsqsosperdxccbarchartwidget.cpp" line="83"/>
+        <location filename="../charts/statsqsosperdxccbarchartwidget.cpp" line="83" />
         <source>Abort reading</source>
-        <translation type="unfinished">Pārtraukt lasīšanu</translation>
+        <translation>Pārtraukt lasīšanu</translation>
     </message>
     <message>
-        <location filename="../charts/statsqsosperdxccbarchartwidget.cpp" line="85"/>
+        <location filename="../charts/statsqsosperdxccbarchartwidget.cpp" line="85" />
         <source>Reading data...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../charts/statsqsosperdxccbarchartwidget.cpp" line="169"/>
+        <location filename="../charts/statsqsosperdxccbarchartwidget.cpp" line="169" />
         <source>DXCC</source>
-        <translation type="unfinished">DXCC</translation>
+        <translation>DXCC</translation>
     </message>
     <message>
-        <location filename="../charts/statsqsosperdxccbarchartwidget.cpp" line="170"/>
+        <location filename="../charts/statsqsosperdxccbarchartwidget.cpp" line="170" />
         <source>Top ten DXCC per QSO</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
     <name>StatsQSOsPerHourBarChartWidget</name>
     <message>
-        <location filename="../charts/statsqsosperhourbarchartwidget.cpp" line="78"/>
+        <location filename="../charts/statsqsosperhourbarchartwidget.cpp" line="78" />
         <source>QSOs per hour</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../charts/statsqsosperhourbarchartwidget.cpp" line="82"/>
+        <location filename="../charts/statsqsosperhourbarchartwidget.cpp" line="82" />
         <source>Reading data ... </source>
-        <translation type="unfinished">Notiek datu lasīšana ... </translation>
+        <translation>Notiek datu lasīšana ... </translation>
     </message>
     <message>
-        <location filename="../charts/statsqsosperhourbarchartwidget.cpp" line="82"/>
+        <location filename="../charts/statsqsosperhourbarchartwidget.cpp" line="82" />
         <source>Abort reading</source>
-        <translation type="unfinished">Pārtraukt lasīšanu</translation>
+        <translation>Pārtraukt lasīšanu</translation>
     </message>
     <message>
-        <location filename="../charts/statsqsosperhourbarchartwidget.cpp" line="90"/>
+        <location filename="../charts/statsqsosperhourbarchartwidget.cpp" line="90" />
         <source>Hours</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../charts/statsqsosperhourbarchartwidget.cpp" line="91"/>
+        <location filename="../charts/statsqsosperhourbarchartwidget.cpp" line="91" />
         <source>QSOs at hour</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../charts/statsqsosperhourbarchartwidget.cpp" line="101"/>
+        <location filename="../charts/statsqsosperhourbarchartwidget.cpp" line="101" />
         <source>Reading data ...</source>
-        <translation type="unfinished">Notiek datu lasīšana ...</translation>
+        <translation>Notiek datu lasīšana ...</translation>
     </message>
     <message>
-        <location filename="../charts/statsqsosperhourbarchartwidget.cpp" line="101"/>
+        <location filename="../charts/statsqsosperhourbarchartwidget.cpp" line="101" />
         <source>Hours: </source>
-        <translation type="unfinished"></translation>
+        <translation>Stundas: </translation>
     </message>
 </context>
 <context>
     <name>StatsQSOsPerModeBarChartWidget</name>
     <message>
-        <location filename="../charts/statsqsospermodebarchartwidget.cpp" line="81"/>
+        <location filename="../charts/statsqsospermodebarchartwidget.cpp" line="81" />
         <source>QSOs per mode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../charts/statsqsospermodebarchartwidget.cpp" line="85"/>
+        <location filename="../charts/statsqsospermodebarchartwidget.cpp" line="85" />
         <source>Reading data ... </source>
-        <translation type="unfinished">Notiek datu lasīšana ... </translation>
+        <translation>Notiek datu lasīšana ... </translation>
     </message>
     <message>
-        <location filename="../charts/statsqsospermodebarchartwidget.cpp" line="85"/>
+        <location filename="../charts/statsqsospermodebarchartwidget.cpp" line="85" />
         <source>Abort reading</source>
-        <translation type="unfinished">Pārtraukt lasīšanu</translation>
+        <translation>Pārtraukt lasīšanu</translation>
     </message>
     <message>
-        <location filename="../charts/statsqsospermodebarchartwidget.cpp" line="90"/>
+        <location filename="../charts/statsqsospermodebarchartwidget.cpp" line="92" />
         <source>Modes</source>
-        <translation type="unfinished">Modes</translation>
+        <translation>Modes</translation>
     </message>
     <message>
-        <location filename="../charts/statsqsospermodebarchartwidget.cpp" line="91"/>
+        <location filename="../charts/statsqsospermodebarchartwidget.cpp" line="93" />
         <source>QSOs per mode distribution</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../charts/statsqsospermodebarchartwidget.cpp" line="101"/>
+        <location filename="../charts/statsqsospermodebarchartwidget.cpp" line="103" />
         <source>Reading data ...</source>
-        <translation type="unfinished">Notiek datu lasīšana ...</translation>
+        <translation>Notiek datu lasīšana ...</translation>
     </message>
     <message>
-        <location filename="../charts/statsqsospermodebarchartwidget.cpp" line="101"/>
+        <location filename="../charts/statsqsospermodebarchartwidget.cpp" line="103" />
         <source>Modes: </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
     <name>StatsQSOsPerMonthBarChartWidget</name>
     <message>
-        <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="76"/>
+        <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="76" />
         <source>QSOs per month</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="80"/>
+        <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="80" />
         <source>Reading data ... </source>
-        <translation type="unfinished">Notiek datu lasīšana ... </translation>
+        <translation>Notiek datu lasīšana ... </translation>
     </message>
     <message>
-        <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="80"/>
+        <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="80" />
         <source>Abort reading</source>
-        <translation type="unfinished">Pārtraukt lasīšanu</translation>
+        <translation>Pārtraukt lasīšanu</translation>
     </message>
     <message>
-        <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="85"/>
+        <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="85" />
         <source>Jan</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="85"/>
+        <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="85" />
         <source>Feb</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="85"/>
+        <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="85" />
         <source>Mar</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="85"/>
+        <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="85" />
         <source>Apr</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="85"/>
+        <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="85" />
         <source>May</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="85"/>
+        <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="85" />
         <source>Jun</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="86"/>
+        <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="86" />
         <source>Jul</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="86"/>
+        <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="86" />
         <source>Aug</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="86"/>
+        <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="86" />
         <source>Sep</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="86"/>
+        <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="86" />
         <source>Oct</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="86"/>
+        <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="86" />
         <source>Nov</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="86"/>
+        <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="86" />
         <source>Dec</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="88"/>
+        <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="88" />
         <source>Months</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="89"/>
+        <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="89" />
         <source>QSOs at Month</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="98"/>
+        <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="98" />
         <source>Reading data ...</source>
-        <translation type="unfinished">Notiek datu lasīšana ...</translation>
+        <translation>Notiek datu lasīšana ...</translation>
     </message>
     <message>
-        <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="98"/>
+        <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="98" />
         <source>Months: </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
     <name>StatsQSOsPerYearBarChartWidget</name>
     <message>
-        <location filename="../charts/statsqsosperyearbarchartwidget.cpp" line="65"/>
+        <location filename="../charts/statsqsosperyearbarchartwidget.cpp" line="65" />
         <source>QSOs per year</source>
         <translation>QSO skaits gadā</translation>
     </message>
     <message>
-        <location filename="../charts/statsqsosperyearbarchartwidget.cpp" line="81"/>
+        <location filename="../charts/statsqsosperyearbarchartwidget.cpp" line="81" />
         <source>Reading data ... </source>
-        <translation>Tiek nolasīti dati ... </translation>
+        <translation>Notiek datu lasīšana ... </translation>
     </message>
     <message>
-        <location filename="../charts/statsqsosperyearbarchartwidget.cpp" line="81"/>
+        <location filename="../charts/statsqsosperyearbarchartwidget.cpp" line="81" />
         <source>Abort reading</source>
         <translation>Pārtraukt lasīšanu</translation>
     </message>
     <message>
-        <location filename="../charts/statsqsosperyearbarchartwidget.cpp" line="64"/>
-        <location filename="../charts/statsqsosperyearbarchartwidget.cpp" line="77"/>
+        <location filename="../charts/statsqsosperyearbarchartwidget.cpp" line="64" />
+        <location filename="../charts/statsqsosperyearbarchartwidget.cpp" line="77" />
         <source>QSOs</source>
         <translation>QSO</translation>
     </message>
     <message>
-        <location filename="../charts/statsqsosperyearbarchartwidget.cpp" line="94"/>
+        <location filename="../charts/statsqsosperyearbarchartwidget.cpp" line="94" />
         <source>Reading data ...</source>
         <translation>Notiek datu lasīšana ...</translation>
     </message>
     <message>
-        <location filename="../charts/statsqsosperyearbarchartwidget.cpp" line="94"/>
+        <location filename="../charts/statsqsosperyearbarchartwidget.cpp" line="94" />
         <source>QSO: %1/%2</source>
         <translation>QSO: %1/%2</translation>
     </message>
@@ -8332,17 +9302,17 @@ The log will not be opened.</source>
 <context>
     <name>StatsSentConfirmedPieChartWidget</name>
     <message>
-        <location filename="../charts/statssentconfirmedpiechartwidget.cpp" line="69"/>
+        <location filename="../charts/statssentconfirmedpiechartwidget.cpp" line="69" />
         <source>Sent - %1</source>
         <translation>Nosūtīts – %1</translation>
     </message>
     <message>
-        <location filename="../charts/statssentconfirmedpiechartwidget.cpp" line="70"/>
+        <location filename="../charts/statssentconfirmedpiechartwidget.cpp" line="70" />
         <source>Confirmed - %2</source>
         <translation>Apstiprināti – %2</translation>
     </message>
     <message>
-        <location filename="../charts/statssentconfirmedpiechartwidget.cpp" line="85"/>
+        <location filename="../charts/statssentconfirmedpiechartwidget.cpp" line="85" />
         <source>Sent / Confirmed status</source>
         <translation>Nosūtīts / apstiprināts</translation>
     </message>
@@ -8350,17 +9320,17 @@ The log will not be opened.</source>
 <context>
     <name>StatsWorkedConfirmedPieChartWidget</name>
     <message>
-        <location filename="../charts/statsworkedconfirmedpiechartwidget.cpp" line="73"/>
+        <location filename="../charts/statsworkedconfirmedpiechartwidget.cpp" line="73" />
         <source>Worked, not confirmed - %1</source>
         <translation>Nostrādāts, bet nav apstiprināts – %1</translation>
     </message>
     <message>
-        <location filename="../charts/statsworkedconfirmedpiechartwidget.cpp" line="74"/>
+        <location filename="../charts/statsworkedconfirmedpiechartwidget.cpp" line="74" />
         <source>Confirmed - %2</source>
         <translation>Apstiprināti – %2</translation>
     </message>
     <message>
-        <location filename="../charts/statsworkedconfirmedpiechartwidget.cpp" line="89"/>
+        <location filename="../charts/statsworkedconfirmedpiechartwidget.cpp" line="89" />
         <source>Worked / Confirmed status</source>
         <translation>Nostrādāts / apstiprināts</translation>
     </message>
@@ -8368,17 +9338,17 @@ The log will not be opened.</source>
 <context>
     <name>StatsWorkedSentPieChartWidget</name>
     <message>
-        <location filename="../charts/statsworkedsentpiechartwidget.cpp" line="69"/>
+        <location filename="../charts/statsworkedsentpiechartwidget.cpp" line="69" />
         <source>Worked - %1</source>
         <translation>Nostrādāts – %1</translation>
     </message>
     <message>
-        <location filename="../charts/statsworkedsentpiechartwidget.cpp" line="70"/>
+        <location filename="../charts/statsworkedsentpiechartwidget.cpp" line="70" />
         <source>Sent - %2</source>
         <translation>Nosūtītas – %2</translation>
     </message>
     <message>
-        <location filename="../charts/statsworkedsentpiechartwidget.cpp" line="86"/>
+        <location filename="../charts/statsworkedsentpiechartwidget.cpp" line="86" />
         <source>Worked / Sent status</source>
         <translation>Nostrādāts / nosūtīts</translation>
     </message>
@@ -8386,148 +9356,148 @@ The log will not be opened.</source>
 <context>
     <name>TipsDialog</name>
     <message>
-        <location filename="../tipsdialog.cpp" line="44"/>
+        <location filename="../tipsdialog.cpp" line="44" />
         <source>KLog tips</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../tipsdialog.cpp" line="57"/>
+        <location filename="../tipsdialog.cpp" line="57" />
         <source>Next</source>
         <translation>Nakamais</translation>
     </message>
     <message>
-        <location filename="../tipsdialog.cpp" line="58"/>
+        <location filename="../tipsdialog.cpp" line="58" />
         <source>Previous</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../tipsdialog.cpp" line="133"/>
-        <source>&lt;b&gt;Tip #1:&lt;/b&gt;&lt;br&gt;Do you know...&lt;br&gt;You can use &lt;a href=&quot;#ToolsFillInQSO&quot;&gt;Tools-&gt;Fill in QSO data&lt;/a&gt; to automatically read the full log to fill the DXCC, CQ, ITU zones and continent?</source>
+        <location filename="../tipsdialog.cpp" line="133" />
+        <source>&lt;b&gt;Tip #1:&lt;/b&gt;&lt;br&gt;Do you know...&lt;br&gt;You can use &lt;a href="#ToolsFillInQSO"&gt;Tools-&gt;Fill in QSO data&lt;/a&gt; to automatically read the full log to fill the DXCC, CQ, ITU zones and continent?</source>
         <extracomment>Translator: Please make sure that the name of the link is coherent with the menu Tools-&gt;Fill in QSO data</extracomment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../tipsdialog.cpp" line="141"/>
-        <source>&lt;b&gt;Tip #3:&lt;/b&gt;&lt;br&gt;Do you know...&lt;br&gt;You can use &lt;a href=&quot;#ToolsFindQSO2QSL&quot;&gt;Tools-&gt;QSL tools...-&gt;Find QSO to QSL&lt;/a&gt; to look for all those QSO that you should send your QSL because you still need to confirm that DXCC and you have still not send your QSL card?</source>
+        <location filename="../tipsdialog.cpp" line="141" />
+        <source>&lt;b&gt;Tip #3:&lt;/b&gt;&lt;br&gt;Do you know...&lt;br&gt;You can use &lt;a href="#ToolsFindQSO2QSL"&gt;Tools-&gt;QSL tools...-&gt;Find QSO to QSL&lt;/a&gt; to look for all those QSO that you should send your QSL because you still need to confirm that DXCC and you have still not send your QSL card?</source>
         <extracomment>Translator: Please make sure that the name of the link is coherent with the menu Tools-&gt;QSL tools...-&gt;Find QSO to QSL</extracomment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../tipsdialog.cpp" line="162"/>
-        <source>&lt;b&gt;Tip #8:&lt;/b&gt;&lt;br&gt;Do you know...&lt;br&gt;You can find the QSLs that you are still waiting for with &lt;a href=&quot;#ToolsReceivePendingQSL&quot;&gt;Tools-&gt;QSL tools...-&gt;Find DX-QSLs pending to receive&lt;/a&gt;.&lt;bR&gt;This tool will list you in the search box all the QSOs with the QSL-Sent marked as &lt;i&gt;Sent&lt;/i&gt; but you have still not received the QSL card from the DX.</source>
+        <location filename="../tipsdialog.cpp" line="162" />
+        <source>&lt;b&gt;Tip #8:&lt;/b&gt;&lt;br&gt;Do you know...&lt;br&gt;You can find the QSLs that you are still waiting for with &lt;a href="#ToolsReceivePendingQSL"&gt;Tools-&gt;QSL tools...-&gt;Find DX-QSLs pending to receive&lt;/a&gt;.&lt;bR&gt;This tool will list you in the search box all the QSOs with the QSL-Sent marked as &lt;i&gt;Sent&lt;/i&gt; but you have still not received the QSL card from the DX.</source>
         <extracomment>Translator: Please make sure that the name of the link is coherent with the menu QSL tools...-&gt;Find DX-QSLs pending to receive</extracomment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../tipsdialog.cpp" line="166"/>
-        <source>&lt;b&gt;Tip #9:&lt;/b&gt;&lt;br&gt;Do you know...&lt;br&gt;You can find the QSLs that you are still waiting for with &lt;a href=&quot;#ToolsReceiveRecPendingQSL&quot;&gt;Tools-&gt;QSL tools...-&gt;Find requested pending to receive&lt;/a&gt;.&lt;bR&gt;This tool will list you in the search box all the QSOs with the QSL-Rec marked as &lt;i&gt;Requested&lt;/i&gt; but you have still not received the QSL card from the DX.</source>
+        <location filename="../tipsdialog.cpp" line="166" />
+        <source>&lt;b&gt;Tip #9:&lt;/b&gt;&lt;br&gt;Do you know...&lt;br&gt;You can find the QSLs that you are still waiting for with &lt;a href="#ToolsReceiveRecPendingQSL"&gt;Tools-&gt;QSL tools...-&gt;Find requested pending to receive&lt;/a&gt;.&lt;bR&gt;This tool will list you in the search box all the QSOs with the QSL-Rec marked as &lt;i&gt;Requested&lt;/i&gt; but you have still not received the QSL card from the DX.</source>
         <extracomment>Translator: Please make sure that the name of the link is coherent with the menu QSL tools...-&gt;Find requested pending to receive</extracomment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../tipsdialog.cpp" line="169"/>
+        <location filename="../tipsdialog.cpp" line="169" />
         <source>&lt;b&gt;Tip #10:&lt;/b&gt;&lt;br&gt;Do you know...&lt;br&gt;You can subscribe to the &lt;a href=https://t.me/klogchat&gt;English KLog Telegram group&lt;/a&gt; to discuss about KLog in English?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../tipsdialog.cpp" line="172"/>
+        <location filename="../tipsdialog.cpp" line="172" />
         <source>&lt;b&gt;Tip #11:&lt;/b&gt;&lt;br&gt;Do you know...&lt;br&gt;You can subscribe to the &lt;a href=https://t.me/KLogES&gt;Spanish Telegram group&lt;/a&gt; to discuss about KLog in Spanish?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../tipsdialog.cpp" line="184"/>
+        <location filename="../tipsdialog.cpp" line="175" />
+        <source>&lt;b&gt;Tip #12:&lt;/b&gt;&lt;br&gt;Do you know...&lt;br&gt;You can subscribe to &lt;a href=https://t.me/klogdevel&gt;KLog-devel telegram group&lt;/a&gt; to discuss about KLog development in English?</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../tipsdialog.cpp" line="184" />
         <source>&lt;b&gt;Tip #15:&lt;/b&gt;&lt;br&gt;Do you know...&lt;br&gt;You can join the development team by simply &lt;a href=https://github.com/ea4k/klog?tab=readme-ov-file#telegram-groups&gt;Contacting us&lt;/a&gt;?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../tipsdialog.cpp" line="187"/>
+        <location filename="../tipsdialog.cpp" line="187" />
         <source>&lt;b&gt;Tip #16:&lt;/b&gt;&lt;br&gt;Do you know...&lt;br&gt;That there are many ways to contribute to KLog and some of them are listed in the &lt;a href=https://github.com/ea4k/klog/issues&gt;KLog issues&lt;/a&gt; page?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../tipsdialog.cpp" line="190"/>
+        <location filename="../tipsdialog.cpp" line="190" />
         <source>&lt;b&gt;Tip #17:&lt;/b&gt;&lt;br&gt;Do you know...&lt;br&gt;You can support translating KLog into your language? Please check &lt;a href=https://github.com/ea4k/klog/tree/master/src/translations&gt;KLog Translations&lt;/a&gt; page.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../tipsdialog.cpp" line="137"/>
-        <source>&lt;b&gt;Tip #2:&lt;/b&gt;&lt;br&gt;Do you know...&lt;br&gt;You can find the QSLs that you still need to send with &lt;a href=&quot;#ToolsSendPendingQSL&quot;&gt;Tools-&gt;QSL tools...-&gt;Find My-QSLs pending to send&lt;/a&gt;.&lt;bR&gt;This tool will list you in the search box all the QSOs with the QSL-Sent marked as &lt;i&gt;Requested&lt;/i&gt;.</source>
+        <location filename="../tipsdialog.cpp" line="137" />
+        <source>&lt;b&gt;Tip #2:&lt;/b&gt;&lt;br&gt;Do you know...&lt;br&gt;You can find the QSLs that you still need to send with &lt;a href="#ToolsSendPendingQSL"&gt;Tools-&gt;QSL tools...-&gt;Find My-QSLs pending to send&lt;/a&gt;.&lt;bR&gt;This tool will list you in the search box all the QSOs with the QSL-Sent marked as &lt;i&gt;Requested&lt;/i&gt;.</source>
         <extracomment>Translator: Please make sure that the name of the link is coherent with the menu Tools-&gt;Fill in DXCC data</extracomment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../tipsdialog.cpp" line="145"/>
-        <source>&lt;b&gt;Tip #4:&lt;/b&gt;&lt;br&gt;Do you know...&lt;br&gt;You can enter a &apos;*&apos; in the search box, in the search window to search for all the QSOs done with one specific station callsign?</source>
+        <location filename="../tipsdialog.cpp" line="145" />
+        <source>&lt;b&gt;Tip #4:&lt;/b&gt;&lt;br&gt;Do you know...&lt;br&gt;You can enter a '*' in the search box, in the search window to search for all the QSOs done with one specific station callsign?</source>
         <extracomment>Translator: Please make sure that the name of the link is coherent with the menu File-&gt;Export Requested QSL to ADIF...</extracomment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../tipsdialog.cpp" line="148"/>
-        <source>&lt;b&gt;Tip #5:&lt;/b&gt;&lt;br&gt;Do you know...&lt;br&gt;You can find the file containing all your log and other information in the logbook.dat file and the klogrc file, containing the KLog config file in the KLog folder by opening the &lt;a href=&quot;#FileOpenKLogFolder&quot;&gt;File-&gt;KLog folder&lt;/a&gt; menu?</source>
-        <translation type="unfinished"></translation>
+        <location filename="../tipsdialog.cpp" line="148" />
+        <source>&lt;b&gt;Tip #5:&lt;/b&gt;&lt;br&gt;Do you know...&lt;br&gt;You can find the file containing all your log and other information in the logbook.dat file and the klogrc file, containing the KLog config file in the KLog folder by opening the &lt;a href="#FileOpenKLogFolder"&gt;File-&gt;KLog folder&lt;/a&gt; menu?</source>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../tipsdialog.cpp" line="154"/>
-        <source>&lt;b&gt;Tip #6:&lt;/b&gt;&lt;br&gt;Do you know...&lt;br&gt;You can upload your QSO marked as queued to LoTW via TQSL with &lt;a href=&quot;#ToolsUploadLoTW&quot;&gt;Tools-&gt;LoTW tools ...-&gt;Sends the log to LoTW calling TQSL.&lt;/a&gt; ?&lt;br&gt;&lt;br&gt;You have to configure TQSL in the preferences to be able to use this functionality.</source>
+        <location filename="../tipsdialog.cpp" line="154" />
+        <source>&lt;b&gt;Tip #6:&lt;/b&gt;&lt;br&gt;Do you know...&lt;br&gt;You can upload your QSO marked as queued to LoTW via TQSL with &lt;a href="#ToolsUploadLoTW"&gt;Tools-&gt;LoTW tools ...-&gt;Sends the log to LoTW calling TQSL.&lt;/a&gt; ?&lt;br&gt;&lt;br&gt;You have to configure TQSL in the preferences to be able to use this functionality.</source>
         <extracomment>Translator: Please make sure that the name of the link is coherent with the menu File-&gt;KLog folder</extracomment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../tipsdialog.cpp" line="158"/>
+        <location filename="../tipsdialog.cpp" line="158" />
         <source>&lt;b&gt;Tip #7:&lt;/b&gt;&lt;br&gt;Do you know...&lt;br&gt;You can see the QSO that confirms one specific DXCC entity in one specific band by poiting your mouse over that band in the DXCC widget?</source>
         <extracomment>Translator: Please make sure that the name of the link is coherent with the menu QSL tools...-&gt;Find My-QSLs pending to send</extracomment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../tipsdialog.cpp" line="175"/>
-        <source>&lt;b&gt;Tip #12:&lt;/b&gt;&lt;br&gt;Do you know...&lt;br&gt;You can subscribe to &lt;a href=https://groups.io/g/klog&gt;KLog mailing list&lt;/a&gt; to discuss via email about KLog in English?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../tipsdialog.cpp" line="178"/>
+        <location filename="../tipsdialog.cpp" line="178" />
         <source>&lt;b&gt;Tip #13:&lt;/b&gt;&lt;br&gt;Do you know...&lt;br&gt;You can &lt;a href=https://twitter.com/_ea4k&gt;follow EA4K on twitter&lt;/a&gt; to get updates about KLog?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../tipsdialog.cpp" line="181"/>
+        <location filename="../tipsdialog.cpp" line="181" />
         <source>&lt;b&gt;Tip #14:&lt;/b&gt;&lt;br&gt;Do you know...&lt;br&gt;You can write your own &lt;a href=https://www.eham.net/reviews/detail/3118&gt;review in eHam.net about KLog&lt;/a&gt; to help other users to decide to use KLog?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../tipsdialog.cpp" line="193"/>
+        <location filename="../tipsdialog.cpp" line="193" />
         <source>&lt;b&gt;Tip #18:&lt;/b&gt;&lt;br&gt;Do you know...&lt;br&gt;You can double-click on an entity name in the DXCC table and all the QSOs with that DXCC Entity will be shown in the search box?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../tipsdialog.cpp" line="196"/>
+        <location filename="../tipsdialog.cpp" line="196" />
         <source>&lt;b&gt;Tip #19:&lt;/b&gt;&lt;br&gt;Do you know...&lt;br&gt;You can right-click on a QSO and select &lt;i&gt;Check in QRZ.com&lt;/i&gt; to check that callsign in QRZ.com?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
     <name>UpdateSatsData</name>
     <message>
-        <location filename="../updatesatsdata.cpp" line="89"/>
+        <location filename="../updatesatsdata.cpp" line="89" />
         <source>Reading Satellites data file...</source>
         <translation>Notiek satelītu datu faila lasīšana...</translation>
     </message>
     <message>
-        <location filename="../updatesatsdata.cpp" line="89"/>
+        <location filename="../updatesatsdata.cpp" line="89" />
         <source>Abort reading</source>
         <translation>Pārtraukt lasīšanu</translation>
     </message>
     <message>
-        <location filename="../updatesatsdata.cpp" line="243"/>
+        <location filename="../updatesatsdata.cpp" line="243" />
         <source>The Satellites information has been updated.</source>
         <translation>Satelītu informācija ir atjaunināta.</translation>
     </message>
     <message>
-        <location filename="../updatesatsdata.cpp" line="261"/>
+        <location filename="../updatesatsdata.cpp" line="261" />
         <source>Open File</source>
         <translation>Atver failu</translation>
     </message>
     <message>
-        <location filename="../updatesatsdata.cpp" line="263"/>
+        <location filename="../updatesatsdata.cpp" line="263" />
         <source>Sat Data</source>
         <translation>Satelitu Dati</translation>
     </message>
@@ -8535,12 +9505,12 @@ The log will not be opened.</source>
 <context>
     <name>UpdateSettings</name>
     <message>
-        <location filename="../updatesettings.cpp" line="109"/>
+        <location filename="../updatesettings.cpp" line="109" />
         <source>KLog - Settings update</source>
         <translation>Klog - Setingu  atjaunināšana</translation>
     </message>
     <message>
-        <location filename="../updatesettings.cpp" line="111"/>
+        <location filename="../updatesettings.cpp" line="111" />
         <source>The settings system has been changed and KLog will update your settings file.</source>
         <translation>Iestatījumu sistēma ir mainīta, un KLog atjauninās jūsu iestatījumu failu.</translation>
     </message>
@@ -8548,298 +9518,267 @@ The log will not be opened.</source>
 <context>
     <name>World</name>
     <message>
-        <source>Continent</source>
-        <translation type="vanished">Kontinents</translation>
-    </message>
-    <message>
-        <location filename="../world.cpp" line="576"/>
+        <location filename="../world.cpp" line="586" />
         <source>Reading cty.csv...</source>
         <translation>Lasu cty.csv...</translation>
     </message>
     <message>
-        <location filename="../world.cpp" line="576"/>
+        <location filename="../world.cpp" line="586" />
         <source>Abort reading</source>
         <translation>Pārtraukt lasīšanu</translation>
     </message>
     <message>
-        <location filename="../world.cpp" line="962"/>
+        <location filename="../world.cpp" line="991" />
         <source>KLog DXCC</source>
         <translation>Klosg DXCC</translation>
     </message>
     <message>
-        <location filename="../world.cpp" line="963"/>
+        <location filename="../world.cpp" line="992" />
         <source>All QSOs have been updated with a DXCC and the Continent.</source>
         <translation>Visi QSO ir atjaunināti ar DXCC un kontinentu.</translation>
     </message>
 </context>
 <context>
-    <name>WorldMapWidget</name>
-    <message>
-        <source>World map</source>
-        <translation type="vanished">Pasaules karte</translation>
-    </message>
-    <message>
-        <source>View</source>
-        <translation type="vanished">Skatīt</translation>
-    </message>
-    <message>
-        <source>Zoom In(25%)</source>
-        <translation type="vanished">Tuvināt (25%)</translation>
-    </message>
-    <message>
-        <source>Zoom Out(25%)</source>
-        <translation type="vanished">Tālināt (25%)</translation>
-    </message>
-    <message>
-        <source>Normal Size</source>
-        <translation type="vanished">Normāls izmērs</translation>
-    </message>
-    <message>
-        <source>Fit to window</source>
-        <translation type="vanished">Pielāgot logam</translation>
-    </message>
-</context>
-<context>
     <name>eLogClubLog</name>
     <message>
-        <location filename="../elogclublog.cpp" line="94"/>
-        <location filename="../elogclublog.cpp" line="176"/>
+        <location filename="../elog/elogclublog.cpp" line="100" />
+        <location filename="../elog/elogclublog.cpp" line="183" />
         <source>Host not found!</source>
         <translation>Serveris nav atrasts!</translation>
     </message>
     <message>
-        <location filename="../elogclublog.cpp" line="100"/>
-        <location filename="../elogclublog.cpp" line="181"/>
+        <location filename="../elog/elogclublog.cpp" line="106" />
+        <location filename="../elog/elogclublog.cpp" line="188" />
         <source>Timeout error!</source>
         <translation>Taimauta kļūda!</translation>
     </message>
     <message>
-        <location filename="../elogclublog.cpp" line="131"/>
+        <location filename="../elog/elogclublog.cpp" line="137" />
         <source>QSO dupe or not existing (#%1)... </source>
         <translation>QSO ir dublikāts vai neeksistē (#%1)... </translation>
     </message>
     <message>
-        <location filename="../elogclublog.cpp" line="107"/>
-        <location filename="../elogclublog.cpp" line="132"/>
-        <location filename="../elogclublog.cpp" line="141"/>
+        <location filename="../elog/elogclublog.cpp" line="113" />
+        <location filename="../elog/elogclublog.cpp" line="138" />
+        <location filename="../elog/elogclublog.cpp" line="147" />
         <source>KLog - ClubLog</source>
         <translation>KLog - ClubLog</translation>
     </message>
     <message>
-        <location filename="../elogclublog.cpp" line="105"/>
+        <location filename="../elog/elogclublog.cpp" line="111" />
         <source>It seems to be a CREDENTIALS ERROR; check your email and password.</source>
         <translation>Šķiet, ka tā ir akreditācijas datu kļūda; pārbaudiet savu e-pastu un paroli.</translation>
     </message>
     <message>
-        <location filename="../elogclublog.cpp" line="108"/>
+        <location filename="../elog/elogclublog.cpp" line="114" />
         <source>It seems that your ClubLog credentials are not correct.</source>
         <translation>Šķiet, ka jūsu ClubLog akreditācijas dati nav pareizi.</translation>
     </message>
     <message>
-        <location filename="../elogclublog.cpp" line="109"/>
+        <location filename="../elog/elogclublog.cpp" line="115" />
         <source>Please check your credentials in the setup. ClubLog uploads will be disabled.</source>
         <translation>Lūdzu, pārbaudiet savus pieteikšanās datus iestatījumos. ClubLog augšupielāde tiks atspējota.</translation>
     </message>
     <message>
-        <location filename="../elogclublog.cpp" line="133"/>
-        <location filename="../elogclublog.cpp" line="142"/>
+        <location filename="../elog/elogclublog.cpp" line="139" />
+        <location filename="../elog/elogclublog.cpp" line="148" />
         <source>We have received an undefined error from Clublog (%1)</source>
-        <translation>Esam saņēmuši nenoteiktu kļūdu no ClubLog (%1)</translation>
+        <translation>Saņemta nenoteikta ClubLog kļūda (%1)</translation>
     </message>
     <message>
-        <location filename="../elogclublog.cpp" line="134"/>
+        <location filename="../elog/elogclublog.cpp" line="140" />
         <source>This error may be caused for the QSO being duplicated or, if removing, trying to remove a non existing QSO.</source>
-        <translation type="unfinished"></translation>
+        <translation>Šo kļūdu var izraisīt dublēts QSO vai mēģinājums dzēst QSO, kas neeksistē.</translation>
     </message>
     <message>
-        <location filename="../elogclublog.cpp" line="140"/>
+        <location filename="../elog/elogclublog.cpp" line="146" />
         <source>Undefined error number (#%1)... </source>
         <translation>Nedefinēts kļūdas numurs (#%1)... </translation>
     </message>
     <message>
-        <location filename="../elogclublog.cpp" line="143"/>
-        <source>Please check your config in the setup and contact the KLog development team if you can&apos;t fix it. ClubLog uploads will be disabled.</source>
-        <translation type="unfinished"></translation>
+        <location filename="../elog/elogclublog.cpp" line="149" />
+        <source>Please check your config in the setup and contact the KLog development team if you can't fix it. ClubLog uploads will be disabled.</source>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../elogclublog.cpp" line="186"/>
+        <location filename="../elog/elogclublog.cpp" line="193" />
         <source>Undefined error...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../elogclublog.cpp" line="558"/>
+        <location filename="../elog/elogclublog.cpp" line="573" />
         <source>Callsign missing</source>
         <translation>Trūkst izsaukuma signāla</translation>
     </message>
     <message>
-        <location filename="../elogclublog.cpp" line="562"/>
+        <location filename="../elog/elogclublog.cpp" line="577" />
         <source>Invalid callsign</source>
         <translation>Nepareizs izsaukuma signāls</translation>
     </message>
     <message>
-        <location filename="../elogclublog.cpp" line="566"/>
+        <location filename="../elog/elogclublog.cpp" line="581" />
         <source>Skipping SWL callsign</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../elogclublog.cpp" line="570"/>
+        <location filename="../elog/elogclublog.cpp" line="585" />
         <source>Callsign is your own call</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../elogclublog.cpp" line="574"/>
+        <location filename="../elog/elogclublog.cpp" line="589" />
         <source>Invalid callsign with no DXCC mapping</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../elogclublog.cpp" line="578"/>
+        <location filename="../elog/elogclublog.cpp" line="593" />
         <source>Updated QSO</source>
         <translation>Atjaunināts QSO</translation>
     </message>
     <message>
-        <location filename="../elogclublog.cpp" line="582"/>
+        <location filename="../elog/elogclublog.cpp" line="597" />
         <source>Invalid ADIF record</source>
         <translation>Nederīgs ADIF ieraksts</translation>
     </message>
     <message>
-        <location filename="../elogclublog.cpp" line="586"/>
+        <location filename="../elog/elogclublog.cpp" line="601" />
         <source>Missing ADIF record</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../elogclublog.cpp" line="590"/>
+        <location filename="../elog/elogclublog.cpp" line="605" />
         <source>Test mode - parameters ok, no action taken</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../elogclublog.cpp" line="594"/>
+        <location filename="../elog/elogclublog.cpp" line="609" />
         <source>Excessive API Usage</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../elogclublog.cpp" line="598"/>
+        <location filename="../elog/elogclublog.cpp" line="613" />
         <source>Internal Error</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../elogclublog.cpp" line="602"/>
+        <location filename="../elog/elogclublog.cpp" line="617" />
         <source>Rejected</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../elogclublog.cpp" line="606"/>
+        <location filename="../elog/elogclublog.cpp" line="621" />
         <source>QSO Duplicate</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../elogclublog.cpp" line="610"/>
+        <location filename="../elog/elogclublog.cpp" line="625" />
         <source>QSO Modified</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../elogclublog.cpp" line="614"/>
+        <location filename="../elog/elogclublog.cpp" line="629" />
         <source>Missing Login</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../elogclublog.cpp" line="618"/>
+        <location filename="../elog/elogclublog.cpp" line="633" />
         <source>QSO OK</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../elogclublog.cpp" line="622"/>
-        <location filename="../elogclublog.cpp" line="646"/>
+        <location filename="../elog/elogclublog.cpp" line="637" />
+        <location filename="../elog/elogclublog.cpp" line="661" />
         <source>Upload denied</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../elogclublog.cpp" line="626"/>
+        <location filename="../elog/elogclublog.cpp" line="641" />
         <source>No callsign selected</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../elogclublog.cpp" line="630"/>
+        <location filename="../elog/elogclublog.cpp" line="645" />
         <source>No match found</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../elogclublog.cpp" line="634"/>
+        <location filename="../elog/elogclublog.cpp" line="649" />
         <source>Dropped QSO</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../elogclublog.cpp" line="638"/>
+        <location filename="../elog/elogclublog.cpp" line="653" />
         <source>OK</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../elogclublog.cpp" line="642"/>
+        <location filename="../elog/elogclublog.cpp" line="657" />
         <source>Login rejected</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
     <message>
-        <location filename="../elogclublog.cpp" line="650"/>
+        <location filename="../elog/elogclublog.cpp" line="665" />
         <source>Rejected: Callsign is your own call</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
     <name>eLogQrzLog</name>
     <message>
-        <location filename="../elogqrzlog.cpp" line="103"/>
+        <location filename="../elog/elogqrzlog.cpp" line="105" />
         <source>Host not found!</source>
         <translation>Domēna nav</translation>
     </message>
     <message>
-        <location filename="../elogqrzlog.cpp" line="106"/>
+        <location filename="../elog/elogqrzlog.cpp" line="108" />
         <source>Timeout error!</source>
         <translation>Taimauta kļūda!</translation>
     </message>
     <message>
-        <location filename="../elogqrzlog.cpp" line="109"/>
+        <location filename="../elog/elogqrzlog.cpp" line="111" />
         <source>Undefined error number (#%1)</source>
         <translation>Nedefinēts kļūdas numurs (#%1)</translation>
     </message>
     <message>
-        <location filename="../elogqrzlog.cpp" line="114"/>
-        <location filename="../elogqrzlog.cpp" line="617"/>
+        <location filename="../elog/elogqrzlog.cpp" line="116" />
+        <location filename="../elog/elogqrzlog.cpp" line="628" />
         <source>KLog - QRZ.com</source>
         <translation>KLog — QRZ.com</translation>
     </message>
     <message>
-        <location filename="../elogqrzlog.cpp" line="115"/>
+        <location filename="../elog/elogqrzlog.cpp" line="117" />
         <source>We have received the following error from QRZ.com (%1)</source>
         <translation>Mēs esam saņēmuši šādu kļūdu no QRZ.com (% 1)</translation>
     </message>
     <message>
-        <location filename="../elogqrzlog.cpp" line="317"/>
+        <location filename="../elog/elogqrzlog.cpp" line="324" />
         <source>You are not subscribed to QRZ.com.</source>
         <translation>Jums nav QRZ.com abonementa.</translation>
     </message>
     <message>
-        <location filename="../elogqrzlog.cpp" line="618"/>
+        <location filename="../elog/elogqrzlog.cpp" line="629" />
         <source>Not valid KEY found</source>
         <translation>Atrasts nederīgs KEY</translation>
     </message>
     <message>
-        <location filename="../elogqrzlog.cpp" line="619"/>
+        <location filename="../elog/elogqrzlog.cpp" line="630" />
         <source>Please configure your QRZ.com API key. You will find it in your QRZ.com Logbook settings webpage.
 You need a QRZ.com subscription to use this feature.</source>
         <translation>Lūdzu, konfigurējiet savu QRZ.com API atslēgu. Jūs to atradīsit savā QRZ.com žurnāla iestatījumu tīmekļa vietnē.
 Lai izmantotu šo funkciju, jums ir nepieciešams QRZ.com abonements.</translation>
     </message>
     <message>
-        <location filename="../elogqrzlog.cpp" line="712"/>
+        <location filename="../elog/elogqrzlog.cpp" line="724" />
         <source>KLog - QRZ.com password needed</source>
         <translation>KLog — nepieciešama QRZ.com parole</translation>
     </message>
     <message>
-        <location filename="../elogqrzlog.cpp" line="712"/>
+        <location filename="../elog/elogqrzlog.cpp" line="724" />
         <source>Please enter your QRZ.com password: </source>
         <translation>Lūdzu, ievadiet savu QRZ.com paroli: </translation>
     </message>
     <message>
-        <location filename="../elogqrzlog.cpp" line="792"/>
+        <location filename="../elog/elogqrzlog.cpp" line="804" />
         <source>Callsign missing</source>
         <translation>Trūkst izsaukuma signāla</translation>
     </message>
@@ -8847,67 +9786,113 @@ Lai izmantotu šo funkciju, jums ir nepieciešams QRZ.com abonements.</translati
 <context>
     <name>eQSLUtilities</name>
     <message>
-        <location filename="../eqslutilities.cpp" line="92"/>
-        <location filename="../eqslutilities.cpp" line="123"/>
+        <location filename="../elog/eqslutilities.cpp" line="96" />
+        <location filename="../elog/eqslutilities.cpp" line="127" />
         <source>KLog - eQSL</source>
         <translation>KLog - eQSL</translation>
     </message>
     <message>
-        <location filename="../eqslutilities.cpp" line="92"/>
+        <location filename="../elog/eqslutilities.cpp" line="96" />
         <source>eQSL has sent the following message:
 %1</source>
         <translation>eQSL ir nosūtījis šādu ziņojumu:
 %1</translation>
     </message>
     <message>
-        <location filename="../eqslutilities.cpp" line="110"/>
+        <location filename="../elog/eqslutilities.cpp" line="114" />
         <source>Host not found!</source>
         <translation>Neeksistē šis  domēns!</translation>
     </message>
     <message>
-        <location filename="../eqslutilities.cpp" line="116"/>
+        <location filename="../elog/eqslutilities.cpp" line="120" />
         <source>Timeout error!</source>
         <translation>Taimauta kļūda!</translation>
     </message>
     <message>
-        <location filename="../eqslutilities.cpp" line="122"/>
+        <location filename="../elog/eqslutilities.cpp" line="126" />
         <source>Undefined error number (#%1)... </source>
         <translation>Nedefinēts kļūdas numurs (#%1)... </translation>
     </message>
     <message>
-        <location filename="../eqslutilities.cpp" line="124"/>
+        <location filename="../elog/eqslutilities.cpp" line="128" />
         <source>We have received an undefined error from eQSL (%1)</source>
         <translation>Mēs esam saņēmuši nedefinētu kļūdu no eQSL (% 1)</translation>
     </message>
     <message>
-        <location filename="../eqslutilities.cpp" line="125"/>
-        <source>Please check your config in the setup and contact the KLog development team if you can&apos;t fix it. eQSL uploads will be disabled.</source>
+        <location filename="../elog/eqslutilities.cpp" line="129" />
+        <source>Please check your config in the setup and contact the KLog development team if you can't fix it. eQSL uploads will be disabled.</source>
         <translation>Lūdzu, pārbaudiet savu konfigurāciju iestatījumos un sazinieties ar KLog izstrādes komandu, ja nevarat to labot. eQSL augšupielāde tiks atspējota.</translation>
     </message>
     <message>
-        <location filename="../eqslutilities.cpp" line="180"/>
+        <location filename="../elog/eqslutilities.cpp" line="184" />
         <source>eQSL Error: User or password incorrect</source>
         <translation>eQSL kļūda: nepareizs lietotājs vai parole</translation>
     </message>
     <message>
-        <location filename="../eqslutilities.cpp" line="186"/>
+        <location filename="../elog/eqslutilities.cpp" line="190" />
         <source>eQSL Warning: At least one of the uplodaded QSOs is duplicated.</source>
         <translation>eQSL Brīdinājums: Vismaz viens no augšupielādētajiem QSO ir dublēts.</translation>
     </message>
     <message>
-        <location filename="../eqslutilities.cpp" line="191"/>
+        <location filename="../elog/eqslutilities.cpp" line="195" />
         <source>eQSL: All the QSOs were properly uploaded.</source>
         <translation>eQSL: visi QSO tika pareizi augšupielādēti.</translation>
     </message>
     <message>
-        <location filename="../eqslutilities.cpp" line="243"/>
+        <location filename="../elog/eqslutilities.cpp" line="247" />
         <source>KLog - eQSL.cc password needed</source>
         <translation>KLog — nepieciešama eQSL.cc parole</translation>
     </message>
     <message>
-        <location filename="../eqslutilities.cpp" line="243"/>
+        <location filename="../elog/eqslutilities.cpp" line="247" />
         <source>Please enter your eQSL.cc password: </source>
         <translation>Lūdzu, ievadiet savu eQSL.cc paroli: </translation>
+    </message>
+</context>
+<context>
+    <name>mapqmlfile</name>
+    <message>
+        <location filename="../qml/mapqmlfile.qml" line="337" />
+        <source>Map not available</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../qml/mapqmlfile.qml" line="344" />
+        <source>The Qt6 Location geo-services plugin is missing.
+Install the OSM plugin for your platform, e.g.:
+  Debian/Ubuntu/Raspberry Pi OS: apt install qml6-module-qtlocation
+  or: apt install qt6-declarative-dev</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../qml/mapqmlfile.qml" line="604" />
+        <source>Clear</source>
+        <translation>Dzēst</translation>
+    </message>
+    <message>
+        <location filename="../qml/mapqmlfile.qml" line="812" />
+        <source>Callsign</source>
+        <translation>Izsaukuma signāls</translation>
+    </message>
+    <message>
+        <location filename="../qml/mapqmlfile.qml" line="814" />
+        <source>Band</source>
+        <translation>Diapazons</translation>
+    </message>
+    <message>
+        <location filename="../qml/mapqmlfile.qml" line="816" />
+        <source>Mode</source>
+        <translation>Mode</translation>
+    </message>
+    <message>
+        <location filename="../qml/mapqmlfile.qml" line="873" />
+        <source>Double-click to edit  |  click ✕ to close</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <location filename="../qml/mapqmlfile.qml" line="874" />
+        <source>Click to pin  •  Double-click to edit</source>
+        <translation type="unfinished" />
     </message>
 </context>
 </TS>
