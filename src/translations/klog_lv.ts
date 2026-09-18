@@ -1672,7 +1672,7 @@ Vai vēlaties, lai KLog pievieno šo QSO žurnālam?
     <message>
         <location filename="../lotwutilities.cpp" line="188"/>
         <source>KLog - LoTW Station callsign</source>
-        <translation type="unfinished"></translation>
+        <translation>KLog - LoTW stacijas izsaukuma signāls</translation>
     </message>
     <message>
         <location filename="../lotwutilities.cpp" line="189"/>
