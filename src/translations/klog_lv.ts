@@ -349,7 +349,7 @@
         <location filename="../awards.cpp" line="741" />
         <source>N</source>
         <comment>Needed, please try to keep the N</comment>
-        <translation type="unfinished" />
+        <translation>N</translation>
     </message>
     <message>
         <location filename="../awards.cpp" line="742" />
@@ -1619,7 +1619,7 @@ Vai vēlaties, lai KLog pievieno šo QSO žurnālam?
     <message>
         <location filename="../filemanager.cpp" line="1752" />
         <source>An empty callsign has been detected. Do you want to export this QSO anyway (click on Yes) or remove the field from the exported log file?</source>
-        <translation type="unfinished" />
+        <translation>Konstatēts tukšs izsaukuma signāls. Vai tomēr eksportēt šo QSO, vai noņemt šo lauku no eksportētā žurnāla faila?</translation>
     </message>
     <message>
         <location filename="../filemanager.cpp" line="1756" />
@@ -8991,7 +8991,7 @@ The log will not be opened.</source>
     <message>
         <location filename="../charts/statsqsosperbandbarchartwidget.cpp" line="74" />
         <source>QSOs per band</source>
-        <translation type="unfinished" />
+        <translation>QSO skaits pa diapazoniem</translation>
     </message>
     <message>
         <location filename="../charts/statsqsosperbandbarchartwidget.cpp" line="78" />
@@ -9270,7 +9270,7 @@ The log will not be opened.</source>
     <message>
         <location filename="../charts/statsqsosperyearbarchartwidget.cpp" line="65" />
         <source>QSOs per year</source>
-        <translation type="unfinished" />
+        <translation>QSO skaits gadā</translation>
     </message>
     <message>
         <location filename="../charts/statsqsosperyearbarchartwidget.cpp" line="81" />
