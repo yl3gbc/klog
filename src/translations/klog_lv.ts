@@ -3473,12 +3473,12 @@ Do you want to import them now?</source>
     <message>
         <location filename="../mainwindow.cpp" line="2722" />
         <source>Queue all QSOs from this log to be sent</source>
-        <translation type="unfinished" />
+        <translation>Ielikt rindā visus šī žurnāla QSO</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2832" />
         <source>Show Map</source>
-        <translation type="unfinished" />
+        <translation>Rādīt karti</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2957" />
@@ -3489,7 +3489,7 @@ Do you want to import them now?</source>
         <location filename="../mainwindow.cpp" line="2969" />
         <location filename="../mainwindow.cpp" line="3041" />
         <source>Now you can upload them to LoTW.</source>
-        <translation type="unfinished" />
+        <translation>Tagad tos var augšupielādēt uz LoTW.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3193" />
@@ -3499,22 +3499,22 @@ Do you want to import them now?</source>
     <message>
         <location filename="../mainwindow.cpp" line="3239" />
         <source>All queued QSOs of this log has been marked as sent to LoTW!</source>
-        <translation type="unfinished" />
+        <translation>Visi šī žurnāla rindā gaidošie QSO atzīmēti kā nosūtīti uz LoTW!</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3269" />
         <source>There was a problem to mark all queued QSOs as sent to LoTW!</source>
-        <translation type="unfinished" />
+        <translation>Neizdevās atzīmēt visus rindā gaidošos QSO kā nosūtītus uz LoTW!</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3322" />
         <source>About ...</source>
-        <translation type="unfinished" />
+        <translation>Par ...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3400" />
         <source>Congratulations!</source>
-        <translation type="unfinished" />
+        <translation>Apsveicam!</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3400" />
@@ -3524,12 +3524,12 @@ Do you want to import them now?</source>
     <message>
         <location filename="../mainwindow.cpp" line="3620" />
         <source>You can find the KLog data folder here: </source>
-        <translation type="unfinished" />
+        <translation>KLog datu mape atrodas šeit: </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3674" />
         <source>start</source>
-        <translation type="unfinished" />
+        <translation>startēt</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3675" />
@@ -3542,17 +3542,17 @@ The UDP server failed to %1.</source>
     <message>
         <location filename="../mainwindow.cpp" line="3701" />
         <source>stop</source>
-        <translation type="unfinished" />
+        <translation>apturēt</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4633" />
         <source>The selection you have done does not include any QSO</source>
-        <translation type="unfinished" />
+        <translation>Atlasē nav neviena QSO</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4679" />
         <source>The selection you have done does not include any QSO.</source>
-        <translation type="unfinished" />
+        <translation>Atlasē nav neviena QSO.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4847" />
@@ -3569,7 +3569,7 @@ The UDP server failed to %1.</source>
     <message>
         <location filename="../mainwindow.cpp" line="4906" />
         <source>KLog - QRZ.COM</source>
-        <translation type="unfinished" />
+        <translation>KLog — QRZ.COM</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4907" />
@@ -3589,12 +3589,12 @@ The UDP server failed to %1.</source>
     <message>
         <location filename="../mainwindow.cpp" line="6922" />
         <source>A dupe QSO has been detected in the file and will not be added to the log.</source>
-        <translation type="unfinished" />
+        <translation>Failā atrasts dublēts QSO, un tas netiks pievienots žurnālam.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6923" />
         <source>Please check the QSO information file and ensure it is properly added.</source>
-        <translation type="unfinished" />
+        <translation>Lūdzu, pārbaudiet QSO informācijas failu un pārliecinieties, ka tas pievienots pareizi.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6928" />
@@ -3604,7 +3604,7 @@ The UDP server failed to %1.</source>
     <message>
         <location filename="../mainwindow.cpp" line="6943" />
         <source>Native Error</source>
-        <translation type="unfinished" />
+        <translation>Sistēmas kļūda</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6955" />
@@ -3614,7 +3614,7 @@ The UDP server failed to %1.</source>
     <message>
         <location filename="../mainwindow.cpp" line="7642" />
         <source>It seems that there are no QSOs in the database.</source>
-        <translation type="unfinished" />
+        <translation>Šķiet, ka datubāzē nav neviena QSO.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7642" />
@@ -3624,12 +3624,12 @@ The UDP server failed to %1.</source>
     <message>
         <location filename="../mainwindow.cpp" line="4301" />
         <source>Status of the DX entity.</source>
-        <translation type="unfinished" />
+        <translation>DX entītijas statuss.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4303" />
         <source>Name of the DX entity.</source>
-        <translation type="unfinished" />
+        <translation>DX entītijas nosaukums.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4321" />
@@ -3655,12 +3655,12 @@ The UDP server failed to %1.</source>
     <message>
         <location filename="../mainwindow.cpp" line="4325" />
         <source>Others</source>
-        <translation type="unfinished" />
+        <translation>Citi</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4327" />
         <source>My Data</source>
-        <translation type="unfinished" />
+        <translation>Mani dati</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4328" />
@@ -3670,17 +3670,17 @@ The UDP server failed to %1.</source>
     <message>
         <location filename="../mainwindow.cpp" line="4392" />
         <source>Info</source>
-        <translation type="unfinished" />
+        <translation>Informācija</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4398" />
         <source>Awards</source>
-        <translation type="unfinished" />
+        <translation>Diplomi</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4399" />
         <source>Search</source>
-        <translation type="unfinished" />
+        <translation>Meklēt</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4401" />
@@ -3700,12 +3700,12 @@ The UDP server failed to %1.</source>
     <message>
         <location filename="../mainwindow.cpp" line="4466" />
         <source>No QSOs have been exported to ADIF.</source>
-        <translation type="unfinished" />
+        <translation>Neviens QSO netika eksportēts uz ADIF.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4471" />
         <source>KLog has exported %1 QSOs to the ADIF file: %2</source>
-        <translation type="unfinished" />
+        <translation>KLog eksportēja %1 QSO uz ADIF failu: %2</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2956" />
@@ -4299,7 +4299,7 @@ Ignored duplicated: %2</source>
     <message>
         <location filename="../inputwidgets/mainwindowinputothers.cpp" line="152" />
         <source>Others</source>
-        <translation type="unfinished" />
+        <translation>Citi</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputothers.cpp" line="161" />
@@ -6758,7 +6758,7 @@ Please add and select the kind of log you want to use.</source>
     <message>
         <location filename="../setuppages/setuppagedxcluster.cpp" line="103" />
         <source>Others</source>
-        <translation type="unfinished" />
+        <translation>Citi</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagedxcluster.cpp" line="125" />
@@ -8561,7 +8561,7 @@ The log will not be opened.</source>
     <message>
         <location filename="../softwareupdatedialog.cpp" line="73" />
         <source>Congratulations!</source>
-        <translation type="unfinished" />
+        <translation>Apsveicam!</translation>
     </message>
     <message>
         <location filename="../softwareupdatedialog.cpp" line="73" />
