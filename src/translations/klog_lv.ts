@@ -2858,142 +2858,142 @@ Do you want KLog to remove that file?</source>
     <message>
         <location filename="../mainwindow.cpp" line="1361" />
         <source>The entity that is selected is different from the one proposed by KLog:</source>
-        <translation type="unfinished" />
+        <translation>Izvēlētā entītija atšķiras no tās, ko piedāvā KLog:</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1367" />
         <source>- There is no selected DXCC.</source>
-        <translation type="unfinished" />
+        <translation>- DXCC nav izvēlēts.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1374" />
         <source>- KLog couldn't find a DXCC</source>
-        <translation type="unfinished" />
+        <translation>- KLog neatrada DXCC</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1377" />
         <source>Please select the one you want to keep for this QSO.</source>
-        <translation type="unfinished" />
+        <translation>Lūdzu, izvēlieties to, kuru atstāt šim QSO.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2030" />
         <source>KLog has received an error from QRZ.com.</source>
-        <translation type="unfinished" />
+        <translation>KLog saņēma kļūdu no QRZ.com.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2113" />
         <source>You need to activate the %1 service in the eLog preferences.</source>
-        <translation type="unfinished" />
+        <translation>Jāaktivizē %1 serviss eLog iestatījumos.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2162" />
         <source>KLog - Exit</source>
-        <translation type="unfinished" />
+        <translation>KLog — iziet</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2163" />
         <source>Do you really want to exit KLog?</source>
-        <translation type="unfinished" />
+        <translation>Vai tiešām vēlaties aizvērt KLog?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2507" />
         <source>The logfile has been modified.</source>
-        <translation type="unfinished" />
+        <translation>Žurnāla fails ir mainīts.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2507" />
         <source>Do you want to save your changes?</source>
-        <translation type="unfinished" />
+        <translation>Vai vēlaties saglabāt izmaiņas?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2527" />
         <source>It is important to export to ADIF and save a copy as a backup.</source>
-        <translation type="unfinished" />
+        <translation>Ir svarīgi eksportēt uz ADIF un saglabāt kopiju kā rezerves kopiju.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2531" />
         <source>Saving the log was done successfully.</source>
-        <translation type="unfinished" />
+        <translation>Žurnāls saglabāts veiksmīgi.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2539" />
         <source>The ADIF export was not properly done.</source>
-        <translation type="unfinished" />
+        <translation>ADIF eksports netika pabeigts pareizi.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2587" />
         <source>&amp;File</source>
-        <translation type="unfinished" />
+        <translation>&amp;Fails</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2598" />
         <source>&amp;Import from ADIF ...</source>
-        <translation type="unfinished" />
+        <translation>&amp;Importēt no ADIF ...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2601" />
         <source>Import an ADIF file into the current log.</source>
-        <translation type="unfinished" />
+        <translation>Importēt ADIF failu pašreizējā žurnālā.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2611" />
         <source>Export to ADIF ...</source>
-        <translation type="unfinished" />
+        <translation>Eksportēt uz ADIF ...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2615" />
         <source>Export the current log to an ADIF logfile.</source>
-        <translation type="unfinished" />
+        <translation>Eksportēt pašreizējo žurnālu uz ADIF failu.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2617" />
         <source>Export all logs to ADIF ...</source>
-        <translation type="unfinished" />
+        <translation>Eksportēt visus žurnālus uz ADIF ...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2621" />
         <source>Export ALL the QSOs into one ADIF file, merging QSOs from all the logs.</source>
-        <translation type="unfinished" />
+        <translation>Eksportēt VISUS QSO vienā ADIF failā, apvienojot visus žurnālus.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2625" />
         <source>&amp;Print Log ...</source>
-        <translation type="unfinished" />
+        <translation>&amp;Drukāt žurnālu ...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2628" />
         <source>Print your log.</source>
-        <translation type="unfinished" />
+        <translation>Drukāt žurnālu.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2633" />
         <source>KLog folder</source>
-        <translation type="unfinished" />
+        <translation>KLog mape</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2635" />
         <source>Opens the data folder of KLog.</source>
-        <translation type="unfinished" />
+        <translation>Atver KLog datu mapi.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2640" />
         <source>Settings ...</source>
-        <translation type="unfinished" />
+        <translation>Iestatījumi ...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2647" />
         <source>E&amp;xit</source>
-        <translation type="unfinished" />
+        <translation>&amp;Iziet</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2663" />
         <source>&amp;Tools</source>
-        <translation type="unfinished" />
+        <translation>&amp;Rīki</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2665" />
         <source>Fill in QSO data</source>
-        <translation type="unfinished" />
+        <translation>Aizpildīt QSO datus</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2669" />
@@ -3004,7 +3004,7 @@ Do you want KLog to remove that file?</source>
         <location filename="../mainwindow.cpp" line="2676" />
         <location filename="../mainwindow.cpp" line="2685" />
         <source>Grayline map</source>
-        <translation type="unfinished" />
+        <translation>Pelēkās līnijas karte</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2690" />
@@ -3014,27 +3014,27 @@ Do you want KLog to remove that file?</source>
     <message>
         <location filename="../mainwindow.cpp" line="2691" />
         <source>Fill in missing name, QTH and locator from QRZ.com and HamQTH</source>
-        <translation type="unfinished" />
+        <translation>Aizpildīt trūkstošo vārdu, QTH un lokatoru no QRZ.com un HamQTH</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2696" />
         <source>QSL tools ...</source>
-        <translation type="unfinished" />
+        <translation>QSL rīki ...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2698" />
         <source>Find QSO to QSL</source>
-        <translation type="unfinished" />
+        <translation>Atrast QSO, kam sūtīt QSL</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2701" />
         <source>Shows QSOs for which you should send your QSL and request the DX QSL.</source>
-        <translation type="unfinished" />
+        <translation>Rāda QSO, kuriem jānosūta sava QSL un jāpieprasa DX QSL.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2703" />
         <source>Find My-QSLs pending to send</source>
-        <translation type="unfinished" />
+        <translation>Atrast nenosūtītās savas QSL</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2707" />
@@ -3044,72 +3044,72 @@ Do you want KLog to remove that file?</source>
     <message>
         <location filename="../mainwindow.cpp" line="2709" />
         <source>Find DX-QSLs pending to receive</source>
-        <translation type="unfinished" />
+        <translation>Atrast nesaņemtās DX QSL</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2712" />
         <source>Shows DX-QSLs for which requests or QSLs have been sent with no answer.</source>
-        <translation type="unfinished" />
+        <translation>Rāda DX QSL, kurām pieprasījums vai QSL nosūtīts bez atbildes.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2714" />
         <source>Find requested pending to receive</source>
-        <translation type="unfinished" />
+        <translation>Atrast pieprasītās, kas nav saņemtas</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2717" />
         <source>Shows the DX-QSLs that have been requested.</source>
-        <translation type="unfinished" />
+        <translation>Rāda pieprasītās DX QSL.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2720" />
         <source>LoTW tools ...</source>
-        <translation type="unfinished" />
+        <translation>LoTW rīki ...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2725" />
         <source>Mark all non-sent QSOs in this log as queued to be uploaded.</source>
-        <translation type="unfinished" />
+        <translation>Atzīmēt visus nenosūtītos šī žurnāla QSO kā rindā gaidošus.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2727" />
         <source>Queue all QSLs to be sent</source>
-        <translation type="unfinished" />
+        <translation>Ielikt rindā visas nosūtāmās QSL</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2730" />
         <source>Put all the non-sent QSOs in the queue to be uploaded.</source>
-        <translation type="unfinished" />
+        <translation>Ielikt rindā visus nenosūtītos QSO.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2734" />
         <source>Mark all queued QSOs from this log as sent</source>
-        <translation type="unfinished" />
+        <translation>Atzīmēt visus šī žurnāla rindā gaidošos QSO kā nosūtītus</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2737" />
         <source>Mark all queued QSOs in this log as sent to LoTW.</source>
-        <translation type="unfinished" />
+        <translation>Atzīmēt visus šī žurnāla rindā gaidošos QSO kā nosūtītus uz LoTW.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2739" />
         <source>Mark all queued QSOs as sent</source>
-        <translation type="unfinished" />
+        <translation>Atzīmēt visus rindā gaidošos QSO kā nosūtītus</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2742" />
         <source>Mark all queued QSOs as sent to LoTW.</source>
-        <translation type="unfinished" />
+        <translation>Atzīmēt visus rindā gaidošos QSO kā nosūtītus uz LoTW.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2751" />
         <source>Download from LoTW ...</source>
-        <translation type="unfinished" />
+        <translation>Lejupielādēt no LoTW ...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2756" />
         <source>Download the full log from LoTW ...</source>
-        <translation type="unfinished" />
+        <translation>Lejupielādēt pilnu žurnālu no LoTW ...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2761" />
