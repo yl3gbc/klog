@@ -5,6 +5,8 @@
 #include <QHash>
 #include <QString>
 #include <QStringList>
+#include <QPair>
+#include <QList>
 
 // Klubu biedru saraksti CQRLOG formata:
 //   1. rinda - isais nosaukums, 2. - pilnais, talak zime;numurs
@@ -17,6 +19,8 @@ public:
 
     // Atgriež "AGB #265" formā, katram klubam, kur zīme atrasta
     QStringList lookup(const QString &call) const;
+    // Atgriez [klubs, numurs] parus, kur si zime ir biedrs
+    QList<QPair<QString, QString>> findForCallsign(const QString &call) const;
     void reload();
     void saveForQSO(int qsoId, const QString &call) const;
     int clubCount() const { return clubs.size(); }

@@ -86,3 +86,19 @@ void ClubMembers::saveForQSO(int qsoId, const QString &call) const
         q.exec();
     }
 }
+
+QList<QPair<QString, QString>> ClubMembers::findForCallsign(const QString &call) const
+{
+    QList<QPair<QString, QString>> out;
+    const QString c = call.trimmed().toUpper();
+    if (c.length() < 3) return out;
+    const QString base = CallsignServices::baseCall(c);
+    for (const Club &cl : clubs)
+    {
+        if (!cl.members.contains(c) && !cl.members.contains(base)) continue;
+        out.append(qMakePair(cl.shortName,
+                             cl.members.contains(c) ? cl.members.value(c)
+                                                    : cl.members.value(base)));
+    }
+    return out;
+}

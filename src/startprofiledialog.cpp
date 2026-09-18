@@ -1,4 +1,6 @@
 #include "startprofiledialog.h"
+#include "clubmembers.h"
+#include <QDir>
 #include "world.h"
 #include "setupdialog.h"
 #include "dataproxy_sqlite.h"
@@ -288,9 +290,38 @@ static bool editProfileDialog(QWidget *parent, Profile &p, const QString &title,
         const int r = clubTable->currentRow();
         if (r >= 0) clubTable->removeRow(r);
     });
+    auto *findClub = new QPushButton(QObject::tr("Find"), wClub);
+    findClub->setToolTip(QObject::tr("Search the club member lists for this callsign"));
+    QObject::connect(findClub, &QPushButton::clicked, [clubTable, &p, wClub]() {
+        ClubMembers cm(QDir::homePath() + QStringLiteral("/.klogng/data/clubs"));
+        const auto found = cm.findForCallsign(p.callsign);
+        if (found.isEmpty()) {
+            QMessageBox::information(wClub, QObject::tr("KLog - Clubs"),
+                QObject::tr("%1 was not found in any club member list.").arg(p.callsign));
+            return;
+        }
+        int added = 0;
+        for (const auto &f : found) {
+            bool exists = false;
+            for (int r = 0; r < clubTable->rowCount(); ++r)
+                if (clubTable->item(r, 0) &&
+                    clubTable->item(r, 0)->text().trimmed().compare(f.first, Qt::CaseInsensitive) == 0)
+                { exists = true; break; }
+            if (exists) continue;
+            const int r = clubTable->rowCount();
+            clubTable->insertRow(r);
+            clubTable->setItem(r, 0, new QTableWidgetItem(f.first));
+            clubTable->setItem(r, 1, new QTableWidgetItem(f.second));
+            added++;
+        }
+        QMessageBox::information(wClub, QObject::tr("KLog - Clubs"),
+            QObject::tr("Found in %1 club(s), %2 added.").arg(found.size()).arg(added));
+    });
+
     auto *clubBtns = new QHBoxLayout;
     clubBtns->addWidget(addClub);
     clubBtns->addWidget(delClub);
+    clubBtns->addWidget(findClub);
     clubBtns->addStretch();
     auto *clubLay = new QVBoxLayout(wClub);
     clubLay->addWidget(clubTable, 1);

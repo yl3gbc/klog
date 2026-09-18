@@ -52,6 +52,7 @@ bool ProfileManager::ensureSchemaAndMigrate(QString *errorOut)
         " profile_id INTEGER NOT NULL REFERENCES profiles(profile_id),"
         " club VARCHAR(20) NOT NULL,"
         " member_nr VARCHAR(20),"
+        " manual INTEGER NOT NULL DEFAULT 0,"
         " PRIMARY KEY (profile_id, club))"));
     if (!exec(q, "createClubs")) return false;
 
