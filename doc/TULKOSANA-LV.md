@@ -104,6 +104,15 @@ angliski.
 
 **Linguist atvērts, kamēr dari git pull** — aizver to pirms pull.
 
+**Palaists ar sudo** — Linguist NEDRĪKST palaist ar sudo. Fails ir tavā
+mājas mapē, parastas tiesības pietiek. Ja tomēr palaidi ar sudo, fails
+piederēs root, un ne tu, ne git ar to strādāt nevarēsi. Salabo tā:
+
+    sudo chown $USER:$USER ~/klog-lv/src/translations/klog_lv.ts
+
+Pareizi: atver Linguist no izvēlnes, tad File -> Open un atrod failu
+`~/klog-lv/src/translations/klog_lv.ts`.
+
 ## Jautājumi
 
 YL3GBC, Arnis.
