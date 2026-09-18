@@ -1182,9 +1182,9 @@ Vai tiešām vēlaties atcelt?</translation>
         <source>KLog has found one QSO without the Station Callsign defined.
 
 Enter the Station Callsign that was used to do this QSO with %1 on %2:</source>
-        <translation>KLog atrada vienu QSO, kuram nav norādīts stacijas izsaukuma signāls.
+        <translation>KLog atrada vienu QSO kuram nav norādīts stacijas izsaukuma signāls.
 
-Ievadiet stacijas izsaukuma signālu, kas tika izmantots šim QSO ar %1 datumā %2:
+Ievadiet stacijas izsaukuma signālu kas tika izmantots šim QSO ar %1 datumā %2:
 </translation>
     </message>
     <message>
