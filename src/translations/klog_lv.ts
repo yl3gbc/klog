@@ -481,7 +481,7 @@
         <location filename="../awardswidget.cpp" line="188"/>
         <location filename="../awardswidget.cpp" line="408"/>
         <source>Annual</source>
-        <translation>Gada pārskats.</translation>
+        <translation>Gada pārskats</translation>
     </message>
     <message>
         <location filename="../awardswidget.cpp" line="281"/>
