@@ -2422,7 +2422,7 @@ Error returned: %2</source>
     <message>
         <location filename="../mainqsoentrywidget.cpp" line="98" />
         <source>Manual Mode</source>
-        <translation type="unfinished" />
+        <translation>Manuālais režīms</translation>
     </message>
     <message>
         <location filename="../mainqsoentrywidget.cpp" line="116" />
@@ -2436,12 +2436,12 @@ Error returned: %2</source>
     <message>
         <location filename="../mainqsoentrywidget.cpp" line="964" />
         <source>&amp;Save</source>
-        <translation type="unfinished" />
+        <translation>&amp;Saglabāt</translation>
     </message>
     <message>
         <location filename="../mainqsoentrywidget.cpp" line="965" />
         <source>&amp;Cancel</source>
-        <translation type="unfinished" />
+        <translation>&amp;Atcelt</translation>
     </message>
     <message>
         <location filename="../mainqsoentrywidget.cpp" line="1141" />
@@ -2455,12 +2455,12 @@ Error returned: %2</source>
     <message>
         <location filename="../mainwindow.cpp" line="2797" />
         <source>Check always the current callsign in QRZ.com</source>
-        <translation type="unfinished" />
+        <translation>Vienmēr pārbaudīt izsaukuma signālu QRZ.com</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="399" />
         <source>KLog - File not open</source>
-        <translation type="unfinished" />
+        <translation>KLog — fails nav atvērts</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="400" />
@@ -2470,48 +2470,48 @@ Error returned: %2</source>
     <message>
         <location filename="../mainwindow.cpp" line="122" />
         <source>Status bar ...</source>
-        <translation type="unfinished" />
+        <translation>Statusa josla ...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="123" />
         <location filename="../mainwindow.cpp" line="161" />
         <source>DX Entity</source>
-        <translation type="unfinished" />
+        <translation>DX entītija</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="134" />
         <source>Starting KLog</source>
-        <translation type="unfinished" />
+        <translation>KLog startē</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="162" />
         <source>&amp;Log Window</source>
-        <translation type="unfinished" />
+        <translation>&amp;Žurnāla logs</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="547" />
         <source>KLog needs to update the Entities database.</source>
-        <translation type="unfinished" />
+        <translation>KLog jāatjaunina entītiju datubāze.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="548" />
         <source>You can update the entities database in Tools-&gt;Update cty.csv</source>
-        <translation type="unfinished" />
+        <translation>Entītiju datubāzi var atjaunināt: Rīki -&gt; Atjaunināt cty.csv</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="807" />
         <source>Log backup recommended!</source>
-        <translation type="unfinished" />
+        <translation>Ieteicams izveidot žurnāla rezerves kopiju!</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="864" />
         <source>It seems that you are running this version of KLog for the first time.</source>
-        <translation type="unfinished" />
+        <translation>Šķiet, ka šo KLog versiju palaižat pirmo reizi.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="875" />
         <source>Ready</source>
-        <translation type="unfinished" />
+        <translation>Gatavs</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1014" />
@@ -2522,7 +2522,7 @@ Error returned: %2</source>
     <message>
         <location filename="../mainwindow.cpp" line="1323" />
         <source>KLog - Not valid call</source>
-        <translation type="unfinished" />
+        <translation>KLog — nederīgs izsaukuma signāls</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1324" />
@@ -2537,7 +2537,7 @@ Error returned: %2</source>
     <message>
         <location filename="../mainwindow.cpp" line="1388" />
         <source>KLog - Select correct entity</source>
-        <translation type="unfinished" />
+        <translation>KLog — izvēlieties pareizo entītiju</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1504" />
@@ -2545,12 +2545,12 @@ Error returned: %2</source>
         <location filename="../mainwindow.cpp" line="4499" />
         <location filename="../mainwindow.cpp" line="5002" />
         <source>Save ADIF File</source>
-        <translation type="unfinished" />
+        <translation>Saglabāt ADIF failu</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1536" />
         <source>You have requested to delete several QSOs </source>
-        <translation type="unfinished" />
+        <translation>Jūs pieprasījāt dzēst vairākus QSO </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1540" />
@@ -2561,12 +2561,12 @@ Error returned: %2</source>
         <location filename="../mainwindow.cpp" line="1541" />
         <location filename="../mainwindow.cpp" line="1596" />
         <source>Are you sure?</source>
-        <translation type="unfinished" />
+        <translation>Vai tiešām?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1591" />
         <source>You have requested to delete the QSO with: %1</source>
-        <translation type="unfinished" />
+        <translation>Jūs pieprasījāt dzēst QSO ar: %1</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1687" />
@@ -2581,7 +2581,7 @@ Error returned: %2</source>
     <message>
         <location filename="../mainwindow.cpp" line="1707" />
         <source>Do you want to mark as Uploaded all the QSOs uploaded to ClubLog?</source>
-        <translation type="unfinished" />
+        <translation>Vai atzīmēt kā augšupielādētus visus uz ClubLog nosūtītos QSO?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1706" />
@@ -2600,17 +2600,17 @@ Error returned: %2</source>
     <message>
         <location filename="../mainwindow.cpp" line="95" />
         <source>Always check the current callsign in QRZ.com</source>
-        <translation type="unfinished" />
+        <translation>Vienmēr pārbaudīt izsaukuma signālu QRZ.com</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="176" />
         <source>Upload queued QSOs to LoTW</source>
-        <translation type="unfinished" />
+        <translation>Augšupielādēt rindā gaidošos QSO uz LoTW</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="423" />
         <source>KLog - KLog folder not found</source>
-        <translation type="unfinished" />
+        <translation>KLog — KLog mape nav atrasta</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="424" />
@@ -2620,22 +2620,22 @@ Error returned: %2</source>
     <message>
         <location filename="../mainwindow.cpp" line="546" />
         <source>KLog - CTY.dat update</source>
-        <translation type="unfinished" />
+        <translation>KLog — CTY.dat atjaunināšana</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="549" />
         <source>Do you want to update now?</source>
-        <translation type="unfinished" />
+        <translation>Vai atjaunināt tagad?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="793" />
         <source>You seem to have never backed up or exported your log to ADIF.</source>
-        <translation type="unfinished" />
+        <translation>Šķiet, ka žurnāls nekad nav dublēts vai eksportēts uz ADIF.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="799" />
         <source>Your latest backup seems older than one month.</source>
-        <translation type="unfinished" />
+        <translation>Pēdējā rezerves kopija šķiet vecāka par mēnesi.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="810" />
@@ -2650,22 +2650,22 @@ KLog will remind you to backup on a monthly basis.
     <message>
         <location filename="../mainwindow.cpp" line="824" />
         <source>KLog - Backup</source>
-        <translation type="unfinished" />
+        <translation>KLog — rezerves kopija</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="828" />
         <source>Backup completed successfully</source>
-        <translation type="unfinished" />
+        <translation>Rezerves kopija izveidota veiksmīgi</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="829" />
         <source>KLog will remind you again in approximately one month.</source>
-        <translation type="unfinished" />
+        <translation>KLog atgādinās atkal apmēram pēc mēneša.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="834" />
         <source>Backup failed.</source>
-        <translation type="unfinished" />
+        <translation>Rezerves kopija neizdevās.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="835" />
@@ -2676,22 +2676,22 @@ KLog will remind you to backup on a monthly basis.
         <location filename="../mainwindow.cpp" line="855" />
         <location filename="../mainwindow.cpp" line="863" />
         <source>KLog - New version detected!</source>
-        <translation type="unfinished" />
+        <translation>KLog — atklāta jauna versija!</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="856" />
         <source>This version of KLog requires that the DXCC database is updated.</source>
-        <translation type="unfinished" />
+        <translation>Šai KLog versijai nepieciešams atjaunināt DXCC datubāzi.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="857" />
         <source>The database will be updated.</source>
-        <translation type="unfinished" />
+        <translation>Datubāze tiks atjaunināta.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="865" />
         <source>The setup will now open to allow you to change your settings.</source>
-        <translation type="unfinished" />
+        <translation>Tagad atvērsies iestatījumi, lai varētu tos mainīt.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="993" />
@@ -2706,7 +2706,7 @@ KLog will remind you to backup on a monthly basis.
     <message>
         <location filename="../mainwindow.cpp" line="1686" />
         <source>KLog - ClubLog error</source>
-        <translation type="unfinished" />
+        <translation>KLog — ClubLog kļūda</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1723" />
@@ -2725,13 +2725,13 @@ Do you want KLog to remove that file?</source>
         <location filename="../mainwindow.cpp" line="1861" />
         <location filename="../mainwindow.cpp" line="4592" />
         <source>The file has been removed.</source>
-        <translation type="unfinished" />
+        <translation>Fails ir izdzēsts.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1753" />
         <location filename="../mainwindow.cpp" line="1871" />
         <source>The file has not been removed.</source>
-        <translation type="unfinished" />
+        <translation>Fails nav izdzēsts.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1754" />
@@ -2754,7 +2754,7 @@ You can remove it manually.</source>
     <message>
         <location filename="../mainwindow.cpp" line="1824" />
         <source>Do you want to mark as Uploaded all the QSOs uploaded to eQSL?</source>
-        <translation type="unfinished" />
+        <translation>Vai atzīmēt kā augšupielādētus visus uz eQSL nosūtītos QSO?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1823" />
@@ -2786,7 +2786,7 @@ Do you want KLog to remove that file?</source>
     <message>
         <location filename="../mainwindow.cpp" line="1942" />
         <source>Do you want to mark as Uploaded all the QSOs uploaded to QRZ.com?</source>
-        <translation type="unfinished" />
+        <translation>Vai atzīmēt kā augšupielādētus visus uz QRZ.com nosūtītos QSO?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1941" />
@@ -2800,12 +2800,12 @@ Do you want KLog to remove that file?</source>
     <message>
         <location filename="../mainwindow.cpp" line="1803" />
         <source>KLog - eQSL error</source>
-        <translation type="unfinished" />
+        <translation>KLog — eQSL kļūda</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1896" />
         <source>KLog - QRZ.com warning</source>
-        <translation type="unfinished" />
+        <translation>KLog — QRZ.com brīdinājums</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1897" />
@@ -2815,7 +2815,7 @@ Do you want KLog to remove that file?</source>
     <message>
         <location filename="../mainwindow.cpp" line="1898" />
         <source>Please check your QRZ.com subcription or credentials.</source>
-        <translation type="unfinished" />
+        <translation>Lūdzu, pārbaudiet savu QRZ.com abonementu vai pieteikšanās datus.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1959" />
@@ -2825,18 +2825,18 @@ Do you want KLog to remove that file?</source>
     <message>
         <location filename="../mainwindow.cpp" line="1969" />
         <source>The QRZ.com upload process has finished successfully</source>
-        <translation type="unfinished" />
+        <translation>QRZ.com augšupielāde pabeigta veiksmīgi</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2024" />
         <source>Call not found in QRZ.com</source>
-        <translation type="unfinished" />
+        <translation>Izsaukuma signāls QRZ.com nav atrasts</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1921" />
         <location filename="../mainwindow.cpp" line="2029" />
         <source>KLog - QRZ.com error</source>
-        <translation type="unfinished" />
+        <translation>KLog — QRZ.com kļūda</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="918" />
@@ -6061,12 +6061,12 @@ KLog will finish when you click on OK.</source>
     <message>
         <location filename="../searchwidget.cpp" line="253" />
         <source>You have requested to delete the QSO with: %1</source>
-        <translation type="unfinished" />
+        <translation>Jūs pieprasījāt dzēst QSO ar: %1</translation>
     </message>
     <message>
         <location filename="../searchwidget.cpp" line="258" />
         <source>Are you sure?</source>
-        <translation type="unfinished" />
+        <translation>Vai tiešām?</translation>
     </message>
     <message>
         <location filename="../searchwidget.cpp" line="369" />
@@ -7304,7 +7304,7 @@ If no port is specified, 41112 will be used by default:</source>
     <message>
         <location filename="../setuppages/setuppagelogsnew.cpp" line="61" />
         <source>&amp;Cancel</source>
-        <translation type="unfinished" />
+        <translation>&amp;Atcelt</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagelogsnew.cpp" line="97" />
@@ -7787,7 +7787,7 @@ It may be caused because the file you are trying to import does not have the rig
     <message>
         <location filename="../setuppages/setuppagesatsnew.cpp" line="59" />
         <source>&amp;Cancel</source>
-        <translation type="unfinished" />
+        <translation>&amp;Atcelt</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesatsnew.cpp" line="110" />
@@ -7850,7 +7850,7 @@ It may be caused because the file you are trying to import does not have the rig
     <message>
         <location filename="../setuppages/setuppagesubdivisionnew.cpp" line="71" />
         <source>&amp;Cancel</source>
-        <translation type="unfinished" />
+        <translation>&amp;Atcelt</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesubdivisionnew.cpp" line="135" />
