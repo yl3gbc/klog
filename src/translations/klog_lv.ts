@@ -102,17 +102,17 @@
     <message>
         <location filename="../setuppages/setuppageworldeditor.cpp" line="38" />
         <source>Add Special Callsign</source>
-        <translation type="unfinished" />
+        <translation>Pievienot speciālo izsaukuma signālu</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageworldeditor.cpp" line="41" />
         <source>e.g. RI1ANY</source>
-        <translation type="unfinished" />
+        <translation>piem., RI1ANY</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageworldeditor.cpp" line="54" />
         <source>Override CQ Zone:</source>
-        <translation type="unfinished" />
+        <translation>Aizstāt CQ zonu:</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageworldeditor.cpp" line="60" />
@@ -127,7 +127,7 @@
     <message>
         <location filename="../setuppages/setuppageworldeditor.cpp" line="86" />
         <source>Entity:</source>
-        <translation type="unfinished" />
+        <translation>Entītija:</translation>
     </message>
 </context>
 <context>
@@ -393,37 +393,37 @@
     <message>
         <location filename="../awards.cpp" line="768" />
         <source>New One, work it!</source>
-        <translation type="unfinished" />
+        <translation>Pirmreizējs, strādā!</translation>
     </message>
     <message>
         <location filename="../awards.cpp" line="773" />
         <source>Needed (band/mode), work it!</source>
-        <translation type="unfinished" />
+        <translation>Nepieciešams (diapazons/režīms), strādā!</translation>
     </message>
     <message>
         <location filename="../awards.cpp" line="775" />
         <source>Needed, work it!</source>
-        <translation type="unfinished" />
+        <translation>Nepieciešams, strādā!</translation>
     </message>
     <message>
         <location filename="../awards.cpp" line="780" />
         <source>Worked (band/mode) but not confirmed</source>
-        <translation type="unfinished" />
+        <translation>Strādāts (diapazons/režīms), bet nav apstiprināts</translation>
     </message>
     <message>
         <location filename="../awards.cpp" line="782" />
         <source>Worked but not confirmed</source>
-        <translation type="unfinished" />
+        <translation>Strādāts, bet nav apstiprināts</translation>
     </message>
     <message>
         <location filename="../awards.cpp" line="788" />
         <source>Confirmed (band/mode)</source>
-        <translation type="unfinished" />
+        <translation>Apstiprināts (diapazons/režīms)</translation>
     </message>
     <message>
         <location filename="../awards.cpp" line="794" />
         <source>Unknown!</source>
-        <translation type="unfinished" />
+        <translation>Nezināms!</translation>
     </message>
     <message>
         <location filename="../awards.cpp" line="798" />
@@ -638,7 +638,7 @@ Vai vēlaties mēģināt vēlreiz?</translation>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="84" />
         <source>Priority</source>
-        <translation type="unfinished" />
+        <translation>Prioritāte</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="85" />
@@ -648,17 +648,17 @@ Vai vēlaties mēģināt vēlreiz?</translation>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="86" />
         <source>DX Call</source>
-        <translation type="unfinished" />
+        <translation>DX izsaukuma signāls</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="87" />
         <source>Country</source>
-        <translation type="unfinished" />
+        <translation>Valsts</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="88" />
         <source>Freq (kHz)</source>
-        <translation type="unfinished" />
+        <translation>Frekvence (kHz)</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="89" />
@@ -673,22 +673,22 @@ Vai vēlaties mēģināt vēlreiz?</translation>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="91" />
         <source>Spotter</source>
-        <translation type="unfinished" />
+        <translation>Ziņotājs</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="92" />
         <source>Source</source>
-        <translation type="unfinished" />
+        <translation>Avots</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="93" />
         <source>Age</source>
-        <translation type="unfinished" />
+        <translation>Vecums</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="94" />
         <source>MW Rank</source>
-        <translation type="unfinished" />
+        <translation>MW vērtējums</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="128" />
@@ -718,12 +718,12 @@ Vai vēlaties mēģināt vēlreiz?</translation>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="210" />
         <source>Received at %1 UTC</source>
-        <translation type="unfinished" />
+        <translation>Saņemts %1 UTC</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="261" />
         <source>%1 min</source>
-        <translation type="unfinished" />
+        <translation>%1 min</translation>
     </message>
 </context>
 <context>
@@ -789,87 +789,87 @@ Vai vēlaties mēģināt vēlreiz?</translation>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="572" />
         <source>DX Assistant</source>
-        <translation type="unfinished" />
+        <translation>DX asistents</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="621" />
         <source>The band where most DX spots are arriving right now.</source>
-        <translation type="unfinished" />
+        <translation>Diapazons, kurā šobrīd pienāk visvairāk DX ziņojumu.</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="623" />
         <source>The band where you have the most to gain, based on your log.</source>
-        <translation type="unfinished" />
+        <translation>Diapazons, kurā tev ir vislielākais ieguvums, spriežot pēc žurnāla.</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="942" />
         <source>Most active band: %1</source>
-        <translation type="unfinished" />
+        <translation>Aktīvākais diapazons: %1</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="943" />
         <source>Band to be: %1</source>
-        <translation type="unfinished" />
+        <translation>Ieteicamais diapazons: %1</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="1192" />
         <source>Hide these spots</source>
-        <translation type="unfinished" />
+        <translation>Paslēpt šos ziņojumus</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="1193" />
         <source>Hide this spot</source>
-        <translation type="unfinished" />
+        <translation>Paslēpt šo ziņojumu</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="1195" />
         <source>Hide these callsigns for the rest of the session.</source>
-        <translation type="unfinished" />
+        <translation>Paslēpt šos izsaukuma signālus līdz sesijas beigām.</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="1196" />
         <source>Hide this callsign for the rest of the session.</source>
-        <translation type="unfinished" />
+        <translation>Paslēpt šo izsaukuma signālu līdz sesijas beigām.</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="1199" />
         <source>Copy Callsign</source>
-        <translation type="unfinished" />
+        <translation>Kopēt izsaukuma signālu</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="1200" />
         <source>Copy the DX callsign of this spot to the clipboard.</source>
-        <translation type="unfinished" />
+        <translation>Kopēt šī ziņojuma DX izsaukuma signālu starpliktuvē.</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="1206" />
         <source>Filters</source>
-        <translation type="unfinished" />
+        <translation>Filtri</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="1211" />
         <source>Reset all</source>
-        <translation type="unfinished" />
+        <translation>Atiestatīt visu</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="1212" />
         <source>Remove all filtering and put every filter back to its default.</source>
-        <translation type="unfinished" />
+        <translation>Noņemt visus filtrus un atjaunot noklusējuma vērtības.</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="1227" />
         <source>Columns</source>
-        <translation type="unfinished" />
+        <translation>Kolonnas</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="1230" />
         <source>Hide this column</source>
-        <translation type="unfinished" />
+        <translation>Paslēpt šo kolonnu</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="1236" />
         <source>Show</source>
-        <translation type="unfinished" />
+        <translation>Rādīt</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="1240" />
@@ -884,32 +884,32 @@ Vai vēlaties mēģināt vēlreiz?</translation>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="1253" />
         <source>Follow my band</source>
-        <translation type="unfinished" />
+        <translation>Sekot manam diapazonam</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="1256" />
         <source>Show only the spots on the band you are working on.</source>
-        <translation type="unfinished" />
+        <translation>Rādīt tikai ziņojumus diapazonā, kurā strādā.</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="1282" />
         <source>Spotter</source>
-        <translation type="unfinished" />
+        <translation>Ziņotājs</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="1286" />
         <source>My call</source>
-        <translation type="unfinished" />
+        <translation>Mans izsaukuma signāls</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="1287" />
         <source>My DXCC</source>
-        <translation type="unfinished" />
+        <translation>Mans DXCC</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="1288" />
         <source>My continent</source>
-        <translation type="unfinished" />
+        <translation>Mans kontinents</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="1289" />
@@ -919,32 +919,32 @@ Vai vēlaties mēģināt vēlreiz?</translation>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="1301" />
         <source>Age</source>
-        <translation type="unfinished" />
+        <translation>Vecums</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="1303" />
         <source>15 minutes</source>
-        <translation type="unfinished" />
+        <translation>15 minūtes</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="1303" />
         <source>30 minutes</source>
-        <translation type="unfinished" />
+        <translation>30 minūtes</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="1304" />
         <source>1 hour</source>
-        <translation type="unfinished" />
+        <translation>1 stunda</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="1304" />
         <source>2 hours</source>
-        <translation type="unfinished" />
+        <translation>2 stundas</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="1315" />
         <source>Number spots</source>
-        <translation type="unfinished" />
+        <translation>Ziņojumu skaits</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="1327" />
@@ -954,7 +954,7 @@ Vai vēlaties mēģināt vēlreiz?</translation>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="1340" />
         <source>Source</source>
-        <translation type="unfinished" />
+        <translation>Avots</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="1352" />
@@ -964,77 +964,77 @@ Vai vēlaties mēģināt vēlreiz?</translation>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="1375" />
         <source>Spot</source>
-        <translation type="unfinished" />
+        <translation>Ziņojums</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="1377" />
         <source>Send to UI</source>
-        <translation type="unfinished" />
+        <translation>Nosūtīt uz formu</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="1378" />
         <source>Fill the QSO entry form with this spot.</source>
-        <translation type="unfinished" />
+        <translation>Aizpildīt QSO ievades formu ar šo ziņojumu.</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="1380" />
         <source>Log this QSO</source>
-        <translation type="unfinished" />
+        <translation>Ierakstīt šo QSO</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="1381" />
         <source>Add this QSO to the log immediately.</source>
-        <translation type="unfinished" />
+        <translation>Uzreiz pievienot šo QSO žurnālam.</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="1386" />
         <source>QSY to this freq</source>
-        <translation type="unfinished" />
+        <translation>Pāriet uz šo frekvenci</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="1387" />
         <source>Tune the radio to the frequency of this spot.</source>
-        <translation type="unfinished" />
+        <translation>Noskaņot radioiekārtu uz šī ziņojuma frekvenci.</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="1390" />
         <source>Look up on QRZ.com</source>
-        <translation type="unfinished" />
+        <translation>Meklēt QRZ.com</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="1391" />
         <source>Open this callsign's page on QRZ.com.</source>
-        <translation type="unfinished" />
+        <translation>Atvērt šī izsaukuma signāla lapu QRZ.com.</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="1401" />
         <source>Clear all</source>
-        <translation type="unfinished" />
+        <translation>Notīrīt visu</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="1402" />
         <source>Remove every spot and list again the ones hidden or worked this session.</source>
-        <translation type="unfinished" />
+        <translation>Noņemt visus ziņojumus un parādīt tos, kas šajā sesijā paslēpti vai strādāti.</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="1408" />
         <source>Show to map</source>
-        <translation type="unfinished" />
+        <translation>Rādīt kartē</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="1409" />
         <source>Plot the spots currently shown on the map.</source>
-        <translation type="unfinished" />
+        <translation>Attēlot kartē šobrīd redzamos ziņojumus.</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="1412" />
         <source>Refresh</source>
-        <translation type="unfinished" />
+        <translation>Atsvaidzināt</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxclusterassistant.cpp" line="1413" />
         <source>Score every spot again against your log.</source>
-        <translation type="unfinished" />
+        <translation>Pārvērtēt visus ziņojumus pret žurnālu.</translation>
     </message>
 </context>
 <context>
@@ -1101,7 +1101,7 @@ Vai vēlaties mēģināt vēlreiz?</translation>
     <message>
         <location filename="../dxcluster/dxcluster.cpp" line="155" />
         <source>Enable/Disable DX Assistant</source>
-        <translation type="unfinished" />
+        <translation>Ieslēgt/izslēgt DX asistentu</translation>
     </message>
     <message>
         <location filename="../dxcluster/dxcluster.cpp" line="253" />
@@ -1186,7 +1186,7 @@ Vai vēlaties mēģināt vēlreiz?</translation>
     <message>
         <location filename="../database/database.cpp" line="2608" />
         <source>KLog - DB update</source>
-        <translation type="unfinished" />
+        <translation>KLog — datubāzes atjaunināšana</translation>
     </message>
     <message>
         <location filename="../database/database.cpp" line="2609" />
@@ -1226,7 +1226,7 @@ Vai vēlaties mēģināt vēlreiz?</translation>
         <location filename="../dataproxy_sqlite.cpp" line="5319" />
         <source>Back scatter</source>
         <comment>Common term in hamradio, do not translate if not sure</comment>
-        <translation />
+        <translation>Atpakaļizkliede</translation>
     </message>
     <message>
         <location filename="../dataproxy_sqlite.cpp" line="5323" />
@@ -1320,7 +1320,7 @@ Vai vēlaties mēģināt vēlreiz?</translation>
         <location filename="../dataproxy_sqlite.cpp" line="6080" />
         <source>Manager</source>
         <comment>Common term in hamradio, do not translate if not sure</comment>
-        <translation type="unfinished" />
+        <translation>Menedžeris</translation>
     </message>
     <message>
         <location filename="../dataproxy_sqlite.cpp" line="8820" />
@@ -1368,7 +1368,7 @@ Vai vēlaties mēģināt vēlreiz?</translation>
     <message>
         <location filename="../downloadcty.cpp" line="228" />
         <source>The downloaded file does not look like a country file.</source>
-        <translation type="unfinished" />
+        <translation>Lejupielādētais fails neizskatās pēc valstu datu faila.</translation>
     </message>
     <message>
         <location filename="../downloadcty.cpp" line="229" />
@@ -1511,12 +1511,12 @@ You can download the file manually from https://www.country-files.com/ and copy 
     <message>
         <location filename="../filemanager.cpp" line="870" />
         <source>File %1/%2: %3</source>
-        <translation type="unfinished" />
+        <translation>Fails %1/%2: %3</translation>
     </message>
     <message>
         <location filename="../filemanager.cpp" line="875" />
         <source>KLog - Importing file %1/%2</source>
-        <translation type="unfinished" />
+        <translation>KLog — importē failu %1/%2</translation>
     </message>
     <message>
         <location filename="../filemanager.cpp" line="941" />
@@ -1527,12 +1527,12 @@ QSO: </source>
     <message>
         <location filename="../filemanager.cpp" line="992" />
         <source>KLog - Duplicated QSOs!</source>
-        <translation type="unfinished" />
+        <translation>KLog — dublēti QSO!</translation>
     </message>
     <message>
         <location filename="../filemanager.cpp" line="993" />
         <source>This file contains duplicated QSOs. Duplicated QSOs will not be imported</source>
-        <translation type="unfinished" />
+        <translation>Šis fails satur dublētus QSO. Dublētie QSO netiks importēti</translation>
     </message>
     <message>
         <location filename="../filemanager.cpp" line="1068" />
@@ -1666,12 +1666,12 @@ Vai vēlaties, lai KLog pievieno šo QSO žurnālam?
     <message>
         <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="25" />
         <source>Bauds</source>
-        <translation type="unfinished" />
+        <translation>Bodi</translation>
     </message>
     <message>
         <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="27" />
         <source>Select the serial port speed.</source>
-        <translation type="unfinished" />
+        <translation>Izvēlieties seriālā porta ātrumu.</translation>
     </message>
     <message>
         <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="31" />
@@ -1681,132 +1681,132 @@ Vai vēlaties, lai KLog pievieno šo QSO žurnālam?
     <message>
         <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="33" />
         <source>Select the serial port. Only the serial ports that are detected are shown.</source>
-        <translation type="unfinished" />
+        <translation>Izvēlieties seriālo portu. Rādīti tikai atrastie porti.</translation>
     </message>
     <message>
         <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="37" />
         <source>Scan</source>
-        <translation type="unfinished" />
+        <translation>Meklēt</translation>
     </message>
     <message>
         <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="39" />
         <source>Click to identify the serial ports available in your computer.</source>
-        <translation type="unfinished" />
+        <translation>Noklikšķiniet, lai atrastu datorā pieejamos seriālos portus.</translation>
     </message>
     <message>
         <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="50" />
         <source>5 bits</source>
-        <translation type="unfinished" />
+        <translation>5 biti</translation>
     </message>
     <message>
         <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="50" />
         <source>6 bits</source>
-        <translation type="unfinished" />
+        <translation>6 biti</translation>
     </message>
     <message>
         <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="50" />
         <source>7 bits</source>
-        <translation type="unfinished" />
+        <translation>7 biti</translation>
     </message>
     <message>
         <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="50" />
         <source>8 bits</source>
-        <translation type="unfinished" />
+        <translation>8 biti</translation>
     </message>
     <message>
         <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="52" />
         <source>Data bits</source>
-        <translation type="unfinished" />
+        <translation>Datu biti</translation>
     </message>
     <message>
         <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="54" />
         <source>Select the serial data bits.</source>
-        <translation type="unfinished" />
+        <translation>Izvēlieties datu bitu skaitu.</translation>
     </message>
     <message>
         <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="60" />
         <source>None</source>
-        <translation type="unfinished" />
+        <translation>Nav</translation>
     </message>
     <message>
         <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="60" />
         <source>Hardware</source>
-        <translation type="unfinished" />
+        <translation>Aparatūras</translation>
     </message>
     <message>
         <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="60" />
         <source>Software XON/XOFF</source>
-        <translation type="unfinished" />
+        <translation>Programmatūras XON/XOFF</translation>
     </message>
     <message>
         <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="62" />
         <source>Flow control</source>
-        <translation type="unfinished" />
+        <translation>Plūsmas vadība</translation>
     </message>
     <message>
         <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="64" />
         <source>Select the serial flow control</source>
-        <translation type="unfinished" />
+        <translation>Izvēlieties plūsmas vadību</translation>
     </message>
     <message>
         <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="71" />
         <source>No parity</source>
-        <translation type="unfinished" />
+        <translation>Bez paritātes</translation>
     </message>
     <message>
         <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="71" />
         <source>Even</source>
-        <translation type="unfinished" />
+        <translation>Pāra</translation>
     </message>
     <message>
         <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="71" />
         <source>Odd</source>
-        <translation type="unfinished" />
+        <translation>Nepāra</translation>
     </message>
     <message>
         <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="71" />
         <source>Space</source>
-        <translation type="unfinished" />
+        <translation>Atstarpe</translation>
     </message>
     <message>
         <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="71" />
         <source>Mark</source>
-        <translation type="unfinished" />
+        <translation>Atzīme</translation>
     </message>
     <message>
         <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="73" />
         <source>Parity</source>
-        <translation type="unfinished" />
+        <translation>Paritāte</translation>
     </message>
     <message>
         <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="75" />
         <source>Select the serial parity.</source>
-        <translation type="unfinished" />
+        <translation>Izvēlieties paritāti.</translation>
     </message>
     <message>
         <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="82" />
         <source>1 bit</source>
-        <translation type="unfinished" />
+        <translation>1 bits</translation>
     </message>
     <message>
         <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="82" />
         <source>1.5 bits</source>
-        <translation type="unfinished" />
+        <translation>1,5 biti</translation>
     </message>
     <message>
         <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="82" />
         <source>2 bits</source>
-        <translation type="unfinished" />
+        <translation>2 biti</translation>
     </message>
     <message>
         <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="84" />
         <source>Stop bits</source>
-        <translation type="unfinished" />
+        <translation>Stopbiti</translation>
     </message>
     <message>
         <location filename="../setuppages/hamlibserialconfigwidget.cpp" line="86" />
         <source>Select the serial stop bits.</source>
-        <translation type="unfinished" />
+        <translation>Izvēlieties stopbitu skaitu.</translation>
     </message>
 </context>
 <context>
@@ -1966,46 +1966,46 @@ Vai vēlaties, lai KLog pievieno šo QSO žurnālam?
     <message>
         <location filename="../elog/lotwutilities.cpp" line="112" />
         <source>Please enter your LoTW password: </source>
-        <translation type="unfinished" />
+        <translation>Lūdzu, ievadiet savu LoTW paroli: </translation>
     </message>
     <message>
         <location filename="../elog/lotwutilities.cpp" line="191" />
         <source>KLog - LoTW Station callsign</source>
-        <translation type="unfinished" />
+        <translation>KLog — LoTW stacijas izsaukuma signāls</translation>
     </message>
     <message>
         <location filename="../elog/lotwutilities.cpp" line="192" />
         <source>There is not a single QSO in the log with that station callsign.</source>
-        <translation type="unfinished" />
+        <translation>Žurnālā nav neviena QSO ar šo stacijas izsaukuma signālu.</translation>
     </message>
     <message>
         <location filename="../elog/lotwutilities.cpp" line="193" />
         <source>Are you sure that you want to use that station callsign (%1)?</source>
-        <translation type="unfinished" />
+        <translation>Vai tiešām vēlaties izmantot šo stacijas izsaukuma signālu (%1)?</translation>
     </message>
     <message>
         <location filename="../elog/lotwutilities.cpp" line="255" />
         <location filename="../elog/lotwutilities.cpp" line="383" />
         <source>KLog - LoTW File already exists</source>
-        <translation type="unfinished" />
+        <translation>KLog — LoTW fails jau pastāv</translation>
     </message>
     <message>
         <location filename="../elog/lotwutilities.cpp" line="256" />
         <location filename="../elog/lotwutilities.cpp" line="384" />
         <source>There is a file already existing with the name that will be used.</source>
-        <translation type="unfinished" />
+        <translation>Fails ar šādu nosaukumu jau pastāv.</translation>
     </message>
     <message>
         <location filename="../elog/lotwutilities.cpp" line="257" />
         <location filename="../elog/lotwutilities.cpp" line="385" />
         <source>The file %1 already exist. Do you want to overwrite?</source>
-        <translation type="unfinished" />
+        <translation>Fails %1 jau pastāv. Vai vēlaties to pārrakstīt?</translation>
     </message>
     <message>
         <location filename="../elog/lotwutilities.cpp" line="282" />
         <location filename="../elog/lotwutilities.cpp" line="410" />
         <source>KLog - LoTW Can't write the file</source>
-        <translation type="unfinished" />
+        <translation>KLog — LoTW nevar ierakstīt failu</translation>
     </message>
     <message>
         <location filename="../elog/lotwutilities.cpp" line="283" />
@@ -2018,13 +2018,13 @@ Error returned: %2</source>
         <location filename="../elog/lotwutilities.cpp" line="285" />
         <location filename="../elog/lotwutilities.cpp" line="413" />
         <source>The file %1 already exists.</source>
-        <translation type="unfinished" />
+        <translation>Fails %1 jau pastāv.</translation>
     </message>
     <message>
         <location filename="../elog/lotwutilities.cpp" line="303" />
         <location filename="../elog/lotwutilities.cpp" line="431" />
         <source>Downloading data to file: %1.</source>
-        <translation type="unfinished" />
+        <translation>Lejupielādē datus failā: %1.</translation>
     </message>
     <message>
         <location filename="../elog/lotwutilities.cpp" line="305" />
@@ -2036,7 +2036,7 @@ Error returned: %2</source>
     <message>
         <location filename="../elog/lotwutilities.cpp" line="338" />
         <source>KLog - LoTW Start date selection</source>
-        <translation type="unfinished" />
+        <translation>KLog — LoTW sākuma datuma izvēle</translation>
     </message>
     <message>
         <location filename="../elog/lotwutilities.cpp" line="339" />
@@ -2046,37 +2046,37 @@ Error returned: %2</source>
     <message>
         <location filename="../elog/lotwutilities.cpp" line="340" />
         <source>Do you want to use this date (%1) as start date?</source>
-        <translation type="unfinished" />
+        <translation>Vai vēlaties izmantot šo datumu (%1) kā sākuma datumu?</translation>
     </message>
     <message>
         <location filename="../elog/lotwutilities.cpp" line="516" />
         <source>KLog - LoTW Download error</source>
-        <translation type="unfinished" />
+        <translation>KLog — LoTW lejupielādes kļūda</translation>
     </message>
     <message>
         <location filename="../elog/lotwutilities.cpp" line="518" />
         <source>There was an error (%1) while downloading the file from LoTW.</source>
-        <translation type="unfinished" />
+        <translation>Lejupielādējot failu no LoTW, radās kļūda (%1).</translation>
     </message>
     <message>
         <location filename="../elog/lotwutilities.cpp" line="519" />
         <source>The downloading error details are: %1</source>
-        <translation type="unfinished" />
+        <translation>Lejupielādes kļūdas apraksts: %1</translation>
     </message>
     <message>
         <location filename="../elog/lotwutilities.cpp" line="531" />
         <source>KLog - LoTW Redirection found</source>
-        <translation type="unfinished" />
+        <translation>KLog — LoTW atrasta pāradresācija</translation>
     </message>
     <message>
         <location filename="../elog/lotwutilities.cpp" line="532" />
         <source>The remote server redirected our connection to %1</source>
-        <translation type="unfinished" />
+        <translation>Attālais serveris pāradresēja savienojumu uz %1</translation>
     </message>
     <message>
         <location filename="../elog/lotwutilities.cpp" line="533" />
         <source>Do you want to follow the redirection?</source>
-        <translation type="unfinished" />
+        <translation>Vai vēlaties sekot pāradresācijai?</translation>
     </message>
     <message>
         <location filename="../elog/lotwutilities.cpp" line="613" />
@@ -2086,7 +2086,7 @@ Error returned: %2</source>
     <message>
         <location filename="../elog/lotwutilities.cpp" line="614" />
         <source>KLog can't find the downloaded file.</source>
-        <translation type="unfinished" />
+        <translation>KLog nevar atrast lejupielādēto failu.</translation>
     </message>
     <message>
         <location filename="../elog/lotwutilities.cpp" line="615" />
@@ -2096,12 +2096,12 @@ Error returned: %2</source>
     <message>
         <location filename="../elog/lotwutilities.cpp" line="674" />
         <source>KLog - LoTW user/password error</source>
-        <translation type="unfinished" />
+        <translation>KLog — LoTW lietotāja vai paroles kļūda</translation>
     </message>
     <message>
         <location filename="../elog/lotwutilities.cpp" line="675" />
         <source>LoTW server did not recognized your user/password</source>
-        <translation type="unfinished" />
+        <translation>LoTW serveris neatpazina jūsu lietotājvārdu vai paroli</translation>
     </message>
     <message>
         <location filename="../elog/lotwutilities.cpp" line="676" />
@@ -2111,27 +2111,27 @@ Error returned: %2</source>
     <message>
         <location filename="../elog/lotwutilities.cpp" line="680" />
         <source>KLog - LoTW No QSOs </source>
-        <translation type="unfinished" />
+        <translation>KLog — LoTW nav QSO </translation>
     </message>
     <message>
         <location filename="../elog/lotwutilities.cpp" line="681" />
         <source>LoTW sent no QSOs</source>
-        <translation type="unfinished" />
+        <translation>LoTW neatsūtīja nevienu QSO</translation>
     </message>
     <message>
         <location filename="../elog/lotwutilities.cpp" line="682" />
         <source>It seems that LoTW has no QSO with the Station Callsign you are using (%1).</source>
-        <translation type="unfinished" />
+        <translation>Šķiet, ka LoTW nav neviena QSO ar izmantoto stacijas izsaukuma signālu (%1).</translation>
     </message>
     <message>
         <location filename="../elog/lotwutilities.cpp" line="686" />
         <source>KLog - LoTW Unknown error</source>
-        <translation type="unfinished" />
+        <translation>KLog — LoTW nezināma kļūda</translation>
     </message>
     <message>
         <location filename="../elog/lotwutilities.cpp" line="687" />
         <source>KLog can't recognize the file that has been downloaded from LoTW.</source>
-        <translation type="unfinished" />
+        <translation>KLog neatpazīst no LoTW lejupielādēto failu.</translation>
     </message>
     <message>
         <location filename="../elog/lotwutilities.cpp" line="688" />
@@ -2146,7 +2146,7 @@ Error returned: %2</source>
     <message>
         <location filename="../elog/lotwutilities.cpp" line="705" />
         <source>Now KLog will process the downloaded QSO and update your local log.</source>
-        <translation type="unfinished" />
+        <translation>Tagad KLog apstrādās lejupielādētos QSO un atjauninās vietējo žurnālu.</translation>
     </message>
 </context>
 <context>
@@ -2168,64 +2168,64 @@ Error returned: %2</source>
     <message>
         <location filename="../logwindow.cpp" line="591" />
         <source>QSL Send</source>
-        <translation type="unfinished" />
+        <translation>QSL nosūtīts</translation>
     </message>
     <message>
         <location filename="../logwindow.cpp" line="600" />
         <source>QSL Rcvd</source>
-        <translation type="unfinished" />
+        <translation>QSL saņemts</translation>
     </message>
     <message>
         <location filename="../logwindow.cpp" line="685" />
         <source>&amp;Delete</source>
-        <translation type="unfinished" />
+        <translation>&amp;Dzēst</translation>
     </message>
     <message>
         <location filename="../logwindow.cpp" line="687" />
         <source>Delete a QSO</source>
-        <translation type="unfinished" />
+        <translation>Dzēst QSO</translation>
     </message>
     <message>
         <location filename="../logwindow.cpp" line="690" />
         <source>&amp;Edit QSO</source>
-        <translation type="unfinished" />
+        <translation>&amp;Rediģēt QSO</translation>
     </message>
     <message>
         <location filename="../logwindow.cpp" line="692" />
         <source>Edit this QSO</source>
-        <translation type="unfinished" />
+        <translation>Rediģēt šo QSO</translation>
     </message>
     <message>
         <location filename="../logwindow.cpp" line="695" />
         <source>Via &amp;bureau</source>
-        <translation type="unfinished" />
+        <translation>Caur &amp;biroju</translation>
     </message>
     <message>
         <location filename="../logwindow.cpp" line="697" />
         <source>Send this QSL via bureau</source>
-        <translation type="unfinished" />
+        <translation>Sūtīt šo QSL caur biroju</translation>
     </message>
     <message>
         <location filename="../logwindow.cpp" line="700" />
         <source>D&amp;irect</source>
-        <translation type="unfinished" />
+        <translation>&amp;Tieši</translation>
     </message>
     <message>
         <location filename="../logwindow.cpp" line="702" />
         <source>Send this QSL via direct</source>
-        <translation type="unfinished" />
+        <translation>Sūtīt šo QSL tieši</translation>
     </message>
     <message>
         <location filename="../logwindow.cpp" line="705" />
         <location filename="../logwindow.cpp" line="751" />
         <location filename="../logwindow.cpp" line="759" />
         <source>Via bureau</source>
-        <translation type="unfinished" />
+        <translation>Caur biroju</translation>
     </message>
     <message>
         <location filename="../logwindow.cpp" line="707" />
         <source>QSL &amp;received via bureau</source>
-        <translation type="unfinished" />
+        <translation>QSL &amp;saņemts caur biroju</translation>
     </message>
     <message>
         <location filename="../logwindow.cpp" line="710" />
@@ -2237,7 +2237,7 @@ Error returned: %2</source>
     <message>
         <location filename="../logwindow.cpp" line="712" />
         <source>QSL received via direc&amp;t</source>
-        <translation type="unfinished" />
+        <translation>QSL saņemts &amp;tieši</translation>
     </message>
     <message>
         <location filename="../logwindow.cpp" line="715" />
@@ -2252,102 +2252,102 @@ Error returned: %2</source>
     <message>
         <location filename="../logwindow.cpp" line="720" />
         <source>Check in DXHeat.com</source>
-        <translation type="unfinished" />
+        <translation>Pārbaudīt DXHeat.com</translation>
     </message>
     <message>
         <location filename="../logwindow.cpp" line="722" />
         <source>Check this callsign in DXHeat.com</source>
-        <translation type="unfinished" />
+        <translation>Pārbaudīt šo izsaukuma signālu DXHeat.com</translation>
     </message>
     <message>
         <location filename="../logwindow.cpp" line="725" />
         <source>Delete selected QSOs</source>
-        <translation type="unfinished" />
+        <translation>Dzēst atlasītos QSO</translation>
     </message>
     <message>
         <location filename="../logwindow.cpp" line="727" />
         <source>Delete the selected QSOs</source>
-        <translation type="unfinished" />
+        <translation>Dzēst atlasītos QSO</translation>
     </message>
     <message>
         <location filename="../logwindow.cpp" line="730" />
         <source>Export to ADIF</source>
-        <translation type="unfinished" />
+        <translation>Eksportēt uz ADIF</translation>
     </message>
     <message>
         <location filename="../logwindow.cpp" line="731" />
         <source>Export the selected QSOs to an ADIF file.</source>
-        <translation type="unfinished" />
+        <translation>Eksportēt atlasītos QSO uz ADIF failu.</translation>
     </message>
     <message>
         <location filename="../logwindow.cpp" line="739" />
         <source>Upload to LoTW</source>
-        <translation type="unfinished" />
+        <translation>Augšupielādēt uz LoTW</translation>
     </message>
     <message>
         <location filename="../logwindow.cpp" line="740" />
         <source>Upload the selected QSOs to LoTW</source>
-        <translation type="unfinished" />
+        <translation>Augšupielādēt atlasītos QSO uz LoTW</translation>
     </message>
     <message>
         <location filename="../logwindow.cpp" line="743" />
         <source>Upload to ClubLog</source>
-        <translation type="unfinished" />
+        <translation>Augšupielādēt uz ClubLog</translation>
     </message>
     <message>
         <location filename="../logwindow.cpp" line="744" />
         <source>Upload the selected QSOs to ClubLog</source>
-        <translation type="unfinished" />
+        <translation>Augšupielādēt atlasītos QSO uz ClubLog</translation>
     </message>
     <message>
         <location filename="../logwindow.cpp" line="747" />
         <source>Upload to eQSL.cc</source>
-        <translation type="unfinished" />
+        <translation>Augšupielādēt uz eQSL.cc</translation>
     </message>
     <message>
         <location filename="../logwindow.cpp" line="748" />
         <source>Upload the selected QSOs to eQSL.cc</source>
-        <translation type="unfinished" />
+        <translation>Augšupielādēt atlasītos QSO uz eQSL.cc</translation>
     </message>
     <message>
         <location filename="../logwindow.cpp" line="752" />
         <source>Send these QSLs via bureau</source>
-        <translation type="unfinished" />
+        <translation>Sūtīt šos QSL caur biroju</translation>
     </message>
     <message>
         <location filename="../logwindow.cpp" line="756" />
         <source>Send these QSLs via direct</source>
-        <translation type="unfinished" />
+        <translation>Sūtīt šos QSL tieši</translation>
     </message>
     <message>
         <location filename="../logwindow.cpp" line="760" />
         <source>QSLs received via bureau</source>
-        <translation type="unfinished" />
+        <translation>QSL saņemti caur biroju</translation>
     </message>
     <message>
         <location filename="../logwindow.cpp" line="764" />
         <source>QSLs received via direc&amp;t</source>
-        <translation type="unfinished" />
+        <translation>QSL saņemti &amp;tieši</translation>
     </message>
     <message>
         <location filename="../logwindow.cpp" line="767" />
         <source>Select none</source>
-        <translation type="unfinished" />
+        <translation>Atcelt atlasi</translation>
     </message>
     <message>
         <location filename="../logwindow.cpp" line="768" />
         <source>Remove all selections</source>
-        <translation type="unfinished" />
+        <translation>Noņemt visas atlases</translation>
     </message>
     <message>
         <location filename="../logwindow.cpp" line="771" />
         <source>Select all</source>
-        <translation type="unfinished" />
+        <translation>Atlasīt visu</translation>
     </message>
     <message>
         <location filename="../logwindow.cpp" line="772" />
         <source>Select all the QSOs</source>
-        <translation type="unfinished" />
+        <translation>Atlasīt visus QSO</translation>
     </message>
 </context>
 <context>
@@ -2356,68 +2356,68 @@ Error returned: %2</source>
         <location filename="../mainqsoentrywidget.cpp" line="48" />
         <location filename="../mainqsoentrywidget.cpp" line="970" />
         <source>&amp;Add</source>
-        <translation type="unfinished" />
+        <translation>&amp;Pievienot</translation>
     </message>
     <message>
         <location filename="../mainqsoentrywidget.cpp" line="49" />
         <location filename="../mainqsoentrywidget.cpp" line="971" />
         <source>&amp;Clear</source>
-        <translation type="unfinished" />
+        <translation>&amp;Notīrīt</translation>
     </message>
     <message>
         <location filename="../mainqsoentrywidget.cpp" line="86" />
         <source>Callsign of the QSO.</source>
-        <translation type="unfinished" />
+        <translation>QSO izsaukuma signāls.</translation>
     </message>
     <message>
         <location filename="../mainqsoentrywidget.cpp" line="87" />
         <source>Band of the QSO.</source>
-        <translation type="unfinished" />
+        <translation>QSO diapazons.</translation>
     </message>
     <message>
         <location filename="../mainqsoentrywidget.cpp" line="88" />
         <source>Mode of the QSO.</source>
-        <translation type="unfinished" />
+        <translation>QSO režīms.</translation>
     </message>
     <message>
         <location filename="../mainqsoentrywidget.cpp" line="89" />
         <source>Date of the QSO.</source>
-        <translation type="unfinished" />
+        <translation>QSO datums.</translation>
     </message>
     <message>
         <location filename="../mainqsoentrywidget.cpp" line="90" />
         <source>Time of the QSO.</source>
-        <translation type="unfinished" />
+        <translation>QSO laiks.</translation>
     </message>
     <message>
         <location filename="../mainqsoentrywidget.cpp" line="91" />
         <source>Add the QSO to the log.</source>
-        <translation type="unfinished" />
+        <translation>Pievienot QSO žurnālam.</translation>
     </message>
     <message>
         <location filename="../mainqsoentrywidget.cpp" line="92" />
         <source>Clears the QSO entry.</source>
-        <translation type="unfinished" />
+        <translation>Notīra QSO ievadi.</translation>
     </message>
     <message>
         <location filename="../mainqsoentrywidget.cpp" line="93" />
         <source>Look up info about the current callsign on qrz.com</source>
-        <translation type="unfinished" />
+        <translation>Meklēt informāciju par šo izsaukuma signālu qrz.com</translation>
     </message>
     <message>
         <location filename="../mainqsoentrywidget.cpp" line="94" />
         <source>KLog will show real time if enabled.</source>
-        <translation type="unfinished" />
+        <translation>Ja ieslēgts, KLog rādīs reālo laiku.</translation>
     </message>
     <message>
         <location filename="../mainqsoentrywidget.cpp" line="95" />
         <source>Real time</source>
-        <translation type="unfinished" />
+        <translation>Reālais laiks</translation>
     </message>
     <message>
         <location filename="../mainqsoentrywidget.cpp" line="97" />
         <source>Stop wsjt-x and hamlib from automatically updating QSO information.</source>
-        <translation type="unfinished" />
+        <translation>Neļaut WSJT-X un hamlib automātiski atjaunināt QSO informāciju.</translation>
     </message>
     <message>
         <location filename="../mainqsoentrywidget.cpp" line="98" />
@@ -3787,7 +3787,7 @@ Do you want KLog to try to connect automatically on next startup?</source>
     <message>
         <location filename="../mainwindow.cpp" line="4082" />
         <source>DX Assistant</source>
-        <translation type="unfinished" />
+        <translation>DX asistents</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4528" />
@@ -4395,7 +4395,7 @@ Ignored duplicated: %2</source>
     <message>
         <location filename="../inputwidgets/mainwindowinputothers.cpp" line="733" />
         <source>Age</source>
-        <translation type="unfinished" />
+        <translation>Vecums</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputothers.cpp" line="734" />
@@ -4976,7 +4976,7 @@ KLog will finish when you click on OK.</source>
     <message>
         <location filename="../database/database.cpp" line="1176" />
         <source>KLog - DB update</source>
-        <translation type="unfinished" />
+        <translation>KLog — datubāzes atjaunināšana</translation>
     </message>
     <message>
         <location filename="../database/database.cpp" line="1234" />
@@ -5305,7 +5305,7 @@ KLog will finish when you click on OK.</source>
     <message>
         <location filename="../utilities.cpp" line="1489" />
         <source>Age</source>
-        <translation type="unfinished" />
+        <translation>Vecums</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1490" />
@@ -5385,7 +5385,7 @@ KLog will finish when you click on OK.</source>
     <message>
         <location filename="../utilities.cpp" line="1506" />
         <source>Country</source>
-        <translation type="unfinished" />
+        <translation>Valsts</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1507" />
@@ -5542,7 +5542,7 @@ KLog will finish when you click on OK.</source>
     <message>
         <location filename="../utilities.cpp" line="1549" />
         <source>My DXCC</source>
-        <translation type="unfinished" />
+        <translation>Mans DXCC</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1550" />
@@ -5809,7 +5809,7 @@ KLog will finish when you click on OK.</source>
     <message>
         <location filename="../utilities.cpp" line="1586" />
         <source>QSL Rcvd</source>
-        <translation type="unfinished" />
+        <translation>QSL saņemts</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1587" />
@@ -6000,7 +6000,7 @@ KLog will finish when you click on OK.</source>
     <message>
         <location filename="../searchwidget.cpp" line="57" />
         <source>&amp;Clear</source>
-        <translation type="unfinished" />
+        <translation>&amp;Notīrīt</translation>
     </message>
     <message>
         <location filename="../searchwidget.cpp" line="58" />
@@ -6131,7 +6131,7 @@ KLog will finish when you click on OK.</source>
         <location filename="../searchwindow.cpp" line="239" />
         <location filename="../searchwindow.cpp" line="341" />
         <source>QSL Rcvd</source>
-        <translation type="unfinished" />
+        <translation>QSL saņemts</translation>
     </message>
     <message>
         <location filename="../searchwindow.cpp" line="88" />
@@ -6162,57 +6162,57 @@ KLog will finish when you click on OK.</source>
     <message>
         <location filename="../searchwindow.cpp" line="323" />
         <source>QSL Send</source>
-        <translation type="unfinished" />
+        <translation>QSL nosūtīts</translation>
     </message>
     <message>
         <location filename="../searchwindow.cpp" line="402" />
         <source>&amp;Delete</source>
-        <translation type="unfinished" />
+        <translation>&amp;Dzēst</translation>
     </message>
     <message>
         <location filename="../searchwindow.cpp" line="403" />
         <source>Delete a QSO</source>
-        <translation type="unfinished" />
+        <translation>Dzēst QSO</translation>
     </message>
     <message>
         <location filename="../searchwindow.cpp" line="406" />
         <source>&amp;Edit QSO</source>
-        <translation type="unfinished" />
+        <translation>&amp;Rediģēt QSO</translation>
     </message>
     <message>
         <location filename="../searchwindow.cpp" line="407" />
         <source>Edit this QSO</source>
-        <translation type="unfinished" />
+        <translation>Rediģēt šo QSO</translation>
     </message>
     <message>
         <location filename="../searchwindow.cpp" line="410" />
         <source>Via &amp;bureau</source>
-        <translation type="unfinished" />
+        <translation>Caur &amp;biroju</translation>
     </message>
     <message>
         <location filename="../searchwindow.cpp" line="411" />
         <source>Send this QSL via bureau</source>
-        <translation type="unfinished" />
+        <translation>Sūtīt šo QSL caur biroju</translation>
     </message>
     <message>
         <location filename="../searchwindow.cpp" line="414" />
         <source>D&amp;irect</source>
-        <translation type="unfinished" />
+        <translation>&amp;Tieši</translation>
     </message>
     <message>
         <location filename="../searchwindow.cpp" line="415" />
         <source>Send this QSL via direct</source>
-        <translation type="unfinished" />
+        <translation>Sūtīt šo QSL tieši</translation>
     </message>
     <message>
         <location filename="../searchwindow.cpp" line="418" />
         <source>Via bureau</source>
-        <translation type="unfinished" />
+        <translation>Caur biroju</translation>
     </message>
     <message>
         <location filename="../searchwindow.cpp" line="419" />
         <source>QSL &amp;received via bureau</source>
-        <translation type="unfinished" />
+        <translation>QSL &amp;saņemts caur biroju</translation>
     </message>
     <message>
         <location filename="../searchwindow.cpp" line="422" />
@@ -6222,7 +6222,7 @@ KLog will finish when you click on OK.</source>
     <message>
         <location filename="../searchwindow.cpp" line="423" />
         <source>QSL received via direc&amp;t</source>
-        <translation type="unfinished" />
+        <translation>QSL saņemts &amp;tieši</translation>
     </message>
     <message>
         <location filename="../searchwindow.cpp" line="426" />
@@ -6237,12 +6237,12 @@ KLog will finish when you click on OK.</source>
     <message>
         <location filename="../searchwindow.cpp" line="430" />
         <source>Check in DXHeat.com</source>
-        <translation type="unfinished" />
+        <translation>Pārbaudīt DXHeat.com</translation>
     </message>
     <message>
         <location filename="../searchwindow.cpp" line="431" />
         <source>Check this callsign in DXHeat.com</source>
-        <translation type="unfinished" />
+        <translation>Pārbaudīt šo izsaukuma signālu DXHeat.com</translation>
     </message>
     <message>
         <location filename="../searchwindow.cpp" line="434" />
@@ -6818,7 +6818,7 @@ Please add and select the kind of log you want to use.</source>
     <message>
         <location filename="../setuppages/setuppagedxcluster.cpp" line="152" />
         <source>DX Assistant</source>
-        <translation type="unfinished" />
+        <translation>DX asistents</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagedxcluster.cpp" line="161" />
