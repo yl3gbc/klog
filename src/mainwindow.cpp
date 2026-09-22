@@ -921,6 +921,19 @@ void MainWindow::createStatusBar()
             statusBar()->showMessage(tr("Callbook update finished: %1 updated.").arg(u), 10000);
             if (logWindow) logWindow->refresh();
         });
+        // fldigi raksta visus QSO savaa ADIF zurnaalaa; sekojam tam un
+        // importejam jaunos automatiski, bez jautasanas
+        fldigiWatcher = new WSJTXLogWatcher(dataProxy, this);
+        fldigiWatcher->setAutoImport(true);
+        connect(fldigiWatcher, &WSJTXLogWatcher::recordsReady,
+                this, &MainWindow::slotAutoImportRecords);
+        {
+            QSettings st(util->getCfgFile(), QSettings::IniFormat);
+            st.beginGroup(QStringLiteral("Fldigi"));
+            const QString ff = st.value(QStringLiteral("LogFile")).toString();
+            st.endGroup();
+            if (!ff.isEmpty()) fldigiWatcher->setLogFile(ff);
+        }
         wsjtxWatcher = new WSJTXLogWatcher(dataProxy, this);
         connect(wsjtxWatcher, &WSJTXLogWatcher::qsosImported,
                 this, &MainWindow::slotWSJTXLogQSOsFound);
@@ -7797,4 +7810,31 @@ void MainWindow::slotUpdateFromCallbook()
                "callbooks and fill in the empty fields?").arg(calls.size()))
         != QMessageBox::Yes) return;
     logUpdater->start(calls);
+}
+
+
+// Automatiskais imports (fldigi): jaunie ieraksti bez jautasanas
+void MainWindow::slotAutoImportRecords(const QString &tempFile, int count)
+{
+    if (count <= 0 || !filemanager) return;
+    QString stationCall;
+    {
+        QSettings st(util->getCfgFile(), QSettings::IniFormat);
+        st.beginGroup(QStringLiteral("UserData"));
+        stationCall = st.value(QStringLiteral("Callsign")).toString().trimmed().toUpper();
+        st.endGroup();
+    }
+    const int added = filemanager->adifReadLog(tempFile, stationCall, currentLog);
+    QFile::remove(tempFile);
+    if (added <= 0) return;
+    QSqlQuery q;
+    q.prepare("UPDATE log SET"
+              " lotw_qsl_sent=CASE WHEN lotw_qsl_sent IS NULL OR lotw_qsl_sent='' THEN 'Q' ELSE lotw_qsl_sent END,"
+              " eqsl_qsl_sent=CASE WHEN eqsl_qsl_sent IS NULL OR eqsl_qsl_sent='' THEN 'Q' ELSE eqsl_qsl_sent END,"
+              " clublog_qso_upload_status=CASE WHEN clublog_qso_upload_status IS NULL OR clublog_qso_upload_status='' THEN 'M' ELSE clublog_qso_upload_status END"
+              " WHERE lognumber=:log");
+    q.bindValue(":log", currentLog);
+    q.exec();
+    if (logWindow) logWindow->refresh();
+    statusBar()->showMessage(tr("%1 QSO(s) imported from fldigi.").arg(added), 8000);
 }

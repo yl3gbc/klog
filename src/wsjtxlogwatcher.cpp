@@ -1,6 +1,7 @@
 #include "wsjtxlogwatcher.h"
 #include "dataproxy_sqlite.h"
 #include <QFile>
+#include <QDir>
 #include <QFileInfo>
 #include <QTextStream>
 #include <QRegularExpression>
@@ -57,6 +58,7 @@ void WSJTXLogWatcher::doCheck()
                                            QRegularExpression::CaseInsensitiveOption);
 
     int missing = 0;
+    QStringList missingRecs;
     const QStringList recs = body.split(QStringLiteral("<eor>"), Qt::SkipEmptyParts,
                                         Qt::CaseInsensitive);
     for (const QString &r : recs)
@@ -79,8 +81,25 @@ void WSJTXLogWatcher::doCheck()
         q.bindValue(":c", call);
         q.bindValue(":d", iso);
         if (q.exec() && q.next() && q.value(0).toInt() == 0)
+        {
             missing++;
+            missingRecs << r;
+        }
     }
-    if (missing > 0)
+    if (missing <= 0) return;
+    if (!autoImport)
+    {
         emit qsosImported(missing);
+        return;
+    }
+    // Automatiskais rezims: tikai jaunie ieraksti pagaidu failaa
+    const QString tmp = QDir::tempPath() + QStringLiteral("/klogng-autoimport.adi");
+    QFile out(tmp);
+    if (!out.open(QIODevice::WriteOnly | QIODevice::Text)) return;
+    QTextStream ts(&out);
+    ts << "KLogNG auto import\n<EOH>\n";
+    for (const QString &rec : missingRecs)
+        ts << rec.trimmed() << "\n<EOR>\n";
+    out.close();
+    emit recordsReady(tmp, missing);
 }

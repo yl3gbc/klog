@@ -18,9 +18,13 @@ public:
     explicit WSJTXLogWatcher(DataProxy_SQLite *dp, QObject *parent = nullptr);
     void setLogFile(const QString &path);
     void checkNow();
+    // Automatiskais rezims: trukstosos ierakstus ieraksta pagaidu failaa
+    // un izsuta recordsReady, bez jautasanas
+    void setAutoImport(bool on) { autoImport = on; }
 
 signals:
     void qsosImported(int count);
+    void recordsReady(const QString &tempFile, int count);
 
 private slots:
     void onFileChanged(const QString &path);
@@ -31,6 +35,7 @@ private:
     QFileSystemWatcher watcher;
     QTimer debounce;
     QString file;
+    bool autoImport = false;
 };
 
 #endif
