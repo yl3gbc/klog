@@ -1,0 +1,182 @@
+{
+  "id": "LRAL-80M-NOV18",
+  "name": "LRAL 18. novembra sacensības",
+  "date": "11-18",
+  "time_zone": "local",
+  "bands": [
+    "80M"
+  ],
+  "serial": "continuous",
+  "points_per_qso": 1,
+  "dupe_scope": "round+mode",
+  "export": "cabrillo",
+  "exchange_sent": [
+    "rst",
+    "serial",
+    "district"
+  ],
+  "exchange_rcvd": [
+    "rst",
+    "serial",
+    "district"
+  ],
+  "rounds": [
+    {
+      "n": 1,
+      "start": "08:00",
+      "end": "08:29",
+      "modes": [
+        "CW",
+        "SSB"
+      ]
+    },
+    {
+      "n": 2,
+      "start": "08:30",
+      "end": "08:59",
+      "modes": [
+        "CW",
+        "SSB"
+      ]
+    },
+    {
+      "n": 3,
+      "start": "09:00",
+      "end": "09:29",
+      "modes": [
+        "CW",
+        "SSB"
+      ]
+    },
+    {
+      "n": 4,
+      "start": "09:30",
+      "end": "09:59",
+      "modes": [
+        "CW",
+        "SSB"
+      ]
+    },
+    {
+      "n": 5,
+      "start": "10:15",
+      "end": "10:44",
+      "modes": [
+        "FT8"
+      ],
+      "exchange_sent": [
+        "rst"
+      ],
+      "exchange_rcvd": [
+        "rst"
+      ],
+      "multiplier": "grid4"
+    },
+    {
+      "n": 6,
+      "start": "10:45",
+      "end": "11:14",
+      "modes": [
+        "FT8"
+      ],
+      "exchange_sent": [
+        "rst"
+      ],
+      "exchange_rcvd": [
+        "rst"
+      ],
+      "multiplier": "grid4"
+    }
+  ],
+  "max_power_w": 100,
+  "special_calls_allowed": false,
+  "freq_ranges": {
+    "CW": [
+      3515,
+      3580
+    ],
+    "SSB": [
+      3605,
+      3650
+    ],
+    "FT8": [
+      3577,
+      3577
+    ]
+  },
+  "scoring": [
+    {
+      "id": "CWSSB",
+      "name": "CW/SSB",
+      "rounds": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "formula": "sum(points) * sum(mults)"
+    },
+    {
+      "id": "FT8",
+      "name": "FT8",
+      "rounds": [
+        5,
+        6
+      ],
+      "formula": "sum(points) * sum(mults)"
+    }
+  ],
+  "multiplier": "district",
+  "multiplier_per_round": true,
+  "own_district_no_mult": true,
+  "classes": [
+    {
+      "id": "A",
+      "operators": "single",
+      "modes": [
+        "CW",
+        "SSB"
+      ]
+    },
+    {
+      "id": "B",
+      "operators": "single",
+      "modes": [
+        "CW"
+      ]
+    },
+    {
+      "id": "B1",
+      "operators": "single",
+      "modes": [
+        "CW"
+      ],
+      "key": "straight"
+    },
+    {
+      "id": "C",
+      "operators": "single",
+      "modes": [
+        "SSB"
+      ]
+    },
+    {
+      "id": "D",
+      "operators": "single",
+      "modes": [
+        "FT8"
+      ]
+    },
+    {
+      "id": "E",
+      "operators": "multi",
+      "modes": [
+        "CW",
+        "SSB",
+        "FT8"
+      ],
+      "one_signal": true
+    }
+  ],
+  "ft8_separate_contest": true
+}

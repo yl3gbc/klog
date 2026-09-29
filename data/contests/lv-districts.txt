@@ -1,0 +1,32 @@
+AI;Aizkraukles rajons
+AU;Alūksnes rajons
+BA;Bauskas rajons
+BV;Balvu rajons
+CE;Cēsu rajons
+DG;Daugavpils rajons
+DO;Dobeles rajons
+GU;Gulbenes rajons
+JE;Jelgavas rajons
+JP;Jēkabpils rajons
+KV;Krāslavas rajons
+KG;Kuldīgas rajons
+LI;Liepājas rajons
+LM;Limbažu rajons
+LU;Ludzas rajons
+MD;Madonas rajons
+OE;Ogres rajons
+PR;Preiļu rajons
+RR;Rīgas rajons
+RE;Rēzeknes rajons
+SD;Saldus rajons
+TS;Talsu rajons
+TU;Tukuma rajons
+VK;Valkas rajons
+VE;Ventspils rajons
+VR;Valmieras rajons
+RC;Rīga - Centra rajons
+RK;Rīga - Kurzemes rajons
+RG;Rīga - Zemgales priekšpilsēta
+RV;Rīga - Vidzemes priekšpilsēta
+RL;Rīga - Latgales priekšpilsēta
+RZ;Rīga - Ziemeļu rajons
