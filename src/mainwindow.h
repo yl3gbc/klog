@@ -152,6 +152,7 @@ private slots:
     void slotWSJTXLogQSOsFound(int count);
     void slotAutoImportRecords(const QString &tempFile, int count);
     void slotUpdateFromCallbook();
+    void slotContestDialog();
     void slotQRZData(const QString &call, const QString &name, const QString &qth, const QString &grid);
     void slotHamQTHData(const QString &call, const QString &dok, const QString &name, const QString &qth, const QString &grid);
     //void slotQueryErrorManagement(QString functionFailed, QString errorCodeS, QString nativeError, QString failedQuery);

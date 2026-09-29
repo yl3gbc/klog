@@ -42,6 +42,8 @@
 #include "clubmembers.h"
 #include "hamqth.h"
 #include "dokdata.h"
+#include "contestdb.h"
+#include "contestdef.h"
 #include "qrzcomlookup.h"
 #include "logupdater.h"
 #include "wsjtxlogwatcher.h"
@@ -2704,6 +2706,23 @@ void MainWindow::createMenusCommon()
         upd->setStatusTip(tr("Fill in missing name, QTH and locator from QRZ.com and HamQTH"));
         connect(upd, &QAction::triggered, this, &MainWindow::slotUpdateFromCallbook);
         toolMenu->addAction(upd);
+    }
+    {
+        // Latvijas sacensibas: tikai YL zimem (ari YL/XX2XX forma)
+        QString myCall;
+        {
+            QSettings st(util->getCfgFile(), QSettings::IniFormat);
+            st.beginGroup(QStringLiteral("UserData"));
+            myCall = st.value(QStringLiteral("Callsign")).toString().trimmed().toUpper();
+            st.endGroup();
+        }
+        const bool isYL = myCall.startsWith(QStringLiteral("YL")) ||
+                          myCall.contains(QStringLiteral("YL/"));
+        QAction *ct = new QAction(tr("Contest..."), this);
+        ct->setVisible(isYL);
+        ct->setStatusTip(tr("Start or stop a contest session"));
+        connect(ct, &QAction::triggered, this, &MainWindow::slotContestDialog);
+        toolMenu->addAction(ct);
     }
     toolMenu->addSeparator();
     qslToolMenu = toolMenu->addMenu(tr("QSL tools ..."));
@@ -7837,4 +7856,44 @@ void MainWindow::slotAutoImportRecords(const QString &tempFile, int count)
     q.exec();
     if (logWindow) logWindow->refresh();
     statusBar()->showMessage(tr("%1 QSO(s) imported from fldigi.").arg(added), 8000);
+}
+
+
+void MainWindow::slotContestDialog()
+{
+    const QString dir = QCoreApplication::applicationDirPath()
+                        + QStringLiteral("/../../data/contests");
+    QDir d(dir);
+    const QStringList files = d.entryList(QStringList() << QStringLiteral("*.json"), QDir::Files);
+    if (files.isEmpty())
+    {
+        QMessageBox::information(this, tr("KLog - Contest"),
+            tr("No contest definitions found in %1").arg(d.absolutePath()));
+        return;
+    }
+    QList<ContestDef> defs;
+    QStringList names;
+    for (const QString &fn : files)
+    {
+        ContestDef cd;
+        if (cd.load(d.filePath(fn))) { defs << cd; names << cd.name; }
+    }
+    if (defs.isEmpty())
+    {
+        QMessageBox::warning(this, tr("KLog - Contest"),
+                             tr("No valid contest definition could be loaded."));
+        return;
+    }
+    bool ok = false;
+    const QString sel = QInputDialog::getItem(this, tr("KLog - Contest"),
+                            tr("Select the contest:"), names, 0, false, &ok);
+    if (!ok || sel.isEmpty()) return;
+    const int idx = names.indexOf(sel);
+    if (idx < 0) return;
+    const ContestDef &cd = defs.at(idx);
+    const int r = cd.roundAt(QTime::currentTime());
+    QMessageBox::information(this, tr("KLog - Contest"),
+        tr("%1\nRounds: %2\nCurrent round: %3")
+            .arg(cd.name).arg(cd.rounds.size())
+            .arg(r > 0 ? QString::number(r) : tr("none")));
 }
