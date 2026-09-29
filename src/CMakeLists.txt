@@ -287,6 +287,7 @@ add_executable(klog WIN32 MACOSX_BUNDLE
     clubmembers.cpp clubmembers.h
     hamqth.cpp hamqth.h
     dokdata.cpp dokdata.h
+    contestdb.cpp contestdb.h
     qrzcomlookup.cpp qrzcomlookup.h
     logupdater.cpp logupdater.h
     wsjtxlogwatcher.cpp wsjtxlogwatcher.h
@@ -321,6 +322,17 @@ else()
 endif()
 
 # Link Qt6 libraries
+# KLogNG: DuckDB sacensibu modulim (buvets no pirmkoda)
+set(DUCKDB_DIR "$ENV{HOME}/duckdb" CACHE PATH "DuckDB source tree")
+set(DUCKDB_LIB "${DUCKDB_DIR}/build/release/src/libduckdb.so")
+if(EXISTS "${DUCKDB_LIB}")
+    message(STATUS "KLogNG: DuckDB found at ${DUCKDB_LIB}")
+    target_include_directories(klog PRIVATE "${DUCKDB_DIR}/src/include")
+    target_compile_definitions(klog PRIVATE KLOGNG_HAS_DUCKDB)
+else()
+    message(WARNING "KLogNG: DuckDB not found at ${DUCKDB_LIB}")
+endif()
+
 target_link_libraries(klog
   PRIVATE
     Qt6::Charts
@@ -338,6 +350,10 @@ target_link_libraries(klog
     Qt6::Sql
     Qt6::Widgets
 )
+
+if(EXISTS "${DUCKDB_LIB}")
+    target_link_libraries(klog PRIVATE "${DUCKDB_LIB}")
+endif()
 
 # Prefer a config package if available (e.g., Homebrew/macOS or user-provided)
 find_package(Hamlib REQUIRED)
