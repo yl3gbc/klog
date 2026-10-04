@@ -289,6 +289,7 @@ add_executable(klog WIN32 MACOSX_BUNDLE
     dokdata.cpp dokdata.h
     contestdb.cpp contestdb.h
     contestdef.cpp contestdef.h
+    contestpanel.cpp contestpanel.h
     qrzcomlookup.cpp qrzcomlookup.h
     logupdater.cpp logupdater.h
     wsjtxlogwatcher.cpp wsjtxlogwatcher.h
