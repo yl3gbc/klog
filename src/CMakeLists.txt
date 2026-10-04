@@ -324,11 +324,11 @@ endif()
 
 # Link Qt6 libraries
 # KLogNG: DuckDB sacensibu modulim (buvets no pirmkoda)
-set(DUCKDB_DIR "$ENV{HOME}/duckdb" CACHE PATH "DuckDB source tree")
-set(DUCKDB_LIB "${DUCKDB_DIR}/build/release/src/libduckdb.so")
+set(DUCKDB_DIR "$ENV{HOME}/Programmas/DuckDB" CACHE PATH "DuckDB install prefix")
+set(DUCKDB_LIB "${DUCKDB_DIR}/lib/libduckdb.so")
 if(EXISTS "${DUCKDB_LIB}")
     message(STATUS "KLogNG: DuckDB found at ${DUCKDB_LIB}")
-    target_include_directories(klog PRIVATE "${DUCKDB_DIR}/src/include")
+    target_include_directories(klog PRIVATE "${DUCKDB_DIR}/include")
     target_compile_definitions(klog PRIVATE KLOGNG_HAS_DUCKDB)
 else()
     message(WARNING "KLogNG: DuckDB not found at ${DUCKDB_LIB}")
@@ -354,6 +354,9 @@ target_link_libraries(klog
 
 if(EXISTS "${DUCKDB_LIB}")
     target_link_libraries(klog PRIVATE "${DUCKDB_LIB}")
+    set_target_properties(klog PROPERTIES
+        BUILD_RPATH "${DUCKDB_DIR}/lib"
+        INSTALL_RPATH "${DUCKDB_DIR}/lib")
 endif()
 
 # Prefer a config package if available (e.g., Homebrew/macOS or user-provided)
