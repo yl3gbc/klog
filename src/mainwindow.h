@@ -517,6 +517,7 @@ private:
     class HamQTH *hamQTH = nullptr;
     class DOKData *dokData = nullptr;
     class ContestPanel *contestPanel = nullptr;
+    class ContestDef *activeContest = nullptr;
     class QDockWidget *contestDock = nullptr;
     class QRZComLookup *qrzLookup = nullptr;
     class LogUpdater *logUpdater = nullptr;

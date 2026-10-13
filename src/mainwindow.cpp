@@ -7863,6 +7863,18 @@ void MainWindow::slotAutoImportRecords(const QString &tempFile, int count)
 
 void MainWindow::slotContestDialog()
 {
+    if (activeContest)
+    {
+        if (QMessageBox::question(this, tr("KLog - Contest"),
+                tr("%1 is active. Stop it?").arg(activeContest->name)) == QMessageBox::Yes)
+        {
+            delete activeContest;
+            activeContest = nullptr;
+            if (contestDock) contestDock->hide();
+            statusBar()->showMessage(tr("Contest stopped."), 5000);
+        }
+        return;
+    }
     const QString dir = QCoreApplication::applicationDirPath()
                         + QStringLiteral("/../../data/contests");
     QDir d(dir);
@@ -7948,6 +7960,9 @@ void MainWindow::slotContestDialog()
     if (!ok || sel.isEmpty()) return;
     const int idx = inCatIdx.at(inCat.indexOf(sel));
     const ContestDef &cd = defs.at(idx);
+    delete activeContest;
+    activeContest = new ContestDef(cd);
+    statusBar()->showMessage(tr("Contest started: %1").arg(cd.name), 8000);
 
     if (!contestDock)
     {
