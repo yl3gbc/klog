@@ -18,6 +18,7 @@ public:
     void setRound(int n, const QString &timeLeft);
     void setWorkedInRound(const QSet<QString> &codes);
     void setScore(int qsos, int mults, long long cwssb, long long ft8);
+    void setScoreNames(const QStringList &names);
     // Zonu matrica (CQ WW): joslas x CQ zonas, plus valstu skaits uz joslu
     void setZoneMatrix(const QStringList &bands);
     void setWorkedZones(const QString &band, const QSet<int> &zones);
@@ -31,6 +32,7 @@ private:
     QHash<QString, QLabel *> cells;
     QLabel *roundLabel = nullptr;
     QLabel *scoreLabel = nullptr;
+    QStringList scoreNames;
     QWidget *matrixWidget = nullptr;
     QHash<QString, QList<QLabel *>> zoneCells;
     QHash<QString, QLabel *> countryCells;

@@ -90,11 +90,19 @@ void ContestPanel::setWorkedInRound(const QSet<QString> &codes)
     }
 }
 
+void ContestPanel::setScoreNames(const QStringList &names)
+{
+    scoreNames = names;
+}
+
 void ContestPanel::setScore(int qsos, int mults, long long cwssb, long long ft8)
 {
     if (!scoreLabel) return;
-    scoreLabel->setText(tr("Round: %1 QSO, %2 mult — CW/SSB: %3, FT8: %4")
-                            .arg(qsos).arg(mults).arg(cwssb).arg(ft8));
+    QString text = tr("%1 QSO, %2 mult").arg(qsos).arg(mults);
+    const long long vals[2] = { cwssb, ft8 };
+    for (int i = 0; i < scoreNames.size() && i < 2; ++i)
+        text += QStringLiteral(" - %1: %2").arg(scoreNames.at(i)).arg(vals[i]);
+    scoreLabel->setText(text);
 }
 
 

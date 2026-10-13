@@ -7970,5 +7970,6 @@ void MainWindow::slotContestDialog()
         const ContestRound *cr = cd.round(r);
         contestPanel->setFt8Mode(cr && cr->multiplier == QStringLiteral("grid4"));
     }
+    contestPanel->setScoreNames(cd.scoreNames);
     contestPanel->setScore(0, 0, 0, 0);
 }

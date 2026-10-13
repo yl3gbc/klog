@@ -29,6 +29,7 @@ public:
     QStringList exchSent, exchRcvd;
     QString multiplier;
     QStringList multList;
+    QStringList scoreNames;
     bool multPerRound = false;
     bool ownDistrictNoMult = false;
     QString dupeScope;           // "round+mode"

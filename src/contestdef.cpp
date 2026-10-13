@@ -41,6 +41,19 @@ bool ContestDef::load(const QString &path)
     exchRcvd     = strList(o.value("exchange_rcvd"));
     multiplier   = o.value("multiplier").toString();
     multList     = strList(o.value("scoring").toObject().value("multipliers"));
+    scoreNames.clear();
+    const QJsonValue scoringVal = o.value("scoring");
+    if (scoringVal.isArray())
+    {
+        for (const QJsonValue &x : scoringVal.toArray())
+            scoreNames << x.toObject().value("name").toString();
+    }
+    else
+    {
+        const QStringList mm = strList(o.value("modes"));
+        scoreNames << (mm.size() == 1 ? mm.first() : QStringLiteral("Score"));
+    }
+    scoreNames.removeAll(QString());
     multPerRound = o.value("multiplier_per_round").toBool(false);
     ownDistrictNoMult = o.value("own_district_no_mult").toBool(false);
     dupeScope    = o.value("dupe_scope").toString();
