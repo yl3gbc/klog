@@ -100,6 +100,7 @@ void ContestPanel::setScore(int qsos, int mults, long long cwssb, long long ft8)
 
 void ContestPanel::setFt8Mode(bool on)
 {
+    if (zoneMode) return;
     for (QLabel *c : cells) c->setVisible(!on);
     if (squaresLabel) squaresLabel->setVisible(on);
     if (on) setWorkedSquares(QStringList());

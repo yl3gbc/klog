@@ -48,7 +48,8 @@
     ],
     "multiplier_per_band": true,
     "maritime_mobile_zone_only": true,
-    "formula": "sum(qso_points) * (zones + countries)"
+    "formula": "sum(qso_points) * (zones + countries)",
+    "country_list": "dxcc+wae+IG9/IH9"
   },
   "region1_limits": {
     "ssb_40m_max_khz": 7200,
