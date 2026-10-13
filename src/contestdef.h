@@ -23,6 +23,8 @@ public:
     bool load(const QString &path);
 
     QString id, name, date, timeZone, exportFormat;
+    QString subgroup;            // "hf" vai "vhf"
+    QString category;            // "international", "latvia"
     QStringList bands;
     QStringList exchSent, exchRcvd;
     QString multiplier;

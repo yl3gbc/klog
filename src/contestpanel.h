@@ -18,12 +18,16 @@ public:
     void setRound(int n, const QString &timeLeft);
     void setWorkedInRound(const QSet<QString> &codes);
     void setScore(int qsos, int mults, long long cwssb, long long ft8);
+    // FT8 turees: rajonu rezgis paslepts, raditi tikai kvadrati
+    void setFt8Mode(bool on);
+    void setWorkedSquares(const QStringList &squares);
 
 private:
     QStringList order;
     QHash<QString, QLabel *> cells;
     QLabel *roundLabel = nullptr;
     QLabel *scoreLabel = nullptr;
+    QLabel *squaresLabel = nullptr;
     QGridLayout *grid = nullptr;
 };
 

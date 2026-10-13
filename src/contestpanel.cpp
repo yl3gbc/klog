@@ -14,12 +14,18 @@ ContestPanel::ContestPanel(QWidget *parent) : QWidget(parent)
     scoreLabel = new QLabel(QString(), this);
     scoreLabel->setAlignment(Qt::AlignCenter);
 
+    squaresLabel = new QLabel(this);
+    squaresLabel->setWordWrap(true);
+    squaresLabel->setAlignment(Qt::AlignTop | Qt::AlignLeft);
+    squaresLabel->hide();
+
     grid = new QGridLayout;
     grid->setSpacing(2);
 
     QVBoxLayout *lay = new QVBoxLayout(this);
     lay->addWidget(roundLabel);
     lay->addLayout(grid, 1);
+    lay->addWidget(squaresLabel, 1);
     lay->addWidget(scoreLabel);
 }
 
@@ -83,4 +89,23 @@ void ContestPanel::setScore(int qsos, int mults, long long cwssb, long long ft8)
     if (!scoreLabel) return;
     scoreLabel->setText(tr("Round: %1 QSO, %2 mult — CW/SSB: %3, FT8: %4")
                             .arg(qsos).arg(mults).arg(cwssb).arg(ft8));
+}
+
+
+void ContestPanel::setFt8Mode(bool on)
+{
+    for (QLabel *c : cells) c->setVisible(!on);
+    if (squaresLabel) squaresLabel->setVisible(on);
+    if (on) setWorkedSquares(QStringList());
+}
+
+void ContestPanel::setWorkedSquares(const QStringList &squares)
+{
+    if (!squaresLabel) return;
+    QStringList u = squares;
+    u.removeDuplicates();
+    u.sort();
+    squaresLabel->setText(tr("Squares worked: %1\n%2")
+                              .arg(u.size())
+                              .arg(u.isEmpty() ? QStringLiteral("-") : u.join(QStringLiteral(", "))));
 }

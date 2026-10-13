@@ -1,0 +1,80 @@
+{
+  "id": "YLAC",
+  "name": "YLAC - Latvijas UKV aktivitātes sacensības",
+  "category": "latvia",
+  "subgroup": "vhf",
+  "home_country": "YL",
+  "time_zone": "local",
+  "start": "20:00",
+  "end": "23:59",
+  "schedule": [
+    {
+      "band": "2M",
+      "mhz": 144,
+      "weekday": "tue",
+      "nth": 1
+    },
+    {
+      "band": "70CM",
+      "mhz": 432,
+      "weekday": "tue",
+      "nth": 2
+    },
+    {
+      "band": "6M",
+      "mhz": 50,
+      "weekday": "thu",
+      "nth": 2
+    },
+    {
+      "band": "23CM",
+      "mhz": 1296,
+      "weekday": "tue",
+      "nth": 3
+    },
+    {
+      "band": "4M",
+      "mhz": 70,
+      "weekday": "thu",
+      "nth": 3
+    }
+  ],
+  "modes": [
+    "PHONE",
+    "CW",
+    "MGM"
+  ],
+  "excluded": [
+    "EME",
+    "artificial_repeaters"
+  ],
+  "exchange_sent": [
+    "rst",
+    "grid"
+  ],
+  "exchange_rcvd": [
+    "rst",
+    "grid"
+  ],
+  "grid_chars": [
+    4,
+    6
+  ],
+  "scoring": {
+    "points_per_km": 1,
+    "new_square_bonus": 500,
+    "new_square": "grid4"
+  },
+  "dupe_scope": "band_station_any_mode",
+  "time_tolerance_min": 5,
+  "export": "edi",
+  "report_deadline_days": 5,
+  "annual": {
+    "best_months": 9,
+    "per_band": true,
+    "split": [
+      "latvian",
+      "foreign"
+    ]
+  }
+}

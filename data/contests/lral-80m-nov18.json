@@ -178,5 +178,7 @@
       "one_signal": true
     }
   ],
-  "ft8_separate_contest": true
+  "ft8_separate_contest": true,
+  "category": "latvia",
+  "subgroup": "hf"
 }

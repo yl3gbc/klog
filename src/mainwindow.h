@@ -516,6 +516,8 @@ private:
     class ClubMembers *clubMembers = nullptr;
     class HamQTH *hamQTH = nullptr;
     class DOKData *dokData = nullptr;
+    class ContestPanel *contestPanel = nullptr;
+    class QDockWidget *contestDock = nullptr;
     class QRZComLookup *qrzLookup = nullptr;
     class LogUpdater *logUpdater = nullptr;
     class WSJTXLogWatcher *wsjtxWatcher = nullptr;

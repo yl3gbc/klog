@@ -31,6 +31,8 @@ bool ContestDef::load(const QString &path)
 
     id           = o.value("id").toString();
     name         = o.value("name").toString();
+    subgroup     = o.value("subgroup").toString("hf");
+    category     = o.value("category").toString("latvia");
     date         = o.value("date").toString();
     timeZone     = o.value("time_zone").toString("local");
     exportFormat = o.value("export").toString();
@@ -58,7 +60,7 @@ bool ContestDef::load(const QString &path)
         r.multiplier = ro.contains("multiplier") ? ro.value("multiplier").toString() : multiplier;
         rounds.append(r);
     }
-    return !id.isEmpty() && !rounds.isEmpty();
+    return !id.isEmpty() && (!rounds.isEmpty() || o.contains("schedule"));
 }
 
 int ContestDef::roundAt(const QTime &t) const

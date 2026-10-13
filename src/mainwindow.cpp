@@ -44,6 +44,8 @@
 #include "dokdata.h"
 #include "contestdb.h"
 #include "contestdef.h"
+#include "contestpanel.h"
+#include <QDockWidget>
 #include "qrzcomlookup.h"
 #include "logupdater.h"
 #include "wsjtxlogwatcher.h"
@@ -7884,16 +7886,83 @@ void MainWindow::slotContestDialog()
                              tr("No valid contest definition could be loaded."));
         return;
     }
+    QString myCall;
+    {
+        QSettings st(util->getCfgFile(), QSettings::IniFormat);
+        st.beginGroup(QStringLiteral("UserData"));
+        myCall = st.value(QStringLiteral("Callsign")).toString().trimmed().toUpper();
+        st.endGroup();
+    }
+    const bool isYL = myCall.startsWith(QStringLiteral("YL")) ||
+                      myCall.contains(QStringLiteral("YL/"));
+    QStringList catIds, catNames;
+    auto addCat = [&](const QString &cid, const QString &label, bool allowed) {
+        if (!allowed) return;
+        for (const ContestDef &x : defs)
+            if (x.category == cid) { catIds << cid; catNames << label; return; }
+    };
+    addCat(QStringLiteral("international"), tr("International"), true);
+    addCat(QStringLiteral("latvia"), tr("Latvian"), isYL);
+    if (catIds.isEmpty())
+    {
+        QMessageBox::information(this, tr("KLog - Contest"),
+                                 tr("No contests available for this callsign."));
+        return;
+    }
     bool ok = false;
+    QString cat = catIds.first();
+    if (catIds.size() > 1)
+    {
+        const QString catSel = QInputDialog::getItem(this, tr("KLog - Contest"),
+                                   tr("Select the group:"), catNames, 0, false, &ok);
+        if (!ok || catSel.isEmpty()) return;
+        cat = catIds.at(catNames.indexOf(catSel));
+    }
+
+    QStringList subIds;
+    for (const ContestDef &x : defs)
+        if (x.category == cat && !subIds.contains(x.subgroup)) subIds << x.subgroup;
+    QString sub = subIds.isEmpty() ? QString() : subIds.first();
+    if (subIds.size() > 1)
+    {
+        QStringList subNames;
+        for (const QString &sid : subIds)
+            subNames << (sid == QStringLiteral("vhf") ? tr("VHF/UHF") : tr("HF"));
+        const QString subSel = QInputDialog::getItem(this, tr("KLog - Contest"),
+                                   tr("Select the subgroup:"), subNames, 0, false, &ok);
+        if (!ok || subSel.isEmpty()) return;
+        sub = subIds.at(subNames.indexOf(subSel));
+    }
+
+    QStringList inCat;
+    QList<int> inCatIdx;
+    for (int i = 0; i < defs.size(); ++i)
+        if (defs.at(i).category == cat && defs.at(i).subgroup == sub)
+        { inCat << defs.at(i).name; inCatIdx << i; }
+    if (inCat.isEmpty()) return;
     const QString sel = QInputDialog::getItem(this, tr("KLog - Contest"),
-                            tr("Select the contest:"), names, 0, false, &ok);
+                            tr("Select the contest:"), inCat, 0, false, &ok);
     if (!ok || sel.isEmpty()) return;
-    const int idx = names.indexOf(sel);
-    if (idx < 0) return;
+    const int idx = inCatIdx.at(inCat.indexOf(sel));
     const ContestDef &cd = defs.at(idx);
+
+    if (!contestDock)
+    {
+        contestPanel = new ContestPanel(this);
+        contestDock = new QDockWidget(tr("Contest"), this);
+        contestDock->setObjectName(QStringLiteral("contestDock"));
+        contestDock->setWidget(contestPanel);
+        addDockWidget(Qt::BottomDockWidgetArea, contestDock);
+    }
+    contestPanel->loadDistricts(d.absolutePath() + QStringLiteral("/lv-districts.txt"));
+    contestDock->setWindowTitle(cd.name);
+    contestDock->show();
+
     const int r = cd.roundAt(QTime::currentTime());
-    QMessageBox::information(this, tr("KLog - Contest"),
-        tr("%1\nRounds: %2\nCurrent round: %3")
-            .arg(cd.name).arg(cd.rounds.size())
-            .arg(r > 0 ? QString::number(r) : tr("none")));
+    contestPanel->setRound(r, QStringLiteral("--:--"));
+    {
+        const ContestRound *cr = cd.round(r);
+        contestPanel->setFt8Mode(cr && cr->multiplier == QStringLiteral("grid4"));
+    }
+    contestPanel->setScore(0, 0, 0, 0);
 }
