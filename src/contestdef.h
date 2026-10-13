@@ -28,6 +28,7 @@ public:
     QStringList bands;
     QStringList exchSent, exchRcvd;
     QString multiplier;
+    QStringList multList;
     bool multPerRound = false;
     bool ownDistrictNoMult = false;
     QString dupeScope;           // "round+mode"

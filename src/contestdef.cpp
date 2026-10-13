@@ -40,6 +40,7 @@ bool ContestDef::load(const QString &path)
     exchSent     = strList(o.value("exchange_sent"));
     exchRcvd     = strList(o.value("exchange_rcvd"));
     multiplier   = o.value("multiplier").toString();
+    multList     = strList(o.value("scoring").toObject().value("multipliers"));
     multPerRound = o.value("multiplier_per_round").toBool(false);
     ownDistrictNoMult = o.value("own_district_no_mult").toBool(false);
     dupeScope    = o.value("dupe_scope").toString();
@@ -60,7 +61,7 @@ bool ContestDef::load(const QString &path)
         r.multiplier = ro.contains("multiplier") ? ro.value("multiplier").toString() : multiplier;
         rounds.append(r);
     }
-    return !id.isEmpty() && (!rounds.isEmpty() || o.contains("schedule"));
+    return !id.isEmpty() && (!rounds.isEmpty() || o.contains("schedule") || o.contains("period"));
 }
 
 int ContestDef::roundAt(const QTime &t) const

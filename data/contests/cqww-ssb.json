@@ -1,0 +1,60 @@
+{
+  "id": "CQWW-SSB",
+  "name": "CQ WW DX Contest - SSB",
+  "category": "international",
+  "subgroup": "hf",
+  "time_zone": "utc",
+  "period": {
+    "rule": "last_full_weekend_of_october",
+    "start_day": "sat",
+    "start": "00:00",
+    "end_day": "sun",
+    "end": "23:59",
+    "dates_2026": [
+      "2026-10-24",
+      "2026-10-25"
+    ]
+  },
+  "bands": [
+    "160M",
+    "80M",
+    "40M",
+    "20M",
+    "15M",
+    "10M"
+  ],
+  "modes": [
+    "SSB"
+  ],
+  "exchange_sent": [
+    "rs",
+    "cq_zone"
+  ],
+  "exchange_rcvd": [
+    "rs",
+    "cq_zone"
+  ],
+  "dupe_scope": "band",
+  "scoring": {
+    "qso_points": {
+      "same_country": 0,
+      "same_continent": 1,
+      "same_continent_north_america": 2,
+      "other_continent": 3
+    },
+    "multipliers": [
+      "zone",
+      "country"
+    ],
+    "multiplier_per_band": true,
+    "maritime_mobile_zone_only": true,
+    "formula": "sum(qso_points) * (zones + countries)"
+  },
+  "region1_limits": {
+    "ssb_40m_max_khz": 7200,
+    "min_khz": 1810
+  },
+  "export": "cabrillo",
+  "cabrillo_contest": "CQ-WW-SSB",
+  "log_deadline_hours": 48
+}

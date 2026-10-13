@@ -7895,49 +7895,52 @@ void MainWindow::slotContestDialog()
     }
     const bool isYL = myCall.startsWith(QStringLiteral("YL")) ||
                       myCall.contains(QStringLiteral("YL/"));
-    QStringList catIds, catNames;
-    auto addCat = [&](const QString &cid, const QString &label, bool allowed) {
-        if (!allowed) return;
-        for (const ContestDef &x : defs)
-            if (x.category == cid) { catIds << cid; catNames << label; return; }
+    // 1. limenis: HF vai VHF/UHF. 2. limenis: Starptautiskas vai Latvijas.
+    // Latvijas sacensibas redz tikai YL zimes.
+    auto visible = [&](const ContestDef &x) {
+        return x.category != QStringLiteral("latvia") || isYL;
     };
-    addCat(QStringLiteral("international"), tr("International"), true);
-    addCat(QStringLiteral("latvia"), tr("Latvian"), isYL);
-    if (catIds.isEmpty())
+    QStringList subIds;
+    for (const ContestDef &x : defs)
+        if (visible(x) && !subIds.contains(x.subgroup)) subIds << x.subgroup;
+    if (subIds.isEmpty())
     {
         QMessageBox::information(this, tr("KLog - Contest"),
                                  tr("No contests available for this callsign."));
         return;
     }
     bool ok = false;
-    QString cat = catIds.first();
-    if (catIds.size() > 1)
-    {
-        const QString catSel = QInputDialog::getItem(this, tr("KLog - Contest"),
-                                   tr("Select the group:"), catNames, 0, false, &ok);
-        if (!ok || catSel.isEmpty()) return;
-        cat = catIds.at(catNames.indexOf(catSel));
-    }
-
-    QStringList subIds;
-    for (const ContestDef &x : defs)
-        if (x.category == cat && !subIds.contains(x.subgroup)) subIds << x.subgroup;
-    QString sub = subIds.isEmpty() ? QString() : subIds.first();
+    QString sub = subIds.first();
     if (subIds.size() > 1)
     {
         QStringList subNames;
         for (const QString &sid : subIds)
             subNames << (sid == QStringLiteral("vhf") ? tr("VHF/UHF") : tr("HF"));
         const QString subSel = QInputDialog::getItem(this, tr("KLog - Contest"),
-                                   tr("Select the subgroup:"), subNames, 0, false, &ok);
+                                   tr("Select the band group:"), subNames, 0, false, &ok);
         if (!ok || subSel.isEmpty()) return;
         sub = subIds.at(subNames.indexOf(subSel));
+    }
+
+    QStringList catIds;
+    for (const ContestDef &x : defs)
+        if (visible(x) && x.subgroup == sub && !catIds.contains(x.category)) catIds << x.category;
+    QString cat = catIds.first();
+    if (catIds.size() > 1)
+    {
+        QStringList catNames;
+        for (const QString &cid : catIds)
+            catNames << (cid == QStringLiteral("latvia") ? tr("Latvian") : tr("International"));
+        const QString catSel = QInputDialog::getItem(this, tr("KLog - Contest"),
+                                   tr("Select the group:"), catNames, 0, false, &ok);
+        if (!ok || catSel.isEmpty()) return;
+        cat = catIds.at(catNames.indexOf(catSel));
     }
 
     QStringList inCat;
     QList<int> inCatIdx;
     for (int i = 0; i < defs.size(); ++i)
-        if (defs.at(i).category == cat && defs.at(i).subgroup == sub)
+        if (visible(defs.at(i)) && defs.at(i).category == cat && defs.at(i).subgroup == sub)
         { inCat << defs.at(i).name; inCatIdx << i; }
     if (inCat.isEmpty()) return;
     const QString sel = QInputDialog::getItem(this, tr("KLog - Contest"),
@@ -7954,7 +7957,10 @@ void MainWindow::slotContestDialog()
         contestDock->setWidget(contestPanel);
         addDockWidget(Qt::BottomDockWidgetArea, contestDock);
     }
-    contestPanel->loadDistricts(d.absolutePath() + QStringLiteral("/lv-districts.txt"));
+    if (cd.multList.contains(QStringLiteral("zone")))
+        contestPanel->setZoneMatrix(cd.bands);
+    else
+        contestPanel->loadDistricts(d.absolutePath() + QStringLiteral("/lv-districts.txt"));
     contestDock->setWindowTitle(cd.name);
     contestDock->show();
 

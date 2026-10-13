@@ -26,11 +26,17 @@ ContestPanel::ContestPanel(QWidget *parent) : QWidget(parent)
     lay->addWidget(roundLabel);
     lay->addLayout(grid, 1);
     lay->addWidget(squaresLabel, 1);
+    matrixWidget = new QWidget(this);
+    new QGridLayout(matrixWidget);
+    matrixWidget->hide();
+    lay->addWidget(matrixWidget, 1);
     lay->addWidget(scoreLabel);
 }
 
 void ContestPanel::loadDistricts(const QString &path)
 {
+    zoneMode = false;
+    if (matrixWidget) matrixWidget->hide();
     order.clear();
     qDeleteAll(cells);
     cells.clear();
@@ -108,4 +114,73 @@ void ContestPanel::setWorkedSquares(const QStringList &squares)
     squaresLabel->setText(tr("Squares worked: %1\n%2")
                               .arg(u.size())
                               .arg(u.isEmpty() ? QStringLiteral("-") : u.join(QStringLiteral(", "))));
+}
+
+
+static const char *ZONE_OFF = "background:#e0e0e0; color:#555;";
+static const char *ZONE_ON  = "background:#2e7d32; color:white;";
+
+void ContestPanel::setZoneMatrix(const QStringList &bands)
+{
+    zoneMode = true;
+    for (QLabel *c : cells) c->hide();
+
+    QGridLayout *g = qobject_cast<QGridLayout *>(matrixWidget->layout());
+    while (QLayoutItem *it = g->takeAt(0))
+    {
+        if (it->widget()) delete it->widget();
+        delete it;
+    }
+    zoneCells.clear();
+    countryCells.clear();
+    g->setSpacing(1);
+
+    for (int z = 1; z <= 40; ++z)
+    {
+        QLabel *h = new QLabel(QString::number(z), matrixWidget);
+        h->setAlignment(Qt::AlignCenter);
+        h->setStyleSheet(QStringLiteral("font-size:9px;"));
+        g->addWidget(h, 0, z);
+    }
+    QLabel *ch = new QLabel(tr("Countries"), matrixWidget);
+    ch->setAlignment(Qt::AlignCenter);
+    g->addWidget(ch, 0, 41);
+
+    int row = 1;
+    for (const QString &b : bands)
+    {
+        QLabel *bl = new QLabel(b, matrixWidget);
+        bl->setStyleSheet(QStringLiteral("font-weight:bold;"));
+        g->addWidget(bl, row, 0);
+        QList<QLabel *> list;
+        for (int z = 1; z <= 40; ++z)
+        {
+            QLabel *c = new QLabel(matrixWidget);
+            c->setMinimumSize(18, 16);
+            c->setStyleSheet(QString::fromLatin1(ZONE_OFF));
+            c->setToolTip(tr("%1, zone %2").arg(b).arg(z));
+            g->addWidget(c, row, z);
+            list << c;
+        }
+        zoneCells.insert(b, list);
+        QLabel *n = new QLabel(QStringLiteral("0"), matrixWidget);
+        n->setAlignment(Qt::AlignCenter);
+        g->addWidget(n, row, 41);
+        countryCells.insert(b, n);
+        ++row;
+    }
+    matrixWidget->show();
+}
+
+void ContestPanel::setWorkedZones(const QString &band, const QSet<int> &zones)
+{
+    const QList<QLabel *> list = zoneCells.value(band);
+    for (int i = 0; i < list.size(); ++i)
+        list.at(i)->setStyleSheet(QString::fromLatin1(zones.contains(i + 1) ? ZONE_ON : ZONE_OFF));
+}
+
+void ContestPanel::setCountryCount(const QString &band, int count)
+{
+    if (QLabel *l = countryCells.value(band, nullptr))
+        l->setText(QString::number(count));
 }
