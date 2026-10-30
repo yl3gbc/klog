@@ -129,6 +129,8 @@ void MainWindowInputQSO::createUI()
     rstRxLabelN->setText(tr("RX"));
     rstRxLabelN->setAlignment(Qt::AlignCenter);
 
+    rstTxLabelM = rstTxLabelN;
+    rstRxLabelM = rstRxLabelN;
     QHBoxLayout *RSTLabelsLayout = new QHBoxLayout;
     RSTLabelsLayout->addWidget (rstTxLabelN);
     RSTLabelsLayout->addWidget (rstLabelN);
@@ -203,6 +205,18 @@ void MainWindowInputQSO::createUI()
     locVLayout->addWidget(locatorLineEdit);
     locVLayout->addWidget(dokLabel);
     locVLayout->addWidget(dokLineEdit);
+    // KLogNG: sacensibu apmainas lauki, virsraksti no sacensibas apraksta
+    for (int i = 0; i < 2; ++i)
+    {
+        contestLabel[i] = new QLabel;
+        contestLabel[i]->setAlignment(Qt::AlignCenter);
+        contestEdit[i] = new QLineEdit;
+        contestLabel[i]->hide();
+        contestEdit[i]->hide();
+        locVLayout->addWidget(contestLabel[i]);
+        locVLayout->addWidget(contestEdit[i]);
+        connect(contestEdit[i], SIGNAL(returnPressed()), this, SLOT(slotReturnPressed()));
+    }
 
     QVBoxLayout *freqLocLayout = new QVBoxLayout;
     freqLocLayout->addLayout(freqLayout);
@@ -290,7 +304,9 @@ void MainWindowInputQSO::createUI()
     QWidget::setTabOrder (rstRXLineEdit, nameLineEdit);
     QWidget::setTabOrder (nameLineEdit, qthLineEdit);
     QWidget::setTabOrder (qthLineEdit, locatorLineEdit);
-    QWidget::setTabOrder (locatorLineEdit, rxPowerSpinBox);
+    QWidget::setTabOrder (locatorLineEdit, contestEdit[0]);
+    QWidget::setTabOrder (contestEdit[0], contestEdit[1]);
+    QWidget::setTabOrder (contestEdit[1], rxPowerSpinBox);
     QWidget::setTabOrder (rxPowerSpinBox, commentLineEdit);
 }
 
@@ -997,4 +1013,51 @@ void MainWindowInputQSO::showDOKField(bool _show)
     dokLabel->setVisible(_show);
     dokLineEdit->setVisible(_show);
     if (!_show) dokLineEdit->clear();
+}
+
+
+void MainWindowInputQSO::setContestFields(const QStringList &labels)
+{
+    for (int i = 0; i < 2; ++i)
+    {
+        if (!contestLabel[i] || !contestEdit[i]) continue;
+        const bool on = i < labels.size();
+        if (on) contestLabel[i]->setText(labels.at(i));
+        contestLabel[i]->setVisible(on);
+        contestEdit[i]->setVisible(on);
+        if (!on) contestEdit[i]->clear();
+    }
+}
+
+QString MainWindowInputQSO::getContestField(int i)
+{
+    if (i < 0 || i > 1 || !contestEdit[i]) return QString();
+    return contestEdit[i]->text().trimmed().toUpper();
+}
+
+void MainWindowInputQSO::clearContestFields()
+{
+    for (int i = 0; i < 2; ++i)
+        if (contestEdit[i]) contestEdit[i]->clear();
+}
+
+
+void MainWindowInputQSO::setContestRst(bool single, const QString &def)
+{
+    contestSingleRst = single;
+    if (rstTxLabelM) rstTxLabelM->setVisible(!single);
+    if (rstRxLabelM) rstRxLabelM->setVisible(!single);
+    if (rstRXLineEdit) rstRXLineEdit->setVisible(!single);
+    if (single && rstTXLineEdit)
+    {
+        if (!rstMirrorConnected)
+        {
+            rstMirrorConnected = true;
+            connect(rstTXLineEdit, &QLineEdit::textChanged, this, [this](const QString &t) {
+                if (contestSingleRst && rstRXLineEdit) rstRXLineEdit->setText(t);
+            });
+        }
+        if (!def.isEmpty()) rstTXLineEdit->setText(def);
+        if (rstRXLineEdit) rstRXLineEdit->setText(rstTXLineEdit->text());
+    }
 }

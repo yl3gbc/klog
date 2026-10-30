@@ -29,6 +29,7 @@
 // This class implement the tab of the mainwindow that supports the QSL options
 //
 
+#include <QStringList>
 #include <QWidget>
 #include <QtWidgets>
 #include "../dataproxy_sqlite.h"
@@ -56,6 +57,10 @@ public:
     QString getDOK();
     void setDOK(const QString &_st);
     void showDOKField(bool _show);
+    void setContestFields(const QStringList &labels);
+    QString getContestField(int i);
+    void clearContestFields();
+    void setContestRst(bool single, const QString &def);
     void setDXLocator(const QString &_loc, bool _completing = false);
     void setNewGrid(const bool _new, const QString &_text = QString());   // Turns the DX Locator label into a red "New Locator..." when the grid is new
 
@@ -135,6 +140,12 @@ private:
     QLabel *servicesLabel;
     QLineEdit *dokLineEdit;
     QLabel *dokLabel;
+    QLabel *contestLabel[2] = {nullptr, nullptr};
+    QLineEdit *contestEdit[2] = {nullptr, nullptr};
+    QLabel *rstTxLabelM = nullptr;
+    QLabel *rstRxLabelM = nullptr;
+    bool contestSingleRst = false;
+    bool rstMirrorConnected = false;
     QLabel *clubsLabel;
     QLabel *locLabel;           // DX Locator label; turns into a red "New Locator" when the grid is new
     QDoubleSpinBox *rxPowerSpinBox,  *txFreqSpinBox, *rxFreqSpinBox;

@@ -7870,6 +7870,8 @@ void MainWindow::slotContestDialog()
         {
             delete activeContest;
             activeContest = nullptr;
+            if (QSOTabWidget) QSOTabWidget->setContestFields(QStringList());
+            if (QSOTabWidget) QSOTabWidget->setContestRst(false, QString());
             if (contestDock) contestDock->hide();
             statusBar()->showMessage(tr("Contest stopped."), 5000);
         }
@@ -7962,6 +7964,24 @@ void MainWindow::slotContestDialog()
     const ContestDef &cd = defs.at(idx);
     delete activeContest;
     activeContest = new ContestDef(cd);
+    if (QSOTabWidget)
+    {
+        const ContestRound *cr0 = cd.round(cd.roundAt(QTime::currentTime()));
+        const QStringList ex = cr0 ? cr0->exchRcvd : cd.exchRcvd;
+        QStringList labels;
+        for (const QString &e : ex)
+        {
+            if (e == QStringLiteral("rs") || e == QStringLiteral("rst")) continue;
+            if (e == QStringLiteral("grid")) continue;
+            if (e == QStringLiteral("cq_zone")) labels << tr("CQ zone");
+            else if (e == QStringLiteral("serial")) labels << tr("Serial");
+            else if (e == QStringLiteral("district")) labels << tr("District");
+            else labels << e;
+        }
+        QSOTabWidget->setContestFields(labels);
+        const bool singleRst = ex.contains(QStringLiteral("rs"));
+        QSOTabWidget->setContestRst(singleRst, singleRst ? QStringLiteral("59") : QString());
+    }
     statusBar()->showMessage(tr("Contest started: %1").arg(cd.name), 8000);
 
     if (!contestDock)
