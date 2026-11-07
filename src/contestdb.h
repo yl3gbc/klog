@@ -15,6 +15,10 @@ public:
 
     bool isOpen() const { return con != nullptr; }
     QString lastError() const { return err; }
+    bool addQso(const QString &contestId, int profileId, const QString &date,
+                const QString &time, const QString &band, const QString &mode,
+                const QString &call, const QString &rstSent, const QString &rstRcvd,
+                const QString &exchSent, const QString &exchRcvd, int round);
 
 private:
     bool createSchema();

@@ -81,3 +81,38 @@ bool ContestDB::createSchema()
     return false;
 #endif
 }
+
+
+bool ContestDB::addQso(const QString &contestId, int profileId, const QString &date,
+                       const QString &time, const QString &band, const QString &mode,
+                       const QString &call, const QString &rstSent, const QString &rstRcvd,
+                       const QString &exchSent, const QString &exchRcvd, int round)
+{
+#ifdef KLOGNG_HAS_DUCKDB
+    if (!con) { err = QStringLiteral("no connection"); return false; }
+    auto e = [](QString v) { return v.replace(QChar(39), QStringLiteral("''")); };
+    const QString sql = QStringLiteral(
+        "INSERT INTO contest_qso (contest_id, profile_id, qso_date, time_on, band, mode, \"call\", "
+        "rst_sent, rst_rcvd, exch_sent, exch_rcvd, round) VALUES "
+        "('%1', %2, '%3', '%4', '%5', '%6', '%7', '%8', '%9', '%10', '%11', %12)")
+        .arg(e(contestId)).arg(profileId).arg(e(date)).arg(e(time)).arg(e(band)).arg(e(mode))
+        .arg(e(call)).arg(e(rstSent)).arg(e(rstRcvd)).arg(e(exchSent)).arg(e(exchRcvd)).arg(round);
+    const QByteArray q = sql.toUtf8();
+    duckdb_result res;
+    if (duckdb_query(*static_cast<duckdb_connection *>(con), q.constData(), &res) != DuckDBSuccess)
+    {
+        const char *m = duckdb_result_error(&res);
+        err = QString::fromUtf8(m ? m : "unknown error");
+        duckdb_destroy_result(&res);
+        return false;
+    }
+    duckdb_destroy_result(&res);
+    return true;
+#else
+    Q_UNUSED(contestId); Q_UNUSED(profileId); Q_UNUSED(date); Q_UNUSED(time);
+    Q_UNUSED(band); Q_UNUSED(mode); Q_UNUSED(call); Q_UNUSED(rstSent); Q_UNUSED(rstRcvd);
+    Q_UNUSED(exchSent); Q_UNUSED(exchRcvd); Q_UNUSED(round);
+    err = QStringLiteral("built without DuckDB");
+    return false;
+#endif
+}
