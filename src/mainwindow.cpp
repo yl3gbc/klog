@@ -803,7 +803,8 @@ void MainWindow::recommendBackupIfNeeded()
         msg = tr("Your latest backup seems older than one month.");
     }
 
-    if (backupNeeded)
+    // KLogNG: automatiskais atgadinajums izslegts, kopiju veido tikai pec lietotaja iniciativas
+    if (false && backupNeeded)
     {
           //qDebug() << Q_FUNC_INFO << " -  We need to backup"  << (QTime::currentTime()).toString(" HH:mm:ss")  ;
         QMessageBox msgBox(this);
@@ -7739,14 +7740,26 @@ void MainWindow::slotUpdateServices(const QString &call)
     }
     if (hamQTH && hamQTH->isReady())
         hamQTH->lookup(c);
+    QString lotwDateText;
     if (callsignServices && callsignServices->usesLoTW(c))
+    {
         v << QStringLiteral("<b style='color:#c62828'>LoTW</b>");
+        const QDate lu = callsignServices->lotwLastUpload(c);
+        if (lu.isValid()) lotwDateText = lu.toString(QStringLiteral("yyyy-MM-dd"));
+    }
     if (callsignServices && callsignServices->useseQSL(c))
         v << QStringLiteral("<b style='color:#2e7d32'>eQSL</b>");
     v << QStringLiteral("<a href='https://www.qrz.com/db/%1' style='color:#1565c0;text-decoration:none'><b>QRZ</b></a>").arg(c);
     v << QStringLiteral("<a href='https://www.hamqth.com/%1' style='color:#00695c;text-decoration:none'><b>HamQTH</b></a>").arg(c);
     v << QStringLiteral("<a href='https://clublog.org/logsearch/%1' style='color:#e65100;text-decoration:none'><b>ClubLog</b></a>").arg(c);
-    QSOTabWidget->setServices(v.join(QStringLiteral(" &nbsp;&nbsp; ")));
+    QString html = QStringLiteral("<table align='center' cellspacing='0' cellpadding='0'><tr>");
+    for (const QString &item : v)
+        html += QStringLiteral("<td align='center'>%1</td><td>&nbsp;&nbsp;&nbsp;</td>").arg(item);
+    html += QStringLiteral("</tr>");
+    if (!lotwDateText.isEmpty())
+        html += QStringLiteral("<tr><td align='center'><span style='font-size:9px;color:#555'>%1</span></td></tr>").arg(lotwDateText);
+    html += QStringLiteral("</table>");
+    QSOTabWidget->setServices(html);
 }
 
 

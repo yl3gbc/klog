@@ -44,7 +44,12 @@ void CallsignServices::reload()
         {
             const QString line = in.readLine();
             const int c = line.indexOf(QLatin1Char(','));
-            if (c > 0) lotw.insert(line.left(c).trimmed().toUpper());
+            if (c > 0)
+            {
+                const QStringList f = line.split(QLatin1Char(','));
+                lotw.insert(f.at(0).trimmed().toUpper(),
+                            f.size() > 1 ? QDate::fromString(f.at(1).trimmed(), QStringLiteral("yyyy-MM-dd")) : QDate());
+            }
         }
         fl.close();
     }
@@ -69,6 +74,14 @@ bool CallsignServices::usesLoTW(const QString &call) const
     if (call.trimmed().isEmpty()) return false;
     const QString c = call.trimmed().toUpper();
     return lotw.contains(c) || lotw.contains(baseCall(c));
+}
+
+QDate CallsignServices::lotwLastUpload(const QString &call) const
+{
+    if (call.trimmed().isEmpty()) return QDate();
+    const QString c = call.trimmed().toUpper();
+    if (lotw.contains(c)) return lotw.value(c);
+    return lotw.value(baseCall(c));
 }
 
 bool CallsignServices::useseQSL(const QString &call) const

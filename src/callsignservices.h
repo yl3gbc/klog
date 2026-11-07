@@ -3,6 +3,8 @@
 
 #include <QObject>
 #include <QSet>
+#include <QHash>
+#include <QDate>
 #include <QString>
 #include <QNetworkAccessManager>
 #include <QTimer>
@@ -17,6 +19,7 @@ public:
 
     bool usesLoTW(const QString &call) const;
     bool useseQSL(const QString &call) const;
+    QDate lotwLastUpload(const QString &call) const;
     void reload();
     void updateIfStale();      // lejupielade, ja faili vecaki par 24h
 
@@ -31,7 +34,7 @@ private:
     QNetworkAccessManager net;
     QTimer daily;
     QString dir;
-    QSet<QString> lotw;
+    QHash<QString, QDate> lotw;     // zime -> pedejas augsupielades datums
     QSet<QString> eqsl;
 };
 
