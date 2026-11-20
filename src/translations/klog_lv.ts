@@ -5804,126 +5804,126 @@ KLog beigs darbu, kad nospiedīsiet OK.</translation>
     <message>
         <location filename="../utilities.cpp" line="1563" />
         <source>My Sig Info</source>
-        <translation type="unfinished" />
+        <translation>My Sig Info</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1641" />
         <location filename="../utilities.cpp" line="1649" />
         <source>Mode (ADIF submode)</source>
-        <translation type="unfinished" />
+        <translation>Režīms (ADIF apakšrežīms)</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1501" />
         <source>ClubLog SDate</source>
         <comment>Date when it was sent</comment>
-        <translation type="unfinished" />
+        <translation>ClubLog SDate</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1509" />
         <source>Darc Dok</source>
         <comment>Do not translate if unsure, common hamradio term.</comment>
-        <translation type="unfinished" />
+        <translation>Darc Dok</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1514" />
         <source>eQSL SDate</source>
         <comment>Date when it was sent</comment>
-        <translation type="unfinished" />
+        <translation>eQSL SDate</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1523" />
         <source>Gridsquare ext</source>
         <comment>Extended gridsquare</comment>
-        <translation type="unfinished" />
+        <translation>Gridsquare ext</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1524" />
         <source>HamLog status</source>
-        <translation type="unfinished" />
+        <translation>HamLog status</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1525" />
         <source>HamLog SDate</source>
         <comment>Date when it was sent</comment>
-        <translation type="unfinished" />
+        <translation>HamLog SDate</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1526" />
         <source>HRDLog SDate</source>
         <comment>Date when it was sent</comment>
-        <translation type="unfinished" />
+        <translation>HRDLog SDate</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1528" />
         <source>HamQTH status</source>
-        <translation type="unfinished" />
+        <translation>HamQTH status</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1529" />
         <source>HamQTH SDate</source>
         <comment>Date when it was sent</comment>
-        <translation type="unfinished" />
+        <translation>HamQTH SDate</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1536" />
         <source>LoTW SDate</source>
         <comment>Date when it was sent</comment>
-        <translation type="unfinished" />
+        <translation>LoTW SDate</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1539" />
         <source>Marcado</source>
-        <translation type="unfinished" />
+        <translation>Atzīmēts</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1542" />
         <source>My Altitude</source>
-        <translation type="unfinished" />
+        <translation>My Altitude</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1544" />
         <source>My ARRL Sect</source>
-        <translation type="unfinished" />
+        <translation>My ARRL Sect</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1552" />
         <source>My Gridsquare Ext</source>
-        <translation type="unfinished" />
+        <translation>My Gridsquare Ext</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1560" />
         <source>My POTA</source>
-        <translation type="unfinished" />
+        <translation>My POTA</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1564" />
         <source>My SOTA</source>
-        <translation type="unfinished" />
+        <translation>My SOTA</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1565" />
         <source>My State</source>
-        <translation type="unfinished" />
+        <translation>My State</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1566" />
         <source>My Street</source>
-        <translation type="unfinished" />
+        <translation>My Street</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1567" />
         <source>My USACA counties</source>
-        <translation type="unfinished" />
+        <translation>My USACA counties</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1568" />
         <source>My VUCC grids</source>
-        <translation type="unfinished" />
+        <translation>My VUCC grids</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1569" />
         <source>My WWFF</source>
-        <translation type="unfinished" />
+        <translation>My WWFF</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1570" />
@@ -5933,79 +5933,79 @@ KLog beigs darbu, kad nospiedīsiet OK.</translation>
     <message>
         <location filename="../utilities.cpp" line="1571" />
         <source>Notes</source>
-        <translation type="unfinished" />
+        <translation>Notes</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1572" />
         <source>Nr bursts</source>
         <comment>Do not translate if unsure, common hamradio term.</comment>
-        <translation type="unfinished" />
+        <translation>Nr bursts</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1573" />
         <source>Nr pings</source>
         <comment>Do not translate if unsure, common hamradio term.</comment>
-        <translation type="unfinished" />
+        <translation>Nr pings</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1574" />
         <source>Operator</source>
-        <translation type="unfinished" />
+        <translation>Operator</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1575" />
         <source>Owner Callsign</source>
-        <translation type="unfinished" />
+        <translation>Owner Callsign</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1576" />
         <source>POTA</source>
-        <translation type="unfinished" />
+        <translation>POTA</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1577" />
         <source>Pfx</source>
-        <translation type="unfinished" />
+        <translation>Pfx</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1578" />
         <source>Precedence</source>
-        <translation type="unfinished" />
+        <translation>Precedence</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1579" />
         <source>Prop Mode</source>
-        <translation type="unfinished" />
+        <translation>Prop Mode</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1580" />
         <source>Public Key</source>
-        <translation type="unfinished" />
+        <translation>Public Key</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1581" />
         <source>QRZcom SDate</source>
-        <translation type="unfinished" />
+        <translation>QRZcom SDate</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1582" />
         <source>QRZcom status</source>
-        <translation type="unfinished" />
+        <translation>QRZcom status</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1583" />
         <source>QSL msg</source>
-        <translation type="unfinished" />
+        <translation>QSL msg</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1584" />
         <source>QSL RDate</source>
-        <translation type="unfinished" />
+        <translation>QSL RDate</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1585" />
         <source>QSL SDate</source>
-        <translation type="unfinished" />
+        <translation>QSL SDate</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1586" />
@@ -6020,12 +6020,12 @@ KLog beigs darbu, kad nospiedīsiet OK.</translation>
     <message>
         <location filename="../utilities.cpp" line="1588" />
         <source>QSL rcvd via</source>
-        <translation type="unfinished" />
+        <translation>QSL rcvd via</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1589" />
         <source>QSL sent via</source>
-        <translation type="unfinished" />
+        <translation>QSL sent via</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1590" />
