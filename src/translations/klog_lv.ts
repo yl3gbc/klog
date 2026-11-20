@@ -4096,17 +4096,17 @@ Atveriet LoTW cilni iestatījumos un nokonfigurējiet LoTW savienojumu.</transla
     <message>
         <location filename="../mainwindow.cpp" line="5113" />
         <source>Importing file %1/%2: %3</source>
-        <translation type="unfinished" />
+        <translation>Importē failu %1/%2: %3</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5156" />
         <source>KLog - File import finished</source>
-        <translation type="unfinished" />
+        <translation>KLog — faila imports pabeigts</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5157" />
         <source>The import of the ADIF file has finished.</source>
-        <translation type="unfinished" />
+        <translation>ADIF faila imports ir pabeigts.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5158" />
@@ -4114,86 +4114,92 @@ Atveriet LoTW cilni iestatījumos un nokonfigurējiet LoTW savienojumu.</transla
 Ignored duplicated: %2
 
 Do you want to continue importing the next file?</source>
-        <translation type="unfinished" />
+        <translation>Importēti QSO: %1
+Ignorēti dublikāti: %2
+
+Vai vēlaties turpināt nākamā faila importu?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5172" />
         <source>Import cancelled by the user.</source>
-        <translation type="unfinished" />
+        <translation>Lietotājs atcēla importu.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5178" />
         <location filename="../mainwindow.cpp" line="5191" />
         <source>KLog - Import finished</source>
-        <translation type="unfinished" />
+        <translation>KLog — imports pabeigts</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5179" />
         <source>The ADIF import has been stopped.</source>
-        <translation type="unfinished" />
+        <translation>ADIF imports tika apturēts.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5180" />
         <source>The ADIF import has finished.</source>
-        <translation type="unfinished" />
+        <translation>ADIF imports ir pabeigts.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5181" />
         <source>Total imported QSOs: %1
 Total ignored duplicated: %2</source>
-        <translation type="unfinished" />
+        <translation>Kopā importēti QSO: %1
+Kopā ignorēti dublikāti: %2</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5185" />
         <source>Import of %1 files finished.</source>
-        <translation type="unfinished" />
+        <translation>%1 failu imports pabeigts.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5192" />
         <source>The ADIF file import has finished.</source>
-        <translation type="unfinished" />
+        <translation>ADIF faila imports ir pabeigts.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5193" />
         <source>Imported QSOs: %1
 Ignored duplicated: %2</source>
-        <translation type="unfinished" />
+        <translation>Importēti QSO: %1
+Ignorēti dublikāti: %2</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5379" />
         <source>New Locator on Sats</source>
-        <translation type="unfinished" />
+        <translation>Jauns lokators uz pavadoņiem</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5380" />
         <source>New Locator on %1 Band</source>
-        <translation type="unfinished" />
+        <translation>Jauns lokators %1 diapazonā</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5454" />
         <source> - Needed for DXMarathon</source>
-        <translation type="unfinished" />
+        <translation> — nepieciešams DXMarathon</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5552" />
         <source>Filling QSOs ...</source>
-        <translation type="unfinished" />
+        <translation>Aizpilda QSO ...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5552" />
         <source>Abort filling</source>
-        <translation type="unfinished" />
+        <translation>Pārtraukt aizpildīšanu</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5654" />
         <source>Filling DXCC, CQz, ITUz, Continent in QSOs...
  QSO: </source>
-        <translation type="unfinished" />
+        <translation>Aizpilda DXCC, CQz, ITUz, kontinentu QSO...
+ QSO: </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5827" />
         <source>WSJT-X, worked by %1</source>
-        <translation type="unfinished" />
+        <translation>WSJT-X, nostrādājis %1</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5981" />
@@ -4233,41 +4239,44 @@ Ignored duplicated: %2</source>
     <message>
         <location filename="../mainwindow.cpp" line="6008" />
         <source>Print Log</source>
-        <translation type="unfinished" />
+        <translation>Drukāt žurnālu</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6013" />
         <source>Printing the log ...</source>
-        <translation type="unfinished" />
+        <translation>Drukā žurnālu ...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6013" />
         <source>Abort printing</source>
-        <translation type="unfinished" />
+        <translation>Pārtraukt drukāšanu</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6029" />
         <location filename="../mainwindow.cpp" line="6043" />
         <source>Printing the log...
  QSO: </source>
-        <translation type="unfinished" />
+        <translation>Drukā žurnālu...
+ QSO: </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6691" />
         <source>&lt;HTML&gt;&lt;body&gt;The following QSO data has been received to be logged:
 
 &lt;table&gt;&lt;tr&gt;&lt;TH&gt;Callsign:&lt;/TH&gt;&lt;TD&gt;%1&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TH&gt;Freq:&lt;/TH&gt;&lt;TD&gt;%2&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TH&gt;Mode:&lt;/TH&gt;&lt;TD&gt;%3&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TH&gt;Time On:&lt;/TH&gt;&lt;TD&gt;%4&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TH&gt;Time Off:&lt;/TH&gt;&lt;TD&gt;%5&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TH&gt;RST TX:&lt;/TH&gt;&lt;TD&gt;%6&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TH&gt;RST RX:&lt;/TH&gt;&lt;TD&gt;%7&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TH&gt;Comment:&lt;/TH&gt;&lt;TD&gt;%8&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TH&gt;DX-Grid:&lt;/TH&gt;&lt;TD&gt;%9&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TH&gt;Local-Grid:&lt;/TH&gt;&lt;TD&gt;%10&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TH&gt;Station Callsign:&lt;/TH&gt;&lt;TD&gt;%11&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TH&gt;Operator Callsign:&lt;/TH&gt;&lt;TD&gt;%12&lt;/TD&gt;&lt;/TR&gt;&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished" />
+        <translation>&lt;HTML&gt;&lt;body&gt;Ierakstīšanai saņemti šādi QSO dati:
+
+&lt;table&gt;&lt;tr&gt;&lt;TH&gt;Izsaukuma signāls:&lt;/TH&gt;&lt;TD&gt;%1&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TH&gt;Frekvence:&lt;/TH&gt;&lt;TD&gt;%2&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TH&gt;Režīms:&lt;/TH&gt;&lt;TD&gt;%3&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TH&gt;Sākuma laiks:&lt;/TH&gt;&lt;TD&gt;%4&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TH&gt;Beigu laiks:&lt;/TH&gt;&lt;TD&gt;%5&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TH&gt;RST TX:&lt;/TH&gt;&lt;TD&gt;%6&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TH&gt;RST RX:&lt;/TH&gt;&lt;TD&gt;%7&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TH&gt;Komentārs:&lt;/TH&gt;&lt;TD&gt;%8&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TH&gt;DX lokators:&lt;/TH&gt;&lt;TD&gt;%9&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TH&gt;Vietējais lokators:&lt;/TH&gt;&lt;TD&gt;%10&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TH&gt;Stacijas izsaukuma signāls:&lt;/TH&gt;&lt;TD&gt;%11&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TH&gt;Operatora izsaukuma signāls:&lt;/TH&gt;&lt;TD&gt;%12&lt;/TD&gt;&lt;/TR&gt;&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6746" />
         <source>KLog - WSJTX Dupe QSO</source>
-        <translation type="unfinished" />
+        <translation>KLog — WSJT-X dublēts QSO</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6749" />
         <source>This QSO seems to be duplicated. Do you want to save or discard it?</source>
-        <translation type="unfinished" />
+        <translation>Šis QSO šķiet dublēts. Vai vēlaties to saglabāt vai atmest?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6666" />
@@ -4277,72 +4286,72 @@ Ignored duplicated: %2</source>
     <message>
         <location filename="../mainwindow.cpp" line="6684" />
         <source>KLog - QSO received - NEW</source>
-        <translation type="unfinished" />
+        <translation>KLog — saņemts QSO — JAUNS</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6788" />
         <source>KLog - Non-supported mode</source>
-        <translation type="unfinished" />
+        <translation>KLog — neatbalstīts režīms</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6791" />
         <source>A new mode not supported by KLog has been received from an external program or radio:</source>
-        <translation type="unfinished" />
+        <translation>No ārējas programmas vai radioiekārtas saņemts jauns režīms, ko KLog neatbalsta:</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6791" />
         <source>If the received mode is correct, please contact KLog development team and request support for that mode</source>
-        <translation type="unfinished" />
+        <translation>Ja saņemtais režīms ir pareizs, lūdzu, sazinieties ar KLog izstrādes komandu un pieprasiet šī režīma atbalstu</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6791" />
         <source>Do you want to keep receiving these alerts? (disabling these alerts will prevent non-valid modes being detected)</source>
-        <translation type="unfinished" />
+        <translation>Vai vēlaties turpināt saņemt šos brīdinājumus? (Izslēdzot brīdinājumus, netiks atklāti nederīgi režīmi.)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6964" />
         <source>A duplicated satellite has been detected in the file and will not be imported.</source>
-        <translation type="unfinished" />
+        <translation>Failā atklāts dublēts pavadonis, un tas netiks importēts.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6965" />
         <source>Please check the satellite information file and ensure it is properly populated.</source>
-        <translation type="unfinished" />
+        <translation>Lūdzu, pārbaudiet pavadoņu informācijas failu un pārliecinieties, ka tas ir pareizi aizpildīts.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6965" />
         <source>Now you will see a more detailed error that can be used for debugging...</source>
-        <translation type="unfinished" />
+        <translation>Tagad redzēsiet detalizētāku kļūdu, ko var izmantot atkļūdošanai...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6975" />
         <source>An unexpected error ocurred!!</source>
-        <translation type="unfinished" />
+        <translation>Radās negaidīta kļūda!!</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6975" />
         <source>If the problem persists, please contact the developers</source>
-        <translation type="unfinished" />
+        <translation>Ja problēma atkārtojas, lūdzu, sazinieties ar izstrādātājiem</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6975" />
         <source>for analysis:</source>
-        <translation type="unfinished" />
+        <translation>analīzei:</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6977" />
         <source>Error in function</source>
-        <translation type="unfinished" />
+        <translation>Kļūda funkcijā</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6979" />
         <source>Error text</source>
-        <translation type="unfinished" />
+        <translation>Kļūdas teksts</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6980" />
         <source>Failed query</source>
-        <translation type="unfinished" />
+        <translation>Neizdevies vaicājums</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6982" />
