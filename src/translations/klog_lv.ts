@@ -4583,7 +4583,7 @@ Ignorēti dublikāti: %2</translation>
     <message>
         <location filename="../inputwidgets/mainwindowinputothers.cpp" line="733" />
         <source>SOTA Ref</source>
-        <translation type="unfinished" />
+        <translation>SOTA atsauce</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputothers.cpp" line="733" />
@@ -4593,27 +4593,27 @@ Ignorēti dublikāti: %2</translation>
     <message>
         <location filename="../inputwidgets/mainwindowinputothers.cpp" line="734" />
         <source>POTA Ref</source>
-        <translation type="unfinished" />
+        <translation>POTA atsauce</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputothers.cpp" line="735" />
         <source>SIG</source>
-        <translation type="unfinished" />
+        <translation>SIG</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputothers.cpp" line="735" />
         <source>SIG Info</source>
-        <translation type="unfinished" />
+        <translation>SIG informācija</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputothers.cpp" line="736" />
         <source>VUCC grids</source>
-        <translation type="unfinished" />
+        <translation>VUCC kvadrāti</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputothers.cpp" line="734" />
         <source>Distance</source>
-        <translation type="unfinished" />
+        <translation>Attālums</translation>
     </message>
 </context>
 <context>
@@ -4621,62 +4621,62 @@ Ignorēti dublikāti: %2</translation>
     <message>
         <location filename="../inputwidgets/mainwindowinputqsl.cpp" line="103" />
         <source>QSL Sent</source>
-        <translation type="unfinished" />
+        <translation>QSL nosūtīts</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputqsl.cpp" line="106" />
         <source>QSL Rec</source>
-        <translation type="unfinished" />
+        <translation>QSL saņemts</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputqsl.cpp" line="109" />
         <source>QSL Via</source>
-        <translation type="unfinished" />
+        <translation>QSL caur</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputqsl.cpp" line="112" />
         <source>QSL Msg</source>
-        <translation type="unfinished" />
+        <translation>QSL ziņa</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputqsl.cpp" line="115" />
         <source>Status of the QSL sending.</source>
-        <translation type="unfinished" />
+        <translation>QSL nosūtīšanas statuss.</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputqsl.cpp" line="116" />
         <source>Status of the QSL reception.</source>
-        <translation type="unfinished" />
+        <translation>QSL saņemšanas statuss.</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputqsl.cpp" line="117" />
         <source>QSL sending information.</source>
-        <translation type="unfinished" />
+        <translation>QSL nosūtīšanas informācija.</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputqsl.cpp" line="118" />
         <source>QSL reception information.</source>
-        <translation type="unfinished" />
+        <translation>QSL saņemšanas informācija.</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputqsl.cpp" line="120" />
         <source>Date of the QSL sending.</source>
-        <translation type="unfinished" />
+        <translation>QSL nosūtīšanas datums.</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputqsl.cpp" line="121" />
         <source>Date of the QSL reception.</source>
-        <translation type="unfinished" />
+        <translation>QSL saņemšanas datums.</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputqsl.cpp" line="122" />
         <source>Message of the QSL.</source>
-        <translation type="unfinished" />
+        <translation>QSL ziņojums.</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputqsl.cpp" line="123" />
         <source>QSL via information.</source>
-        <translation type="unfinished" />
+        <translation>QSL ceļa informācija.</translation>
     </message>
 </context>
 <context>
@@ -4684,55 +4684,55 @@ Ignorēti dublikāti: %2</translation>
     <message>
         <location filename="../inputwidgets/mainwindowinputqso.cpp" line="74" />
         <source>TX RST.</source>
-        <translation type="unfinished" />
+        <translation>TX RST.</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputqso.cpp" line="75" />
         <source>RX RST.</source>
-        <translation type="unfinished" />
+        <translation>RX RST.</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputqso.cpp" line="76" />
         <location filename="../inputwidgets/mainwindowinputqso.cpp" line="862" />
         <source>TX Frequency in MHz.</source>
-        <translation type="unfinished" />
+        <translation>TX frekvence MHz.</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputqso.cpp" line="77" />
         <location filename="../inputwidgets/mainwindowinputqso.cpp" line="916" />
         <source>RX Frequency in MHz.</source>
-        <translation type="unfinished" />
+        <translation>RX frekvence MHz.</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputqso.cpp" line="78" />
         <source>Power used by the contacted station.</source>
-        <translation type="unfinished" />
+        <translation>Korespondējošās stacijas izmantotā jauda.</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputqso.cpp" line="79" />
         <source>Name of the contacted operator.</source>
-        <translation type="unfinished" />
+        <translation>Korespondenta operatora vārds.</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputqso.cpp" line="80" />
         <source>QTH of the contacted station.</source>
-        <translation type="unfinished" />
+        <translation>Korespondējošās stacijas QTH.</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputqso.cpp" line="81" />
         <source>Locator of the contacted station.</source>
-        <translation type="unfinished" />
+        <translation>Korespondējošās stacijas lokators.</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputqso.cpp" line="82" />
         <source>Add a comment for this QSO.</source>
-        <translation type="unfinished" />
+        <translation>Pievienot komentāru šim QSO.</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputqso.cpp" line="83" />
         <location filename="../inputwidgets/mainwindowinputqso.cpp" line="248" />
         <source>Data entered in this tab will be copied into the next QSO.</source>
-        <translation type="unfinished" />
+        <translation>Šajā cilnē ievadītie dati tiks pārkopēti nākamajā QSO.</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputqso.cpp" line="87" />
@@ -4743,56 +4743,56 @@ Ignorēti dublikāti: %2</translation>
         <location filename="../inputwidgets/mainwindowinputqso.cpp" line="91" />
         <location filename="../inputwidgets/mainwindowinputqso.cpp" line="97" />
         <source>MHz</source>
-        <translation type="unfinished" />
+        <translation>MHz</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputqso.cpp" line="101" />
         <source>Split</source>
         <comment>Translator: Split is a common hamradio term. Do not translate unless you are sure.</comment>
-        <translation type="unfinished" />
+        <translation>Split</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputqso.cpp" line="105" />
         <source>Name</source>
-        <translation type="unfinished" />
+        <translation>Vārds</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputqso.cpp" line="109" />
         <source>QTH</source>
-        <translation type="unfinished" />
+        <translation>QTH</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputqso.cpp" line="113" />
         <location filename="../inputwidgets/mainwindowinputqso.cpp" line="488" />
         <source>DX Locator</source>
-        <translation type="unfinished" />
+        <translation>DX lokators</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputqso.cpp" line="117" />
         <source>Power(rx)</source>
-        <translation type="unfinished" />
+        <translation>Jauda (rx)</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputqso.cpp" line="121" />
         <source>RST</source>
-        <translation type="unfinished" />
+        <translation>RST</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputqso.cpp" line="125" />
         <location filename="../inputwidgets/mainwindowinputqso.cpp" line="169" />
         <source>TX</source>
-        <translation type="unfinished" />
+        <translation>TX</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputqso.cpp" line="129" />
         <location filename="../inputwidgets/mainwindowinputqso.cpp" line="174" />
         <source>RX</source>
-        <translation type="unfinished" />
+        <translation>RX</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputqso.cpp" line="164" />
         <source>Frequency</source>
-        <translation type="unfinished" />
+        <translation>Frekvence</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputqso.cpp" line="196" />
@@ -4812,7 +4812,7 @@ Ignorēti dublikāti: %2</translation>
     <message>
         <location filename="../inputwidgets/mainwindowinputqso.cpp" line="246" />
         <source>Keep</source>
-        <translation type="unfinished" />
+        <translation>Paturēt</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputqso.cpp" line="261" />
@@ -4936,7 +4936,7 @@ Frequency is not in a hamradio band!</source>
         <location filename="../inputwidgets/mainwindowsattab.cpp" line="117" />
         <location filename="../inputwidgets/mainwindowsattab.cpp" line="119" />
         <source>Data entered in this tab will be copied into the next QSO.</source>
-        <translation type="unfinished" />
+        <translation>Šajā cilnē ievadītie dati tiks pārkopēti nākamajā QSO.</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowsattab.cpp" line="120" />
@@ -5593,7 +5593,7 @@ KLog will finish when you click on OK.</source>
     <message>
         <location filename="../utilities.cpp" line="1510" />
         <source>Distance</source>
-        <translation type="unfinished" />
+        <translation>Attālums</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1511" />
@@ -5920,7 +5920,7 @@ KLog will finish when you click on OK.</source>
     <message>
         <location filename="../utilities.cpp" line="1570" />
         <source>Name</source>
-        <translation type="unfinished" />
+        <translation>Vārds</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1571" />
@@ -6007,7 +6007,7 @@ KLog will finish when you click on OK.</source>
     <message>
         <location filename="../utilities.cpp" line="1587" />
         <source>QSL Sent</source>
-        <translation type="unfinished" />
+        <translation>QSL nosūtīts</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1588" />
@@ -6037,7 +6037,7 @@ KLog will finish when you click on OK.</source>
     <message>
         <location filename="../utilities.cpp" line="1593" />
         <source>QTH</source>
-        <translation type="unfinished" />
+        <translation>QTH</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1594" />
@@ -6093,7 +6093,7 @@ KLog will finish when you click on OK.</source>
     <message>
         <location filename="../utilities.cpp" line="1604" />
         <source>SOTA Ref</source>
-        <translation type="unfinished" />
+        <translation>SOTA atsauce</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1605" />
@@ -6139,7 +6139,7 @@ KLog will finish when you click on OK.</source>
     <message>
         <location filename="../utilities.cpp" line="1615" />
         <source>VUCC grids</source>
-        <translation type="unfinished" />
+        <translation>VUCC kvadrāti</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1616" />
@@ -6316,7 +6316,7 @@ KLog will finish when you click on OK.</source>
         <location filename="../searchwindow.cpp" line="93" />
         <location filename="../searchwindow.cpp" line="235" />
         <source>QSL Sent</source>
-        <translation type="unfinished" />
+        <translation>QSL nosūtīts</translation>
     </message>
     <message>
         <location filename="../searchwindow.cpp" line="88" />
@@ -7890,7 +7890,7 @@ The log will not be opened.</source>
     <message>
         <location filename="../setuppages/setuppagesats.cpp" line="295" />
         <source>Name</source>
-        <translation type="unfinished" />
+        <translation>Vārds</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesats.cpp" line="298" />
@@ -8137,7 +8137,7 @@ The log will not be opened.</source>
     <message>
         <location filename="../setuppages/setuppagesubdivisions.cpp" line="217" />
         <source>Name</source>
-        <translation type="unfinished" />
+        <translation>Vārds</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesubdivisions.cpp" line="220" />
