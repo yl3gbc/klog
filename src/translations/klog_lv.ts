@@ -5546,27 +5546,27 @@ KLog beigs darbu, kad nospiedīsiet OK.</translation>
     <message>
         <location filename="../utilities.cpp" line="1497" />
         <source>Award_granted</source>
-        <translation type="unfinished" />
+        <translation>Award_granted</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1498" />
         <source>Band_RX</source>
-        <translation type="unfinished" />
+        <translation>Band_RX</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1499" />
         <source>CheckContest</source>
-        <translation type="unfinished" />
+        <translation>CheckContest</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1500" />
         <source>Class</source>
-        <translation type="unfinished" />
+        <translation>Class</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1502" />
         <source>ClubLog status</source>
-        <translation type="unfinished" />
+        <translation>ClubLog status</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1503" />
@@ -5576,12 +5576,12 @@ KLog beigs darbu, kad nospiedīsiet OK.</translation>
     <message>
         <location filename="../utilities.cpp" line="1504" />
         <source>Contacted_Op</source>
-        <translation type="unfinished" />
+        <translation>Contacted_Op</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1505" />
         <source>Contest Id</source>
-        <translation type="unfinished" />
+        <translation>Contest Id</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1506" />
@@ -5591,12 +5591,12 @@ KLog beigs darbu, kad nospiedīsiet OK.</translation>
     <message>
         <location filename="../utilities.cpp" line="1507" />
         <source>Credit Submitted</source>
-        <translation type="unfinished" />
+        <translation>Credit Submitted</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1508" />
         <source>Credit granted</source>
-        <translation type="unfinished" />
+        <translation>Credit granted</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1510" />
@@ -5606,22 +5606,22 @@ KLog beigs darbu, kad nospiedīsiet OK.</translation>
     <message>
         <location filename="../utilities.cpp" line="1511" />
         <source>Email</source>
-        <translation type="unfinished" />
+        <translation>Email</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1512" />
         <source>EQ_Call</source>
-        <translation type="unfinished" />
+        <translation>EQ_Call</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1513" />
         <source>eQSL RDate</source>
-        <translation type="unfinished" />
+        <translation>eQSL RDate</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1515" />
         <source>eQSL Rcvd</source>
-        <translation type="unfinished" />
+        <translation>eQSL Rcvd</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1516" />
@@ -5632,18 +5632,18 @@ KLog beigs darbu, kad nospiedīsiet OK.</translation>
         <location filename="../utilities.cpp" line="1517" />
         <source>Fists</source>
         <comment>Do not translate if unsure, common hamradio term.</comment>
-        <translation type="unfinished" />
+        <translation>Fists</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1518" />
         <source>Fists CC</source>
         <comment>Do not translate if unsure, common hamradio term.</comment>
-        <translation type="unfinished" />
+        <translation>Fists CC</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1519" />
         <source>Force Init</source>
-        <translation type="unfinished" />
+        <translation>Force Init</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1520" />
@@ -5653,17 +5653,17 @@ KLog beigs darbu, kad nospiedīsiet OK.</translation>
     <message>
         <location filename="../utilities.cpp" line="1521" />
         <source>Freq RX</source>
-        <translation type="unfinished" />
+        <translation>Freq RX</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1522" />
         <source>Gridsquare</source>
-        <translation type="unfinished" />
+        <translation>Gridsquare</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1527" />
         <source>HRDLog status</source>
-        <translation type="unfinished" />
+        <translation>HRDLog status</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1530" />
@@ -5673,32 +5673,32 @@ KLog beigs darbu, kad nospiedīsiet OK.</translation>
     <message>
         <location filename="../utilities.cpp" line="1531" />
         <source>IOTA Island id</source>
-        <translation type="unfinished" />
+        <translation>IOTA Island id</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1532" />
         <source>K Index</source>
-        <translation type="unfinished" />
+        <translation>K Index</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1533" />
         <source>Lat</source>
-        <translation type="unfinished" />
+        <translation>Lat</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1534" />
         <source>Lon</source>
-        <translation type="unfinished" />
+        <translation>Lon</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1535" />
         <source>LoTW RDate</source>
-        <translation type="unfinished" />
+        <translation>LoTW RDate</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1537" />
         <source>LoTW Rcvd</source>
-        <translation type="unfinished" />
+        <translation>LoTW Rcvd</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1538" />
@@ -5708,12 +5708,12 @@ KLog beigs darbu, kad nospiedīsiet OK.</translation>
     <message>
         <location filename="../utilities.cpp" line="1540" />
         <source>Max Bursts</source>
-        <translation type="unfinished" />
+        <translation>Max Bursts</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1541" />
         <source>MS Shower</source>
-        <translation type="unfinished" />
+        <translation>MS Shower</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1543" />
@@ -5723,22 +5723,22 @@ KLog beigs darbu, kad nospiedīsiet OK.</translation>
     <message>
         <location filename="../utilities.cpp" line="1545" />
         <source>My City</source>
-        <translation type="unfinished" />
+        <translation>My City</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1546" />
         <source>My Cnty</source>
-        <translation type="unfinished" />
+        <translation>My Cnty</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1547" />
         <source>My Country</source>
-        <translation type="unfinished" />
+        <translation>My Country</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1548" />
         <source>My CQz</source>
-        <translation type="unfinished" />
+        <translation>My CQz</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1549" />
@@ -5749,22 +5749,22 @@ KLog beigs darbu, kad nospiedīsiet OK.</translation>
         <location filename="../utilities.cpp" line="1550" />
         <source>My Fists</source>
         <comment>Do not translate if unsure, common hamradio term.</comment>
-        <translation type="unfinished" />
+        <translation>My Fists</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1551" />
         <source>My Gridsquare</source>
-        <translation type="unfinished" />
+        <translation>My Gridsquare</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1553" />
         <source>My IOTA</source>
-        <translation type="unfinished" />
+        <translation>My IOTA</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1554" />
         <source>My IOTA island id</source>
-        <translation type="unfinished" />
+        <translation>My IOTA island id</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1555" />
@@ -5774,22 +5774,22 @@ KLog beigs darbu, kad nospiedīsiet OK.</translation>
     <message>
         <location filename="../utilities.cpp" line="1556" />
         <source>My Lat</source>
-        <translation type="unfinished" />
+        <translation>My Lat</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1557" />
         <source>My Lon</source>
-        <translation type="unfinished" />
+        <translation>My Lon</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1558" />
         <source>My Name</source>
-        <translation type="unfinished" />
+        <translation>My Name</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1559" />
         <source>My Postal code</source>
-        <translation type="unfinished" />
+        <translation>My Postal code</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1561" />
@@ -5799,7 +5799,7 @@ KLog beigs darbu, kad nospiedīsiet OK.</translation>
     <message>
         <location filename="../utilities.cpp" line="1562" />
         <source>My Sig</source>
-        <translation type="unfinished" />
+        <translation>My Sig</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1563" />
