@@ -4737,7 +4737,7 @@ Ignorēti dublikāti: %2</translation>
     <message>
         <location filename="../inputwidgets/mainwindowinputqso.cpp" line="87" />
         <source>Watts</source>
-        <translation type="unfinished" />
+        <translation>W</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputqso.cpp" line="91" />
@@ -4847,7 +4847,7 @@ Frequency is not in a hamradio band!</source>
     <message>
         <location filename="../inputwidgets/mainwindowmydatatab.cpp" line="129" />
         <source>Watts</source>
-        <translation type="unfinished" />
+        <translation>W</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowmydatatab.cpp" line="131" />
