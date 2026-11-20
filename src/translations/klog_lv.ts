@@ -4356,17 +4356,17 @@ Ignorēti dublikāti: %2</translation>
     <message>
         <location filename="../mainwindow.cpp" line="6982" />
         <source>Recommendation:</source>
-        <translation type="unfinished" />
+        <translation>Ieteikums:</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6982" />
         <source>Periodically export your data to ADIF to prevent a potential data loss.</source>
-        <translation type="unfinished" />
+        <translation>Periodiski eksportējiet datus uz ADIF, lai novērstu iespējamu datu zudumu.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6992" />
         <source>Do you want to keep showing errors?</source>
-        <translation type="unfinished" />
+        <translation>Vai vēlaties turpināt rādīt kļūdas?</translation>
     </message>
 </context>
 <context>
@@ -4374,22 +4374,22 @@ Ignorēti dublikāti: %2</translation>
     <message>
         <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="135" />
         <source>Date of the ClubLog upload.</source>
-        <translation type="unfinished" />
+        <translation>ClubLog augšupielādes datums.</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="136" />
         <source>Date of the QRZ.com upload.</source>
-        <translation type="unfinished" />
+        <translation>QRZ.com augšupielādes datums.</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="137" />
         <source>Date of the eQSL sending.</source>
-        <translation type="unfinished" />
+        <translation>eQSL nosūtīšanas datums.</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="138" />
         <source>Date of the eQSL reception.</source>
-        <translation type="unfinished" />
+        <translation>eQSL saņemšanas datums.</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="139" />
@@ -4399,37 +4399,37 @@ Ignorēti dublikāti: %2</translation>
     <message>
         <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="140" />
         <source>Date of the LoTW reception.</source>
-        <translation type="unfinished" />
+        <translation>LoTW saņemšanas datums.</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="142" />
         <source>Status on ClubLog.</source>
-        <translation type="unfinished" />
+        <translation>Statuss ClubLog.</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="143" />
         <source>Status on QRZ.com.</source>
-        <translation type="unfinished" />
+        <translation>Statuss QRZ.com.</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="144" />
         <source>Status of the eQSL sending.</source>
-        <translation type="unfinished" />
+        <translation>eQSL nosūtīšanas statuss.</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="145" />
         <source>Status of the eQSL reception.</source>
-        <translation type="unfinished" />
+        <translation>eQSL saņemšanas statuss.</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="146" />
         <source>Status of the LoTW sending.</source>
-        <translation type="unfinished" />
+        <translation>LoTW nosūtīšanas statuss.</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="147" />
         <source>Status of the LoTW reception.</source>
-        <translation type="unfinished" />
+        <translation>LoTW saņemšanas statuss.</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="151" />
@@ -4439,27 +4439,27 @@ Ignorēti dublikāti: %2</translation>
     <message>
         <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="154" />
         <source>QRZ.com</source>
-        <translation type="unfinished" />
+        <translation>QRZ.com</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="157" />
         <source>eQSL Sent</source>
-        <translation type="unfinished" />
+        <translation>eQSL nosūtīts</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="160" />
         <source>eQSL Rec</source>
-        <translation type="unfinished" />
+        <translation>eQSL saņemts</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="163" />
         <source>LoTW Sent</source>
-        <translation type="unfinished" />
+        <translation>LoTW nosūtīts</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="166" />
         <source>LoTW Rec</source>
-        <translation type="unfinished" />
+        <translation>LoTW saņemts</translation>
     </message>
 </context>
 <context>
@@ -4467,17 +4467,17 @@ Ignorēti dublikāti: %2</translation>
     <message>
         <location filename="../inputwidgets/mainwindowinputothers.cpp" line="147" />
         <source>Primary Div</source>
-        <translation type="unfinished" />
+        <translation>Primārā adm. vienība</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputothers.cpp" line="148" />
         <source>Secondary Div</source>
-        <translation type="unfinished" />
+        <translation>Sekundārā adm. vienība</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputothers.cpp" line="149" />
         <source>IOTA</source>
-        <translation type="unfinished" />
+        <translation>IOTA</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputothers.cpp" line="150" />
@@ -4487,7 +4487,7 @@ Ignorēti dublikāti: %2</translation>
     <message>
         <location filename="../inputwidgets/mainwindowinputothers.cpp" line="151" />
         <source>Propagation mode</source>
-        <translation type="unfinished" />
+        <translation>Izplatīšanās veids</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputothers.cpp" line="152" />
@@ -4497,88 +4497,88 @@ Ignorēti dublikāti: %2</translation>
     <message>
         <location filename="../inputwidgets/mainwindowinputothers.cpp" line="161" />
         <source>Keep propagation mode</source>
-        <translation type="unfinished" />
+        <translation>Paturēt izplatīšanās veidu</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputothers.cpp" line="162" />
         <source>Show All</source>
-        <translation type="unfinished" />
+        <translation>Rādīt visu</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputothers.cpp" line="164" />
         <source>Select the primary division for this QSO.</source>
-        <translation type="unfinished" />
+        <translation>Izvēlieties šī QSO primāro administratīvo vienību.</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputothers.cpp" line="165" />
         <source>Select the secondary division for this QSO.</source>
-        <translation type="unfinished" />
+        <translation>Izvēlieties šī QSO sekundāro administratīvo vienību.</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputothers.cpp" line="166" />
         <source>Select the entity for this QSO.</source>
-        <translation type="unfinished" />
+        <translation>Izvēlieties šī QSO entītiju.</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputothers.cpp" line="167" />
         <source>Select the propagation mode for this QSO.</source>
-        <translation type="unfinished" />
+        <translation>Izvēlieties šī QSO izplatīšanās veidu.</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputothers.cpp" line="168" />
         <source>Select the IOTA continent for this QSO.</source>
-        <translation type="unfinished" />
+        <translation>Izvēlieties šī QSO IOTA kontinentu.</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputothers.cpp" line="169" />
         <source>Select the IOTA reference number for this QSO.</source>
-        <translation type="unfinished" />
+        <translation>Izvēlieties šī QSO IOTA atsauces numuru.</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputothers.cpp" line="170" />
         <source>Keeps the same propagation mode for next QSO.</source>
-        <translation type="unfinished" />
+        <translation>Saglabā to pašu izplatīšanās veidu nākamajam QSO.</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputothers.cpp" line="171" />
         <source>Show all subdivisions for the current DXCC Entity.</source>
-        <translation type="unfinished" />
+        <translation>Rādīt visas apakšvienības pašreizējai DXCC entītijai.</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputothers.cpp" line="173" />
         <source>Select the appropriate ADIF field for this QSO.</source>
-        <translation type="unfinished" />
+        <translation>Izvēlieties šim QSO piemērotu ADIF lauku.</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputothers.cpp" line="174" />
         <source>Value for the selected ADIF field.</source>
-        <translation type="unfinished" />
+        <translation>Izvēlētā ADIF lauka vērtība.</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputothers.cpp" line="237" />
         <location filename="../inputwidgets/mainwindowinputothers.cpp" line="1160" />
         <source>None Identified</source>
-        <translation type="unfinished" />
+        <translation>Nav noteikts</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputothers.cpp" line="277" />
         <source>Not Identified</source>
-        <translation type="unfinished" />
+        <translation>Nav noteikts</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputothers.cpp" line="736" />
         <source>WWFF Ref</source>
-        <translation type="unfinished" />
+        <translation>WWFF atsauce</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputothers.cpp" line="797" />
         <source>Not selected</source>
-        <translation type="unfinished" />
+        <translation>Nav izvēlēts</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputothers.cpp" line="216" />
         <source>Not - Not Identified</source>
-        <translation type="unfinished" />
+        <translation>Nav - nav noteikts</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputothers.cpp" line="733" />
@@ -5618,7 +5618,7 @@ KLog will finish when you click on OK.</source>
     <message>
         <location filename="../utilities.cpp" line="1516" />
         <source>eQSL Sent</source>
-        <translation type="unfinished" />
+        <translation>eQSL nosūtīts</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1517" />
@@ -5660,7 +5660,7 @@ KLog will finish when you click on OK.</source>
     <message>
         <location filename="../utilities.cpp" line="1530" />
         <source>IOTA</source>
-        <translation type="unfinished" />
+        <translation>IOTA</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1531" />
@@ -5695,7 +5695,7 @@ KLog will finish when you click on OK.</source>
     <message>
         <location filename="../utilities.cpp" line="1538" />
         <source>LoTW Sent</source>
-        <translation type="unfinished" />
+        <translation>LoTW nosūtīts</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1540" />
@@ -7138,7 +7138,7 @@ If no port is specified, 41112 will be used by default:</source>
     <message>
         <location filename="../setuppages/setuppageelog.cpp" line="136" />
         <source>QRZ.com</source>
-        <translation type="unfinished" />
+        <translation>QRZ.com</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageelog.cpp" line="142" />
