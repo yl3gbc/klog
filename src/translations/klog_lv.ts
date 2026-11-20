@@ -4974,12 +4974,12 @@ Frekvence nav radioamatieru diapazonā!</translation>
     <message>
         <location filename="../inputwidgets/mainwindowsattab.cpp" line="132" />
         <source>UpLink</source>
-        <translation type="unfinished" />
+        <translation>Augšupsaite</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowsattab.cpp" line="136" />
         <source>DownLink</source>
-        <translation type="unfinished" />
+        <translation>Lejupsaite</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowsattab.cpp" line="140" />
@@ -4994,7 +4994,7 @@ Frekvence nav radioamatieru diapazonā!</translation>
     <message>
         <location filename="../inputwidgets/mainwindowsattab.cpp" line="148" />
         <source>Other</source>
-        <translation type="unfinished" />
+        <translation>Cits</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowsattab.cpp" line="205" />
