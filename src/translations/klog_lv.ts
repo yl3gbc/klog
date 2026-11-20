@@ -4822,24 +4822,26 @@ Ignorēti dublikāti: %2</translation>
     <message>
         <location filename="../inputwidgets/mainwindowinputqso.cpp" line="512" />
         <source>DX QTH locator.</source>
-        <translation type="unfinished" />
+        <translation>DX QTH lokators.</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputqso.cpp" line="520" />
         <source>DX QTH locator. Format should be Maidenhead like IN70AA up to 10 characters.</source>
-        <translation type="unfinished" />
+        <translation>DX QTH lokators. Formātam jābūt Maidenhead, piemēram IN70AA, līdz 10 rakstzīmēm.</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputqso.cpp" line="873" />
         <source>TX Frequency in MHz.
 Frequency is not in a hamradio band!</source>
-        <translation type="unfinished" />
+        <translation>TX frekvence MHz.
+Frekvence nav radioamatieru diapazonā!</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputqso.cpp" line="921" />
         <source>RX Frequency in MHz.
 Frequency is not in a hamradio band!</source>
-        <translation type="unfinished" />
+        <translation>RX frekvence MHz.
+Frekvence nav radioamatieru diapazonā!</translation>
     </message>
 </context>
 <context>
@@ -4852,27 +4854,27 @@ Frequency is not in a hamradio band!</source>
     <message>
         <location filename="../inputwidgets/mainwindowmydatatab.cpp" line="131" />
         <source>Keep this data</source>
-        <translation type="unfinished" />
+        <translation>Paturēt šos datus</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowmydatatab.cpp" line="282" />
         <source>My QTH locator.</source>
-        <translation type="unfinished" />
+        <translation>Mans QTH lokators.</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowmydatatab.cpp" line="133" />
         <source>Power</source>
-        <translation type="unfinished" />
+        <translation>Jauda</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowmydatatab.cpp" line="135" />
         <source>Operator callsign</source>
-        <translation type="unfinished" />
+        <translation>Operatora izsaukuma signāls</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowmydatatab.cpp" line="137" />
         <source>Station Callsign</source>
-        <translation type="unfinished" />
+        <translation>Stacijas izsaukuma signāls</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowmydatatab.cpp" line="140" />
@@ -4882,47 +4884,47 @@ Frequency is not in a hamradio band!</source>
     <message>
         <location filename="../inputwidgets/mainwindowmydatatab.cpp" line="294" />
         <source>My QTH locator. Format should be Maidenhead like IN70AA up to 10 characters.</source>
-        <translation type="unfinished" />
+        <translation>Mans QTH lokators. Formātam jābūt Maidenhead, piemēram IN70AA, līdz 10 rakstzīmēm.</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowmydatatab.cpp" line="546" />
         <source>My Rig</source>
-        <translation type="unfinished" />
+        <translation>Mana radioiekārta</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowmydatatab.cpp" line="546" />
         <source>My Antenna</source>
-        <translation type="unfinished" />
+        <translation>Mana antena</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowmydatatab.cpp" line="547" />
         <source>My POTA Ref</source>
-        <translation type="unfinished" />
+        <translation>Mana POTA atsauce</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowmydatatab.cpp" line="547" />
         <source>My SIG</source>
-        <translation type="unfinished" />
+        <translation>Mans SIG</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowmydatatab.cpp" line="548" />
         <source>My SIG Info</source>
-        <translation type="unfinished" />
+        <translation>Mana SIG informācija</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowmydatatab.cpp" line="548" />
         <source>My SOTA Ref</source>
-        <translation type="unfinished" />
+        <translation>Mana SOTA atsauce</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowmydatatab.cpp" line="550" />
         <source>My WWFF Ref</source>
-        <translation type="unfinished" />
+        <translation>Mana WWFF atsauce</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowmydatatab.cpp" line="549" />
         <source>My VUCC_GRIDS</source>
-        <translation type="unfinished" />
+        <translation>Mani VUCC kvadrāti</translation>
     </message>
 </context>
 <context>
@@ -4930,7 +4932,7 @@ Frequency is not in a hamradio band!</source>
     <message>
         <location filename="../inputwidgets/mainwindowsattab.cpp" line="115" />
         <source>Keep this data</source>
-        <translation type="unfinished" />
+        <translation>Paturēt šos datus</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowsattab.cpp" line="117" />
@@ -4947,27 +4949,27 @@ Frequency is not in a hamradio band!</source>
     <message>
         <location filename="../inputwidgets/mainwindowsattab.cpp" line="123" />
         <source>Name of the Satellite if not in the list. Select: "%1" to enable this box. (format like AO-51).</source>
-        <translation type="unfinished" />
+        <translation>Pavadoņa nosaukums, ja tā nav sarakstā. Izvēlieties: "%1", lai ieslēgtu šo lauku. (formāts kā AO-51).</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowsattab.cpp" line="126" />
         <source>Satellite mode used.</source>
-        <translation type="unfinished" />
+        <translation>Izmantotais pavadoņa režīms.</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowsattab.cpp" line="127" />
         <source>Select the satellite you are using.</source>
-        <translation type="unfinished" />
+        <translation>Izvēlieties pavadoni, ko izmantojat.</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowsattab.cpp" line="128" />
         <source>UpLink band.</source>
-        <translation type="unfinished" />
+        <translation>Augšupsaites diapazons.</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowsattab.cpp" line="129" />
         <source>DownLink band.</source>
-        <translation type="unfinished" />
+        <translation>Lejupsaites diapazons.</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowsattab.cpp" line="132" />
@@ -5008,17 +5010,17 @@ Frequency is not in a hamradio band!</source>
     <message>
         <location filename="../inputwidgets/mainwindowsattab.cpp" line="468" />
         <source>KLog has detected a satellite name that it does not recognise. If it should use one of the names of known satellites instead, please select it from the list. Alternatively, please contact the development team to add the new satellite name.</source>
-        <translation type="unfinished" />
+        <translation>KLog atklāja pavadoņa nosaukumu, ko tas neatpazīst. Ja tā vietā jāizmanto kāds zināmā pavadoņa nosaukums, lūdzu, izvēlieties to no saraksta. Vai arī sazinieties ar izstrādes komandu, lai pievienotu jauno pavadoņa nosaukumu.</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowsattab.cpp" line="469" />
         <source>The satellite you have in your QSO is: </source>
-        <translation type="unfinished" />
+        <translation>Pavadonis jūsu QSO ir: </translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowsattab.cpp" line="469" />
         <source>Please be aware that the satellite name will not be saved if it is not in the list, so that information may be lost!</source>
-        <translation type="unfinished" />
+        <translation>Lūdzu, ņemiet vērā, ka pavadoņa nosaukums netiks saglabāts, ja tā nav sarakstā, tāpēc šī informācija var tikt zaudēta!</translation>
     </message>
 </context>
 <context>
@@ -5026,22 +5028,22 @@ Frequency is not in a hamradio band!</source>
     <message>
         <location filename="../widgets/map/mapwindowwidget.cpp" line="116" />
         <source>Select QSOs in this band.</source>
-        <translation type="unfinished" />
+        <translation>Atlasīt QSO šajā diapazonā.</translation>
     </message>
     <message>
         <location filename="../widgets/map/mapwindowwidget.cpp" line="117" />
         <source>Select QSOs in this mode.</source>
-        <translation type="unfinished" />
+        <translation>Atlasīt QSO šajā režīmā.</translation>
     </message>
     <message>
         <location filename="../widgets/map/mapwindowwidget.cpp" line="118" />
         <source>Select QSOs in this propagation mode.</source>
-        <translation type="unfinished" />
+        <translation>Atlasīt QSO šajā izplatīšanās veidā.</translation>
     </message>
     <message>
         <location filename="../widgets/map/mapwindowwidget.cpp" line="119" />
         <source>Select QSOs using this Satellite.</source>
-        <translation type="unfinished" />
+        <translation>Atlasīt QSO, kas izmanto šo pavadoni.</translation>
     </message>
     <message>
         <location filename="../widgets/map/mapwindowwidget.cpp" line="120" />
@@ -5051,7 +5053,7 @@ Frequency is not in a hamradio band!</source>
     <message>
         <location filename="../widgets/map/mapwindowwidget.cpp" line="122" />
         <source>Select only confirmed QSOs.</source>
-        <translation type="unfinished" />
+        <translation>Atlasīt tikai apstiprinātos QSO.</translation>
     </message>
     <message>
         <location filename="../widgets/map/mapwindowwidget.cpp" line="178" />
@@ -5190,7 +5192,7 @@ KLog will finish when you click on OK.</source>
         <location filename="../database/database.cpp" line="1252" />
         <location filename="../utilities.cpp" line="1609" />
         <source>Station Callsign</source>
-        <translation type="unfinished" />
+        <translation>Stacijas izsaukuma signāls</translation>
     </message>
     <message>
         <location filename="../database/database.cpp" line="1294" />
@@ -5710,7 +5712,7 @@ KLog will finish when you click on OK.</source>
     <message>
         <location filename="../utilities.cpp" line="1543" />
         <source>My Antenna</source>
-        <translation type="unfinished" />
+        <translation>Mana antena</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1545" />
@@ -5786,7 +5788,7 @@ KLog will finish when you click on OK.</source>
     <message>
         <location filename="../utilities.cpp" line="1561" />
         <source>My Rig</source>
-        <translation type="unfinished" />
+        <translation>Mana radioiekārta</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1562" />
@@ -6329,7 +6331,7 @@ KLog will finish when you click on OK.</source>
     <message>
         <location filename="../searchwindow.cpp" line="88" />
         <source>Station Callsign</source>
-        <translation type="unfinished" />
+        <translation>Stacijas izsaukuma signāls</translation>
     </message>
     <message>
         <location filename="../searchwindow.cpp" line="88" />
@@ -7434,7 +7436,7 @@ If no port is specified, 41112 will be used by default:</source>
     <message>
         <location filename="../setuppages/setuppagelogs.cpp" line="240" />
         <source>Station Callsign</source>
-        <translation type="unfinished" />
+        <translation>Stacijas izsaukuma signāls</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagelogs.cpp" line="243" />
