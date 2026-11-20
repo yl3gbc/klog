@@ -5100,62 +5100,62 @@ Frekvence nav radioamatieru diapazonā!</translation>
         <location filename="../database/database.cpp" line="237" />
         <location filename="../database/database.cpp" line="297" />
         <source>Database Error</source>
-        <translation type="unfinished" />
+        <translation>Datubāzes kļūda</translation>
     </message>
     <message>
         <location filename="../database/database.cpp" line="907" />
         <source>KLog DB needs to be upgraded.</source>
-        <translation type="unfinished" />
+        <translation>KLog datubāze jāatjaunina uz jaunāku versiju.</translation>
     </message>
     <message>
         <location filename="../database/database.cpp" line="908" />
         <source>Do you want to upgrade it now?</source>
-        <translation type="unfinished" />
+        <translation>Vai vēlaties to atjaunināt tagad?</translation>
     </message>
     <message>
         <location filename="../database/database.cpp" line="908" />
         <source>If DB is not upgraded KLog may not work properly.</source>
-        <translation type="unfinished" />
+        <translation>Ja datubāze netiks atjaunināta, KLog var nedarboties pareizi.</translation>
     </message>
     <message>
         <location filename="../database/database.cpp" line="945" />
         <source>Upgrading software may potentially cause problems. Backing up your DB, before upgrading, is always a good idea.</source>
-        <translation type="unfinished" />
+        <translation>Programmatūras atjaunināšana var radīt problēmas. Pirms atjaunināšanas vienmēr ir prātīgi izveidot datubāzes rezerves kopiju.</translation>
     </message>
     <message>
         <location filename="../database/database.cpp" line="946" />
         <source>Do you want to backup your DB now?</source>
-        <translation type="unfinished" />
+        <translation>Vai vēlaties izveidot datubāzes rezerves kopiju tagad?</translation>
     </message>
     <message>
         <location filename="../database/database.cpp" line="987" />
         <source>The backup finished successfully.</source>
-        <translation type="unfinished" />
+        <translation>Rezerves kopija izveidota veiksmīgi.</translation>
     </message>
     <message>
         <location filename="../database/database.cpp" line="988" />
         <source>You can find the backup in this file: %1</source>
-        <translation type="unfinished" />
+        <translation>Rezerves kopiju var atrast šajā failā: %1</translation>
     </message>
     <message>
         <location filename="../database/database.cpp" line="997" />
         <source>The backup was not properly done.</source>
-        <translation type="unfinished" />
+        <translation>Rezerves kopija netika izveidota pareizi.</translation>
     </message>
     <message>
         <location filename="../database/database.cpp" line="998" />
         <source>You will be sent back to the starting point.</source>
-        <translation type="unfinished" />
+        <translation>Jūs tiksiet atgriezts sākuma punktā.</translation>
     </message>
     <message>
         <location filename="../database/database.cpp" line="1046" />
         <source>KLog - DB can't be updated automatically</source>
-        <translation type="unfinished" />
+        <translation>KLog — datubāzi nevar atjaunināt automātiski</translation>
     </message>
     <message>
         <location filename="../database/database.cpp" line="1047" />
         <source>You are upgrading from a too old KLog version and this upgrade can't be upgraded automatically from that version.</source>
-        <translation type="unfinished" />
+        <translation>Jūs atjauninat no pārāk vecas KLog versijas, un no tās atjaunināšana automātiski nav iespējama.</translation>
     </message>
     <message>
         <location filename="../database/database.cpp" line="1048" />
@@ -5166,7 +5166,13 @@ Frekvence nav radioamatieru diapazonā!</translation>
 - Import your ADIF file.
 
 KLog will finish when you click on OK.</source>
-        <translation type="unfinished" />
+        <translation>Atjaunināšanas process:
+- Ar veco KLog versiju eksportējiet žurnālu uz ADIF.
+- Izdzēsiet failu logbook.dat no KLog mapes.
+- Instalējiet jauno KLog versiju.
+- Importējiet ADIF failu.
+
+KLog beigs darbu, kad nospiedīsiet OK.</translation>
     </message>
     <message>
         <location filename="../database/database.cpp" line="1176" />
@@ -5176,17 +5182,17 @@ KLog will finish when you click on OK.</source>
     <message>
         <location filename="../database/database.cpp" line="1234" />
         <source>KLog has detected a previous log in the DB. All data will be migrated to a newly created DX type log for you.</source>
-        <translation type="unfinished" />
+        <translation>KLog datubāzē atrada iepriekšēju žurnālu. Visi dati tiks pārnesti uz jaunizveidotu DX tipa žurnālu.</translation>
     </message>
     <message>
         <location filename="../database/database.cpp" line="1250" />
         <source>KLog: Enter Station callsign</source>
-        <translation type="unfinished" />
+        <translation>KLog: ievadiet stacijas izsaukuma signālu</translation>
     </message>
     <message>
         <location filename="../database/database.cpp" line="1251" />
         <source>Enter the station callsign used in this log</source>
-        <translation type="unfinished" />
+        <translation>Ievadiet šajā žurnālā izmantoto stacijas izsaukuma signālu</translation>
     </message>
     <message>
         <location filename="../database/database.cpp" line="1252" />
@@ -5197,63 +5203,63 @@ KLog will finish when you click on OK.</source>
     <message>
         <location filename="../database/database.cpp" line="1294" />
         <source>All the data was migrated correctly. You should now go to Setup-&gt;Preferences-&gt;Logs to check that everything is okay.</source>
-        <translation type="unfinished" />
+        <translation>Visi dati pārnesti pareizi. Tagad atveriet Iestatījumi-&gt;Preferences-&gt;Žurnāli, lai pārbaudītu, vai viss ir kārtībā.</translation>
     </message>
     <message>
         <location filename="../database/database.cpp" line="2475" />
         <location filename="../database/database.cpp" line="2522" />
         <source>Updating mode information...</source>
-        <translation type="unfinished" />
+        <translation>Atjaunina režīmu informāciju...</translation>
     </message>
     <message>
         <location filename="../database/database.cpp" line="2475" />
         <location filename="../database/database.cpp" line="2666" />
         <location filename="../world.cpp" line="931" />
         <source>Abort updating</source>
-        <translation type="unfinished" />
+        <translation>Pārtraukt atjaunināšanu</translation>
     </message>
     <message>
         <location filename="../database/database.cpp" line="2522" />
         <location filename="../database/database.cpp" line="2686" />
         <location filename="../world.cpp" line="973" />
         <source>QSO: </source>
-        <translation type="unfinished" />
+        <translation>QSO: </translation>
     </message>
     <message>
         <location filename="../database/database.cpp" line="2666" />
         <location filename="../database/database.cpp" line="2686" />
         <source>Updating bands information...</source>
-        <translation type="unfinished" />
+        <translation>Atjaunina diapazonu informāciju...</translation>
     </message>
     <message>
         <location filename="../world.cpp" line="931" />
         <source>Updating information...</source>
-        <translation type="unfinished" />
+        <translation>Atjaunina informāciju...</translation>
     </message>
     <message>
         <location filename="../world.cpp" line="973" />
         <source>Updating DXCC and Continent information...</source>
-        <translation type="unfinished" />
+        <translation>Atjaunina DXCC un kontinentu informāciju...</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1237" />
         <source>A wrong callsign has been found: %1. Please enter a new callsign or confirm that the current one is a good callsign.</source>
-        <translation type="unfinished" />
+        <translation>Atrasts nepareizs izsaukuma signāls: %1. Lūdzu, ievadiet jaunu izsaukuma signālu vai apstipriniet, ka pašreizējais ir derīgs.</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1235" />
         <source>An empty callsign has been detected. If it is possible, please enter the right call.</source>
-        <translation type="unfinished" />
+        <translation>Atrasts tukšs izsaukuma signāls. Ja iespējams, lūdzu, ievadiet pareizo.</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1241" />
         <source>KLog - Not valid callsign found</source>
-        <translation type="unfinished" />
+        <translation>KLog — atrasts nederīgs izsaukuma signāls</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1477" />
         <source>Altitude</source>
-        <translation type="unfinished" />
+        <translation>Augstums</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1478" />
@@ -5293,17 +5299,17 @@ KLog will finish when you click on OK.</source>
     <message>
         <location filename="../utilities.cpp" line="1485" />
         <source>CQz</source>
-        <translation type="unfinished" />
+        <translation>CQz</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1484" />
         <source>Mode ADIF</source>
-        <translation type="unfinished" />
+        <translation>ADIF režīms</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1486" />
         <source>ITUz</source>
-        <translation type="unfinished" />
+        <translation>ITUz</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1487" />
@@ -5333,7 +5339,7 @@ KLog will finish when you click on OK.</source>
     <message>
         <location filename="../startprofiledialog.cpp" line="246" />
         <source>QTH:</source>
-        <translation type="unfinished" />
+        <translation>QTH:</translation>
     </message>
     <message>
         <location filename="../startprofiledialog.cpp" line="247" />
@@ -5505,37 +5511,37 @@ KLog will finish when you click on OK.</source>
     <message>
         <location filename="../utilities.cpp" line="1490" />
         <source>County</source>
-        <translation type="unfinished" />
+        <translation>County</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1491" />
         <source>A_Index</source>
-        <translation type="unfinished" />
+        <translation>A_Index</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1492" />
         <source>Ant_Az</source>
-        <translation type="unfinished" />
+        <translation>Ant_Az</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1493" />
         <source>Ant_El</source>
-        <translation type="unfinished" />
+        <translation>Ant_El</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1494" />
         <source>Ant_Path</source>
-        <translation type="unfinished" />
+        <translation>Ant_Path</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1495" />
         <source>ARRL_SECT</source>
-        <translation type="unfinished" />
+        <translation>ARRL_SECT</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1496" />
         <source>Award_Submitted</source>
-        <translation type="unfinished" />
+        <translation>Award_Submitted</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1497" />
@@ -6347,7 +6353,7 @@ KLog will finish when you click on OK.</source>
     <message>
         <location filename="../searchwindow.cpp" line="222" />
         <source>Mode ADIF</source>
-        <translation type="unfinished" />
+        <translation>ADIF režīms</translation>
     </message>
     <message>
         <location filename="../searchwindow.cpp" line="245" />
