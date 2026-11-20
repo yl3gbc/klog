@@ -41,6 +41,8 @@
         <location filename="../aboutdialog.cpp" line="97" />
         <location filename="../aboutdialog.cpp" line="98" />
         <location filename="../aboutdialog.cpp" line="99" />
+        <location filename="../aboutdialog.cpp" line="105" />
+        <location filename="../aboutdialog.cpp" line="106" />
         <source>today</source>
         <translation>šodien</translation>
     </message>
@@ -55,7 +57,13 @@
         <translation>KLog izstrādā ļoti maza komanda, un jūs esat aicināti pievienoties!</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="124" />
+        <location filename="../aboutdialog.cpp" line="105" />
+        <location filename="../aboutdialog.cpp" line="106" />
+        <source>KLogNG modernization</source>
+        <translation>KLogNG modernizācija</translation>
+    </message>
+    <message>
+        <location filename="../aboutdialog.cpp" line="126" />
         <source>If KLog is still not in your language and you want to help us, you are welcome to contact us through the &lt;a href=https://t.me/klogdevel&gt;KLog-devel telegram group&lt;/a&gt;!</source>
         <translation>Ja KLog joprojām nav jūsu valodā un vēlaties mums palīdzēt, sazinieties ar mums, izmantojot &lt;a href=https://t.me/klogdevel&gt;KLog-devel Telegram grupu&lt;/a&gt;!</translation>
     </message>
@@ -70,13 +78,13 @@
         <translation>Ja vēlaties sniegt atbalstu, pievienojieties &lt;a href=https://t.me/klogdevel&gt;KLog-devel Telegram grupai&lt;/a&gt;!</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="105" />
-        <location filename="../aboutdialog.cpp" line="184" />
+        <location filename="../aboutdialog.cpp" line="107" />
+        <location filename="../aboutdialog.cpp" line="186" />
         <source>Authors</source>
         <translation>Autori</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="124" />
+        <location filename="../aboutdialog.cpp" line="126" />
         <source>Translators bring KLog into your language. They are really an important part of the KLog development team.</source>
         <translation>Tulkotājimi ienes KLog jūsu valodā. Viņi patiešām ir svarīga KLog izstrādes komandas sastāvdaļa.</translation>
     </message>
@@ -86,13 +94,13 @@
         <translation>Kopš 0.6.2 KLog ir pilnībā pārrakstīts, lai nodrošinātu starpplatformu lietojumprogrammu, kas darbojas visās lielākajās operētājsistēmās (GNU/Linux, macOS un Windows), un atbalstītu jaunas funkcionalitātes.</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="125" />
-        <location filename="../aboutdialog.cpp" line="185" />
+        <location filename="../aboutdialog.cpp" line="127" />
+        <location filename="../aboutdialog.cpp" line="187" />
         <source>Translators</source>
         <translation>Tulkotāji</translation>
     </message>
     <message>
-        <location filename="../aboutdialog.cpp" line="183" />
+        <location filename="../aboutdialog.cpp" line="185" />
         <source>KLog</source>
         <translation>KLog</translation>
     </message>
@@ -7968,12 +7976,12 @@ It may be caused because the file you are trying to import does not have the rig
     <message>
         <location filename="../setuppages/setuppagesatsnew.cpp" line="50" />
         <source>UpLink</source>
-        <translation type="unfinished" />
+        <translation type="unfinished">Augšupsaite</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesatsnew.cpp" line="51" />
         <source>DownLink</source>
-        <translation type="unfinished" />
+        <translation type="unfinished">Lejupsaite</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesatsnew.cpp" line="52" />

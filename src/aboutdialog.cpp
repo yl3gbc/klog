@@ -102,7 +102,9 @@ AboutDialog::AboutDialog(const QString &tversion, const QString &pkgVersion, QWi
     QString author6 = QString("<tr><td>Andrew Goldie</td>") + QString("<td><a href=\"https://www.qrz.com/db/zl2agc\">ZL2ACG</a></td>") + "<td>(2009-2010)</td></tr>";
 
     QString authorText = tr("KLog is developed by a very small team and you are invited to join!") + "<br><br>" + tr("If you want to provide support you are welcome to join the <a href=https://t.me/klogdevel>KLog-devel telegram group</a>!") + "<br><br>" + tr("You can also help us by sending bug reports or small code contributions, ideas or whatever you think may improve KLog.");
-    QString authors = "<center><h2>" + tr("Authors") + "</h2></center><br>" + authorText + "<br><table>" + author1 + author2 + author3 + author4 + author5 + author6 +"</table>";
+    QString author7 = QString("<tr><td>Arnis Armans</td>") + QString("<td><a href=\"https://www.qrz.com/db/yl3gbc\">YL3GBC</a></td>") + "<td>(2026-" + tr("today") + ") " + tr("KLogNG modernization") + "</td></tr>";
+    QString author8 = QString("<tr><td>Gabriels Breidaks</td>") + QString("<td><a href=\"https://www.qrz.com/db/yl3aug\">YL3AUG</a></td>") + "<td>(2026-" + tr("today") + ") " + tr("KLogNG modernization") + "</td></tr>";
+    QString authors = "<center><h2>" + tr("Authors") + "</h2></center><br>" + authorText + "<br><table>" + author1 + author2 + author3 + author4 + author5 + author6 + author7 + author8 + "</table>";
 
     QString translator_ca = QString("<tr><td>Catalan</td>")  + QString("<td>Josep Ma. Ferrer</td>") + QString("<td><a href=\"mailto://kde-i18n-ca@kde.org\">KDE Catalan translation team</a></td></tr>");
     QString translator_hr = QString("<tr><td>Croatian</td>")  + QString("<td>Kristijan Conkas</td>") + QString("<td><a href=\"https://www.qrz.com/db/m0nkc\">M0NKC</a></td></tr>");
