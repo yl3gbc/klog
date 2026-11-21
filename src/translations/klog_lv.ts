@@ -6930,37 +6930,37 @@ Lūdzu, pievienojiet un izvēlieties žurnāla veidu, ko vēlaties lietot.</tran
     <message>
         <location filename="../setuppages/setuppagedxcluster.cpp" line="83" />
         <source>Show ANN/&amp;FULL messages</source>
-        <translation type="unfinished" />
+        <translation>Rādīt ANN/&amp;FULL ziņojumus</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagedxcluster.cpp" line="84" />
         <source>Show WW&amp;V messages</source>
-        <translation type="unfinished" />
+        <translation>Rādīt WW&amp;V ziņojumus</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagedxcluster.cpp" line="85" />
         <source>Show WC&amp;Y messages</source>
-        <translation type="unfinished" />
+        <translation>Rādīt WC&amp;Y ziņojumus</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagedxcluster.cpp" line="86" />
         <source>Save DX Cluster activity</source>
-        <translation type="unfinished" />
+        <translation>Saglabāt DX Cluster aktivitāti</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagedxcluster.cpp" line="87" />
         <source>Saves all the DX-Cluster activity to a file in the KLog folder</source>
-        <translation type="unfinished" />
+        <translation>Saglabā visu DX-Cluster aktivitāti failā KLog mapē</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagedxcluster.cpp" line="89" />
         <source>Send DX Spots to the map</source>
-        <translation type="unfinished" />
+        <translation>Sūtīt DX ziņojumus uz karti</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagedxcluster.cpp" line="90" />
         <source>Sends the received DX Spots to the map to know where is the activity.</source>
-        <translation type="unfinished" />
+        <translation>Sūta saņemtos DX ziņojumus uz karti, lai redzētu, kur ir aktivitāte.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagedxcluster.cpp" line="92" />
@@ -6975,22 +6975,22 @@ Lūdzu, pievienojiet un izvēlieties žurnāla veidu, ko vēlaties lietot.</tran
     <message>
         <location filename="../setuppages/setuppagedxcluster.cpp" line="125" />
         <source>Enable DX Assistant</source>
-        <translation type="unfinished" />
+        <translation>Ieslēgt DX asistentu</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagedxcluster.cpp" line="126" />
         <source>Adds a DX Assistant tab showing a prioritised list of DXCluster spots scored against your own log.</source>
-        <translation type="unfinished" />
+        <translation>Pievieno DX asistenta cilni, kurā redzams prioritizēts DXCluster ziņojumu saraksts, novērtēts pret jūsu žurnālu.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagedxcluster.cpp" line="127" />
         <source>Enable ClubLog Most Wanted integration</source>
-        <translation type="unfinished" />
+        <translation>Ieslēgt ClubLog Most Wanted integrāciju</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagedxcluster.cpp" line="128" />
         <source>Downloads the ClubLog Most Wanted list monthly and uses it to break ties between spots with the same score.</source>
-        <translation type="unfinished" />
+        <translation>Reizi mēnesī lejupielādē ClubLog Most Wanted sarakstu un izmanto to, lai izšķirtu ziņojumus ar vienādu vērtējumu.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagedxcluster.cpp" line="138" />
@@ -7000,7 +7000,7 @@ Lūdzu, pievienojiet un izvēlieties žurnāla veidu, ko vēlaties lietot.</tran
     <message>
         <location filename="../setuppages/setuppagedxcluster.cpp" line="139" />
         <source>The spots arriving from the DXCluster are scored and shown in the DX Assistant.</source>
-        <translation type="unfinished" />
+        <translation>No DXCluster saņemtie ziņojumi tiek novērtēti un parādīti DX asistentā.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagedxcluster.cpp" line="140" />
@@ -7010,22 +7010,22 @@ Lūdzu, pievienojiet un izvēlieties žurnāla veidu, ko vēlaties lietot.</tran
     <message>
         <location filename="../setuppages/setuppagedxcluster.cpp" line="141" />
         <source>The stations WSJT-X decodes are scored and shown in the DX Assistant.</source>
-        <translation type="unfinished" />
+        <translation>Stacijas, ko WSJT-X atkodē, tiek novērtētas un parādītas DX asistentā.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagedxcluster.cpp" line="142" />
         <source>It needs the UDP Server to be started, in the UDP page.</source>
-        <translation type="unfinished" />
+        <translation>Tam jābūt startētam UDP serverim UDP lapā.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagedxcluster.cpp" line="144" />
         <source>Spot sources</source>
-        <translation type="unfinished" />
+        <translation>Ziņojumu avoti</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagedxcluster.cpp" line="145" />
         <source>Select where the spots analysed by the DX Assistant come from.</source>
-        <translation type="unfinished" />
+        <translation>Izvēlieties, no kurienes nāk ziņojumi, ko analizē DX asistents.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagedxcluster.cpp" line="152" />
@@ -7035,19 +7035,21 @@ Lūdzu, pievienojiet un izvēlieties žurnāla veidu, ko vēlaties lietot.</tran
     <message>
         <location filename="../setuppages/setuppagedxcluster.cpp" line="161" />
         <source>Messages</source>
-        <translation type="unfinished" />
+        <translation>Ziņojumi</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagedxcluster.cpp" line="244" />
         <source>KLog: Add a DXCluster server</source>
-        <translation type="unfinished" />
+        <translation>KLog: pievienot DXCluster serveri</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagedxcluster.cpp" line="245" />
         <source>Add the address followed by the :port
 Example: dxfun.com:8000
 If no port is specified, 41112 will be used by default:</source>
-        <translation type="unfinished" />
+        <translation>Pievienojiet adresi, kam seko :ports
+Piemērs: dxfun.com:8000
+Ja ports nav norādīts, pēc noklusējuma tiks lietots 41112:</translation>
     </message>
 </context>
 <context>
@@ -7060,77 +7062,77 @@ If no port is specified, 41112 will be used by default:</source>
     <message>
         <location filename="../setuppages/setuppageelog.cpp" line="47" />
         <source>ClubLog password</source>
-        <translation type="unfinished" />
+        <translation>ClubLog parole</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageelog.cpp" line="48" />
         <source>ClubLog App password</source>
-        <translation type="unfinished" />
+        <translation>ClubLog lietotnes parole</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageelog.cpp" line="49" />
         <source>ClubLog email</source>
-        <translation type="unfinished" />
+        <translation>ClubLog e-pasts</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageelog.cpp" line="55" />
         <source>Enter the email you used to register in ClubLog.</source>
-        <translation type="unfinished" />
+        <translation>Ievadiet e-pastu, ar kuru reģistrējāties ClubLog.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageelog.cpp" line="56" />
         <source>Enter your password ClubLog here. Warning: The password will be save on clear in the KLog config file!! (If you don't want to enter the password, KLog will ask you when it is needed.)</source>
-        <translation type="unfinished" />
+        <translation>Ievadiet šeit savu ClubLog paroli. Brīdinājums: parole tiks saglabāta atklātā tekstā KLog konfigurācijas failā!! (Ja nevēlaties ievadīt paroli, KLog to pieprasīs, kad tā būs vajadzīga.)</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageelog.cpp" line="57" />
         <source>Enter your application password ClubLog here. It can be obtained in ClubLog (Settings &gt; App Passwords menu). Warning: The app password will be save on clear in the KLog config file!!</source>
-        <translation type="unfinished" />
+        <translation>Ievadiet šeit savu ClubLog lietotnes paroli. To var iegūt ClubLog (izvēlne Settings &gt; App Passwords). Brīdinājums: lietotnes parole tiks saglabāta atklātā tekstā KLog konfigurācijas failā!!</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageelog.cpp" line="63" />
         <source>Send QSOs in real time</source>
-        <translation type="unfinished" />
+        <translation>Sūtīt QSO reāllaikā</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageelog.cpp" line="64" />
         <source>Activate ClubLog</source>
-        <translation type="unfinished" />
+        <translation>Aktivizēt ClubLog</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageelog.cpp" line="65" />
         <source>Send each QSO to ClubLog in real time, as they are added (or modified) in KLog.</source>
-        <translation type="unfinished" />
+        <translation>Sūtīt katru QSO uz ClubLog reāllaikā, tiklīdz tas tiek pievienots (vai mainīts) KLog.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageelog.cpp" line="66" />
         <source>Starts the ClubLog support in KLog.</source>
-        <translation type="unfinished" />
+        <translation>Ieslēdz ClubLog atbalstu KLog.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageelog.cpp" line="71" />
         <source>Activate eQSL.cc</source>
-        <translation type="unfinished" />
+        <translation>Aktivizēt eQSL.cc</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageelog.cpp" line="72" />
         <source>Enter your username of eQSL.cc.</source>
-        <translation type="unfinished" />
+        <translation>Ievadiet savu eQSL.cc lietotājvārdu.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageelog.cpp" line="73" />
         <source>Enter your password eQSL.cc here. Warning: The password will be save on clear in the KLog config file!! (If you don't want to enter the password, KLog will ask you when it is needed.)</source>
-        <translation type="unfinished" />
+        <translation>Ievadiet šeit savu eQSL.cc paroli. Brīdinājums: parole tiks saglabāta atklātā tekstā KLog konfigurācijas failā!! (Ja nevēlaties ievadīt paroli, KLog to pieprasīs, kad tā būs vajadzīga.)</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageelog.cpp" line="76" />
         <source>eQSL.cc password</source>
-        <translation type="unfinished" />
+        <translation>eQSL.cc parole</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageelog.cpp" line="77" />
         <source>eQSL.cc user</source>
-        <translation type="unfinished" />
+        <translation>eQSL.cc lietotājs</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageelog.cpp" line="83" />
@@ -7140,19 +7142,19 @@ If no port is specified, 41112 will be used by default:</source>
     <message>
         <location filename="../setuppages/setuppageelog.cpp" line="84" />
         <source>eQSL.cc</source>
-        <translation type="unfinished" />
+        <translation>eQSL.cc</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageelog.cpp" line="94" />
         <location filename="../setuppages/setuppageelog.cpp" line="95" />
         <source>Select the default option for new QSOs in Clublog</source>
-        <translation type="unfinished" />
+        <translation>Izvēlieties noklusējuma opciju jauniem QSO ClubLog</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageelog.cpp" line="124" />
         <location filename="../setuppages/setuppageelog.cpp" line="125" />
         <source>Select the default option for new QSOs in eQSL</source>
-        <translation type="unfinished" />
+        <translation>Izvēlieties noklusējuma opciju jauniem QSO eQSL</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageelog.cpp" line="136" />
@@ -7162,17 +7164,17 @@ If no port is specified, 41112 will be used by default:</source>
     <message>
         <location filename="../setuppages/setuppageelog.cpp" line="142" />
         <source>Enter the user of your QRZ.com account. You need to be subscribed to QRZ.com to use this service.</source>
-        <translation type="unfinished" />
+        <translation>Ievadiet sava QRZ.com konta lietotāju. Lai izmantotu šo servisu, jābūt QRZ.com abonementam.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageelog.cpp" line="144" />
         <source>User</source>
-        <translation type="unfinished" />
+        <translation>Lietotājs</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageelog.cpp" line="147" />
         <source>Enter your password QRZ.com here. Warning: The password will be save on clear in the KLog config file!! (If you don't want to enter the password, KLog will ask you when it is needed.)</source>
-        <translation type="unfinished" />
+        <translation>Ievadiet šeit savu QRZ.com paroli. Brīdinājums: parole tiks saglabāta atklātā tekstā KLog konfigurācijas failā!! (Ja nevēlaties ievadīt paroli, KLog to pieprasīs, kad tā būs vajadzīga.)</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageelog.cpp" line="150" />
