@@ -7179,63 +7179,63 @@ Ja ports nav norādīts, pēc noklusējuma tiks lietots 41112:</translation>
     <message>
         <location filename="../setuppages/setuppageelog.cpp" line="150" />
         <source>Password</source>
-        <translation type="unfinished" />
+        <translation>Parole</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageelog.cpp" line="151" />
         <source>Activate QRZ.com</source>
-        <translation type="unfinished" />
+        <translation>Aktivizēt QRZ.com</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageelog.cpp" line="152" />
         <source>Check automatically</source>
-        <translation type="unfinished" />
+        <translation>Pārbaudīt automātiski</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageelog.cpp" line="153" />
         <source>Check in Qrz.com all Calls as they are entered</source>
-        <translation type="unfinished" />
+        <translation>Pārbaudīt QRZ.com visus izsaukuma signālus, tiklīdz tie tiek ievadīti</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageelog.cpp" line="155" />
         <source>Paying Subscriber</source>
-        <translation type="unfinished" />
+        <translation>Maksājošs abonents</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageelog.cpp" line="156" />
         <source>Check it if you are paying for a qrz.com subscription</source>
-        <translation type="unfinished" />
+        <translation>Atzīmējiet, ja maksājat par qrz.com abonementu</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageelog.cpp" line="158" />
         <source>LogBook Key</source>
-        <translation type="unfinished" />
+        <translation>Žurnāla atslēga</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageelog.cpp" line="160" />
         <source>LogBook Key for QSO uploading. You can get this key in your QRZ.com logbook webpage. Remember that you need a QRZ.com subscription to use this feature.</source>
-        <translation type="unfinished" />
+        <translation>Žurnāla atslēga QSO augšupielādei. To var iegūt QRZ.com žurnāla tīmekļa lapā. Atcerieties, ka šīs funkcijas lietošanai nepieciešams QRZ.com abonements.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageelog.cpp" line="174" />
         <location filename="../setuppages/setuppageelog.cpp" line="175" />
         <source>Select the default option for new QSOs in QRZ.com</source>
-        <translation type="unfinished" />
+        <translation>Izvēlieties noklusējuma opciju jauniem QSO QRZ.com</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageelog.cpp" line="201" />
         <source>LoTW</source>
-        <translation type="unfinished" />
+        <translation>LoTW</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageelog.cpp" line="202" />
         <source>Upload</source>
-        <translation type="unfinished" />
+        <translation>Augšupielāde</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageelog.cpp" line="203" />
         <source>Download</source>
-        <translation type="unfinished" />
+        <translation>Lejupielāde</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageelog.cpp" line="214" />
@@ -7250,22 +7250,22 @@ Ja ports nav norādīts, pēc noklusējuma tiks lietots 41112:</translation>
     <message>
         <location filename="../setuppages/setuppageelog.cpp" line="216" />
         <source>LoTW password</source>
-        <translation type="unfinished" />
+        <translation>LoTW parole</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageelog.cpp" line="217" />
         <source>LoTW user</source>
-        <translation type="unfinished" />
+        <translation>LoTW lietotājs</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageelog.cpp" line="219" />
         <source>Enter your LoTW user.</source>
-        <translation type="unfinished" />
+        <translation>Ievadiet savu LoTW lietotāju.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageelog.cpp" line="220" />
         <source>Enter your password LoTW here. Warning: The password will be save on clear in the KLog config file!! (If you don't want to enter the password, KLog will ask you when it is needed.)</source>
-        <translation type="unfinished" />
+        <translation>Ievadiet šeit savu LoTW paroli. Brīdinājums: parole tiks saglabāta atklātā tekstā KLog konfigurācijas failā!! (Ja nevēlaties ievadīt paroli, KLog to pieprasīs, kad tā būs vajadzīga.)</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageelog.cpp" line="221" />
@@ -7275,18 +7275,18 @@ Ja ports nav norādīts, pēc noklusējuma tiks lietots 41112:</translation>
     <message>
         <location filename="../setuppages/setuppageelog.cpp" line="222" />
         <source>Enable the LoTW integration with TQSL. You will need to have TQSL installed</source>
-        <translation type="unfinished" />
+        <translation>Ieslēgt LoTW integrāciju ar TQSL. Jābūt uzstādītam TQSL</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageelog.cpp" line="224" />
         <location filename="../setuppages/setuppageelog.cpp" line="225" />
         <source>Select the default option for new QSOs in LoTW</source>
-        <translation type="unfinished" />
+        <translation>Izvēlieties noklusējuma opciju jauniem QSO LoTW</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageelog.cpp" line="533" />
         <source>Select File</source>
-        <translation type="unfinished" />
+        <translation>Izvēlēties failu</translation>
     </message>
 </context>
 <context>
@@ -7294,47 +7294,47 @@ Ja ports nav norādīts, pēc noklusējuma tiks lietots 41112:</translation>
     <message>
         <location filename="../setuppages/setuppagehamlib.cpp" line="193" />
         <source>Activate HamLib</source>
-        <translation type="unfinished" />
+        <translation>Aktivizēt HamLib</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagehamlib.cpp" line="194" />
         <source>Activates the hamlib support that will enable the connection to a radio.</source>
-        <translation type="unfinished" />
+        <translation>Aktivizē hamlib atbalstu, kas ļaus izveidot savienojumu ar radioiekārtu.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagehamlib.cpp" line="195" />
         <source>Read-Only mode</source>
-        <translation type="unfinished" />
+        <translation>Tikai lasīšanas režīms</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagehamlib.cpp" line="196" />
         <source>If enabled, the KLog will read Freq/Mode from the radio but will never send any command to the radio.</source>
-        <translation type="unfinished" />
+        <translation>Ja ieslēgts, KLog nolasīs frekvenci/režīmu no radioiekārtas, bet nekad nesūtīs tai nekādas komandas.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagehamlib.cpp" line="197" />
         <source>Test</source>
-        <translation type="unfinished" />
+        <translation>Pārbaude</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagehamlib.cpp" line="198" />
         <source>Click to test the connection to the radio</source>
-        <translation type="unfinished" />
+        <translation>Noklikšķiniet, lai pārbaudītu savienojumu ar radioiekārtu</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagehamlib.cpp" line="205" />
         <source>Shows the frequency read from the radio while connected</source>
-        <translation type="unfinished" />
+        <translation>Rāda no radioiekārtas nolasīto frekvenci, kamēr savienojums ir izveidots</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagehamlib.cpp" line="223" />
         <source>Radio</source>
-        <translation type="unfinished" />
+        <translation>Radioiekārta</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagehamlib.cpp" line="225" />
         <source>Select your rig.</source>
-        <translation type="unfinished" />
+        <translation>Izvēlieties savu radioiekārtu.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagehamlib.cpp" line="229" />
@@ -7349,7 +7349,7 @@ Ja ports nav norādīts, pēc noklusējuma tiks lietots 41112:</translation>
     <message>
         <location filename="../setuppages/setuppagehamlib.cpp" line="207" />
         <source>Defines the interval to poll the radio in msecs.</source>
-        <translation type="unfinished" />
+        <translation>Nosaka radioiekārtas aptaujas intervālu milisekundēs.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagehamlib.cpp" line="42" />
@@ -7364,17 +7364,17 @@ Ja ports nav norādīts, pēc noklusējuma tiks lietots 41112:</translation>
     <message>
         <location filename="../setuppages/setuppagehamlib.cpp" line="131" />
         <source>Test: OK</source>
-        <translation type="unfinished" />
+        <translation>Pārbaude: OK</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagehamlib.cpp" line="143" />
         <source>Test: NOK</source>
-        <translation type="unfinished" />
+        <translation>Pārbaude: neizdevās</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagehamlib.cpp" line="215" />
         <source>Poll interval</source>
-        <translation type="unfinished" />
+        <translation>Aptaujas intervāls</translation>
     </message>
 </context>
 <context>
@@ -7390,32 +7390,32 @@ Ja ports nav norādīts, pēc noklusējuma tiks lietots 41112:</translation>
     <message>
         <location filename="../setuppages/setuppagelogs.cpp" line="56" />
         <source>&amp;New</source>
-        <translation type="unfinished" />
+        <translation>&amp;Jauns</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagelogs.cpp" line="57" />
         <source>&amp;Edit</source>
-        <translation type="unfinished" />
+        <translation>&amp;Rediģēt</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagelogs.cpp" line="58" />
         <source>&amp;Remove</source>
-        <translation type="unfinished" />
+        <translation>&amp;Noņemt</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagelogs.cpp" line="60" />
         <source>Add a new log.</source>
-        <translation type="unfinished" />
+        <translation>Pievienot jaunu žurnālu.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagelogs.cpp" line="61" />
         <source>Edit the selected log.</source>
-        <translation type="unfinished" />
+        <translation>Rediģēt izvēlēto žurnālu.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagelogs.cpp" line="62" />
         <source>Remove the selected log.</source>
-        <translation type="unfinished" />
+        <translation>Noņemt izvēlēto žurnālu.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagelogs.cpp" line="150" />
@@ -7821,17 +7821,17 @@ The log will not be opened.</source>
     <message>
         <location filename="../setuppages/setuppagesats.cpp" line="65" />
         <source>&amp;New</source>
-        <translation type="unfinished" />
+        <translation>&amp;Jauns</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesats.cpp" line="66" />
         <source>&amp;Edit</source>
-        <translation type="unfinished" />
+        <translation>&amp;Rediģēt</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesats.cpp" line="67" />
         <source>&amp;Remove</source>
-        <translation type="unfinished" />
+        <translation>&amp;Noņemt</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesats.cpp" line="68" />
@@ -8098,7 +8098,7 @@ The log will not be opened.</source>
     <message>
         <location filename="../setuppages/setuppagesubdivisions.cpp" line="56" />
         <source>&amp;Remove</source>
-        <translation type="unfinished" />
+        <translation>&amp;Noņemt</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesubdivisions.cpp" line="57" />
