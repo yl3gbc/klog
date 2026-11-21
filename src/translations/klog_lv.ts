@@ -7907,22 +7907,22 @@ The log will not be opened.</source>
     <message>
         <location filename="../setuppages/setuppagesats.cpp" line="292" />
         <source>Short</source>
-        <translation type="unfinished" />
+        <translation>Īsais</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesats.cpp" line="295" />
         <source>Name</source>
-        <translation>Vārds</translation>
+        <translation>Nosaukums</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesats.cpp" line="298" />
         <source>Uplink</source>
-        <translation type="unfinished" />
+        <translation>Augšupsaite</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesats.cpp" line="301" />
         <source>Downlink</source>
-        <translation type="unfinished" />
+        <translation>Lejupsaite</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesats.cpp" line="304" />
@@ -8162,17 +8162,17 @@ The log will not be opened.</source>
     <message>
         <location filename="../setuppages/setuppagesubdivisions.cpp" line="217" />
         <source>Name</source>
-        <translation>Vārds</translation>
+        <translation>Nosaukums</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesubdivisions.cpp" line="220" />
         <source>Short Name</source>
-        <translation type="unfinished" />
+        <translation>Īsais nosaukums</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesubdivisions.cpp" line="223" />
         <source>CQ Zone</source>
-        <translation type="unfinished" />
+        <translation>CQ zona</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesubdivisions.cpp" line="226" />
@@ -8187,12 +8187,12 @@ The log will not be opened.</source>
     <message>
         <location filename="../setuppages/setuppagesubdivisions.cpp" line="232" />
         <source>Start Date</source>
-        <translation type="unfinished" />
+        <translation>Sākuma datums</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesubdivisions.cpp" line="235" />
         <source>End Date</source>
-        <translation type="unfinished" />
+        <translation>Beigu datums</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesubdivisions.cpp" line="238" />
@@ -8603,7 +8603,7 @@ The log will not be opened.</source>
         <location filename="../setuppages/setuppageworldeditor.cpp" line="318" />
         <location filename="../setuppages/setuppageworldeditor.cpp" line="458" />
         <source>CQ Zone</source>
-        <translation type="unfinished" />
+        <translation>CQ zona</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageworldeditor.cpp" line="320" />
