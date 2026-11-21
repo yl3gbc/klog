@@ -7613,13 +7613,13 @@ The log will not be opened.</source>
     <message>
         <location filename="../setuppages/setuppagemisc.cpp" line="55" />
         <source>&amp;Delete always temp ADIF file after uploading QSOs</source>
-        <translation type="unfinished" />
+        <translation>Vienmēr dz&amp;ēst pagaidu ADIF failu pēc QSO augšupielādes</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagemisc.cpp" line="62" />
         <location filename="../setuppages/setuppagemisc.cpp" line="63" />
         <source>Browse</source>
-        <translation type="unfinished" />
+        <translation>Pārlūkot</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagemisc.cpp" line="64" />
@@ -7629,132 +7629,132 @@ The log will not be opened.</source>
     <message>
         <location filename="../setuppages/setuppagemisc.cpp" line="133" />
         <source>If checked, KLog will consider both band and mode when evaluating if a QSO is needed or confirmed. If unchecked, only the band is taken into account.</source>
-        <translation type="unfinished" />
+        <translation>Ja atzīmēts, KLog, vērtējot, vai QSO ir nepieciešams vai apstiprināts, ņems vērā gan diapazonu, gan režīmu. Ja nav atzīmēts, tiek ņemts vērā tikai diapazons.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagemisc.cpp" line="134" />
         <source>QSOs will be marked as pending to send a QSL if you receive the DX QSL and have not sent yours.</source>
-        <translation type="unfinished" />
+        <translation>QSO tiks atzīmēti kā gaidoši QSL nosūtīšanu, ja esat saņēmis DX QSL un savu vēl neesat nosūtījis.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagemisc.cpp" line="135" />
         <source>The search box will also show the callsign on the air to do the QSO.</source>
-        <translation type="unfinished" />
+        <translation>Meklēšanas lodziņā tiks rādīts arī izsaukuma signāls, ar kuru tiek veikts QSO.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagemisc.cpp" line="137" />
         <source>Check if there is a new release of KLog available every time you start KLog.</source>
-        <translation type="unfinished" />
+        <translation>Pārbaudīt, vai ir pieejama jauna KLog versija, katru reizi, startējot KLog.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagemisc.cpp" line="139" />
         <source>Check it for Imperial system (Miles instead of Kilometers).</source>
-        <translation type="unfinished" />
+        <translation>Atzīmējiet, lai lietotu imperiālo sistēmu (jūdzes kilometru vietā).</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagemisc.cpp" line="140" />
         <source>Select to use real time.</source>
-        <translation type="unfinished" />
+        <translation>Izvēlieties, lai lietotu reālo laiku.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagemisc.cpp" line="141" />
         <source>Select to use UTC time.</source>
-        <translation type="unfinished" />
+        <translation>Izvēlieties, lai lietotu UTC laiku.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagemisc.cpp" line="142" />
         <source>Select if you want to save to ADIF on exit.</source>
-        <translation type="unfinished" />
+        <translation>Atzīmējiet, ja vēlaties saglabāt ADIF, izejot no programmas.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagemisc.cpp" line="143" />
         <source>Select to use the following name for the logfile without being asked for it again.</source>
-        <translation type="unfinished" />
+        <translation>Atzīmējiet, lai lietotu šādu žurnāla faila nosaukumu bez atkārtota jautājuma.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagemisc.cpp" line="144" />
         <source>Complete the current QSO with previous QSO data.</source>
-        <translation type="unfinished" />
+        <translation>Aizpildīt pašreizējo QSO ar iepriekšējo QSO datiem.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagemisc.cpp" line="145" />
         <source>Select if you want to manage DX-Marathon.</source>
-        <translation type="unfinished" />
+        <translation>Atzīmējiet, ja vēlaties pārvaldīt DX-Marathon.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagemisc.cpp" line="146" />
         <source>This is the default file where ADIF data will be saved.</source>
-        <translation type="unfinished" />
+        <translation>Šis ir noklusējuma fails, kurā tiks saglabāti ADIF dati.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagemisc.cpp" line="147" />
         <source>This is the directory where the database (logbook.dat) will be saved.</source>
-        <translation type="unfinished" />
+        <translation>Šī ir mape, kurā tiks saglabāta datubāze (logbook.dat).</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagemisc.cpp" line="148" />
         <source>Click to change the default ADIF file.</source>
-        <translation type="unfinished" />
+        <translation>Noklikšķiniet, lai mainītu noklusējuma ADIF failu.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagemisc.cpp" line="149" />
         <source>Click to change the path of the database.</source>
-        <translation type="unfinished" />
+        <translation>Noklikšķiniet, lai mainītu datubāzes ceļu.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagemisc.cpp" line="150" />
         <source>Click to move the DB to the new directory.</source>
-        <translation type="unfinished" />
+        <translation>Noklikšķiniet, lai pārvietotu datubāzi uz jauno mapi.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagemisc.cpp" line="37" />
         <source>Check non-valid calls</source>
-        <translation type="unfinished" />
+        <translation>Pārbaudīt nederīgus izsaukuma signālus</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagemisc.cpp" line="40" />
         <source>Show seconds</source>
-        <translation type="unfinished" />
+        <translation>Rādīt sekundes</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagemisc.cpp" line="92" />
         <source>In seconds, enter the time range to consider a duplicate if same call, band and mode is entered.</source>
-        <translation type="unfinished" />
+        <translation>Ievadiet sekundēs laika diapazonu, kurā tiek uzskatīts par dublikātu, ja ievadīts tas pats izsaukuma signāls, diapazons un režīms.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagemisc.cpp" line="105" />
         <source>Show seconds in the QSO editor</source>
-        <translation type="unfinished" />
+        <translation>Rādīt sekundes QSO redaktorā</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagemisc.cpp" line="131" />
         <source>If you disable this checkbox KLog will not check callsigns to identify wrong callsigns.</source>
-        <translation type="unfinished" />
+        <translation>Ja šo atzīmi noņemsiet, KLog nepārbaudīs izsaukuma signālus, lai atrastu nepareizus.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagemisc.cpp" line="151" />
         <source>Select the application debug log level. This may be useful if something is not working as expected. A debug file will be created in the KLog directory and/or shown with Help-&gt;Debug menu.</source>
-        <translation type="unfinished" />
+        <translation>Izvēlieties programmas atkļūdošanas žurnāla līmeni. Tas var noderēt, ja kaut kas nedarbojas, kā paredzēts. KLog mapē tiks izveidots atkļūdošanas fails un/vai tas tiks parādīts ar izvēlni Palīdzība-&gt;Atkļūdošana.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagemisc.cpp" line="153" />
         <source>Click to mark as Queued (to be sent) all the eQSL (LoTW and eQSL) in all the new QSO by default.</source>
-        <translation type="unfinished" />
+        <translation>Noklikšķiniet, lai pēc noklusējuma visus jaunos QSO atzīmētu kā rindā gaidošus (nosūtāmus) eQSL (LoTW un eQSL).</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagemisc.cpp" line="154" />
         <source>Delete Always the adif file created after uploading QSOs</source>
-        <translation type="unfinished" />
+        <translation>Vienmēr dzēst pēc QSO augšupielādes izveidoto ADIF failu</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagemisc.cpp" line="169" />
         <source>Log level</source>
-        <translation type="unfinished" />
+        <translation>Atkļūdošanas līmenis</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagemisc.cpp" line="175" />
         <source>Dupe time range:</source>
-        <translation type="unfinished" />
+        <translation>Dublikāta laika diapazons:</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagemisc.cpp" line="311" />
@@ -7764,57 +7764,57 @@ The log will not be opened.</source>
     <message>
         <location filename="../setuppages/setuppagemisc.cpp" line="458" />
         <source>Select Directory</source>
-        <translation type="unfinished" />
+        <translation>Izvēlieties mapi</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagemisc.cpp" line="488" />
         <source>This is the directory where DB (logbook.dat) will be saved.</source>
-        <translation type="unfinished" />
+        <translation>Šī ir mape, kurā tiks saglabāta datubāze (logbook.dat).</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagemisc.cpp" line="494" />
         <source>Please specify an existing directory where the database (logbook.dat) will be saved.</source>
-        <translation type="unfinished" />
+        <translation>Lūdzu, norādiet esošu mapi, kurā tiks saglabāta datubāze (logbook.dat).</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagemisc.cpp" line="515" />
         <source>KLog - Move DB</source>
-        <translation type="unfinished" />
+        <translation>KLog — datubāzes pārvietošana</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagemisc.cpp" line="530" />
         <source>File moved</source>
-        <translation type="unfinished" />
+        <translation>Fails pārvietots</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagemisc.cpp" line="530" />
         <source>File copied</source>
-        <translation type="unfinished" />
+        <translation>Fails nokopēts</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagemisc.cpp" line="548" />
         <source>File already exist.</source>
-        <translation type="unfinished" />
+        <translation>Fails jau pastāv.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagemisc.cpp" line="549" />
         <source>The destination file already exist and KLog will not replace it. Please remove the file from the destination folder before moving the file with KLog to make sure KLog can copy the file.</source>
-        <translation type="unfinished" />
+        <translation>Mērķa fails jau pastāv, un KLog to nepārrakstīs. Lūdzu, izdzēsiet failu mērķa mapē pirms faila pārvietošanas ar KLog, lai KLog to varētu nokopēt.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagemisc.cpp" line="554" />
         <source>File NOT copied</source>
-        <translation type="unfinished" />
+        <translation>Fails NAV nokopēts</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagemisc.cpp" line="555" />
         <source>The file was not copied due to an unknown problem.</source>
-        <translation type="unfinished" />
+        <translation>Fails netika nokopēts nezināmas problēmas dēļ.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagemisc.cpp" line="566" />
         <source>The target directory does not exist. Please select an existing directory.</source>
-        <translation type="unfinished" />
+        <translation>Mērķa mape nepastāv. Lūdzu, izvēlieties esošu mapi.</translation>
     </message>
 </context>
 <context>
@@ -7837,7 +7837,7 @@ The log will not be opened.</source>
     <message>
         <location filename="../setuppages/setuppagesats.cpp" line="68" />
         <source>&amp;Import</source>
-        <translation type="unfinished" />
+        <translation>&amp;Importēt</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesats.cpp" line="69" />
