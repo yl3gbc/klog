@@ -4402,7 +4402,7 @@ Ignorēti dublikāti: %2</translation>
     <message>
         <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="139" />
         <source>Date of the LoTW sending.</source>
-        <translation>Klog - Iestatījumu atjaunināšana.</translation>
+        <translation>LoTW nosūtīšanas datums.</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowinputeqsl.cpp" line="140" />
