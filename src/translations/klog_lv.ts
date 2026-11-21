@@ -9821,7 +9821,7 @@ The log will not be opened.</source>
     <message>
         <location filename="../elog/elogclublog.cpp" line="193" />
         <source>Undefined error...</source>
-        <translation type="unfinished" />
+        <translation>Nenoteikta kļūda...</translation>
     </message>
     <message>
         <location filename="../elog/elogclublog.cpp" line="573" />
@@ -9836,17 +9836,17 @@ The log will not be opened.</source>
     <message>
         <location filename="../elog/elogclublog.cpp" line="581" />
         <source>Skipping SWL callsign</source>
-        <translation type="unfinished" />
+        <translation>Izlaiž SWL izsaukuma signālu</translation>
     </message>
     <message>
         <location filename="../elog/elogclublog.cpp" line="585" />
         <source>Callsign is your own call</source>
-        <translation type="unfinished" />
+        <translation>Izsaukuma signāls ir jūsu pašu</translation>
     </message>
     <message>
         <location filename="../elog/elogclublog.cpp" line="589" />
         <source>Invalid callsign with no DXCC mapping</source>
-        <translation type="unfinished" />
+        <translation>Nederīgs izsaukuma signāls bez DXCC atbilstības</translation>
     </message>
     <message>
         <location filename="../elog/elogclublog.cpp" line="593" />
@@ -9861,68 +9861,68 @@ The log will not be opened.</source>
     <message>
         <location filename="../elog/elogclublog.cpp" line="601" />
         <source>Missing ADIF record</source>
-        <translation type="unfinished" />
+        <translation>Trūkst ADIF ieraksta</translation>
     </message>
     <message>
         <location filename="../elog/elogclublog.cpp" line="605" />
         <source>Test mode - parameters ok, no action taken</source>
-        <translation type="unfinished" />
+        <translation>Testa režīms — parametri kārtībā, darbība netika veikta</translation>
     </message>
     <message>
         <location filename="../elog/elogclublog.cpp" line="609" />
         <source>Excessive API Usage</source>
-        <translation type="unfinished" />
+        <translation>Pārmērīga API lietošana</translation>
     </message>
     <message>
         <location filename="../elog/elogclublog.cpp" line="613" />
         <source>Internal Error</source>
-        <translation type="unfinished" />
+        <translation>Iekšēja kļūda</translation>
     </message>
     <message>
         <location filename="../elog/elogclublog.cpp" line="617" />
         <source>Rejected</source>
-        <translation type="unfinished" />
+        <translation>Noraidīts</translation>
     </message>
     <message>
         <location filename="../elog/elogclublog.cpp" line="621" />
         <source>QSO Duplicate</source>
-        <translation type="unfinished" />
+        <translation>QSO dublikāts</translation>
     </message>
     <message>
         <location filename="../elog/elogclublog.cpp" line="625" />
         <source>QSO Modified</source>
-        <translation type="unfinished" />
+        <translation>QSO mainīts</translation>
     </message>
     <message>
         <location filename="../elog/elogclublog.cpp" line="629" />
         <source>Missing Login</source>
-        <translation type="unfinished" />
+        <translation>Trūkst pieteikšanās</translation>
     </message>
     <message>
         <location filename="../elog/elogclublog.cpp" line="633" />
         <source>QSO OK</source>
-        <translation type="unfinished" />
+        <translation>QSO kārtībā</translation>
     </message>
     <message>
         <location filename="../elog/elogclublog.cpp" line="637" />
         <location filename="../elog/elogclublog.cpp" line="661" />
         <source>Upload denied</source>
-        <translation type="unfinished" />
+        <translation>Augšupielāde liegta</translation>
     </message>
     <message>
         <location filename="../elog/elogclublog.cpp" line="641" />
         <source>No callsign selected</source>
-        <translation type="unfinished" />
+        <translation>Izsaukuma signāls nav izvēlēts</translation>
     </message>
     <message>
         <location filename="../elog/elogclublog.cpp" line="645" />
         <source>No match found</source>
-        <translation type="unfinished" />
+        <translation>Atbilstība nav atrasta</translation>
     </message>
     <message>
         <location filename="../elog/elogclublog.cpp" line="649" />
         <source>Dropped QSO</source>
-        <translation type="unfinished" />
+        <translation>QSO atmests</translation>
     </message>
     <message>
         <location filename="../elog/elogclublog.cpp" line="653" />
@@ -9932,12 +9932,12 @@ The log will not be opened.</source>
     <message>
         <location filename="../elog/elogclublog.cpp" line="657" />
         <source>Login rejected</source>
-        <translation type="unfinished" />
+        <translation>Pieteikšanās noraidīta</translation>
     </message>
     <message>
         <location filename="../elog/elogclublog.cpp" line="665" />
         <source>Rejected: Callsign is your own call</source>
-        <translation type="unfinished" />
+        <translation>Noraidīts: izsaukuma signāls ir jūsu pašu</translation>
     </message>
 </context>
 <context>
