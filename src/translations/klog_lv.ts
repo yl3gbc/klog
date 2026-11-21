@@ -6280,7 +6280,7 @@ KLog beigs darbu, kad nospiedīsiet OK.</translation>
     <message>
         <location filename="../searchwidget.cpp" line="369" />
         <source>All in log</source>
-        <translation type="unfinished" />
+        <translation>Viss žurnālā</translation>
     </message>
     <message>
         <location filename="../searchwidget.cpp" line="370" />
