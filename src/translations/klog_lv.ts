@@ -7842,37 +7842,37 @@ The log will not be opened.</source>
     <message>
         <location filename="../setuppages/setuppagesats.cpp" line="69" />
         <source>E&amp;xport</source>
-        <translation type="unfinished" />
+        <translation>E&amp;ksportēt</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesats.cpp" line="71" />
         <source>Add a new satellite.</source>
-        <translation type="unfinished" />
+        <translation>Pievienot jaunu pavadoni.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesats.cpp" line="72" />
         <source>Edit the selected satellite.</source>
-        <translation type="unfinished" />
+        <translation>Rediģēt izvēlēto pavadoni.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesats.cpp" line="73" />
         <source>Remove the selected satellite.</source>
-        <translation type="unfinished" />
+        <translation>Noņemt izvēlēto pavadoni.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesats.cpp" line="74" />
         <source>Import a satellites file. It will replace the satellites you have in the current list.</source>
-        <translation type="unfinished" />
+        <translation>Importēt pavadoņu failu. Tas aizstās pašreizējā sarakstā esošos pavadoņus.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesats.cpp" line="75" />
         <source>Export your current satellites to a file.</source>
-        <translation type="unfinished" />
+        <translation>Eksportēt pašreizējos pavadoņus failā.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesats.cpp" line="77" />
         <source>Select the sat you want to open.</source>
-        <translation type="unfinished" />
+        <translation>Izvēlieties pavadoni, ko vēlaties atvērt.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesats.cpp" line="206" />
@@ -7882,22 +7882,22 @@ The log will not be opened.</source>
     <message>
         <location filename="../setuppages/setuppagesats.cpp" line="207" />
         <source>Do you really want to remove this satellite?</source>
-        <translation type="unfinished" />
+        <translation>Vai tiešām vēlaties noņemt šo pavadoni?</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesats.cpp" line="208" />
         <source>This satellite will no be longer available to be selected ...</source>
-        <translation type="unfinished" />
+        <translation>Šis pavadonis vairs nebūs izvēlei pieejams ...</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesats.cpp" line="226" />
         <source>Sat has not been removed. (#2)</source>
-        <translation type="unfinished" />
+        <translation>Pavadonis nav noņemts. (#2)</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesats.cpp" line="233" />
         <source>Sat has not been removed. (#1)</source>
-        <translation type="unfinished" />
+        <translation>Pavadonis nav noņemts. (#1)</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesats.cpp" line="289" />
@@ -7937,34 +7937,36 @@ The log will not be opened.</source>
     <message>
         <location filename="../setuppages/setuppagesats.cpp" line="520" />
         <source>KLog - SetupPageSats</source>
-        <translation type="unfinished" />
+        <translation>KLog — pavadoņu iestatījumi</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesats.cpp" line="528" />
         <source>Open Satellites File</source>
-        <translation type="unfinished" />
+        <translation>Atvērt pavadoņu failu</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesats.cpp" line="548" />
         <source>KLog warning</source>
-        <translation type="unfinished" />
+        <translation>KLog brīdinājums</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesats.cpp" line="550" />
         <source>An unexpected error ocurred while importing the satellite data.
 
 It may be caused because the file you are trying to import does not have the right format.</source>
-        <translation type="unfinished" />
+        <translation>Importējot pavadoņu datus, radās negaidīta kļūda.
+
+Tas var būt tāpēc, ka importējamajam failam nav pareizā formāta.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesats.cpp" line="553" />
         <source>Please check the format or contact the developer for analysis with the error code: </source>
-        <translation type="unfinished" />
+        <translation>Lūdzu, pārbaudiet formātu vai sazinieties ar izstrādātāju analīzei, norādot kļūdas kodu: </translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesats.cpp" line="614" />
         <source>Save Satellites File</source>
-        <translation type="unfinished" />
+        <translation>Saglabāt pavadoņu failu</translation>
     </message>
 </context>
 <context>
@@ -7972,7 +7974,7 @@ It may be caused because the file you are trying to import does not have the rig
     <message>
         <location filename="../setuppages/setuppagesatsnew.cpp" line="48" />
         <source>Short name</source>
-        <translation type="unfinished" />
+        <translation>Īsais nosaukums</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesatsnew.cpp" line="49" />
@@ -8007,32 +8009,32 @@ It may be caused because the file you are trying to import does not have the rig
     <message>
         <location filename="../setuppages/setuppagesatsnew.cpp" line="110" />
         <source>Enter the short name. Try to use the LoTW short name so you can upload your QSO to LoTW afterwards.</source>
-        <translation type="unfinished" />
+        <translation>Ievadiet īso nosaukumu. Mēģiniet lietot LoTW īso nosaukumu, lai vēlāk varētu augšupielādēt QSO uz LoTW.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesatsnew.cpp" line="111" />
         <source>Enter the name of the satellite.</source>
-        <translation type="unfinished" />
+        <translation>Ievadiet pavadoņa nosaukumu.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesatsnew.cpp" line="112" />
         <source>Enter the uplink frequencies in this format: 144.300</source>
-        <translation type="unfinished" />
+        <translation>Ievadiet augšupsaites frekvences šādā formātā: 144.300</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesatsnew.cpp" line="113" />
         <source>Enter the downlink frequencies in this format: 144.300</source>
-        <translation type="unfinished" />
+        <translation>Ievadiet lejupsaites frekvences šādā formātā: 144.300</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesatsnew.cpp" line="114" />
         <source>Enter the modes in this format: USB</source>
-        <translation type="unfinished" />
+        <translation>Ievadiet režīmus šādā formātā: USB</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesatsnew.cpp" line="377" />
         <source>Some of the data you have entered is not correct; the satellite can't be added.</source>
-        <translation type="unfinished" />
+        <translation>Daļa ievadīto datu nav pareiza; pavadoni nevar pievienot.</translation>
     </message>
 </context>
 <context>
@@ -8105,22 +8107,22 @@ The log will not be opened.</source>
     <message>
         <location filename="../setuppages/setuppagesubdivisions.cpp" line="57" />
         <source>Import new</source>
-        <translation type="unfinished" />
+        <translation>Importēt jaunu</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesubdivisions.cpp" line="58" />
         <source>Import an AWA file with the subdivision details.</source>
-        <translation type="unfinished" />
+        <translation>Importēt AWA failu ar apakšvienību informāciju.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesubdivisions.cpp" line="61" />
         <source>Remove the selected references.</source>
-        <translation type="unfinished" />
+        <translation>Noņemt izvēlētās atsauces.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesubdivisions.cpp" line="63" />
         <source>Select the references you want to open.</source>
-        <translation type="unfinished" />
+        <translation>Izvēlieties atsauces, ko vēlaties atvērt.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesubdivisions.cpp" line="124" />
@@ -8130,17 +8132,17 @@ The log will not be opened.</source>
     <message>
         <location filename="../setuppages/setuppagesubdivisions.cpp" line="125" />
         <source>Do you really want to remove the data of this entity?</source>
-        <translation type="unfinished" />
+        <translation>Vai tiešām vēlaties noņemt šīs entītijas datus?</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesubdivisions.cpp" line="126" />
         <source>All the subdivision information for this entity will be deleted...</source>
-        <translation type="unfinished" />
+        <translation>Tiks izdzēsta visa šīs entītijas apakšvienību informācija...</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesubdivisions.cpp" line="154" />
         <source>Log has not been removed. (#3)</source>
-        <translation type="unfinished" />
+        <translation>Žurnāls nav noņemts. (#3)</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesubdivisions.cpp" line="159" />
@@ -8205,7 +8207,7 @@ The log will not be opened.</source>
     <message>
         <location filename="../setuppages/setuppagesubdivisions.cpp" line="368" />
         <source>KLog - SetupPageSubdivisions</source>
-        <translation type="unfinished" />
+        <translation>KLog — apakšvienību iestatījumi</translation>
     </message>
 </context>
 <context>
@@ -8213,7 +8215,7 @@ The log will not be opened.</source>
     <message>
         <location filename="../setuppages/setuppageudp.cpp" line="36" />
         <source>Start UDP Server</source>
-        <translation type="unfinished" />
+        <translation>Startēt UDP serveri</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageudp.cpp" line="64" />
