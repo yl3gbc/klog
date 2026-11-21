@@ -6821,7 +6821,7 @@ Lūdzu, pievienojiet un izvēlieties žurnāla veidu, ko vēlaties lietot.</tran
     <message>
         <location filename="../setuppages/setuppagecolors.cpp" line="49" />
         <source>Default</source>
-        <translation type="unfinished" />
+        <translation>Noklusējums</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagecolors.cpp" line="50" />
@@ -6831,13 +6831,13 @@ Lūdzu, pievienojiet un izvēlieties žurnāla veidu, ko vēlaties lietot.</tran
     <message>
         <location filename="../setuppages/setuppagecolors.cpp" line="51" />
         <source>Default palette</source>
-        <translation type="unfinished" />
+        <translation>Noklusējuma palete</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagecolors.cpp" line="52" />
         <location filename="../setuppages/setuppagecolors.cpp" line="342" />
         <source>Dark Mode</source>
-        <translation type="unfinished" />
+        <translation>Tumšais režīms</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagecolors.cpp" line="54" />
@@ -6887,7 +6887,7 @@ Lūdzu, pievienojiet un izvēlieties žurnāla veidu, ko vēlaties lietot.</tran
     <message>
         <location filename="../setuppages/setuppagecolors.cpp" line="315" />
         <source>Light Mode</source>
-        <translation type="unfinished" />
+        <translation>Gaišais režīms</translation>
     </message>
 </context>
 <context>
@@ -7055,7 +7055,7 @@ If no port is specified, 41112 will be used by default:</source>
     <message>
         <location filename="../setuppages/setuppageelog.cpp" line="46" />
         <source>Default</source>
-        <translation type="unfinished" />
+        <translation>Noklusējums</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageelog.cpp" line="47" />
