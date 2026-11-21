@@ -5071,7 +5071,7 @@ Frekvence nav radioamatieru diapazonā!</translation>
     <message>
         <location filename="../widgets/map/mapwindowwidget.cpp" line="179" />
         <source>Show nothing</source>
-        <translation type="unfinished" />
+        <translation>Nerādīt neko</translation>
     </message>
     <message>
         <location filename="../widgets/map/mapwindowwidget.cpp" line="192" />
@@ -5086,7 +5086,7 @@ Frekvence nav radioamatieru diapazonā!</translation>
     <message>
         <location filename="../widgets/map/mapwindowwidget.cpp" line="217" />
         <source>All satellites</source>
-        <translation type="unfinished" />
+        <translation>Visi pavadoņi</translation>
     </message>
 </context>
 <context>
