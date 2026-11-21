@@ -9281,7 +9281,7 @@ The log will not be opened.</source>
     <message>
         <location filename="../charts/statsqsosperdxccbarchartwidget.cpp" line="79" />
         <source>QSOs per DXCC</source>
-        <translation type="unfinished" />
+        <translation>QSO uz DXCC</translation>
     </message>
     <message>
         <location filename="../charts/statsqsosperdxccbarchartwidget.cpp" line="83" />
@@ -9296,7 +9296,7 @@ The log will not be opened.</source>
     <message>
         <location filename="../charts/statsqsosperdxccbarchartwidget.cpp" line="85" />
         <source>Reading data...</source>
-        <translation type="unfinished" />
+        <translation>Nolasa datus...</translation>
     </message>
     <message>
         <location filename="../charts/statsqsosperdxccbarchartwidget.cpp" line="169" />
@@ -9306,7 +9306,7 @@ The log will not be opened.</source>
     <message>
         <location filename="../charts/statsqsosperdxccbarchartwidget.cpp" line="170" />
         <source>Top ten DXCC per QSO</source>
-        <translation type="unfinished" />
+        <translation>Desmit labākie DXCC pēc QSO skaita</translation>
     </message>
 </context>
 <context>
@@ -9314,7 +9314,7 @@ The log will not be opened.</source>
     <message>
         <location filename="../charts/statsqsosperhourbarchartwidget.cpp" line="78" />
         <source>QSOs per hour</source>
-        <translation type="unfinished" />
+        <translation>QSO pa stundām</translation>
     </message>
     <message>
         <location filename="../charts/statsqsosperhourbarchartwidget.cpp" line="82" />
@@ -9329,12 +9329,12 @@ The log will not be opened.</source>
     <message>
         <location filename="../charts/statsqsosperhourbarchartwidget.cpp" line="90" />
         <source>Hours</source>
-        <translation type="unfinished" />
+        <translation>Stundas</translation>
     </message>
     <message>
         <location filename="../charts/statsqsosperhourbarchartwidget.cpp" line="91" />
         <source>QSOs at hour</source>
-        <translation type="unfinished" />
+        <translation>QSO stundā</translation>
     </message>
     <message>
         <location filename="../charts/statsqsosperhourbarchartwidget.cpp" line="101" />
@@ -9352,7 +9352,7 @@ The log will not be opened.</source>
     <message>
         <location filename="../charts/statsqsospermodebarchartwidget.cpp" line="81" />
         <source>QSOs per mode</source>
-        <translation type="unfinished" />
+        <translation>QSO pa režīmiem</translation>
     </message>
     <message>
         <location filename="../charts/statsqsospermodebarchartwidget.cpp" line="85" />
@@ -9372,7 +9372,7 @@ The log will not be opened.</source>
     <message>
         <location filename="../charts/statsqsospermodebarchartwidget.cpp" line="93" />
         <source>QSOs per mode distribution</source>
-        <translation type="unfinished" />
+        <translation>QSO sadalījums pa režīmiem</translation>
     </message>
     <message>
         <location filename="../charts/statsqsospermodebarchartwidget.cpp" line="103" />
@@ -9382,7 +9382,7 @@ The log will not be opened.</source>
     <message>
         <location filename="../charts/statsqsospermodebarchartwidget.cpp" line="103" />
         <source>Modes: </source>
-        <translation type="unfinished" />
+        <translation>Režīmi: </translation>
     </message>
 </context>
 <context>
@@ -9390,7 +9390,7 @@ The log will not be opened.</source>
     <message>
         <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="76" />
         <source>QSOs per month</source>
-        <translation type="unfinished" />
+        <translation>QSO pa mēnešiem</translation>
     </message>
     <message>
         <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="80" />
@@ -9465,12 +9465,12 @@ The log will not be opened.</source>
     <message>
         <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="88" />
         <source>Months</source>
-        <translation type="unfinished" />
+        <translation>Mēneši</translation>
     </message>
     <message>
         <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="89" />
         <source>QSOs at Month</source>
-        <translation type="unfinished" />
+        <translation>QSO mēnesī</translation>
     </message>
     <message>
         <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="98" />
@@ -9480,7 +9480,7 @@ The log will not be opened.</source>
     <message>
         <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="98" />
         <source>Months: </source>
-        <translation type="unfinished" />
+        <translation>Mēneši: </translation>
     </message>
 </context>
 <context>
@@ -9576,7 +9576,7 @@ The log will not be opened.</source>
     <message>
         <location filename="../tipsdialog.cpp" line="44" />
         <source>KLog tips</source>
-        <translation type="unfinished" />
+        <translation>KLog padomi</translation>
     </message>
     <message>
         <location filename="../tipsdialog.cpp" line="57" />
@@ -9586,78 +9586,78 @@ The log will not be opened.</source>
     <message>
         <location filename="../tipsdialog.cpp" line="58" />
         <source>Previous</source>
-        <translation type="unfinished" />
+        <translation>Iepriekšējais</translation>
     </message>
     <message>
         <location filename="../tipsdialog.cpp" line="133" />
         <source>&lt;b&gt;Tip #1:&lt;/b&gt;&lt;br&gt;Do you know...&lt;br&gt;You can use &lt;a href="#ToolsFillInQSO"&gt;Tools-&gt;Fill in QSO data&lt;/a&gt; to automatically read the full log to fill the DXCC, CQ, ITU zones and continent?</source>
         <extracomment>Translator: Please make sure that the name of the link is coherent with the menu Tools-&gt;Fill in QSO data</extracomment>
-        <translation type="unfinished" />
+        <translation>&lt;b&gt;Padoms #1:&lt;/b&gt;&lt;br&gt;Vai zināt...&lt;br&gt;Varat izmantot &lt;a href="#ToolsFillInQSO"&gt;Rīki-&gt;Aizpildīt QSO datus&lt;/a&gt;, lai automātiski izlasītu visu žurnālu un aizpildītu DXCC, CQ, ITU zonas un kontinentu?</translation>
     </message>
     <message>
         <location filename="../tipsdialog.cpp" line="141" />
         <source>&lt;b&gt;Tip #3:&lt;/b&gt;&lt;br&gt;Do you know...&lt;br&gt;You can use &lt;a href="#ToolsFindQSO2QSL"&gt;Tools-&gt;QSL tools...-&gt;Find QSO to QSL&lt;/a&gt; to look for all those QSO that you should send your QSL because you still need to confirm that DXCC and you have still not send your QSL card?</source>
         <extracomment>Translator: Please make sure that the name of the link is coherent with the menu Tools-&gt;QSL tools...-&gt;Find QSO to QSL</extracomment>
-        <translation type="unfinished" />
+        <translation>&lt;b&gt;Padoms #3:&lt;/b&gt;&lt;br&gt;Vai zināt...&lt;br&gt;Varat izmantot &lt;a href="#ToolsFindQSO2QSL"&gt;Rīki-&gt;QSL rīki ...-&gt;Atrast QSO, kam sūtīt QSL&lt;/a&gt;, lai atrastu visus QSO, kuriem jānosūta sava QSL, jo šis DXCC vēl jāapstiprina un savu QSL karti vēl neesat nosūtījis?</translation>
     </message>
     <message>
         <location filename="../tipsdialog.cpp" line="162" />
         <source>&lt;b&gt;Tip #8:&lt;/b&gt;&lt;br&gt;Do you know...&lt;br&gt;You can find the QSLs that you are still waiting for with &lt;a href="#ToolsReceivePendingQSL"&gt;Tools-&gt;QSL tools...-&gt;Find DX-QSLs pending to receive&lt;/a&gt;.&lt;bR&gt;This tool will list you in the search box all the QSOs with the QSL-Sent marked as &lt;i&gt;Sent&lt;/i&gt; but you have still not received the QSL card from the DX.</source>
         <extracomment>Translator: Please make sure that the name of the link is coherent with the menu QSL tools...-&gt;Find DX-QSLs pending to receive</extracomment>
-        <translation type="unfinished" />
+        <translation>&lt;b&gt;Padoms #8:&lt;/b&gt;&lt;br&gt;Vai zināt...&lt;br&gt;QSL, kuras vēl gaidāt, varat atrast ar &lt;a href="#ToolsReceivePendingQSL"&gt;Rīki-&gt;QSL rīki ...-&gt;Atrast nesaņemtās DX QSL&lt;/a&gt;.&lt;bR&gt;Šis rīks meklēšanas lodziņā parādīs visus QSO, kuriem QSL nosūtīšanas statuss ir &lt;i&gt;nosūtīts&lt;/i&gt;, bet QSL karte no DX vēl nav saņemta.</translation>
     </message>
     <message>
         <location filename="../tipsdialog.cpp" line="166" />
         <source>&lt;b&gt;Tip #9:&lt;/b&gt;&lt;br&gt;Do you know...&lt;br&gt;You can find the QSLs that you are still waiting for with &lt;a href="#ToolsReceiveRecPendingQSL"&gt;Tools-&gt;QSL tools...-&gt;Find requested pending to receive&lt;/a&gt;.&lt;bR&gt;This tool will list you in the search box all the QSOs with the QSL-Rec marked as &lt;i&gt;Requested&lt;/i&gt; but you have still not received the QSL card from the DX.</source>
         <extracomment>Translator: Please make sure that the name of the link is coherent with the menu QSL tools...-&gt;Find requested pending to receive</extracomment>
-        <translation type="unfinished" />
+        <translation>&lt;b&gt;Padoms #9:&lt;/b&gt;&lt;br&gt;Vai zināt...&lt;br&gt;QSL, kuras vēl gaidāt, varat atrast ar &lt;a href="#ToolsReceiveRecPendingQSL"&gt;Rīki-&gt;QSL rīki ...-&gt;Atrast pieprasītās, kas nav saņemtas&lt;/a&gt;.&lt;bR&gt;Šis rīks meklēšanas lodziņā parādīs visus QSO, kuriem QSL saņemšanas statuss ir &lt;i&gt;pieprasīts&lt;/i&gt;, bet QSL karte no DX vēl nav saņemta.</translation>
     </message>
     <message>
         <location filename="../tipsdialog.cpp" line="169" />
         <source>&lt;b&gt;Tip #10:&lt;/b&gt;&lt;br&gt;Do you know...&lt;br&gt;You can subscribe to the &lt;a href=https://t.me/klogchat&gt;English KLog Telegram group&lt;/a&gt; to discuss about KLog in English?</source>
-        <translation type="unfinished" />
+        <translation>&lt;b&gt;Padoms #10:&lt;/b&gt;&lt;br&gt;Vai zināt...&lt;br&gt;Varat pievienoties &lt;a href=https://t.me/klogchat&gt;angļu valodas KLog Telegram grupai&lt;/a&gt;, lai apspriestu KLog angliski?</translation>
     </message>
     <message>
         <location filename="../tipsdialog.cpp" line="172" />
         <source>&lt;b&gt;Tip #11:&lt;/b&gt;&lt;br&gt;Do you know...&lt;br&gt;You can subscribe to the &lt;a href=https://t.me/KLogES&gt;Spanish Telegram group&lt;/a&gt; to discuss about KLog in Spanish?</source>
-        <translation type="unfinished" />
+        <translation>&lt;b&gt;Padoms #11:&lt;/b&gt;&lt;br&gt;Vai zināt...&lt;br&gt;Varat pievienoties &lt;a href=https://t.me/KLogES&gt;spāņu valodas Telegram grupai&lt;/a&gt;, lai apspriestu KLog spāņu valodā?</translation>
     </message>
     <message>
         <location filename="../tipsdialog.cpp" line="175" />
         <source>&lt;b&gt;Tip #12:&lt;/b&gt;&lt;br&gt;Do you know...&lt;br&gt;You can subscribe to &lt;a href=https://t.me/klogdevel&gt;KLog-devel telegram group&lt;/a&gt; to discuss about KLog development in English?</source>
-        <translation type="unfinished" />
+        <translation>&lt;b&gt;Padoms #12:&lt;/b&gt;&lt;br&gt;Vai zināt...&lt;br&gt;Varat pievienoties &lt;a href=https://t.me/klogdevel&gt;KLog-devel Telegram grupai&lt;/a&gt;, lai angliski apspriestu KLog izstrādi?</translation>
     </message>
     <message>
         <location filename="../tipsdialog.cpp" line="184" />
         <source>&lt;b&gt;Tip #15:&lt;/b&gt;&lt;br&gt;Do you know...&lt;br&gt;You can join the development team by simply &lt;a href=https://github.com/ea4k/klog?tab=readme-ov-file#telegram-groups&gt;Contacting us&lt;/a&gt;?</source>
-        <translation type="unfinished" />
+        <translation>&lt;b&gt;Padoms #15:&lt;/b&gt;&lt;br&gt;Vai zināt...&lt;br&gt;Varat pievienoties izstrādes komandai, vienkārši &lt;a href=https://github.com/ea4k/klog?tab=readme-ov-file#telegram-groups&gt;sazinoties ar mums&lt;/a&gt;?</translation>
     </message>
     <message>
         <location filename="../tipsdialog.cpp" line="187" />
         <source>&lt;b&gt;Tip #16:&lt;/b&gt;&lt;br&gt;Do you know...&lt;br&gt;That there are many ways to contribute to KLog and some of them are listed in the &lt;a href=https://github.com/ea4k/klog/issues&gt;KLog issues&lt;/a&gt; page?</source>
-        <translation type="unfinished" />
+        <translation>&lt;b&gt;Padoms #16:&lt;/b&gt;&lt;br&gt;Vai zināt...&lt;br&gt;Ka ir daudz veidu, kā piedalīties KLog izstrādē, un daži no tiem ir uzskaitīti &lt;a href=https://github.com/ea4k/klog/issues&gt;KLog issues&lt;/a&gt; lapā?</translation>
     </message>
     <message>
         <location filename="../tipsdialog.cpp" line="190" />
         <source>&lt;b&gt;Tip #17:&lt;/b&gt;&lt;br&gt;Do you know...&lt;br&gt;You can support translating KLog into your language? Please check &lt;a href=https://github.com/ea4k/klog/tree/master/src/translations&gt;KLog Translations&lt;/a&gt; page.</source>
-        <translation type="unfinished" />
+        <translation>&lt;b&gt;Padoms #17:&lt;/b&gt;&lt;br&gt;Vai zināt...&lt;br&gt;Varat palīdzēt tulkot KLog savā valodā? Lūdzu, skatiet &lt;a href=https://github.com/ea4k/klog/tree/master/src/translations&gt;KLog tulkojumu&lt;/a&gt; lapu.</translation>
     </message>
     <message>
         <location filename="../tipsdialog.cpp" line="137" />
         <source>&lt;b&gt;Tip #2:&lt;/b&gt;&lt;br&gt;Do you know...&lt;br&gt;You can find the QSLs that you still need to send with &lt;a href="#ToolsSendPendingQSL"&gt;Tools-&gt;QSL tools...-&gt;Find My-QSLs pending to send&lt;/a&gt;.&lt;bR&gt;This tool will list you in the search box all the QSOs with the QSL-Sent marked as &lt;i&gt;Requested&lt;/i&gt;.</source>
         <extracomment>Translator: Please make sure that the name of the link is coherent with the menu Tools-&gt;Fill in DXCC data</extracomment>
-        <translation type="unfinished" />
+        <translation>&lt;b&gt;Padoms #2:&lt;/b&gt;&lt;br&gt;Vai zināt...&lt;br&gt;QSL, kuras vēl jānosūta, varat atrast ar &lt;a href="#ToolsSendPendingQSL"&gt;Rīki-&gt;QSL rīki ...-&gt;Atrast nenosūtītās savas QSL&lt;/a&gt;.&lt;bR&gt;Šis rīks meklēšanas lodziņā parādīs visus QSO, kuriem QSL nosūtīšanas statuss ir &lt;i&gt;pieprasīts&lt;/i&gt;.</translation>
     </message>
     <message>
         <location filename="../tipsdialog.cpp" line="145" />
         <source>&lt;b&gt;Tip #4:&lt;/b&gt;&lt;br&gt;Do you know...&lt;br&gt;You can enter a '*' in the search box, in the search window to search for all the QSOs done with one specific station callsign?</source>
         <extracomment>Translator: Please make sure that the name of the link is coherent with the menu File-&gt;Export Requested QSL to ADIF...</extracomment>
-        <translation type="unfinished" />
+        <translation>&lt;b&gt;Padoms #4:&lt;/b&gt;&lt;br&gt;Vai zināt...&lt;br&gt;Meklēšanas logā varat meklēšanas lodziņā ievadīt „*”, lai atrastu visus QSO, kas veikti ar vienu konkrētu stacijas izsaukuma signālu?</translation>
     </message>
     <message>
         <location filename="../tipsdialog.cpp" line="148" />
         <source>&lt;b&gt;Tip #5:&lt;/b&gt;&lt;br&gt;Do you know...&lt;br&gt;You can find the file containing all your log and other information in the logbook.dat file and the klogrc file, containing the KLog config file in the KLog folder by opening the &lt;a href="#FileOpenKLogFolder"&gt;File-&gt;KLog folder&lt;/a&gt; menu?</source>
-        <translation type="unfinished" />
+        <translation>&lt;b&gt;Padoms #5:&lt;/b&gt;&lt;br&gt;Vai zināt...&lt;br&gt;Failu ar visu jūsu žurnālu un citu informāciju (logbook.dat) un KLog konfigurācijas failu (klogrc) varat atrast KLog mapē, atverot izvēlni &lt;a href="#FileOpenKLogFolder"&gt;Fails-&gt;KLog mape&lt;/a&gt;?</translation>
     </message>
     <message>
         <location filename="../tipsdialog.cpp" line="154" />
