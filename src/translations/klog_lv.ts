@@ -7344,7 +7344,7 @@ Ja ports nav norādīts, pēc noklusējuma tiks lietots 41112:</translation>
     <message>
         <location filename="../setuppages/setuppagehamlib.cpp" line="230" />
         <source>Network</source>
-        <translation type="unfinished" />
+        <translation>Tīkls</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagehamlib.cpp" line="207" />
@@ -7354,7 +7354,7 @@ Ja ports nav norādīts, pēc noklusējuma tiks lietots 41112:</translation>
     <message>
         <location filename="../setuppages/setuppagehamlib.cpp" line="42" />
         <source>000.0000 / %1</source>
-        <translation type="unfinished" />
+        <translation>000.0000 / %1</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagehamlib.cpp" line="42" />
@@ -7425,22 +7425,22 @@ Ja ports nav norādīts, pēc noklusējuma tiks lietots 41112:</translation>
     <message>
         <location filename="../setuppages/setuppagelogs.cpp" line="151" />
         <source>Do you really want to remove this log?</source>
-        <translation type="unfinished" />
+        <translation>Vai tiešām vēlaties noņemt šo žurnālu?</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagelogs.cpp" line="152" />
         <source>All the QSOs from this log will also be deleted...</source>
-        <translation type="unfinished" />
+        <translation>Tiks izdzēsti arī visi šī žurnāla QSO...</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagelogs.cpp" line="172" />
         <source>Log has not been removed. (#2)</source>
-        <translation type="unfinished" />
+        <translation>Žurnāls nav noņemts. (#2)</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagelogs.cpp" line="179" />
         <source>Log has not been removed. (#1)</source>
-        <translation type="unfinished" />
+        <translation>Žurnāls nav noņemts. (#1)</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagelogs.cpp" line="234" />
@@ -7460,12 +7460,12 @@ Ja ports nav norādīts, pēc noklusējuma tiks lietots 41112:</translation>
     <message>
         <location filename="../setuppages/setuppagelogs.cpp" line="243" />
         <source>Operators</source>
-        <translation type="unfinished" />
+        <translation>Operatori</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagelogs.cpp" line="246" />
         <source>Comments</source>
-        <translation type="unfinished" />
+        <translation>Komentāri</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagelogs.cpp" line="249" />
@@ -7475,17 +7475,17 @@ Ja ports nav norādīts, pēc noklusējuma tiks lietots 41112:</translation>
     <message>
         <location filename="../setuppages/setuppagelogs.cpp" line="373" />
         <source>The new log could not be created.</source>
-        <translation type="unfinished" />
+        <translation>Jauno žurnālu neizdevās izveidot.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagelogs.cpp" line="399" />
         <source>An error has occurred showing the following error code:</source>
-        <translation type="unfinished" />
+        <translation>Radusies kļūda ar šādu kļūdas kodu:</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagelogs.cpp" line="402" />
         <source>KLog - SetupPageLogs</source>
-        <translation type="unfinished" />
+        <translation>KLog — žurnālu iestatījumi</translation>
     </message>
 </context>
 <context>
@@ -7493,27 +7493,27 @@ Ja ports nav norādīts, pēc noklusējuma tiks lietots 41112:</translation>
     <message>
         <location filename="../setuppages/setuppagelogsnew.cpp" line="55" />
         <source>&amp;Date</source>
-        <translation type="unfinished" />
+        <translation>&amp;Datums</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagelogsnew.cpp" line="56" />
         <source>&amp;Station Callsign</source>
-        <translation type="unfinished" />
+        <translation>&amp;Stacijas izsaukuma signāls</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagelogsnew.cpp" line="57" />
         <source>&amp;Operators</source>
-        <translation type="unfinished" />
+        <translation>&amp;Operatori</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagelogsnew.cpp" line="58" />
         <source>Comm&amp;ent</source>
-        <translation type="unfinished" />
+        <translation>Ko&amp;mentārs</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagelogsnew.cpp" line="60" />
         <source>&amp;Ok</source>
-        <translation type="unfinished" />
+        <translation>&amp;OK</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagelogsnew.cpp" line="61" />
@@ -7523,28 +7523,29 @@ Ja ports nav norādīts, pēc noklusējuma tiks lietots 41112:</translation>
     <message>
         <location filename="../setuppages/setuppagelogsnew.cpp" line="97" />
         <source>Callsign used for this log.</source>
-        <translation type="unfinished" />
+        <translation>Šim žurnālam lietotais izsaukuma signāls.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagelogsnew.cpp" line="98" />
         <source>Comma separated list of operators: callsign1, callsign2.</source>
-        <translation type="unfinished" />
+        <translation>Operatoru saraksts, atdalīts ar komatiem: izsaukuma signāls1, izsaukuma signāls2.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagelogsnew.cpp" line="100" />
         <source>Start date of this log.</source>
-        <translation type="unfinished" />
+        <translation>Šī žurnāla sākuma datums.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagelogsnew.cpp" line="101" />
         <source>Add a comment about this log. If filled, it will be shown in the main KLog title to identify the log.</source>
-        <translation type="unfinished" />
+        <translation>Pievienojiet komentāru par šo žurnālu. Ja aizpildīts, tas tiks rādīts KLog galvenajā virsrakstā, lai identificētu žurnālu.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagelogsnew.cpp" line="209" />
         <source>You need to enter a valid callsign in the Station Callsign box.
 The log will not be opened.</source>
-        <translation type="unfinished" />
+        <translation>Laukā „Stacijas izsaukuma signāls” jāievada derīgs izsaukuma signāls.
+Žurnāls netiks atvērts.</translation>
     </message>
 </context>
 <context>
@@ -7562,52 +7563,52 @@ The log will not be opened.</source>
     <message>
         <location filename="../setuppages/setuppagemisc.cpp" line="41" />
         <source>&amp;Time in UTC</source>
-        <translation type="unfinished" />
+        <translation>&amp;Laiks UTC</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagemisc.cpp" line="42" />
         <source>&amp;Save ADIF on exit</source>
-        <translation type="unfinished" />
+        <translation>Saglabāt &amp;ADIF izejot</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagemisc.cpp" line="43" />
         <source>Use this &amp;default filename</source>
-        <translation type="unfinished" />
+        <translation>Izmantot šo &amp;noklusējuma faila nosaukumu</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagemisc.cpp" line="44" />
         <source>Mark &amp;QSO to send QSL when QSL is received</source>
-        <translation type="unfinished" />
+        <translation>Atzīmēt &amp;QSO nosūtīšanai QSL, kad QSL ir saņemts</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagemisc.cpp" line="45" />
         <source>Complete QSO with previous data</source>
-        <translation type="unfinished" />
+        <translation>Aizpildīt QSO ar iepriekšējiem datiem</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagemisc.cpp" line="46" />
         <source>Show the Station &amp;Callsign used in the search box</source>
-        <translation type="unfinished" />
+        <translation>Rādīt stacijas &amp;izsaukuma signālu meklēšanas lodziņā</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagemisc.cpp" line="48" />
         <source>&amp;Check for new versions automatically</source>
-        <translation type="unfinished" />
+        <translation>&amp;Pārbaudīt jaunas versijas automātiski</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagemisc.cpp" line="50" />
         <source>Manage DX-Marathon</source>
-        <translation type="unfinished" />
+        <translation>Pārvaldīt DX-Marathon</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagemisc.cpp" line="51" />
         <source>Check band &amp;&amp; mode for needed status</source>
-        <translation type="unfinished" />
+        <translation>Pārbaudīt diapazonu &amp;&amp; režīmu, lai noteiktu nepieciešamību</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagemisc.cpp" line="54" />
         <source>Mark sent eQSL &amp;&amp; LoTW in new QSO as queued</source>
-        <translation type="unfinished" />
+        <translation>Atzīmēt nosūtītos eQSL &amp;&amp; LoTW jaunajos QSO kā rindā gaidošus</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagemisc.cpp" line="55" />
@@ -7931,7 +7932,7 @@ The log will not be opened.</source>
     <message>
         <location filename="../setuppages/setuppagesats.cpp" line="517" />
         <source>An error has occurred showing the following error code:</source>
-        <translation type="unfinished" />
+        <translation>Radusies kļūda ar šādu kļūdas kodu:</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesats.cpp" line="520" />
@@ -7996,7 +7997,7 @@ It may be caused because the file you are trying to import does not have the rig
     <message>
         <location filename="../setuppages/setuppagesatsnew.cpp" line="58" />
         <source>&amp;Ok</source>
-        <translation type="unfinished" />
+        <translation>&amp;OK</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesatsnew.cpp" line="59" />
@@ -8039,27 +8040,27 @@ It may be caused because the file you are trying to import does not have the rig
     <message>
         <location filename="../setuppages/setuppagesubdivisionnew.cpp" line="65" />
         <source>&amp;Date</source>
-        <translation type="unfinished" />
+        <translation>&amp;Datums</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesubdivisionnew.cpp" line="66" />
         <source>&amp;Station Callsign</source>
-        <translation type="unfinished" />
+        <translation>&amp;Stacijas izsaukuma signāls</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesubdivisionnew.cpp" line="67" />
         <source>&amp;Operators</source>
-        <translation type="unfinished" />
+        <translation>&amp;Operatori</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesubdivisionnew.cpp" line="68" />
         <source>Comm&amp;ent</source>
-        <translation type="unfinished" />
+        <translation>Ko&amp;mentārs</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesubdivisionnew.cpp" line="70" />
         <source>&amp;Ok</source>
-        <translation type="unfinished" />
+        <translation>&amp;OK</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesubdivisionnew.cpp" line="71" />
@@ -8069,28 +8070,29 @@ It may be caused because the file you are trying to import does not have the rig
     <message>
         <location filename="../setuppages/setuppagesubdivisionnew.cpp" line="135" />
         <source>Callsign used for this log.</source>
-        <translation type="unfinished" />
+        <translation>Šim žurnālam lietotais izsaukuma signāls.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesubdivisionnew.cpp" line="136" />
         <source>Comma separated list of operators: callsign1, callsign2.</source>
-        <translation type="unfinished" />
+        <translation>Operatoru saraksts, atdalīts ar komatiem: izsaukuma signāls1, izsaukuma signāls2.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesubdivisionnew.cpp" line="138" />
         <source>Start date of this log.</source>
-        <translation type="unfinished" />
+        <translation>Šī žurnāla sākuma datums.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesubdivisionnew.cpp" line="139" />
         <source>Add a comment about this log. If filled, it will be shown in the main KLog title to identify the log.</source>
-        <translation type="unfinished" />
+        <translation>Pievienojiet komentāru par šo žurnālu. Ja aizpildīts, tas tiks rādīts KLog galvenajā virsrakstā, lai identificētu žurnālu.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesubdivisionnew.cpp" line="552" />
         <source>You need to enter a valid callsign in the Station Callsign box.
 The log will not be opened.</source>
-        <translation type="unfinished" />
+        <translation>Laukā „Stacijas izsaukuma signāls” jāievada derīgs izsaukuma signāls.
+Žurnāls netiks atvērts.</translation>
     </message>
 </context>
 <context>
@@ -8143,12 +8145,12 @@ The log will not be opened.</source>
     <message>
         <location filename="../setuppages/setuppagesubdivisions.cpp" line="159" />
         <source>Log has not been removed. (#2)</source>
-        <translation type="unfinished" />
+        <translation>Žurnāls nav noņemts. (#2)</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesubdivisions.cpp" line="166" />
         <source>Log has not been removed. (#1)</source>
-        <translation type="unfinished" />
+        <translation>Žurnāls nav noņemts. (#1)</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesubdivisions.cpp" line="214" />
@@ -8198,7 +8200,7 @@ The log will not be opened.</source>
     <message>
         <location filename="../setuppages/setuppagesubdivisions.cpp" line="365" />
         <source>An error has occurred showing the following error code:</source>
-        <translation type="unfinished" />
+        <translation>Radusies kļūda ar šādu kļūdas kodu:</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesubdivisions.cpp" line="368" />
@@ -8484,7 +8486,7 @@ The log will not be opened.</source>
     <message>
         <location filename="../setuppages/setuppageuserdata.cpp" line="202" />
         <source>&amp;Operators</source>
-        <translation type="unfinished" />
+        <translation>&amp;Operatori</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageuserdata.cpp" line="203" />
