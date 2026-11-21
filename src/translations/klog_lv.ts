@@ -6230,7 +6230,7 @@ KLog beigs darbu, kad nospiedīsiet OK.</translation>
     <message>
         <location filename="../searchwidget.cpp" line="61" />
         <source>All logs</source>
-        <translation type="unfinished" />
+        <translation>Visi žurnāli</translation>
     </message>
     <message>
         <location filename="../searchwidget.cpp" line="175" />
@@ -6290,12 +6290,12 @@ KLog beigs darbu, kad nospiedīsiet OK.</translation>
     <message>
         <location filename="../searchwidget.cpp" line="615" />
         <source>&amp;Clear selection</source>
-        <translation type="unfinished" />
+        <translation>&amp;Notīrīt atlasi</translation>
     </message>
     <message>
         <location filename="../searchwidget.cpp" line="663" />
         <source>Save File</source>
-        <translation type="unfinished" />
+        <translation>Saglabāt failu</translation>
     </message>
 </context>
 <context>
@@ -6351,12 +6351,12 @@ KLog beigs darbu, kad nospiedīsiet OK.</translation>
         <location filename="../searchwindow.cpp" line="88" />
         <location filename="../searchwindow.cpp" line="93" />
         <source>ID</source>
-        <translation type="unfinished" />
+        <translation>ID</translation>
     </message>
     <message>
         <location filename="../searchwindow.cpp" line="198" />
         <source>Date/time</source>
-        <translation type="unfinished" />
+        <translation>Datums/laiks</translation>
     </message>
     <message>
         <location filename="../searchwindow.cpp" line="222" />
@@ -6456,78 +6456,78 @@ KLog beigs darbu, kad nospiedīsiet OK.</translation>
     <message>
         <location filename="../searchwindow.cpp" line="434" />
         <source>&amp;Request my QSL</source>
-        <translation type="unfinished" />
+        <translation>&amp;Pieprasīt manu QSL</translation>
     </message>
     <message>
         <location filename="../searchwindow.cpp" line="435" />
         <source>Mark my QSL as requested</source>
-        <translation type="unfinished" />
+        <translation>Atzīmēt manu QSL kā pieprasītu</translation>
     </message>
     <message>
         <location filename="../searchwindow.cpp" line="438" />
         <source>Via Direct and mark DX QSL as requested</source>
-        <translation type="unfinished" />
+        <translation>Tieši un atzīmēt DX QSL kā pieprasītu</translation>
     </message>
     <message>
         <location filename="../searchwindow.cpp" line="439" />
         <source>Send this QSL via direct and mark DX QSL as requested</source>
-        <translation type="unfinished" />
+        <translation>Sūtīt šo QSL tieši un atzīmēt DX QSL kā pieprasītu</translation>
     </message>
     <message>
         <location filename="../searchwindow.cpp" line="442" />
         <source>Via Bureau and mark DX QSL as requested</source>
-        <translation type="unfinished" />
+        <translation>Caur biroju un atzīmēt DX QSL kā pieprasītu</translation>
     </message>
     <message>
         <location filename="../searchwindow.cpp" line="443" />
         <source>Send this QSL via bureau and mark DX QSL as requested</source>
-        <translation type="unfinished" />
+        <translation>Sūtīt šo QSL caur biroju un atzīmēt DX QSL kā pieprasītu</translation>
     </message>
     <message>
         <location filename="../searchwindow.cpp" line="446" />
         <source>&amp;Request the QSL</source>
-        <translation type="unfinished" />
+        <translation>&amp;Pieprasīt QSL</translation>
     </message>
     <message>
         <location filename="../searchwindow.cpp" line="447" />
         <source>Mark the QSL as requested</source>
-        <translation type="unfinished" />
+        <translation>Atzīmēt QSL kā pieprasītu</translation>
     </message>
     <message>
         <location filename="../searchwindow.cpp" line="450" />
         <source>Via bureau and mark my QSL as requested</source>
-        <translation type="unfinished" />
+        <translation>Caur biroju un atzīmēt manu QSL kā pieprasītu</translation>
     </message>
     <message>
         <location filename="../searchwindow.cpp" line="451" />
         <source>QSL received via bureau and mark my QSL as requested</source>
-        <translation type="unfinished" />
+        <translation>QSL saņemts caur biroju un atzīmēt manu QSL kā pieprasītu</translation>
     </message>
     <message>
         <location filename="../searchwindow.cpp" line="454" />
         <source>Direc&amp;t and mark as my QSL requested</source>
-        <translation type="unfinished" />
+        <translation>&amp;Tieši un atzīmēt manu QSL kā pieprasītu</translation>
     </message>
     <message>
         <location filename="../searchwindow.cpp" line="455" />
         <source>QSL received via direct and mark my QSL as requested</source>
-        <translation type="unfinished" />
+        <translation>QSL saņemts tieši un atzīmēt manu QSL kā pieprasītu</translation>
     </message>
     <message>
         <location filename="../searchwindow.cpp" line="676" />
         <source>Needed QSO to send the QSL</source>
-        <translation type="unfinished" />
+        <translation>QSO, kam jānosūta QSL</translation>
     </message>
     <message>
         <location filename="../searchwindow.cpp" line="684" />
         <source>My QSL requested to be sent</source>
-        <translation type="unfinished" />
+        <translation>Mana QSL pieprasīta nosūtīšanai</translation>
     </message>
     <message>
         <location filename="../searchwindow.cpp" line="689" />
         <location filename="../searchwindow.cpp" line="694" />
         <source>DX QSL pending to be received</source>
-        <translation type="unfinished" />
+        <translation>DX QSL gaida saņemšanu</translation>
     </message>
 </context>
 <context>
@@ -6536,51 +6536,51 @@ KLog beigs darbu, kad nospiedīsiet OK.</translation>
         <location filename="../setupdialog.cpp" line="87" />
         <location filename="../setupdialog.cpp" line="284" />
         <source>User data</source>
-        <translation type="unfinished" />
+        <translation>Lietotāja dati</translation>
     </message>
     <message>
         <location filename="../setupdialog.cpp" line="88" />
         <location filename="../setupdialog.cpp" line="296" />
         <source>Bands/Modes</source>
-        <translation type="unfinished" />
+        <translation>Diapazoni/režīmi</translation>
     </message>
     <message>
         <location filename="../setupdialog.cpp" line="89" />
         <source>Log widget</source>
-        <translation type="unfinished" />
+        <translation>Žurnāla logdaļa</translation>
     </message>
     <message>
         <location filename="../setupdialog.cpp" line="90" />
         <source>D&amp;X-Cluster</source>
-        <translation type="unfinished" />
+        <translation>D&amp;X-Cluster</translation>
     </message>
     <message>
         <location filename="../setupdialog.cpp" line="91" />
         <location filename="../setupdialog.cpp" line="308" />
         <source>Colors</source>
-        <translation type="unfinished" />
+        <translation>Krāsas</translation>
     </message>
     <message>
         <location filename="../setupdialog.cpp" line="92" />
         <location filename="../setupdialog.cpp" line="314" />
         <source>Misc</source>
-        <translation type="unfinished" />
+        <translation>Dažādi</translation>
     </message>
     <message>
         <location filename="../setupdialog.cpp" line="93" />
         <source>World Editor</source>
-        <translation type="unfinished" />
+        <translation>Pasaules redaktors</translation>
     </message>
     <message>
         <location filename="../setupdialog.cpp" line="94" />
         <location filename="../setupdialog.cpp" line="290" />
         <source>Logs</source>
-        <translation type="unfinished" />
+        <translation>Žurnāli</translation>
     </message>
     <message>
         <location filename="../setupdialog.cpp" line="95" />
         <source>eLog</source>
-        <translation type="unfinished" />
+        <translation>eLog</translation>
     </message>
     <message>
         <location filename="../setupdialog.cpp" line="96" />
@@ -6590,12 +6590,12 @@ KLog beigs darbu, kad nospiedīsiet OK.</translation>
     <message>
         <location filename="../setupdialog.cpp" line="97" />
         <source>Satellites</source>
-        <translation type="unfinished" />
+        <translation>Pavadoņi</translation>
     </message>
     <message>
         <location filename="../setupdialog.cpp" line="98" />
         <source>HamLib</source>
-        <translation type="unfinished" />
+        <translation>HamLib</translation>
     </message>
     <message>
         <location filename="../setupdialog.cpp" line="101" />
@@ -6605,23 +6605,24 @@ KLog beigs darbu, kad nospiedīsiet OK.</translation>
     <message>
         <location filename="../setupdialog.cpp" line="102" />
         <source>OK</source>
-        <translation type="unfinished" />
+        <translation>OK</translation>
     </message>
     <message>
         <location filename="../setupdialog.cpp" line="117" />
         <source>Settings</source>
-        <translation type="unfinished" />
+        <translation>Iestatījumi</translation>
     </message>
     <message>
         <location filename="../setupdialog.cpp" line="256" />
         <source>You need to enter at least one log in the Logs tab.</source>
-        <translation type="unfinished" />
+        <translation>Cilnē „Žurnāli” jāievada vismaz viens žurnāls.</translation>
     </message>
     <message>
         <location filename="../setupdialog.cpp" line="257" />
         <source>Do you want to add one log in the Logs tab or exit KLog?
 (Click Yes to add a log or No to exit KLog)</source>
-        <translation type="unfinished" />
+        <translation>Vai vēlaties pievienot vienu žurnālu cilnē „Žurnāli” vai iziet no KLog?
+(Spiediet Jā, lai pievienotu žurnālu, vai Nē, lai izietu no KLog)</translation>
     </message>
     <message>
         <location filename="../setupdialog.cpp" line="302" />
@@ -6631,28 +6632,29 @@ KLog beigs darbu, kad nospiedīsiet OK.</translation>
     <message>
         <location filename="../setupdialog.cpp" line="320" />
         <source>World</source>
-        <translation type="unfinished" />
+        <translation>Pasaule</translation>
     </message>
     <message>
         <location filename="../setupdialog.cpp" line="431" />
         <source>DB has not been moved to new path.</source>
-        <translation type="unfinished" />
+        <translation>Datubāze nav pārvietota uz jauno ceļu.</translation>
     </message>
     <message>
         <location filename="../setupdialog.cpp" line="432" />
         <source>Go to the Misc tab and click on Move DB
  or the DB will not be moved to the new location.</source>
-        <translation type="unfinished" />
+        <translation>Atveriet cilni „Dažādi” un noklikšķiniet uz Move DB
+, citādi datubāze netiks pārvietota uz jauno vietu.</translation>
     </message>
     <message>
         <location filename="../setupdialog.cpp" line="443" />
         <source>You need to enter at least a valid callsign.</source>
-        <translation type="unfinished" />
+        <translation>Jāievada vismaz viens derīgs izsaukuma signāls.</translation>
     </message>
     <message>
         <location filename="../setupdialog.cpp" line="444" />
         <source>Go to the User tab and enter valid callsign.</source>
-        <translation type="unfinished" />
+        <translation>Atveriet cilni „Lietotāja dati” un ievadiet derīgu izsaukuma signālu.</translation>
     </message>
     <message>
         <location filename="../setupdialog.cpp" line="455" />
@@ -7440,7 +7442,7 @@ If no port is specified, 41112 will be used by default:</source>
     <message>
         <location filename="../setuppages/setuppagelogs.cpp" line="234" />
         <source>ID</source>
-        <translation type="unfinished" />
+        <translation>ID</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagelogs.cpp" line="237" />
@@ -7896,7 +7898,7 @@ The log will not be opened.</source>
     <message>
         <location filename="../setuppages/setuppagesats.cpp" line="289" />
         <source>ID</source>
-        <translation type="unfinished" />
+        <translation>ID</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesats.cpp" line="292" />
@@ -8148,7 +8150,7 @@ The log will not be opened.</source>
     <message>
         <location filename="../setuppages/setuppagesubdivisions.cpp" line="214" />
         <source>ID</source>
-        <translation type="unfinished" />
+        <translation>ID</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesubdivisions.cpp" line="217" />
@@ -9918,7 +9920,7 @@ The log will not be opened.</source>
     <message>
         <location filename="../elog/elogclublog.cpp" line="653" />
         <source>OK</source>
-        <translation type="unfinished" />
+        <translation>OK</translation>
     </message>
     <message>
         <location filename="../elog/elogclublog.cpp" line="657" />
