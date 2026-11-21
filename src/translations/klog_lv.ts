@@ -8230,12 +8230,12 @@ The log will not be opened.</source>
     <message>
         <location filename="../setuppages/setuppageudp.cpp" line="66" />
         <source>QSOs logged in WSJT-X will be sent to KLog and KLog will ask before logging into KLog unless "%1" is selected</source>
-        <translation type="unfinished" />
+        <translation>WSJT-X ierakstītie QSO tiks nosūtīti uz KLog, un KLog pirms ierakstīšanas jautās, ja vien nav izvēlēts „%1”</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageudp.cpp" line="69" />
         <source>KLog will automatically log any QSO coming from WSJT-X without any manual confirmation.</source>
-        <translation type="unfinished" />
+        <translation>KLog automātiski ierakstīs jebkuru no WSJT-X saņemtu QSO bez manuāla apstiprinājuma.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageudp.cpp" line="72" />
@@ -8245,48 +8245,48 @@ The log will not be opened.</source>
     <message>
         <location filename="../setuppages/setuppageudp.cpp" line="73" />
         <source>KLog will automatically show and update data coming from WSJT-X (DX callsign, Report, mode, ...)</source>
-        <translation type="unfinished" />
+        <translation>KLog automātiski rādīs un atjauninās no WSJT-X saņemtos datus (DX izsaukuma signālu, ziņojumu, režīmu, ...)</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageudp.cpp" line="89" />
         <source>UDP port number where the UDP Server will listen for packets.</source>
-        <translation type="unfinished" />
+        <translation>UDP porta numurs, kurā UDP serveris klausīsies paketes.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageudp.cpp" line="89" />
         <source>Make sure it is the same port that the other programs are sending the data to. Default port is 2237.</source>
-        <translation type="unfinished" />
+        <translation>Pārliecinieties, ka tas ir tas pats ports, uz kuru citas programmas sūta datus. Noklusējuma ports ir 2237.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageudp.cpp" line="90" />
         <source>UDP Server will receive QSOs sent from other programs like WSJT-X allowing you to log in KLog automatically from those programs.</source>
-        <translation type="unfinished" />
+        <translation>UDP serveris saņems QSO, ko sūta citas programmas, piemēram, WSJT-X, ļaujot jums ierakstīt KLog automātiski no šīm programmām.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageudp.cpp" line="97" />
         <source>UDP Port</source>
-        <translation type="unfinished" />
+        <translation>UDP ports</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageudp.cpp" line="107" />
         <location filename="../setuppages/setuppageudp.cpp" line="109" />
         <source>Select the interface to listen for UDP datagrams coming from WSJT-X.</source>
-        <translation type="unfinished" />
+        <translation>Izvēlieties saskarni, kurā klausīties no WSJT-X nākošās UDP datagrammas.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageudp.cpp" line="108" />
         <source>Network interface</source>
-        <translation type="unfinished" />
+        <translation>Tīkla saskarne</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageudp.cpp" line="114" />
         <source>Multicast group address WSJT-X is sending the datagrams to.</source>
-        <translation type="unfinished" />
+        <translation>Multicast grupas adrese, uz kuru WSJT-X sūta datagrammas.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageudp.cpp" line="115" />
         <source>Leave it empty unless WSJT-X is configured to use multicast, needed to share the datagrams with other programs.</source>
-        <translation type="unfinished" />
+        <translation>Atstājiet tukšu, ja vien WSJT-X nav konfigurēts izmantot multicast, kas vajadzīgs, lai dalītos ar datagrammām ar citām programmām.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageudp.cpp" line="116" />
@@ -8296,17 +8296,17 @@ The log will not be opened.</source>
     <message>
         <location filename="../setuppages/setuppageudp.cpp" line="118" />
         <source>Multicast address</source>
-        <translation type="unfinished" />
+        <translation>Multicast adrese</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageudp.cpp" line="130" />
         <source>QSOs notification timeout (milisecs)</source>
-        <translation type="unfinished" />
+        <translation>QSO paziņojuma ilgums (milisekundēs)</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageudp.cpp" line="131" />
         <source>Miliseconds that the notification of QSOs received from WSJTX will be shown.</source>
-        <translation type="unfinished" />
+        <translation>Milisekundes, cik ilgi tiks rādīts paziņojums par no WSJT-X saņemtajiem QSO.</translation>
     </message>
 </context>
 <context>
@@ -8314,12 +8314,12 @@ The log will not be opened.</source>
     <message>
         <location filename="../setuppages/setuppageuserdata.cpp" line="44" />
         <source>&amp;Personal data</source>
-        <translation type="unfinished" />
+        <translation>&amp;Personas dati</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageuserdata.cpp" line="45" />
         <source>Station &amp;data</source>
-        <translation type="unfinished" />
+        <translation>Stacijas &amp;dati</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageuserdata.cpp" line="71" />
@@ -8329,116 +8329,116 @@ The log will not be opened.</source>
     <message>
         <location filename="../setuppages/setuppageuserdata.cpp" line="84" />
         <source>Enter your name.</source>
-        <translation type="unfinished" />
+        <translation>Ievadiet savu vārdu.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageuserdata.cpp" line="85" />
         <source>Select the language of the KLog user interface. 'System default' uses the language of the operating system.</source>
-        <translation type="unfinished" />
+        <translation>Izvēlieties KLog lietotāja saskarnes valodu. „System default” izmanto operētājsistēmas valodu.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageuserdata.cpp" line="86" />
         <source>Enter your address - 1st line.</source>
-        <translation type="unfinished" />
+        <translation>Ievadiet savu adresi — 1. rinda.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageuserdata.cpp" line="87" />
         <source>Enter your address - 2nd line.</source>
-        <translation type="unfinished" />
+        <translation>Ievadiet savu adresi — 2. rinda.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageuserdata.cpp" line="88" />
         <source>Enter your address - 3rd line.</source>
-        <translation type="unfinished" />
+        <translation>Ievadiet savu adresi — 3. rinda.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageuserdata.cpp" line="89" />
         <source>Enter your address - 4th line.</source>
-        <translation type="unfinished" />
+        <translation>Ievadiet savu adresi — 4. rinda.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageuserdata.cpp" line="90" />
         <source>Enter your city.</source>
-        <translation type="unfinished" />
+        <translation>Ievadiet savu pilsētu.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageuserdata.cpp" line="91" />
         <source>Enter your zip code.</source>
-        <translation type="unfinished" />
+        <translation>Ievadiet savu pasta indeksu.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageuserdata.cpp" line="92" />
         <source>Enter your province or state.</source>
-        <translation type="unfinished" />
+        <translation>Ievadiet savu provinci vai štatu.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageuserdata.cpp" line="93" />
         <source>Enter your country.</source>
-        <translation type="unfinished" />
+        <translation>Ievadiet savu valsti.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageuserdata.cpp" line="95" />
         <source>&amp;Name</source>
-        <translation type="unfinished" />
+        <translation>&amp;Vārds</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageuserdata.cpp" line="96" />
         <source>Lang&amp;uage</source>
-        <translation type="unfinished" />
+        <translation>&amp;Valoda</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageuserdata.cpp" line="97" />
         <source>&amp;Address</source>
-        <translation type="unfinished" />
+        <translation>&amp;Adrese</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageuserdata.cpp" line="98" />
         <source>Cit&amp;y</source>
-        <translation type="unfinished" />
+        <translation>Pils&amp;ēta</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageuserdata.cpp" line="99" />
         <source>&amp;Zip Code</source>
-        <translation type="unfinished" />
+        <translation>Pasta &amp;indekss</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageuserdata.cpp" line="100" />
         <source>Pro&amp;v/State</source>
-        <translation type="unfinished" />
+        <translation>Pro&amp;vince/štats</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageuserdata.cpp" line="101" />
         <source>Countr&amp;y</source>
-        <translation type="unfinished" />
+        <translation>Val&amp;sts</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageuserdata.cpp" line="150" />
         <location filename="../setuppages/setuppageuserdata.cpp" line="151" />
         <location filename="../setuppages/setuppageuserdata.cpp" line="152" />
         <source>Enter your information for rig</source>
-        <translation type="unfinished" />
+        <translation>Ievadiet informāciju par radioiekārtu</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageuserdata.cpp" line="153" />
         <location filename="../setuppages/setuppageuserdata.cpp" line="154" />
         <location filename="../setuppages/setuppageuserdata.cpp" line="155" />
         <source>Enter your information for antenna</source>
-        <translation type="unfinished" />
+        <translation>Ievadiet informāciju par antenu</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageuserdata.cpp" line="156" />
         <source>Enter your power information.</source>
-        <translation type="unfinished" />
+        <translation>Ievadiet informāciju par jaudu.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageuserdata.cpp" line="158" />
         <source>&amp;Rig 1</source>
-        <translation type="unfinished" />
+        <translation>&amp;Radioiekārta 1</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageuserdata.cpp" line="159" />
         <source>R&amp;ig 2</source>
-        <translation type="unfinished" />
+        <translation>Radioiekārt&amp;a 2</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageuserdata.cpp" line="160" />
