@@ -4952,7 +4952,7 @@ Frekvence nav radioamatieru diapazonā!</translation>
         <location filename="../inputwidgets/mainwindowsattab.cpp" line="120" />
         <location filename="../inputwidgets/mainwindowsattab.cpp" line="431" />
         <source>Other - Sat not in the list</source>
-        <translation type="unfinished" />
+        <translation>Cits - pavadonis nav sarakstā</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowsattab.cpp" line="123" />
@@ -5013,7 +5013,7 @@ Frekvence nav radioamatieru diapazonā!</translation>
     <message>
         <location filename="../inputwidgets/mainwindowsattab.cpp" line="430" />
         <source>Not Sat QSO</source>
-        <translation type="unfinished" />
+        <translation>Nav pavadoņa QSO</translation>
     </message>
     <message>
         <location filename="../inputwidgets/mainwindowsattab.cpp" line="468" />
@@ -5056,7 +5056,7 @@ Frekvence nav radioamatieru diapazonā!</translation>
     <message>
         <location filename="../widgets/map/mapwindowwidget.cpp" line="120" />
         <source>Only confirmed</source>
-        <translation type="unfinished" />
+        <translation>Tikai apstiprinātie</translation>
     </message>
     <message>
         <location filename="../widgets/map/mapwindowwidget.cpp" line="122" />
@@ -6038,17 +6038,17 @@ KLog beigs darbu, kad nospiedīsiet OK.</translation>
     <message>
         <location filename="../utilities.cpp" line="1590" />
         <source>QSL via</source>
-        <translation type="unfinished" />
+        <translation>QSL via</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1591" />
         <source>QSO complete</source>
-        <translation type="unfinished" />
+        <translation>QSO complete</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1592" />
         <source>QSO random</source>
-        <translation type="unfinished" />
+        <translation>QSO random</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1593" />
@@ -6058,53 +6058,53 @@ KLog beigs darbu, kad nospiedīsiet OK.</translation>
     <message>
         <location filename="../utilities.cpp" line="1594" />
         <source>Region</source>
-        <translation type="unfinished" />
+        <translation>Region</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1595" />
         <source>Rig</source>
-        <translation type="unfinished" />
+        <translation>Rig</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1596" />
         <source>RX Pwr</source>
-        <translation type="unfinished" />
+        <translation>RX Pwr</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1597" />
         <source>Sat mode</source>
-        <translation type="unfinished" />
+        <translation>Sat mode</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1598" />
         <source>Sat name</source>
-        <translation type="unfinished" />
+        <translation>Sat name</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1599" />
         <source>SFI</source>
-        <translation type="unfinished" />
+        <translation>SFI</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1600" />
         <source>Sig</source>
-        <translation type="unfinished" />
+        <translation>Sig</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1601" />
         <source>Sig Info</source>
-        <translation type="unfinished" />
+        <translation>Sig Info</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1602" />
         <source>Silent key</source>
         <comment>Do not translate if unsure, common hamradio term.</comment>
-        <translation type="unfinished" />
+        <translation>Silent key</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1603" />
         <source>SKCC</source>
-        <translation type="unfinished" />
+        <translation>SKCC</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1604" />
@@ -6114,43 +6114,43 @@ KLog beigs darbu, kad nospiedīsiet OK.</translation>
     <message>
         <location filename="../utilities.cpp" line="1605" />
         <source>SRX String</source>
-        <translation type="unfinished" />
+        <translation>SRX String</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1606" />
         <source>SRX</source>
-        <translation type="unfinished" />
+        <translation>SRX</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1607" />
         <source>STX String</source>
-        <translation type="unfinished" />
+        <translation>STX String</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1608" />
         <source>State</source>
-        <translation type="unfinished" />
+        <translation>State</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1611" />
         <source>SWL</source>
         <comment>Do not translate if unsure, common hamradio term.</comment>
-        <translation type="unfinished" />
+        <translation>SWL</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1612" />
         <source>UKSMG</source>
-        <translation type="unfinished" />
+        <translation>UKSMG</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1613" />
         <source>USACA counties</source>
-        <translation type="unfinished" />
+        <translation>USACA counties</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1614" />
         <source>VE prov</source>
-        <translation type="unfinished" />
+        <translation>VE prov</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1615" />
@@ -6161,27 +6161,27 @@ KLog beigs darbu, kad nospiedīsiet OK.</translation>
         <location filename="../utilities.cpp" line="1616" />
         <source>Ten-Ten</source>
         <comment>Do not translate, it is a hamradio group name.</comment>
-        <translation type="unfinished" />
+        <translation>Ten-Ten</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1617" />
         <source>TX Pwr</source>
-        <translation type="unfinished" />
+        <translation>TX Pwr</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1618" />
         <source>Web</source>
-        <translation type="unfinished" />
+        <translation>Web</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1619" />
         <source>WWFF</source>
-        <translation type="unfinished" />
+        <translation>WWFF</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1620" />
         <source>QSO Date off</source>
-        <translation type="unfinished" />
+        <translation>QSO Date off</translation>
     </message>
     <message>
         <location filename="../utilities.cpp" line="1621" />
@@ -6191,12 +6191,12 @@ KLog beigs darbu, kad nospiedīsiet OK.</translation>
     <message>
         <location filename="../main.cpp" line="276" />
         <source>KLog is already running.</source>
-        <translation type="unfinished" />
+        <translation>KLog jau darbojas.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="277" />
         <source>It is allowed to run only one instance.</source>
-        <translation type="unfinished" />
+        <translation>Atļauts darboties tikai vienam eksemplāram.</translation>
     </message>
     <message>
         <location filename="../profilemanager.cpp" line="334" />
@@ -6214,18 +6214,18 @@ KLog beigs darbu, kad nospiedīsiet OK.</translation>
     <message>
         <location filename="../searchwidget.cpp" line="58" />
         <source>&amp;Export Highlighted</source>
-        <translation type="unfinished" />
+        <translation>&amp;Eksportēt iezīmētos</translation>
     </message>
     <message>
         <location filename="../searchwidget.cpp" line="59" />
         <location filename="../searchwidget.cpp" line="608" />
         <source>&amp;Select All</source>
-        <translation type="unfinished" />
+        <translation>&amp;Atlasīt visu</translation>
     </message>
     <message>
         <location filename="../searchwidget.cpp" line="60" />
         <source>&amp;Search</source>
-        <translation type="unfinished" />
+        <translation>&amp;Meklēt</translation>
     </message>
     <message>
         <location filename="../searchwidget.cpp" line="61" />
@@ -6235,37 +6235,37 @@ KLog beigs darbu, kad nospiedīsiet OK.</translation>
     <message>
         <location filename="../searchwidget.cpp" line="175" />
         <source>Clear the searches.</source>
-        <translation type="unfinished" />
+        <translation>Notīrīt meklēšanas.</translation>
     </message>
     <message>
         <location filename="../searchwidget.cpp" line="176" />
         <source>Export the search result to an ADIF file.</source>
-        <translation type="unfinished" />
+        <translation>Eksportēt meklēšanas rezultātu uz ADIF failu.</translation>
     </message>
     <message>
         <location filename="../searchwidget.cpp" line="177" />
         <source>Select/Unselect all the QSOs shown.</source>
-        <translation type="unfinished" />
+        <translation>Atlasīt vai atcelt atlasi visiem redzamajiem QSO.</translation>
     </message>
     <message>
         <location filename="../searchwidget.cpp" line="178" />
         <source>Search in the log.</source>
-        <translation type="unfinished" />
+        <translation>Meklēt žurnālā.</translation>
     </message>
     <message>
         <location filename="../searchwidget.cpp" line="179" />
         <source>Search in all logs.</source>
-        <translation type="unfinished" />
+        <translation>Meklēt visos žurnālos.</translation>
     </message>
     <message>
         <location filename="../searchwidget.cpp" line="180" />
         <source>Enter the callsign to search for. Enter '*' to show all the QSOs... it may be slow in big logs!</source>
-        <translation type="unfinished" />
+        <translation>Ievadiet meklējamo izsaukuma signālu. Ievadiet '*', lai parādītu visus QSO... lielos žurnālos tas var būt lēni!</translation>
     </message>
     <message>
         <location filename="../searchwidget.cpp" line="182" />
         <source>Select the Station Callsign used to do this QSO.</source>
-        <translation type="unfinished" />
+        <translation>Izvēlieties stacijas izsaukuma signālu, kas lietots šim QSO.</translation>
     </message>
     <message>
         <location filename="../searchwidget.cpp" line="253" />
@@ -7971,7 +7971,7 @@ It may be caused because the file you are trying to import does not have the rig
     <message>
         <location filename="../setuppages/setuppagesatsnew.cpp" line="49" />
         <source>Sat name</source>
-        <translation type="unfinished" />
+        <translation>Sat name</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesatsnew.cpp" line="50" />
