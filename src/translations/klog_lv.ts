@@ -8291,7 +8291,7 @@ The log will not be opened.</source>
     <message>
         <location filename="../setuppages/setuppageudp.cpp" line="116" />
         <source>Not used</source>
-        <translation type="unfinished" />
+        <translation>Nav lietots</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageudp.cpp" line="118" />
@@ -8324,7 +8324,7 @@ The log will not be opened.</source>
     <message>
         <location filename="../setuppages/setuppageuserdata.cpp" line="71" />
         <source>System default</source>
-        <translation type="unfinished" />
+        <translation>Sistēmas noklusējums</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageuserdata.cpp" line="84" />
@@ -8443,47 +8443,47 @@ The log will not be opened.</source>
     <message>
         <location filename="../setuppages/setuppageuserdata.cpp" line="160" />
         <source>Ri&amp;g 3</source>
-        <translation type="unfinished" />
+        <translation>Radioiekārt&amp;a 3</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageuserdata.cpp" line="161" />
         <source>Antenna &amp;1</source>
-        <translation type="unfinished" />
+        <translation>Antena &amp;1</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageuserdata.cpp" line="162" />
         <source>Antenna &amp;2</source>
-        <translation type="unfinished" />
+        <translation>Antena &amp;2</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageuserdata.cpp" line="163" />
         <source>Antenna &amp;3</source>
-        <translation type="unfinished" />
+        <translation>Antena &amp;3</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageuserdata.cpp" line="164" />
         <source>Po&amp;wer</source>
-        <translation type="unfinished" />
+        <translation>&amp;Jauda</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageuserdata.cpp" line="197" />
         <source>Enter the station callsign that will be used for logging.</source>
-        <translation type="unfinished" />
+        <translation>Ievadiet stacijas izsaukuma signālu, kas tiks lietots ierakstīšanai.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageuserdata.cpp" line="198" />
         <source>Enter the operators (comma separated if more than one).</source>
-        <translation type="unfinished" />
+        <translation>Ievadiet operatorus (atdalītus ar komatiem, ja to ir vairāk nekā viens).</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageuserdata.cpp" line="199" />
         <source>Enter the locator of your station. Alternatively, KLog can use an approximate locator based on your callsign.</source>
-        <translation type="unfinished" />
+        <translation>Ievadiet savas stacijas lokatoru. Citādi KLog var izmantot aptuvenu lokatoru, kas balstīts uz jūsu izsaukuma signālu.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageuserdata.cpp" line="201" />
         <source>&amp;Callsign</source>
-        <translation type="unfinished" />
+        <translation>&amp;Izsaukuma signāls</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageuserdata.cpp" line="202" />
@@ -8493,7 +8493,7 @@ The log will not be opened.</source>
     <message>
         <location filename="../setuppages/setuppageuserdata.cpp" line="203" />
         <source>&amp;CQ Zone</source>
-        <translation type="unfinished" />
+        <translation>&amp;CQ zona</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageuserdata.cpp" line="204" />
@@ -8504,22 +8504,22 @@ The log will not be opened.</source>
         <location filename="../setuppages/setuppageuserdata.cpp" line="205" />
         <location filename="../setuppages/setuppageuserdata.cpp" line="394" />
         <source>&amp;Locator</source>
-        <translation type="unfinished" />
+        <translation>&amp;Lokators</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageuserdata.cpp" line="390" />
         <source>&amp;Locator (not valid)</source>
-        <translation type="unfinished" />
+        <translation>&amp;Lokators (nederīgs)</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageuserdata.cpp" line="745" />
         <source>KLog - Language</source>
-        <translation type="unfinished" />
+        <translation>KLog — valoda</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageuserdata.cpp" line="746" />
         <source>The language change will take effect the next time you start KLog.</source>
-        <translation type="unfinished" />
+        <translation>Valodas maiņa stāsies spēkā nākamajā KLog startēšanas reizē.</translation>
     </message>
 </context>
 <context>
@@ -8543,12 +8543,12 @@ The log will not be opened.</source>
     <message>
         <location filename="../setuppages/setuppageworldeditor.cpp" line="148" />
         <source>Export World</source>
-        <translation type="unfinished" />
+        <translation>Eksportēt pasauli</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageworldeditor.cpp" line="149" />
         <source>Import World</source>
-        <translation type="unfinished" />
+        <translation>Importēt pasauli</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageworldeditor.cpp" line="155" />
@@ -8556,27 +8556,27 @@ The log will not be opened.</source>
         <location filename="../setuppages/setuppageworldeditor.cpp" line="157" />
         <location filename="../setuppages/setuppageworldeditor.cpp" line="161" />
         <source>Still not implemented.</source>
-        <translation type="unfinished" />
+        <translation>Vēl nav realizēts.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageworldeditor.cpp" line="162" />
         <source>Import a new cty.csv file</source>
-        <translation type="unfinished" />
+        <translation>Importēt jaunu cty.csv failu</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageworldeditor.cpp" line="194" />
         <source>An entities information file (cty.csv) has been detected in your KLog folder and will be loaded.</source>
-        <translation type="unfinished" />
+        <translation>KLog mapē atrasts entītiju informācijas fails (cty.csv), un tas tiks ielādēts.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageworldeditor.cpp" line="205" />
         <source>No entities information file (cty.csv) has been detected in your KLog folder.</source>
-        <translation type="unfinished" />
+        <translation>KLog mapē nav atrasts entītiju informācijas fails (cty.csv).</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageworldeditor.cpp" line="206" />
         <source>KLog will not be able to show entities information.</source>
-        <translation type="unfinished" />
+        <translation>KLog nevarēs rādīt entītiju informāciju.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageworldeditor.cpp" line="309" />
@@ -8634,12 +8634,12 @@ The log will not be opened.</source>
     <message>
         <location filename="../setuppages/setuppageworldeditor.cpp" line="332" />
         <source>Since Date</source>
-        <translation type="unfinished" />
+        <translation>Sākot ar datumu</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageworldeditor.cpp" line="334" />
         <source>To Date</source>
-        <translation type="unfinished" />
+        <translation>Līdz datumam</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageworldeditor.cpp" line="431" />
@@ -8649,27 +8649,27 @@ The log will not be opened.</source>
     <message>
         <location filename="../setuppages/setuppageworldeditor.cpp" line="431" />
         <source>BigCTY (*.csv)</source>
-        <translation type="unfinished" />
+        <translation>BigCTY (*.csv)</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageworldeditor.cpp" line="439" />
         <source>Entities information has been updated.</source>
-        <translation type="unfinished" />
+        <translation>Entītiju informācija ir atjaunināta.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageworldeditor.cpp" line="445" />
         <source>Entities information has not been updated.</source>
-        <translation type="unfinished" />
+        <translation>Entītiju informācija nav atjaunināta.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageworldeditor.cpp" line="454" />
         <source>Special Callsigns</source>
-        <translation type="unfinished" />
+        <translation>Speciālie izsaukuma signāli</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageworldeditor.cpp" line="455" />
         <source>Callsigns not in the CTY data that should map to a specific DXCC entity (e.g. expedition callsigns like RI1ANY for Antarctica).</source>
-        <translation type="unfinished" />
+        <translation>Izsaukuma signāli, kas nav CTY datos, bet kuriem jāatbilst konkrētai DXCC entītijai (piem., ekspedīciju signāli, kā RI1ANY Antarktīdai).</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageworldeditor.cpp" line="458" />
@@ -8684,12 +8684,12 @@ The log will not be opened.</source>
     <message>
         <location filename="../setuppages/setuppageworldeditor.cpp" line="518" />
         <source>Invalid Callsign</source>
-        <translation type="unfinished" />
+        <translation>Nederīgs izsaukuma signāls</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageworldeditor.cpp" line="519" />
         <source>'%1' is not a valid callsign.</source>
-        <translation type="unfinished" />
+        <translation>„%1” nav derīgs izsaukuma signāls.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageworldeditor.cpp" line="525" />
@@ -8700,22 +8700,22 @@ The log will not be opened.</source>
     <message>
         <location filename="../setuppages/setuppageworldeditor.cpp" line="526" />
         <source>Could not add the special callsign. It may already exist.</source>
-        <translation type="unfinished" />
+        <translation>Speciālo izsaukuma signālu neizdevās pievienot. Iespējams, tas jau pastāv.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageworldeditor.cpp" line="541" />
         <source>Remove Special Callsign</source>
-        <translation type="unfinished" />
+        <translation>Noņemt speciālo izsaukuma signālu</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageworldeditor.cpp" line="542" />
         <source>Remove '%1' from the special callsigns list?</source>
-        <translation type="unfinished" />
+        <translation>Vai noņemt „%1” no speciālo izsaukuma signālu saraksta?</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageworldeditor.cpp" line="554" />
         <source>Could not remove the special callsign '%1'.</source>
-        <translation type="unfinished" />
+        <translation>Speciālo izsaukuma signālu „%1” neizdevās noņemt.</translation>
     </message>
 </context>
 <context>
@@ -8723,7 +8723,7 @@ The log will not be opened.</source>
     <message>
         <location filename="../widgets/showadifimportwidget.cpp" line="55" />
         <source>The following QSOs are those QSOs that you have received the LoTW confirmation.</source>
-        <translation type="unfinished" />
+        <translation>Šie ir QSO, kuriem esat saņēmis LoTW apstiprinājumu.</translation>
     </message>
     <message>
         <location filename="../widgets/showadifimportwidget.cpp" line="56" />
@@ -9087,7 +9087,7 @@ The log will not be opened.</source>
     <message>
         <location filename="../charts/statsentitiesperyearbarchartwidget.cpp" line="81" />
         <source>Chart title</source>
-        <translation type="unfinished" />
+        <translation>Diagrammas virsraksts</translation>
     </message>
     <message>
         <location filename="../charts/statsentitiesperyearbarchartwidget.cpp" line="85" />
@@ -9103,7 +9103,7 @@ The log will not be opened.</source>
         <location filename="../charts/statsentitiesperyearbarchartwidget.cpp" line="76" />
         <location filename="../charts/statsentitiesperyearbarchartwidget.cpp" line="77" />
         <source>DXCC Entities</source>
-        <translation type="unfinished" />
+        <translation>DXCC entītijas</translation>
     </message>
     <message>
         <location filename="../charts/statsentitiesperyearbarchartwidget.cpp" line="101" />
@@ -9113,7 +9113,7 @@ The log will not be opened.</source>
     <message>
         <location filename="../charts/statsentitiesperyearbarchartwidget.cpp" line="101" />
         <source>Entities: </source>
-        <translation type="unfinished" />
+        <translation>Entītijas: </translation>
     </message>
 </context>
 <context>
@@ -9127,7 +9127,7 @@ The log will not be opened.</source>
     <message>
         <location filename="../charts/statsfieldperbandwidget.cpp" line="71" />
         <source>Mode: </source>
-        <translation type="unfinished" />
+        <translation>Režīms: </translation>
     </message>
     <message>
         <location filename="../charts/statsfieldperbandwidget.cpp" line="97" />
@@ -9186,7 +9186,7 @@ The log will not be opened.</source>
     <message>
         <location filename="../charts/statsgridsonsatswidget.cpp" line="112" />
         <source>Grid</source>
-        <translation type="unfinished" />
+        <translation>Kvadrāts</translation>
     </message>
     <message>
         <location filename="../charts/statsgridsonsatswidget.cpp" line="113" />
