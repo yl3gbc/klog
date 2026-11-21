@@ -5066,7 +5066,7 @@ Frekvence nav radioamatieru diapazonā!</translation>
     <message>
         <location filename="../widgets/map/mapwindowwidget.cpp" line="178" />
         <source>All bands</source>
-        <translation type="unfinished" />
+        <translation>Visi diapazoni</translation>
     </message>
     <message>
         <location filename="../widgets/map/mapwindowwidget.cpp" line="179" />
@@ -5076,12 +5076,12 @@ Frekvence nav radioamatieru diapazonā!</translation>
     <message>
         <location filename="../widgets/map/mapwindowwidget.cpp" line="192" />
         <source>All modes</source>
-        <translation type="unfinished" />
+        <translation>Visi režīmi</translation>
     </message>
     <message>
         <location filename="../widgets/map/mapwindowwidget.cpp" line="206" />
         <source>All propagation modes</source>
-        <translation type="unfinished" />
+        <translation>Visi izplatīšanās veidi</translation>
     </message>
     <message>
         <location filename="../widgets/map/mapwindowwidget.cpp" line="217" />
