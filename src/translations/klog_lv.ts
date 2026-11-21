@@ -6186,7 +6186,7 @@ KLog beigs darbu, kad nospiedīsiet OK.</translation>
     <message>
         <location filename="../utilities.cpp" line="1621" />
         <source>Log number</source>
-        <translation type="unfinished" />
+        <translation>Žurnāla numurs</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="276" />
