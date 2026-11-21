@@ -6659,13 +6659,14 @@ KLog beigs darbu, kad nospiedīsiet OK.</translation>
     <message>
         <location filename="../setupdialog.cpp" line="455" />
         <source>You have not selected the kind of log you want.</source>
-        <translation type="unfinished" />
+        <translation>Jūs neesat izvēlējies vēlamo žurnāla veidu.</translation>
     </message>
     <message>
         <location filename="../setupdialog.cpp" line="456" />
         <source>You will be redirected to the Log tab.
 Please add and select the kind of log you want to use.</source>
-        <translation type="unfinished" />
+        <translation>Jūs tiksiet pārvirzīts uz cilni „Žurnāls”.
+Lūdzu, pievienojiet un izvēlieties žurnāla veidu, ko vēlaties lietot.</translation>
     </message>
 </context>
 <context>
@@ -6678,7 +6679,7 @@ Please add and select the kind of log you want to use.</source>
     <message>
         <location filename="../setuppages/setupentitydialog.cpp" line="69" />
         <source>Name of the Entity.</source>
-        <translation type="unfinished" />
+        <translation>Entītijas nosaukums.</translation>
     </message>
     <message>
         <location filename="../setuppages/setupentitydialog.cpp" line="71" />
@@ -6688,7 +6689,7 @@ Please add and select the kind of log you want to use.</source>
     <message>
         <location filename="../setuppages/setupentitydialog.cpp" line="73" />
         <source>CQ zone.</source>
-        <translation type="unfinished" />
+        <translation>CQ zona.</translation>
     </message>
     <message>
         <location filename="../setuppages/setupentitydialog.cpp" line="75" />
@@ -6703,68 +6704,68 @@ Please add and select the kind of log you want to use.</source>
     <message>
         <location filename="../setuppages/setupentitydialog.cpp" line="83" />
         <source>Latitude</source>
-        <translation type="unfinished" />
+        <translation>Platums</translation>
     </message>
     <message>
         <location filename="../setuppages/setupentitydialog.cpp" line="85" />
         <location filename="../setuppages/setupentitydialog.cpp" line="89" />
         <source>Longitude of the Entity.</source>
-        <translation type="unfinished" />
+        <translation>Entītijas garums.</translation>
     </message>
     <message>
         <location filename="../setuppages/setupentitydialog.cpp" line="87" />
         <source>Longitude</source>
-        <translation type="unfinished" />
+        <translation>Garums</translation>
     </message>
     <message>
         <location filename="../setuppages/setupentitydialog.cpp" line="91" />
         <source>UTC</source>
-        <translation type="unfinished" />
+        <translation>UTC</translation>
     </message>
     <message>
         <location filename="../setuppages/setupentitydialog.cpp" line="93" />
         <source>Local time difference to UTC.</source>
-        <translation type="unfinished" />
+        <translation>Vietējā laika starpība pret UTC.</translation>
     </message>
     <message>
         <location filename="../setuppages/setupentitydialog.cpp" line="95" />
         <source>Main prefix</source>
-        <translation type="unfinished" />
+        <translation>Galvenais prefikss</translation>
     </message>
     <message>
         <location filename="../setuppages/setupentitydialog.cpp" line="97" />
         <source>Main prefix of the entity.</source>
-        <translation type="unfinished" />
+        <translation>Entītijas galvenais prefikss.</translation>
     </message>
     <message>
         <location filename="../setuppages/setupentitydialog.cpp" line="101" />
         <source>ARRL ID</source>
-        <translation type="unfinished" />
+        <translation>ARRL ID</translation>
     </message>
     <message>
         <location filename="../setuppages/setupentitydialog.cpp" line="103" />
         <source>ARRL ID.</source>
-        <translation type="unfinished" />
+        <translation>ARRL ID.</translation>
     </message>
     <message>
         <location filename="../setuppages/setupentitydialog.cpp" line="109" />
         <source>Prefixes</source>
-        <translation type="unfinished" />
+        <translation>Prefiksi</translation>
     </message>
     <message>
         <location filename="../setuppages/setupentitydialog.cpp" line="111" />
         <source>Comma separated possible prefixes, e.g. EA1, EA2, ...</source>
-        <translation type="unfinished" />
+        <translation>Iespējamie prefiksi, atdalīti ar komatiem, piem., EA1, EA2, ...</translation>
     </message>
     <message>
         <location filename="../setuppages/setupentitydialog.cpp" line="114" />
         <source>Date of the deletion.</source>
-        <translation type="unfinished" />
+        <translation>Dzēšanas datums.</translation>
     </message>
     <message>
         <location filename="../setuppages/setupentitydialog.cpp" line="116" />
         <source>Deleted</source>
-        <translation type="unfinished" />
+        <translation>Dzēsts</translation>
     </message>
     <message>
         <location filename="../setuppages/setupentitydialog.cpp" line="118" />
@@ -6779,7 +6780,7 @@ Please add and select the kind of log you want to use.</source>
     <message>
         <location filename="../setuppages/setupentitydialog.cpp" line="207" />
         <source>Entity Dialog</source>
-        <translation type="unfinished" />
+        <translation>Entītijas logs</translation>
     </message>
 </context>
 <context>
@@ -6800,22 +6801,22 @@ Please add and select the kind of log you want to use.</source>
     <message>
         <location filename="../setuppages/setuppagecolors.cpp" line="45" />
         <source>New One</source>
-        <translation type="unfinished" />
+        <translation>Pirmreizēja</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagecolors.cpp" line="46" />
         <source>Needed in this band</source>
-        <translation type="unfinished" />
+        <translation>Nepieciešama šajā diapazonā</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagecolors.cpp" line="47" />
         <source>Worked in this band</source>
-        <translation type="unfinished" />
+        <translation>Strādāta šajā diapazonā</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagecolors.cpp" line="48" />
         <source>Confirmed in this band</source>
-        <translation type="unfinished" />
+        <translation>Apstiprināta šajā diapazonā</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagecolors.cpp" line="49" />
@@ -6841,47 +6842,47 @@ Please add and select the kind of log you want to use.</source>
     <message>
         <location filename="../setuppages/setuppagecolors.cpp" line="54" />
         <source>Color when the DXCC is an ATNO (All Time New One).</source>
-        <translation type="unfinished" />
+        <translation>Krāsa, ja DXCC ir ATNO (All Time New One — pirmreizēja jebkad).</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagecolors.cpp" line="55" />
         <source>This DXCC was worked before in another band but not in the selected band. It may be needed due to the CQ, ITU, Grid, ...</source>
-        <translation type="unfinished" />
+        <translation>Šis DXCC iepriekš strādāts citā diapazonā, bet ne izvēlētajā. Tas var būt nepieciešams CQ, ITU, kvadrāta u.c. dēļ.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagecolors.cpp" line="56" />
         <source>Worked DXCC, but not confirmed in this band.</source>
-        <translation type="unfinished" />
+        <translation>Strādāts DXCC, bet šajā diapazonā nav apstiprināts.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagecolors.cpp" line="57" />
         <source>DXCC is confirmed in this band.</source>
-        <translation type="unfinished" />
+        <translation>DXCC šajā diapazonā ir apstiprināts.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagecolors.cpp" line="58" />
         <source>Default color.</source>
-        <translation type="unfinished" />
+        <translation>Noklusējuma krāsa.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagecolors.cpp" line="59" />
         <source>Sets a palette of colors similar to the one used in WSJT-X.</source>
-        <translation type="unfinished" />
+        <translation>Iestata krāsu paleti, līdzīgu WSJT-X lietotajai.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagecolors.cpp" line="60" />
         <source>Sets the default palette.</source>
-        <translation type="unfinished" />
+        <translation>Iestata noklusējuma paleti.</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagecolors.cpp" line="61" />
         <source>Sets the Dark Mode</source>
-        <translation type="unfinished" />
+        <translation>Ieslēdz tumšo režīmu</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagecolors.cpp" line="172" />
         <source>Choose a color</source>
-        <translation type="unfinished" />
+        <translation>Izvēlieties krāsu</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagecolors.cpp" line="315" />
@@ -6904,27 +6905,27 @@ Please add and select the kind of log you want to use.</source>
     <message>
         <location filename="../setuppages/setuppagedxcluster.cpp" line="78" />
         <source>Show &amp;HF spots</source>
-        <translation type="unfinished" />
+        <translation>Rādīt &amp;ĪV ziņojumus</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagedxcluster.cpp" line="79" />
         <source>Show V/&amp;UHF spots</source>
-        <translation type="unfinished" />
+        <translation>Rādīt &amp;UĪV ziņojumus</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagedxcluster.cpp" line="80" />
         <source>Show W&amp;ARC spots</source>
-        <translation type="unfinished" />
+        <translation>Rādīt W&amp;ARC ziņojumus</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagedxcluster.cpp" line="81" />
         <source>Show &amp;worked spots</source>
-        <translation type="unfinished" />
+        <translation>Rādīt &amp;strādātos ziņojumus</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagedxcluster.cpp" line="82" />
         <source>Show &amp;confirmed spots</source>
-        <translation type="unfinished" />
+        <translation>Rādīt apstiprinā&amp;tos ziņojumus</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagedxcluster.cpp" line="83" />
@@ -8175,7 +8176,7 @@ The log will not be opened.</source>
     <message>
         <location filename="../setuppages/setuppagesubdivisions.cpp" line="229" />
         <source>Deleted</source>
-        <translation type="unfinished" />
+        <translation>Dzēsts</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppagesubdivisions.cpp" line="232" />
@@ -8585,7 +8586,7 @@ The log will not be opened.</source>
     <message>
         <location filename="../setuppages/setuppageworldeditor.cpp" line="313" />
         <source>ARRL ID</source>
-        <translation type="unfinished" />
+        <translation>ARRL ID</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageworldeditor.cpp" line="316" />
@@ -8607,22 +8608,22 @@ The log will not be opened.</source>
     <message>
         <location filename="../setuppages/setuppageworldeditor.cpp" line="322" />
         <source>UTC</source>
-        <translation type="unfinished" />
+        <translation>UTC</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageworldeditor.cpp" line="324" />
         <source>Latitude</source>
-        <translation type="unfinished" />
+        <translation>Platums</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageworldeditor.cpp" line="326" />
         <source>Longitude</source>
-        <translation type="unfinished" />
+        <translation>Garums</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageworldeditor.cpp" line="329" />
         <source>Deleted</source>
-        <translation type="unfinished" />
+        <translation>Dzēsts</translation>
     </message>
     <message>
         <location filename="../setuppages/setuppageworldeditor.cpp" line="332" />
