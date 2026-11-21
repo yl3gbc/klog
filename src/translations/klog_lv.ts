@@ -9405,62 +9405,62 @@ The log will not be opened.</source>
     <message>
         <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="85" />
         <source>Jan</source>
-        <translation type="unfinished" />
+        <translation>Jan</translation>
     </message>
     <message>
         <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="85" />
         <source>Feb</source>
-        <translation type="unfinished" />
+        <translation>Feb</translation>
     </message>
     <message>
         <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="85" />
         <source>Mar</source>
-        <translation type="unfinished" />
+        <translation>Mar</translation>
     </message>
     <message>
         <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="85" />
         <source>Apr</source>
-        <translation type="unfinished" />
+        <translation>Apr</translation>
     </message>
     <message>
         <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="85" />
         <source>May</source>
-        <translation type="unfinished" />
+        <translation>Mai</translation>
     </message>
     <message>
         <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="85" />
         <source>Jun</source>
-        <translation type="unfinished" />
+        <translation>Jūn</translation>
     </message>
     <message>
         <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="86" />
         <source>Jul</source>
-        <translation type="unfinished" />
+        <translation>Jūl</translation>
     </message>
     <message>
         <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="86" />
         <source>Aug</source>
-        <translation type="unfinished" />
+        <translation>Aug</translation>
     </message>
     <message>
         <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="86" />
         <source>Sep</source>
-        <translation type="unfinished" />
+        <translation>Sep</translation>
     </message>
     <message>
         <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="86" />
         <source>Oct</source>
-        <translation type="unfinished" />
+        <translation>Okt</translation>
     </message>
     <message>
         <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="86" />
         <source>Nov</source>
-        <translation type="unfinished" />
+        <translation>Nov</translation>
     </message>
     <message>
         <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="86" />
         <source>Dec</source>
-        <translation type="unfinished" />
+        <translation>Dec</translation>
     </message>
     <message>
         <location filename="../charts/statsqsospermonthbarchartwidget.cpp" line="88" />
@@ -9663,33 +9663,33 @@ The log will not be opened.</source>
         <location filename="../tipsdialog.cpp" line="154" />
         <source>&lt;b&gt;Tip #6:&lt;/b&gt;&lt;br&gt;Do you know...&lt;br&gt;You can upload your QSO marked as queued to LoTW via TQSL with &lt;a href="#ToolsUploadLoTW"&gt;Tools-&gt;LoTW tools ...-&gt;Sends the log to LoTW calling TQSL.&lt;/a&gt; ?&lt;br&gt;&lt;br&gt;You have to configure TQSL in the preferences to be able to use this functionality.</source>
         <extracomment>Translator: Please make sure that the name of the link is coherent with the menu File-&gt;KLog folder</extracomment>
-        <translation type="unfinished" />
+        <translation>&lt;b&gt;Padoms #6:&lt;/b&gt;&lt;br&gt;Vai zināt...&lt;br&gt;Rindā atzīmētos QSO varat augšupielādēt uz LoTW ar TQSL, izmantojot &lt;a href="#ToolsUploadLoTW"&gt;Rīki-&gt;LoTW rīki ...-&gt;Nosūta žurnālu uz LoTW, izsaucot TQSL.&lt;/a&gt; ?&lt;br&gt;&lt;br&gt;Lai izmantotu šo funkciju, preferencēs jānokonfigurē TQSL.</translation>
     </message>
     <message>
         <location filename="../tipsdialog.cpp" line="158" />
         <source>&lt;b&gt;Tip #7:&lt;/b&gt;&lt;br&gt;Do you know...&lt;br&gt;You can see the QSO that confirms one specific DXCC entity in one specific band by poiting your mouse over that band in the DXCC widget?</source>
         <extracomment>Translator: Please make sure that the name of the link is coherent with the menu QSL tools...-&gt;Find My-QSLs pending to send</extracomment>
-        <translation type="unfinished" />
+        <translation>&lt;b&gt;Padoms #7:&lt;/b&gt;&lt;br&gt;Vai zināt...&lt;br&gt;Varat redzēt QSO, kas apstiprina konkrētu DXCC entītiju konkrētā diapazonā, novietojot peli virs šī diapazona DXCC logdaļā?</translation>
     </message>
     <message>
         <location filename="../tipsdialog.cpp" line="178" />
         <source>&lt;b&gt;Tip #13:&lt;/b&gt;&lt;br&gt;Do you know...&lt;br&gt;You can &lt;a href=https://twitter.com/_ea4k&gt;follow EA4K on twitter&lt;/a&gt; to get updates about KLog?</source>
-        <translation type="unfinished" />
+        <translation>&lt;b&gt;Padoms #13:&lt;/b&gt;&lt;br&gt;Vai zināt...&lt;br&gt;Varat &lt;a href=https://twitter.com/_ea4k&gt;sekot EA4K Twitter&lt;/a&gt;, lai saņemtu jaunumus par KLog?</translation>
     </message>
     <message>
         <location filename="../tipsdialog.cpp" line="181" />
         <source>&lt;b&gt;Tip #14:&lt;/b&gt;&lt;br&gt;Do you know...&lt;br&gt;You can write your own &lt;a href=https://www.eham.net/reviews/detail/3118&gt;review in eHam.net about KLog&lt;/a&gt; to help other users to decide to use KLog?</source>
-        <translation type="unfinished" />
+        <translation>&lt;b&gt;Padoms #14:&lt;/b&gt;&lt;br&gt;Vai zināt...&lt;br&gt;Varat uzrakstīt savu &lt;a href=https://www.eham.net/reviews/detail/3118&gt;atsauksmi eHam.net par KLog&lt;/a&gt;, lai palīdzētu citiem lietotājiem izlemt, vai lietot KLog?</translation>
     </message>
     <message>
         <location filename="../tipsdialog.cpp" line="193" />
         <source>&lt;b&gt;Tip #18:&lt;/b&gt;&lt;br&gt;Do you know...&lt;br&gt;You can double-click on an entity name in the DXCC table and all the QSOs with that DXCC Entity will be shown in the search box?</source>
-        <translation type="unfinished" />
+        <translation>&lt;b&gt;Padoms #18:&lt;/b&gt;&lt;br&gt;Vai zināt...&lt;br&gt;Ja DXCC tabulā divreiz noklikšķināsiet uz entītijas nosaukuma, meklēšanas lodziņā tiks parādīti visi QSO ar šo DXCC entītiju?</translation>
     </message>
     <message>
         <location filename="../tipsdialog.cpp" line="196" />
         <source>&lt;b&gt;Tip #19:&lt;/b&gt;&lt;br&gt;Do you know...&lt;br&gt;You can right-click on a QSO and select &lt;i&gt;Check in QRZ.com&lt;/i&gt; to check that callsign in QRZ.com?</source>
-        <translation type="unfinished" />
+        <translation>&lt;b&gt;Padoms #19:&lt;/b&gt;&lt;br&gt;Vai zināt...&lt;br&gt;Varat ar peles labo pogu noklikšķināt uz QSO un izvēlēties &lt;i&gt;Pārbaudīt QRZ.com&lt;/i&gt;, lai pārbaudītu šo izsaukuma signālu QRZ.com?</translation>
     </message>
 </context>
 <context>
@@ -9816,7 +9816,7 @@ The log will not be opened.</source>
     <message>
         <location filename="../elog/elogclublog.cpp" line="149" />
         <source>Please check your config in the setup and contact the KLog development team if you can't fix it. ClubLog uploads will be disabled.</source>
-        <translation type="unfinished" />
+        <translation>Lūdzu, pārbaudiet konfigurāciju iestatījumos un sazinieties ar KLog izstrādes komandu, ja nevarat to izlabot. ClubLog augšupielādes tiks izslēgtas.</translation>
     </message>
     <message>
         <location filename="../elog/elogclublog.cpp" line="193" />
@@ -10072,7 +10072,7 @@ Lai izmantotu šo funkciju, jums ir nepieciešams QRZ.com abonements.</translati
     <message>
         <location filename="../qml/mapqmlfile.qml" line="337" />
         <source>Map not available</source>
-        <translation type="unfinished" />
+        <translation>Karte nav pieejama</translation>
     </message>
     <message>
         <location filename="../qml/mapqmlfile.qml" line="344" />
@@ -10080,7 +10080,10 @@ Lai izmantotu šo funkciju, jums ir nepieciešams QRZ.com abonements.</translati
 Install the OSM plugin for your platform, e.g.:
   Debian/Ubuntu/Raspberry Pi OS: apt install qml6-module-qtlocation
   or: apt install qt6-declarative-dev</source>
-        <translation type="unfinished" />
+        <translation>Trūkst Qt6 Location ģeopakalpojumu spraudņa.
+Instalējiet OSM spraudni savai platformai, piem.:
+  Debian/Ubuntu/Raspberry Pi OS: apt install qml6-module-qtlocation
+  vai: apt install qt6-declarative-dev</translation>
     </message>
     <message>
         <location filename="../qml/mapqmlfile.qml" line="604" />
@@ -10105,12 +10108,12 @@ Install the OSM plugin for your platform, e.g.:
     <message>
         <location filename="../qml/mapqmlfile.qml" line="873" />
         <source>Double-click to edit  |  click ✕ to close</source>
-        <translation type="unfinished" />
+        <translation>Dubultklikšķis, lai rediģētu  |  noklikšķiniet ✕, lai aizvērtu</translation>
     </message>
     <message>
         <location filename="../qml/mapqmlfile.qml" line="874" />
         <source>Click to pin  •  Double-click to edit</source>
-        <translation type="unfinished" />
+        <translation>Noklikšķiniet, lai piespraustu  •  Dubultklikšķis, lai rediģētu</translation>
     </message>
 </context>
 </TS>
